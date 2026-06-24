@@ -228,7 +228,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add var/atlas tools/atlas/python-engine src/Command src/Service src/ServiceInterface src/Resources composer.json .github/workflows/atlas-assessment.yml ATLAS_W02_ENGINE_SHELL_MANIFEST.json docs/architecture/w02-symfony-engine-shell.adoc
+          git add var/atlas
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore(atlas): refresh assessment snapshots"
             git push origin HEAD:master
