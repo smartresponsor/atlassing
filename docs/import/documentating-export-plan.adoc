@@ -1,0 +1,21 @@
+= Documentating Quality Atlas Export Migration Plan
+
+The exported Quality Atlas materials from Documentating must be treated as migration input.
+
+== Migration steps
+
+. Copy the export archive into `import/documentating-export/`.
+. Preserve original paths under `import/documentating-export/original-paths/`.
+. Classify static HTML as legacy/fallback UI only.
+. Move datasets into Atlas data contracts.
+. Convert Quality Atlas docs into Atlas documentation pages.
+. Replace Tabler/Shoelace/GridStack landing ownership with Interfacing surface templates.
+. Keep ECharts only as a charting/rendering option when Interfacing needs chart payloads.
+
+== Target outputs
+
+* `atlas-component-profile` records.
+* `atlas-assessment` records.
+* `atlas-readiness` records.
+* `atlas-documentation-coverage` records.
+* `atlas surface payload` for Viewing.

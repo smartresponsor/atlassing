@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-04-14T04:41:37.931389+00:00",
+  "event_name": "workflow_dispatch",
+  "manual_components": [
+    "messaging"
+  ],
+  "normalized_manual_components": [
+    "messaging"
+  ],
+  "unknown_manual_components": [],
+  "selected_components": [
+    "messaging"
+  ],
+  "selected_count": 1,
+  "items": [
+    {
+      "component": "messaging",
+      "title": "Messaging",
+      "repository": "smartresponsor/messaging",
+      "selected": true,
+      "reason": "manual_override",
+      "event_name": "workflow_dispatch",
+      "current_head_commit": "12a67d6a40e39b3f526c33c048e19402e4bbbd78",
+      "current_head_tag": null,
+      "last_assessed_commit": null,
+      "last_assessed_tag": null,
+      "last_assessed_date": "2026-04-14",
+      "changed_files_sample": [],
+      "access_error": null,
+      "cadence_group": "every_2_days",
+      "hours_since_last_assessment": 4.69
+    }
+  ],
+  "status": "selected"
+}

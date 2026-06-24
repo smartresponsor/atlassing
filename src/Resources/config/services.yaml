@@ -1,0 +1,23 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Command\:
+    resource: '../../Command/'
+
+  App\Service\:
+    resource: '../../Service/'
+
+  App\ServiceInterface\Assessment\AtlasAssessmentServiceInterface:
+    alias: App\Service\Assessment\AtlasAssessmentService
+  App\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface:
+    alias: App\Service\Assessment\AtlasPythonEngineService
+  App\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface:
+    alias: App\Service\Assessment\AtlasTargetSelectionService
+  App\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface:
+    alias: App\Service\Registry\AtlasRepositoryRegistryService
+  App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface:
+    alias: App\Service\Snapshot\AtlasSnapshotService
+  App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface:
+    alias: App\Service\Atlas\AtlasSurfacePayloadService

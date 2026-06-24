@@ -1,0 +1,15 @@
+# These routes document the canonical owner-root surface.
+# In host mode, CRUDing may own the concrete route declaration and resolve the matching Service suffix.
+atlassing_atlas_index:
+  path: /atlassing/atlas
+  methods: [GET]
+  defaults:
+    _surface: atlas/index
+
+atlassing_atlas_component:
+  path: /atlassing/atlas/component/{slug}
+  methods: [GET]
+  defaults:
+    _surface: atlas/component
+  requirements:
+    slug: '[A-Za-z0-9][A-Za-z0-9_-]*'

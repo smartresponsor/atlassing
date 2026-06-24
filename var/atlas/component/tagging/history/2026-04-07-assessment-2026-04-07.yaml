@@ -1,0 +1,460 @@
+component: tagging
+title: Tagging
+snapshot:
+  date: '2026-04-07'
+  label: assessment-2026-04-07
+  ref: master
+  origin: quality-atlas responses assessment
+  assessment_basis:
+    repository: smartresponsor/tagging
+    assessed_branch: master
+    assessed_commit: b6c6a0bd2092f91f52607cfab85bae05ba326e9d
+    assessed_tag: null
+    trigger_reason: manual_override
+    previous_commit: null
+    previous_tag: null
+    current_head_commit: b6c6a0bd2092f91f52607cfab85bae05ba326e9d
+    current_head_tag: null
+    changed_files_sample: []
+report_status: current
+groups:
+  product_market:
+    score: 8.5
+  domain_architecture:
+    score: 8.4
+  data_persistence:
+    score: 8.45
+  api_contracts:
+    score: 8.4
+  runtime_performance:
+    score: 8.5
+  reliability_resilience:
+    score: 8.77
+  security_governance:
+    score: 9.0
+  delivery_operations:
+    score: 9.0
+  quality_testing:
+    score: 8.8
+profile_axes:
+  engineering:
+    product: 8.6
+    architecture: 8.4
+    data: 8.45
+    api: 8.4
+    runtime: 8.5
+    reliability: 8.75
+    security: 9.0
+    delivery: 9.0
+    quality: 8.8
+    overall: 8.6
+  owner:
+    identity: 8.6
+    consistency: 8.4
+    delivery: 9.0
+    quality: 8.8
+    governance: 9.0
+    fit: 8.5
+    debt: 2.4
+    overall: 8.6
+  investor:
+    product: 8.6
+    architecture: 8.4
+    delivery: 9.0
+    reliability: 8.65
+    governance: 9.0
+    clarity: 8.5
+    overall: 8.6
+  operations:
+    runtime: 8.5
+    reliability: 8.65
+    observability: 9.0
+    security: 9.0
+    traffic: 8.75
+    delivery: 9.0
+    recovery: 8.9
+    overall: 8.6
+metrics:
+  product:
+    relevant: true
+    maturity: solid
+    score: 8.6
+    summary: Product identity is clearly expressed as a canonical tagging component
+      with documented scope (CRUD, assignment, search/suggest, surfaces) and owner-facing
+      docs, suitable for internal ecosystem reuse.
+    risks:
+    - Documentation/report path may be misaligned with registry reference (.antora-src
+      vs docs/).
+    improvements:
+    - Align report location with registry path and keep README/RELEASE_NOTES updated
+      for each release.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: README.md
+      note: Metric-level assessment evidence.
+    - path: docs/antora.yml
+      note: Metric-level assessment evidence.
+    - path: RELEASE_NOTES.md
+      note: Metric-level assessment evidence.
+    - path: CHANGELOG.md
+      note: Metric-level assessment evidence.
+  architecture:
+    relevant: true
+    maturity: solid
+    score: 8.4
+    summary: 'Architecture reads coherent for a tagging runtime: host-minimal entry
+      points, explicit HTTP contracts, and structured domain/config boundaries for
+      routes, RBAC, policy, and runtime.'
+    risks:
+    - Broad configuration surface (many tag_* configs) requires sustained boundary
+      governance to avoid coupling and drift.
+    improvements:
+    - Keep contracts/http and route catalogs authoritative and reflect any boundary
+      changes in docs/architecture.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: contracts/http
+      note: Metric-level assessment evidence.
+    - path: host-minimal/bootstrap.php
+      note: Metric-level assessment evidence.
+    - path: config/tag_public_route_paths.php
+      note: Metric-level assessment evidence.
+    - path: config/tag_route_catalog.php
+      note: Metric-level assessment evidence.
+    - path: host/Dockerfile
+      note: Metric-level assessment evidence.
+  runtime:
+    relevant: true
+    maturity: solid
+    score: 8.5
+    summary: Runnable surface is present via host-minimal, Docker compose, and dedicated
+      runtime configs; admin assets indicate a minimal operator/UI surface for local
+      flows.
+    risks:
+    - No exact git tag detected in this snapshot, implying pre-release state.
+    improvements:
+    - Exercise smoke and local server flows in CI and document runtime knobs in config/tag_runtime.php.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: docker-compose.yml
+      note: Metric-level assessment evidence.
+    - path: host-minimal/index.php
+      note: Metric-level assessment evidence.
+    - path: host-minimal/smoke-health.php
+      note: Metric-level assessment evidence.
+    - path: config/tag_runtime.php
+      note: Metric-level assessment evidence.
+    - path: admin/index.html
+      note: Metric-level assessment evidence.
+  qa:
+    relevant: true
+    maturity: strong
+    score: 8.8
+    summary: QA toolchain is declared (PHPUnit, PHPStan, PHP CS Fixer, Panther, Playwright)
+      with .dist configs and GitHub Actions folder, indicating readiness for multi-band
+      testing.
+    risks:
+    - Actual test suite execution and coverage are not verified in this run; phpunit/phpstan
+      configs are .dist-based.
+    improvements:
+    - Ensure CI runs phpunit and phpstan with the provided .dist configs and add Playwright
+      e2e runs where applicable.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: phpstan.neon.dist
+      note: Metric-level assessment evidence.
+    - path: phpunit.xml.dist
+      note: Metric-level assessment evidence.
+    - path: .github/workflows
+      note: Metric-level assessment evidence.
+    - path: package.json
+      note: Metric-level assessment evidence.
+  ops:
+    relevant: true
+    maturity: strong
+    score: 9.0
+    summary: 'Operational posture is strong on paper: Docker assets, alerts, and configs
+      for security, RBAC, quota, policy, and observability are present alongside deployment
+      docs.'
+    risks:
+    - Observability and alerting integrations are not validated beyond config presence.
+    improvements:
+    - Wire observability/alerts in deployment targets and validate signals during
+      smoke and canary runs.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: deploy/docker
+      note: Metric-level assessment evidence.
+    - path: ops/alerts
+      note: Metric-level assessment evidence.
+    - path: config/tag_security.yaml
+      note: Metric-level assessment evidence.
+    - path: config/tag_rbac.yaml
+      note: Metric-level assessment evidence.
+    - path: config/tag_observability.yaml
+      note: Metric-level assessment evidence.
+    - path: docs/ops
+      note: Metric-level assessment evidence.
+  market:
+    relevant: true
+    maturity: solid
+    score: 8.4
+    summary: Market-facing alignment is supported by clear identity, public docs,
+      and change notes; the component remains positioned as an internal governed capability.
+    risks:
+    - Proprietary license may limit external adoption if external distribution is
+      desired.
+    improvements:
+    - Clarify external vs internal consumption posture in README and keep API docs
+      under docs/api current.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: README.md
+      note: Metric-level assessment evidence.
+    - path: docs/api
+      note: Metric-level assessment evidence.
+    - path: RELEASE_NOTES.md
+      note: Metric-level assessment evidence.
+    - path: CHANGELOG.md
+      note: Metric-level assessment evidence.
+  overall:
+    relevant: true
+    maturity: solid
+    score: 8.6
+    summary: Overall, Tagging demonstrates a mature internal component trending to
+      RC with governed contracts, runnable surface, and QA/ops scaffolding; remaining
+      gaps are CI wiring, release tagging, and docs path alignment.
+    risks:
+    - Registry report path may not match repository structure; no release tag detected.
+    improvements:
+    - Connect scheduled assessment runner, align docs/report path, and tag a release
+      once CI runs audits and tests.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .github/workflows
+      note: Metric-level assessment evidence.
+    - path: docs/antora.yml
+      note: Metric-level assessment evidence.
+    - path: MANIFEST.json
+      note: Metric-level assessment evidence.
+    - path: CHANGELOG.md
+      note: Metric-level assessment evidence.
+    - path: RELEASE_NOTES.md
+      note: Metric-level assessment evidence.
+development_driving:
+  overall_status: warn
+  average_score: 7.43
+  status_counts:
+    pass: 3
+    warn: 4
+    fail: 0
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Architecture & Boundaries — Non-entity PHP file imports App\Entity directly; review
+    vertical leakage.
+  - Architecture & Boundaries — Non-entity PHP file imports App\Entity directly; review
+    vertical leakage.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 185/773 (24%).
+  - SOLID & Refactoring Pressure — Class exposes 15 public methods; review interface
+    segregation and SRP.
+  - SOLID & Refactoring Pressure — Class exposes 18 public methods; review interface
+    segregation and SRP.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: warn
+      score: 5.0
+      summary: 0 fail, 5 warn, 0 info findings detected.
+      blockers:
+      - Non-entity PHP file imports App\Entity directly; review vertical leakage.
+      - Non-entity PHP file imports App\Entity directly; review vertical leakage.
+      - Non-entity PHP file imports App\Entity directly; review vertical leakage.
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 185/773 (24%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: warn
+      score: 0.0
+      summary: 0 fail, 12 warn, 1 info findings detected.
+      blockers:
+      - Class exposes 15 public methods; review interface segregation and SRP.
+      - Class exposes 18 public methods; review interface segregation and SRP.
+      - Class exposes 18 public methods; review interface segregation and SRP.
+strengths:
+- Canonical HTTP contract present (contracts/http)
+- Runnable host-minimal runtime and Docker assets
+- Rich governance configs (security, RBAC, quota, policy, observability)
+- Docs and Antora project config present
+- QA toolchain declared (PHPUnit, PHPStan, PHP CS Fixer, Panther, Playwright)
+risks:
+- Repository docs/report path may not match registry path (.antora-src not present
+  here)
+- No git tag found in this snapshot, suggesting pre-release state
+- Test suite depth and CI execution not verified in this run
+- Operational observability hooks not validated beyond config presence
+recommended_next_actions:
+- Align component report path with repository docs (docs/ vs .antora-src) and wire
+  scheduled assessment runner
+- Ensure GitHub Actions execute audits and test suites (composer audit:ci, phpunit,
+  phpstan)
+- Cut a tagged release and keep CHANGELOG/RELEASE_NOTES current
+- Confirm observability wiring in runtime (enable metrics/logging/traces per tag_observability.yaml)
+- Keep HTTP contract under contracts/http in sync with docs/api and publish via docs:openapi:publish
+  in CI
+evidence:
+- path: .antora-src/modules/ROOT/pages/component/tagging/report/index.adoc
+  note: Current component report page if present.
+- path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
+  note: Seeded atlas dataset source.
+- path: .sync/quality-atlas/components/tagging/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+- path: composer.json
+  note: Assessment evidence path.
+- path: package.json
+  note: Assessment evidence path.
+- path: docker-compose.yml
+  note: Assessment evidence path.
+- path: host-minimal/index.php
+  note: Assessment evidence path.
+- path: host-minimal/smoke-health.php
+  note: Assessment evidence path.
+- path: host/Dockerfile
+  note: Assessment evidence path.
+- path: contracts/http
+  note: Assessment evidence path.
+- path: config/tag_runtime.php
+  note: Assessment evidence path.
+- path: config/tag_security.yaml
+  note: Assessment evidence path.
+- path: config/tag_rbac.yaml
+  note: Assessment evidence path.
+- path: config/tag_quota.yaml
+  note: Assessment evidence path.
+- path: config/tag_policy.yaml
+  note: Assessment evidence path.
+- path: config/tag_observability.yaml
+  note: Assessment evidence path.
+- path: .github/workflows
+  note: Assessment evidence path.
+- path: docs/antora.yml
+  note: Assessment evidence path.
+- path: docs/api
+  note: Assessment evidence path.
+- path: docs/ops
+  note: Assessment evidence path.
+- path: README.md
+  note: Assessment evidence path.
+- path: RELEASE_NOTES.md
+  note: Assessment evidence path.
+- path: CHANGELOG.md
+  note: Assessment evidence path.
+- path: MANIFEST.json
+  note: Assessment evidence path.
+- path: admin/index.html
+  note: Assessment evidence path.
+assessment_notes:
+- Tagging presents as a governed, canonical tagging runtime with clear contracts,
+  strong config governance, and runnable host-minimal surface; it reads as a strong
+  pre-RC internal component pending CI integration hardening and documentation path
+  alignment.
+- 'Default branch: master'
+- 'Commit: b6c6a0bd2092f91f52607cfab85bae05ba326e9d'
+- Repo includes admin UI artifacts and host-minimal runtime for local smoke flows
+assessment_confidence: medium

@@ -1,0 +1,27 @@
+= Atlas Engine Boundary
+:toc:
+
+== Owns
+
+* Atlas metric catalog and score model
+* Repository/component assessment registry
+* RC readiness and maturity history
+* Assessment target selection
+* AI-assisted verdict schema and persistence
+* Atlas dashboard payload exports
+
+== Does not own
+
+* Antora/Adoc publication
+* Documentation article registry
+* Interfacing templates
+* Viewing render decisions
+* Administering forms
+* Strict ecosystem policy validation
+
+== External consumers
+
+* Documentating consumes Atlas publication exports.
+* Administering consumes Atlas state/control surfaces.
+* Viewing renders Atlas payloads through Interfacing templates.
+* Gating provides deterministic validation evidence.

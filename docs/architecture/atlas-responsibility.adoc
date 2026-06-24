@@ -1,0 +1,22 @@
+= Atlas Responsibility
+
+Atlassing owns the Atlas quality system. It evaluates and exposes component quality, readiness, maturity, documentation coverage, and publication-quality signals.
+
+Documentating is an upstream documentation source, not the owner of Atlas runtime behavior.
+
+== Primary responsibilities
+
+* Atlas component profile registry.
+* Atlas assessment records.
+* Atlas signal and metric normalization.
+* Atlas readiness and maturity model.
+* Documentation coverage consumption.
+* Surface payloads for Viewing and Interfacing.
+* Administering-visible configuration and review state.
+
+== Explicit non-responsibilities
+
+* Static Adoc/Antora publication.
+* Antora UI ownership.
+* Landing-page-specific vendor UI ownership.
+* Direct Twig rendering from controllers.

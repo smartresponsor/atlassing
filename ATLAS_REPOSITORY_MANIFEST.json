@@ -1,0 +1,18 @@
+{
+  "repository": "Atlassing",
+  "package": "atlassing/atlas",
+  "component": "atlassing",
+  "businessPrefix": "Atlas",
+  "databasePrefix": "atlas_",
+  "autoloadRoot": "App\\",
+  "purpose": "Quality Atlas standalone and bundle component skeleton",
+  "modes": [
+    "standalone",
+    "symfony-bundle",
+    "crud-viewing-payload-producer"
+  ],
+  "imports": [
+    "Documentating Quality Atlas export"
+  ],
+  "createdFrom": "Documentating(13).zip / atlassing-atlas-export-from-documentating-13.zip"
+}

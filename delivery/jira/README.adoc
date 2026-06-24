@@ -1,0 +1,8 @@
+= Jira Import Surface
+
+This folder is reserved for the Smart Responsor uniform Jira-ready delivery surface.
+
+Required future files:
+
+* `manifest.yaml`
+* `import.csv`

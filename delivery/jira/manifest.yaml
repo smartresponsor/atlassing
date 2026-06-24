@@ -1,0 +1,5 @@
+schema_version: 1
+component: atlassing
+package: atlassing/atlas
+delivery: atlas-engine-export-from-documentating-sync-github
+status: migration-export

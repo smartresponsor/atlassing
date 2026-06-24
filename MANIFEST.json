@@ -1,0 +1,167 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "9ff9ca0cba8412d7f3f3ea13118cf387742fe83e9ef85980c0df313263065766",
+      "bytes": 87
+    },
+    {
+      "path": "ATLAS_REPOSITORY_MANIFEST.json",
+      "sha256": "62626d74d1bb00ea3fe68fa26fc4e40fac9c697ee6ee40aa0d3d005f6cb724a2",
+      "bytes": 496
+    },
+    {
+      "path": "README.md",
+      "sha256": "0d0b9cd7bd4692e25b5877f34d441aa4124a7795bb1dae5124055d8567bae090",
+      "bytes": 1240
+    },
+    {
+      "path": "composer.json",
+      "sha256": "ac76e5e6a71e0d577a79e65a01d3ef2673d437ca55133030b1552674adf706ca",
+      "bytes": 905
+    },
+    {
+      "path": "config/packages/atlassing.yaml",
+      "sha256": "c2c80aafc29953c3294b43f66a332faa9e063c7681f98c7052e86357b5a75456",
+      "bytes": 265
+    },
+    {
+      "path": "config/routes/atlassing.yaml",
+      "sha256": "29f0de578ff7af403214cceea411af8f72ae226c19cb4dd8bd6cc2b74540bf2a",
+      "bytes": 448
+    },
+    {
+      "path": "delivery/jira/README.adoc",
+      "sha256": "c52ec2d0951140448e6183fab888dc397633e390ab1df190bc3b122001b76f59",
+      "bytes": 166
+    },
+    {
+      "path": "docs/architecture/atlas-responsibility.adoc",
+      "sha256": "0472f653a46559119e5157fa0850cf3c904265aff82b3bb942a4281a42de75bf",
+      "bytes": 774
+    },
+    {
+      "path": "docs/architecture/route-contract.adoc",
+      "sha256": "c118a23d130ca60495ca611e0300c50daf8ee5d048f138b99f3c903d1f96dc4e",
+      "bytes": 646
+    },
+    {
+      "path": "docs/import/documentating-export-plan.adoc",
+      "sha256": "1564c0cdd8f2fcb716eef12bc6564c5f56846c4a9c5df3dc1ea9047e20678988",
+      "bytes": 840
+    },
+    {
+      "path": "import/documentating-export/README.md",
+      "sha256": "fe2fd9f80832f9e00aaafd18b31ebb511a359c8b966869e444cb66a868b167fe",
+      "bytes": 244
+    },
+    {
+      "path": "import/documentating-export/atlassing-atlas-export-from-documentating-13.zip",
+      "sha256": "8a588855a1dec1014f36cee218d74f5759909fa3e137cd5b984495f95dfe56f8",
+      "bytes": 139678
+    },
+    {
+      "path": "src/AtlassingBundle.php",
+      "sha256": "2b1f1e6e9c2669736fddd63bf149f149467a8791f2404bf2f6b27fda01d5410c",
+      "bytes": 145
+    },
+    {
+      "path": "src/Command/AtlasImportDocumentatingExportCommand.php",
+      "sha256": "e67f250ac8fff26890197590ba27225759060375a7872cb08700e3c5dc3436b9",
+      "bytes": 1169
+    },
+    {
+      "path": "src/DependencyInjection/AtlassingExtension.php",
+      "sha256": "d1e389443bc04219df07f0a378815108e79eccc40350ce186514225dcc8eb78b",
+      "bytes": 857
+    },
+    {
+      "path": "src/Entity/Atlas/AtlasAssessment.php",
+      "sha256": "0d01cb399f47c088cf005d18551fb651c098e3c2bbce32d3bdf6de2b7a3a93d5",
+      "bytes": 734
+    },
+    {
+      "path": "src/Entity/Atlas/AtlasComponent.php",
+      "sha256": "a8ee413eec59745e654292107e780236b98e35851155ffa1f58202ee3edd0d95",
+      "bytes": 797
+    },
+    {
+      "path": "src/Entity/Atlas/AtlasDocumentationCoverage.php",
+      "sha256": "13b5aafc048f169640c3a54672829157b8412362fd56931e24c114cef7048696",
+      "bytes": 840
+    },
+    {
+      "path": "src/Enum/Atlas/AtlasReadinessLevel.php",
+      "sha256": "274aff3c3cef2c26052962e3270f05b808be2b0c52e5ad74e0361720ed738b23",
+      "bytes": 235
+    },
+    {
+      "path": "src/Service/Atlas/AtlasDocumentationCoverageService.php",
+      "sha256": "a128b8f85c6f8f51f17fb9d68fae390f3c2d77d621c30cebfd44e045c43e9785",
+      "bytes": 1299
+    },
+    {
+      "path": "src/Service/Atlas/AtlasSurfacePayloadService.php",
+      "sha256": "5145d1e6cf477bb1a3301b968b2a5062dd352ae3aba89abc3ba1bfb5ccb182f8",
+      "bytes": 870
+    },
+    {
+      "path": "src/Service/Atlas/AtlassingAtlasComponentService.php",
+      "sha256": "2b7c4bd212e9df3e4f49b6fc32ac95564e37355c0c1170b6e99f07f4f71b84ca",
+      "bytes": 550
+    },
+    {
+      "path": "src/Service/Atlas/AtlassingAtlasComponentSlugService.php",
+      "sha256": "ae6ef6db57f9cf104c3b49a939d16c806ef43c4c831b6ea141c8bf2cf77806ea",
+      "bytes": 569
+    },
+    {
+      "path": "src/Service/Atlas/AtlassingAtlasMaturityService.php",
+      "sha256": "e6170870f1b44eeeb9dc9beb42f1c08f03c297c365017f0339e9bdca03690edd",
+      "bytes": 400
+    },
+    {
+      "path": "src/Service/Atlas/AtlassingAtlasReadinessService.php",
+      "sha256": "f18e80a51d409def3ea953bdea23fae57cfb11e5f541aa325b0a2411d1d05959",
+      "bytes": 402
+    },
+    {
+      "path": "src/Service/Atlas/AtlassingAtlasService.php",
+      "sha256": "025fb380392bd0f8815f992e565771d2967557bd4f86bfb1f2fbad06a9aa1363",
+      "bytes": 528
+    },
+    {
+      "path": "src/Service/Config/AtlasConfigurationToolService.php",
+      "sha256": "4fb6c8452c61744164f728872e80bfd6e3782ee53e18f9a46017b3b1eacf95b9",
+      "bytes": 612
+    },
+    {
+      "path": "src/ServiceInterface/Atlas/AtlasDocumentationCoverageServiceInterface.php",
+      "sha256": "466c4244eaf31a26288bc3ae0f644d770ddf44eac0cc4dc86ff666ce691c34a9",
+      "bytes": 260
+    },
+    {
+      "path": "src/ServiceInterface/Atlas/AtlasSurfacePayloadServiceInterface.php",
+      "sha256": "c43485ec030a6ff4b7d9432e781fe142223fa28e99a2cede6f7864d4b146ac5b",
+      "bytes": 318
+    },
+    {
+      "path": "var/atlas/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "wave": "w01-engine-cumulative",
+  "contains": [
+    "Symfony-oriented Atlassing skeleton",
+    "clean Atlas engine export",
+    "var/atlas state",
+    "transitional Python engine",
+    "atlas assessment workflow"
+  ],
+  "excludes": [
+    "legacy/documentating",
+    "Tabler landing runtime ownership",
+    "Antora publication ownership"
+  ]
+}

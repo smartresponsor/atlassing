@@ -1,0 +1,7 @@
+atlassing:
+  atlas:
+    database_prefix: 'atlas_'
+    documentating_index_path: '%kernel.project_dir%/var/documentating/article-index.json'
+    import_path: '%kernel.project_dir%/import/documentating-export'
+    surface_owner_root: 'atlassing'
+    standalone: true

@@ -1,0 +1,237 @@
+name: atlas-assessment
+
+on:
+  workflow_dispatch:
+    inputs:
+      component:
+        description: 'Optional component_id to assess (for example: documentating)'
+        required: false
+        type: string
+      mode:
+        description: 'Optional run mode override'
+        required: false
+        type: choice
+        options:
+          - auto
+          - dry-run
+          - responses
+        default: auto
+  schedule:
+    - cron: '27 9 */2 * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atlas-assessment
+  cancel-in-progress: false
+
+jobs:
+  assess:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v5
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml
+
+      - name: Seed current component snapshots when a legacy Documentating dataset is present
+        run: |
+          if [ -f .antora-src/modules/ROOT/pages/quality-atlas/dataset.json ]; then
+            python3 tools/atlas/python-engine/seed_quality_atlas_snapshots.py
+          else
+            echo "No legacy Documentating Quality Atlas dataset found; existing var/atlas snapshots are the source of truth."
+          fi
+
+      - name: Select assessment targets
+        id: selection
+        env:
+          QUALITY_ATLAS_REPO_TOKEN: ${{ secrets.QUALITY_ATLAS_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_COMPONENT: ${{ github.event.inputs.component || '' }}
+        run: |
+          component_args=()
+          if [ -n "${INPUT_COMPONENT}" ]; then
+            component_args+=(--component "${INPUT_COMPONENT}")
+          fi
+          if [ -x bin/console ]; then
+            php bin/console atlas:assessment:select --event-name "${{ github.event_name }}" "${component_args[@]}" --output var/atlas/generated/selection-plan.json
+          else
+            python3 tools/atlas/python-engine/select_quality_atlas_targets.py --event-name "${{ github.event_name }}" "${component_args[@]}" --output var/atlas/generated/selection-plan.json
+          fi
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          plan = json.loads(Path('var/atlas/generated/selection-plan.json').read_text(encoding='utf-8'))
+          selected = plan.get('selected_components') or []
+          import os
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as fh:
+              fh.write(f"selected_csv={','.join(selected)}\n")
+              fh.write(f"selected_count={len(selected)}\n")
+              fh.write(f"should_assess={'true' if selected else 'false'}\n")
+              fh.write(f"selection_status={plan.get('status', 'unknown')}\n")
+              requested = plan.get('manual_components') or []
+              fh.write(f"requested_csv={','.join(requested)}\n")
+          print(json.dumps({'selected_components': selected, 'selected_count': len(selected), 'status': plan.get('status')}, indent=2))
+          PY
+
+      - name: Run scheduled assessment dry-run or AI-backed pass
+        id: assessment
+        if: steps.selection.outputs.should_assess == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          QUALITY_ATLAS_REPO_TOKEN: ${{ secrets.QUALITY_ATLAS_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUALITY_ATLAS_OPENAI_MODEL: ${{ vars.QUALITY_ATLAS_OPENAI_MODEL || 'gpt-5' }}
+          INPUT_MODE: ${{ github.event.inputs.mode || 'auto' }}
+          SELECTED_CSV: ${{ steps.selection.outputs.selected_csv }}
+          REQUESTED_CSV: ${{ steps.selection.outputs.requested_csv }}
+        run: |
+          mode="dry-run"
+          if [ "${INPUT_MODE}" = "responses" ]; then
+            mode="responses"
+          elif [ "${INPUT_MODE}" = "dry-run" ]; then
+            mode="dry-run"
+          elif [ -n "${OPENAI_API_KEY}" ]; then
+            mode="responses"
+          fi
+
+          component_args=()
+          IFS=',' read -ra selected <<< "${SELECTED_CSV}"
+          selected_component="ALL_ENABLED"
+          if [ -n "${REQUESTED_CSV}" ]; then
+            selected_component="${REQUESTED_CSV}"
+          elif [ -n "${SELECTED_CSV}" ]; then
+            selected_component="${SELECTED_CSV}"
+          fi
+          for component in "${selected[@]}"; do
+            if [ -n "${component}" ]; then
+              component_args+=(--component "${component}")
+            fi
+          done
+
+          echo "mode=${mode}" >> "$GITHUB_OUTPUT"
+          echo "component=${selected_component}" >> "$GITHUB_OUTPUT"
+
+          echo "Assessment mode=${mode} component=${selected_component}"
+          if [ -x bin/console ]; then
+            php bin/console atlas:assessment:run --mode "$mode" --selection-plan var/atlas/generated/selection-plan.json "${component_args[@]}"
+          else
+            python3 tools/atlas/python-engine/run_quality_atlas_assessment.py --mode "$mode" --selection-plan var/atlas/generated/selection-plan.json "${component_args[@]}"
+          fi
+
+      - name: Skip assessment when no meaningful changes were detected
+        if: steps.selection.outputs.should_assess != 'true'
+        run: |
+          echo "No components selected by assessment policy; skipping AI assessment."
+
+      - name: Print assessment errors
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          root = Path('var/atlas/generated/assessment-runs')
+          if not root.exists():
+              print('No assessment run directory found.')
+              raise SystemExit(0)
+          runs = sorted([p for p in root.iterdir() if p.is_dir()])
+          if not runs:
+              print('No assessment runs found.')
+              raise SystemExit(0)
+          run_dir = runs[-1]
+          print(f'Latest assessment run: {run_dir}')
+          errors = sorted(run_dir.glob('*.error.json'))
+          if not errors:
+              print('No component error files found.')
+              raise SystemExit(0)
+          for path in errors:
+              print(f'\n===== {path.name} =====')
+              try:
+                  payload = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  print(path.read_text(encoding='utf-8', errors='ignore'))
+                  continue
+              compact = {
+                  'component': payload.get('component'),
+                  'title': payload.get('title'),
+                  'mode': payload.get('mode'),
+                  'error_type': payload.get('error_type'),
+                  'error': payload.get('error'),
+              }
+              print(json.dumps(compact, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Write assessment step summary
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          summary_path = Path('var/atlas/generated/latest-assessment-summary.json')
+          lines = []
+          lines.append('## Atlas assessment')
+          lines.append('')
+          lines.append("- mode: `${{ steps.assessment.outputs.mode || 'skipped' }}`")
+          lines.append("- component input: `${{ steps.assessment.outputs.component || steps.selection.outputs.selected_csv || 'none' }}`")
+          lines.append("- selection status: `${{ steps.selection.outputs.selection_status || 'unknown' }}`")
+          if summary_path.exists():
+              payload = json.loads(summary_path.read_text(encoding='utf-8'))
+              lines.append(f"- status: `{payload.get('status', 'unknown')}`")
+              lines.append(f"- successful components: `{len(payload.get('components', []))}`")
+              lines.append(f"- failures: `{len(payload.get('failures', []))}`")
+              selected = payload.get('selected_components') or []
+              lines.append(f"- selected components: `{', '.join(selected) if selected else 'ALL_ENABLED'}`")
+              failures = payload.get('failures', [])
+              if failures:
+                  lines.append('')
+                  lines.append('### Failures')
+                  for failure in failures:
+                      lines.append(f"- **{failure.get('component', 'unknown')}** — `{failure.get('error_type', 'Error')}`: {failure.get('error', 'Unknown error')}")
+          else:
+              lines.append('- latest summary file not found')
+          import os
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          PY
+
+      - name: Upload assessment run artifacts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: atlas-assessment-${{ github.run_id }}
+          path: |
+            var/atlas/generated/assessment-runs
+            var/atlas/generated/latest-assessment-summary.json
+            var/atlas/generated/selection-plan.json
+          if-no-files-found: warn
+
+      - name: Keep Atlas publication handoff explicit
+        if: success() && steps.selection.outputs.should_assess == 'true'
+        run: |
+          echo "Atlassing owns scoring snapshots and generated assessment state under var/atlas."
+          echo "Documentating consumes Atlas exports for Antora/static publication in a separate workflow."
+
+      - name: Commit assessment artifacts
+        if: success() && steps.selection.outputs.should_assess == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add var/atlas tools/atlas/python-engine src/Command src/Service src/ServiceInterface src/Resources composer.json .github/workflows/atlas-assessment.yml ATLAS_W02_ENGINE_SHELL_MANIFEST.json docs/architecture/w02-symfony-engine-shell.adoc
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore(atlas): refresh assessment snapshots"
+            git push origin HEAD:master
+          else
+            echo "No quality atlas changes to commit."
+          fi

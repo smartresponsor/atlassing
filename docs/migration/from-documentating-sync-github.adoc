@@ -1,0 +1,50 @@
+= Atlas Engine Migration From Documentating
+:toc:
+
+== Source
+
+This export was built from:
+
+* `Documentating(13).zip` for Python tools and static publication/reference assets.
+* `DocumentatingSymcGithub.zip` for `.sync/quality-atlas` and GitHub workflow state.
+
+== Target responsibility
+
+`Atlassing/Atlas` becomes the owner of the assessment lifecycle:
+
+* repository registry
+* metric catalog
+* scoring model
+* assessment response schema
+* target selection policy
+* current/history component snapshots
+* deterministic probe snapshots
+* generated assessment run artifacts
+* portfolio/internal/schedule datasets
+
+== Documentating after migration
+
+`Documentating/Documentation` should consume Atlas exports and publish static Antora views only. It should not own target selection, scoring, AI verdict, or RC readiness history.
+
+== Gating split
+
+Current probe families include canon and architecture checks. These should not become permanent Atlas policy logic. Move strict deterministic checks to `gating/gate`; keep Atlas as the scoring/interpretation/history owner.
+
+== Next wave
+
+Create Symfony-oriented services and commands under `App\Atlassing`:
+
+* `AtlasAssessmentRunCommand`
+* `AtlasTargetSelectionCommand`
+* `AtlasRepositoryRegistryService`
+* `AtlasSnapshotService`
+* `AtlasProbeService`
+* `AtlasScoringService`
+* `AtlasPublicationExportService`
+
+No `/src/Domain/`, no ports/adapters, no controller rendering.
+
+
+== Clean application rule
+
+Do not copy a Documentating publication tree into Atlassing. If a previous archive contains `legacy/documentating/`, skip that directory. The clean export keeps only Atlas-owned engine/state material and migration engine sources.

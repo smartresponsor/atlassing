@@ -1,0 +1,62 @@
+version: '1.4'
+description: Strict response contract for AI-backed Quality Atlas assessment runs in Responses API structured-output mode.
+mode: responses_json_schema
+base_metrics:
+  - product
+  - architecture
+  - runtime
+  - qa
+  - ops
+  - market
+  - overall
+response:
+  component:
+    type: string
+    required: true
+  summary:
+    type: string
+    required: true
+  strengths:
+    type: string_array
+    required: true
+  risks:
+    type: string_array
+    required: true
+  next_actions:
+    type: string_array
+    required: true
+  notes:
+    type: string_array
+    required: true
+  confidence:
+    type: enum
+    allowed: [high, medium, low]
+    required: true
+  evidence_paths:
+    type: string_array
+    required: true
+  suggested_score_overrides:
+    type: object
+    key_space: fixed_base_metrics
+    allowed_keys: [product, architecture, runtime, qa, ops, market, overall]
+    required: true
+    required_keys: [product, architecture, runtime, qa, ops, market, overall]
+    values: float_0_to_10_or_null
+  metric_updates:
+    type: object
+    allowed_keys: [product, architecture, runtime, qa, ops, market, overall]
+    required: true
+    required_keys: [product, architecture, runtime, qa, ops, market, overall]
+    value_shape:
+      summary:
+        type: string
+        required: true
+      risks:
+        type: string_array
+        required: true
+      improvements:
+        type: string_array
+        required: true
+      evidence:
+        type: string_array
+        required: true

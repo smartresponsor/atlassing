@@ -1,0 +1,3276 @@
+{
+  "name": "atlassing-atlas-engine-export-clean-from-documentating-sync-github",
+  "created_at_utc": "2026-06-03T00:11:49Z",
+  "source_archives": [
+    "Documentating(13).zip",
+    "DocumentatingSymcGithub.zip"
+  ],
+  "target_root": "Atlassing",
+  "package": "atlassing/atlas",
+  "namespace_policy": "App\\Atlassing planned for Symfony service implementation; imported Python tools are kept only as migration engine sources.",
+  "db_prefix": "atlas_",
+  "primary_owner_after_migration": "Atlassing/Atlas",
+  "documentating_role_after_migration": "static Adoc/Antora publication consumer of Atlas exports",
+  "gating_role_after_migration": "strict deterministic canon/policy validation provider",
+  "path_mapping": {
+    ".sync/quality-atlas/contract": "var/atlas/contract",
+    ".sync/quality-atlas/repositories": "var/atlas/repository",
+    ".sync/quality-atlas/schedules": "var/atlas/schedule",
+    ".sync/quality-atlas/cards": "var/atlas/card",
+    ".sync/quality-atlas/components": "var/atlas/component",
+    ".sync/quality-atlas/generated": "var/atlas/generated",
+    ".github/workflows/quality-atlas-assessment.yml": ".github/workflows/atlas-assessment.yml",
+    "tools/*quality_atlas*.py": "tools/atlas/python-engine/"
+  },
+  "copied_file_count": 540,
+  "copied_files": [
+    {
+      "source": ".sync/quality-atlas/contract/assessment-response-schema.yaml",
+      "target": "Atlassing/var/atlas/contract/assessment-response-schema.yaml",
+      "bytes": 1493,
+      "note": "mapped from .sync/quality-atlas/contract"
+    },
+    {
+      "source": ".sync/quality-atlas/contract/metric-catalog.yaml",
+      "target": "Atlassing/var/atlas/contract/metric-catalog.yaml",
+      "bytes": 20228,
+      "note": "mapped from .sync/quality-atlas/contract"
+    },
+    {
+      "source": ".sync/quality-atlas/contract/probe-families.yaml",
+      "target": "Atlassing/var/atlas/contract/probe-families.yaml",
+      "bytes": 1417,
+      "note": "mapped from .sync/quality-atlas/contract"
+    },
+    {
+      "source": ".sync/quality-atlas/contract/scoring-model.yaml",
+      "target": "Atlassing/var/atlas/contract/scoring-model.yaml",
+      "bytes": 662,
+      "note": "mapped from .sync/quality-atlas/contract"
+    },
+    {
+      "source": ".sync/quality-atlas/contract/view-profiles.yaml",
+      "target": "Atlassing/var/atlas/contract/view-profiles.yaml",
+      "bytes": 3691,
+      "note": "mapped from .sync/quality-atlas/contract"
+    },
+    {
+      "source": ".sync/quality-atlas/repositories/ecosystem-repositories.yaml",
+      "target": "Atlassing/var/atlas/repository/ecosystem-repositories.yaml",
+      "bytes": 18165,
+      "note": "mapped from .sync/quality-atlas/repositories"
+    },
+    {
+      "source": ".sync/quality-atlas/schedules/assessment-policy.yaml",
+      "target": "Atlassing/var/atlas/schedule/assessment-policy.yaml",
+      "bytes": 1447,
+      "note": "mapped from .sync/quality-atlas/schedules"
+    },
+    {
+      "source": ".sync/quality-atlas/cards/assessment-cards.yaml",
+      "target": "Atlassing/var/atlas/card/assessment-cards.yaml",
+      "bytes": 1879,
+      "note": "mapped from .sync/quality-atlas/cards"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/current.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/current.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-05-assessment-2026-04-05.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-05-assessment-2026-04-05.yaml",
+      "bytes": 12883,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7755,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 13276,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10728,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/current.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-05-assessment-2026-04-05.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-05-assessment-2026-04-05.yaml",
+      "bytes": 9537,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 6832,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/accessing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/accessing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/current.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/current.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7758,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/current.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/addressing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/addressing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/current.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/current.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7753,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 18888,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/current.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 10344,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/analysing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/analysing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/current.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/current.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7758,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10732,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/current.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/applicating/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/applicating/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/attaching/current.yaml",
+      "target": "Atlassing/var/atlas/component/attaching/current.yaml",
+      "bytes": 15126,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/attaching/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/attaching/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 15126,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/attaching/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/attaching/probes/current.yaml",
+      "bytes": 10843,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/attaching/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/attaching/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 10843,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/current.yaml",
+      "target": "Atlassing/var/atlas/component/billing/current.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7751,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-11-assessment-2026-04-11.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-11-assessment-2026-04-11.yaml",
+      "bytes": 17954,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10722,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/current.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-11-assessment-2026-04-11.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-11-assessment-2026-04-11.yaml",
+      "bytes": 6937,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/billing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/billing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/current.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/current.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7756,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/current.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/cataloging/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/cataloging/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/current.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/current.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7767,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-07-assessment-2026-04-07.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-07-assessment-2026-04-07.yaml",
+      "bytes": 18390,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/current.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-07-assessment-2026-04-07.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-07-assessment-2026-04-07.yaml",
+      "bytes": 10703,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/discovering/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/discovering/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5739,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/documentating/current.yaml",
+      "target": "Atlassing/var/atlas/component/documentating/current.yaml",
+      "bytes": 8211,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/documentating/history/2026-04-05-assessment-2026-04-05.yaml",
+      "target": "Atlassing/var/atlas/component/documentating/history/2026-04-05-assessment-2026-04-05.yaml",
+      "bytes": 12239,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/documentating/history/2026-04-05-contract-tightening.yaml",
+      "target": "Atlassing/var/atlas/component/documentating/history/2026-04-05-contract-tightening.yaml",
+      "bytes": 5846,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/documentating/history/2026-04-05-manual-check.yaml",
+      "target": "Atlassing/var/atlas/component/documentating/history/2026-04-05-manual-check.yaml",
+      "bytes": 5808,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/documentating/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/documentating/probes/current.yaml",
+      "bytes": 7518,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/documentating/probes/history/2026-04-05-contract-tightening.yaml",
+      "target": "Atlassing/var/atlas/component/documentating/probes/history/2026-04-05-contract-tightening.yaml",
+      "bytes": 7518,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/current.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/current.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7754,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 16671,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/current.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 10869,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/indexing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/indexing/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/current.yaml",
+      "target": "Atlassing/var/atlas/component/locating/current.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7750,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/current.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/locating/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/locating/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/current.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/current.yaml",
+      "bytes": 17153,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7755,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 16381,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10725,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-07-assessment-2026-04-07.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-07-assessment-2026-04-07.yaml",
+      "bytes": 17978,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10725,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10725,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10725,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10725,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-14-assessment-2026-04-14.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-14-assessment-2026-04-14.yaml",
+      "bytes": 17153,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10725,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/current.yaml",
+      "bytes": 12046,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 12043,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-07-assessment-2026-04-07.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-07-assessment-2026-04-07.yaml",
+      "bytes": 12095,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-14-assessment-2026-04-14.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-14-assessment-2026-04-14.yaml",
+      "bytes": 12046,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/messaging/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/messaging/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/current.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/current.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7751,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10723,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/current.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/ordering/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/ordering/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/current.yaml",
+      "target": "Atlassing/var/atlas/component/paying/current.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7750,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 17163,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10720,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/current.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 10787,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/paying/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/paying/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/current.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/current.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7765,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10740,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/current.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/projecting/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/projecting/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5737,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/current.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/current.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7747,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10716,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/current.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/rolling/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/rolling/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/current.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/current.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7757,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10729,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/current.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/runtiming/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/runtiming/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/current.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/current.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7757,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10727,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/current.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/shipping/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/shipping/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/current.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/current.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7749,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 16927,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-07-assessment-2026-04-07.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-07-assessment-2026-04-07.yaml",
+      "bytes": 16736,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-08-assessment-2026-04-08.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-08-assessment-2026-04-08.yaml",
+      "bytes": 16524,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-11-assessment-2026-04-11.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-11-assessment-2026-04-11.yaml",
+      "bytes": 15839,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10718,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/current.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-06-assessment-2026-04-06.yaml",
+      "bytes": 11894,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-07-assessment-2026-04-07.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-07-assessment-2026-04-07.yaml",
+      "bytes": 11529,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-08-assessment-2026-04-08.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-08-assessment-2026-04-08.yaml",
+      "bytes": 11398,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-11-assessment-2026-04-11.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-11-assessment-2026-04-11.yaml",
+      "bytes": 11586,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/tagging/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/tagging/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5731,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/current.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/current.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7752,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10721,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/current.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/taxating/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/taxating/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5733,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/current.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/current.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 7755,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-12-assessment-2026-04-12.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-12-assessment-2026-04-12.yaml",
+      "bytes": 16261,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 10726,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/current.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/current.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-05-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-06-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-07-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-08-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-11-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-12-assessment-2026-04-12.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-12-assessment-2026-04-12.yaml",
+      "bytes": 12250,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-12-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/components/vendoring/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "target": "Atlassing/var/atlas/component/vendoring/probes/history/2026-04-14-pre-rc-seed.yaml",
+      "bytes": 5735,
+      "note": "mapped from .sync/quality-atlas/components"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T012556Z/documentating.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T012556Z/documentating.json",
+      "bytes": 2865,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T012556Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T012556Z/index.json",
+      "bytes": 88,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T014527Z/documentating.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T014527Z/documentating.json",
+      "bytes": 11535,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T014527Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T014527Z/index.json",
+      "bytes": 95,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T070750Z/documentating.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T070750Z/documentating.json",
+      "bytes": 21055,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T070750Z/documentating.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T070750Z/documentating.prompt.txt",
+      "bytes": 56077,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T070750Z/documentating.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T070750Z/documentating.request.json",
+      "bytes": 71742,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T070750Z/documentating.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T070750Z/documentating.response.json",
+      "bytes": 19505,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T070750Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T070750Z/index.json",
+      "bytes": 186,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/accessing.json",
+      "bytes": 24352,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/accessing.prompt.txt",
+      "bytes": 61551,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/accessing.request.json",
+      "bytes": 77228,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/accessing.response.json",
+      "bytes": 19089,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/documentating.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/documentating.json",
+      "bytes": 21167,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/documentating.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/documentating.prompt.txt",
+      "bytes": 58464,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/documentating.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/documentating.request.json",
+      "bytes": 74165,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/documentating.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/documentating.response.json",
+      "bytes": 20819,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T094431Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T094431Z/index.json",
+      "bytes": 163,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T172028Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T172028Z/accessing.json",
+      "bytes": 26060,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T172028Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T172028Z/accessing.prompt.txt",
+      "bytes": 63277,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T172028Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T172028Z/accessing.request.json",
+      "bytes": 79004,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T172028Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T172028Z/accessing.response.json",
+      "bytes": 18325,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T172028Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T172028Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T201656Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T201656Z/accessing.json",
+      "bytes": 14014,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T201656Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T201656Z/accessing.prompt.txt",
+      "bytes": 51186,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T201656Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T201656Z/accessing.request.json",
+      "bytes": 67038,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T201656Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T201656Z/accessing.response.json",
+      "bytes": 19404,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T201656Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T201656Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T204135Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T204135Z/accessing.json",
+      "bytes": 15022,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T204135Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T204135Z/accessing.prompt.txt",
+      "bytes": 51186,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T204135Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T204135Z/accessing.request.json",
+      "bytes": 67038,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T204135Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T204135Z/accessing.response.json",
+      "bytes": 18910,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T204135Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T204135Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T211731Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T211731Z/accessing.json",
+      "bytes": 14828,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T211731Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T211731Z/accessing.prompt.txt",
+      "bytes": 51186,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T211731Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T211731Z/accessing.request.json",
+      "bytes": 67038,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T211731Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T211731Z/accessing.response.json",
+      "bytes": 18832,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T211731Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T211731Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T233345Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T233345Z/accessing.json",
+      "bytes": 25736,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T233345Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T233345Z/accessing.prompt.txt",
+      "bytes": 63405,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T233345Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T233345Z/accessing.request.json",
+      "bytes": 79132,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T233345Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T233345Z/accessing.response.json",
+      "bytes": 18037,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260405T233345Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260405T233345Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T002254Z/accessing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T002254Z/accessing.json",
+      "bytes": 30260,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T002254Z/accessing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T002254Z/accessing.prompt.txt",
+      "bytes": 67484,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T002254Z/accessing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T002254Z/accessing.request.json",
+      "bytes": 83267,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T002254Z/accessing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T002254Z/accessing.response.json",
+      "bytes": 18368,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T002254Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T002254Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T023833Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T023833Z/index.json",
+      "bytes": 181,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T023833Z/indexing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T023833Z/indexing.json",
+      "bytes": 22415,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T023833Z/indexing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T023833Z/indexing.prompt.txt",
+      "bytes": 58548,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T023833Z/indexing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T023833Z/indexing.request.json",
+      "bytes": 74318,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T023833Z/indexing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T023833Z/indexing.response.json",
+      "bytes": 19106,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T062705Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T062705Z/index.json",
+      "bytes": 179,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T062705Z/paying.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T062705Z/paying.json",
+      "bytes": 22276,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T062705Z/paying.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T062705Z/paying.prompt.txt",
+      "bytes": 58654,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T062705Z/paying.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T062705Z/paying.request.json",
+      "bytes": 74600,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T062705Z/paying.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T062705Z/paying.response.json",
+      "bytes": 18865,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T075358Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T075358Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T160343Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T160343Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T160611Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T160611Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T163253Z/attaching.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T163253Z/attaching.json",
+      "bytes": 12854,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T163253Z/attaching.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T163253Z/attaching.prompt.txt",
+      "bytes": 48720,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T163253Z/attaching.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T163253Z/attaching.request.json",
+      "bytes": 64275,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T163253Z/attaching.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T163253Z/attaching.response.json",
+      "bytes": 18901,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T163253Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T163253Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T172733Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T172733Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T172733Z/messaging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T172733Z/messaging.json",
+      "bytes": 23464,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T172733Z/messaging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T172733Z/messaging.prompt.txt",
+      "bytes": 60106,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T172733Z/messaging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T172733Z/messaging.request.json",
+      "bytes": 76278,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T172733Z/messaging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T172733Z/messaging.response.json",
+      "bytes": 18699,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T182855Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T182855Z/index.json",
+      "bytes": 180,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T182855Z/tagging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T182855Z/tagging.json",
+      "bytes": 22721,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T182855Z/tagging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T182855Z/tagging.prompt.txt",
+      "bytes": 58986,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T182855Z/tagging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T182855Z/tagging.request.json",
+      "bytes": 74856,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T182855Z/tagging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T182855Z/tagging.response.json",
+      "bytes": 19002,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T185936Z/analysing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T185936Z/analysing.json",
+      "bytes": 21330,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T185936Z/analysing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T185936Z/analysing.prompt.txt",
+      "bytes": 56121,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T185936Z/analysing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T185936Z/analysing.request.json",
+      "bytes": 71749,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T185936Z/analysing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T185936Z/analysing.response.json",
+      "bytes": 20287,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260406T185936Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260406T185936Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T010203Z/discovering.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T010203Z/discovering.json",
+      "bytes": 20876,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T010203Z/discovering.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T010203Z/discovering.prompt.txt",
+      "bytes": 55897,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T010203Z/discovering.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T010203Z/discovering.request.json",
+      "bytes": 71585,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T010203Z/discovering.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T010203Z/discovering.response.json",
+      "bytes": 19957,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T010203Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T010203Z/index.json",
+      "bytes": 184,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T042020Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T042020Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T042020Z/messaging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T042020Z/messaging.json",
+      "bytes": 24585,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T042020Z/messaging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T042020Z/messaging.prompt.txt",
+      "bytes": 59982,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T042020Z/messaging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T042020Z/messaging.request.json",
+      "bytes": 76189,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T042020Z/messaging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T042020Z/messaging.response.json",
+      "bytes": 19595,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T043620Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T043620Z/index.json",
+      "bytes": 180,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T043620Z/tagging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T043620Z/tagging.json",
+      "bytes": 22359,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T043620Z/tagging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T043620Z/tagging.prompt.txt",
+      "bytes": 58981,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T043620Z/tagging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T043620Z/tagging.request.json",
+      "bytes": 74861,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260407T043620Z/tagging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260407T043620Z/tagging.response.json",
+      "bytes": 18742,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260408T054556Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260408T054556Z/index.json",
+      "bytes": 180,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260408T054556Z/tagging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260408T054556Z/tagging.json",
+      "bytes": 22670,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260408T054556Z/tagging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260408T054556Z/tagging.prompt.txt",
+      "bytes": 59037,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260408T054556Z/tagging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260408T054556Z/tagging.request.json",
+      "bytes": 75068,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260408T054556Z/tagging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260408T054556Z/tagging.response.json",
+      "bytes": 18918,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T002903Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T002903Z/index.json",
+      "bytes": 180,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T002903Z/tagging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T002903Z/tagging.json",
+      "bytes": 21948,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T002903Z/tagging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T002903Z/tagging.prompt.txt",
+      "bytes": 59082,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T002903Z/tagging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T002903Z/tagging.request.json",
+      "bytes": 75084,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T002903Z/tagging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T002903Z/tagging.response.json",
+      "bytes": 18240,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T031148Z/billing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T031148Z/billing.json",
+      "bytes": 16455,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T031148Z/billing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T031148Z/billing.prompt.txt",
+      "bytes": 52499,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T031148Z/billing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T031148Z/billing.request.json",
+      "bytes": 67670,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T031148Z/billing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T031148Z/billing.response.json",
+      "bytes": 19085,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T031148Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T031148Z/index.json",
+      "bytes": 180,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T032428Z/billing.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T032428Z/billing.json",
+      "bytes": 22767,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T032428Z/billing.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T032428Z/billing.prompt.txt",
+      "bytes": 57885,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T032428Z/billing.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T032428Z/billing.request.json",
+      "bytes": 73787,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T032428Z/billing.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T032428Z/billing.response.json",
+      "bytes": 19905,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260411T032428Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260411T032428Z/index.json",
+      "bytes": 180,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260412T192358Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260412T192358Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260412T192358Z/vendoring.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260412T192358Z/vendoring.json",
+      "bytes": 22305,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260412T192358Z/vendoring.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260412T192358Z/vendoring.prompt.txt",
+      "bytes": 59306,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260412T192358Z/vendoring.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260412T192358Z/vendoring.request.json",
+      "bytes": 75346,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260412T192358Z/vendoring.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260412T192358Z/vendoring.response.json",
+      "bytes": 18326,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260414T044138Z/index.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260414T044138Z/index.json",
+      "bytes": 182,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260414T044138Z/messaging.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260414T044138Z/messaging.json",
+      "bytes": 24024,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260414T044138Z/messaging.prompt.txt",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260414T044138Z/messaging.prompt.txt",
+      "bytes": 59932,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260414T044138Z/messaging.request.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260414T044138Z/messaging.request.json",
+      "bytes": 76128,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/assessment-runs/20260414T044138Z/messaging.response.json",
+      "target": "Atlassing/var/atlas/generated/assessment-runs/20260414T044138Z/messaging.response.json",
+      "bytes": 19362,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/internal-dataset.json",
+      "target": "Atlassing/var/atlas/generated/internal-dataset.json",
+      "bytes": 266904,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/latest-assessment-summary.json",
+      "target": "Atlassing/var/atlas/generated/latest-assessment-summary.json",
+      "bytes": 807,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/portfolio-dataset.json",
+      "target": "Atlassing/var/atlas/generated/portfolio-dataset.json",
+      "bytes": 109152,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/selection-plan-dataset.json",
+      "target": "Atlassing/var/atlas/generated/selection-plan-dataset.json",
+      "bytes": 18223,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/quality-atlas/generated/selection-plan.json",
+      "target": "Atlassing/var/atlas/generated/selection-plan.json",
+      "bytes": 923,
+      "note": "mapped from .sync/quality-atlas/generated"
+    },
+    {
+      "source": ".sync/manifest/component-list.yml",
+      "target": "Atlassing/var/atlas/import/documentating-sync/manifest/component-list.yml",
+      "bytes": 1113,
+      "note": "reference manifest from Documentating .sync/manifest"
+    },
+    {
+      "source": ".github/workflows/quality-atlas-assessment.yml",
+      "target": "Atlassing/migration/documentating/.github/workflows/quality-atlas-assessment.yml",
+      "bytes": 9383,
+      "note": "original Documentating workflow for reference"
+    },
+    {
+      "source": ".github/workflows/quality-atlas-assessment.yml",
+      "target": "Atlassing/.github/workflows/atlas-assessment.yml",
+      "bytes": 9245,
+      "note": "transitional workflow with var/atlas path mapping; review before production use"
+    },
+    {
+      "source": ".github/workflows/gh-pages.yml",
+      "target": "Atlassing/migration/documentating/.github/workflows/gh-pages.yml",
+      "bytes": 3073,
+      "note": "Documentating publication workflow reference; not Atlas ownership target"
+    },
+    {
+      "source": ".github/workflows/preview-qa-rc.yml",
+      "target": "Atlassing/migration/documentating/.github/workflows/preview-qa-rc.yml",
+      "bytes": 1025,
+      "note": "Documentating publication workflow reference; not Atlas ownership target"
+    },
+    {
+      "source": "tools/run_quality_atlas_assessment.py",
+      "target": "Atlassing/tools/atlas/python-engine/run_quality_atlas_assessment.py",
+      "bytes": 40340,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/select_quality_atlas_targets.py",
+      "target": "Atlassing/tools/atlas/python-engine/select_quality_atlas_targets.py",
+      "bytes": 13769,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/quality_atlas_probe_lib.py",
+      "target": "Atlassing/tools/atlas/python-engine/quality_atlas_probe_lib.py",
+      "bytes": 21815,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/seed_quality_atlas_snapshots.py",
+      "target": "Atlassing/tools/atlas/python-engine/seed_quality_atlas_snapshots.py",
+      "bytes": 8110,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/generate_quality_atlas_internal.py",
+      "target": "Atlassing/tools/atlas/python-engine/generate_quality_atlas_internal.py",
+      "bytes": 11437,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/generate_quality_atlas_portfolio.py",
+      "target": "Atlassing/tools/atlas/python-engine/generate_quality_atlas_portfolio.py",
+      "bytes": 14502,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/generate_quality_atlas_schedule.py",
+      "target": "Atlassing/tools/atlas/python-engine/generate_quality_atlas_schedule.py",
+      "bytes": 8585,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/generate_pre_rc_quality_atlas.py",
+      "target": "Atlassing/tools/atlas/python-engine/generate_pre_rc_quality_atlas.py",
+      "bytes": 19018,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/generate_quality_baseline_section.py",
+      "target": "Atlassing/tools/atlas/python-engine/generate_quality_baseline_section.py",
+      "bytes": 3391,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/build_antora_site_canonical_with_quality_atlas.py",
+      "target": "Atlassing/tools/atlas/python-engine/build_antora_site_canonical_with_quality_atlas.py",
+      "bytes": 2680,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": "tools/build_antora_site_quality_atlas_candidate.py",
+      "target": "Atlassing/tools/atlas/python-engine/build_antora_site_quality_atlas_candidate.py",
+      "bytes": 2713,
+      "note": "imported Python engine/publication tool from Documentating"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/architectural-dimensions.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/architectural-dimensions.adoc",
+      "bytes": 1293,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/dataset.json",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/dataset.json",
+      "bytes": 3283,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/evaluation.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/evaluation.adoc",
+      "bytes": 1078,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/explorer.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/explorer.adoc",
+      "bytes": 9628,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/glossary.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/glossary.adoc",
+      "bytes": 845,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/index.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/index.adoc",
+      "bytes": 864,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/internal.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/internal.adoc",
+      "bytes": 196405,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/overview.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/overview.adoc",
+      "bytes": 2400,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/portfolio.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/portfolio.adoc",
+      "bytes": 80143,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/principles.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/principles.adoc",
+      "bytes": 1615,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/quality-baseline.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/quality-baseline.adoc",
+      "bytes": 1415,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/readiness-model.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/readiness-model.adoc",
+      "bytes": 905,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/schedule.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/schedule.adoc",
+      "bytes": 18109,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": ".antora-src/modules/ROOT/pages/quality-atlas/summary.adoc",
+      "target": "Atlassing/migration/documentating/.antora-src/modules/ROOT/pages/quality-atlas/summary.adoc",
+      "bytes": 890,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-atlas/component-quality-dataset.json",
+      "target": "Atlassing/migration/documentating/doc/quality-atlas/component-quality-dataset.json",
+      "bytes": 2927,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-atlas/component-quality-summary.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-atlas/component-quality-summary.adoc",
+      "bytes": 1220,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-atlas/home-quality-atlas-block.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-atlas/home-quality-atlas-block.adoc",
+      "bytes": 541,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-atlas/integration-note.md",
+      "target": "Atlassing/migration/documentating/doc/quality-atlas/integration-note.md",
+      "bytes": 879,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-atlas/merge-plan.md",
+      "target": "Atlassing/migration/documentating/doc/quality-atlas/merge-plan.md",
+      "bytes": 1995,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/architectural-dimensions.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/architectural-dimensions.adoc",
+      "bytes": 1293,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/evaluation.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/evaluation.adoc",
+      "bytes": 1078,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/glossary.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/glossary.adoc",
+      "bytes": 845,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/integration-contract.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/integration-contract.adoc",
+      "bytes": 1824,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/overview.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/overview.adoc",
+      "bytes": 2400,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/principles.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/principles.adoc",
+      "bytes": 1615,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/quality-baseline.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/quality-baseline.adoc",
+      "bytes": 1415,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "doc/quality-baseline/readiness-model.adoc",
+      "target": "Atlassing/migration/documentating/doc/quality-baseline/readiness-model.adoc",
+      "bytes": 905,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/quality-atlas/assets/css/atlas.css",
+      "target": "Atlassing/migration/documentating/docs/quality-atlas/assets/css/atlas.css",
+      "bytes": 11714,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/quality-atlas/assets/data/documentating.json",
+      "target": "Atlassing/migration/documentating/docs/quality-atlas/assets/data/documentating.json",
+      "bytes": 292,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/quality-atlas/assets/data/portfolio.json",
+      "target": "Atlassing/migration/documentating/docs/quality-atlas/assets/data/portfolio.json",
+      "bytes": 382,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/quality-atlas/assets/js/atlas.js",
+      "target": "Atlassing/migration/documentating/docs/quality-atlas/assets/js/atlas.js",
+      "bytes": 4880,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/quality-atlas/documentating/index.html",
+      "target": "Atlassing/migration/documentating/docs/quality-atlas/documentating/index.html",
+      "bytes": 5667,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/quality-atlas/index.html",
+      "target": "Atlassing/migration/documentating/docs/quality-atlas/index.html",
+      "bytes": 6467,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/assets/css/atlas.css",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/assets/css/atlas.css",
+      "bytes": 11714,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/assets/css/qa-rc.css",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/assets/css/qa-rc.css",
+      "bytes": 6099,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/assets/data/documentating.json",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/assets/data/documentating.json",
+      "bytes": 292,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/assets/data/portfolio.json",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/assets/data/portfolio.json",
+      "bytes": 1728,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/assets/js/atlas.js",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/assets/js/atlas.js",
+      "bytes": 4880,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/assets/js/qa-rc.js",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/assets/js/qa-rc.js",
+      "bytes": 5477,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/documentating/index.html",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/documentating/index.html",
+      "bytes": 5651,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    },
+    {
+      "source": "docs/qa-rc/index.html",
+      "target": "Atlassing/migration/documentating/docs/qa-rc/index.html",
+      "bytes": 7742,
+      "note": "omitted from clean Atlas export; Documentating remains publication owner"
+    }
+  ],
+  "notes": [
+    "This is an export/migration pack, not a final runtime-hardening pack.",
+    "The generated workflow is transitional and should be reviewed before production CI use.",
+    "Migration Documentating publication files are under migration/documentating for reference only.",
+    "Clean export: no top-level legacy/documentating publication tree is included.",
+    "Documentating Antora/publication files remain in Documentating; Atlassing owns only Atlas engine/state/export contracts.",
+    "Imported Python files are kept under tools/atlas/python-engine as migration engine sources, not as final Symfony runtime architecture."
+  ]
+}

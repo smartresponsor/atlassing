@@ -1,0 +1,21 @@
+= Atlassing W01 Engine Cumulative
+
+This wave combines the clean Atlas engine export from Documentating with the Atlassing Symfony-oriented repository skeleton.
+
+== Ownership
+
+Atlassing owns scoring, assessment cadence, metric catalog, repository registry, component snapshots, AI-assisted verdicts, and generated Atlas state.
+
+Documentating owns Antora/Adoc publication and should consume Atlas export artifacts rather than run the scoring lifecycle.
+
+Gating owns strict deterministic canon validation. Atlassing may consume Gating evidence as scoring input in a later wave.
+
+== Path migration
+
+The old Documentating path `.sync/quality-atlas` has been normalized to `var/atlas` in this repository.
+
+== Workflow status
+
+`.github/workflows/atlas-assessment.yml` is a transitional workflow. It uses the Python engine under `tools/atlas/python-engine` and commits only Atlas-owned state under `var/atlas` plus the transitional engine scripts.
+
+It intentionally does not commit Antora pages. Static publication remains a Documentating responsibility.

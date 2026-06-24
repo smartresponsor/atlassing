@@ -1,0 +1,27 @@
+{
+  "package": "atlassing/atlas",
+  "wave": "W02",
+  "title": "Symfony engine shell around imported Atlas Python backend",
+  "base": "atlassing-atlas-w01-engine-cumulative.zip",
+  "changes": [
+    "Added Symfony command surface for target selection and assessment run.",
+    "Added Symfony services around imported tools/atlas/python-engine scripts.",
+    "Added repository registry and snapshot reader services.",
+    "Loaded services through AtlassingExtension and src/Resources/config/services.yaml.",
+    "Updated Atlas surface payload service to include latest assessment summary.",
+    "Prepared workflow to prefer Symfony commands when bin/console exists while keeping Python fallback for bundle-only contexts."
+  ],
+  "canonical_paths": {
+    "atlas_state": "var/atlas",
+    "python_backend": "tools/atlas/python-engine",
+    "command_layer": "src/Command",
+    "service_layer": "src/Service",
+    "service_interface_layer": "src/ServiceInterface"
+  },
+  "forbidden": [
+    "legacy/documentating",
+    ".sync/quality-atlas",
+    "Tabler strategic UI dependency",
+    "src/Domain"
+  ]
+}

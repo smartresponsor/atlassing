@@ -1,0 +1,2 @@
+Issue Type,Summary,Description,Priority,Labels
+Task,Extract Atlas engine from Documentating into Atlassing,"Move Quality Atlas scoring contracts, registry, schedules, snapshots, generated run state, and workflow ownership into Atlassing/Atlas. Keep Documentating as static publication consumer.",High,"atlassing,atlas,documentating,migration"

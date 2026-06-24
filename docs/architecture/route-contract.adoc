@@ -1,0 +1,20 @@
+= Atlas Route Contract
+
+The API owner root is `atlassing`.
+
+Valid route examples:
+
+* `/atlassing`
+* `/atlassing/atlas`
+* `/atlassing/atlas/component`
+* `/atlassing/atlas/component/{slug}`
+* `/atlassing/atlas/assessment`
+* `/atlassing/atlas/readiness`
+* `/atlassing/atlas/maturity`
+* `/api/atlassing/atlas`
+* `/api/atlassing/atlas/component`
+* `/api/atlassing/atlas/component/{slug}`
+
+Composite route tokens are forbidden. Use `/quality/atlas` style splitting only when the owner root requires that shape. For this component, Atlas lives under `/atlassing/atlas`.
+
+Dynamic `{id}` or `{slug}` variables may appear only as the terminal route token.

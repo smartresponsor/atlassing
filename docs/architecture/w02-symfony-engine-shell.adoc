@@ -1,0 +1,27 @@
+= W02 Symfony Engine Shell
+
+W02 converts the imported Atlas Python engine into a Symfony-oriented component boundary without rewriting the engine internals yet.
+
+== Ownership
+
+Atlassing owns the Atlas assessment lifecycle, repository registry, scoring contracts, snapshot state, and dashboard payload data.
+
+The imported Python files under `tools/atlas/python-engine/` are now treated as an internal backend behind Symfony commands and services, not as the architecture owner.
+
+== New command surface
+
+[source,bash]
+----
+php bin/console atlas:assessment:select --event-name workflow_dispatch --output var/atlas/generated/selection-plan.json
+php bin/console atlas:assessment:run --mode dry-run --selection-plan var/atlas/generated/selection-plan.json
+----
+
+The command layer delegates to:
+
+* `AtlasTargetSelectionService`
+* `AtlasAssessmentService`
+* `AtlasPythonEngineService`
+
+== Next migration direction
+
+The next waves should migrate deterministic policy checks to Gating and keep Atlassing as the scoring, maturity, readiness, and portfolio interpretation owner.
