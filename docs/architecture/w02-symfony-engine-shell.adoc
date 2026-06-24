@@ -2,6 +2,11 @@
 
 W02 converts the imported Atlas Python engine into a Symfony-oriented component boundary without rewriting the engine internals yet.
 
+Current runtime mode is package-first.
+
+Atlassing exposes Symfony commands and services for a host application or future standalone shell. Until this repository ships its own `bin/console`, CI must keep the Python engine fallback available for assessment execution.
+
+
 == Ownership
 
 Atlassing owns the Atlas assessment lifecycle, repository registry, scoring contracts, snapshot state, and dashboard payload data.

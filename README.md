@@ -23,6 +23,10 @@ Atlassing is the canonical owner of Atlas assessment lifecycle and state.
 2. Symfony bundle mode inside a host application.
 3. Payload producer mode for CRUDing + Viewing + Interfacing.
 
+Current runtime note: this repository is package-first today. It declares a Symfony bundle and does not currently ship its own `bin/console` runtime shell.
+
+The assessment workflow prefers Symfony commands when a host runtime provides `bin/console`; otherwise it uses the transitional Python engine under `tools/atlas/python-engine/`.
+
 ## Canon
 
 - Composer package: `atlassing/atlas`.
