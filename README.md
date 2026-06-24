@@ -6,6 +6,16 @@ This repository is separated from `documentating/documentation`:
 
 - `documentating/documentation` owns static Adoc/Antora documentation and exports documentation indexes.
 - `atlassing/atlas` consumes documentation indexes and builds Atlas quality/readiness surfaces.
+- `interfacing` links to Atlassing surfaces or consumes Atlassing contracts instead of duplicating Atlas state.
+
+## Ownership contract
+
+Atlassing is the canonical owner of Atlas assessment lifecycle and state.
+
+- Atlassing owns scoring contracts, metric catalogs, probe families, repository registry, assessment schedules, snapshots, generated Atlas payloads, and Atlas API surfaces.
+- Documentating may publish static documentation derived from Atlas outputs, but it does not own the scoring lifecycle.
+- Interfacing may expose interface-level navigation or links to Atlas, but it does not own Atlas scoring state.
+- The public Atlas contour is expected to live under `atlass.smartresponsor.com` when deployed as an own site.
 
 ## Modes
 

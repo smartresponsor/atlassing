@@ -5,6 +5,17 @@
 Этот файл находится в корне репозитория и является постоянным контекстом для Codex CLI.
 Перед работой прочитай также `README.md`, `composer.json`, `MANIFEST.json` и локальную `.gating/`, если она есть.
 
+## Atlassing-specific ownership override
+
+- This repository owns the Atlas assessment engine and Atlas state for Smart Responsor.
+- Canonical Atlas state lives under `var/atlas/` and must not be ignored or treated as disposable cache.
+- `Documentating` consumes or publishes Atlas outputs, but does not own Atlas scoring lifecycle.
+- `Interfacing` links to Atlassing surfaces or consumes Atlassing contracts, but does not duplicate Atlas state.
+- Public Atlas routes are expected to be deployable under `atlass.smartresponsor.com`.
+- Keep the package name `atlassing/atlas`, autoload root `App\\`, and route root `/atlassing/atlas` unless an explicit migration says otherwise.
+- Imported Documentating exports under `import/documentating-export/` are migration evidence, not runtime UI ownership.
+- Prefer precise changes to the Atlas engine, contracts, registry, routes, and state model over broad workspace-level rewrites.
+
 ## 1. Источник текущего кода
 
 - Работай с текущим деревом репозитория.

@@ -2,6 +2,8 @@
 
 The API owner root is `atlassing`.
 
+The expected public host contour is `atlass.smartresponsor.com`.
+
 Valid route examples:
 
 * `/atlassing`
