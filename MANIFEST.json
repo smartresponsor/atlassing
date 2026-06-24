@@ -161,7 +161,7 @@
   ],
   "excludes": [
     "legacy/documentating",
-    "Tabler landing runtime ownership",
-    "Antora publication ownership"
+    "Tabler landing runtime or Interfacing surface ownership",
+    "Antora publication runtime ownership; Documentating may publish Atlas outputs but does not own Atlas scoring lifecycle"
   ]
 }
