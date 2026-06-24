@@ -24,7 +24,7 @@ final class AtlasAssessmentSelectCommand extends Command
     {
         $this
             ->addOption('component', null, InputOption::VALUE_REQUIRED, 'Optional component_id to select.')
-            ->addOption('event-nameEntity', null, InputOption::VALUE_REQUIRED, 'GitHub event nameEntity or local event nameEntity.', 'workflow_dispatch')
+            ->addOption('event-name', null, InputOption::VALUE_REQUIRED, 'GitHub event name or local event name.', 'workflow_dispatch')
             ->addOption('output', null, InputOption::VALUE_REQUIRED, 'Selection plan output path.');
     }
 
@@ -32,7 +32,7 @@ final class AtlasAssessmentSelectCommand extends Command
     {
         $result = $this->targetSelectionService->selectTargets(
             $this->nullableString($input->getOption('component')),
-            (string) $input->getOption('event-nameEntity'),
+            (string) $input->getOption('event-name'),
             $this->nullableString($input->getOption('output')),
         );
 

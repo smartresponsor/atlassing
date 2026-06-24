@@ -23,7 +23,7 @@ final class AtlasTargetSelectionService implements AtlasTargetSelectionServiceIn
     public function selectTargets(?string $component = null, string $eventName = 'workflow_dispatch', ?string $outputPath = null): array
     {
         $outputPath ??= $this->atlasRoot . '/generated/selection-plan.json';
-        $arguments = ['--event-nameEntity', $eventName, '--output', $outputPath];
+        $arguments = ['--event-name', $eventName, '--output', $outputPath];
 
         if ($component !== null && $component !== '') {
             $arguments[] = '--component';
