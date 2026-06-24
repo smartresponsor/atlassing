@@ -34,11 +34,11 @@ final class AtlasPythonEngineService implements AtlasPythonEngineServiceInterfac
                 'successful' => false,
                 'output' => '',
                 'errorOutput' => sprintf('Atlas Python engine script was not found: %s', $scriptPath),
-                'command' => ['python3', $scriptPath, ...$arguments],
+                'command' => ['py', '-3', $scriptPath, ...$arguments],
             ];
         }
 
-        $command = ['python3', $scriptPath, ...$arguments];
+        $command = ['py', '-3', $scriptPath, ...$arguments];
         $process = new Process($command, $this->projectDir, $environment, null, 3600);
         $process->run();
 
