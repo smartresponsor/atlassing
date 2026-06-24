@@ -20,3 +20,5 @@
 *.tar.gz
 .DS_Store
 Thumbs.db
+
+config/reference.php
