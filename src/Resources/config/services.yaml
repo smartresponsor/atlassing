@@ -15,6 +15,10 @@ services:
     alias: App\Service\Assessment\AtlasPythonEngineService
   App\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface:
     alias: App\Service\Assessment\AtlasTargetSelectionService
+  App\ServiceInterface\Atlas\AtlasDocumentationCoverageServiceInterface:
+    alias: App\Service\Atlas\AtlasDocumentationCoverageService
+  App\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface:
+    alias: App\Service\Atlas\AtlasSurfacePayloadService
   App\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface:
     alias: App\Service\Registry\AtlasRepositoryRegistryService
   App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface:
