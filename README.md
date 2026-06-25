@@ -27,6 +27,32 @@ Current runtime note: this repository supports both Symfony bundle integration a
 
 The assessment workflow should prefer `php bin/console` in this repository and keep the transitional Python engine under `tools/atlas/python-engine/` as a controlled fallback.
 
+## Standalone CLI quick start
+
+Install dependencies:
+
+```powershell
+composer install
+```
+
+List available Atlas commands:
+
+```powershell
+php bin/console list atlas
+```
+
+Run the minimal CLI-first assessment cycle for a single component:
+
+```powershell
+php bin/console atlas:assessment:cycle --component documentating --mode dry-run
+```
+
+Inspect current Atlas state after the cycle:
+
+```powershell
+php bin/console atlas:status --component documentating
+```
+
 ## Canon
 
 - Composer package: `atlassing/atlas`.
