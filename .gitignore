@@ -22,3 +22,5 @@
 Thumbs.db
 
 config/reference.php
+__pycache__/
+*.pyc
