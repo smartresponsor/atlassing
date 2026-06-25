@@ -1,0 +1,188 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "documentating",
+    "component_title": "Documentating",
+    "github_repository": "local/documentating",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc",
+    "local_path": ".",
+    "notes": "Bootstrap-enabled in the atlas repository itself so the assessment workflow has a live local target."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Atlassing",
+    "timestamp_utc": "2026-06-25T04:46:09.359719+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "930537e6c674d7729798e2259890b1a25f522513"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M var/atlas/generated/selection-plan.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "930537e add atlassing status command\n0841e78 ignore python bytecode artifacts\nda2cccf add atlassing assessment cycle command\n96cce6f require atlassing standalone console in assessment workflow\n0fa9b96 document atlassing standalone console smoke"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": "./.codebase-memory\n./.codebase-memory/.gitattributes\n./.codebase-memory/artifact.json\n./.codebase-memory/graph.db.zst\n./.git\n./.git/COMMIT_EDITMSG\n./.git/HEAD\n./.git/config\n./.git/description\n./.git/hooks\n./.git/index\n./.git/info\n./.git/logs\n./.git/objects\n./.git/refs\n./.github\n./.github/workflows\n./.gitignore\n./AGENTS.md\n./ATLAS_ENGINE_EXPORT_MANIFEST.json\n./ATLAS_REPOSITORY_MANIFEST.json\n./ATLAS_W01_ENGINE_CUMULATIVE_MANIFEST.json\n./ATLAS_W02_ENGINE_SHELL_MANIFEST.json\n./MANIFEST.json\n./README.md\n./bin\n./bin/console\n./composer.json\n./composer.lock\n./config\n./config/bundles.php\n./config/packages\n./config/reference.php\n./config/routes\n./config/routes.yaml\n./config/services.yaml\n./delivery\n./delivery/jira\n./docs\n./docs/architecture\n./docs/import\n./docs/migration\n./docs/runtime\n./import\n./import/documentating-export\n./src\n./src/AtlassingBundle.php\n./src/Command\n./src/DependencyInjection\n./src/Entity\n./src/Enum\n./src/Kernel.php\n./src/Resources\n./src/Service\n./src/ServiceInterface\n./tools\n./tools/atlas\n./var\n./var/atlas\n./var/cache\n./vendor\n./vendor/autoload.php\n./vendor/bin\n./vendor/composer\n./vendor/doctrine\n./vendor/myclabs\n./vendor/nikic\n./vendor/phar-io\n./vendor/phpunit\n./vendor/psr\n./vendor/sebastian\n./vendor/staabm\n./vendor/symfony\n./vendor/theseer\n\nw\u0000s\u0000l\u0000:\u0000 \u0000\u001d\u00045\u00048\u00047\u00042\u00045\u0004A\u0004B\u0004=\u0004K\u00049\u0004 \u0000:\u0004;\u0004N\u0004G\u0004 \u0000\"\u0000w\u0000s\u0000l\u00002\u0000.\u0000p\u0000a\u0000g\u0000e\u0000R\u0000e\u0000p\u0000o\u0000r\u0000t\u0000i\u0000n\u0000g\u0000\"\u0000 \u00002\u0004 \u0000C\u0000:\u0000\\\u0000U\u0000s\u0000e\u0000r\u0000s\u0000\\\u0000A\u0000d\u0000m\u0000i\u0000n\u0000\\\u0000.\u0000w\u0000s\u0000l\u0000c\u0000o\u0000n\u0000f\u0000i\u0000g\u0000:\u00004\u0000\n\u0000\n\u0000"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 9009,
+      "output": "Python"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "6019"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"atlassing/atlas\",\n  \"description\": \"Smart Responsor Atlas component for quality, maturity, readiness, and documentation coverage surfaces.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"doctrine/orm\": \"^3.4\",\n    \"symfony/process\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/phpunit-bridge\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"extra\": {\n    \"smart_responsor\": {\n      \"component\": \"atlassing\",\n      \"package\": \"atlassing/atlas\",\n      \"business_prefix\": \"Atlas\",\n      \"database_prefix\": \"atlas_\",\n      \"surface_owner_root\": \"atlassing\"\n    }\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "documentating",
+    "summary": "Documentating remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 47618 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/documentating/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\documentating\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\documentating\\history\\2026-06-24-assessment-2026-06-24.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\documentating\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\documentating\\probes\\history\\2026-06-24-assessment-2026-06-24.yaml"
+  }
+}
