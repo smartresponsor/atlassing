@@ -66,11 +66,12 @@ jobs:
           if [ -n "${INPUT_COMPONENT}" ]; then
             component_args+=(--component "${INPUT_COMPONENT}")
           fi
-          if [ -x bin/console ]; then
-            php bin/console atlas:assessment:select --event-name "${{ github.event_name }}" "${component_args[@]}" --output var/atlas/generated/selection-plan.json
-          else
-            python3 tools/atlas/python-engine/select_quality_atlas_targets.py --event-name "${{ github.event_name }}" "${component_args[@]}" --output var/atlas/generated/selection-plan.json
+          if [ ! -x bin/console ]; then
+            echo "Atlassing standalone console runtime is required for assessment selection." >&2
+            exit 1
           fi
+          php bin/console atlas:assessment:select --event-name "${{ github.event_name }}" "${component_args[@]}" --output var/atlas/generated/selection-plan.json
+
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -126,11 +127,11 @@ jobs:
           echo "component=${selected_component}" >> "$GITHUB_OUTPUT"
 
           echo "Assessment mode=${mode} component=${selected_component}"
-          if [ -x bin/console ]; then
-            php bin/console atlas:assessment:run --mode "$mode" --selection-plan var/atlas/generated/selection-plan.json "${component_args[@]}"
-          else
-            python3 tools/atlas/python-engine/run_quality_atlas_assessment.py --mode "$mode" --selection-plan var/atlas/generated/selection-plan.json "${component_args[@]}"
+          if [ ! -x bin/console ]; then
+            echo "Atlassing standalone console runtime is required for assessment execution." >&2
+            exit 1
           fi
+          php bin/console atlas:assessment:run --mode "$mode" --selection-plan var/atlas/generated/selection-plan.json "${component_args[@]}"
 
       - name: Skip assessment when no meaningful changes were detected
         if: steps.selection.outputs.should_assess != 'true'
