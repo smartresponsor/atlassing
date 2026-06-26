@@ -176,6 +176,17 @@ def should_select(component: dict[str, Any], policy: dict[str, Any], state: dict
     return False, 'no_meaningful_change', details
 
 
+def default_selection_details(component: dict[str, Any], policy: dict[str, Any], state: dict[str, Any]) -> dict[str, Any]:
+    override = (policy.get('component_overrides') or {}).get(component['component_id'], {})
+    cadence_group = override.get('cadence_group') or component.get('cadence_group') or policy['defaults']['cadence_group']
+    last_dt = parse_iso(state.get('snapshot_date'))
+    hours_since = None if last_dt is None else round((now_utc() - last_dt).total_seconds() / 3600, 2)
+    return {
+        'cadence_group': cadence_group,
+        'hours_since_last_assessment': hours_since,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument('--registry', default=str(REGISTRY_FILE))
@@ -236,35 +247,41 @@ def main() -> None:
         state = load_snapshot_state(component_id)
         branch = component.get('default_branch') or policy['defaults'].get('branch', 'master')
         local_path = component.get('local_path') or ''
+        github_repository = component.get('github_repository') or ''
         head = {'branch': branch, 'head_commit': None, 'head_tag': None}
         changed_files: list[str] = []
         access_error = None
-        if local_path:
+        if not local_path and not github_repository:
+            access_error = 'No github_repository or local_path configured.'
+            select = False
+            reason = 'missing_repository_target'
+            details = default_selection_details(component, policy, state)
+        elif local_path:
             repo_dir = (repo_root / local_path).resolve()
             if repo_dir.exists():
                 head = local_head_info(repo_dir, branch)
                 changed_files = local_changed_files(repo_dir, state.get('assessed_commit'), head.get('head_commit'))
             else:
                 access_error = f'Configured local_path does not exist: {local_path}'
-        elif component.get('github_repository'):
+        else:
             if not repo_token:
                 access_error = 'No QUALITY_ATLAS_REPO_TOKEN/GITHUB_TOKEN available for external repository inspection.'
             else:
                 try:
-                    head = remote_head_info(component['github_repository'], branch, repo_token)
-                    changed_files = remote_changed_files(component['github_repository'], state.get('assessed_commit'), head.get('head_commit'), repo_token)
+                    head = remote_head_info(github_repository, branch, repo_token)
+                    changed_files = remote_changed_files(github_repository, state.get('assessed_commit'), head.get('head_commit'), repo_token)
                 except Exception as exc:
                     access_error = str(exc)
-        if access_error and not normalized_manual:
+        if access_error:
             select = False
-            reason = 'blocked_access'
-            details = {'cadence_group': (policy.get('component_overrides') or {}).get(component_id, {}).get('cadence_group') or policy['defaults']['cadence_group']}
+            reason = 'missing_repository_target' if not local_path and not github_repository else 'blocked_access'
+            details = default_selection_details(component, policy, state)
         else:
             select, reason, details = should_select(component, policy, state, head, changed_files, args.event_name)
         item = {
             'component': component_id,
             'title': component.get('component_title'),
-            'repository': component.get('github_repository') or component.get('local_path') or '',
+            'repository': github_repository or local_path,
             'selected': select,
             'reason': reason,
             'event_name': args.event_name,
