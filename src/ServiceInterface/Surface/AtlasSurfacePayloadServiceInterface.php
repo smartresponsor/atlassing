@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace App\ServiceInterface\Surface;
 
-interface AtlasSurfacePayloadServiceInterface
+use App\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface as CanonicalAtlasSurfacePayloadServiceInterface;
+
+/**
+ * @deprecated Use App\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface.
+ */
+interface AtlasSurfacePayloadServiceInterface extends CanonicalAtlasSurfacePayloadServiceInterface
 {
-    /**
-     * Builds the canonical Atlas surface payload consumed by Viewing.
-     *
-     * @param array<string, mixed> $context
-     *
-     * @return array<string, mixed>
-     */
-    public function buildPayload(string $surface, array $context = []): array;
 }
