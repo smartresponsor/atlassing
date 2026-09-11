@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace App\Service\Atlas;
 
+use App\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface;
 use App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
-use App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface;
+use App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface as LegacyAtlasSurfacePayloadServiceInterface;
 
-final class AtlasSurfacePayloadService implements AtlasSurfacePayloadServiceInterface
+final class AtlasSurfacePayloadService implements AtlasSurfacePayloadServiceInterface, LegacyAtlasSurfacePayloadServiceInterface
 {
     public function __construct(
         private readonly AtlasSnapshotServiceInterface $snapshotService,

@@ -3,7 +3,40 @@
   "description": "Smart Responsor Atlas component for quality, maturity, readiness, and documentation coverage surfaces.",
   "type": "symfony-bundle",
   "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../Cruding",
+      "options": { "symlink": true }
+    },
+    {
+      "type": "path",
+      "url": "../Gating",
+      "options": { "symlink": true }
+    },
+    {
+      "type": "path",
+      "url": "../Interfacing",
+      "options": { "symlink": true }
+    },
+    {
+      "type": "path",
+      "url": "../Objecting",
+      "options": { "symlink": true }
+    },
+    {
+      "type": "path",
+      "url": "../Viewing",
+      "options": { "symlink": true }
+    }
+  ],
   "require": {
+    "cruding/crud": "*@dev",
+    "easycorp/easyadmin-bundle": "^5.0",
+    "interfacing/interface": "*@dev",
+    "objecting/object": "*@dev",
     "php": "^8.4",
     "symfony/config": "^8.1",
     "symfony/dependency-injection": "^8.1",
@@ -12,9 +45,13 @@
     "symfony/console": "^8.1",
     "symfony/yaml": "^8.1",
     "doctrine/orm": "^3.4",
-    "symfony/process": "^8.1"
+    "symfony/process": "^8.1",
+    "viewing/view": "*@dev"
   },
   "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.95",
+    "gating/gate": "*@dev",
+    "phpstan/phpstan": "^2.2",
     "phpunit/phpunit": "^12.0",
     "symfony/phpunit-bridge": "^8.1"
   },
@@ -27,6 +64,21 @@
     "psr-4": {
       "App\\Tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "cs:check": "php-cs-fixer fix --dry-run --diff --verbose",
+    "cs:fix": "php-cs-fixer fix --verbose",
+    "gating:check": "php vendor/bin/gating check --target=. --profile=config/atlas_gating_profile.yaml --rule-set=config/atlas_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml",
+    "phpstan": "phpstan analyse --memory-limit=1G",
+    "test": "phpunit",
+    "quality": [
+      "@cs:check",
+      "@phpstan",
+      "@test"
+    ]
+  },
+  "config": {
+    "sort-packages": true
   },
   "extra": {
     "smart_responsor": {

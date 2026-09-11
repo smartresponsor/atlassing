@@ -30,5 +30,25 @@ class AtlasAssessmentEntity
         $this->score = $score;
         $this->readiness = $readiness;
     }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    public function getComponentSlug(): string
+    {
+        return $this->componentSlug;
+    }
+
+    public function getScore(): int
+    {
+        return $this->score;
+    }
+
+    public function getReadiness(): string
+    {
+        return $this->readiness;
+    }
 }
 

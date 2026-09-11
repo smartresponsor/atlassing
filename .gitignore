@@ -1,6 +1,5 @@
 /vendor/
-/var/cache/
-/var/log/
+/var/
 /.phpunit.cache/
 /.codebase-memory/
 /.phpunit.result.cache

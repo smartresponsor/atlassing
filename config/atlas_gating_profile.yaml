@@ -1,0 +1,16 @@
+component:
+  name: Atlassing
+  nameEntity: atlas
+  namespace: App
+  business_prefix: Atlas
+  database_prefix: atlas_
+  typed_layers_required: true
+  service_interface_mirror: true
+  route_owner_root: atlassing
+  route_owner_roots:
+    - atlassing
+  mutation_mode: allowed
+  secret_scan: enabled
+  docblock_preservation: enabled
+  release:
+    evidence_required: false

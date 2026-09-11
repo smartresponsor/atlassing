@@ -1,0 +1,21 @@
+rule_set:
+  name: atlassing-rc
+  description: Canonical Atlassing release-candidate architecture and packaging checks.
+  rules:
+    - canon.001.technical_role_first
+    - canon.002.interface_tree_mirror
+    - canon.019.no_alternative_layer_taxonomy
+    - canon.021.cruding_owns_generic_crud
+    - canon.022.standalone_application_dependency_baseline
+    - canon.023.development_composer_symlink
+    - canon.024.production_composer_bundle
+    - canon.025.component_dual_runtime_mode
+    - canon.026.platform_version_baseline
+    - canon.029.mandatory_php_quality_tooling
+    - canon.032.bundle_registration
+    - canon.033.composer_manifest_identity_parity
+    - canon.034.gitignore_baseline
+    - canon.035.symfony_container_reuse
+    - canon.036.documentation_producer_ownership
+    - canon.037.generated_reference_artifact
+    - canon.038.config_yaml_subject_prefix

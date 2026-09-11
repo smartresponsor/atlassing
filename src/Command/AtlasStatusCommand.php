@@ -159,6 +159,7 @@ final class AtlasStatusCommand extends Command
         $output->writeln(sprintf('status: %s', $this->scalarText($payload['status'] ?? null, 'unknown')));
     }
 
+    /** @return array<string, mixed>|null */
     private function readJsonFile(string $path): ?array
     {
         $payload = json_decode((string) file_get_contents($path), true);

@@ -30,5 +30,25 @@ class AtlasDocumentationCoverageEntity
         $this->articleCount = $articleCount;
         $this->missingRequiredArticleCount = $missingRequiredArticleCount;
     }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    public function getComponentSlug(): string
+    {
+        return $this->componentSlug;
+    }
+
+    public function getArticleCount(): int
+    {
+        return $this->articleCount;
+    }
+
+    public function getMissingRequiredArticleCount(): int
+    {
+        return $this->missingRequiredArticleCount;
+    }
 }
 

@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\ServiceInterface\Atlas;
 
-use App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface as CanonicalAtlasSurfacePayloadServiceInterface;
-
-/**
- * Backward-compatible alias for the W01 skeleton surface contract.
- *
- * New code should type against App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface.
- */
-interface AtlasSurfacePayloadServiceInterface extends CanonicalAtlasSurfacePayloadServiceInterface
+interface AtlasSurfacePayloadServiceInterface
 {
+    /**
+     * Builds the canonical Atlas surface payload consumed by Viewing.
+     *
+     * @param array<string, mixed> $context
+     *
+     * @return array<string, mixed>
+     */
+    public function buildPayload(string $surface, array $context = []): array;
 }
