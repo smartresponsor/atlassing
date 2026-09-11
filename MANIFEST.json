@@ -21,12 +21,12 @@
       "bytes": 905
     },
     {
-      "path": "config/packages/atlassing.yaml",
+      "path": "config/packages/atlas_atlassing.yaml",
       "sha256": "c2c80aafc29953c3294b43f66a332faa9e063c7681f98c7052e86357b5a75456",
       "bytes": 265
     },
     {
-      "path": "config/routes/atlassing.yaml",
+      "path": "config/routes/atlas_atlassing.yaml",
       "sha256": "29f0de578ff7af403214cceea411af8f72ae226c19cb4dd8bd6cc2b74540bf2a",
       "bytes": 448
     },

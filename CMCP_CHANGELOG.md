@@ -93,4 +93,15 @@ Date: 2026-09-11
 - Canon gate remains intentionally red only for Canon002 and Canon038 because their required tracked-path relocations conflict with the explicit destructive-operation prohibition.
 - Original bounded RC task is materially advanced but is not factually complete; no RC-complete claim is made and the failing canon rules are not suppressed.
 - Git integration must preserve the pre-existing untracked `.gating/` tree and must not publish directly from protected `master`; branch/upstream state was inspected before any commit/push action.
-- Final Git state: protected `master`, HEAD `fe6d728a984cf6ab29a1c5ec7079ac81c9805301`, no configured remote/upstream. A guarded feature-branch switch was attempted and correctly blocked because the worktree is dirty. Because RC is still red and direct commit on protected `master` would be the wrong integration path, no commit or push was created.
+- Final Git state at the first handoff: protected `master`, HEAD `fe6d728a984cf6ab29a1c5ec7079ac81c9805301`, no configured remote/upstream. A guarded feature-branch switch was attempted and correctly blocked because the worktree was dirty; no push was possible.
+
+### Authorized post-handoff RC closure
+
+- User explicitly authorized the three previously blocked filesystem relocations/removals with `Go`.
+- Created signed baseline commits `3852c15` (`chore: normalize Atlassing RC baseline`) and `b683302` (`chore: checkpoint legacy surface alias`) before the final relocation pass. Checkpoint branches preserve the pre-relocation states.
+- Relocated `config/packages/atlassing.yaml` to `config/packages/atlas_atlassing.yaml` and `config/routes/atlassing.yaml` to `config/routes/atlas_atlassing.yaml` without content loss; updated `config/routes.yaml`, `MANIFEST.json`, and `ATLAS_W01_ENGINE_CUMULATIVE_MANIFEST.json` accordingly.
+- Removed the obsolete non-mirrored `src/ServiceInterface/Surface/AtlasSurfacePayloadServiceInterface.php` compatibility contract and all DI/runtime/test references to it. `ServiceInterface/Atlas/AtlasSurfacePayloadServiceInterface.php` is now the sole canonical payload contract.
+- Final executable Gating result after relocation: 17 rules, 17 passed, 0 failed, 0 warnings, 0 suppressed, 0 skipped. Canon002 and Canon038 are green.
+- Final quality acceptance after relocation: Composer `quality` green (PHP-CS-Fixer: 0 fixable files; PHPStan: 0 errors; PHPUnit: 2 tests / 8 assertions), Symfony container lint green, Symfony YAML lint green, Composer validate/lock consistency green with only expected local `*@dev` warnings, Composer audit reports no security advisories.
+- The temporary repo-local relocation helpers were removed after execution and are not part of source history. The pre-existing untracked `.gating/` tree remains untouched.
+- Repository still has no configured remote/upstream, so remote push/PR/merge remains unavailable from this workspace until a remote is configured.

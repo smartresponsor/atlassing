@@ -23,5 +23,3 @@ services:
     alias: App\Service\Registry\AtlasRepositoryRegistryService
   App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface:
     alias: App\Service\Snapshot\AtlasSnapshotService
-  App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface:
-    alias: App\Service\Atlas\AtlasSurfacePayloadService

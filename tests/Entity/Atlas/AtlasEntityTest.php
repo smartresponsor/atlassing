@@ -6,8 +6,6 @@ namespace App\Tests\Entity\Atlas;
 
 use App\Entity\Atlas\AtlasAssessmentEntity;
 use App\Entity\Atlas\AtlasDocumentationCoverageEntity;
-use App\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface;
-use App\ServiceInterface\Surface\AtlasSurfacePayloadServiceInterface as LegacyAtlasSurfacePayloadServiceInterface;
 use PHPUnit\Framework\TestCase;
 
 final class AtlasEntityTest extends TestCase
@@ -32,12 +30,4 @@ final class AtlasEntityTest extends TestCase
         self::assertSame(2, $coverage->getMissingRequiredArticleCount());
     }
 
-    public function testLegacySurfaceContractExtendsCanonicalAtlasContract(): void
-    {
-        self::assertTrue(is_a(
-            LegacyAtlasSurfacePayloadServiceInterface::class,
-            AtlasSurfacePayloadServiceInterface::class,
-            true,
-        ));
-    }
 }

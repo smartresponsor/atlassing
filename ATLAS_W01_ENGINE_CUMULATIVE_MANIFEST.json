@@ -541,7 +541,7 @@
     "delivery/jira/README.adoc",
     "delivery/jira/import.csv",
     "delivery/jira/manifest.yaml",
-    "config/packages/atlassing.yaml",
-    "config/routes/atlassing.yaml"
+    "config/packages/atlas_atlassing.yaml",
+    "config/routes/atlas_atlassing.yaml"
   ]
 }
