@@ -104,6 +104,68 @@ def run(cmd: list[str], cwd: Path) -> tuple[int, str]:
     return proc.returncode, (proc.stdout + '\n' + proc.stderr).strip()
 
 
+def resolve_local_repo(workspace_root: Path, repo_root: Path, component: dict[str, Any]) -> Path | None:
+    component_id = str(component.get('component_id') or '').strip()
+    component_title = str(component.get('component_title') or '').strip()
+    explicit_local_path = str(component.get('local_path') or '').strip()
+    candidates: list[Path] = []
+    for name in [component_title, component_id]:
+        if name:
+            candidates.append(workspace_root / name)
+    if workspace_root.exists():
+        wanted = {value.lower() for value in [component_id, component_title] if value}
+        for child in workspace_root.iterdir():
+            if child.is_dir() and child.name.lower() in wanted:
+                candidates.append(child)
+    if explicit_local_path:
+        candidates.extend([repo_root / explicit_local_path, workspace_root / explicit_local_path])
+    seen: set[str] = set()
+    for candidate in candidates:
+        resolved = candidate.resolve()
+        key = str(resolved).lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        if resolved.is_dir() and (resolved / '.git').exists():
+            return resolved
+    return None
+
+
+def top_level_tree(repo_dir: Path, limit: int = 120) -> str:
+    values: list[str] = []
+    for child in sorted(repo_dir.iterdir(), key=lambda path: path.name.lower()):
+        if child.name == '.git':
+            continue
+        values.append(child.name + ('/' if child.is_dir() else ''))
+        if child.is_dir():
+            try:
+                for grandchild in sorted(child.iterdir(), key=lambda path: path.name.lower()):
+                    if grandchild.name == '.git':
+                        continue
+                    values.append(f'{child.name}/{grandchild.name}' + ('/' if grandchild.is_dir() else ''))
+                    if len(values) >= limit:
+                        return '\n'.join(values)
+            except OSError:
+                pass
+        if len(values) >= limit:
+            break
+    return '\n'.join(values)
+
+
+def repo_file_count(repo_dir: Path) -> int:
+    count = 0
+    for path in repo_dir.rglob('*'):
+        try:
+            relative = path.relative_to(repo_dir)
+        except ValueError:
+            continue
+        if '.git' in relative.parts:
+            continue
+        if path.is_file():
+            count += 1
+    return count
+
+
 def metric_catalog_summary(metric_catalog: Any) -> list[dict[str, Any]]:
     items = metric_catalog.get('metrics', metric_catalog) if isinstance(metric_catalog, dict) else metric_catalog
     if not isinstance(items, list):
@@ -139,14 +201,14 @@ def repo_facts(repo_dir: Path, component: dict[str, Any], docs_repo_root: Path |
     commands = [
         ('git_status', ['git', 'status', '--short']),
         ('git_recent_commits', ['git', 'log', '--oneline', '-5']),
-        ('top_level_tree', ['bash', '-lc', 'find . -maxdepth 2 -mindepth 1 | sort | head -120']),
         ('php_version', ['php', '-v']),
-        ('python_version', ['python3', '--version']),
-        ('repo_file_count', ['bash', '-lc', 'find . -type f | wc -l']),
+        ('python_version', [sys.executable, '--version']),
     ]
     for label, cmd in commands:
         rc, out = run(cmd, repo_dir)
         facts[label] = {'exit_code': rc, 'output': out[:6000]}
+    facts['top_level_tree'] = {'exit_code': 0, 'output': top_level_tree(repo_dir)}
+    facts['repo_file_count'] = {'exit_code': 0, 'output': str(repo_file_count(repo_dir))}
     report_path_value = component.get('report_path')
     if report_path_value:
         report_root = docs_repo_root or repo_dir
@@ -460,7 +522,7 @@ def merge_snapshot(current: dict[str, Any] | None, component: dict[str, Any], ve
         'ref': component.get('default_branch', 'master'),
         'origin': origin,
         'assessment_basis': {
-            'repository': component.get('github_repository') or component.get('local_path') or '',
+            'repository': facts.get('repo_root') or component.get('github_repository') or component.get('local_path') or '',
             'assessed_branch': (facts.get('git_branch') or {}).get('output', '').splitlines()[0] if isinstance(facts.get('git_branch'), dict) else None,
             'assessed_commit': (facts.get('git_commit') or {}).get('output', '').splitlines()[0] if isinstance(facts.get('git_commit'), dict) else None,
             'assessed_tag': (facts.get('git_exact_tag') or {}).get('output', '').splitlines()[0] if isinstance(facts.get('git_exact_tag'), dict) and (facts.get('git_exact_tag') or {}).get('exit_code') == 0 else None,
@@ -586,6 +648,7 @@ def main() -> None:
     parser.add_argument('--model', default=os.environ.get('QUALITY_ATLAS_OPENAI_MODEL', 'gpt-5'))
     parser.add_argument('--mode', choices=['dry-run', 'responses'], default='dry-run')
     parser.add_argument('--repo-root', default=str(ROOT))
+    parser.add_argument('--workspace-root', default=str(ROOT.parent))
     parser.add_argument('--label', default=f"assessment-{date.today().isoformat()}")
     parser.add_argument('--component', action='append', dest='components', default=[], help='Limit assessment to one or more component_id values.')
     parser.add_argument('--selection-plan', default='', help='Optional generated selection plan JSON to bind trigger reasons and commit basis to the assessment run.')
@@ -599,6 +662,7 @@ def main() -> None:
     response_schema = load_yaml(ASSESSMENT_SCHEMA_FILE)
     probe_families = load_yaml(PROBE_FAMILIES_FILE)
     repo_root = Path(args.repo_root).resolve()
+    workspace_root = Path(args.workspace_root).resolve()
     run_dir = OUTBOX_DIR / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     run_dir.mkdir(parents=True, exist_ok=True)
 
@@ -621,13 +685,9 @@ def main() -> None:
         selection_entry = selection_index.get(component['component_id']) if selection_index else None
         local_path = component.get('local_path') or ''
         docs_repo_root = repo_root
-        target_repo: Path | None = None
+        target_repo: Path | None = resolve_local_repo(workspace_root, repo_root, component)
         cleanup_root: Path | None = None
         repo_token = os.environ.get('QUALITY_ATLAS_REPO_TOKEN') or os.environ.get('GITHUB_TOKEN') or ''
-        if local_path:
-            candidate = (repo_root / local_path).resolve()
-            if candidate.exists():
-                target_repo = candidate
         if target_repo is None and component.get('github_repository'):
             if not repo_token:
                 raise RuntimeError(f"QUALITY_ATLAS_REPO_TOKEN is required to clone component repository {component.get('github_repository')}.")

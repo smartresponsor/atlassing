@@ -33,7 +33,7 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 
 def run(cmd: list[str], cwd: Path) -> tuple[int, str]:
     proc = subprocess.run(cmd, cwd=cwd, text=True, capture_output=True)
-    return proc.returncode, (proc.stdout + '\n' + proc.stderr).strip()
+    return proc.returncode, (proc.stdout + '\n' + proc.stderr).rstrip()
 
 
 def parse_iso(value: str | None) -> datetime | None:
@@ -86,6 +86,49 @@ def local_changed_files(repo_root: Path, base: str | None, head: str | None) -> 
     if rc != 0:
         return []
     return [line.strip() for line in out.splitlines() if line.strip()]
+
+
+def local_dirty_files(repo_root: Path) -> list[str]:
+    rc, out = run(['git', 'status', '--porcelain=v1', '--untracked-files=all'], repo_root)
+    if rc != 0:
+        return []
+    paths: list[str] = []
+    for line in out.splitlines():
+        if len(line) < 4:
+            continue
+        value = line[3:].strip()
+        if ' -> ' in value:
+            value = value.split(' -> ', 1)[1]
+        if value:
+            paths.append(value.replace('\\', '/'))
+    return paths
+
+
+def resolve_local_repo(workspace_root: Path, repo_root: Path, component: dict[str, Any]) -> Path | None:
+    component_id = str(component.get('component_id') or '').strip()
+    component_title = str(component.get('component_title') or '').strip()
+    explicit_local_path = str(component.get('local_path') or '').strip()
+    candidates: list[Path] = []
+    for name in [component_title, component_id]:
+        if name:
+            candidates.append(workspace_root / name)
+    if workspace_root.exists():
+        wanted = {value.lower() for value in [component_id, component_title] if value}
+        for child in workspace_root.iterdir():
+            if child.is_dir() and child.name.lower() in wanted:
+                candidates.append(child)
+    if explicit_local_path:
+        candidates.extend([repo_root / explicit_local_path, workspace_root / explicit_local_path])
+    seen: set[str] = set()
+    for candidate in candidates:
+        resolved = candidate.resolve()
+        key = str(resolved).lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        if resolved.is_dir() and (resolved / '.git').exists():
+            return resolved
+    return None
 
 
 def remote_head_info(repo_full_name: str, branch: str, token: str) -> dict[str, Any]:
@@ -165,6 +208,10 @@ def should_select(component: dict[str, Any], policy: dict[str, Any], state: dict
         'meaningful_changes': meaningful,
         'noise_changes': noise,
     }
+    if head.get('working_tree_dirty') and significant:
+        if hours_since is None or hours_since >= min_interval_hours:
+            return True, 'meaningful_local_worktree_change', details
+        return False, 'cooldown_active', details
     if head.get('head_commit') and state.get('assessed_commit') and head['head_commit'] != state['assessed_commit']:
         if significant:
             if hours_since is None or hours_since >= min_interval_hours:
@@ -192,6 +239,7 @@ def main() -> None:
     parser.add_argument('--registry', default=str(REGISTRY_FILE))
     parser.add_argument('--policy', default=str(POLICY_FILE))
     parser.add_argument('--repo-root', default=str(ROOT))
+    parser.add_argument('--workspace-root', default=str(ROOT.parent))
     parser.add_argument('--event-name', default=os.environ.get('GITHUB_EVENT_NAME', 'workflow_dispatch'))
     parser.add_argument('--component', action='append', dest='components', default=[])
     parser.add_argument('--output', default=str(OUTPUT_FILE))
@@ -200,6 +248,7 @@ def main() -> None:
     registry = load_yaml(Path(args.registry))
     policy = load_yaml(Path(args.policy))
     repo_root = Path(args.repo_root).resolve()
+    workspace_root = Path(args.workspace_root).resolve()
     repo_token = os.environ.get('QUALITY_ATLAS_REPO_TOKEN') or os.environ.get('GITHUB_TOKEN') or ''
     repositories = registry.get('repositories') or []
     registry_by_id = {item['component_id']: item for item in repositories if item.get('component_id')}
@@ -248,26 +297,29 @@ def main() -> None:
         branch = component.get('default_branch') or policy['defaults'].get('branch', 'master')
         local_path = component.get('local_path') or ''
         github_repository = component.get('github_repository') or ''
+        local_repo = resolve_local_repo(workspace_root, repo_root, component)
         head = {'branch': branch, 'head_commit': None, 'head_tag': None}
         changed_files: list[str] = []
         access_error = None
-        if not local_path and not github_repository:
+        repository_source = ''
+        if local_repo is not None:
+            repository_source = str(local_repo)
+            head = local_head_info(local_repo, branch)
+            committed_changes = local_changed_files(local_repo, state.get('assessed_commit'), head.get('head_commit'))
+            dirty_changes = local_dirty_files(local_repo)
+            head['working_tree_dirty'] = bool(dirty_changes)
+            changed_files = list(dict.fromkeys([*committed_changes, *dirty_changes]))
+        elif not local_path and not github_repository:
             access_error = 'No github_repository or local_path configured.'
             select = False
             reason = 'missing_repository_target'
             details = default_selection_details(component, policy, state)
-        elif local_path:
-            repo_dir = (repo_root / local_path).resolve()
-            if repo_dir.exists():
-                head = local_head_info(repo_dir, branch)
-                changed_files = local_changed_files(repo_dir, state.get('assessed_commit'), head.get('head_commit'))
-            else:
-                access_error = f'Configured local_path does not exist: {local_path}'
         else:
-            if not repo_token:
-                access_error = 'No QUALITY_ATLAS_REPO_TOKEN/GITHUB_TOKEN available for external repository inspection.'
+            if not repo_token or not github_repository:
+                access_error = 'No local repository and no accessible GitHub repository target.'
             else:
                 try:
+                    repository_source = github_repository
                     head = remote_head_info(github_repository, branch, repo_token)
                     changed_files = remote_changed_files(github_repository, state.get('assessed_commit'), head.get('head_commit'), repo_token)
                 except Exception as exc:
@@ -281,7 +333,8 @@ def main() -> None:
         item = {
             'component': component_id,
             'title': component.get('component_title'),
-            'repository': github_repository or local_path,
+            'repository': repository_source or github_repository or local_path,
+            'repository_source': 'local' if local_repo is not None else ('remote' if github_repository else 'missing'),
             'selected': select,
             'reason': reason,
             'event_name': args.event_name,

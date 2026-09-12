@@ -1,0 +1,110 @@
+param(
+    [ValidateSet('responses', 'dry-run')]
+    [string]$Mode = 'responses',
+    [switch]$SelectionOnly,
+    [switch]$NoPublish
+)
+
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+
+$repoRoot = Split-Path -Parent $PSScriptRoot
+$selectionPlan = Join-Path $repoRoot 'var\atlas\generated\selection-plan.json'
+$logDir = Join-Path $repoRoot 'var\log\atlas'
+$logFile = Join-Path $logDir 'scheduled-assessment.log'
+New-Item -ItemType Directory -Force -Path $logDir | Out-Null
+
+function Write-AtlasLog([string]$Message) {
+    $line = ('{0:o} {1}' -f [DateTimeOffset]::Now, $Message)
+    Add-Content -Path $logFile -Value $line
+    Write-Host $line
+}
+
+Push-Location $repoRoot
+try {
+    Write-AtlasLog "scheduled run started mode=$Mode"
+
+    & php bin/console atlas:assessment:select --event-name schedule --output $selectionPlan
+    if ($LASTEXITCODE -ne 0) {
+        Write-AtlasLog "selection failed exit=$LASTEXITCODE"
+        exit 20
+    }
+
+    $plan = Get-Content -Raw -Path $selectionPlan | ConvertFrom-Json
+    $selected = @($plan.selected_components)
+    Write-AtlasLog ("selected components=" + ($selected -join ','))
+
+    if ($SelectionOnly) {
+        $plan | ConvertTo-Json -Depth 8
+        exit 0
+    }
+
+    if ($selected.Count -eq 0) {
+        Write-AtlasLog 'no repositories selected; nothing to assess'
+        exit 0
+    }
+
+    if ($Mode -eq 'responses' -and [string]::IsNullOrWhiteSpace($env:OPENAI_API_KEY)) {
+        Write-AtlasLog 'OPENAI_API_KEY is missing; refusing to silently downgrade a scored scheduled run to dry-run'
+        exit 21
+    }
+
+    if (-not $NoPublish) {
+        & git remote get-url origin *> $null
+        if ($LASTEXITCODE -ne 0) {
+            Write-AtlasLog 'Git origin is not configured; refusing to spend assessment resources on an unpublished scheduled run'
+            exit 22
+        }
+    }
+
+    $arguments = @('bin/console', 'atlas:assessment:run', '--mode', $Mode, '--selection-plan', $selectionPlan)
+    foreach ($component in $selected) {
+        $arguments += @('--component', [string]$component)
+    }
+
+    & php @arguments
+    if ($LASTEXITCODE -ne 0) {
+        Write-AtlasLog "assessment failed exit=$LASTEXITCODE"
+        exit 30
+    }
+
+    if ($NoPublish) {
+        Write-AtlasLog 'assessment completed with publication disabled'
+        exit 0
+    }
+
+    & git add -- var/atlas
+    if ($LASTEXITCODE -ne 0) {
+        Write-AtlasLog "git add failed exit=$LASTEXITCODE"
+        exit 40
+    }
+
+    & git diff --cached --quiet -- var/atlas
+    if ($LASTEXITCODE -eq 0) {
+        Write-AtlasLog 'assessment completed; no Atlas state changes to publish'
+        exit 0
+    }
+    if ($LASTEXITCODE -ne 1) {
+        Write-AtlasLog "git diff failed exit=$LASTEXITCODE"
+        exit 41
+    }
+
+    $stamp = Get-Date -Format 'yyyy-MM-dd HH:mm'
+    & git commit -m "chore(atlas): refresh local assessment snapshots $stamp"
+    if ($LASTEXITCODE -ne 0) {
+        Write-AtlasLog "git commit failed exit=$LASTEXITCODE"
+        exit 42
+    }
+
+    & git push origin HEAD:master
+    if ($LASTEXITCODE -ne 0) {
+        Write-AtlasLog "git push failed exit=$LASTEXITCODE"
+        exit 43
+    }
+
+    Write-AtlasLog ("scheduled run published components=" + ($selected -join ','))
+    exit 0
+}
+finally {
+    Pop-Location
+}

@@ -1,0 +1,65 @@
+= Local Scheduled Quality Atlas Assessment
+
+Atlassing supports a local-first Windows execution path for Quality Atlas assessments.
+
+== Source priority
+
+The scheduled path treats sibling Git repositories under `D:\PhpstormProjects\www` as the preferred assessment source. Repository matching is case-insensitive and uses the registry `component_title` / `component_id`. A configured GitHub repository is only a fallback when the matching local Git working copy is absent.
+
+Both committed changes since the previous assessment and dirty working-tree paths participate in selection. This allows the Atlas to evaluate the local state that is ahead of the remote repository.
+
+Release-candidate and release tags remain milestone evidence. They do not replace the current local working copy as the assessment source.
+
+== Scheduled lifecycle
+
+The Windows runner is `tool/atlas-local-scheduled.ps1`.
+
+It executes the same Symfony command surface used by CI:
+
+----
+php bin/console atlas:assessment:select --event-name schedule
+php bin/console atlas:assessment:run --mode responses
+----
+
+Successful changed Atlas state under `var/atlas` is then committed and pushed to `origin/master`.
+
+The scheduled event is intentionally different from `workflow_dispatch`. Manual dispatch is an unconditional override. `schedule` obeys `var/atlas/schedule/assessment-policy.yaml`, including cadence groups, cooldown, meaningful-change detection, milestone tags, and stale refresh.
+
+Polling can therefore run daily without forcing a full daily rescore of every repository.
+
+== Windows Task Scheduler
+
+`tool/install-atlas-scheduled-task.ps1` installs the required `PyYAML` Python dependency when missing and registers the task.
+
+Default task settings:
+
+* task name: `SmartResponsor Atlassing Quality Atlas`
+* poll interval: daily
+* local start time: `04:27`
+* assessment mode: `responses`
+* overlapping runs: ignored
+* delayed starts: allowed
+* execution limit: 4 hours
+
+The time and interval are installer parameters and can be changed without changing the Atlas policy.
+
+The task runs as the current interactive Windows user so Git credentials and network access remain available. The default principal therefore requires that user to be logged on.
+
+== Safety and diagnostics
+
+`-SelectionOnly` runs target discovery and prints the generated plan without assessment or publication.
+
+`-NoPublish` executes selection and assessment but does not commit or push the generated state.
+
+Scheduled logs are written outside Atlas-owned publish state under `var/log/atlas/scheduled-assessment.log`.
+
+`responses` mode requires `OPENAI_API_KEY` to be visible to the scheduled process. A missing key is a configuration failure; the runner does not silently downgrade to `dry-run`.
+
+Exit code groups are stable:
+
+* `0` success / no selected changes
+* `20` target selection failure
+* `21` missing scheduled `OPENAI_API_KEY`
+* `22` missing Atlassing `origin` publication remote
+* `30` assessment failure
+* `40..43` local Git publication failures
