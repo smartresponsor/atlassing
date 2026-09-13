@@ -380,16 +380,43 @@ def call_openai(prompt: str, model: str) -> tuple[dict[str, Any], dict[str, Any]
     raise RuntimeError('Responses API did not return structured output text.')
 
 
-def call_chatgpt_cli(prompt: str, component_id: str) -> tuple[dict[str, Any], dict[str, Any]]:
+def call_chatgpt_cli(prompt: str, component_id: str, workspace_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     prompt_dir = ROOT / 'var' / 'atlas' / 'generated' / 'chatgpt-cli'
     prompt_dir.mkdir(parents=True, exist_ok=True)
     prompt_file = prompt_dir / f'{component_id}.prompt.txt'
     prompt_file.write_text(prompt, encoding='utf-8')
-    raise RuntimeError(
-        'chatgpt-cli scoring requires a high-level Console MCP arbitrary-prompt CLI contract. '
-        f'Prompt artifact prepared at {prompt_file}. Atlassing must not own Target IDs, Chat IDs, '
-        'DevTools ports, tab creation, readiness polling, or answer capture.'
+    score_cli = ROOT / 'tool' / 'atlas-console-mcp-score-cli.ps1'
+    if not score_cli.is_file():
+        raise RuntimeError(f'Atlassing Console MCP scoring CLI was not found: {score_cli}')
+    proc = subprocess.run(
+        [
+            'powershell.exe', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', str(score_cli),
+            '-Component', component_id,
+            '-Workspace', str(workspace_path),
+            '-PromptFile', str(prompt_file),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        timeout=900,
     )
+    if proc.returncode != 0:
+        raise RuntimeError(f"Console MCP scoring CLI failed ({proc.returncode}): {(proc.stdout + chr(10) + proc.stderr).strip()[:8000]}")
+    try:
+        payload = json.loads(proc.stdout)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f'Console MCP scoring CLI returned invalid JSON: {proc.stdout[:8000]}') from exc
+    if payload.get('ok') is not True or not isinstance(payload.get('verdict'), dict):
+        raise RuntimeError(f"Console MCP scoring CLI did not return a verdict: {json.dumps(payload, ensure_ascii=False)[:8000]}")
+    return payload['verdict'], {
+        'request_payload': {
+            'transport': 'console-mcp-cli',
+            'component': component_id,
+            'workspace': str(workspace_path),
+            'prompt_file': str(prompt_file),
+        },
+        'response_payload': payload,
+    }
 
 
 def bootstrap_snapshot(component: dict[str, Any]) -> dict[str, Any]:
@@ -743,7 +770,7 @@ def main() -> None:
             if args.mode == 'responses':
                 verdict, raw_ai_io = call_openai(prompt, args.model)
             elif args.mode == 'chatgpt-cli':
-                verdict, raw_ai_io = call_chatgpt_cli(prompt, component['component_id'])
+                verdict, raw_ai_io = call_chatgpt_cli(prompt, component['component_id'], target_repo)
             else:
                 verdict = dry_run_verdict(component, prompt, facts, probe_snapshot, current)
             normalized = normalize_verdict(component['component_id'], verdict)

@@ -32,19 +32,44 @@ try {
         & py -3 -c 'import yaml' *> $null
         $pyYamlPresent = ($LASTEXITCODE -eq 0)
         $consoleMcpRoot = Join-Path (Split-Path -Parent $repoRoot) 'mcp\console-mcp'
-        $consoleMcpCli = Join-Path $consoleMcpRoot 'bin\cmcp.ps1'
-        $consoleMcpPresent = Test-Path -LiteralPath $consoleMcpCli -PathType Leaf
+        $consoleMcpDevConsole = Join-Path $consoleMcpRoot 'tool\dev-console.ps1'
+        $consoleMcpPresent = Test-Path -LiteralPath $consoleMcpDevConsole -PathType Leaf
+        $scoreCli = Join-Path $repoRoot 'tool\atlas-console-mcp-score-cli.ps1'
+        $highLevelRawScoringCliReady = $false
+        $consoleMcpSessionStatus = $null
+        $consoleMcpLoginRequired = $null
+        $scorePreflightDiagnostic = $null
+        if ($Mode -eq 'chatgpt-cli' -and $consoleMcpPresent -and (Test-Path -LiteralPath $scoreCli -PathType Leaf)) {
+            try {
+                $scorePreflightRaw = & powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File $scoreCli -Preflight 2>&1
+                $scorePreflightText = ($scorePreflightRaw | Out-String).Trim()
+                try {
+                    $scorePreflight = $scorePreflightText | ConvertFrom-Json
+                    $highLevelRawScoringCliReady = ($scorePreflight.ok -eq $true)
+                    $consoleMcpSessionStatus = [string]$scorePreflight.sessionStatus
+                    $consoleMcpLoginRequired = [bool]$scorePreflight.loginRequired
+                } catch {
+                    $scorePreflightDiagnostic = $scorePreflightText
+                }
+            } catch {
+                $highLevelRawScoringCliReady = $false
+                $scorePreflightDiagnostic = $_.Exception.Message
+            }
+        }
         [pscustomobject]@{
             OpenAiApiKeyPresent = $apiKeyPresent
             OriginPresent = $originPresent
             PyYamlPresent = $pyYamlPresent
             ConsoleMcpPresent = $consoleMcpPresent
-            HighLevelRawScoringCliReady = $false
+            ConsoleMcpSessionStatus = $consoleMcpSessionStatus
+            ConsoleMcpLoginRequired = $consoleMcpLoginRequired
+            HighLevelRawScoringCliReady = $highLevelRawScoringCliReady
+            RawScoringPreflightDiagnostic = $scorePreflightDiagnostic
             Mode = $Mode
         } | Format-List
         if ($Mode -eq 'responses' -and -not $apiKeyPresent) { exit 21 }
-        if ($Mode -eq 'chatgpt-cli') {
-            Write-AtlasLog 'chatgpt-cli requires a verified high-level Console MCP arbitrary-prompt CLI; browser Target/Chat lifecycle is intentionally not owned by Atlassing'
+        if ($Mode -eq 'chatgpt-cli' -and -not $highLevelRawScoringCliReady) {
+            Write-AtlasLog 'chatgpt-cli Console MCP CLI preflight failed; supervised ChatGPT session must be ready and authenticated'
             exit 24
         }
         if (-not $originPresent) { exit 22 }
