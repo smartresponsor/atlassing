@@ -1,8 +1,9 @@
 param(
-    [ValidateSet('responses', 'dry-run')]
-    [string]$Mode = 'responses',
+    [ValidateSet('chatgpt-cli', 'responses', 'dry-run')]
+    [string]$Mode = 'dry-run',
     [switch]$SelectionOnly,
-    [switch]$NoPublish
+    [switch]$NoPublish,
+    [switch]$PreflightOnly
 )
 
 $ErrorActionPreference = 'Stop'
@@ -23,6 +24,33 @@ function Write-AtlasLog([string]$Message) {
 Push-Location $repoRoot
 try {
     Write-AtlasLog "scheduled run started mode=$Mode"
+
+    if ($PreflightOnly) {
+        $apiKeyPresent = -not [string]::IsNullOrWhiteSpace($env:OPENAI_API_KEY)
+        & git remote get-url origin *> $null
+        $originPresent = ($LASTEXITCODE -eq 0)
+        & py -3 -c 'import yaml' *> $null
+        $pyYamlPresent = ($LASTEXITCODE -eq 0)
+        $consoleMcpRoot = Join-Path (Split-Path -Parent $repoRoot) 'mcp\console-mcp'
+        $consoleMcpCli = Join-Path $consoleMcpRoot 'bin\cmcp.ps1'
+        $consoleMcpPresent = Test-Path -LiteralPath $consoleMcpCli -PathType Leaf
+        [pscustomobject]@{
+            OpenAiApiKeyPresent = $apiKeyPresent
+            OriginPresent = $originPresent
+            PyYamlPresent = $pyYamlPresent
+            ConsoleMcpPresent = $consoleMcpPresent
+            HighLevelRawScoringCliReady = $false
+            Mode = $Mode
+        } | Format-List
+        if ($Mode -eq 'responses' -and -not $apiKeyPresent) { exit 21 }
+        if ($Mode -eq 'chatgpt-cli') {
+            Write-AtlasLog 'chatgpt-cli requires a verified high-level Console MCP arbitrary-prompt CLI; browser Target/Chat lifecycle is intentionally not owned by Atlassing'
+            exit 24
+        }
+        if (-not $originPresent) { exit 22 }
+        if (-not $pyYamlPresent) { exit 23 }
+        exit 0
+    }
 
     & php bin/console atlas:assessment:select --event-name schedule --output $selectionPlan
     if ($LASTEXITCODE -ne 0) {

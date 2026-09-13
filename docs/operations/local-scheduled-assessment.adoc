@@ -18,7 +18,7 @@ It executes the same Symfony command surface used by CI:
 
 ----
 php bin/console atlas:assessment:select --event-name schedule
-php bin/console atlas:assessment:run --mode responses
+php bin/console atlas:assessment:run --mode dry-run
 ----
 
 Successful changed Atlas state under `var/atlas` is then committed and pushed to `origin/master`.
@@ -36,7 +36,7 @@ Default task settings:
 * task name: `SmartResponsor Atlassing Quality Atlas`
 * poll interval: daily
 * local start time: `04:27`
-* assessment mode: `responses`
+* assessment mode: `dry-run`
 * overlapping runs: ignored
 * delayed starts: allowed
 * execution limit: 4 hours
@@ -53,7 +53,7 @@ The task runs as the current interactive Windows user so Git credentials and net
 
 Scheduled logs are written outside Atlas-owned publish state under `var/log/atlas/scheduled-assessment.log`.
 
-`responses` mode requires `OPENAI_API_KEY` to be visible to the scheduled process. A missing key is a configuration failure; the runner does not silently downgrade to `dry-run`.
+`chatgpt-cli` is the intended canonical local AI scoring mode, but Atlassing must call it only through a high-level Console MCP arbitrary-prompt CLI contract. Console MCP owns tab creation, readiness, title/binding, submission, waiting, capture, Target IDs, Chat IDs, and recovery. The current public `cmcp go <component> M<n>` CLI is component-task oriented and does not yet expose that arbitrary-prompt contract, so the scheduled default remains `dry-run`. `responses` remains an explicit API/CI fallback and requires `OPENAI_API_KEY`; live modes never silently downgrade.
 
 Exit code groups are stable:
 
@@ -61,5 +61,6 @@ Exit code groups are stable:
 * `20` target selection failure
 * `21` missing scheduled `OPENAI_API_KEY`
 * `22` missing Atlassing `origin` publication remote
+* `24` high-level Console MCP arbitrary-prompt scoring CLI not yet available/verified
 * `30` assessment failure
 * `40..43` local Git publication failures

@@ -3,8 +3,8 @@ param(
     [string]$StartTime = '04:27',
     [ValidateRange(1, 365)]
     [int]$EveryDays = 1,
-    [ValidateSet('responses', 'dry-run')]
-    [string]$Mode = 'responses'
+    [ValidateSet('chatgpt-cli', 'responses', 'dry-run')]
+    [string]$Mode = 'dry-run'
 )
 
 $ErrorActionPreference = 'Stop'

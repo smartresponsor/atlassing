@@ -153,16 +153,25 @@ def top_level_tree(repo_dir: Path, limit: int = 120) -> str:
 
 
 def repo_file_count(repo_dir: Path) -> int:
+    rc, out = run(['git', 'ls-files', '-co', '--exclude-standard'], repo_dir)
+    if rc == 0:
+        return len([line for line in out.splitlines() if line.strip()])
+
+    skip_dirs = {'.git', 'node_modules', 'vendor', '.gating', '.phpunit.cache', 'var'}
     count = 0
-    for path in repo_dir.rglob('*'):
+    pending = [repo_dir]
+    while pending:
+        current = pending.pop()
         try:
-            relative = path.relative_to(repo_dir)
-        except ValueError:
+            children = list(current.iterdir())
+        except OSError:
             continue
-        if '.git' in relative.parts:
-            continue
-        if path.is_file():
-            count += 1
+        for path in children:
+            if path.is_dir():
+                if path.name not in skip_dirs:
+                    pending.append(path)
+            elif path.is_file():
+                count += 1
     return count
 
 
@@ -369,6 +378,18 @@ def call_openai(prompt: str, model: str) -> tuple[dict[str, Any], dict[str, Any]
     if isinstance(output_text, str) and output_text.strip():
         return json.loads(output_text), {'request_payload': payload, 'response_payload': data}
     raise RuntimeError('Responses API did not return structured output text.')
+
+
+def call_chatgpt_cli(prompt: str, component_id: str) -> tuple[dict[str, Any], dict[str, Any]]:
+    prompt_dir = ROOT / 'var' / 'atlas' / 'generated' / 'chatgpt-cli'
+    prompt_dir.mkdir(parents=True, exist_ok=True)
+    prompt_file = prompt_dir / f'{component_id}.prompt.txt'
+    prompt_file.write_text(prompt, encoding='utf-8')
+    raise RuntimeError(
+        'chatgpt-cli scoring requires a high-level Console MCP arbitrary-prompt CLI contract. '
+        f'Prompt artifact prepared at {prompt_file}. Atlassing must not own Target IDs, Chat IDs, '
+        'DevTools ports, tab creation, readiness polling, or answer capture.'
+    )
 
 
 def bootstrap_snapshot(component: dict[str, Any]) -> dict[str, Any]:
@@ -646,7 +667,7 @@ def main() -> None:
     parser.add_argument('--registry', default=str(REGISTRY_FILE))
     parser.add_argument('--cards', default=str(CARDS_FILE))
     parser.add_argument('--model', default=os.environ.get('QUALITY_ATLAS_OPENAI_MODEL', 'gpt-5'))
-    parser.add_argument('--mode', choices=['dry-run', 'responses'], default='dry-run')
+    parser.add_argument('--mode', choices=['dry-run', 'chatgpt-cli', 'responses'], default='dry-run')
     parser.add_argument('--repo-root', default=str(ROOT))
     parser.add_argument('--workspace-root', default=str(ROOT.parent))
     parser.add_argument('--label', default=f"assessment-{date.today().isoformat()}")
@@ -721,6 +742,8 @@ def main() -> None:
             (run_dir / f"{component['component_id']}.prompt.txt").write_text(prompt, encoding='utf-8')
             if args.mode == 'responses':
                 verdict, raw_ai_io = call_openai(prompt, args.model)
+            elif args.mode == 'chatgpt-cli':
+                verdict, raw_ai_io = call_chatgpt_cli(prompt, component['component_id'])
             else:
                 verdict = dry_run_verdict(component, prompt, facts, probe_snapshot, current)
             normalized = normalize_verdict(component['component_id'], verdict)
@@ -801,7 +824,7 @@ def main() -> None:
     (run_dir / 'index.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     update_latest_summary(run_dir, args.mode, latest_components, failures, sorted(selected_components))
     print(json.dumps({'run_dir': str(run_dir), 'count': len(assessments), 'failures': len(failures), 'mode': args.mode, 'label': args.label, 'selected_components': sorted(selected_components)}, indent=2))
-    if args.mode == 'responses' and failures:
+    if args.mode != 'dry-run' and failures:
         raise SystemExit(1)
 
 

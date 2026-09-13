@@ -27,7 +27,7 @@ final class AtlasAssessmentCycleCommand extends Command
         $this
             ->addOption('component', null, InputOption::VALUE_REQUIRED, 'Optional component_id to select and assess.')
             ->addOption('event-name', null, InputOption::VALUE_REQUIRED, 'GitHub event name or local event name.', 'workflow_dispatch')
-            ->addOption('mode', null, InputOption::VALUE_REQUIRED, 'Assessment mode: dry-run or responses.', 'dry-run')
+            ->addOption('mode', null, InputOption::VALUE_REQUIRED, 'Assessment mode: dry-run, chatgpt-cli, or responses.', 'dry-run')
             ->addOption('selection-plan', null, InputOption::VALUE_REQUIRED, 'Selection plan path.', 'var/atlas/generated/selection-plan.json');
     }
 

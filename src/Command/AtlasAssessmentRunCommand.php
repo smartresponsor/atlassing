@@ -23,7 +23,7 @@ final class AtlasAssessmentRunCommand extends Command
     protected function configure(): void
     {
         $this
-            ->addOption('mode', null, InputOption::VALUE_REQUIRED, 'Assessment mode: dry-run or responses.', 'dry-run')
+            ->addOption('mode', null, InputOption::VALUE_REQUIRED, 'Assessment mode: dry-run, chatgpt-cli, or responses.', 'dry-run')
             ->addOption('component', null, InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY, 'Component id to assess. Can be passed multiple times.')
             ->addOption('selection-plan', null, InputOption::VALUE_REQUIRED, 'Path to a selection-plan JSON file.');
     }
