@@ -390,7 +390,7 @@ def call_chatgpt_cli(prompt: str, component_id: str, workspace_path: Path) -> tu
         raise RuntimeError(f'Atlassing Console MCP scoring CLI was not found: {score_cli}')
     proc = subprocess.run(
         [
-            'powershell.exe', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', str(score_cli),
+            'pwsh.exe', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', str(score_cli),
             '-Component', component_id,
             '-Workspace', str(workspace_path),
             '-PromptFile', str(prompt_file),
@@ -410,7 +410,7 @@ def call_chatgpt_cli(prompt: str, component_id: str, workspace_path: Path) -> tu
         raise RuntimeError(f"Console MCP scoring CLI did not return a verdict: {json.dumps(payload, ensure_ascii=False)[:8000]}")
     return payload['verdict'], {
         'request_payload': {
-            'transport': 'console-mcp-cli',
+            'transport': 'chatgpt-loop-task-bank-raw',
             'component': component_id,
             'workspace': str(workspace_path),
             'prompt_file': str(prompt_file),
@@ -428,6 +428,7 @@ def bootstrap_snapshot(component: dict[str, Any]) -> dict[str, Any]:
         'title': title,
         'snapshot': {
             'date': date.today().isoformat(),
+            'generated_at': datetime.now(timezone.utc).isoformat(),
             'label': 'bootstrap-seed',
             'ref': component.get('default_branch', 'master'),
             'origin': 'quality-atlas bootstrap seed',
@@ -566,6 +567,7 @@ def merge_snapshot(current: dict[str, Any] | None, component: dict[str, Any], ve
         scores[key] = max(0.0, min(10.0, safe_float(value, scores[key])))
     snapshot['snapshot'] = {
         'date': date.today().isoformat(),
+        'generated_at': datetime.now(timezone.utc).isoformat(),
         'label': run_label,
         'ref': component.get('default_branch', 'master'),
         'origin': origin,

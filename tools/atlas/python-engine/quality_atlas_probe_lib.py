@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import os
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -11,10 +12,10 @@ import yaml
 ROOT = Path(__file__).resolve().parents[3]
 PROBE_FAMILIES_FILE = ROOT / 'var' / 'atlas' / 'contract' / 'probe-families.yaml'
 EXCLUDED_DIRS = {
-    '.git', 'vendor', 'node_modules', '.idea', '.commanding', '.watchdog', '.sandbox',
+    '.git', 'vendor', 'node_modules', '.idea', '.gating', '.commanding', '.watchdog', '.sandbox',
     '.antora-src', '.sync', 'var', 'cache', 'build', 'dist', '__pycache__',
 }
-EXCLUDED_PREFIXES = ('var/', 'vendor/', 'node_modules/', '.git/', '.sync/', '.antora-src/', 'build/', 'dist/', 'cache/')
+EXCLUDED_PREFIXES = ('var/', 'vendor/', 'node_modules/', '.git/', '.gating/', '.sync/', '.antora-src/', 'build/', 'dist/', 'cache/')
 TEXT_SUFFIXES = {'.php', '.md', '.adoc', '.yml', '.yaml', '.json', '.txt', '.xml', '.neon'}
 PHP_SUFFIX = '.php'
 BASE_FAMILY_IDS = [
@@ -71,10 +72,22 @@ def should_skip_path(path: Path) -> bool:
     return False
 
 
+def iter_paths(repo_dir: Path) -> list[Path]:
+    paths: list[Path] = []
+    for root, dirs, files in os.walk(repo_dir):
+        root_path = Path(root)
+        dirs[:] = [name for name in dirs if name.lower() not in EXCLUDED_DIRS]
+        for name in dirs:
+            paths.append(root_path / name)
+        for name in files:
+            paths.append(root_path / name)
+    return paths
+
+
 def iter_files(repo_dir: Path, suffixes: set[str] | None = None, limit: int | None = None) -> list[Path]:
     files: list[Path] = []
-    for path in repo_dir.rglob('*'):
-        if not path.is_file() or should_skip_path(path.relative_to(repo_dir)):
+    for path in iter_paths(repo_dir):
+        if not path.is_file():
             continue
         if suffixes is not None and path.suffix.lower() not in suffixes:
             continue
@@ -242,8 +255,9 @@ def collect_repo_probes(repo_dir: Path, component: dict[str, Any]) -> dict[str, 
         placeholder['summary']['overall_status'] = 'warn'
         return placeholder
 
-    php_files = iter_files(repo_dir, {PHP_SUFFIX})
-    text_files = iter_files(repo_dir, TEXT_SUFFIXES, limit=500)
+    all_paths = iter_paths(repo_dir)
+    php_files = [path for path in all_paths if path.is_file() and path.suffix.lower() == PHP_SUFFIX]
+    text_files = [path for path in all_paths if path.is_file() and path.suffix.lower() in TEXT_SUFFIXES][:500]
     family_contract = {item['id']: item for item in load_probe_families()}
     families: dict[str, Any] = {}
 
@@ -251,15 +265,13 @@ def collect_repo_probes(repo_dir: Path, component: dict[str, Any]) -> dict[str, 
     canon_findings: list[dict[str, Any]] = []
     canon_evidence: list[str] = []
     migration_re = re.compile(r'^(migration|deprecated|obsolete|backup|bak|old)$', re.I)
-    for path in repo_dir.rglob('*'):
-        if should_skip_path(path.relative_to(repo_dir)):
-            continue
+    for path in all_paths:
         if migration_re.match(path.name):
             canon_findings.append(finding('warn', 'migration_marker', 'Migration/deprecated marker found in tree.', rel(path, repo_dir)))
             canon_evidence.append(rel(path, repo_dir))
     tokens = component_tokens(component)
-    for path in repo_dir.rglob('*'):
-        if not path.is_dir() or should_skip_path(path.relative_to(repo_dir)):
+    for path in all_paths:
+        if not path.is_dir():
             continue
         rel_path = path.relative_to(repo_dir)
         norm_name = normalize_text_name(path.name)
@@ -309,7 +321,7 @@ def collect_repo_probes(repo_dir: Path, component: dict[str, Any]) -> dict[str, 
     # Runtime surface
     runtime_findings: list[dict[str, Any]] = []
     runtime_evidence: list[str] = []
-    docker_paths = [rel(path, repo_dir) for path in repo_dir.rglob('*') if path.name in {'Dockerfile', 'docker-compose.yml', 'docker-compose.yaml', 'compose.yml', 'compose.yaml'}]
+    docker_paths = [rel(path, repo_dir) for path in all_paths if path.name in {'Dockerfile', 'docker-compose.yml', 'docker-compose.yaml', 'compose.yml', 'compose.yaml'}]
     if not docker_paths:
         runtime_findings.append(finding('warn', 'docker_surface_missing', 'No Docker or compose files were detected.'))
     else:
@@ -325,7 +337,7 @@ def collect_repo_probes(repo_dir: Path, component: dict[str, Any]) -> dict[str, 
     qa_findings: list[dict[str, Any]] = []
     qa_evidence: list[str] = []
     tests_exists = (repo_dir / 'tests').exists()
-    fixtures_hits = [rel(path, repo_dir) for path in repo_dir.rglob('*') if path.is_dir() and path.name.lower() == 'fixtures']
+    fixtures_hits = [rel(path, repo_dir) for path in all_paths if path.is_dir() and path.name.lower() == 'fixtures']
     playwright_hits = [rel(path, repo_dir) for path in text_files if 'playwright' in read_text(path).lower()]
     panther_hits = [rel(path, repo_dir) for path in text_files if 'panther' in read_text(path).lower()]
     if not tests_exists:

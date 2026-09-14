@@ -36,18 +36,18 @@ try {
         $consoleMcpPresent = Test-Path -LiteralPath $consoleMcpDevConsole -PathType Leaf
         $scoreCli = Join-Path $repoRoot 'tool\atlas-console-mcp-score-cli.ps1'
         $highLevelRawScoringCliReady = $false
-        $consoleMcpSessionStatus = $null
-        $consoleMcpLoginRequired = $null
+        $consoleMcpSystemStatus = $null
+        $consoleMcpSystemReason = $null
         $scorePreflightDiagnostic = $null
         if ($Mode -eq 'chatgpt-cli' -and $consoleMcpPresent -and (Test-Path -LiteralPath $scoreCli -PathType Leaf)) {
             try {
-                $scorePreflightRaw = & powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File $scoreCli -Preflight 2>&1
+                $scorePreflightRaw = & pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File $scoreCli -Preflight 2>&1
                 $scorePreflightText = ($scorePreflightRaw | Out-String).Trim()
                 try {
                     $scorePreflight = $scorePreflightText | ConvertFrom-Json
                     $highLevelRawScoringCliReady = ($scorePreflight.ok -eq $true)
-                    $consoleMcpSessionStatus = [string]$scorePreflight.sessionStatus
-                    $consoleMcpLoginRequired = [bool]$scorePreflight.loginRequired
+                    $consoleMcpSystemStatus = [string]$scorePreflight.status
+                    $consoleMcpSystemReason = [string]$scorePreflight.reason
                 } catch {
                     $scorePreflightDiagnostic = $scorePreflightText
                 }
@@ -61,15 +61,15 @@ try {
             OriginPresent = $originPresent
             PyYamlPresent = $pyYamlPresent
             ConsoleMcpPresent = $consoleMcpPresent
-            ConsoleMcpSessionStatus = $consoleMcpSessionStatus
-            ConsoleMcpLoginRequired = $consoleMcpLoginRequired
+            ConsoleMcpSystemStatus = $consoleMcpSystemStatus
+            ConsoleMcpSystemReason = $consoleMcpSystemReason
             HighLevelRawScoringCliReady = $highLevelRawScoringCliReady
             RawScoringPreflightDiagnostic = $scorePreflightDiagnostic
             Mode = $Mode
         } | Format-List
         if ($Mode -eq 'responses' -and -not $apiKeyPresent) { exit 21 }
         if ($Mode -eq 'chatgpt-cli' -and -not $highLevelRawScoringCliReady) {
-            Write-AtlasLog 'chatgpt-cli Console MCP CLI preflight failed; supervised ChatGPT session must be ready and authenticated'
+            Write-AtlasLog 'chatgpt-cli Console MCP system-ready preflight failed; local task-bank scoring dispatch is paused'
             exit 24
         }
         if (-not $originPresent) { exit 22 }
@@ -86,6 +86,11 @@ try {
     $plan = Get-Content -Raw -Path $selectionPlan | ConvertFrom-Json
     $selected = @($plan.selected_components)
     Write-AtlasLog ("selected components=" + ($selected -join ','))
+    if ($Mode -eq 'chatgpt-cli' -and $selected.Count -gt 1) {
+        $deferred = @($selected | Select-Object -Skip 1)
+        $selected = @($selected | Select-Object -First 1)
+        Write-AtlasLog ("chatgpt-cli local throttle active component=" + ($selected -join ',') + " deferred=" + ($deferred -join ','))
+    }
 
     if ($SelectionOnly) {
         $plan | ConvertTo-Json -Depth 8

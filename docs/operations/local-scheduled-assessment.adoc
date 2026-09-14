@@ -18,7 +18,7 @@ It executes the same Symfony command surface used by CI:
 
 ----
 php bin/console atlas:assessment:select --event-name schedule
-php bin/console atlas:assessment:run --mode dry-run
+php bin/console atlas:assessment:run --mode chatgpt-cli
 ----
 
 Successful changed Atlas state under `var/atlas` is then committed and pushed to `origin/master`.
@@ -36,7 +36,7 @@ Default task settings:
 * task name: `SmartResponsor Atlassing Quality Atlas`
 * poll interval: daily
 * local start time: `04:27`
-* assessment mode: `chatgpt-cli` after successful local preflight; otherwise keep `dry-run` until the supervised Console MCP ChatGPT session is ready and authenticated
+* assessment mode: `chatgpt-cli` after successful local `system-ready-status` preflight; otherwise keep `dry-run` while canonical `cmcp go` dispatch is paused
 * overlapping runs: ignored
 * delayed starts: allowed
 * execution limit: 4 hours
@@ -53,7 +53,7 @@ The task runs as the current interactive Windows user so Git credentials and net
 
 Scheduled logs are written outside Atlas-owned publish state under `var/log/atlas/scheduled-assessment.log`.
 
-`chatgpt-cli` is the canonical local AI scoring mode. Atlassing writes the complete Quality Atlas prompt artifact and delegates the browser lifecycle to the existing Console MCP CLI: `chatgpt-session-warmth`, `chatgpt-open-new-chat`, `chatgpt-submit-ready-chat`, and `chatgpt-capture`. Atlassing does not own DevTools Target IDs, browser navigation, authentication secrets, or tab creation. The local mode requires a ready authenticated supervised ChatGPT session, but does not require `OPENAI_API_KEY`. `responses` remains an explicit API/CI fallback and requires `OPENAI_API_KEY`; live modes never silently downgrade.
+`chatgpt-cli` is the canonical local AI scoring mode. Atlassing writes the complete Quality Atlas prompt artifact, checks Console MCP through the same `system-ready-status` gate used by Canonscanning, and delegates one scoring interaction to the existing `chatgpt-loop/tool/runner-task-bank-loop.ps1` in `raw` prompt mode. Atlassing sends only a short bootstrap that points to the authoritative prompt artifact; the task-bank loop owns ChatGPT submit/watch/settle/capture through the existing Console MCP browser contract. After a scoring answer has been captured and successfully parsed into the strict verdict, Atlassing treats that exact scoring conversation as disposable: it invokes the Console MCP delete contract with the runner-provided chat ID and requests closure of the bound browser target. Cleanup is best-effort and is recorded in the scoring lifecycle; a cleanup failure does not invalidate an already captured verdict, while incomplete or uncaptured scoring sessions are preserved for diagnostics. Atlassing does not infer technical chats by title or by recency. This mode does not require `OPENAI_API_KEY`. `responses` remains an explicit API/CI fallback and requires `OPENAI_API_KEY`; live modes never silently downgrade.
 
 Exit code groups are stable:
 
@@ -61,6 +61,6 @@ Exit code groups are stable:
 * `20` target selection failure
 * `21` missing scheduled `OPENAI_API_KEY`
 * `22` missing Atlassing `origin` publication remote
-* `24` high-level Console MCP arbitrary-prompt scoring CLI not yet available/verified
+* `24` Console MCP `system-ready-status` is not ready for canonical `cmcp go` dispatch
 * `30` assessment failure
 * `40..43` local Git publication failures

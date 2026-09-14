@@ -4,11 +4,42 @@ param(
     [ValidateRange(1, 365)]
     [int]$EveryDays = 1,
     [ValidateSet('chatgpt-cli', 'responses', 'dry-run')]
-    [string]$Mode = 'dry-run'
+    [string]$Mode = 'dry-run',
+    [switch]$StatusOnly,
+    [switch]$RegistryAudit
 )
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
+
+if ($StatusOnly) {
+    $task = Get-ScheduledTask -TaskName $TaskName -ErrorAction Stop
+    $info = Get-ScheduledTaskInfo -TaskName $TaskName -ErrorAction Stop
+    $actions = @($task.Actions)
+    $actionArguments = @($actions | ForEach-Object { $_.Arguments })
+    $registeredMode = $null
+    foreach ($argumentsValue in $actionArguments) {
+        if ($argumentsValue -match '(?i)(?:^|\s)-Mode\s+(chatgpt-cli|responses|dry-run)(?:\s|$)') {
+            $registeredMode = $Matches[1].ToLowerInvariant()
+            break
+        }
+    }
+    [pscustomobject]@{
+        TaskName = $task.TaskName
+        State = $task.State
+        NextRunTime = $info.NextRunTime
+        LastRunTime = $info.LastRunTime
+        LastTaskResult = $info.LastTaskResult
+        RegisteredMode = $registeredMode
+        TriggerStartBoundary = @($task.Triggers | ForEach-Object { $_.StartBoundary })
+        ExecutionTimeLimit = [string]$task.Settings.ExecutionTimeLimit
+        LogonType = [string]$task.Principal.LogonType
+        RunLevel = [string]$task.Principal.RunLevel
+        ActionExecute = @($actions | ForEach-Object { $_.Execute })
+        ActionArguments = $actionArguments
+    }
+    return
+}
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $runner = Join-Path $PSScriptRoot 'atlas-local-scheduled.ps1'
