@@ -105,3 +105,85 @@ Date: 2026-09-11
 - Final quality acceptance after relocation: Composer `quality` green (PHP-CS-Fixer: 0 fixable files; PHPStan: 0 errors; PHPUnit: 2 tests / 8 assertions), Symfony container lint green, Symfony YAML lint green, Composer validate/lock consistency green with only expected local `*@dev` warnings, Composer audit reports no security advisories.
 - The temporary repo-local relocation helpers were removed after execution and are not part of source history. The pre-existing untracked `.gating/` tree remains untouched.
 - Repository still has no configured remote/upstream, so remote push/PR/merge remains unavailable from this workspace until a remote is configured.
+
+## repository_implementation-2026-09-13-atlassing
+
+### Iteration 1 — RECONNAISSANCE_AND_BASELINE
+
+Date: 2026-09-13
+
+#### Current baseline
+
+- Workspace: `D:\PhpstormProjects\www\Atlassing`; branch: `master`; the task started from a materially dirty worktree. Existing scheduled-assessment/scoring edits, generated Atlas state, `.console-mcp/`, `.gating/`, and scorer helper files are preserved as pre-existing current work and are not reset or overwritten wholesale.
+- Atlassing remains the owner of Quality Atlas assessment/scoring lifecycle and state. Current local AI scoring is routed through `tool/atlas-console-mcp-score-cli.ps1` into the canonical Console MCP `bin/cmcp.ps1 go <component> M5 --prompt-file ... --prompt-mode=raw` lifecycle; the Python engine consumes the returned structured verdict.
+- Executable Gating baseline before this run's material changes: 17 rules, 16 passed, one hard failure. `Canon022StandaloneApplicationDependencyBaselineRule` failed because current Canonization now requires `collectioning/collection` and `tabling/table` as direct standalone runtime dependencies in addition to Cruding, Viewing, Interfacing, Objecting, and EasyAdmin.
+- `Collectioning` and `Tabling` sibling packages were inspected. Their package identities are `collectioning/collection` and `tabling/table`; their responsibilities are provider-neutral collection-query semantics and provider-neutral backend table-definition metadata respectively.
+- Market/enterprise benchmark keeps RC-critical work focused on deterministic and observable assessment execution, secure lifecycle boundaries, reproducible packaging, explicit dependency contracts, diagnostics, and non-silent failure. Richer scorecard authoring, trends, waiver lifecycle, remediation UX, and expanded enterprise reporting remain non-blocking growth work.
+
+#### Material consulted
+
+- Atlassing: `AGENTS.md`, `README.md`, `composer.json`, `composer.prod.json`, `MANIFEST.json`, current CMCP journal, current scheduler/scorer scripts, Python assessment engine, Gating profile/rule-set, PHPUnit/PHPStan/PHP-CS-Fixer configuration, and current Git/worktree state.
+- Objecting: `AGENTS.md`, `README.md`, `composer.json`, `MANIFEST.json`.
+- Cruding: `AGENTS.md`, `README.md`, `composer.json`, `MANIFEST.json`.
+- Viewing: `AGENTS.md`, `README.md`, `composer.json`, `MANIFEST.json`.
+- Interfacing: `AGENTS.md`, `README.md`, `composer.json`; no root manifest was required because none was available in the inspected contour.
+- Collectioning: available `README.md` and `composer.json`; no root `AGENTS.md` or `MANIFEST.json` was present at the inspected paths.
+- Tabling: available `README.md` and `composer.json`.
+- Gating: `AGENTS.md`, `README.md`, `composer.json`, `MANIFEST.json`.
+- Canonization: `AGENTS.md`, `README.md`, `composer.json`, `MANIFEST.json`, rule catalog discovery, and the normative rules mapped below.
+
+#### Target-to-canon mapping
+
+- `Canon008ComposerDependencyIntegrityRule`: Composer dependency graph must match component coupling; sibling folders are not implicit dependencies.
+- `Canon011NoSilentFailureRule`: required scheduled/live scoring failures must remain observable; no silent downgrade from failed live scoring to success-like dry-run state.
+- `Canon012TypedBoundaryContractRule`: stable Atlas verdict/state boundaries must validate structured scoring contracts rather than propagate arbitrary mixed payloads.
+- `Canon015NoToolingArchitectureLeakRule`: scheduler/scoring entry scripts may remain under tooling roots only for tooling-specific orchestration; stable reusable application behavior belongs under typed `src/` roles.
+- `Canon017DocumentationMatchesRuntimeRule`: scheduler documentation must describe the actual Console MCP lifecycle and supported scoring modes.
+- `Canon022StandaloneApplicationDependencyBaselineRule`: current Atlassing baseline was missing Collectioning and Tabling; this run selected that as the first hard RC repair.
+- `Canon023DevelopmentComposerSymlinkRule`: development wiring for Collectioning and Tabling must use sibling Composer `path` repositories with `symlink: true`.
+- `Canon024ProductionComposerBundleRule`: production wiring must use packaged/VCS dependencies and must not depend on sibling filesystem paths.
+- `Canon029MandatoryPhpQualityToolingRule`: PHP-CS-Fixer and PHPStan dependency/config/script surfaces are present.
+- `Canon039PhpTestToolingRule`, `Canon040PhpTestCoverageRule`, `Canon041BehavioralUiTestToolingRule`, `Canon042BehavioralUiCoverageRule`: these newer rules were read explicitly. The current Atlassing gate rule-set does not yet enforce them, so this run will classify and close hard tooling gaps where safely in scope and will report measured coverage debt rather than invent coverage evidence.
+
+#### Selected RC-critical workstream
+
+1. Normalize Collectioning/Tabling development and production Composer wiring under Canon022/023/024.
+2. Refresh dependency/lock state and re-run Gating, Composer validation/audit, quality/tests, PHP lint, and Symfony lint gates.
+3. Inspect the current Console MCP scheduled-scoring implementation for lifecycle, silent-failure, and documentation/runtime parity defects; repair only verified Atlassing-owned faults.
+4. Assess Canon039–042 from factual repository evidence, add missing standard tooling contracts when justified, and keep coverage shortfalls visible as debt/warnings.
+
+#### Growth workstream
+
+- Post-RC, non-blocking: richer score/rubric authoring, historical trend/progression views, exception/waiver lifecycle, ownership-linked remediation workflows, and deeper enterprise-readiness reporting.
+
+### Iteration 2 — MATERIAL_IMPLEMENTATION
+
+- Added the current Canon022 standalone baseline dependencies `collectioning/collection` and `tabling/table` to development Composer wiring through local `path` repositories with `symlink: true`, and to `composer.prod.json` through VCS/package wiring without sibling filesystem coupling.
+- Refreshed Composer lock/install state. Collectioning and Tabling are installed from the local workspace as junction/path packages; supporting Symfony serializer/Mercure dependencies were resolved.
+- Extended the Atlassing Gating rule set from Canon038 through the current Canon039–042 testing/coverage rules rather than leaving new canon requirements invisible.
+- Added Symfony Test Pack 1.2, Panther 2.4, repository-local Playwright 1.63 tooling, PHPUnit `src/` source filtering, persistent path/branch coverage execution, Node/Playwright artifact ignores, and a reproducible npm lock file.
+- Result after the first implementation pass: Canon039 and Canon041 tooling contracts pass; Canon040/042 remain evidence-driven warnings rather than fabricated coverage claims.
+
+### Iteration 3 — VERIFICATION_AND_FIX
+
+- Verified Composer package resolution, PHP quality, PHPUnit, Playwright tooling, Canon rules, Symfony container/YAML syntax, and Composer security advisories.
+- Fixed two verification-discovered defects in the new tooling: an incomplete Playwright config terminator and the obsolete PHPUnit `--branch-coverage` option. PHPUnit 12.5 path coverage is now used with Xdebug 3.5.1 and creates `var/coverage/summary.txt` deterministically.
+- Added focused tests for assessment/selection argument formation, missing Python scripts, Documentating coverage parsing, repository registry filtering, snapshot state, surface payloads, configuration variables, and assessment command success/failure lifecycle branches.
+- Coverage improved from lines 4.3% / methods 14.3% / branches 100% on two small entities to lines 59.5% (222/373), methods 54.3% (38/70), branches 88.5% (131/148). `HIGH_TEST_DEBT` classification is removed, while Canon040 correctly remains a warning until line/method targets reach 80%.
+- Final PHP quality pass is clean: PHP-CS-Fixer 0 fixable files, PHPStan 0 errors, PHPUnit 13 tests / 62 assertions with no notices.
+
+### Iteration 4 — DEBT_CLOSURE_AND_INTEGRATION
+
+- Runtime A/B preflight found an Atlassing-owned scheduler regression: `tool/atlas-local-scheduled.ps1` invoked the scorer preflight through legacy `powershell.exe`, which fails while parsing the current Console MCP browser-health script; the identical scorer preflight under PowerShell 7 `pwsh` returns `SYSTEM_READY`.
+- Changed only the Atlassing scheduler host invocation from `powershell.exe` to `pwsh`, aligning it with the scorer lifecycle already used by `atlas-console-mcp-score-cli.ps1`.
+- End-to-end scheduler preflight now exits 0 in `chatgpt-cli` mode with `ConsoleMcpSystemStatus=SYSTEM_READY` and `HighLevelRawScoringCliReady=True`. `OPENAI_API_KEY` remains absent but is correctly non-blocking for this mode.
+- Symfony `lint:container --env=test` passes; all 7 config YAML files pass `lint:yaml --parse-tags`; `composer audit` reports no security vulnerability advisories; npm Playwright test tooling exits 0.
+- Git integration is intentionally not performed on the current branch: `master` is protected, already ahead of `origin/master` by 3 pre-existing commits, and the worktree contained a large pre-existing dirty scheduler/generated-state layer before this run. Creating/pushing a commit here would mix this bounded RC work with unrelated local history or create a PR containing the prior ahead commits.
+
+### Iteration 5 — FINAL_ACCEPTANCE_AND_HANDOFF
+
+- Final Gating: 21 rules, 0 failed, 2 warnings. Canon040 remains a factual coverage-target warning at lines 59.5%, methods 54.3%, branches 88.5%; Canon042 remains a factual warning because no real behavioral/UI coverage evidence workflow has yet produced `var/coverage/behavioral-ui.json`.
+- Final quality: PHP-CS-Fixer green, PHPStan green, PHPUnit green at 13 tests / 62 assertions; persistent Xdebug path/branch coverage generation green.
+- Operational scheduler acceptance: direct scorer preflight under `pwsh` returns `{\"ok\":true,\"status\":\"SYSTEM_READY\"}` and the public scheduled preflight path also returns exit 0 / SYSTEM_READY after the host fix.
+- Production/development Composer dependency parity for the current standalone baseline is green under Canon022/023/024.
+- Repository is functionally RC-improved and has no hard gate failures. Remaining bounded debt is explicit: raise PHP line/method coverage toward 80% and materialize genuine Canon042 functional/behavioral/UI coverage evidence. Git publication requires separating the existing local `master` ahead/dirty history before a clean feature branch/PR can be produced safely.
