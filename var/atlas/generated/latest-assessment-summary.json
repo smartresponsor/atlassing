@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-14T01:06:03.054598+00:00",
-  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20260914T010507Z",
+  "generated_at": "2026-09-14T17:52:21.157708+00:00",
+  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20260914T175104Z",
   "mode": "chatgpt-cli",
   "components": [
     {
-      "component": "retailing",
-      "title": "Retailing",
-      "overall": 8.3,
-      "history_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\retailing\\history\\2026-09-13-assessment-2026-09-13.yaml",
-      "summary": "Retailing has moved beyond bootstrap status into a credible RC-oriented Symfony 8.1 component with explicit ecosystem dependencies, database migrations, executable PHP quality gates, UI testing infrastructure, and recent canonical-topology hardening; remaining concerns are an unclean working tree, lack of an exact release tag, limited evidenced production-operability controls, and incomplete repository-level documentation evidence."
+      "component": "documentating",
+      "title": "Documentating",
+      "overall": 8.4,
+      "history_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\documentating\\history\\2026-09-14-assessment-2026-09-14.yaml",
+      "summary": "Documentating is a mature documentation and publication repository with a clearly automated Antora build path, deterministic content verification, GitHub Pages deployment, and an integrated Quality Atlas workflow; its main readiness gaps are the very large dirty working tree, absence of tagged releases, and limited evidence for external market validation or deeper non-content runtime testing."
     }
   ],
   "failures": [],
   "status": "ok",
   "selected_components": [
-    "retailing"
+    "documentating"
   ]
 }
