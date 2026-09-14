@@ -1,167 +1,328 @@
 component: indexing
 title: Indexing
 snapshot:
-  date: '2026-04-14'
-  label: pre-rc-seed
-  origin: quality-atlas probe seed
-  generated_at: '2026-04-14T04:41:36.755148+00:00'
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T16:05:01.978773+00:00'
 repo_target:
-  github_repository: ''
+  github_repository: smartresponsor/indexing
   local_path: ''
   default_branch: master
 families:
   canon_structure:
     title: Canon & Structure
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    status: fail
+    score: 0.0
+    summary: 9 fail, 3 warn, 0 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - Migration/deprecated marker found in tree.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
     findings:
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: migration_marker
+      detail: Migration/deprecated marker found in tree.
+      path: .canonization/backup
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: Indexing
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Entity/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/HelperTrait/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Infrastructure/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/InfrastructureInterface/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Repository/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/RepositoryInterface/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/ServiceInterface/Index
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/SmokeScenario/Index
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: tools/phpstan/stubs/apiplatform.stub.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: report/wave-15-manifest.json
+    evidence:
+    - .canonization/backup
+    - AGENTS.md
+    - Indexing
+    - report/wave-15-manifest.json
+    - src/Entity/Index
+    - src/HelperTrait/Index
+    - src/Infrastructure/Index
+    - src/InfrastructureInterface/Index
+    - src/Repository/Index
+    - src/RepositoryInterface/Index
+    - src/ServiceInterface/Index
+    - src/SmokeScenario/Index
+    - tools/phpstan/stubs/apiplatform.stub.php
   architecture_boundaries:
     title: Architecture & Boundaries
     status: warn
     score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    summary: 0 fail, 1 warn, 0 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - No obvious boundary descriptor files were detected.
     findings:
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
+      id: boundary_descriptors_missing
+      detail: No obvious boundary descriptor files were detected.
     evidence: []
   runtime_surface:
     title: Runtime & Application Surface
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
-    blockers:
-    - Seed probe pending first deterministic repository assessment.
-    findings:
-    - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - README.md
+    - composer.json
+    - deploy/docker/compose.yaml
+    - report/wave-15-manifest.json
   qa_behavior:
     title: QA & Behavioral Assurance
     status: warn
     score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    summary: 0 fail, 1 warn, 0 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - Neither Playwright nor Symfony Panther markers were detected.
     findings:
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: browser_behavior_missing
+      detail: Neither Playwright nor Symfony Panther markers were detected.
+    evidence:
+    - fixtures
+    - tests/
+    - vendor/symfony/http-client-contracts/Test/Fixtures
   documentation_suite:
     title: Documentation & GitHub Suite
     status: warn
     score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    summary: 0 fail, 1 warn, 0 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - Public/protected docblock coverage is 350/1134 (31%).
     findings:
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 350/1134 (31%).
+    evidence:
+    - .github/workflows
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - README.md
+    - php-docblock-ratio:350/1134
+    - report/wave-15-manifest.json
+    - report/workspace-removals-wave5.txt
+    - tests/README.md
   delivery_observability:
     title: Delivery & Observability
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
-    blockers:
-    - Seed probe pending first deterministic repository assessment.
-    findings:
-    - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .github/workflows/consuming.yml
+    - .github/workflows/gate.yml
+    - .github/workflows/index-agent-pr.yml
+    - .github/workflows/index-ci.yml
+    - .github/workflows/index-codeql.yml
+    - .github/workflows/index-evidence-release.yml
+    - .github/workflows/index-gate-agent.yml
+    - .github/workflows/index-nightly.yml
+    - .github/workflows/index-pages.yml
+    - .github/workflows/intelligence-codex-pr.yml
+    - AGENTS.md
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - bootstrap.php
+    - composer.json
+    - src/ServiceInterface/Http/Index/IndexMetricHttpServiceInterface.php
+    - src/ServiceInterface/Index/IndexMetricInterface.php
+    - tests/Smoke/Index/IndexCliSmokeTest.php
+    - tests/Smoke/Index/IndexControllerBehaviorSmokeTest.php
   solid_refactoring:
     title: SOLID & Refactoring Pressure
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    status: fail
+    score: 0.0
+    summary: 1 fail, 11 warn, 1 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - PHP file is very large (479 lines); review SRP and refactoring pressure.
+    - Class exposes 48 public methods; review interface segregation and SRP.
+    - Class exposes 24 public methods; review interface segregation and SRP.
+    - Class exposes 17 public methods; review interface segregation and SRP.
+    - Class exposes 18 public methods; review interface segregation and SRP.
     findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (479 lines); review SRP and refactoring pressure.
+      path: tools/qa/index-consistency.php
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: public_api_pressure
+      detail: Class exposes 48 public methods; review interface segregation and SRP.
+      path: tests/Unit/Index/IndexMetricExporterTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 24 public methods; review interface segregation and SRP.
+      path: tests/Smoke/Index/IndexCliInvalidPathSmokeTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 17 public methods; review interface segregation and SRP.
+      path: tests/Smoke/Index/IndexCliSmokeTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 18 public methods; review interface segregation and SRP.
+      path: src/Service/Model/Index/IndexJob.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 16 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/Model/Index/IndexJob.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/Model/Index/IndexOutboxRecord.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/Model/Index/IndexSyncJobPayload.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 15 public methods; review interface segregation and SRP.
+      path: src/InfrastructureInterface/Index/IndexJobStoreInterface.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 16 public methods; review interface segregation and SRP.
+      path: src/Infrastructure/Index/DbalIndexJobStore.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 16 public methods; review interface segregation and SRP.
+      path: src/Infrastructure/Index/InMemoryIndexJobStore.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Http/Command/IndexWorkerRunOptions.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: README.md
+    evidence:
+    - README.md
+    - src/Http/Command/IndexWorkerRunOptions.php
+    - src/Infrastructure/Index/DbalIndexJobStore.php
+    - src/Infrastructure/Index/InMemoryIndexJobStore.php
+    - src/InfrastructureInterface/Index/IndexJobStoreInterface.php
+    - src/Service/Model/Index/IndexJob.php
+    - src/Service/Model/Index/IndexOutboxRecord.php
+    - src/Service/Model/Index/IndexSyncJobPayload.php
+    - tests/Smoke/Index/IndexCliInvalidPathSmokeTest.php
+    - tests/Smoke/Index/IndexCliSmokeTest.php
+    - tests/Unit/Index/IndexMetricExporterTest.php
+    - tools/qa/index-consistency.php
 summary:
-  overall_status: warn
-  average_score: 9.0
+  overall_status: fail
+  average_score: 6.71
   status_counts:
-    pass: 0
-    warn: 7
-    fail: 0
+    pass: 2
+    warn: 3
+    fail: 2
     not_applicable: 0
   top_blockers:
-  - Canon & Structure — Seed probe pending first deterministic repository assessment.
-  - Architecture & Boundaries — Seed probe pending first deterministic repository
-    assessment.
-  - Runtime & Application Surface — Seed probe pending first deterministic repository
-    assessment.
-  - QA & Behavioral Assurance — Seed probe pending first deterministic repository
-    assessment.
-  - Documentation & GitHub Suite — Seed probe pending first deterministic repository
-    assessment.
-  - Delivery & Observability — Seed probe pending first deterministic repository assessment.
-  - SOLID & Refactoring Pressure — Seed probe pending first deterministic repository
-    assessment.
+  - Canon & Structure — Migration/deprecated marker found in tree.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - QA & Behavioral Assurance — Neither Playwright nor Symfony Panther markers were
+    detected.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 350/1134
+    (31%).
+  - SOLID & Refactoring Pressure — PHP file is very large (479 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Class exposes 48 public methods; review interface
+    segregation and SRP.
   families:
     canon_structure:
       title: Canon & Structure
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      status: fail
+      score: 0.0
+      summary: 9 fail, 3 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - Migration/deprecated marker found in tree.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
     architecture_boundaries:
       title: Architecture & Boundaries
       status: warn
       score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      summary: 0 fail, 1 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - No obvious boundary descriptor files were detected.
     runtime_surface:
       title: Runtime & Application Surface
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     qa_behavior:
       title: QA & Behavioral Assurance
       status: warn
       score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      summary: 0 fail, 1 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - Neither Playwright nor Symfony Panther markers were detected.
     documentation_suite:
       title: Documentation & GitHub Suite
       status: warn
       score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      summary: 0 fail, 1 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - Public/protected docblock coverage is 350/1134 (31%).
     delivery_observability:
       title: Delivery & Observability
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     solid_refactoring:
       title: SOLID & Refactoring Pressure
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      status: fail
+      score: 0.0
+      summary: 1 fail, 11 warn, 1 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - PHP file is very large (479 lines); review SRP and refactoring pressure.
+      - Class exposes 48 public methods; review interface segregation and SRP.
+      - Class exposes 24 public methods; review interface segregation and SRP.

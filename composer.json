@@ -8,6 +8,16 @@
   "repositories": [
     {
       "type": "path",
+      "url": "../Collectioning",
+      "options": { "symlink": true }
+    },
+    {
+      "type": "path",
+      "url": "../Tabling",
+      "options": { "symlink": true }
+    },
+    {
+      "type": "path",
       "url": "../Cruding",
       "options": { "symlink": true }
     },
@@ -33,6 +43,7 @@
     }
   ],
   "require": {
+    "collectioning/collection": "*@dev",
     "cruding/crud": "*@dev",
     "easycorp/easyadmin-bundle": "^5.0",
     "interfacing/interface": "*@dev",
@@ -44,6 +55,7 @@
     "symfony/http-kernel": "^8.1",
     "symfony/console": "^8.1",
     "symfony/yaml": "^8.1",
+    "tabling/table": "*@dev",
     "doctrine/orm": "^3.4",
     "symfony/process": "^8.1",
     "viewing/view": "*@dev"
@@ -53,7 +65,9 @@
     "gating/gate": "*@dev",
     "phpstan/phpstan": "^2.2",
     "phpunit/phpunit": "^12.0",
-    "symfony/phpunit-bridge": "^8.1"
+    "symfony/panther": "^2.4",
+    "symfony/phpunit-bridge": "^8.1",
+    "symfony/test-pack": "^1.2"
   },
   "autoload": {
     "psr-4": {
@@ -67,6 +81,12 @@
   },
   "scripts": {
     "cs:check": "php-cs-fixer fix --dry-run --diff --verbose",
+    "coverage": [
+      "@php -r \"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\"",
+      "@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt"
+    ],
+    "test:functional": "phpunit --testsuite functional",
+    "test:browser": "phpunit --testsuite browser",
     "cs:fix": "php-cs-fixer fix --verbose",
     "gating:check": "php vendor/bin/gating check --target=. --profile=config/atlas_gating_profile.yaml --rule-set=config/atlas_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml",
     "phpstan": "phpstan analyse --memory-limit=1G",

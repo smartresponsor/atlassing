@@ -1,4 +1,9 @@
 /vendor/
+/node_modules/
+/test-results/
+/playwright-report/
+/.console-mcp/
+/.gating/
 /var/
 /.phpunit.cache/
 /.codebase-memory/

@@ -19,3 +19,7 @@ rule_set:
     - canon.036.documentation_producer_ownership
     - canon.037.generated_reference_artifact
     - canon.038.config_yaml_subject_prefix
+    - canon.039.php_test_tooling
+    - canon.040.php_test_coverage
+    - canon.041.behavioral_ui_test_tooling
+    - canon.042.behavioral_ui_coverage

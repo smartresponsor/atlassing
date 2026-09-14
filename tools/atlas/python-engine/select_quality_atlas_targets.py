@@ -179,8 +179,12 @@ def load_snapshot_state(component_id: str) -> dict[str, Any]:
     payload = load_yaml(current_path)
     snapshot = payload.get('snapshot') or {}
     basis = snapshot.get('assessment_basis') or {}
+    generated_at = snapshot.get('generated_at')
+    if not generated_at:
+        generated_at = datetime.fromtimestamp(current_path.stat().st_mtime, tz=timezone.utc).isoformat()
     return {
         'snapshot_date': snapshot.get('date'),
+        'snapshot_generated_at': generated_at,
         'snapshot_label': snapshot.get('label'),
         'assessed_commit': basis.get('assessed_commit'),
         'assessed_tag': basis.get('assessed_tag'),
@@ -193,7 +197,7 @@ def should_select(component: dict[str, Any], policy: dict[str, Any], state: dict
     cadence = (policy.get('cadence_groups') or {}).get(cadence_group, {})
     min_interval_hours = int(cadence.get('min_interval_hours', policy['defaults']['cooldown_hours']))
     force_refresh_max_age = int(policy['defaults'].get('force_refresh_max_age_hours', 168))
-    last_dt = parse_iso(state.get('snapshot_date'))
+    last_dt = parse_iso(state.get('snapshot_generated_at') or state.get('snapshot_date'))
     hours_since = None if last_dt is None else round((now_utc() - last_dt).total_seconds() / 3600, 2)
     if event_name == 'workflow_dispatch':
         return True, 'manual_override', {'cadence_group': cadence_group, 'hours_since_last_assessment': hours_since}
@@ -226,7 +230,7 @@ def should_select(component: dict[str, Any], policy: dict[str, Any], state: dict
 def default_selection_details(component: dict[str, Any], policy: dict[str, Any], state: dict[str, Any]) -> dict[str, Any]:
     override = (policy.get('component_overrides') or {}).get(component['component_id'], {})
     cadence_group = override.get('cadence_group') or component.get('cadence_group') or policy['defaults']['cadence_group']
-    last_dt = parse_iso(state.get('snapshot_date'))
+    last_dt = parse_iso(state.get('snapshot_generated_at') or state.get('snapshot_date'))
     hours_since = None if last_dt is None else round((now_utc() - last_dt).total_seconds() / 3600, 2)
     return {
         'cadence_group': cadence_group,

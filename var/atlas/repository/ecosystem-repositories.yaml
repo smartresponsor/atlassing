@@ -434,3 +434,66 @@ repositories:
   enabled: true
   report_path: .antora-src/modules/ROOT/pages/component/attaching/report/index.adoc
   notes: Connected to the scheduled assessment runner.
+- component_id: atlassing
+  component_title: Atlassing
+  github_repository: 'smartresponsor/atlassing'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/atlassing/report/index.adoc
+  notes: Active Quality Atlas implementation repository; included explicitly in scheduled assessment coverage.
+- component_id: relating
+  component_title: Relating
+  github_repository: 'smartresponsor/relating'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/relating/report/index.adoc
+  notes: Mature CRM and qualification component; included explicitly in scheduled assessment coverage.
+- component_id: managing
+  component_title: Managing
+  github_repository: 'smartresponsor/managing'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/managing/report/index.adoc
+  notes: Active mature component; included explicitly in scheduled assessment coverage.
+- component_id: collectioning
+  component_title: Collectioning
+  github_repository: 'smartresponsor/collectioning'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/collectioning/report/index.adoc
+  notes: Canonical collection-query component; included explicitly in scheduled assessment coverage.
+- component_id: tabling
+  component_title: Tabling
+  github_repository: 'smartresponsor/tabling'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/tabling/report/index.adoc
+  notes: Canonical backend tabular-data component; included explicitly in scheduled assessment coverage.
+- component_id: temporaring
+  component_title: Temporaring
+  github_repository: 'smartresponsor/temporaring'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/temporaring/report/index.adoc
+  notes: Active System Tempo engineering repository; included explicitly in scheduled assessment coverage.
+- component_id: notifying
+  component_title: Notifying
+  github_repository: 'smartresponsor/notifying'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/notifying/report/index.adoc
+  notes: Active notification and recognized-needs backend; included explicitly in scheduled assessment coverage.
+- component_id: cruding
+  component_title: Cruding
+  github_repository: 'smartresponsor/cruding'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/cruding/report/index.adoc
+  notes: Canonical CRUD infrastructure component; included explicitly in scheduled assessment coverage.
+- component_id: delivering
+  component_title: Delivering
+  github_repository: 'smartresponsor/delivering'
+  default_branch: master
+  enabled: true
+  report_path: .antora-src/modules/ROOT/pages/component/delivering/report/index.adoc
+  notes: Active delivery integration component; included explicitly in scheduled assessment coverage.

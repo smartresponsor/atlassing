@@ -1,21 +1,41 @@
 component: documentating
 title: Documentating
 snapshot:
-  date: '2026-06-24'
-  label: assessment-2026-06-24
+  date: '2026-09-13'
+  label: assessment-2026-09-13
   ref: master
   origin: quality-atlas dry-run assessment
   assessment_basis:
-    repository: local/documentating
+    repository: D:\PhpstormProjects\www\Documentating
     assessed_branch: master
-    assessed_commit: 930537e6c674d7729798e2259890b1a25f522513
+    assessed_commit: 51118c9a702f5ee3b9250958a17d92ea968affa4
     assessed_tag: null
-    trigger_reason: manual_override
-    previous_commit: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: 930537e6c674d7729798e2259890b1a25f522513
     previous_tag: null
-    current_head_commit: 930537e6c674d7729798e2259890b1a25f522513
+    current_head_commit: 51118c9a702f5ee3b9250958a17d92ea968affa4
     current_head_tag: null
-    changed_files_sample: []
+    changed_files_sample:
+    - .antora-src/modules/ROOT/pages/article/abstract-hypothesis-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/definitions-and-scope-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/dynamic-non-absoluteness-research-program.adoc
+    - .antora-src/modules/ROOT/pages/article/glossary-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/index.adoc
+    - .antora-src/modules/ROOT/pages/article/literature-and-conceptual-overlap-map-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/manifesto-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/principle-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/system-tempo-and-dynamic-non-identity.adoc
+    - .antora-src/modules/ROOT/pages/article/the-finite-observer-and-the-resolution-of-change.adoc
+    - .antora-src/modules/ROOT/pages/article/toward-a-formal-statement-of-dynamic-non-identity.adoc
+    - .antora-src/modules/ROOT/pages/quality-atlas/internal.adoc
+    - .antora-src/modules/ROOT/pages/quality-atlas/portfolio.adoc
+    - .antora-src/modules/ROOT/pages/quality-atlas/schedule.adoc
+    - .sync/quality-atlas/components/accessing/current.yaml
+    - .sync/quality-atlas/components/accessing/probes/current.yaml
+    - .sync/quality-atlas/components/addressing/current.yaml
+    - .sync/quality-atlas/components/addressing/probes/current.yaml
+    - .sync/quality-atlas/components/analysing/current.yaml
+    - .sync/quality-atlas/components/analysing/probes/current.yaml
 report_status: current
 groups:
   product_market:
@@ -236,41 +256,38 @@ evidence:
 assessment_notes:
 - Documentating remains on a seeded snapshot because the assessment runner is in dry-run
   mode.
-- 'Prompt length: 47618 characters.'
+- 'Prompt length: 61355 characters.'
 - Base overall score retained at 8.00.
 assessment_confidence: dry-run
 development_driving:
   overall_status: fail
-  average_score: 8.0
+  average_score: 8.61
   status_counts:
-    pass: 1
-    warn: 4
-    fail: 2
+    pass: 3
+    warn: 3
+    fail: 1
     not_applicable: 0
   top_blockers:
-  - Canon & Structure — Migration/deprecated marker found in tree.
-  - Canon & Structure — PHP namespace does not use the default App\ root.
-  - 'Architecture & Boundaries — Missing expected repository segment: tests/.'
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - 'Architecture & Boundaries — Missing expected repository segment: src/.'
   - Runtime & Application Surface — No Docker or compose files were detected.
   - QA & Behavioral Assurance — tests/ directory is missing.
-  - QA & Behavioral Assurance — No fixtures directories were detected.
   - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
-  - Documentation & GitHub Suite — Public/protected docblock coverage is 13/59 (22%).
   families:
     canon_structure:
       title: Canon & Structure
-      status: warn
-      score: 8.0
-      summary: 0 fail, 2 warn, 0 info findings detected.
-      blockers:
-      - Migration/deprecated marker found in tree.
-      - PHP namespace does not use the default App\ root.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     architecture_boundaries:
       title: Architecture & Boundaries
       status: warn
-      score: 9.0
-      summary: 0 fail, 1 warn, 0 info findings detected.
+      score: 7.0
+      summary: 0 fail, 3 warn, 0 info findings detected.
       blockers:
+      - No obvious boundary descriptor files were detected.
+      - 'Missing expected repository segment: src/.'
       - 'Missing expected repository segment: tests/.'
     runtime_surface:
       title: Runtime & Application Surface
@@ -282,30 +299,26 @@ development_driving:
     qa_behavior:
       title: QA & Behavioral Assurance
       status: fail
-      score: 5.5
-      summary: 1 fail, 2 warn, 0 info findings detected.
+      score: 7.5
+      summary: 1 fail, 0 warn, 0 info findings detected.
       blockers:
       - tests/ directory is missing.
-      - No fixtures directories were detected.
-      - Neither Playwright nor Symfony Panther markers were detected.
     documentation_suite:
       title: Documentation & GitHub Suite
       status: warn
-      score: 7.75
-      summary: 0 fail, 2 warn, 1 info findings detected.
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
       blockers:
       - 'Missing expected documentation asset: CHANGELOG.md.'
-      - Public/protected docblock coverage is 13/59 (22%).
     delivery_observability:
       title: Delivery & Observability
       status: pass
-      score: 9.75
-      summary: 0 fail, 0 warn, 1 info findings detected.
+      score: 10.0
+      summary: No material probe findings detected in this family.
       blockers: []
     solid_refactoring:
       title: SOLID & Refactoring Pressure
-      status: fail
-      score: 7.0
-      summary: 1 fail, 0 warn, 2 info findings detected.
-      blockers:
-      - PHP file is very large (812 lines); review SRP and refactoring pressure.
+      status: pass
+      score: 8.0
+      summary: 0 fail, 0 warn, 8 info findings detected.
+      blockers: []

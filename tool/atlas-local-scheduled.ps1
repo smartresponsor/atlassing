@@ -1,8 +1,9 @@
 param(
-    [ValidateSet('responses', 'dry-run')]
-    [string]$Mode = 'responses',
+    [ValidateSet('chatgpt-cli', 'responses', 'dry-run')]
+    [string]$Mode = 'dry-run',
     [switch]$SelectionOnly,
-    [switch]$NoPublish
+    [switch]$NoPublish,
+    [switch]$PreflightOnly
 )
 
 $ErrorActionPreference = 'Stop'
@@ -24,6 +25,58 @@ Push-Location $repoRoot
 try {
     Write-AtlasLog "scheduled run started mode=$Mode"
 
+    if ($PreflightOnly) {
+        $apiKeyPresent = -not [string]::IsNullOrWhiteSpace($env:OPENAI_API_KEY)
+        & git remote get-url origin *> $null
+        $originPresent = ($LASTEXITCODE -eq 0)
+        & py -3 -c 'import yaml' *> $null
+        $pyYamlPresent = ($LASTEXITCODE -eq 0)
+        $consoleMcpRoot = Join-Path (Split-Path -Parent $repoRoot) 'mcp\console-mcp'
+        $consoleMcpDevConsole = Join-Path $consoleMcpRoot 'tool\dev-console.ps1'
+        $consoleMcpPresent = Test-Path -LiteralPath $consoleMcpDevConsole -PathType Leaf
+        $scoreCli = Join-Path $repoRoot 'tool\atlas-console-mcp-score-cli.ps1'
+        $highLevelRawScoringCliReady = $false
+        $consoleMcpSystemStatus = $null
+        $consoleMcpSystemReason = $null
+        $scorePreflightDiagnostic = $null
+        if ($Mode -eq 'chatgpt-cli' -and $consoleMcpPresent -and (Test-Path -LiteralPath $scoreCli -PathType Leaf)) {
+            try {
+                $scorePreflightRaw = & pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File $scoreCli -Preflight 2>&1
+                $scorePreflightText = ($scorePreflightRaw | Out-String).Trim()
+                try {
+                    $scorePreflight = $scorePreflightText | ConvertFrom-Json
+                    $highLevelRawScoringCliReady = ($scorePreflight.ok -eq $true)
+                    $consoleMcpSystemStatus = [string]$scorePreflight.status
+                    $consoleMcpSystemReason = [string]$scorePreflight.reason
+                } catch {
+                    $scorePreflightDiagnostic = $scorePreflightText
+                }
+            } catch {
+                $highLevelRawScoringCliReady = $false
+                $scorePreflightDiagnostic = $_.Exception.Message
+            }
+        }
+        [pscustomobject]@{
+            OpenAiApiKeyPresent = $apiKeyPresent
+            OriginPresent = $originPresent
+            PyYamlPresent = $pyYamlPresent
+            ConsoleMcpPresent = $consoleMcpPresent
+            ConsoleMcpSystemStatus = $consoleMcpSystemStatus
+            ConsoleMcpSystemReason = $consoleMcpSystemReason
+            HighLevelRawScoringCliReady = $highLevelRawScoringCliReady
+            RawScoringPreflightDiagnostic = $scorePreflightDiagnostic
+            Mode = $Mode
+        } | Format-List
+        if ($Mode -eq 'responses' -and -not $apiKeyPresent) { exit 21 }
+        if ($Mode -eq 'chatgpt-cli' -and -not $highLevelRawScoringCliReady) {
+            Write-AtlasLog 'chatgpt-cli Console MCP system-ready preflight failed; local task-bank scoring dispatch is paused'
+            exit 24
+        }
+        if (-not $originPresent) { exit 22 }
+        if (-not $pyYamlPresent) { exit 23 }
+        exit 0
+    }
+
     & php bin/console atlas:assessment:select --event-name schedule --output $selectionPlan
     if ($LASTEXITCODE -ne 0) {
         Write-AtlasLog "selection failed exit=$LASTEXITCODE"
@@ -33,6 +86,11 @@ try {
     $plan = Get-Content -Raw -Path $selectionPlan | ConvertFrom-Json
     $selected = @($plan.selected_components)
     Write-AtlasLog ("selected components=" + ($selected -join ','))
+    if ($Mode -eq 'chatgpt-cli' -and $selected.Count -gt 1) {
+        $deferred = @($selected | Select-Object -Skip 1)
+        $selected = @($selected | Select-Object -First 1)
+        Write-AtlasLog ("chatgpt-cli local throttle active component=" + ($selected -join ',') + " deferred=" + ($deferred -join ','))
+    }
 
     if ($SelectionOnly) {
         $plan | ConvertTo-Json -Depth 8

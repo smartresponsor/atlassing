@@ -8,6 +8,16 @@
   "repositories": [
     {
       "type": "vcs",
+      "url": "https://github.com/smartresponsor/collectioning.git",
+      "no-api": true
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/smartresponsor/tabling-.git",
+      "no-api": true
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/smartresponsor/cruding.git",
       "no-api": true
     },
@@ -28,6 +38,7 @@
     }
   ],
   "require": {
+    "collectioning/collection": "dev-master",
     "cruding/crud": "dev-master",
     "doctrine/orm": "^3.4",
     "easycorp/easyadmin-bundle": "^5.0",
@@ -41,6 +52,7 @@
     "symfony/http-kernel": "^8.1",
     "symfony/process": "^8.1",
     "symfony/yaml": "^8.1",
+    "tabling/table": "dev-master",
     "viewing/view": "dev-master"
   },
   "autoload": {
