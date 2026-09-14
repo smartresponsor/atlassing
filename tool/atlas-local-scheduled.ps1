@@ -131,7 +131,7 @@ try {
         exit 0
     }
 
-    & git add -- var/atlas
+    & git add -f -- var/atlas
     if ($LASTEXITCODE -ne 0) {
         Write-AtlasLog "git add failed exit=$LASTEXITCODE"
         exit 40
