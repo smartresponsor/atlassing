@@ -1,10 +1,10 @@
 component: documentating
 title: Documentating
 snapshot:
-  date: '2026-06-24'
-  label: assessment-2026-06-24
+  date: '2026-09-13'
+  label: assessment-2026-09-13
   origin: quality-atlas deterministic probes
-  generated_at: '2026-06-25T04:46:23.950979+00:00'
+  generated_at: '2026-09-13T10:21:12.103992+00:00'
 repo_target:
   github_repository: local/documentating
   local_path: .
@@ -12,37 +12,32 @@ repo_target:
 families:
   canon_structure:
     title: Canon & Structure
-    status: warn
-    score: 8.0
-    summary: 0 fail, 2 warn, 0 info findings detected.
-    blockers:
-    - Migration/deprecated marker found in tree.
-    - PHP namespace does not use the default App\ root.
-    findings:
-    - severity: warn
-      id: migration_marker
-      detail: Migration/deprecated marker found in tree.
-      path: docs/migration
-    - severity: warn
-      id: namespace_drift
-      detail: PHP namespace does not use the default App\ root.
-      path: config/reference.php
-    evidence:
-    - config/reference.php
-    - docs/migration
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence: []
   architecture_boundaries:
     title: Architecture & Boundaries
     status: warn
-    score: 9.0
-    summary: 0 fail, 1 warn, 0 info findings detected.
+    score: 7.0
+    summary: 0 fail, 3 warn, 0 info findings detected.
     blockers:
+    - No obvious boundary descriptor files were detected.
+    - 'Missing expected repository segment: src/.'
     - 'Missing expected repository segment: tests/.'
     findings:
     - severity: warn
+      id: boundary_descriptors_missing
+      detail: No obvious boundary descriptor files were detected.
+    - severity: warn
+      id: missing_vertical_segment
+      detail: 'Missing expected repository segment: src/.'
+    - severity: warn
       id: missing_vertical_segment
       detail: 'Missing expected repository segment: tests/.'
-    evidence:
-    - docs/architecture/atlas-engine-boundary.adoc
+    evidence: []
   runtime_surface:
     title: Runtime & Application Surface
     status: warn
@@ -55,124 +50,150 @@ families:
       id: docker_surface_missing
       detail: No Docker or compose files were detected.
     evidence:
-    - ATLAS_ENGINE_EXPORT_MANIFEST.json
-    - README.md
-    - composer.json
+    - .deploy/MANIFEST.md
+    - .site_build/sitemap.xml
+    - VENDORED_UI_SWITCH.md
   qa_behavior:
     title: QA & Behavioral Assurance
     status: fail
-    score: 5.5
-    summary: 1 fail, 2 warn, 0 info findings detected.
+    score: 7.5
+    summary: 1 fail, 0 warn, 0 info findings detected.
     blockers:
     - tests/ directory is missing.
-    - No fixtures directories were detected.
-    - Neither Playwright nor Symfony Panther markers were detected.
     findings:
     - severity: fail
       id: tests_missing
       detail: tests/ directory is missing.
-    - severity: warn
-      id: fixtures_missing
-      detail: No fixtures directories were detected.
-    - severity: warn
-      id: browser_behavior_missing
-      detail: Neither Playwright nor Symfony Panther markers were detected.
-    evidence: []
+    evidence:
+    - docs/article/2026-03-29--2026-03-29-do-not-scale-the-imitation-of-a-human.md
+    - node_modules/pino-abstract-transport/test/fixtures
+    - node_modules/pino/test/fixtures
+    - node_modules/sonic-boom/fixtures
   documentation_suite:
     title: Documentation & GitHub Suite
     status: warn
-    score: 7.75
-    summary: 0 fail, 2 warn, 1 info findings detected.
+    score: 8.75
+    summary: 0 fail, 1 warn, 1 info findings detected.
     blockers:
     - 'Missing expected documentation asset: CHANGELOG.md.'
-    - Public/protected docblock coverage is 13/59 (22%).
     findings:
     - severity: warn
       id: missing_doc_asset
       detail: 'Missing expected documentation asset: CHANGELOG.md.'
-    - severity: warn
-      id: docblock_coverage_low
-      detail: Public/protected docblock coverage is 13/59 (22%).
     - severity: info
       id: nelmio_openapi_not_detected
       detail: No obvious Nelmio/OpenAPI markers were detected.
     evidence:
     - .github/workflows
     - README.md
-    - php-docblock-ratio:13/59
   delivery_observability:
     title: Delivery & Observability
     status: pass
-    score: 9.75
-    summary: 0 fail, 0 warn, 1 info findings detected.
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .deploy/MANIFEST.md
+    - .deploy/docker/MANIFEST.md
+    - .github/workflows/gh-pages.yml
+    - .github/workflows/preview-local-vendored-ui-site-with-article-images.yml
+    - .github/workflows/preview-local-vendored-ui-site.yml
+    - .github/workflows/preview-qa-rc.yml
+    - .github/workflows/prove-local-vendored-ui.yml
+    - .github/workflows/public-surface-verify-local-ui.yml
+    - .github/workflows/public-surface-verify.yml
+    - .github/workflows/quality-atlas-assessment.yml
+    - .github/workflows/refresh-local-ui-bundle.yml
+    - .ide/sr_default_inspector.xml
+    - AGENTS.md
+    - MANIFEST.md
+    - package-lock.json
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: pass
+    score: 8.0
+    summary: 0 fail, 0 warn, 8 info findings detected.
     blockers: []
     findings:
     - severity: info
-      id: observability_markers_missing
-      detail: No Prometheus/Grafana markers were detected.
-    evidence:
-    - .github/workflows/atlas-assessment.yml
-    - AGENTS.md
-    - ATLAS_W01_ENGINE_CUMULATIVE_MANIFEST.json
-    - MANIFEST.json
-    - README.md
-  solid_refactoring:
-    title: SOLID & Refactoring Pressure
-    status: fail
-    score: 7.0
-    summary: 1 fail, 0 warn, 2 info findings detected.
-    blockers:
-    - PHP file is very large (812 lines); review SRP and refactoring pressure.
-    findings:
-    - severity: fail
-      id: large_class
-      detail: PHP file is very large (812 lines); review SRP and refactoring pressure.
-      path: config/reference.php
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: package-lock.json
     - severity: info
       id: copy_paste_origin_marker
       detail: Possible copy-paste provenance marker detected; review SOLID and ownership
         fit.
-      path: README.md
+      path: docs/article/ai-first-software-delivery-and-the-new-geometry-of-control.adoc
     - severity: info
       id: copy_paste_origin_marker
       detail: Possible copy-paste provenance marker detected; review SOLID and ownership
         fit.
-      path: config/reference.php
+      path: docs/article/from-ai-coding-to-semi-automated-science.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: docs/article/vibe-coding-is-not-the-problem.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: docs/article/zz-ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: doc/article/ollama-0-19-mlx-and-apple-silicon-why-local-ai-on-mac-got-serious.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: .github/workflows/gh-pages.yml
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: .github/workflows/refresh-local-ui-bundle.yml
     evidence:
-    - README.md
-    - config/reference.php
+    - .github/workflows/gh-pages.yml
+    - .github/workflows/refresh-local-ui-bundle.yml
+    - doc/article/ollama-0-19-mlx-and-apple-silicon-why-local-ai-on-mac-got-serious.adoc
+    - docs/article/ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - docs/article/from-ai-coding-to-semi-automated-science.adoc
+    - docs/article/vibe-coding-is-not-the-problem.adoc
+    - docs/article/zz-ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - package-lock.json
 summary:
   overall_status: fail
-  average_score: 8.0
+  average_score: 8.61
   status_counts:
-    pass: 1
-    warn: 4
-    fail: 2
+    pass: 3
+    warn: 3
+    fail: 1
     not_applicable: 0
   top_blockers:
-  - Canon & Structure — Migration/deprecated marker found in tree.
-  - Canon & Structure — PHP namespace does not use the default App\ root.
-  - 'Architecture & Boundaries — Missing expected repository segment: tests/.'
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - 'Architecture & Boundaries — Missing expected repository segment: src/.'
   - Runtime & Application Surface — No Docker or compose files were detected.
   - QA & Behavioral Assurance — tests/ directory is missing.
-  - QA & Behavioral Assurance — No fixtures directories were detected.
   - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
-  - Documentation & GitHub Suite — Public/protected docblock coverage is 13/59 (22%).
   families:
     canon_structure:
       title: Canon & Structure
-      status: warn
-      score: 8.0
-      summary: 0 fail, 2 warn, 0 info findings detected.
-      blockers:
-      - Migration/deprecated marker found in tree.
-      - PHP namespace does not use the default App\ root.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     architecture_boundaries:
       title: Architecture & Boundaries
       status: warn
-      score: 9.0
-      summary: 0 fail, 1 warn, 0 info findings detected.
+      score: 7.0
+      summary: 0 fail, 3 warn, 0 info findings detected.
       blockers:
+      - No obvious boundary descriptor files were detected.
+      - 'Missing expected repository segment: src/.'
       - 'Missing expected repository segment: tests/.'
     runtime_surface:
       title: Runtime & Application Surface
@@ -184,30 +205,26 @@ summary:
     qa_behavior:
       title: QA & Behavioral Assurance
       status: fail
-      score: 5.5
-      summary: 1 fail, 2 warn, 0 info findings detected.
+      score: 7.5
+      summary: 1 fail, 0 warn, 0 info findings detected.
       blockers:
       - tests/ directory is missing.
-      - No fixtures directories were detected.
-      - Neither Playwright nor Symfony Panther markers were detected.
     documentation_suite:
       title: Documentation & GitHub Suite
       status: warn
-      score: 7.75
-      summary: 0 fail, 2 warn, 1 info findings detected.
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
       blockers:
       - 'Missing expected documentation asset: CHANGELOG.md.'
-      - Public/protected docblock coverage is 13/59 (22%).
     delivery_observability:
       title: Delivery & Observability
       status: pass
-      score: 9.75
-      summary: 0 fail, 0 warn, 1 info findings detected.
+      score: 10.0
+      summary: No material probe findings detected in this family.
       blockers: []
     solid_refactoring:
       title: SOLID & Refactoring Pressure
-      status: fail
-      score: 7.0
-      summary: 1 fail, 0 warn, 2 info findings detected.
-      blockers:
-      - PHP file is very large (812 lines); review SRP and refactoring pressure.
+      status: pass
+      score: 8.0
+      summary: 0 fail, 0 warn, 8 info findings detected.
+      blockers: []

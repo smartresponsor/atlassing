@@ -1,167 +1,237 @@
 component: billing
 title: Billing
 snapshot:
-  date: '2026-04-14'
-  label: pre-rc-seed
-  origin: quality-atlas probe seed
-  generated_at: '2026-04-14T04:41:36.311776+00:00'
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T09:58:34.226549+00:00'
 repo_target:
-  github_repository: ''
+  github_repository: smartresponsor/billing
   local_path: ''
   default_branch: master
 families:
   canon_structure:
     title: Canon & Structure
     status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
     findings:
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - AGENTS.md
+    - config/reference.php
   architecture_boundaries:
     title: Architecture & Boundaries
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
-    blockers:
-    - Seed probe pending first deterministic repository assessment.
-    findings:
-    - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - .gating/src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+    - docs/billing-boundary.md
   runtime_surface:
     title: Runtime & Application Surface
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
-    blockers:
-    - Seed probe pending first deterministic repository assessment.
-    findings:
-    - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - README.md
+    - vendor/jetbrains/phpstorm-stubs/tests/DockerImages/5.6/Dockerfile
+    - vendor/jetbrains/phpstorm-stubs/tests/DockerImages/7.0/Dockerfile
+    - vendor/jetbrains/phpstorm-stubs/tests/DockerImages/7.1/Dockerfile
+    - vendor/jetbrains/phpstorm-stubs/tests/DockerImages/7.2/Dockerfile
+    - vendor/jetbrains/phpstorm-stubs/tests/DockerImages/7.3/Dockerfile
   qa_behavior:
     title: QA & Behavioral Assurance
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
-    blockers:
-    - Seed probe pending first deterministic repository assessment.
-    findings:
-    - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - README.md
+    - composer.json
+    - tests/
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/Core/Fixer/Fixtures
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
   documentation_suite:
     title: Documentation & GitHub Suite
     status: warn
     score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    summary: 0 fail, 1 warn, 0 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - Public/protected docblock coverage is 280/483 (58%).
     findings:
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 280/483 (58%).
+    evidence:
+    - .github/ISSUE_TEMPLATE
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .github/workflows
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - README.md
+    - composer.json
+    - deptrac.yaml
+    - php-docblock-ratio:280/483
   delivery_observability:
     title: Delivery & Observability
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
-    blockers:
-    - Seed probe pending first deterministic repository assessment.
+    status: pass
+    score: 9.75
+    summary: 0 fail, 0 warn, 1 info findings detected.
+    blockers: []
     findings:
-    - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+    - severity: info
+      id: observability_markers_missing
+      detail: No Prometheus/Grafana markers were detected.
+    evidence:
+    - .gating/AGENTS.md
+    - .github/workflows/ci.yml
+    - .github/workflows/docs-surfaces.yml
+    - AGENTS.md
+    - CMCP_CHANGELOG.md
+    - README.md
+    - qodana.yaml
   solid_refactoring:
     title: SOLID & Refactoring Pressure
-    status: warn
-    score: 9.0
-    summary: Seed probe pending first deterministic repository assessment.
+    status: fail
+    score: 0.0
+    summary: 3 fail, 4 warn, 1 info findings detected.
     blockers:
-    - Seed probe pending first deterministic repository assessment.
+    - PHP file is very large (1318 lines); review SRP and refactoring pressure.
+    - PHP file is very large (471 lines); review SRP and refactoring pressure.
+    - Class exposes 13 public methods; review interface segregation and SRP.
+    - Constructor injects 9 parameters; review dependency inversion and class responsibilities.
+    - PHP file is large (387 lines); review SRP pressure.
     findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1318 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (471 lines); review SRP and refactoring pressure.
+      path: src/Endpoint/BillingInvoiceEndpoint.php
     - severity: warn
-      id: seed_pending
-      detail: Seed probe pending first deterministic repository assessment.
-    evidence: []
+      id: public_api_pressure
+      detail: Class exposes 13 public methods; review interface segregation and SRP.
+      path: src/Entity/BillingSubscriptionEntity.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 9 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/Invoice/InvoiceResult.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (387 lines); review SRP pressure.
+      path: src/Service/State/FileBillingStateStore.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (444 lines); review SRP pressure.
+      path: .gating/tests/calibration.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (565 lines); review SRP and refactoring pressure.
+      path: .gating/src/Runner/GatingRunner.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - .gating/src/Runner/GatingRunner.php
+    - .gating/tests/calibration.php
+    - config/reference.php
+    - src/Endpoint/BillingInvoiceEndpoint.php
+    - src/Entity/BillingSubscriptionEntity.php
+    - src/Service/Invoice/InvoiceResult.php
+    - src/Service/State/FileBillingStateStore.php
 summary:
-  overall_status: warn
-  average_score: 9.0
+  overall_status: fail
+  average_score: 8.11
   status_counts:
-    pass: 0
-    warn: 7
-    fail: 0
+    pass: 4
+    warn: 2
+    fail: 1
     not_applicable: 0
   top_blockers:
-  - Canon & Structure — Seed probe pending first deterministic repository assessment.
-  - Architecture & Boundaries — Seed probe pending first deterministic repository
-    assessment.
-  - Runtime & Application Surface — Seed probe pending first deterministic repository
-    assessment.
-  - QA & Behavioral Assurance — Seed probe pending first deterministic repository
-    assessment.
-  - Documentation & GitHub Suite — Seed probe pending first deterministic repository
-    assessment.
-  - Delivery & Observability — Seed probe pending first deterministic repository assessment.
-  - SOLID & Refactoring Pressure — Seed probe pending first deterministic repository
-    assessment.
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 280/483 (58%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1318 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (471 lines); review SRP
+    and refactoring pressure.
   families:
     canon_structure:
       title: Canon & Structure
       status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
     architecture_boundaries:
       title: Architecture & Boundaries
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     runtime_surface:
       title: Runtime & Application Surface
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     qa_behavior:
       title: QA & Behavioral Assurance
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     documentation_suite:
       title: Documentation & GitHub Suite
       status: warn
       score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      summary: 0 fail, 1 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - Public/protected docblock coverage is 280/483 (58%).
     delivery_observability:
       title: Delivery & Observability
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 9.75
+      summary: 0 fail, 0 warn, 1 info findings detected.
+      blockers: []
     solid_refactoring:
       title: SOLID & Refactoring Pressure
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      status: fail
+      score: 0.0
+      summary: 3 fail, 4 warn, 1 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - PHP file is very large (1318 lines); review SRP and refactoring pressure.
+      - PHP file is very large (471 lines); review SRP and refactoring pressure.
+      - Class exposes 13 public methods; review interface segregation and SRP.

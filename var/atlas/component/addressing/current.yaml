@@ -1,30 +1,61 @@
 component: addressing
 title: Addressing
 snapshot:
-  date: '2026-04-14'
-  label: pre-rc-seed
+  date: '2026-09-13'
+  label: assessment-2026-09-13
   ref: master
-  origin: quality-atlas seed
-report_status: draft
+  origin: quality-atlas dry-run assessment
+  assessment_basis:
+    repository: D:\PhpstormProjects\www\Addressing
+    assessed_branch: master
+    assessed_commit: 209d637e0b1f2280b2a9dcbe1b24464eca700fea
+    assessed_tag: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: null
+    previous_tag: null
+    current_head_commit: 209d637e0b1f2280b2a9dcbe1b24464eca700fea
+    current_head_tag: null
+    changed_files_sample:
+    - .gating/.canonization/Federation/MANIFEST.md
+    - .gating/.canonization/Governance/MANIFEST.md
+    - .gating/.canonization/Orchestration/MANIFEST.md
+    - .gating/.commanding/.gitattributes
+    - .gating/.commanding/.gitignore
+    - .gating/.commanding/README.md
+    - .gating/.commanding/commanding.cmd
+    - .gating/.commanding/log/dot-20260126-172346.log
+    - .gating/.commanding/log/dot-20260126-175238.log
+    - .gating/.commanding/log/dot-20260126-175710.log
+    - .gating/.commanding/log/dot-20260126-175808.log
+    - .gating/.commanding/log/dot-20260126-175902.log
+    - .gating/.commanding/log/dot-20260126-180605.log
+    - .gating/.commanding/log/dot-20260126-181506.log
+    - .gating/.commanding/log/dot-20260126-181728.log
+    - .gating/.commanding/log/dot-20260126-182329.log
+    - .gating/.commanding/log/dot-20260126-202940.log
+    - .gating/.commanding/log/dot-20260126-203347.log
+    - .gating/.commanding/log/dot-20260126-203643.log
+    - .gating/.commanding/log/dot-20260126-204751.log
+report_status: current
 groups:
   product_market:
-    score: 8.5
-    source_axis: overall
+    score: 8.0
   domain_architecture:
-    score: 8.5
-    source_axis: overall
+    score: 8.9
+  data_persistence:
+    score: 8.45
+  api_contracts:
+    score: 8.4
   runtime_performance:
-    score: 8.5
-    source_axis: overall
-  quality_testing:
-    score: 8.5
-    source_axis: overall
-  delivery_operations:
-    score: 8.5
-    source_axis: overall
+    score: 8.0
+  reliability_resilience:
+    score: 8.63
   security_governance:
-    score: 8.5
-    source_axis: overall
+    score: 8.8
+  delivery_operations:
+    score: 8.8
+  quality_testing:
+    score: 9.1
 profile_axes:
   engineering:
     product: 8.1
@@ -84,8 +115,8 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
   architecture:
     relevant: true
     maturity: strong
@@ -106,8 +137,8 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
   runtime:
     relevant: true
     maturity: solid
@@ -128,8 +159,8 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
   qa:
     relevant: true
     maturity: strong
@@ -150,8 +181,8 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
   ops:
     relevant: true
     maturity: strong
@@ -173,8 +204,8 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
   market:
     relevant: true
     maturity: solid
@@ -195,8 +226,8 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
   overall:
     relevant: true
     maturity: solid
@@ -218,89 +249,88 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
-      note: Current atlas dataset seed.
+    - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
+      note: Metric-level assessment evidence.
 development_driving:
-  overall_status: warn
-  average_score: 9.0
+  overall_status: fail
+  average_score: 7.04
   status_counts:
-    pass: 0
-    warn: 7
-    fail: 0
+    pass: 4
+    warn: 1
+    fail: 2
     not_applicable: 0
   top_blockers:
-  - Canon & Structure — Seed probe pending first deterministic repository assessment.
-  - Architecture & Boundaries — Seed probe pending first deterministic repository
-    assessment.
-  - Runtime & Application Surface — Seed probe pending first deterministic repository
-    assessment.
-  - QA & Behavioral Assurance — Seed probe pending first deterministic repository
-    assessment.
-  - Documentation & GitHub Suite — Seed probe pending first deterministic repository
-    assessment.
-  - Delivery & Observability — Seed probe pending first deterministic repository assessment.
-  - SOLID & Refactoring Pressure — Seed probe pending first deterministic repository
-    assessment.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 279/1085
+    (26%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1392 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (759 lines); review SRP
+    and refactoring pressure.
   families:
     canon_structure:
       title: Canon & Structure
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      status: fail
+      score: 0.5
+      summary: 3 fail, 2 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
     architecture_boundaries:
       title: Architecture & Boundaries
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     runtime_surface:
       title: Runtime & Application Surface
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     qa_behavior:
       title: QA & Behavioral Assurance
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     documentation_suite:
       title: Documentation & GitHub Suite
       status: warn
       score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      summary: 0 fail, 1 warn, 0 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - Public/protected docblock coverage is 279/1085 (26%).
     delivery_observability:
       title: Delivery & Observability
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
-      blockers:
-      - Seed probe pending first deterministic repository assessment.
+      status: pass
+      score: 9.75
+      summary: 0 fail, 0 warn, 1 info findings detected.
+      blockers: []
     solid_refactoring:
       title: SOLID & Refactoring Pressure
-      status: warn
-      score: 9.0
-      summary: Seed probe pending first deterministic repository assessment.
+      status: fail
+      score: 0.0
+      summary: 3 fail, 9 warn, 1 info findings detected.
       blockers:
-      - Seed probe pending first deterministic repository assessment.
+      - PHP file is very large (1392 lines); review SRP and refactoring pressure.
+      - PHP file is very large (759 lines); review SRP and refactoring pressure.
+      - Class exposes 98 public methods; review interface segregation and SRP.
 strengths:
-- 'Highest current axis: qa 9.1/10'
-- Component is already represented in the current pre-RC Atlas.
+- Canonical snapshot/history contracts are present.
+- This component is wired into the atlas assessment registry.
 risks:
-- Snapshot was seeded from the current atlas and does not yet contain repository-scan
-  deltas.
-- Structured metrics should be refreshed by the scheduled assessment workflow.
+- Dry-run mode does not perform a live AI verdict.
+- Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is
+  provided.
+- Deterministic probes currently report fail status.
 recommended_next_actions:
-- Run scheduled repository assessment and enrich narrative evidence.
-- Regenerate component report blocks from the current snapshot contract.
+- Enable responses mode with OPENAI_API_KEY for live verdict generation.
+- Expand repository registry coverage and local_path mappings for additional components.
 evidence:
 - path: .antora-src/modules/ROOT/pages/component/addressing/report/index.adoc
   note: Current component report page if present.
@@ -308,3 +338,11 @@ evidence:
   note: Seeded atlas dataset source.
 - path: .sync/quality-atlas/components/addressing/probes/current.yaml
   note: Deterministic development-driving probe layer.
+- path: var/atlas/component/addressing/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+assessment_notes:
+- Addressing remains on a seeded snapshot because the assessment runner is in dry-run
+  mode.
+- 'Prompt length: 58277 characters.'
+- Base overall score retained at 8.50.
+assessment_confidence: dry-run

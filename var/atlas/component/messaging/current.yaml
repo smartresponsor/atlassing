@@ -1,21 +1,41 @@
 component: messaging
 title: Messaging
 snapshot:
-  date: '2026-04-14'
-  label: assessment-2026-04-14
+  date: '2026-09-13'
+  label: assessment-2026-09-13
   ref: master
-  origin: quality-atlas responses assessment
+  origin: quality-atlas dry-run assessment
   assessment_basis:
-    repository: smartresponsor/messaging
+    repository: D:\PhpstormProjects\www\Messaging
     assessed_branch: master
-    assessed_commit: 12a67d6a40e39b3f526c33c048e19402e4bbbd78
+    assessed_commit: 274668a3f829ee8620641392ad7b43b88e1ed22c
     assessed_tag: null
-    trigger_reason: manual_override
-    previous_commit: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: 12a67d6a40e39b3f526c33c048e19402e4bbbd78
     previous_tag: null
-    current_head_commit: 12a67d6a40e39b3f526c33c048e19402e4bbbd78
+    current_head_commit: 274668a3f829ee8620641392ad7b43b88e1ed22c
     current_head_tag: null
-    changed_files_sample: []
+    changed_files_sample:
+    - .codex/prompts/layer3-structure-and-naming-contract.md
+    - .codex/prompts/security-runtime-classification-contract.md
+    - .cursor/rules/messaging-layer3-canon.mdc
+    - .cursor/rules/messaging-security-runtime-classification.mdc
+    - .env.example.append
+    - .gitignore
+    - .php-cs-fixer.php
+    - .phpunit.result.cache
+    - AGENTS.md
+    - CHANGELOG.md
+    - CONTRIBUTING.md
+    - README.md
+    - bin/console
+    - bin/preflight.php
+    - bin/report-message-cutover-risk.php
+    - bin/report-message-first-cut-set.php
+    - bin/ws-gateway.php
+    - composer.json
+    - composer.lock
+    - config/bundles.php
 report_status: current
 groups:
   product_market:
@@ -99,12 +119,6 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: README.md
-      note: Metric-level assessment evidence.
-    - path: api/openapi.yaml
-      note: Metric-level assessment evidence.
-    - path: ROADMAP.md
-      note: Metric-level assessment evidence.
     - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
   architecture:
@@ -130,15 +144,7 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: composer.json
-      note: Metric-level assessment evidence.
-    - path: config/services_eventbus.yaml
-      note: Metric-level assessment evidence.
-    - path: config/services_outbox.yaml
-      note: Metric-level assessment evidence.
-    - path: config/services_mercure.yaml
-      note: Metric-level assessment evidence.
-    - path: bin/report-message-controller-topology.php
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
   runtime:
     relevant: true
@@ -163,17 +169,7 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: bin/install-runtime.sh
-      note: Metric-level assessment evidence.
-    - path: bin/test-runtime.sh
-      note: Metric-level assessment evidence.
-    - path: composer.json
-      note: Metric-level assessment evidence.
-    - path: config/services_observability.yaml
-      note: Metric-level assessment evidence.
-    - path: config/services_delivery_qos.yaml
-      note: Metric-level assessment evidence.
-    - path: alerts/prometheus_rules.yaml
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
   qa:
     relevant: true
@@ -197,13 +193,7 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: phpunit.xml.dist
-      note: Metric-level assessment evidence.
-    - path: phpstan.neon
-      note: Metric-level assessment evidence.
-    - path: composer.json
-      note: Metric-level assessment evidence.
-    - path: package.json
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
   ops:
     relevant: true
@@ -228,17 +218,7 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: bin/boot-ledger.sh
-      note: Metric-level assessment evidence.
-    - path: SECURITY.md
-      note: Metric-level assessment evidence.
-    - path: .github/dependabot.yml
-      note: Metric-level assessment evidence.
-    - path: .github/workflows
-      note: Metric-level assessment evidence.
-    - path: config/services_audit_otel_v1.yaml
-      note: Metric-level assessment evidence.
-    - path: alerts/prometheus_rules.yaml
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
   market:
     relevant: true
@@ -263,12 +243,6 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: README.md
-      note: Metric-level assessment evidence.
-    - path: api/openapi.yaml
-      note: Metric-level assessment evidence.
-    - path: composer.json
-      note: Metric-level assessment evidence.
     - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
   overall:
@@ -293,37 +267,25 @@ metrics:
     - Current snapshot is lightweight and optimized for portfolio generation rather
       than exhaustive per-metric evidence.
     evidence:
-    - path: CHANGELOG.md
-      note: Metric-level assessment evidence.
-    - path: VERSION
-      note: Metric-level assessment evidence.
-    - path: composer.json
-      note: Metric-level assessment evidence.
     - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
       note: Metric-level assessment evidence.
 development_driving:
   overall_status: fail
-  average_score: 7.29
+  average_score: 8.14
   status_counts:
-    pass: 2
-    warn: 4
+    pass: 4
+    warn: 2
     fail: 1
     not_applicable: 0
   top_blockers:
   - Canon & Structure — PHP namespace does not use the default App\ root.
   - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
     dialect trees clearly separated.
-  - Architecture & Boundaries — Non-entity PHP file imports App\Entity directly; review
-    vertical leakage.
-  - Architecture & Boundaries — Non-entity PHP file imports App\Entity directly; review
-    vertical leakage.
-  - QA & Behavioral Assurance — No fixtures directories were detected.
-  - Documentation & GitHub Suite — Public/protected docblock coverage is 444/2805
-    (16%).
-  - SOLID & Refactoring Pressure — PHP file is very large (1827 lines); review SRP
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 671/3234
+    (21%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1853 lines); review SRP
     and refactoring pressure.
-  - SOLID & Refactoring Pressure — Constructor injects 7 parameters; review dependency
-    inversion and class responsibilities.
+  - SOLID & Refactoring Pressure — PHP file is large (440 lines); review SRP pressure.
   families:
     canon_structure:
       title: Canon & Structure
@@ -336,13 +298,10 @@ development_driving:
         clearly separated.
     architecture_boundaries:
       title: Architecture & Boundaries
-      status: warn
-      score: 5.0
-      summary: 0 fail, 5 warn, 0 info findings detected.
-      blockers:
-      - Non-entity PHP file imports App\Entity directly; review vertical leakage.
-      - Non-entity PHP file imports App\Entity directly; review vertical leakage.
-      - Non-entity PHP file imports App\Entity directly; review vertical leakage.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     runtime_surface:
       title: Runtime & Application Surface
       status: pass
@@ -351,18 +310,17 @@ development_driving:
       blockers: []
     qa_behavior:
       title: QA & Behavioral Assurance
-      status: warn
-      score: 9.0
-      summary: 0 fail, 1 warn, 0 info findings detected.
-      blockers:
-      - No fixtures directories were detected.
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
     documentation_suite:
       title: Documentation & GitHub Suite
       status: warn
       score: 9.0
       summary: 0 fail, 1 warn, 0 info findings detected.
       blockers:
-      - Public/protected docblock coverage is 444/2805 (16%).
+      - Public/protected docblock coverage is 671/3234 (21%).
     delivery_observability:
       title: Delivery & Observability
       status: pass
@@ -373,32 +331,22 @@ development_driving:
       title: SOLID & Refactoring Pressure
       status: fail
       score: 0.0
-      summary: 2 fail, 10 warn, 1 info findings detected.
+      summary: 2 fail, 11 warn, 1 info findings detected.
       blockers:
-      - PHP file is very large (1827 lines); review SRP and refactoring pressure.
-      - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
-      - Constructor injects 9 parameters; review dependency inversion and class responsibilities.
+      - PHP file is very large (1853 lines); review SRP and refactoring pressure.
+      - PHP file is large (440 lines); review SRP pressure.
+      - PHP file is large (415 lines); review SRP pressure.
 strengths:
-- Clear PHP 8.4 and Symfony 8 targeting with rich runtime stack (API Platform, GraphQL,
-  Mercure, Messenger, Redis, React Socket)
-- Operational discipline via boot-ledger and runtime scripts
-- Observability and alerting presence (OTel/tracing configs, Prometheus rules)
-- Quality toolchain present (PHPUnit, PHPStan, CS Fixer, Panther; Playwright harness)
-- API contract present (OpenAPI) and strong repo hygiene (CODEOWNERS, SECURITY, Dependabot,
-  workflows)
+- Canonical snapshot/history contracts are present.
+- This component is wired into the atlas assessment registry.
 risks:
-- No git tags detected; component remains pre-RC
-- Antora navigation/index not present, reducing discoverability of the report in docs
-  site
-- Local scan environment shows PHP 8.3 while composer targets ^8.4 (potential CI/runtime
-  mismatch)
-- Proprietary license may limit external ecosystem adoption
+- Dry-run mode does not perform a live AI verdict.
+- Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is
+  provided.
+- Deterministic probes currently report fail status.
 recommended_next_actions:
-- Create and push a pre-release tag and wire it into the existing release workflow
-- Pin CI runtime to PHP 8.4 to match composer constraints
-- Add Antora nav.adoc and index page to surface the report in the docs site
-- Integrate Playwright e2e into CI and publish artifacts
-- Publish boot-ledger summaries in CI artifacts for operational traceability
+- Enable responses mode with OPENAI_API_KEY for live verdict generation.
+- Expand repository registry coverage and local_path mappings for additional components.
 evidence:
 - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
   note: Current component report page if present.
@@ -444,10 +392,11 @@ evidence:
   note: Assessment evidence path.
 - path: package.json
   note: Assessment evidence path.
+- path: var/atlas/component/messaging/probes/current.yaml
+  note: Deterministic development-driving probe layer.
 assessment_notes:
-- Messaging presents a governed Symfony 8/PHP 8.4 messaging runtime with strong realtime,
-  observability, and operational posture; it remains pre-RC primarily due to missing
-  release tags and incomplete Antora navigation wiring.
-- Scores preserved from prior snapshot; refreshed with concrete repository evidence.
-- Owner-facing posture is strong; remaining work is packaging and documentation surfacing.
-assessment_confidence: medium
+- Messaging remains on a seeded snapshot because the assessment runner is in dry-run
+  mode.
+- 'Prompt length: 59964 characters.'
+- Base overall score retained at 8.60.
+assessment_confidence: dry-run
