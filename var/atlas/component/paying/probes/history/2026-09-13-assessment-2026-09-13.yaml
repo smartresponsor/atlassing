@@ -1,0 +1,267 @@
+component: paying
+title: Paying
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T16:26:47.232829+00:00'
+repo_target:
+  github_repository: smartresponsor/paying
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - compose.yml
+    - config/reference.php
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - tests/Unit/Architecture/ControllerJsonDecodeBoundaryTest.php
+    - tests/Unit/Architecture/ControllerServiceBoundaryTest.php
+    - tests/Unit/Architecture/ControllerValidationBoundaryTest.php
+    - tests/Unit/Architecture/ServiceLayerDependencyBoundaryTest.php
+    - tools/inspection/PayingApiBoundaryNameFormReport.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - compose.yml
+    - composer.json
+    - tools/deploy/docker-compose.yml
+    - vendor/cataloging/catalog/.commanding/docker/compose.yml
+    - vendor/cataloging/catalog/.commanding/docker/php/Dockerfile
+    - vendor/cataloging/catalog/docker/docker-compose.yml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - composer.json
+    - package-lock.json
+    - phpstan.neon
+    - tests/
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/Core/Fixer/Fixtures
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - Public/protected docblock coverage is 615/1061 (58%).
+    findings:
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 615/1061 (58%).
+    evidence:
+    - .github/workflows
+    - CHANGELOG.md
+    - README.md
+    - composer.json
+    - config/bundles.php
+    - config/reference.php
+    - php-docblock-ratio:615/1061
+  delivery_observability:
+    title: Delivery & Observability
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No GitHub workflow files were detected.
+    findings:
+    - severity: warn
+      id: workflows_missing
+      detail: No GitHub workflow files were detected.
+    evidence:
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - PATCH_MANIFEST.wave7.business-service-name-form.json
+    - compose.yml
+    - composer.json
+    - ops/release/checklist.md
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 1 fail, 11 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1612 lines); review SRP and refactoring pressure.
+    - Class exposes 15 public methods; review interface segregation and SRP.
+    - Class exposes 21 public methods; review interface segregation and SRP.
+    - Class exposes 22 public methods; review interface segregation and SRP.
+    - Class exposes 21 public methods; review interface segregation and SRP.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1612 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 15 public methods; review interface segregation and SRP.
+      path: tests/E2E/PaymentWebhookToOrderFlowTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 21 public methods; review interface segregation and SRP.
+      path: tests/Unit/PaymentConsoleFinalizeHandlerTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 22 public methods; review interface segregation and SRP.
+      path: tests/Unit/PaymentConsoleReadModelTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 21 public methods; review interface segregation and SRP.
+      path: tests/Unit/PaymentRefundServiceTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 25 public methods; review interface segregation and SRP.
+      path: tests/Unit/PaymentStartServiceTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 18 public methods; review interface segregation and SRP.
+      path: src/Entity/PaymentEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 15 public methods; review interface segregation and SRP.
+      path: src/Entity/PaymentGatewayEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 13 public methods; review interface segregation and SRP.
+      path: src/Entity/PaymentOutboxMessageEntity.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/PaymentApiSurfaceBuilder.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 9 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/PaymentConsoleSurfaceBuilder.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 12 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ValueObject/PaymentConsoleViewPayload.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: README.md
+    evidence:
+    - README.md
+    - config/reference.php
+    - src/Entity/PaymentEntity.php
+    - src/Entity/PaymentGatewayEntity.php
+    - src/Entity/PaymentOutboxMessageEntity.php
+    - src/Service/PaymentApiSurfaceBuilder.php
+    - src/Service/PaymentConsoleSurfaceBuilder.php
+    - src/ValueObject/PaymentConsoleViewPayload.php
+    - tests/E2E/PaymentWebhookToOrderFlowTest.php
+    - tests/Unit/PaymentConsoleFinalizeHandlerTest.php
+    - tests/Unit/PaymentConsoleReadModelTest.php
+    - tests/Unit/PaymentRefundServiceTest.php
+    - tests/Unit/PaymentStartServiceTest.php
+summary:
+  overall_status: fail
+  average_score: 8.0
+  status_counts:
+    pass: 3
+    warn: 3
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 615/1061
+    (58%).
+  - Delivery & Observability — No GitHub workflow files were detected.
+  - SOLID & Refactoring Pressure — PHP file is very large (1612 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Class exposes 15 public methods; review interface
+    segregation and SRP.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 615/1061 (58%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 1 fail, 11 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1612 lines); review SRP and refactoring pressure.
+      - Class exposes 15 public methods; review interface segregation and SRP.
+      - Class exposes 21 public methods; review interface segregation and SRP.

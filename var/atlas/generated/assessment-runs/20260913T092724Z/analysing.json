@@ -1,0 +1,187 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "analysing",
+    "component_title": "Analysing",
+    "github_repository": "smartresponsor/analysing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Analysing",
+    "timestamp_utc": "2026-09-13T09:38:26.732482+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "416c4f10e6d72afc35be936414e6fd2b5b840ef4"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '416c4f10e6d72afc35be936414e6fd2b5b840ef4'"
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .github/prompts/prompt-audit.yml\n M composer.json\n M config/component/services.yaml\n M config/services.php\n M config/services.yaml\n D src/.keep\n M src/Command/AlertsRunCommand.php\n M src/Command/AnalyticsExportCommand.php\n M src/Command/AnalyticsRefreshCommand.php\n M src/Command/AnalyticsRunExportJobCommand.php\n M src/Command/AnalyticsRunPendingExportJobsCommand.php\n M src/Command/AnalyticsStoragePrepareCommand.php\n M src/Controller/Analytics/AnalyticsController.php\n M src/Controller/Analytics/ExperimentController.php\n M src/Controller/Analytics/ExportJobController.php\n M src/Controller/Analytics/FlagController.php\n M src/Controller/Analytics/IngestController.php\n M src/Controller/Analytics/InsightController.php\n D src/Domain/Analytics/Analytics.php\n D src/Domain/Analytics/ClickhouseClient.php\n D src/Domain/Analytics/Experiment.php\n D src/Domain/Analytics/Flag.php\n D src/Domain/Analytics/Insight.php\n D src/DomainInterface/Analytics/AnalyticsInterface.php\n D src/DomainInterface/Analytics/ClickhouseClientInterface.php\n D src/DomainInterface/Analytics/ExperimentInterface.php\n D src/DomainInterface/Analytics/FlagInterface.php\n D src/DomainInterface/Analytics/InsightInterface.php\nRM src/DTO/Analytics/KpiRequest.php -> src/Dto/Analytics/KpiRequest.php\n D src/Entity/Alerts/AlertLog.php\n D src/Entity/Alerts/AlertRule.php\n D src/Entity/Analytics/ExportJob.php\n D src/Entity/Analytics/MetricSnapshot.php\n D src/Infrastructure/Doctrine/AnalyticsStorageManager.php\n D src/Infrastructure/Doctrine/AnalyticsStorageSchemaDefinition.php\n D src/Infrastructure/Doctrine/ConnectionFactory.php\n D src/Infrastructure/Doctrine/EntityManagerFactory.php\n D src/Repository/Analytics/InfraRepository.php\n D src/Repository/Analytics/SampleInfraRepository.php\n D src/RepositoryInterface/Analytics/InfraRepositoryInterface.php\n D src/RepositoryInterface/Analytics/SampleInfraRepositoryInterface.php\n M src/Service/Alerts/AlertEvaluator.php\n M src/Service/Alerts/NotificationDispatcher.php\n M src/Service/Analytics/AggregateService.php\n M src/Service/Analytics/AnalyticsCollector.php\n M src/Service/Analytics/DashboardRequestFactory.php\n M src/Service/Analytics/DashboardService.php\n M src/Service/Analytics/ExportJobLockManager.php\n M src/Service/Analytics/ExportJobMetricsService.php\n M src/Service/Analytics/ExportJobRunner.php\n M src/Service/Analytics/ExportJobView.php\n M src/Service/Analytics/ReportGeneratorService.php\n M src/Service/Analytics/ReportRowBuilder.php\n M src/Service/Analytics/SampleAnalyticsDataset.php\n M src/Service/Analytics/SampleDashboardService.php\n M src/Service/Http/JsonRequestBodyDecoder.php\n M src/ServiceInterface/Alerts/AlertEvaluatorInterface.php\n M src/ServiceInterface/Alerts/NotificationDispatcherInterface.php\n M src/ServiceInterface/Analytics/DashboardServiceInterface.php\n M src/ServiceInterface/Analytics/ReportGeneratorServiceInterface.php\n M src/ServiceInterface/Analytics/SampleAnalyticsDatasetInterface.php\n M src/ServiceInterface/Analytics/SampleDashboardServiceInterface.php\n M tests/AnalyticsSmokeTest.php\n M tests/Unit/Analytics/AlertEvaluatorTest.php\n M tests/Unit/Analytics/AlertLogEntityTest.php\n M tests/Unit/Analytics/AlertRuleEntityTest.php\n M tests/Unit/Analytics/AlertsRunCommandTest.php\n M tests/Unit/Analytics/AnalyticsCollectorTest.php\n M tests/Unit/Analytics/AnalyticsControllerTest.php\n D tests/Unit/Analytics/AnalyticsDomainTest.php\n M tests/Unit/Analytics/AnalyticsStorageSchemaDefinitionTest.php\n D tests/Unit/Analytics/AnomalySeriesQueryContractTest.php\n M tests/Unit/Analytics/ClickhouseClientTest.php\n D tests/Unit/Analytics/CohortQueryContractTest.php\n M tests/Unit/Analytics/DashboardServiceTest.php\n D tests/Unit/Analytics/DomainInterfaceContractTest.php\n M tests/Unit/Analytics/ExperimentControllerTest.php\n D tests/Unit/Analytics/ExperimentDomainTest.php\n M tests/Unit/Analytics/ExportJobEntityTest.php\n M tests/Unit/Analytics/ExportJobPayloadTest.php\n M tests/Unit/Analytics/ExportJobTest.php\n M tests/Unit/Analytics/FlagControllerTest.php\n D tests/Unit/Analytics/FlagDomainTest.php\n D tests/Unit/Analytics/FunnelQueryContractTest.php\n D tests/Unit/Analytics/InfraRepositoryTest.php\n M tests/Unit/Analytics/IngestControllerTest.php\n M tests/Unit/Analytics/InsightControllerTest.php\n D tests/Unit/Analytics/InsightDomainTest.php\n M tests/Unit/Analytics/KpiRequestExtendedTest.php\n M tests/Unit/Analytics/KpiRequestTest.php\n M tests/Unit/Analytics/MetricSnapshotEntityTest.php\n M tests/Unit/Analytics/MetricSnapshotTest.php\n D tests/Unit/Analytics/MetricTreeActivationQueryContractTest.php\n D tests/Unit/Analytics/MetricTreeNorthStarQueryContractTest.php\n D tests/Unit/Analytics/MetricTreeRevenueQueryContractTest.php\n M tests/Unit/Analytics/NotificationDispatcherTest.php\n D tests/Unit/Analytics/QueryResourceCatalogTest.php\n M tests/Unit/Analytics/ReportGeneratorServiceTest.php\n M tests/Unit/Analytics/ReportRowBuilderTest.php\n M tests/Unit/Analytics/RepositoryInterfaceContractTest.php\n D tests/Unit/Analytics/RetentionQueryContractTest.php\n M tests/Unit/Analytics/SampleDashboardServiceTest.php\n D tests/Unit/Analytics/SampleInfraRepositoryTest.php\n M tests/Unit/Analytics/ServiceAliasConfigTest.php\n D tests/Unit/Analytics/ServicesDomainAliasCoverageTest.php\n M tests/Unit/Controller/Analytics/ExportJobControllerTest.php\n M tools/qa/AnalyticsQaEnvironmentCheck.php\n?? .gating/\n?? AGENTS.md\n?? README.md\n?? config/component/config_tools.yaml\n?? config/component/runtime.yaml\n?? config/reference.php.bak-name-entity-20260611-071541\n?? docs/component/analysing-entity-first-migration-retirement.md\n?? docs/component/analysing-relationship-lifecycle-hardening-wave3.md\n?? src/ControllerInterface/Analytics/ExportJobControllerInterface.php\n?? src/DataFixtures/\n?? src/Dto/Config/\n?? src/Entity/Alerts/AnalyticsAlertLogEntity.php\n?? src/Entity/Alerts/AnalyticsAlertRuleEntity.php\n?? src/Entity/Analytics/AnalyticsDashboardMetricSnapshotEntity.php\n?? src/Entity/Analytics/AnalyticsExperimentMetricDailyEntity.php\n?? src/Entity/Analyt"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "416c4f1 Repair automate-kit-sync workflow for Analysing\n660a464 sync\n7805c7c sync\n3740f86 sync\n0317862 ets"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.idea/\n.idea/.gitignore\n.idea/Analytics.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\ncomposer.json\ncomposer.lock\nconfig/\nconfig/.editorconfig\nconfig/.gitattributes\nconfig/.gitignore\nconfig/.keep\nconfig/bootstrap.php\nconfig/component/\nconfig/cron/\nconfig/guard/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes.php\nconfig/routes.yaml\nconfig/services.php\nconfig/services.yaml\ndelivery/\ndelivery/rc/\ndocker/\ndocker/docker-compose.yml\ndocker/Dockerfile\ndocker/nginx.conf\ndocker-compose.yml\ndocs/\ndocs/analytics-core-doc-layer-map.md\ndocs/analytics-core-doc-namespace-target.md\ndocs/analytics-core-doc-rwe-sketch9.md\ndocs/analytics-core-doc-source-domain.md\ndocs/component/\ndocs/qa-environment.md\nMANIFEST.md\npatch.py\nphp-cs-fixer.dist.php\nphpmd.xml.dist\nphpstan.neon\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\npsalm.xml\npublic/\npublic/index.php\nqodana.yaml\nREADME.md\nRECONCILIATION_SUMMARY.txt\nrector.neon\nreport/\nreport/analytics-domain-hygiene.txt\nreport/analytics-duplicate-basename.csv\nreport/analytics-interfaceinterface-purge.txt\nreport/analytics-layer-map.json\nreport/analytics-namespace-guard.txt\nreport/analytics-php-header-guard.txt\nreport/analytics-scan-summary.json\nreport/analytics-wave-01-summary.md\nreport/namespace-guard.txt\nreport/sk10-set1-delete.txt\nreport/sk10-set2-delete.txt\nreport/sk10-set3-delete.txt\nreport/sk10-set4-delete.txt\nreport/sk10-set5-delete.txt\nreport/sk10-set6-delete.txt"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "720"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"analysing/analytics\",\n  \"description\": \"Analysing process package\",\n  \"type\": \"library\",\n  \"license\": \"proprietary\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko\",\n      \"email\": \"dev@highhopesamerica.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"*@dev\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"doctrine/orm\": \"^3.3\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"psr/log\": \"^3.0\",\n    \"ext-zlib\": \"*\",\n    \"objecting/object\": \"*@dev\"\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.20\",\n    \"symfony/var-dumper\": \"^8.1\",\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Analysing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Analysing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"scan\": \"php tools/analytics-scan-layer-map.php\",\n    \"lint:canon\": \"php tools/analytics-scan-layer-map.php\",\n    \"guard:interfaceinterface\": \"php tools/analytics-interfaceinterface-guard.php\",\n    \"guard:namespace\": \"php tools/analytics-namespace-guard.php --mode=report\",\n    \"qa:env\": \"php tools/qa/AnalyticsQaEnvironmentCheck.php\",\n    \"test\": [\n      \"@qa:env\",\n      \"phpunit\"\n    ],\n    \"analyse\": \"phpstan analyse src --level=max\",\n    \"fix\": \"php-cs-fixer fix --allow-risky=yes\",\n    \"clean:config-garbage\": \"php tools/analytics-config-garbage-clean.php\",\n    \"purge:interfaceinterface\": \"php tools/analytics-interfaceinterface-purge.php\",\n    \"guard:domain-hygiene\": \"php tools/analytics-domain-hygiene-guard.php\",\n    \"guard:php-header\": \"php tools/analytics-php-header-guard.php\"\n  },\n  \"config\": {\n    \"sort-packages\": true,\n    \"optimize-autoloader\": true,\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true\n      }\n    }\n  ]\n}\n\n"
+    }
+  },
+  "verdict": {
+    "component": "analysing",
+    "summary": "Analysing remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 56118 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity and market-facing shape are materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Symfony-oriented architecture shape is materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime and application surface are materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Testing and QA posture are materially present but remain pre-RC.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Operational, governance, and security posture are materially present but remain pre-RC.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing and portfolio-facing alignment is materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Overall release-candidate direction is visible, but the component remains in pre-RC life.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\analysing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\analysing\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\analysing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\analysing\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

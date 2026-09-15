@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-14T17:52:21.157708+00:00",
-  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20260914T175104Z",
+  "generated_at": "2026-09-15T09:28:18.691987+00:00",
+  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20260915T092711Z",
   "mode": "chatgpt-cli",
   "components": [
     {
-      "component": "documentating",
-      "title": "Documentating",
-      "overall": 8.4,
-      "history_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\documentating\\history\\2026-09-14-assessment-2026-09-14.yaml",
-      "summary": "Documentating is a mature documentation and publication repository with a clearly automated Antora build path, deterministic content verification, GitHub Pages deployment, and an integrated Quality Atlas workflow; its main readiness gaps are the very large dirty working tree, absence of tagged releases, and limited evidence for external market validation or deeper non-content runtime testing."
+      "component": "accessing",
+      "title": "Accessing",
+      "overall": 8.5,
+      "history_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\accessing\\history\\2026-09-15-assessment-2026-09-15.yaml",
+      "summary": "Accessing remains technically close to RC quality, with strong product definition, Symfony-oriented architecture, authentication capabilities, documentation, and QA tooling, but the assessed state is still an untagged refactor branch with a dirty working tree and a transitional gating migration."
     }
   ],
   "failures": [],
   "status": "ok",
   "selected_components": [
-    "documentating"
+    "accessing"
   ]
 }

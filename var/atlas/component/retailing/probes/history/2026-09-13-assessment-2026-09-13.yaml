@@ -1,0 +1,280 @@
+component: retailing
+title: Retailing
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-14T01:05:07.600423+00:00'
+repo_target:
+  github_repository: ''
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 0.0
+    summary: 8 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    findings:
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Entity/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Enum/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/EventSubscriber/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Form/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Provider/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Repository/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Service/Retail
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/ValueObject/Retail
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - CMCP_CHANGELOG.md
+    - config/reference.php
+    - src/Entity/Retail
+    - src/Enum/Retail
+    - src/EventSubscriber/Retail
+    - src/Form/Retail
+    - src/Provider/Retail
+    - src/Repository/Retail
+    - src/Service/Retail
+    - src/ValueObject/Retail
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No obvious boundary descriptor files were detected.
+    findings:
+    - severity: warn
+      id: boundary_descriptors_missing
+      detail: No obvious boundary descriptor files were detected.
+    evidence: []
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No Docker or compose files were detected.
+    findings:
+    - severity: warn
+      id: docker_surface_missing
+      detail: No Docker or compose files were detected.
+    evidence:
+    - src/Factory/RetailOrderIntentFactory.php
+    - tests/Unit/Enum/Retail/RetailingBehaviorTest.php
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No fixtures directories were detected.
+    findings:
+    - severity: warn
+      id: fixtures_missing
+      detail: No fixtures directories were detected.
+    evidence:
+    - CMCP_CHANGELOG.md
+    - composer.json
+    - package-lock.json
+    - tests/
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 6.75
+    summary: 0 fail, 3 warn, 1 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: README.md.'
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    - Public/protected docblock coverage is 30/180 (17%).
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: README.md.'
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 30/180 (17%).
+    - severity: info
+      id: nelmio_openapi_not_detected
+      detail: No obvious Nelmio/OpenAPI markers were detected.
+    evidence:
+    - .github/workflows
+    - php-docblock-ratio:30/180
+  delivery_observability:
+    title: Delivery & Observability
+    status: warn
+    score: 8.75
+    summary: 0 fail, 1 warn, 1 info findings detected.
+    blockers:
+    - No GitHub workflow files were detected.
+    findings:
+    - severity: warn
+      id: workflows_missing
+      detail: No GitHub workflow files were detected.
+    - severity: info
+      id: observability_markers_missing
+      detail: No Prometheus/Grafana markers were detected.
+    evidence:
+    - CMCP_CHANGELOG.md
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 3 fail, 3 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1376 lines); review SRP and refactoring pressure.
+    - PHP file is very large (494 lines); review SRP and refactoring pressure.
+    - Class exposes 37 public methods; review interface segregation and SRP.
+    - Class exposes 25 public methods; review interface segregation and SRP.
+    - PHP file is very large (910 lines); review SRP and refactoring pressure.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1376 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (494 lines); review SRP and refactoring pressure.
+      path: src/Entity/Retail/RetailEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 37 public methods; review interface segregation and SRP.
+      path: src/Entity/Retail/RetailEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 25 public methods; review interface segregation and SRP.
+      path: src/Entity/Retail/RetailResponseEntity.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (910 lines); review SRP and refactoring pressure.
+      path: tests/Unit/Enum/Retail/RetailingBehaviorTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 42 public methods; review interface segregation and SRP.
+      path: tests/Unit/Enum/Retail/RetailingBehaviorTest.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - config/reference.php
+    - src/Entity/Retail/RetailEntity.php
+    - src/Entity/Retail/RetailResponseEntity.php
+    - tests/Unit/Enum/Retail/RetailingBehaviorTest.php
+summary:
+  overall_status: fail
+  average_score: 6.07
+  status_counts:
+    pass: 0
+    warn: 5
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - QA & Behavioral Assurance — No fixtures directories were detected.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: README.md.'
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - Delivery & Observability — No GitHub workflow files were detected.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 0.0
+      summary: 8 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No obvious boundary descriptor files were detected.
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No fixtures directories were detected.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 6.75
+      summary: 0 fail, 3 warn, 1 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: README.md.'
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+      - Public/protected docblock coverage is 30/180 (17%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 3 fail, 3 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1376 lines); review SRP and refactoring pressure.
+      - PHP file is very large (494 lines); review SRP and refactoring pressure.
+      - Class exposes 37 public methods; review interface segregation and SRP.

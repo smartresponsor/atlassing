@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "retailing",
+  "verdict": {
+    "component": "retailing",
+    "summary": "Retailing has moved beyond bootstrap status into a credible RC-oriented Symfony 8.1 component with explicit ecosystem dependencies, database migrations, executable PHP quality gates, UI testing infrastructure, and recent canonical-topology hardening; remaining concerns are an unclean working tree, lack of an exact release tag, limited evidenced production-operability controls, and incomplete repository-level documentation evidence.",
+    "strengths": [
+      "Symfony 8.1 and PHP 8.4 baseline is explicit and current.",
+      "Recent commits show focused RC hardening, canonical topology work, Cruding contract alignment, and executable quality-gate work.",
+      "Repository includes PHPStan, PHPUnit, PHP-CS-Fixer, schema parity checks, centralized Gating integration, and Playwright UI tests.",
+      "Component dependencies are explicitly integrated with Smartresponsor ecosystem packages through dev-master path repositories.",
+      "Persistence evolution is represented by multiple Doctrine migrations and schema validation scripts."
+    ],
+    "risks": [
+      "Git working tree is not clean because CMCP_CHANGELOG.md is modified.",
+      "Current commit has no exact Git tag, reducing evidence of formal release packaging.",
+      "No concrete observability, alerting, deployment, rollback, or production runtime controls are evidenced by the supplied facts.",
+      "Repository-specific Antora navigation and index documentation are not evidenced.",
+      "Product-market validation is only weakly evidenced by repository metadata and cannot be strongly scored from code facts alone."
+    ],
+    "next_actions": [
+      "Restore a clean working tree before declaring the current commit an RC baseline.",
+      "Run and archive the full composer gate, PHPStan, PHPUnit, schema parity, and Playwright results against the exact RC commit.",
+      "Create a formal release tag only after all acceptance gates pass.",
+      "Add or expose concise component documentation covering responsibility boundary, integration contracts, runtime expectations, and release procedure.",
+      "Document production-operability expectations such as logging, monitoring, deployment, rollback, and failure handling where those responsibilities belong to Retailing."
+    ],
+    "notes": [
+      "Assessment is based only on the deterministic repository facts embedded in the authoritative prompt.",
+      "No repository mutations, staging, commits, or pushes were performed.",
+      "Runtime and operations scores are intentionally conservative because infrastructure presence is not equivalent to evidenced production behavior."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "package.json",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      "playwright.config.ts",
+      ".github/workflows",
+      ".gating",
+      "migrations",
+      "src",
+      "tests",
+      "CMCP_CHANGELOG.md"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.2,
+      "architecture": 8.8,
+      "runtime": 7.8,
+      "qa": 8.9,
+      "ops": 7.7,
+      "market": 7.6,
+      "overall": 8.3
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Retailing has a clear repository identity as a retail marketplace Symfony bundle with explicit framework and ecosystem dependencies, but repository-level product documentation evidence remains limited.",
+        "risks": [
+          "Component purpose is visible in composer metadata, but broader responsibility and user-facing behavior are not fully evidenced.",
+          "Repository-specific Antora index and navigation files are absent from the supplied facts."
+        ],
+        "improvements": [
+          "Document the component responsibility boundary and primary retail workflows.",
+          "Add concise canonical component documentation tied to acceptance and release expectations."
+        ],
+        "evidence": [
+          "composer.json",
+          "src/RetailingBundle.php",
+          "templates/retail"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture is strong for the evidenced scope, with a conventional Symfony-oriented source topology, explicit package boundaries, recent canonical-topology hardening, and aligned Smartresponsor component dependencies.",
+        "risks": [
+          "Heavy dev-master ecosystem coupling makes compatibility dependent on coordinated repository evolution.",
+          "The supplied facts do not demonstrate all runtime contracts between the numerous dependent components."
+        ],
+        "improvements": [
+          "Keep cross-component contracts executable and covered by acceptance tests.",
+          "Continue enforcing canonical Symfony topology and dependency-boundary checks through Gating."
+        ],
+        "evidence": [
+          "composer.json",
+          "src/DependencyInjection",
+          "src/Entity",
+          "src/Repository",
+          "src/Service",
+          ".gating"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime foundations are credible through Symfony 8.1, Doctrine ORM, migrations, fixtures, templates, and executable console integration, but production performance and resilience behavior are not directly evidenced.",
+        "risks": [
+          "No latency, throughput, caching, load, retry, timeout, or failure-mode measurements are present in the supplied facts.",
+          "Runtime readiness cannot be inferred solely from framework and migration structure."
+        ],
+        "improvements": [
+          "Capture representative runtime acceptance evidence for core retail workflows.",
+          "Add explicit resilience or performance checks where Retailing owns those concerns."
+        ],
+        "evidence": [
+          "composer.json",
+          "bin/console",
+          "config",
+          "migrations",
+          "src",
+          "templates/retail"
+        ]
+      },
+      "qa": {
+        "summary": "QA maturity is strong, with PHPStan, PHPUnit, PHP-CS-Fixer, schema parity scripts, centralized Gating, coverage support, and Playwright-based UI testing all evidenced in the repository.",
+        "risks": [
+          "The supplied facts prove tool presence but do not include current pass/fail outputs for every gate.",
+          "A modified working tree weakens reproducibility of any unstated acceptance result."
+        ],
+        "improvements": [
+          "Run the entire gate stack against the exact commit and retain deterministic pass evidence.",
+          "Keep unit, schema, static-analysis, style, and browser acceptance checks mandatory for RC promotion."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "package.json",
+          "playwright.config.ts",
+          "tests",
+          ".gating"
+        ]
+      },
+      "ops": {
+        "summary": "Delivery readiness is materially supported by GitHub workflows and centralized Gating, but production observability, deployment strategy, rollback, and operational monitoring are not evidenced by the supplied repository facts.",
+        "risks": [
+          "No exact Git tag exists for the assessed commit.",
+          "Working tree contains a modified CMCP_CHANGELOG.md.",
+          "No concrete logging, metrics, tracing, alerting, deployment, or rollback configuration is evidenced."
+        ],
+        "improvements": [
+          "Require a clean tree and complete gate evidence before release tagging.",
+          "Document or integrate the operational controls that apply to Retailing deployments.",
+          "Establish an immutable tagged RC baseline after acceptance."
+        ],
+        "evidence": [
+          ".github/workflows",
+          ".gating",
+          "composer.json",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "market": {
+        "summary": "The component is clearly positioned as a retail marketplace capability and is integrated with catalog, collection, CRUD, table, location, object, interface, and viewing components, but external market validation is not available in the supplied repository evidence.",
+        "risks": [
+          "No customer, adoption, revenue, conversion, or production-usage evidence is included.",
+          "Market fit cannot be reliably inferred from architecture alone."
+        ],
+        "improvements": [
+          "Link product-level usage or acceptance evidence into the Atlas workflow when available.",
+          "Keep market scoring distinct from engineering maturity unless real product evidence is supplied."
+        ],
+        "evidence": [
+          "composer.json",
+          "templates/retail",
+          "src"
+        ]
+      },
+      "overall": {
+        "summary": "Retailing is a solid RC candidate from an engineering perspective, especially in architecture and QA, but should not be treated as fully release-complete until the working tree is clean, all gates are evidenced on the exact commit, release tagging is formalized, and operational expectations are clearer.",
+        "risks": [
+          "Current state is not a pristine reproducible release baseline.",
+          "Operational maturity is less evidenced than code and QA maturity.",
+          "Product-market evidence is insufficient for a strong market-readiness conclusion."
+        ],
+        "improvements": [
+          "Produce a clean, fully gated, immutable RC commit.",
+          "Tag the accepted release baseline.",
+          "Strengthen component documentation and production-operability evidence."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "playwright.config.ts",
+          ".github/workflows",
+          ".gating",
+          "migrations",
+          "src",
+          "tests",
+          "CMCP_CHANGELOG.md"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "tool/runner-task-bank-loop.ps1",
+    "promptMode": "raw",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\retailing.prompt.txt",
+    "chatId": "6aa7484a-f858-83ea-bba3-ac52d4c01776",
+    "targetId": "A621AA0A5B2354E7913F7B7B50935C8A",
+    "acceptanceStatus": "M3_ACCEPTANCE_FAIL",
+    "acceptanceFailures": [
+      "target_repo_not_clean"
+    ],
+    "acceptanceArtifactPath": "D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\var\\runner\\task-bank\\acceptance\\repo-smoke-20260914010508-5644360889-20260914T010602Z.acceptance.json"
+  }
+}

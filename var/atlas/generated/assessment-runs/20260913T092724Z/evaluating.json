@@ -1,0 +1,184 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "evaluating",
+    "component_title": "Evaluating",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Evaluating",
+    "timestamp_utc": "2026-09-13T10:21:12.430858+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "854effd99540202ebc9856502c7977d8d31b8150"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? AGENTS.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "854effd first/init commit"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".ci/\n.ci/workflow/\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\nconfiguration/\nconfiguration/redact.yaml\nconfiguration/runtime.yaml\nevaluation/\nevaluation/baseline/\nevaluation/configuration/\nevaluation/evaluator/\nevaluation/provider/\nevaluation/report/\nevaluation/source/\nevaluation/standard/\nevaluation/suite/\nevaluator/\nevaluator/compare.py\nevaluator/evaluating.py\ngate/\ngate/README.md\ngate/run.ps1\ngate/run.sh\ngate.ps1\ngate.sh\nMANIFEST.json\nprovider/\nprovider/local-ollama-canon.yaml\nprovider/mock-canon.yaml\nprovider/openai-canon.yaml\nprovider/prompt-canon-system.md\nREADME.md\nreport/\nreport/last/\nrequirements.txt\nROADMAP.md\nrun.ps1\nrun.sh\nsource/\nsource/canon/\nsuite/\nsuite/canon/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "80"
+    }
+  },
+  "verdict": {
+    "component": "evaluating",
+    "summary": "Evaluating remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 45000 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/evaluating/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\evaluating\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\evaluating\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\evaluating\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\evaluating\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "observabiliting",
+    "component_title": "Observabiliting",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Observabiliting",
+    "timestamp_utc": "2026-09-13T16:12:51.102901+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 128,
+      "output": "HEAD\n\nfatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'"
+    },
+    "git_commit": {
+      "exit_code": 128,
+      "output": "HEAD\n\nfatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "A  .automation/docs/consumer-multipack.md\nA  .automation/docs/org-setup.md\nA  .automation/docs/patch-v0_6-note.txt\nA  .automation/packs.json\nA  .automation/tool/automater-pack-sync.ps1\nA  .github/workflows/automate-kit-sync.yml\nA  .github/workflows/automate-pack-sync.yml\nAM composer.json\nAM config/routes/observability_export.yaml\nAM config/routes/observability_fingerprint.yaml\nAM config/routes/observability_ingest.yaml\nAM config/routes/observability_office.yaml\nAM config/routes/observability_query.yaml\nAM config/routes_observability_api.yaml\nA  config/services_observability_http.yaml\nA  config/services_observability_misc.yaml\nA  config/services_observability_queue.yaml\nA  demo/debug-event-demo.ndjson\nA  demo/demo.ndjson\nA  docs/README.md\nA  docs/canary-guide.md\nA  docs/dev-guide.md\nA  docs/ops-guide.md\nA  docs/usage.md\nA  docs/user-guide.md\nA  index.html\nAD migrations/Version20251124ObservabilityDebugEvent.php\nAD migrations/ddl_postgres.sql\nA  openapi/observability-openapi.yaml\nA  ops/grafana/observability-dashboard.json\nA  package.json\nAM src/Domain/Observability/DebugEvent.php\nA  src/Domain/Observability/DebugEventType.php\nA  src/Domain/Observability/TraceId.php\nAM src/DomainInterface/Observability/DebugEventInterface.php\nA  src/DomainInterface/Observability/TraceIdInterface.php\nA  src/Http/Observability/DebugEventExportController.php\nA  src/Http/Observability/DebugEventIngestController.php\nA  src/Http/Observability/DebugEventRecentController.php\nA  src/Http/Observability/DebugEventTraceController.php\nA  src/Http/Observability/FingerprintTopController.php\nA  src/Http/Observability/ObservabilityApiController.php\nA  src/Http/Office/ObservabilityPanelController.php\nAM src/Infra/Observability/DebugEventReadRepository.php\nAM src/Infra/Observability/DebugEventRepository.php\nA  src/InfraInterface/Observability/DebugEventReadRepositoryInterface.php\nA  src/InfraInterface/Observability/DebugEventRepositoryInterface.php\nA  src/Service/Observability/Bridge/DebugEventSqlLogger.php\nA  src/Service/Observability/Bridge/HttpKernelBridgeSubscriber.php\nA  src/Service/Observability/Bridge/MessengerBridgeMiddleware.php\nA  src/Service/Observability/Bridge/MonologBridgeProcessor.php\nA  src/Service/Observability/Channel/Cache/CacheCollectorPool.php\nA  src/Service/Observability/Channel/Event/DomainEventEmitter.php\nA  src/Service/Observability/Channel/Exception/ExceptionCollectorSubscriber.php\nA  src/Service/Observability/Channel/Http/HttpCollectorMiddleware.php\nA  src/Service/Observability/Channel/Queue/QueueConsumeCollectorMiddleware.php\nA  src/Service/Observability/Channel/Queue/QueueDispatchCollectorMiddleware.php\nAM src/Service/Observability/Channel/Sql/SqlCollectorMiddleware.php\nA  src/Service/Observability/DebugEventIngestService.php\nA  src/Service/Observability/DebugEventQueryService.php\nA  src/Service/Observability/DependencyInjection/Compiler/DomainRegistryCompilerPass.php\nA  src/Service/Observability/DependencyInjection/ObservabilityExtension.php\nAM src/Service/Observability/DomainRegistry.php\nA  src/Service/Observability/Emitter/EmitterService.php\nA  src/Service/Observability/Emitter/SamplePolicy.php\nA  src/Service/Observability/EmitterBatchBuffer.php\nA  src/Service/Observability/EmitterClient.php\nA  src/Service/Observability/EmitterMasker.php\nA  src/Service/Observability/EmitterRetrier.php\nAM src/Service/Observability/FingerprintService.php\nA  src/Service/Observability/IngestMasker.php\nA  src/Service/Observability/IngestService.php\nA  src/Service/Observability/JsonDebugEventSerializer.php\nA  src/Service/Observability/Ops/MetricCollector.php\nA  src/Service/Observability/Policy/RedactionPolicy.php\nA  src/Service/Observability/Policy/RetentionPolicy.php\nA  src/Service/Observability/Policy/TenantTagPolicy.php\nA  src/Service/Observability/Profile/DefaultEmitterProfile.php\nA  src/Service/Observability/Profile/DefaultIngestProfile.php\nA  src/Service/Observability/PruneService.php\nA  src/Service/Observability/Replay/ReplayService.php\nAM src/Service/Observability/Store/InMemoryStore.php\nAM src/Service/Observability/Store/InMemoryStoreWriter.php\nA  src/Service/Observability/TenantContextProvider.php\nAM src/Service/Observability/Transport/StdoutEmitterTransport.php\nA  src/Service/Observability/Worker/PruneWorker.php\nA  src/Service/Office/Security/ObservabilityVoter.php\nA  src/ServiceInterface/Observability/DebugEventIngestServiceInterface.php\nA  src/ServiceInterface/Observability/DebugEventQueryServiceInterface.php\nA  src/ServiceInterface/Observability/DebugEventSerializerInterface.php\nA  src/ServiceInterface/Observability/DomainMetadataProviderInterface.php\nA  src/ServiceInterface/Observability/DomainRegistryInterface.php\nA  src/ServiceInterface/Observability/Emitter/EmitterServiceInterface.php\nAM src/ServiceInterface/Observability/EmitterClientInterface.php\nA  src/ServiceInterface/Observability/EmitterProfileInterface.php\nAM src/ServiceInterface/Observability/EmitterTransportInterface.php\nA  src/ServiceInterface/Observability/FingerprintServiceInterface.php\nA  src/ServiceInterface/Observability/IngestProfileInterface.php\nA  src/ServiceInterface/Observability/PruneServiceInterface.php\nA  src/ServiceInterface/Observability/StoreInterface.php\nAM src/ServiceInterface/Observability/StoreWriterInterface.php\nA  src/ServiceInterface/Observability/TenantContextProviderInterface.php\nA  src/component/observability/ObservabilityPanel.tsx\nA  src/component/observability/README.md\nA  src/index.css\nA  src/index.tsx\nAM tools/demo/generate-demo-ndjson.php\nA  tools/docker-compose.yaml\nA  tools/replay/replay-to-stdout.php\nA  tools/smoke/demo-smoke.php\nA  tools/smoke/domain-registry-smoke.php\nA  tools/smoke/emitter-smoke.php\nA  tools/smoke/ingest-smoke.php\nA  tools/smoke/observability-ingest-smoke.php\nA  tools/smoke/observability-smoke.sh\nA  tools/smoke/ops-smoke.php\nA  tsconfig.json\nA  vite.config.ts\n?? .codebase-memory/\n?? .gating/\n?? .github/workflows/security.yml\n?? AGENTS.md\n?? README.md\n?? config/component/\n?? config/serv"
+    },
+    "git_recent_commits": {
+      "exit_code": 128,
+      "output": "fatal: your current branch 'master' does not have any commits yet"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/docs/\n.automation/packs.json\n.automation/tool/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\nAGENTS.md\ncomposer.json\nconfig/\nconfig/component/\nconfig/routes/\nconfig/routes_observability_api.yaml\nconfig/services.yaml\nconfig/services_observability_http.yaml\nconfig/services_observability_misc.yaml\nconfig/services_observability_queue.yaml\ndemo/\ndemo/debug-event-demo.ndjson\ndemo/demo.ndjson\ndocs/\ndocs/canary-guide.md\ndocs/component/\ndocs/dev-guide.md\ndocs/ops-guide.md\ndocs/README.md\ndocs/usage.md\ndocs/user-guide.md\nindex.html\nopenapi/\nopenapi/observability-openapi.yaml\nops/\nops/grafana/\npackage.json\nREADME.md\nsrc/\nsrc/component/\nsrc/Domain/\nsrc/DomainInterface/\nsrc/Entity/\nsrc/EntityInterface/\nsrc/Form/\nsrc/Http/\nsrc/index.css\nsrc/index.tsx\nsrc/Infra/\nsrc/InfraInterface/\nsrc/Lifecycle/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Value/\ntools/\ntools/demo/\ntools/docker-compose.yaml\ntools/replay/\ntools/smoke/\ntsconfig.json\nvite.config.ts"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "480"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"observabiliting/observability\",\n  \"type\": \"library\",\n  \"require\": {\n    \"php\": \">=8.2\",\n    \"symfony/http-kernel\": \"^7.0 || ^8.0\",\n    \"symfony/http-foundation\": \"^7.0 || ^8.0\",\n    \"symfony/routing\": \"^7.0 || ^8.0\",\n    \"symfony/security-core\": \"^7.0 || ^8.0\",\n    \"symfony/serializer\": \"^7.0 || ^8.0\",\n    \"symfony/messenger\": \"^7.0 || ^8.0\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"objecting/object\": \"*@dev\",\n    \"doctrine/orm\": \"^3.0\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"SmartResponsor\\\\Observability\\\\\": \"src/\"\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true\n      }\n    }\n  ]\n}\n",
+      "package.json": "{\n  \"name\": \"smartresponsor-observability-ui-sketch-11\",\n  \"version\": \"0.0.1-sketch.11\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/react\": \"^18.3.3\",\n    \"@types/react-dom\": \"^18.3.0\",\n    \"typescript\": \"^5.6.3\",\n    \"vite\": \"^5.4.8\",\n    \"@vitejs/plugin-react\": \"^4.3.1\"\n  }\n}"
+    }
+  },
+  "verdict": {
+    "component": "observabiliting",
+    "summary": "Observabiliting remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 53990 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\observabiliting\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\observabiliting\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\observabiliting\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\observabiliting\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

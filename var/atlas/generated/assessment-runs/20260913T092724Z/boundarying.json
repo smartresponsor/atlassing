@@ -1,0 +1,184 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "boundarying",
+    "component_title": "Boundarying",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Boundarying",
+    "timestamp_utc": "2026-09-13T09:58:34.682633+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "03d6277e9e75069673ec39534940ffb6c65dfc77"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? AGENTS.md\n?? README.md\n?? boundary-common.md\n?? boundary-common.yaml\n?? boundary-domain-index.md\n?? boundary-domain-index.yaml\n?? boundary-evidence-map.yaml\n?? boundary-examples.md\n?? boundary-global.md\n?? boundary-global.yaml\n?? canonization/\n?? consumer/\n?? docs/\n?? report/\n?? schema/\n?? tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "03d6277 init"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gitattributes\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\nboundary-common.md\nboundary-common.yaml\nboundary-domain-index.md\nboundary-domain-index.yaml\nboundary-evidence-map.yaml\nboundary-examples.md\nboundary-global.md\nboundary-global.yaml\ncanonization/\ncanonization/analytics/\ncanonization/anchoring/\ncanonization/billing/\ncanonization/category/\ncanonization/command/\ncanonization/commerce/\ncanonization/common/\ncanonization/complying/\ncanonization/consuming/\ncanonization/containerizing/\ncanonization/evaluating/\ncanonization/financing/\ncanonization/gating/\ncanonization/indexing/\ncanonization/interfacing/\ncanonization/locating/\ncanonization/message/\ncanonization/mobile-edge/\ncanonization/objecting/\ncanonization/observabiliting/\ncanonization/operation/\ncanonization/order/\ncanonization/paying/\ncanonization/product/\ncanonization/project/\ncanonization/role/\ncanonization/rolling/\ncanonization/runtiming/\ncanonization/shipping/\ncanonization/tag/\ncanonization/tagging/\ncanonization/taxation/\ncanonization/vendor/\nconsumer/\nconsumer/analytics/\nconsumer/anchoring/\nconsumer/billing/\nconsumer/category/\nconsumer/command/\nconsumer/commerce/\nconsumer/complying/\nconsumer/consuming/\nconsumer/containerizing/\nconsumer/evaluating/\nconsumer/financing/\nconsumer/gating/\nconsumer/indexing/\nconsumer/interfacing/\nconsumer/locating/\nconsumer/message/\nconsumer/mobile-edge/\nconsumer/objecting/\nconsumer/observabiliting/\nconsumer/operation/\nconsumer/order/\nconsumer/paying/\nconsumer/product/\nconsumer/project/\nconsumer/rolling/\nconsumer/runtiming/\nconsumer/shipping/\nconsumer/tagging/\nconsumer/taxation/\nconsumer/vendor/\ndocs/\ndocs/milestone/\nREADME.md\nreport/\nreport/evidence/\nschema/\nschema/boundary-v1.schema.json\nschema/evidence-map-v1.schema.json\ntool/\ntool/validate-boundary.ps1\ntool/validate-boundary.sh"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "153"
+    }
+  },
+  "verdict": {
+    "component": "boundarying",
+    "summary": "Boundarying remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 46451 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "ordering",
+    "component_title": "Ordering",
+    "github_repository": "smartresponsor/ordering",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Ordering",
+    "timestamp_utc": "2026-09-13T16:12:54.420162+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "feature/ordering-rc-journal-final-20260911"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "fe0e5eca3db04c662182e716e12771367af4f955"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "fe0e5ec Document Ordering RC integration closure\nd31e92d Harden Ordering RC dependency and identity contracts (#4)\n7c25745 Merge pull request #3 from smartresponsor/feature/facting-order-completed-publish-20260824\nb15fec3 Timestamp durable refund completion\ne051aff Route refund completion through outbox"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.codex-tmp/\n.codex-tmp/lexik-removal-20260614-123432/\n.dockerignore\n.editorconfig\n.env\n.env.cicd.example\n.env.example\n.env.example.append\n.env.local.example\n.env.prod.example\n.env.test\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.gitleaksignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/modules.xml\n.idea/Ordering.iml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.meta/\n.meta/gitleaks-report.json\n.meta/ordering-canon-audit.json\n.meta/ordering-canon-classform-plan-wave2.csv\n.meta/ordering-canon-classform-plan-wave2.json\n.meta/ordering-canon-wave10-summary.json\n.meta/ordering-canon-wave11-summary.json\n.meta/ordering-canon-wave12-summary.json\n.meta/ordering-canon-wave13-summary.json\n.meta/ordering-canon-wave14-summary.json\n.meta/ordering-canon-wave15-summary.json\n.meta/ordering-canon-wave16-summary.json\n.meta/ordering-canon-wave17-summary.json\n.meta/ordering-canon-wave18-summary.json\n.meta/ordering-canon-wave2-summary.json\n.meta/ordering-canon-wave20-summary.json\n.meta/ordering-canon-wave21-summary.json\n.meta/ordering-canon-wave22-summary.json\n.meta/ordering-canon-wave23-summary.json\n.meta/ordering-canon-wave24-summary.json\n.meta/ordering-canon-wave3-summary.json\n.meta/ordering-canon-wave4-summary.json\n.meta/ordering-canon-wave5-summary.json\n.meta/ordering-canon-wave6-summary.json\n.meta/ordering-canon-wave7-summary.json\n.meta/ordering-canon-wave8-summary.json\n.meta/ordering-canon-wave9-summary.json\n.meta/phpstan-2-report.json\n.npmrc\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\n.phpunit.result.cache\napi/\napi/openapi/\nbin/\nbin/aa3-smoke.php\nbin/acl-smoke.php\nbin/auth-negative.php\nbin/bench.php\nbin/budget-reset.php\nbin/canary-off.php\nbin/canary-set.php\nbin/console\nbin/demo-metrics.php\nbin/dlq-console.php\nbin/fault-clock-skew.sh\nbin/fault-kill-db.sh\nbin/fault-kill-worker.sh\nbin/fault-netem-undo.sh\nbin/fault-netem.sh\nbin/fault-rotate-jwks.sh\nbin/fault-toxiproxy.sh\nbin/idempotency-demo.php\nbin/import.php\nbin/jwk-generate.php\nbin/jwks-refresh.php"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1511"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"ordering/order\",\n    \"description\": \"Symfony ordering component for order lifecycle, pricing, fulfillment, refunds, and operational processing.\",\n    \"type\": \"project\",\n    \"license\": \"proprietary\",\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Ordering\\\\\": \"src/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"App\\\\Ordering\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-bcmath\": \"*\",\n        \"ext-curl\": \"*\",\n        \"ext-json\": \"*\",\n        \"ext-openssl\": \"*\",\n        \"ext-sodium\": \"*\",\n        \"ext-zlib\": \"*\",\n        \"administering/administration\": \"*@dev\",\n        \"api-platform/core\": \"^4.0\",\n        \"cruding/crud\": \"*@dev\",\n        \"doctrine/collections\": \"^2.5\",\n        \"doctrine/doctrine-bundle\": \"^3.2\",\n        \"doctrine/orm\": \"^3.3\",\n        \"interfacing/interface\": \"*@dev\",\n        \"objecting/object\": \"*@dev\",\n        \"viewing/view\": \"*@dev\",\n        \"psr/simple-cache\": \"3.0\",\n        \"sentry/sentry-symfony\": \"^5.7\",\n        \"symfony/asset\": \"^8.1\",\n        \"symfony/cache\": \"^8.1\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/dotenv\": \"^8.1\",\n        \"symfony/form\": \"^8.1\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/intl\": \"^8.1\",\n        \"symfony/messenger\": \"^8.1\",\n        \"symfony/monolog-bundle\": \"^4.0\",\n        \"symfony/rate-limiter\": \"^8.1\",\n        \"symfony/runtime\": \"^8.1\",\n        \"symfony/security-bundle\": \"^8.1\",\n        \"symfony/serializer\": \"^8.1\",\n        \"symfony/twig-bundle\": \"^8.1\",\n        \"symfony/uid\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/workflow\": \"^8.1\",\n        \"symfony/yaml\": \"^8.1\"\n    },\n    \"require-dev\": {\n        \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n        \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n        \"fakerphp/faker\": \"^1.24\",\n        \"friendsofphp/php-cs-fixer\": \"^3.94\",\n        \"phpstan/phpstan\": \"^2.1\",\n        \"phpunit/phpunit\": \"^10.5\",\n        \"symfony/browser-kit\": \"^8.1\",\n        \"symfony/css-selector\": \"^8.1\",\n        \"symfony/panther\": \"^2.4\"\n    },\n    \"scripts\": {\n        \"test\": \"phpunit --configuration phpunit.xml.dist --testsuite OrderFast\",\n        \"test:object-identity\": \"phpunit --configuration phpunit.xml.dist tests/Unit/Order/OrderingObjectIdentityContractTest.php\",\n        \"test:full\": \"phpunit --configuration phpunit.xml.dist --testsuite OrderFullStack\",\n        \"test:panther\": \"php vendor/bin/phpunit --configuration phpunit.xml.dist tests/Panther\",\n        \"lint:container\": \"php bin/console lint:container\",\n        \"lint:yaml\": \"php bin/console lint:yaml config\",\n        \"lint:twig\": \"php bin/console lint:twig templates\",\n        \"db:schema:validate\": \"php bin/console doctrine:schema:validate --skip-sync -vvv\",\n        \"owner:canon:scan\": \"php bin/owner-canon-scan.php\",\n        \"owner:canon:report\": \"php bin/owner-canon-scan.php --write=.meta/owner-canon-scan.json\",\n        \"owner:canon:enforce\": \"php bin/owner-canon-scan.php --fail-on-violations\",\n        \"lint:php\": \"@php bin/php-lint.php\",\n        \"lint:canon\": \"@owner:canon:enforce\",\n        \"fix:cs\": \"php vendor/bin/php-cs-fixer fix\",\n        \"check:cs\": \"php vendor/bin/php-cs-fixer fix --dry-run --diff\",\n        \"analyse\": \"php vendor/bin/phpstan analyse\",\n        \"analyse:baseline\": \"php vendor/bin/phpstan analyse --generate-baseline=phpstan-baseline.neon\",\n        \"pipeline:local:full\": \"php bin/qa-local.php\"\n    },\n    \"config\": {\n        \"allow-plugins\": {\n            \"symfony/runtime\": true\n        },\n        \"sort-packages\": true\n    },\n    \"minimum-stability\": \"stable\",\n    \"prefer-stable\": true,\n    \"repositories\": [\n        {\n            \"type\": \"path\",\n            \"url\": \"../Administering\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Cruding\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            ",
+      "package.json": "{\n    \"name\": \"@ordering/browser-tests\",\n    \"private\": true,\n    \"version\": \"0.2.0-t\",\n    \"type\": \"module\",\n    \"scripts\": {\n        \"dev\": \"vite\",\n        \"build\": \"vite build\",\n        \"preview\": \"vite preview\",\n        \"playwright:test\": \"playwright test\",\n        \"playwright:test:headed\": \"playwright test --headed\"\n    },\n    \"dependencies\": {\n        \"react\": \"^18.2.0\",\n        \"react-dom\": \"^18.2.0\"\n    },\n    \"devDependencies\": {\n        \"@playwright/test\": \"^1.53.0\",\n        \"typescript\": \"^5.0.0\",\n        \"vite\": \"^5.0.0\",\n        \"@types/react\": \"^18.2.0\",\n        \"@types/react-dom\": \"^18.2.0\"\n    }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "ordering",
+    "summary": "Ordering remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 53099 characters.",
+      "Base overall score retained at 8.70."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.7
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity and market-facing shape are materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Symfony-oriented architecture shape is materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime and application surface are materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Testing and QA posture are materially present but remain pre-RC.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Operational, governance, and security posture are materially present but remain pre-RC.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing and portfolio-facing alignment is materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Overall release-candidate direction is visible, but the component remains in pre-RC life.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/ordering/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\ordering\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\ordering\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\ordering\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\ordering\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

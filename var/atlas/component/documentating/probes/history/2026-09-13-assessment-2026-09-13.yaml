@@ -1,0 +1,230 @@
+component: documentating
+title: Documentating
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T10:21:12.103992+00:00'
+repo_target:
+  github_repository: local/documentating
+  local_path: .
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence: []
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: warn
+    score: 7.0
+    summary: 0 fail, 3 warn, 0 info findings detected.
+    blockers:
+    - No obvious boundary descriptor files were detected.
+    - 'Missing expected repository segment: src/.'
+    - 'Missing expected repository segment: tests/.'
+    findings:
+    - severity: warn
+      id: boundary_descriptors_missing
+      detail: No obvious boundary descriptor files were detected.
+    - severity: warn
+      id: missing_vertical_segment
+      detail: 'Missing expected repository segment: src/.'
+    - severity: warn
+      id: missing_vertical_segment
+      detail: 'Missing expected repository segment: tests/.'
+    evidence: []
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No Docker or compose files were detected.
+    findings:
+    - severity: warn
+      id: docker_surface_missing
+      detail: No Docker or compose files were detected.
+    evidence:
+    - .deploy/MANIFEST.md
+    - .site_build/sitemap.xml
+    - VENDORED_UI_SWITCH.md
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: fail
+    score: 7.5
+    summary: 1 fail, 0 warn, 0 info findings detected.
+    blockers:
+    - tests/ directory is missing.
+    findings:
+    - severity: fail
+      id: tests_missing
+      detail: tests/ directory is missing.
+    evidence:
+    - docs/article/2026-03-29--2026-03-29-do-not-scale-the-imitation-of-a-human.md
+    - node_modules/pino-abstract-transport/test/fixtures
+    - node_modules/pino/test/fixtures
+    - node_modules/sonic-boom/fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 8.75
+    summary: 0 fail, 1 warn, 1 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    - severity: info
+      id: nelmio_openapi_not_detected
+      detail: No obvious Nelmio/OpenAPI markers were detected.
+    evidence:
+    - .github/workflows
+    - README.md
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .deploy/MANIFEST.md
+    - .deploy/docker/MANIFEST.md
+    - .github/workflows/gh-pages.yml
+    - .github/workflows/preview-local-vendored-ui-site-with-article-images.yml
+    - .github/workflows/preview-local-vendored-ui-site.yml
+    - .github/workflows/preview-qa-rc.yml
+    - .github/workflows/prove-local-vendored-ui.yml
+    - .github/workflows/public-surface-verify-local-ui.yml
+    - .github/workflows/public-surface-verify.yml
+    - .github/workflows/quality-atlas-assessment.yml
+    - .github/workflows/refresh-local-ui-bundle.yml
+    - .ide/sr_default_inspector.xml
+    - AGENTS.md
+    - MANIFEST.md
+    - package-lock.json
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: pass
+    score: 8.0
+    summary: 0 fail, 0 warn, 8 info findings detected.
+    blockers: []
+    findings:
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: package-lock.json
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: docs/article/ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: docs/article/from-ai-coding-to-semi-automated-science.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: docs/article/vibe-coding-is-not-the-problem.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: docs/article/zz-ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: doc/article/ollama-0-19-mlx-and-apple-silicon-why-local-ai-on-mac-got-serious.adoc
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: .github/workflows/gh-pages.yml
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: .github/workflows/refresh-local-ui-bundle.yml
+    evidence:
+    - .github/workflows/gh-pages.yml
+    - .github/workflows/refresh-local-ui-bundle.yml
+    - doc/article/ollama-0-19-mlx-and-apple-silicon-why-local-ai-on-mac-got-serious.adoc
+    - docs/article/ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - docs/article/from-ai-coding-to-semi-automated-science.adoc
+    - docs/article/vibe-coding-is-not-the-problem.adoc
+    - docs/article/zz-ai-first-software-delivery-and-the-new-geometry-of-control.adoc
+    - package-lock.json
+summary:
+  overall_status: fail
+  average_score: 8.61
+  status_counts:
+    pass: 3
+    warn: 3
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - 'Architecture & Boundaries — Missing expected repository segment: src/.'
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - QA & Behavioral Assurance — tests/ directory is missing.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: warn
+      score: 7.0
+      summary: 0 fail, 3 warn, 0 info findings detected.
+      blockers:
+      - No obvious boundary descriptor files were detected.
+      - 'Missing expected repository segment: src/.'
+      - 'Missing expected repository segment: tests/.'
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: fail
+      score: 7.5
+      summary: 1 fail, 0 warn, 0 info findings detected.
+      blockers:
+      - tests/ directory is missing.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: pass
+      score: 8.0
+      summary: 0 fail, 0 warn, 8 info findings detected.
+      blockers: []

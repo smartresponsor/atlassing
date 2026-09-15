@@ -1,0 +1,32 @@
+﻿{
+    "workspace_path":  "D:\\PhpstormProjects\\www\\Atlassing",
+    "git_top_level":  "D:/PhpstormProjects/www/Atlassing",
+    "branch":  "master",
+    "status_line_count":  9,
+    "status_lines":  [
+                         "M docs/operations/local-scheduled-assessment.adoc",
+                         " M tool/atlas-local-scheduled.ps1",
+                         " M tools/atlas/python-engine/run_quality_atlas_assessment.py",
+                         " M var/atlas/generated/latest-assessment-summary.json",
+                         " M var/atlas/generated/selection-plan.json",
+                         "?? .gating/",
+                         "?? tool/atlas-console-mcp-score-preflight.ps1",
+                         "?? tool/atlas-console-mcp-score.mjs",
+                         "?? tool/atlas-console-mcp-score.ps1"
+                     ],
+    "status_lines_truncated":  false,
+    "ok":  true,
+    "tool":  "console.read_.repo.workspace.status",
+    "status":  "CONSOLE_MCP_TOOL_COMPLETED",
+    "bridge":  {
+                   "ok":  true,
+                   "status":  "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+                   "endpoint":  "http://127.0.0.1:3334/mcp",
+                   "requestTimeoutMs":  120000
+               },
+    "envBootstrap":  {
+                         "endpoint":  "http://127.0.0.1:3334/mcp",
+                         "tokenPresent":  true,
+                         "tokenSource":  "aws-secret-runtime"
+                     }
+}

@@ -1,0 +1,316 @@
+component: ordering
+title: Ordering
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T16:17:13.265443+00:00'
+repo_target:
+  github_repository: smartresponsor/ordering
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 0.0
+    summary: 8 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    findings:
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Entity/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/EntityInterface/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Migrations/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Repository/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/RepositoryInterface/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Service/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/ServiceInterface/Order
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Validator/Order
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: DisputeWorkflowTest.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - .gating/AGENTS.md
+    - DisputeWorkflowTest.php
+    - config/reference.php
+    - src/Entity/Order
+    - src/EntityInterface/Order
+    - src/Migrations/Order
+    - src/Repository/Order
+    - src/RepositoryInterface/Order
+    - src/Service/Order
+    - src/ServiceInterface/Order
+    - src/Validator/Order
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No obvious boundary descriptor files were detected.
+    findings:
+    - severity: warn
+      id: boundary_descriptors_missing
+      detail: No obvious boundary descriptor files were detected.
+    evidence: []
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .meta/ordering-canon-wave7-summary.json
+    - CHANGELOG.md
+    - config/services.yaml
+    - deploy/chaos/toxiproxy/docker-compose.yaml
+    - deploy/docker/docker-compose.yml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - CHANGELOG.md
+    - composer.json
+    - package.json
+    - tests/
+    - tests/Fixtures
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - Public/protected docblock coverage is 305/1996 (15%).
+    findings:
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 305/1996 (15%).
+    evidence:
+    - .github/workflows
+    - .meta/ordering-canon-classform-plan-wave2.json
+    - CHANGELOG.md
+    - README.md
+    - README_EXTRAS.md
+    - UPGRADE.md
+    - php-docblock-ratio:305/1996
+    - phpstan-baseline.neon
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .github/workflows/ab-ci.yml
+    - .github/workflows/ac-ci.yml
+    - .github/workflows/cd.yml
+    - .github/workflows/ci-cd.yml
+    - .github/workflows/ci-enhancements.yml
+    - .github/workflows/ci-tests.yml
+    - .github/workflows/ci.yml
+    - .github/workflows/container-image-scan.yml
+    - .github/workflows/deploy.yml
+    - .github/workflows/k8s-security-scan.yml
+    - CMCP_CHANGELOG.md
+    - README.md
+    - README_EXTRAS.md
+    - README_RELEASE.md
+    - docs/hpa-custom-metrics.md
+    - docs/metrics-payment.md
+    - qodana.yaml
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 2 fail, 10 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1542 lines); review SRP and refactoring pressure.
+    - Constructor injects 10 parameters; review dependency inversion and class responsibilities.
+    - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
+    - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
+    - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1542 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 10 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Value/Surface/OrderManagementSurfaceContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ServiceInterface/Workflow/Order/OrderWorkflowServiceInterface.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/Workflow/Order/OrderWorkflowService.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Service/Transport/Order/ProviderRouter.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ReadModel/View/CustomerOrderDetail.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ReadModel/View/CustomerOrderSummary.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 13 public methods; review interface segregation and SRP.
+      path: src/Entity/Order/OrderAuditLogEntity.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 10 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Entity/Order/OrderAuditLogEntity.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (590 lines); review SRP and refactoring pressure.
+      path: src/Entity/Order/OrderEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 61 public methods; review interface segregation and SRP.
+      path: src/Entity/Order/OrderEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 14 public methods; review interface segregation and SRP.
+      path: src/Entity/Order/OrderItemEntity.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - config/reference.php
+    - src/Entity/Order/OrderAuditLogEntity.php
+    - src/Entity/Order/OrderEntity.php
+    - src/Entity/Order/OrderItemEntity.php
+    - src/ReadModel/View/CustomerOrderDetail.php
+    - src/ReadModel/View/CustomerOrderSummary.php
+    - src/Service/Transport/Order/ProviderRouter.php
+    - src/Service/Workflow/Order/OrderWorkflowService.php
+    - src/ServiceInterface/Workflow/Order/OrderWorkflowServiceInterface.php
+    - src/Value/Surface/OrderManagementSurfaceContract.php
+summary:
+  overall_status: fail
+  average_score: 6.86
+  status_counts:
+    pass: 3
+    warn: 2
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 305/1996
+    (15%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1542 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Constructor injects 10 parameters; review dependency
+    inversion and class responsibilities.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 0.0
+      summary: 8 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No obvious boundary descriptor files were detected.
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 305/1996 (15%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 10 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1542 lines); review SRP and refactoring pressure.
+      - Constructor injects 10 parameters; review dependency inversion and class responsibilities.
+      - Constructor injects 7 parameters; review dependency inversion and class responsibilities.

@@ -1,0 +1,187 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "discovering",
+    "component_title": "Discovering",
+    "github_repository": "smartresponsor/discovering",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Discovering",
+    "timestamp_utc": "2026-09-13T10:15:52.864336+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "133023ac7b3780169ef64f879181a1da4e0c41ab"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M composer.json\n M composer.lock\n M config/bundles.php\n M config/packages/doctrine.yaml\n M config/packages/test/doctrine.yaml\n M config/packages/twig.yaml\n M config/services.yaml\n M config/services/discovery.yaml\n M phpunit.xml.dist\n M src/Controller/Discovery/DiscoveryController.php\n M src/Kernel.php\n M src/RepositoryInterface/Discovery/DiscoveryFeedbackRepositoryInterface.php\n M src/RepositoryInterface/Discovery/DiscoveryIndexAliasRepositoryInterface.php\n M src/RepositoryInterface/Discovery/DiscoveryIndexDocumentRepositoryInterface.php\n M src/RepositoryInterface/Discovery/DiscoveryOperationEventRepositoryInterface.php\n M src/RepositoryInterface/Discovery/DiscoveryRateLimitBucketRepositoryInterface.php\n M src/RepositoryInterface/Discovery/DiscoveryRebuildEvidenceRepositoryInterface.php\n M src/RepositoryInterface/Discovery/DiscoverySearchLogRepositoryInterface.php\n M src/RepositoryInterface/Discovery/LibsourceOperatorEventRepositoryInterface.php\n M src/Service/Discovery/Adapter/SqliteFtsDiscoveryAdapter.php\n M src/Service/Discovery/Diagnostics/DiscoveryBackendReachabilityBuilder.php\n M src/Service/Discovery/DoctrineDiscoveryFeedbackStore.php\n M src/Service/Discovery/Http/DiscoveryRequestSurfacePolicy.php\n M src/Service/Discovery/Libsource/Log/DoctrineLibsourceOperatorEventLogStore.php\n M src/Service/Discovery/Operations/DoctrineDiscoveryOperationEventLogStore.php\n M src/Service/Discovery/RateLimit/DiscoveryRateLimiter.php\n M src/Service/Discovery/RateLimit/DoctrineDiscoveryRateLimitStore.php\n M src/Service/Discovery/Rebuild/DoctrineDiscoveryRebuildEvidenceStore.php\n M src/Service/Discovery/Topology/DiscoveryStateTopologyBuilder.php\n M src/Subscriber/Discovery/DiscoveryMutationRequestHardeningSubscriber.php\n M src/Subscriber/Discovery/DiscoveryRequestCorrelationSubscriber.php\n M src/Subscriber/Discovery/DiscoveryResponseSecurityHeadersSubscriber.php\n M templates/management/discovery/overview.html.twig\n M tests/Contract/Discovery/DiscoveryApiEnvelopeContractTest.php\n M tests/Functional/Discovery/AbstractDiscoveryWebTestCase.php\n M tests/Functional/Discovery/DiscoveryApiTest.php\n M tests/Functional/Discovery/DiscoveryManagementUiTest.php\n M tests/Functional/Discovery/DiscoveryRateLimitTest.php\n M tests/Support/DiscoveryDoctrineEntityManagerFactory.php\n M tests/Unit/Discovery/BriefingManagementSurfaceBuilderTest.php\n M tests/Unit/Discovery/DiscoveringObjectIdentityContractTest.php\n M tests/Unit/Discovery/DiscoveryJsonResponseFactoryTest.php\n M tests/Unit/Discovery/DiscoveryRateLimiterTest.php\n M tests/Unit/Discovery/PlaybookManagementSurfaceBuilderTest.php\n M tests/bootstrap.php\n?? .gating/\n?? AGENTS.md\n?? CMCP_CHANGELOG.md\n?? templates/index.html.twig\n?? tools/migrate_component_namespace.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "133023a Canonicalize Discovering component namespaces\nf3de471 Restore Discovering Objecting identity adoption\nf95b411 fix\nf564434 ets\n3a9758a ets"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".env\n.env.example\n.env.test\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/bundles.php\nconfig/MANIFEST.md\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services/\nconfig/services.yaml\nconfig/services_test.yaml\ndocs/\ndocs/antora.yml\ndocs/component/\ndocs/discovery/\ndocs/generated/\ndocs/MANIFEST.md\ndocs/manifests/\ndocs/modules/\nphpstan.neon.dist\nphpunit.xml.dist\npublic/\npublic/index.php\nREADME.md\nreport/\nreport/.gitkeep\nreport/discovering-installability-proof-2026-04-03.md\nreport/discovering-status-2026-04-03.md\nreport/legacy/\nresources/\nresources/discovery/\nsrc/\nsrc/Command/\nsrc/Controller/\nsrc/Dto/\nsrc/Entity/\nsrc/EventSubscriber/\nsrc/Form/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/MANIFEST.md\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Subscriber/\nsrc/ValueObject/\ntemplates/\ntemplates/base.html.twig\ntemplates/discovery/\ntemplates/index.html.twig\ntemplates/management/\ntemplates/MANIFEST.md\ntests/\ntests/Behavioral/\ntests/bootstrap.php\ntests/Contract/\ntests/Functional/\ntests/MANIFEST.md\ntests/Support/\ntests/Unit/\ntools/\ntools/console_container_evidence.php\ntools/discovering_canon_audit.php\ntools/discovering_canon_audit.php.bak-name-entity-20260611-071541\ntools/docblock_policy_check.php\ntools/evidence_artifact_cleanup.php\ntools/evidence_bundle.php\ntools/evidence_index.php\ntools/evidence_summary.php\ntools/lint_php.php\ntools/local_ci.php\ntools/MANIFEST.md\ntools/migrate_component_namespace.php\ntools/provisioned_runtime_evidence.ps1\ntools/qa_guard.php"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "814"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"discovering/discovery\",\n  \"description\": \"Discovering process app\",\n  \"type\": \"project\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"ext-pdo_sqlite\": \"*\",\n    \"php\": \">=8.4\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.0\",\n    \"doctrine/orm\": \"^3.6\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"cruding/crud\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/dom-crawler\": \"^8.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"nelmio/api-doc-bundle\": \"^5.6\",\n    \"phpstan/phpstan\": \"^2.1\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"lint:php\": \"php tools/lint_php.php\",\n    \"validate:composer\": \"composer validate --strict\",\n    \"verify:runtime-preflight\": \"php tools/runtime_preflight.php\",\n    \"verify:console\": \"php bin/console list --raw\",\n    \"test:unit\": \"phpunit --testsuite Unit\",\n    \"test:object-identity\": \"phpunit tests/Unit/Discovery/DiscoveringObjectIdentityContractTest.php\",\n    \"test:functional\": \"phpunit --testsuite Functional\",\n    \"test:contract\": \"phpunit --testsuite Contract\",\n    \"test:behavioral\": \"phpunit --testsuite Behavioral\",\n    \"test:all\": [\n      \"@test:unit\",\n      \"@test:contract\",\n      \"@test:behavioral\",\n      \"@test:functional\"\n    ],\n    \"ci\": [\n      \"@ci:local\",\n      \"@ci:runtime\",\n      \"@ci:quality\"\n    ],\n    \"analyse\": \"php tools/qa_guard.php analyse\",\n    \"lint:cs\": \"php tools/qa_guard.php lint:cs\",\n    \"lint:cs:fix\": \"php tools/qa_guard.php lint:cs:fix\",\n    \"verify:docblocks\": \"php tools/docblock_policy_check.php\",\n    \"verify:security\": \"php tools/security_preflight.php\",\n    \"docs:openapi:dump:public\": \"php tools/qa_guard.php docs:openapi:dump:public\",\n    \"docs:openapi:dump:management\": \"php tools/qa_guard.php docs:openapi:dump:management\",\n    \"verify:runtime-extensions\": \"php tools/runtime_preflight.php --check-runtime-extensions\",\n    \"verify:composer-runtime\": \"php tools/runtime_preflight.php --require-composer\",\n    \"verify:vendor-runtime\": \"php tools/runtime_preflight.php --require-vendor\",\n    \"verify:test-runtime\": \"php tools/runtime_preflight.php --test-runtime\",\n    \"ci:local\": [\n      \"@validate:composer\",\n      \"@verify:runtime-preflight\",\n      \"@verify:security\",\n      \"@verify:docblocks\",\n      \"@lint:php\"\n    ],\n    \"ci:runtime\": [\n      \"@verify:composer-runtime\",\n      \"@verify:vendor-runtime\",\n      \"@verify:runtime-extensions\",\n      \"@verify:test-runtime\",\n      \"@verify:console\",\n      \"@test:all\"\n    ],\n    \"ci:quality\": [\n      \"@analyse\",\n      \"@lint:cs\"\n    ],\n    \"ci:local:direct\": \"php tools/local_ci.php\",\n    \"verify:structural-closure\": \"php tools/structural_closure_evidence.php\",\n    \"verify:runtime-dependency-evidence\": \"php tools/runtime_dependency_evidence.php\",\n    \"verify:console-container-evidence\": \"php tools/console_container_evidence.php\",\n    \"verify:evidence-index\": \"php tools/evidence_index.php\",\n    \"verify:evidence-summary\": \"php tools/evidence_summary.php\",\n    \"verify:evidence-bundle\": \"php tools/evidence_bundle.php\",\n    \"evidence:cleanup\": \"php tools/evidence_artifact_cleanup.php\",\n    \"evidence:cleanup:dry-run\": \"php tools/evidence_artifact_cleanup.php --dry-run\"\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": t"
+    }
+  },
+  "verdict": {
+    "component": "discovering",
+    "summary": "Discovering remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 54468 characters.",
+      "Base overall score retained at 7.70."
+    ],
+    "suggested_score_overrides": {
+      "overall": 7.7
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity and market-facing shape are materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Symfony-oriented architecture shape is materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime and application surface are materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Testing and QA posture are materially present but remain pre-RC.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Operational, governance, and security posture are materially present but remain pre-RC.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing and portfolio-facing alignment is materially present.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Overall release-candidate direction is visible, but the component remains in pre-RC life.",
+        "risks": [
+          "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+        ],
+        "improvements": [
+          "Refresh this metric from a scheduled repository assessment run."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

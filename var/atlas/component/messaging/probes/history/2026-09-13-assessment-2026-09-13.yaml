@@ -1,0 +1,273 @@
+component: messaging
+title: Messaging
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T16:12:21.233317+00:00'
+repo_target:
+  github_repository: smartresponsor/messaging
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - README.md
+    - config/reference.php
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - docs/SERVICE_BOUNDARY_CONSOLIDATION_WAVE_59.json
+    - docs/SERVICE_BOUNDARY_CONSOLIDATION_WAVE_59.md
+    - docs/SERVICE_BOUNDARY_CONSOLIDATION_WAVE_60.json
+    - docs/SERVICE_BOUNDARY_CONSOLIDATION_WAVE_60.md
+    - docs/SERVICE_BOUNDARY_CONSOLIDATION_WAVE_61.json
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .console-mcp/local-php-server-18000.json
+    - .console-mcp/local-php-server-18001.json
+    - composer.json
+    - deploy/docker/compose.yaml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - composer.json
+    - package-lock.json
+    - package.json
+    - phpunit.xml
+    - tests/
+    - vendor/administering/administration/vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/administering/administration/vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+    - vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - Public/protected docblock coverage is 671/3234 (21%).
+    findings:
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 671/3234 (21%).
+    evidence:
+    - .github/ISSUE_TEMPLATE
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .github/workflows
+    - CHANGELOG.md
+    - README.md
+    - composer.json
+    - config/bundles.php
+    - config/reference.php
+    - config/routes.yaml
+    - docs/README.md
+    - php-docblock-ratio:671/3234
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/AGENTS.md
+    - .gating/MANIFEST.json
+    - .gating/MIGRATION.gating.md
+    - .github/workflows/api-reference.yml
+    - .github/workflows/e2e.yml
+    - .github/workflows/qa.yml
+    - .github/workflows/release.yml
+    - .github/workflows/schema-export-release.yml
+    - .github/workflows/schema-export.yml
+    - .github/workflows/security.yml
+    - CHANGELOG.md
+    - README.md
+    - docs/README.md
+    - qodana.yaml
+    - tests/Unit/Spam/SpamFilterChainTest.php
+    - tools/quality/message_pre_rc_handoff_audit.php
+    - tools/quality/message_root_hygiene_audit.php
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 2 fail, 11 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1853 lines); review SRP and refactoring pressure.
+    - PHP file is large (440 lines); review SRP pressure.
+    - PHP file is large (415 lines); review SRP pressure.
+    - PHP file is large (394 lines); review SRP pressure.
+    - PHP file is large (347 lines); review SRP pressure.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1853 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (440 lines); review SRP pressure.
+      path: tools/cleanup/qodana-consolidated-wave30.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (415 lines); review SRP pressure.
+      path: tools/quality/message_api_controller_grammar_plan.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (394 lines); review SRP pressure.
+      path: tools/quality/message_current_slice_rc_final_verification_audit.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (347 lines); review SRP pressure.
+      path: tools/quality/message_owner_proof_command_index_audit.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (335 lines); review SRP pressure.
+      path: tools/quality/message_post_seal_owner_handoff_index_audit.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (372 lines); review SRP pressure.
+      path: tools/quality/message_rc_closure_handoff_audit.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (388 lines); review SRP pressure.
+      path: tools/quality/message_runtime_proof_captured_status_audit.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (556 lines); review SRP and refactoring pressure.
+      path: tools/schema/php/validate.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 26 public methods; review interface segregation and SRP.
+      path: tools/phpstan/stubs/DoctrineDBALConnection.stub.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 28 public methods; review interface segregation and SRP.
+      path: tools/phpstan/stubs/RedisCapability.stub.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (379 lines); review SRP pressure.
+      path: src/Handler/MessageExportMessagesHandler.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Handler/MessageExportMessagesHandler.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - config/reference.php
+    - src/Handler/MessageExportMessagesHandler.php
+    - tools/cleanup/qodana-consolidated-wave30.php
+    - tools/phpstan/stubs/DoctrineDBALConnection.stub.php
+    - tools/phpstan/stubs/RedisCapability.stub.php
+    - tools/quality/message_api_controller_grammar_plan.php
+    - tools/quality/message_current_slice_rc_final_verification_audit.php
+    - tools/quality/message_owner_proof_command_index_audit.php
+    - tools/quality/message_post_seal_owner_handoff_index_audit.php
+    - tools/quality/message_rc_closure_handoff_audit.php
+    - tools/quality/message_runtime_proof_captured_status_audit.php
+    - tools/schema/php/validate.php
+summary:
+  overall_status: fail
+  average_score: 8.14
+  status_counts:
+    pass: 4
+    warn: 2
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 671/3234
+    (21%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1853 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is large (440 lines); review SRP pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 671/3234 (21%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 11 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1853 lines); review SRP and refactoring pressure.
+      - PHP file is large (440 lines); review SRP pressure.
+      - PHP file is large (415 lines); review SRP pressure.

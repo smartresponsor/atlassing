@@ -1,0 +1,345 @@
+{
+  "ok": true,
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "accessing",
+  "verdict": {
+    "component": "accessing",
+    "summary": "Accessing remains technically close to RC quality, with strong product definition, Symfony-oriented architecture, authentication capabilities, documentation, and QA tooling, but the assessed state is still an untagged refactor branch with a dirty working tree and a transitional gating migration.",
+    "strengths": [
+      "Authentication and identity responsibilities are explicitly documented through product, architecture, bounding, audit, market, and full manifests.",
+      "The runtime baseline is modern and substantial, using PHP 8.4, Symfony 8.1, Doctrine ORM, Security, WebAuthn, OTP, rate limiting, serializer, validator, mailer, and notifier capabilities.",
+      "QA infrastructure includes PHPUnit 12, PHPStan 2.1, PHP CS Fixer, coverage tooling, Panther, and Playwright.",
+      "Recent commits show active security-test expansion, schema-parity hardening, dependency alignment, and PHPUnit coverage-tooling work.",
+      "CI/workflow, deployment, documentation, and gating assets are materially present."
+    ],
+    "risks": [
+      "The assessed HEAD is on refactor/accessing-canonical-structure rather than an immutable tagged RC.",
+      "The working tree is not clean because tracked gating configuration is deleted while a substantial replacement gating tree is untracked.",
+      "The transitional gating state reduces reproducibility and prevents treating the current snapshot as a finalized release baseline.",
+      "The supplied facts describe available quality tooling but do not include successful results from the complete quality pipeline at this HEAD."
+    ],
+    "next_actions": [
+      "Reconcile the gating migration into an intentional committed state.",
+      "Run the repository lint, coding-standard, PHPStan, PHPUnit, coverage, Panther, and applicable Playwright gates on the reconciled clean tree.",
+      "Merge or otherwise finalize the canonical refactor branch after verification.",
+      "Create an immutable RC tag only after the verified working tree is clean.",
+      "Refresh the Atlas snapshot from the final tagged RC commit."
+    ],
+    "notes": [
+      "No score increase is justified solely by the supplied deterministic facts because no complete successful gate run or immutable RC tag is evidenced.",
+      "The existing metric scores remain consistent with the supplied repository facts and current snapshot."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "package.json",
+      "phpstan.neon",
+      "phpunit.xml",
+      "playwright.config.ts",
+      "PRODUCT_MANIFEST.md",
+      "ARCHITECTURE_MANIFEST.md",
+      "BOUNDING_MANIFEST.md",
+      "AUDIT.md",
+      "FULL_MANIFEST.md",
+      "docs/market-analysis.md",
+      "docs/architecture/",
+      ".github/workflows/",
+      ".gating/"
+    ],
+    "suggested_score_overrides": {
+      "product": null,
+      "architecture": null,
+      "runtime": null,
+      "qa": null,
+      "ops": null,
+      "market": null,
+      "overall": null
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Accessing has a clearly articulated authentication and identity product surface supported by dedicated product, market, architecture, bounding, audit, and full manifests.",
+        "risks": [
+          "The assessed product state remains on an active refactor branch rather than an immutable tagged release point."
+        ],
+        "improvements": [
+          "Refresh product readiness from the clean merged and tagged RC commit."
+        ],
+        "evidence": [
+          "PRODUCT_MANIFEST.md",
+          "MARKET_ANALYSIS.md",
+          "ARCHITECTURE_MANIFEST.md",
+          "BOUNDING_MANIFEST.md",
+          "AUDIT.md",
+          "FULL_MANIFEST.md"
+        ]
+      },
+      "architecture": {
+        "summary": "The component shows a modern Symfony-oriented architecture with explicit architecture and boundary documentation and recent canonicalization-related development.",
+        "risks": [
+          "Canonicalization remains represented by an active refactor branch with unresolved working-tree changes in the gating area."
+        ],
+        "improvements": [
+          "Complete and verify the canonical migration, then reconcile it with the release branch from a clean tree."
+        ],
+        "evidence": [
+          "composer.json",
+          "ARCHITECTURE_MANIFEST.md",
+          "BOUNDING_MANIFEST.md",
+          "docs/architecture/",
+          ".gating/"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime capability is materially developed around PHP 8.4, Symfony 8.1, Doctrine ORM, Security, WebAuthn, OTP, rate limiting, mailer, notifier, serializer, validator, and related application infrastructure.",
+        "risks": [
+          "No immutable tagged runtime baseline exists at the assessed HEAD."
+        ],
+        "improvements": [
+          "Verify the reconciled RC state with the repository's full runtime and browser-oriented test pipeline before tagging."
+        ],
+        "evidence": [
+          "composer.json",
+          "config/",
+          "migrations/Version20260912003630.php",
+          "package.json",
+          "playwright.config.ts"
+        ]
+      },
+      "qa": {
+        "summary": "QA maturity remains strong for a pre-RC component, with PHPUnit 12, PHPStan 2.1, PHP CS Fixer, coverage tooling, Panther, Playwright, and recent authentication-focused security-test expansion.",
+        "risks": [
+          "The supplied facts do not evidence a complete successful quality-pipeline run against the current dirty HEAD."
+        ],
+        "improvements": [
+          "Run lint, coding standards, PHPStan, PHPUnit, coverage, Panther, and applicable Playwright suites on the reconciled clean tree."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpstan.neon",
+          "phpunit.xml",
+          "package.json",
+          "playwright.config.ts"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and governance foundations are materially present through GitHub workflows, deployment material, quality tooling, manifests, and a substantial gating system.",
+        "risks": [
+          "The gating area is highly transitional, with deleted tracked configuration and extensive untracked replacement content."
+        ],
+        "improvements": [
+          "Resolve the gating migration into an intentional committed state and verify all configured CI and local quality gates before RC designation."
+        ],
+        "evidence": [
+          ".github/workflows/",
+          "deploy/",
+          ".gating/",
+          "composer.json",
+          "AUDIT.md"
+        ]
+      },
+      "market": {
+        "summary": "Business and ecosystem positioning are explicitly documented and remain consistent with a specialized Accessing authentication component.",
+        "risks": [
+          "Market-facing readiness remains coupled to a pre-RC engineering state rather than a clean tagged release."
+        ],
+        "improvements": [
+          "Reconfirm the market and portfolio narrative against the final clean RC artifact after canonicalization is finalized."
+        ],
+        "evidence": [
+          "MARKET_ANALYSIS.md",
+          "docs/market-analysis.md",
+          "PRODUCT_MANIFEST.md",
+          "FULL_MANIFEST.md"
+        ]
+      },
+      "overall": {
+        "summary": "Accessing is technically close to RC quality with strong architecture, authentication capabilities, documentation, QA tooling, and recent hardening work, but the active refactor branch, dirty gating migration, and absence of an exact tag prevent treating the current snapshot as a finished RC.",
+        "risks": [
+          "Current HEAD is not an immutable clean release candidate.",
+          "The transitional gating state reduces reproducibility of the assessed repository state.",
+          "A complete successful quality-pipeline result for the current HEAD is not included in the supplied facts."
+        ],
+        "improvements": [
+          "Finish gating reconciliation, run the full quality pipeline on a clean tree, finalize the canonical branch, and tag the verified RC before the next Atlas refresh."
+        ],
+        "evidence": [
+          "composer.json",
+          "PRODUCT_MANIFEST.md",
+          "ARCHITECTURE_MANIFEST.md",
+          "BOUNDING_MANIFEST.md",
+          "AUDIT.md",
+          "FULL_MANIFEST.md",
+          ".github/workflows/",
+          ".gating/",
+          "phpstan.neon",
+          "phpunit.xml",
+          "playwright.config.ts"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "tool/runner-task-bank-loop.ps1",
+    "promptMode": "raw",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\accessing.prompt.txt",
+    "chatId": "6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+    "targetId": "C3A1DC4C83F4092C786C1B62EEEC2A8B",
+    "acceptanceStatus": "M3_ACCEPTANCE_FAIL",
+    "acceptanceFailures": [
+      "target_repo_not_clean"
+    ],
+    "acceptanceArtifactPath": "D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\var\\runner\\task-bank\\acceptance\\repo-smoke-20260915092726-e51360f432-20260915T092815Z.acceptance.json",
+    "cleanup": {
+      "ok": false,
+      "status": "CHATGPT_CHAT_DELETE_NEEDS_REVIEW",
+      "expected_chat_id": "6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+      "selected": {
+        "port": 9223,
+        "id": "C3A1DC4C83F4092C786C1B62EEEC2A8B",
+        "type": "page",
+        "title": "Assess Accessing Component",
+        "url": "https://chatgpt.com/c/6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+        "chat_id": "6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+        "has_web_socket_debugger_url": true
+      },
+      "delete": {
+        "ok": true,
+        "status": "CHAT_SOFT_DELETED",
+        "expected_chat_id": "6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+        "close_target": true,
+        "before_http_status": 200,
+        "before_body_preview": null,
+        "patch_http_status": 200,
+        "patch_http_status_text": "",
+        "patch_body_preview": null,
+        "auth_session_http_status": 200,
+        "auth_token_present": true,
+        "href": "https://chatgpt.com/c/6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+        "title": "Assess Accessing Component"
+      },
+      "target_close": {
+        "ok": true,
+        "status": "TARGET_CLOSE_REQUESTED",
+        "target_id": "C3A1DC4C83F4092C786C1B62EEEC2A8B",
+        "port": 9223,
+        "body": "Target is closing"
+      },
+      "after": {
+        "ports": [
+          9222,
+          9223
+        ],
+        "attempts": [
+          {
+            "port": 9222,
+            "ok": false,
+            "error": "connect ECONNREFUSED 127.0.0.1:9222"
+          },
+          {
+            "port": 9223,
+            "ok": true,
+            "target_count": 4
+          }
+        ],
+        "total_chatgpt_targets": 4,
+        "empty_home_count": 2,
+        "chat_target_count": 2,
+        "unique_chat_id_count": 2,
+        "duplicate_chat_id_count": 0,
+        "duplicate_chat_ids": [],
+        "empty_home_targets": [
+          {
+            "description": "",
+            "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/0698D59AC2A08A394D7FD32B6BC43D75",
+            "faviconUrl": "https://chatgpt.com/favicon.ico",
+            "id": "0698D59AC2A08A394D7FD32B6BC43D75",
+            "title": "ChatGPT",
+            "type": "page",
+            "url": "https://chatgpt.com/",
+            "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/0698D59AC2A08A394D7FD32B6BC43D75",
+            "port": 9223,
+            "chat_id": null,
+            "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/0698D59AC2A08A394D7FD32B6BC43D75"
+          },
+          {
+            "description": "",
+            "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/5BEF8C802225A063EBC286B1A45FC06D",
+            "faviconUrl": "https://chatgpt.com/favicon.ico",
+            "id": "5BEF8C802225A063EBC286B1A45FC06D",
+            "title": "ChatGPT",
+            "type": "page",
+            "url": "https://chatgpt.com/",
+            "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/5BEF8C802225A063EBC286B1A45FC06D",
+            "port": 9223,
+            "chat_id": null,
+            "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/5BEF8C802225A063EBC286B1A45FC06D"
+          }
+        ],
+        "targets": [
+          {
+            "port": 9223,
+            "id": "0698D59AC2A08A394D7FD32B6BC43D75",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "C3A1DC4C83F4092C786C1B62EEEC2A8B",
+            "type": "page",
+            "title": "Assess Accessing Component",
+            "url": "https://chatgpt.com/c/6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+            "chat_id": "6aa90f83-d054-83e9-8cb1-2e7b4fc5ca2d",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "5BEF8C802225A063EBC286B1A45FC06D",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "69927A52F360D6B337A6D20DDA98E4F8",
+            "type": "page",
+            "title": "Read only inspection report",
+            "url": "https://chatgpt.com/c/6aa88471-1ea4-83ea-9c2f-da8f9014c3f4",
+            "chat_id": "6aa88471-1ea4-83ea-9c2f-da8f9014c3f4",
+            "has_web_socket_debugger_url": true
+          }
+        ]
+      },
+      "still_visible": true,
+      "policy": {
+        "browser_mutation": true,
+        "chatgpt_host_only": true,
+        "deletes_chat": true,
+        "soft_delete_via_backend_api": true,
+        "requires_confirm_delete": true,
+        "requires_expected_chat_id": true,
+        "writes_input": false,
+        "submits_input": false
+      },
+      "tool": "console.write.browser.chatgpt.chat.delete.execute",
+      "bridge": {
+        "ok": false,
+        "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+        "capabilityClass": "atomic",
+        "authorityMode": "legacy",
+        "m5AtomicTransportEnabled": false,
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "requestTimeoutMs": 120000
+      },
+      "envBootstrap": {
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "tokenPresent": true,
+        "tokenSource": "env"
+      }
+    }
+  }
+}

@@ -1,0 +1,263 @@
+component: applicating
+title: Applicating
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T09:47:06.258401+00:00'
+repo_target:
+  github_repository: smartresponsor/applicating
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/applicating_reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/applicating_reference.php
+    evidence:
+    - AGENTS.md
+    - config/applicating_reference.php
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - .gating/src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - README.md
+    - composer.json
+    - docker/Dockerfile
+    - docker/docker-compose.yml
+    - docs/ADMIN_AUTH_ROLES.md
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - CHANGELOG.md
+    - composer.json
+    - tests/
+    - vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - Public/protected docblock coverage is 223/520 (43%).
+    findings:
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 223/520 (43%).
+    evidence:
+    - .gating/src/Rule/Canon/Canon038ConfigYamlSubjectPrefixRule.php
+    - .github/workflows
+    - CHANGELOG.md
+    - README.md
+    - composer.json
+    - config/routes/nelmio_api_doc.yaml
+    - php-docblock-ratio:223/520
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/AGENTS.md
+    - .gating/MANIFEST.json
+    - .github/workflows/build.yml
+    - .github/workflows/cd.yml
+    - .github/workflows/ci-precheck.yml
+    - .github/workflows/ci-smoke.yml
+    - .github/workflows/playwright.yml
+    - .github/workflows/qa.yml
+    - .github/workflows/qodana.yml
+    - .github/workflows/release.yml
+    - .github/workflows/security-check.yml
+    - .github/workflows/smoke-postdeploy.yml
+    - AGENTS.md
+    - README.md
+    - docker/docker-compose.otel.yml
+    - qodana.yaml
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 2 fail, 10 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1613 lines); review SRP and refactoring pressure.
+    - PHP file is very large (1547 lines); review SRP and refactoring pressure.
+    - Constructor injects 9 parameters; review dependency inversion and class responsibilities.
+    - Constructor injects 8 parameters; review dependency inversion and class responsibilities.
+    - Constructor injects 9 parameters; review dependency inversion and class responsibilities.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1613 lines); review SRP and refactoring pressure.
+      path: config/applicating_reference.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1547 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 9 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/DTO/ApplicationAdminApiRowDTO.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/DTO/ApplicationAdminIndexRowDTO.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 9 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/DTO/ApplicationAdminShowViewDTO.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/DTO/ApplicationAdminTenantAssignmentViewDTO.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/DTO/TenantApplicationDiagnosticsDTO.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 33 public methods; review interface segregation and SRP.
+      path: src/Entity/Application.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 9 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Entity/ApplicationManifest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 26 public methods; review interface segregation and SRP.
+      path: src/Entity/ApplicationUser.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 17 public methods; review interface segregation and SRP.
+      path: src/Entity/TenantApplication.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (444 lines); review SRP pressure.
+      path: .gating/tests/calibration.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/applicating_reference.php
+    evidence:
+    - .gating/tests/calibration.php
+    - config/applicating_reference.php
+    - config/reference.php
+    - src/DTO/ApplicationAdminApiRowDTO.php
+    - src/DTO/ApplicationAdminIndexRowDTO.php
+    - src/DTO/ApplicationAdminShowViewDTO.php
+    - src/DTO/ApplicationAdminTenantAssignmentViewDTO.php
+    - src/DTO/TenantApplicationDiagnosticsDTO.php
+    - src/Entity/Application.php
+    - src/Entity/ApplicationManifest.php
+    - src/Entity/ApplicationUser.php
+    - src/Entity/TenantApplication.php
+summary:
+  overall_status: fail
+  average_score: 8.14
+  status_counts:
+    pass: 4
+    warn: 2
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 223/520 (43%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1613 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (1547 lines); review SRP
+    and refactoring pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 223/520 (43%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 10 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1613 lines); review SRP and refactoring pressure.
+      - PHP file is very large (1547 lines); review SRP and refactoring pressure.
+      - Constructor injects 9 parameters; review dependency inversion and class responsibilities.

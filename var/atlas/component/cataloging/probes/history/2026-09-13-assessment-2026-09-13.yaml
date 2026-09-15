@@ -1,0 +1,320 @@
+component: cataloging
+title: Cataloging
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T10:10:02.445870+00:00'
+repo_target:
+  github_repository: smartresponsor/cataloging
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 0.0
+    summary: 9 fail, 4 warn, 0 info findings detected.
+    blockers:
+    - Migration/deprecated marker found in tree.
+    - Migration/deprecated marker found in tree.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    findings:
+    - severity: warn
+      id: migration_marker
+      detail: Migration/deprecated marker found in tree.
+      path: tools/backup
+    - severity: warn
+      id: migration_marker
+      detail: Migration/deprecated marker found in tree.
+      path: tools/migration
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Controller/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/ControllerInterface/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Entity/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/EntityInterface/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Event/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/EventInterface/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Repository/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/RepositoryInterface/Catalog
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Service/Catalog
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - AGENTS.md
+    - config/reference.php
+    - src/Controller/Catalog
+    - src/ControllerInterface/Catalog
+    - src/Entity/Catalog
+    - src/EntityInterface/Catalog
+    - src/Event/Catalog
+    - src/EventInterface/Catalog
+    - src/Repository/Catalog
+    - src/RepositoryInterface/Catalog
+    - src/Service/Catalog
+    - tools/backup
+    - tools/migration
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - docs/category-boundary-policy.md
+    - docs/category-delivery-surface-boundary.md
+    - docs/category-external-boundary-readiness.md
+    - docs/category-graphql-boundary.md
+    - docs/category-operational-proof-boundary.md
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .commanding/docker/compose.yml
+    - .commanding/docker/php/Dockerfile
+    - CMCP_CHANGELOG.md
+    - api/catalog-openapi.yaml
+    - composer.json
+    - docker/docker-compose.yml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - composer.json
+    - fixtures
+    - package-lock.json
+    - package.json
+    - tests/
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    evidence:
+    - .github/workflows
+    - CMCP_CHANGELOG.md
+    - README.md
+    - api/catalog-openapi.yaml
+    - api/category-openapi.yaml
+    - composer.json
+    - php-docblock-ratio:1676/2792
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/AGENTS.md
+    - .github/workflows/automate-kit-sync.yml
+    - .github/workflows/category-ci.yml
+    - .github/workflows/category-regression.yml
+    - .github/workflows/category-release.yml
+    - AGENTS.md
+    - CMCP_CHANGELOG.md
+    - README.md
+    - docker/docker-compose.category.yaml
+    - docs/category-observability.md
+    - qodana.yaml
+    - src/Observability/PrometheusController.php
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 2 fail, 10 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1867 lines); review SRP and refactoring pressure.
+    - Class exposes 20 public methods; review interface segregation and SRP.
+    - Class exposes 15 public methods; review interface segregation and SRP.
+    - Class exposes 20 public methods; review interface segregation and SRP.
+    - PHP file is large (341 lines); review SRP pressure.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1867 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 20 public methods; review interface segregation and SRP.
+      path: tests/Category/AttachmentServiceTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 15 public methods; review interface segregation and SRP.
+      path: tests/Command/CategoryMediaReadinessEvaluateCommandTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 20 public methods; review interface segregation and SRP.
+      path: tests/Command/CategorySyndicationPackagePreviewCommandTest.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (341 lines); review SRP pressure.
+      path: src/DataFixtures/MultiCatalogFixtures.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Projection/CategoryActorTraceabilityView.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Projection/CategoryRuntimeStatusView.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (808 lines); review SRP and refactoring pressure.
+      path: src/Service/CatalogCategoryMutationService.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 13 public methods; review interface segregation and SRP.
+      path: src/ValueObject/CatalogSyndicationDestinationGovernanceSummary.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 12 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ValueObject/CatalogSyndicationDestinationGovernanceSummary.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 11 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ValueObject/CatalogSyndicationDestinationHistory.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/ValueObject/CategoryDestinationMediaFallbackReport.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - config/reference.php
+    - src/DataFixtures/MultiCatalogFixtures.php
+    - src/Projection/CategoryActorTraceabilityView.php
+    - src/Projection/CategoryRuntimeStatusView.php
+    - src/Service/CatalogCategoryMutationService.php
+    - src/ValueObject/CatalogSyndicationDestinationGovernanceSummary.php
+    - src/ValueObject/CatalogSyndicationDestinationHistory.php
+    - src/ValueObject/CategoryDestinationMediaFallbackReport.php
+    - tests/Category/AttachmentServiceTest.php
+    - tests/Command/CategoryMediaReadinessEvaluateCommandTest.php
+    - tests/Command/CategorySyndicationPackagePreviewCommandTest.php
+summary:
+  overall_status: fail
+  average_score: 7.0
+  status_counts:
+    pass: 4
+    warn: 1
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Migration/deprecated marker found in tree.
+  - Canon & Structure — Migration/deprecated marker found in tree.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - SOLID & Refactoring Pressure — PHP file is very large (1867 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Class exposes 20 public methods; review interface
+    segregation and SRP.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 0.0
+      summary: 9 fail, 4 warn, 0 info findings detected.
+      blockers:
+      - Migration/deprecated marker found in tree.
+      - Migration/deprecated marker found in tree.
+      - Repository/domain-named directory is too close to root for owner canon.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 10 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1867 lines); review SRP and refactoring pressure.
+      - Class exposes 20 public methods; review interface segregation and SRP.
+      - Class exposes 15 public methods; review interface segregation and SRP.

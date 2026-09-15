@@ -1,0 +1,273 @@
+component: accessing
+title: Accessing
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T09:32:47.062588+00:00'
+repo_target:
+  github_repository: smartresponsor/accessing
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 3.0
+    summary: 2 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Service/Access
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/ServiceInterface/Access
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: CMCP_CHANGELOG.md
+    evidence:
+    - CMCP_CHANGELOG.md
+    - config/reference.php
+    - src/Service/Access
+    - src/ServiceInterface/Access
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - .gating/src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+    - docs/architecture/accessing-administering-boundary.adoc
+    - tests/Functional/AccessProducerRouteBoundaryTest.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - deploy/docker/compose.yaml
+    - deploy/docker/php/Dockerfile
+    - docs/architecture/accessing-admin-readiness-report-wave18.adoc
+    - docs/architecture/accessing-capability-matrix-wave23.adoc
+    - docs/architecture/accessing-diagnostics-wave26.adoc
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - ARCHITECTURE_MANIFEST.md
+    - FULL_MANIFEST.md
+    - composer.json
+    - tests/
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/Core/Fixer/Fixtures
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    evidence:
+    - .github/workflows
+    - README.md
+    - docs/modules/ROOT/pages/api.adoc
+    - php-docblock-ratio:878/1094
+    - tests/Unit/AccessArchitectureConventionTest.php
+  delivery_observability:
+    title: Delivery & Observability
+    status: warn
+    score: 8.75
+    summary: 0 fail, 1 warn, 1 info findings detected.
+    blockers:
+    - No GitHub workflow files were detected.
+    findings:
+    - severity: warn
+      id: workflows_missing
+      detail: No GitHub workflow files were detected.
+    - severity: info
+      id: observability_markers_missing
+      detail: No Prometheus/Grafana markers were detected.
+    evidence:
+    - AUDIT.md
+    - Accessing.md
+    - CMCP_CHANGELOG.md
+    - composer.json
+    - composer.prod.json
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 3 fail, 9 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1637 lines); review SRP and refactoring pressure.
+    - PHP file is very large (795 lines); review SRP and refactoring pressure.
+    - Class exposes 23 public methods; review interface segregation and SRP.
+    - PHP file is large (335 lines); review SRP pressure.
+    - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1637 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (795 lines); review SRP and refactoring pressure.
+      path: tests/Unit/AccessApiFlowServiceTest.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 23 public methods; review interface segregation and SRP.
+      path: tests/Unit/AccessApiFlowServiceTest.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (335 lines); review SRP pressure.
+      path: tests/Unit/AccessEntityLifecycleCoverageTest.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Context/AccessCurrentContext.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 9 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/DTO/AccessPasskeyRegistrationOptionsDTO.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (555 lines); review SRP and refactoring pressure.
+      path: src/Entity/AccessEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 48 public methods; review interface segregation and SRP.
+      path: src/Entity/AccessEntity.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Entity/AccessExternalIdentityEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 16 public methods; review interface segregation and SRP.
+      path: src/Entity/AccessMobileSessionEntity.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Entity/AccessMobileSessionEntity.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Entity/AccessPasskeyChallengeEntity.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - config/reference.php
+    - src/Context/AccessCurrentContext.php
+    - src/DTO/AccessPasskeyRegistrationOptionsDTO.php
+    - src/Entity/AccessEntity.php
+    - src/Entity/AccessExternalIdentityEntity.php
+    - src/Entity/AccessMobileSessionEntity.php
+    - src/Entity/AccessPasskeyChallengeEntity.php
+    - tests/Unit/AccessApiFlowServiceTest.php
+    - tests/Unit/AccessEntityLifecycleCoverageTest.php
+summary:
+  overall_status: fail
+  average_score: 7.25
+  status_counts:
+    pass: 3
+    warn: 2
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - Delivery & Observability — No GitHub workflow files were detected.
+  - SOLID & Refactoring Pressure — PHP file is very large (1637 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (795 lines); review SRP
+    and refactoring pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 3.0
+      summary: 2 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - PHP namespace does not use the default App\ root.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 3 fail, 9 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1637 lines); review SRP and refactoring pressure.
+      - PHP file is very large (795 lines); review SRP and refactoring pressure.
+      - Class exposes 23 public methods; review interface segregation and SRP.

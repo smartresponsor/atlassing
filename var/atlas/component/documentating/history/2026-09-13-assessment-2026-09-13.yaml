@@ -1,0 +1,324 @@
+component: documentating
+title: Documentating
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  ref: master
+  origin: quality-atlas dry-run assessment
+  assessment_basis:
+    repository: D:\PhpstormProjects\www\Documentating
+    assessed_branch: master
+    assessed_commit: 51118c9a702f5ee3b9250958a17d92ea968affa4
+    assessed_tag: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: 930537e6c674d7729798e2259890b1a25f522513
+    previous_tag: null
+    current_head_commit: 51118c9a702f5ee3b9250958a17d92ea968affa4
+    current_head_tag: null
+    changed_files_sample:
+    - .antora-src/modules/ROOT/pages/article/abstract-hypothesis-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/definitions-and-scope-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/dynamic-non-absoluteness-research-program.adoc
+    - .antora-src/modules/ROOT/pages/article/glossary-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/index.adoc
+    - .antora-src/modules/ROOT/pages/article/literature-and-conceptual-overlap-map-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/manifesto-of-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/principle-dynamic-non-absoluteness.adoc
+    - .antora-src/modules/ROOT/pages/article/system-tempo-and-dynamic-non-identity.adoc
+    - .antora-src/modules/ROOT/pages/article/the-finite-observer-and-the-resolution-of-change.adoc
+    - .antora-src/modules/ROOT/pages/article/toward-a-formal-statement-of-dynamic-non-identity.adoc
+    - .antora-src/modules/ROOT/pages/quality-atlas/internal.adoc
+    - .antora-src/modules/ROOT/pages/quality-atlas/portfolio.adoc
+    - .antora-src/modules/ROOT/pages/quality-atlas/schedule.adoc
+    - .sync/quality-atlas/components/accessing/current.yaml
+    - .sync/quality-atlas/components/accessing/probes/current.yaml
+    - .sync/quality-atlas/components/addressing/current.yaml
+    - .sync/quality-atlas/components/addressing/probes/current.yaml
+    - .sync/quality-atlas/components/analysing/current.yaml
+    - .sync/quality-atlas/components/analysing/probes/current.yaml
+report_status: current
+groups:
+  product_market:
+    score: 8.0
+  domain_architecture:
+    score: 8.0
+  data_persistence:
+    score: 8.0
+  api_contracts:
+    score: 8.0
+  runtime_performance:
+    score: 8.0
+  reliability_resilience:
+    score: 8.0
+  security_governance:
+    score: 8.0
+  delivery_operations:
+    score: 8.0
+  quality_testing:
+    score: 8.0
+profile_axes:
+  engineering:
+    product: 8.0
+    architecture: 8.0
+    data: 8.0
+    api: 8.0
+    runtime: 8.0
+    reliability: 8.0
+    security: 8.0
+    delivery: 8.0
+    quality: 8.0
+    overall: 8.0
+  owner:
+    identity: 8.0
+    consistency: 8.0
+    delivery: 8.0
+    quality: 8.0
+    governance: 8.0
+    fit: 8.0
+    debt: 3.0
+    overall: 8.0
+  investor:
+    product: 8.0
+    architecture: 8.0
+    delivery: 8.0
+    reliability: 8.0
+    governance: 8.0
+    clarity: 8.0
+    overall: 8.0
+  operations:
+    runtime: 8.0
+    reliability: 8.0
+    observability: 8.0
+    security: 8.0
+    traffic: 8.0
+    delivery: 8.0
+    recovery: 8.0
+    overall: 8.0
+metrics:
+  product:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+  architecture:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+  runtime:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+  qa:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+  ops:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+  market:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+  overall:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+      note: Metric-level assessment evidence.
+strengths:
+- Canonical snapshot/history contracts are present.
+- This component is wired into the atlas assessment registry.
+risks:
+- Dry-run mode does not perform a live AI verdict.
+- Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is
+  provided.
+- Deterministic probes currently report fail status.
+recommended_next_actions:
+- Enable responses mode with OPENAI_API_KEY for live verdict generation.
+- Expand repository registry coverage and local_path mappings for additional components.
+evidence:
+- path: .antora-src/modules/ROOT/pages/component/documentating/report/index.adoc
+  note: Configured component report path.
+- path: .sync/quality-atlas/components/documentating/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+- path: var/atlas/component/documentating/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+assessment_notes:
+- Documentating remains on a seeded snapshot because the assessment runner is in dry-run
+  mode.
+- 'Prompt length: 61355 characters.'
+- Base overall score retained at 8.00.
+assessment_confidence: dry-run
+development_driving:
+  overall_status: fail
+  average_score: 8.61
+  status_counts:
+    pass: 3
+    warn: 3
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Architecture & Boundaries — No obvious boundary descriptor files were detected.
+  - 'Architecture & Boundaries — Missing expected repository segment: src/.'
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - QA & Behavioral Assurance — tests/ directory is missing.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: warn
+      score: 7.0
+      summary: 0 fail, 3 warn, 0 info findings detected.
+      blockers:
+      - No obvious boundary descriptor files were detected.
+      - 'Missing expected repository segment: src/.'
+      - 'Missing expected repository segment: tests/.'
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: fail
+      score: 7.5
+      summary: 1 fail, 0 warn, 0 info findings detected.
+      blockers:
+      - tests/ directory is missing.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: pass
+      score: 8.0
+      summary: 0 fail, 0 warn, 8 info findings detected.
+      blockers: []

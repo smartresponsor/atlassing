@@ -1,0 +1,202 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "messaging",
+    "component_title": "Messaging",
+    "github_repository": "smartresponsor/messaging",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc",
+    "notes": "Connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Messaging",
+    "timestamp_utc": "2026-09-13T16:09:53.924157+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "274668a3f829ee8620641392ad7b43b88e1ed22c"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '274668a3f829ee8620641392ad7b43b88e1ed22c'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .github/workflows/security.yml\n M composer.lock\n M config/component/services.yaml\n M config/reference.php\n M config/services_runtime.yaml\n M config/services_spam.yaml\n M delivery/rc/generated/api-controller-grammar-owner-policy.json\n M delivery/rc/generated/api-controller-grammar-owner-policy.md\n M delivery/rc/generated/current-slice-rc-final-verification.json\n M docs/api/canonical-route-inventory.md\n M docs/api/deprecated-replacement-mapping.md\n M docs/api/legacy-internal-deprecated-endpoint-registry.md\n M docs/api/metrics-canonical-operator-subset.md\n M docs/api/openapi-execution-mismatch-inventory.md\n M docs/api/openapi.yaml\n M docs/architecture/database/entity-led-schema-table-manifest.csv\n M migrations/baseline/Version20260812222000ThreadBan.php\n M src/Command/Dev/MessageDevFixturesLoadCommand.php\n D src/Command/Notification/MessageDigestGenerateCommand.php\n D src/Command/Notification/MessageNotificationDigestCommand.php\n M src/Controller/Message/MessageApiAclCheckController.php\n M src/Controller/Message/MessageApiAttachmentAttachmentUploadController.php\n D src/Controller/Message/MessageApiAttachmentCreateController.php\n M src/Controller/Message/MessageApiAttachmentDeleteController.php\n M src/Controller/Message/MessageApiAttachmentDownloadController.php\n M src/Controller/Message/MessageApiAttachmentFinalizeController.php\n M src/Controller/Message/MessageApiAttachmentGetController.php\n M src/Controller/Message/MessageApiAttachmentListController.php\n M src/Controller/Message/MessageApiAttachmentLocalUploadController.php\n M src/Controller/Message/MessageApiAttachmentPresignController.php\n M src/Controller/Message/MessageApiAttachmentPreviewController.php\n M src/Controller/Message/MessageApiAttachmentPreviewGetController.php\n M src/Controller/Message/MessageApiAttachmentQuarantineController.php\n M src/Controller/Message/MessageApiAttachmentQuotaController.php\n M src/Controller/Message/MessageApiAttachmentRegisterController.php\n M src/Controller/Message/MessageApiAttachmentReplaceController.php\n M src/Controller/Message/MessageApiAttachmentScanUpdateController.php\n M src/Controller/Message/MessageApiAttachmentStatusController.php\n M src/Controller/Message/MessageApiAttachmentUploadController.php\n M src/Controller/Message/MessageApiAttachmentUrlController.php\n M src/Controller/Message/MessageApiAttachmentUsageController.php\n M src/Controller/Message/MessageApiAttachmentsByMessageController.php\n M src/Controller/Message/MessageApiAttachmentsCompleteController.php\n M src/Controller/Message/MessageApiAttachmentsController.php\n M src/Controller/Message/MessageApiAttachmentsDownloadController.php\n M src/Controller/Message/MessageApiAttachmentsEventsChannelController.php\n M src/Controller/Message/MessageApiAttachmentsProgressController.php\n M src/Controller/Message/MessageApiAttachmentsPurgeController.php\n M src/Controller/Message/MessageApiAttachmentsScanController.php\n M src/Controller/Message/MessageApiAttachmentsThumbnailController.php\n M src/Controller/Message/MessageApiAttachmentsUploadInitController.php\n M src/Controller/Message/MessageApiAuditController.php\n M src/Controller/Message/MessageApiBookmarkController.php\n M src/Controller/Message/MessageApiBookmarksListController.php\n M src/Controller/Message/MessageApiDeleteController.php\n M src/Controller/Message/MessageApiDeliveredController.php\n M src/Controller/Message/MessageApiDeliveryAggregateController.php\n M src/Controller/Message/MessageApiDeliveryGetController.php\n M src/Controller/Message/MessageApiDeliveryUpdateController.php\n M src/Controller/Message/MessageApiEditController.php\n M src/Controller/Message/MessageApiEncryptTestController.php\n D src/Controller/Message/MessageApiExportController.php\n M src/Controller/Message/MessageApiExportGetExportStatusController.php\n M src/Controller/Message/MessageApiFlagController.php\n M src/Controller/Message/MessageApiGetController.php\n M src/Controller/Message/MessageApiHistoryController.php\n M src/Controller/Message/MessageApiListController.php\n M src/Controller/Message/MessageApiMentionsController.php\n M src/Controller/Message/MessageApiMetricsDeliveryController.php\n M src/Controller/Message/MessageApiMetricsMessagesController.php\n M src/Controller/Message/MessageApiMetricsModerationController.php\n D src/Controller/Message/MessageApiMetricsNotificationsController.php\n M src/Controller/Message/MessageApiMetricsOutboxController.php\n D src/Controller/Message/MessageApiModerationRulesController.php\n D src/Controller/Message/MessageApiNotificationPrefController.php\n D src/Controller/Message/MessageApiNotificationSnoozeController.php\n D src/Controller/Message/MessageApiNotificationsAckController.php\n D src/Controller/Message/MessageApiNotificationsDigestBuildController.php\n D src/Controller/Message/MessageApiNotificationsInboxController.php\n D src/Controller/Message/MessageApiNotificationsMarkReadController.php\n D src/Controller/Message/MessageApiNotificationsPoliciesController.php\n D src/Controller/Message/MessageApiNotificationsPrefsController.php\n D src/Controller/Message/MessageApiNotificationsPrefsSetController.php\n D src/Controller/Message/MessageApiNotificationsTest1700124385Controller.php\n D src/Controller/Message/MessageApiNotificationsTestController.php\n D src/Controller/Message/MessageApiNotifyInboxListController.php\n D src/Controller/Message/MessageApiNotifyPrefsController.php\n D src/Controller/Message/MessageApiNotifyPrefsSetController.php\n D src/Controller/Message/MessageApiNotifyTestController.php\n M src/Controller/Message/MessageApiPatchController.php\n M src/Controller/Message/MessageApiPinController.php\n M src/Controller/Message/MessageApiPinsListController.php\n M src/Controller/Message/MessageApiPresenceController.php\n M src/Controller/Message/MessageApiQuarantineListController.php\n M src/Controller/Message/MessageApiQuoteLinkController.php\n M src/Controller/Message/MessageApiReactionListController.php\n M src/Controller/Message/MessageApiReactionToggleController.php\n D src/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "274668a3 Harden Messaging HTTP runtime bootstrap\n5a1b395a Harden Messaging static analysis baseline\n56029e15 Align Messaging config tools with Administering.\n93e13617 Harden Messaging admin route metadata.\nd37cc7db Retire stale Messaging trait mirrors."
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codex/\n.codex/prompts/\n.codex-tmp/\n.console-mcp/\n.console-mcp/local-php-server-18000.json\n.console-mcp/local-php-server-18001.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.cursor/\n.cursor/rules/\n.dockerignore\n.editorconfig\n.env\n.env.example\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/CODEOWNERS\n.github/dependabot.yml\n.github/ISSUE_TEMPLATE/\n.github/PULL_REQUEST_TEMPLATE.md\n.github/release.yml\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/inspectionProfiles/\n.idea/Messaging.iml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbin/message-host-fixtures.ps1\nbin/preflight.php\nbin/ws-gateway.php\nbuild/\nbuild/schema/\nCHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/quality/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services/\nconfig/services.php\nconfig/services.yaml\nconfig/services_acl.yaml\nconfig/services_ai_enrichment_v1.yaml\nconfig/services_ai_enrichment_v2.yaml\nconfig/services_attachment_core.yaml\nconfig/services_attachment_core_v2.yaml\nconfig/services_attachments.yaml\nconfig/services_attachments_v2.yaml\nconfig/services_attachments_v21.yaml\nconfig/services_audit_otel_v1.yaml\nconfig/services_audit_tracing_v1.yaml\nconfig/services_cache.yaml\nconfig/services_delivery.yaml\nconfig/services_delivery_qos.yaml\nconfig/services_delivery_security.yaml\nconfig/services_edit.yaml\nconfig/services_eventbus.yaml\nconfig/services_export.yaml\nconfig/services_mercure.yaml\nconfig/services_moderation_retention.yaml\nconfig/services_moderation_v3.yaml\nconfig/services_moderation_v31.yaml\nconfig/services_observability.yaml\nconfig/services_outbox.yaml\nconfig/services_partitions.yaml\nconfig/services_presence.yaml\nconfig/services_presence_push.yaml\nconfig/services_presence_v1.yaml\nconfig/services_rate_listener.yaml\nconfig/services_ratelimit.yaml\nconfig/services_reaction.yaml"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "3145"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"messaging/message\",\n    \"description\": \"Messaging process app\",\n    \"type\": \"symfony-bundle\",\n    \"license\": \"proprietary\",\n    \"repositories\": [\n        {\n            \"type\": \"path\",\n            \"url\": \"../Administering\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Interfacing\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Objecting\",\n            \"options\": {\n                \"symlink\": true\n            }\n        }\n    ],\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-curl\": \"*\",\n        \"ext-fileinfo\": \"*\",\n        \"ext-gd\": \"*\",\n        \"ext-openssl\": \"*\",\n        \"ext-pdo\": \"*\",\n        \"ext-zip\": \"*\",\n        \"ext-zlib\": \"*\",\n        \"api-platform/doctrine-orm\": \"^4.3\",\n        \"api-platform/graphql\": \"^4.3\",\n        \"api-platform/symfony\": \"^4.3\",\n        \"doctrine/dbal\": \"^4.3\",\n        \"doctrine/doctrine-bundle\": \"^3.2\",\n        \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n        \"doctrine/orm\": \"^3.3\",\n        \"administering/administration\": \"*@dev\",\n        \"doctrine/persistence\": \"^4.0\",\n        \"predis/predis\": \"^2.2\",\n        \"ramsey/uuid\": \"^4.8\",\n        \"react/socket\": \"^1.15\",\n        \"symfony/cache\": \"^8.1\",\n        \"symfony/config\": \"^8.1\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/service-contracts\": \"^3.7\",\n        \"symfony/dependency-injection\": \"^8.1\",\n        \"symfony/dotenv\": \"^8.1\",\n        \"symfony/error-handler\": \"^8.1\",\n        \"symfony/event-dispatcher\": \"^8.1\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/http-client\": \"^8.1\",\n        \"symfony/http-foundation\": \"^8.1\",\n        \"symfony/http-kernel\": \"^8.1\",\n        \"symfony/mercure\": \"^0.7\",\n        \"symfony/mercure-bundle\": \"^0.4\",\n        \"symfony/messenger\": \"^8.1\",\n        \"symfony/monolog-bundle\": \"^4.0\",\n        \"symfony/process\": \"^8.1\",\n        \"symfony/rate-limiter\": \"^8.1\",\n        \"symfony/routing\": \"^8.1\",\n        \"symfony/security-bundle\": \"^8.1\",\n        \"symfony/serializer\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/yaml\": \"^8.1\"\n    },\n    \"require-dev\": {\n        \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n        \"friendsofphp/php-cs-fixer\": \"^3.65\",\n        \"nelmio/api-doc-bundle\": \"^5.1\",\n        \"phpstan/phpstan\": \"^2.1\",\n        \"phpunit/phpunit\": \"^11.5\",\n        \"symfony/browser-kit\": \"^8.1\",\n        \"symfony/css-selector\": \"^8.1\",\n        \"symfony/panther\": \"^2.2\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Messaging\\\\\": \"src/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"App\\\\Messaging\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"config\": {\n        \"sort-packages\": true,\n        \"allow-plugins\": {\n            \"php-http/discovery\": true,\n            \"symfony/runtime\": true\n        }\n    },\n    \"scripts\": {\n        \"test\": \"@php vendor/bin/phpunit --configuration phpunit.xml.dist\",\n        \"console\": \"@php bin/console\",\n        \"check\": [\n            \"@preflight\",\n            \"@app:about\",\n            \"@test\"\n        ],\n        \"preflight\": \"@php bin/preflight.php\",\n        \"lint:php\": \"@php tools/quality/php-lint-all.php\",\n        \"app:about\": \"@php bin/console about\",\n        \"about:runtime\": \"sh tools/runtime/about-runtime.sh\",\n        \"about:runtime:test\": \"sh tools/runtime/about-runtime.sh test\",\n        \"install:runtime\": \"sh tools/runtime/install-runtime.sh\",\n        \"runtime:check\": [\n            \"@preflight\",\n            \"@app:about\"\n        ],\n        \"test:runtime\": \"sh tools/runtime/test-runtime.sh\",\n        \"serve\": \"APP_ENV=dev APP_DEBUG=1 php -S 127.0.0.1:8000 -t public public/router.php\",\n        \"server:start\": \"@serve\",\n        \"server:start:test\": \"APP_ENV=test APP_DEBUG=1 php -S 127.0.0.1:8000 -t public public/router.php\",\n        \"lint\": [\n            \"@lint:php\",\n            \"@cs:check\"\n        ],\n ",
+      "package.json": "{\n  \"name\": \"smartresponse-messaging\",\n  \"private\": true,\n  \"scripts\": {\n    \"playwright:install\": \"playwright install --with-deps chromium\",\n    \"e2e\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "messaging",
+    "summary": "Messaging remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 59964 characters.",
+      "Base overall score retained at 8.60."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.6
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Product identity is clear and documented (Symfony-native messaging runtime with API/GraphQL exposure), supported by an OpenAPI contract and roadmap, but still pre-RC.",
+        "risks": [
+          "Docs site integration is incomplete (missing Antora nav/index), reducing product discoverability",
+          "No release tags; versioning remains implicit"
+        ],
+        "improvements": [
+          "Add Antora nav.adoc and a landing index to surface the report and API docs",
+          "Cut a pre-release tag and update CHANGELOG to align with tagging cadence"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture reads as a cohesive Symfony messaging/runtime layer with eventing and realtime surfaces (Messenger, Mercure, event bus, outbox) and internal analysis scripts.",
+        "risks": [
+          "Architecture documentation for bounded contexts is not evident in-repo",
+          "Emphasis skews runtime-heavy; domain boundaries could be made more explicit"
+        ],
+        "improvements": [
+          "Add lightweight ADRs describing core boundaries and messaging flows",
+          "Document event bus/outbox patterns and integration points"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime posture is strong: install/test/about scripts, realtime delivery (Mercure/React Socket), QoS and observability wiring, and Prometheus rules.",
+        "risks": [
+          "Local scan used PHP 8.3 while the project requires ^8.4, which can mask runtime issues",
+          "No tag-based release channel yet for promoting tested builds"
+        ],
+        "improvements": [
+          "Ensure CI and container images run PHP 8.4+ consistently",
+          "Publish boot-ledger summaries and runtime checks as CI artifacts"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Quality toolchain is present (PHPUnit 11, PHPStan 2.x, CS Fixer, Panther) with an additional Playwright harness, indicating solid pre-RC QA depth.",
+        "risks": [
+          "Playwright/E2E integration into CI is not explicitly evidenced",
+          "Coverage thresholds and reporting are not visible from the provided facts"
+        ],
+        "improvements": [
+          "Add a CI job to run Playwright and publish reports",
+          "Expose PHPUnit coverage reports in CI artifacts"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and governance posture is mature: boot-ledger workflows, security policy, Dependabot, CODEOWNERS, tracing/OTel configs, and Prometheus alert rules.",
+        "risks": [
+          "Absence of git tags limits release automation and rollback strategies",
+          "SLO/SLA documentation not observed in-repo"
+        ],
+        "improvements": [
+          "Adopt semantic pre-release tags and wire release.yml to produce artifacts",
+          "Document basic SLOs and alert mappings tied to Prometheus rules"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Market-facing alignment is credible for an internal conversation/runtime and realtime messaging capability; licensing indicates internal consumption focus.",
+        "risks": [
+          "Proprietary license constrains external adoption and community signals",
+          "Docs surfacing gaps may reduce portfolio discoverability"
+        ],
+        "improvements": [
+          "Clarify intended distribution model in README and VERSION notes",
+          "Surface report and API reference via Antora nav/index"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Strong pre-RC posture with governed runtime, observability, and QA; proceed to release hygiene (tags, CI PHP 8.4 pin, docs surfacing) to cross the RC threshold.",
+        "risks": [
+          "No release tags reduce RC clarity and rollback safety",
+          "Environment mismatch (PHP 8.3 vs ^8.4 target) may hide regressions"
+        ],
+        "improvements": [
+          "Introduce tagged pre-releases and ensure CI pins PHP 8.4+",
+          "Wire Antora navigation and publish CI artifacts for boot-ledger and E2E"
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\messaging\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\messaging\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\messaging\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\messaging\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

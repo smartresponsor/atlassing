@@ -1,0 +1,309 @@
+component: facting
+title: Facting
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  ref: master
+  origin: quality-atlas dry-run assessment
+  assessment_basis:
+    repository: D:\PhpstormProjects\www\Facting
+    assessed_branch: feature/facting-journal-shipped-publish-20260824
+    assessed_commit: 25fdb8c0a7dc3854b5cbeb5dd5c39a8a190d1a51
+    assessed_tag: null
+    trigger_reason: bootstrap_missing_snapshot
+    previous_commit: null
+    previous_tag: null
+    current_head_commit: 25fdb8c0a7dc3854b5cbeb5dd5c39a8a190d1a51
+    current_head_tag: null
+    changed_files_sample: []
+report_status: current
+groups:
+  product_market:
+    score: 8.0
+  domain_architecture:
+    score: 8.0
+  data_persistence:
+    score: 8.0
+  api_contracts:
+    score: 8.0
+  runtime_performance:
+    score: 8.0
+  reliability_resilience:
+    score: 8.0
+  security_governance:
+    score: 8.0
+  delivery_operations:
+    score: 8.0
+  quality_testing:
+    score: 8.0
+profile_axes:
+  engineering:
+    product: 8.0
+    architecture: 8.0
+    data: 8.0
+    api: 8.0
+    runtime: 8.0
+    reliability: 8.0
+    security: 8.0
+    delivery: 8.0
+    quality: 8.0
+    overall: 8.0
+  owner:
+    identity: 8.0
+    consistency: 8.0
+    delivery: 8.0
+    quality: 8.0
+    governance: 8.0
+    fit: 8.0
+    debt: 3.0
+    overall: 8.0
+  investor:
+    product: 8.0
+    architecture: 8.0
+    delivery: 8.0
+    reliability: 8.0
+    governance: 8.0
+    clarity: 8.0
+    overall: 8.0
+  operations:
+    runtime: 8.0
+    reliability: 8.0
+    observability: 8.0
+    security: 8.0
+    traffic: 8.0
+    delivery: 8.0
+    recovery: 8.0
+    overall: 8.0
+metrics:
+  product:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+  architecture:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+  runtime:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+  qa:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+  ops:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+  market:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+  overall:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Bootstrap snapshot metric pending first live assessment.
+    risks:
+    - Bootstrap metric should be replaced by an assessment verdict.
+    improvements:
+    - Run assessment workflow and refresh narrative evidence.
+    implemented: []
+    partial:
+    - Bootstrap placeholder only.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Neutral bootstrap values unblock portfolio participation without pretending
+      to be a real audit.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+      note: Metric-level assessment evidence.
+development_driving:
+  overall_status: fail
+  average_score: 6.71
+  status_counts:
+    pass: 3
+    warn: 2
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Migration/deprecated marker found in tree.
+  - Canon & Structure — Migration/deprecated marker found in tree.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 247/767 (32%).
+  - Delivery & Observability — No GitHub workflow files were detected.
+  - SOLID & Refactoring Pressure — PHP file is very large (1376 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Class exposes 24 public methods; review interface
+    segregation and SRP.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 0.0
+      summary: 9 fail, 5 warn, 0 info findings detected.
+      blockers:
+      - Migration/deprecated marker found in tree.
+      - Migration/deprecated marker found in tree.
+      - Migration/deprecated marker found in tree.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+      - Public/protected docblock coverage is 247/767 (32%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 1 fail, 11 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1376 lines); review SRP and refactoring pressure.
+      - Class exposes 24 public methods; review interface segregation and SRP.
+      - Class exposes 14 public methods; review interface segregation and SRP.
+strengths:
+- Canonical snapshot/history contracts are present.
+- This component is wired into the atlas assessment registry.
+risks:
+- Dry-run mode does not perform a live AI verdict.
+- Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is
+  provided.
+- Deterministic probes currently report fail status.
+recommended_next_actions:
+- Enable responses mode with OPENAI_API_KEY for live verdict generation.
+- Expand repository registry coverage and local_path mappings for additional components.
+evidence:
+- path: .antora-src/modules/ROOT/pages/component/facting/report/index.adoc
+  note: Configured component report path.
+- path: var/atlas/component/facting/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+assessment_notes:
+- Facting remains on a seeded snapshot because the assessment runner is in dry-run
+  mode.
+- 'Prompt length: 50313 characters.'
+- Base overall score retained at 8.00.
+assessment_confidence: dry-run
