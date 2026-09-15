@@ -1,0 +1,188 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "interfacing",
+    "component_title": "Interfacing",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Interfacing",
+    "timestamp_utc": "2026-09-13T16:05:02.141326+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "02c5ccf77ad1986f2187e8d91f8a422e86af0d97"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M config/reference.php\n M src/Action/Demo/InterfaceDemoPingAction.php\n M src/Assembler/Context/InterfaceBaseContextAssembler.php\n M src/Assembler/Context/InterfaceScreenContextAssembler.php\n M src/Assembler/Runtime/Context/InterfaceScreenContextAssembler.php\n M src/AssemblerInterface/Context/InterfaceBaseContextAssemblerInterface.php\n M src/AssemblerInterface/Context/InterfaceScreenContextAssemblerInterface.php\n M src/AssemblerInterface/Runtime/InterfaceScreenContextAssemblerInterface.php\n M src/Builder/Doctor/InterfaceDoctorReportBuilder.php\n M src/Builder/InterfaceLayoutScreenSpecBuilder.php\n M src/Builder/InterfaceMetricSpecBuilder.php\n M src/Builder/InterfaceWizardSpecBuilder.php\n M src/Builder/View/InterfaceScreenViewBuilder.php\n M src/Builder/View/InterfaceShellViewBuilder.php\n M src/BuilderInterface/Doctor/InterfaceDoctorReportBuilderInterface.php\n M src/BuilderInterface/InterfaceFormSpecBuilderInterface.php\n M src/BuilderInterface/InterfaceLayoutScreenSpecBuilderInterface.php\n M src/BuilderInterface/InterfaceMetricSpecBuilderInterface.php\n M src/BuilderInterface/InterfaceWizardSpecBuilderInterface.php\n M src/BuilderInterface/View/InterfaceScreenViewBuilderInterface.php\n M src/BuilderInterface/View/InterfaceShellViewBuilderInterface.php\n M src/Catalog/AttributeRegistry/InterfaceActionCatalog.php\n M src/Catalog/AttributeRegistry/InterfaceScreenCatalog.php\n M src/Catalog/InterfaceActionEndpointCatalog.php\n M src/Catalog/InterfaceScreenSpecCatalog.php\n M src/Catalog/Layout/InterfaceLayoutCatalog.php\n M src/CatalogInterface/Action/InterfaceActionCatalogInterface.php\n M src/CatalogInterface/AttributeRegistry/InterfaceActionCatalogInterface.php\n M src/CatalogInterface/AttributeRegistry/InterfaceScreenCatalogInterface.php\n M src/CatalogInterface/InterfaceActionEndpointCatalogInterface.php\n M src/CatalogInterface/Layout/InterfaceLayoutCatalogInterface.php\n M src/CatalogInterface/Runtime/InterfaceScreenCatalogInterface.php\n M src/Contract/Access/InterfaceAccessDecision.php\n M src/Contract/Access/InterfaceAccessDecisionCode.php\n M src/Contract/Access/InterfaceAccessRule.php\n M src/Contract/Action/InterfaceActionResult.php\n M src/Contract/Action/InterfaceActionResultInterface.php\n M src/Contract/Action/InterfaceActionRunResult.php\n M src/Contract/Action/InterfaceActionRunResultInterface.php\n M src/Contract/Action/InterfaceActionRuntime.php\n M src/Contract/Action/InterfaceActionRuntimeInterface.php\n M src/Contract/Audit/InterfaceAuditEvent.php\n M src/Contract/Audit/InterfaceAuditEventType.php\n M src/Contract/Doctor/InterfaceDoctorIssue.php\n M src/Contract/Doctor/InterfaceDoctorReport.php\n M src/Contract/Dto/InterfaceBillingMeterPage.php\n M src/Contract/Dto/InterfaceBillingMeterRow.php\n M src/Contract/Dto/InterfaceBulkActionResult.php\n M src/Contract/Dto/InterfaceBulkActionResultInterface.php\n M src/Contract/Dto/InterfaceFormSubmitResult.php\n M src/Contract/Dto/InterfaceFormSubmitResultInterface.php\n M src/Contract/Dto/InterfaceOrderSummaryPage.php\n M src/Contract/Dto/InterfaceOrderSummaryRow.php\n M src/Contract/Dto/InterfaceUiState.php\n M src/Contract/Dto/InterfaceUiStateInterface.php\n M src/Contract/Error/InterfaceDomainOperationFailed.php\n M src/Contract/Error/InterfaceScreenForbidden.php\n M src/Contract/Error/InterfaceScreenNotFound.php\n M src/Contract/Error/InterfaceUiErrorCode.php\n M src/Contract/Localization/InterfaceLocaleTemplateContext.php\n M src/Contract/Runtime/InterfaceActionRequest.php\n M src/Contract/Runtime/InterfaceActionResult.php\n M src/Contract/Security/InterfacePermission.php\n M src/Contract/Spec/InterfaceFormSpec.php\n M src/Contract/Spec/InterfaceMetricSpec.php\n M src/Contract/Spec/InterfaceWizardSpec.php\n M src/Contract/Spec/InterfaceWizardStepSpec.php\n M src/Contract/Ui/InterfaceUiError.php\n M src/Contract/Ui/InterfaceUiErrorBag.php\n M src/Contract/Ui/InterfaceUiErrorInterface.php\n M src/Contract/Ui/InterfaceUiMessage.php\n M src/Contract/Ui/InterfaceUiMessageBag.php\n M src/Contract/Ui/InterfaceUiMessageInterface.php\n M src/Contract/ValueObject/InterfaceActionId.php\n M src/Contract/ValueObject/InterfaceActionIdInterface.php\n M src/Contract/ValueObject/InterfaceLayoutId.php\n M src/Contract/ValueObject/InterfaceLayoutIdInterface.php\n M src/Contract/ValueObject/InterfaceLayoutSlot.php\n M src/Contract/ValueObject/InterfaceScreenId.php\n M src/Contract/ValueObject/InterfaceScreenIdInterface.php\n M src/Contract/ValueObject/InterfaceTenantId.php\n M src/Contract/ValueObject/InterfaceWidgetId.php\n M src/Contract/ValueObject/InterfaceWidgetIdInterface.php\n M src/Contract/View/InterfaceBulkActionSpec.php\n M src/Contract/View/InterfaceBulkActionSpecInterface.php\n M src/Contract/View/InterfaceDataGridColumnSpec.php\n M src/Contract/View/InterfaceDataGridColumnSpecInterface.php\n M src/Contract/View/InterfaceDataGridQuery.php\n M src/Contract/View/InterfaceDataGridQueryInterface.php\n M src/Contract/View/InterfaceDataGridResult.php\n M src/Contract/View/InterfaceDataGridResultInterface.php\n M src/Contract/View/InterfaceDataGridRow.php\n M src/Contract/View/InterfaceDataGridRowInterface.php\n M src/Contract/View/InterfaceEcommerceAdminTableRow.php\n M src/Contract/View/InterfaceEcommerceComponentObligationItem.php\n M src/Contract/View/InterfaceEcommerceComponentRoadmapItem.php\n M src/Contract/View/InterfaceEcommerceComponentSummary.php\n M src/Contract/View/InterfaceEcommerceContractItem.php\n M src/Contract/View/InterfaceEcommerceEvidenceItem.php\n M src/Contract/View/InterfaceEcommerceFieldSchemaItem.php\n M src/Contract/View/InterfaceEcommerceOperationCard.php\n M src/Contract/View/InterfaceEcommercePromotionGateItem.php\n M src/Contract/View/InterfaceEcommerceRuntimeHandoffItem.php\n M src/Contract/View/InterfaceEcommerceScreenEntry.php\n M src/Contract/View/InterfaceFormFieldSpec.php\n M src/Contract/View/InterfaceFormFieldSpecInterface.php\n M src/Contract/View/InterfaceFormSpec.php\n M src/Contract/View/InterfaceFormSpecInterface.php\n M src/Contract/View/InterfaceLayoutBlockSpec.php\n M src/Contract"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "02c5ccf Recover canonical Interfacing templates\n36de0f7 Normalize Provider handoff template\n0f48c70 Restore Taxation interface template\n999d241 Restore Store interface template\na11d910 Restore Shell interface templates"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.editorconfig\n.env\n.env.dev\n.env.interfacing.example\n.env.test\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/codex/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/Interfacing.iml\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.interfacing/\n.interfacing/workspace/\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nassets/\nassets/app.js\nassets/controllers/\nassets/controllers.json\nassets/navigation_active_state.js\nassets/stimulus_bootstrap.js\nassets/styles/\nassets/vendor/\nbin/\nbin/console\nbin/phpunit\nbin/sync-provider-assets.ps1\nbin/sync-provider-baseline.ps1\nCHANGELOG.md\ncompose.override.yaml\ncomposer.json\ncomposer.lock\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/interfacing/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/preload.php\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services/\nconfig/services.yaml\ndocs/\ndocs/interfacing/\ndocs/interfacing-canonical-crud-directory.md\ndocs/interfacing-category-integration.md\ndocs/interfacing-dev-ergonomics.md\ndocs/interfacing-doctor.md\ndocs/interfacing-observability.md\ndocs/interfacing-quick-start.md\ndocs/interfacing-rc1-stab-1.md\ndocs/interfacing-rc1-stab-2.md\ndocs/interfacing-rc1-stab-3-screens.md\ndocs/interfacing-rc1-stab-4-dx-and-tests.md\ndocs/interfacing-renderer-contract.md\ndocs/interfacing-shell-navigation-footer-density.md\ndocs/interfacing-shell-uniformity-audit.md\ndocs/interfacing-sketch-13.md\ndocs/interfacing-sketch-14-error-flash-validation.md\ndocs/interfacing-template-structure-canon.md\ndocs/interfacing.md\ndocs/template-view-prefix-canon.md\nimportmap.php\nInterfacing.zip\nMANIFEST.md\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/.vite-temp/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1559"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\":  \"interfacing/interface\",\n    \"description\":  \"Interfacing Symfony package bundle\",\n    \"type\":  \"library\",\n    \"license\":  \"proprietary\",\n    \"minimum-stability\":  \"stable\",\n    \"prefer-stable\":  true,\n    \"require\":  {\n                    \"composer-runtime-api\":  \"^2.2\",\n                    \"ext-ctype\":  \"*\",\n                    \"ext-iconv\":  \"*\",\n                    \"php\":  \"^8.4\",\n                    \"symfony/uid\":  \"^8.1\",\n                    \"symfony/service-contracts\":  \"^3.7\",\n                    \"symfony/asset\":  \"8.1.*\",\n                    \"symfony/asset-mapper\":  \"8.1.*\",\n                    \"symfony/console\":  \"8.1.*\",\n                    \"symfony/dependency-injection\":  \"8.1.*\",\n                    \"symfony/dotenv\":  \"8.1.*\",\n                    \"symfony/framework-bundle\":  \"8.1.*\",\n                    \"symfony/form\":  \"8.1.*\",\n                    \"symfony/intl\":  \"8.1.*\",\n                    \"symfony/security-core\":  \"8.1.*\",\n                    \"symfony/twig-bundle\":  \"8.1.*\",\n                    \"symfony/validator\":  \"8.1.*\",\n                    \"symfony/yaml\":  \"8.1.*\",\n                    \"twig/twig\":  \"^3.27.1\"\n                },\n    \"require-dev\":  {\n                        \"friendsofphp/php-cs-fixer\":  \"^3.95.4\",\n                        \"phpstan/extension-installer\":  \"^1.4.3\",\n                        \"phpstan/phpstan\":  \"^2.2.2\",\n                        \"phpstan/phpstan-phpunit\":  \"^2.0.16\",\n                        \"phpstan/phpstan-symfony\":  \"^2.0.19\",\n                        \"phpunit/phpunit\":  \"^11.5.55\"\n                    },\n    \"autoload\":  {\n                     \"psr-4\":  {\n                                    \"App\\\\Interfacing\\\\\":  \"src/\"\n                                }\n                  },\n    \"autoload-dev\":  {\n                         \"psr-4\":  {\n                                       \"App\\\\Interfacing\\\\Tests\\\\\":  \"tests/\"\n                                   }\n                     },\n    \"replace\":  {\n                    \"symfony/polyfill-ctype\":  \"*\",\n                    \"symfony/polyfill-iconv\":  \"*\",\n                    \"symfony/polyfill-php84\":  \"*\"\n                },\n    \"config\":  {\n                   \"allow-plugins\":  {\n                                         \"phpstan/extension-installer\":  true\n                                     },\n                   \"bump-after-update\":  true,\n                   \"optimize-autoloader\":  true,\n                   \"preferred-install\":  {\n                                             \"*\":  \"dist\"\n                                         },\n                   \"sort-packages\":  true\n               },\n    \"scripts\":  {\n                    \"lint\":  \"php tools/qa/php-lint.php\",\n                    \"lint:yaml\":  \"php bin/console lint:yaml config src tests --parse-tags\",\n                    \"lint:container\":  \"php bin/console lint:container\",\n                    \"lint:twig\":  \"php bin/console lint:twig templates\",\n                    \"cs:check\":  \"php-cs-fixer fix --dry-run --diff --verbose\",\n                    \"cs:fix\":  \"php-cs-fixer fix --verbose\",\n                    \"stan\":  \"phpstan analyse --memory-limit=1G\",\n                    \"serve:dev\":  \"php -S 127.0.0.1:8000 -t public public/router.php\",\n                    \"test\":  \"phpunit\",\n                    \"test:unit\":  \"phpunit --testsuite unit\",\n                    \"test:integration\":  \"phpunit --testsuite integration\",\n                    \"test:functional\":  \"phpunit --testsuite functional\",\n                    \"fixtures:load\":  \"php bin/console doctrine:fixtures:load --no-interaction\",\n                    \"db:migrate\":  \"php bin/console doctrine:migrations:migrate --no-interaction\",\n                    \"pipeline:local:full\":  [\n                                                \"@lint\",\n                                                \"@lint:yaml\",\n                                                \"@lint:container\",\n                                                \"@lint:twig\",\n                 ",
+      "package.json": "{\n  \"name\": \"interfacing-interface-ui\",\n  \"version\": \"0.38.0\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"scripts\": {\n    \"build\": \"npm run ui:build\",\n    \"typecheck\": \"npm run ui:check\",\n    \"ui:build\": \"vite build --config .interfacing/workspace/vite.config.ts\",\n    \"ui:check\": \"tsc -p .interfacing/workspace/tsconfig.json --noEmit\",\n    \"ui:audit\": \"npm audit\"\n  },\n  \"dependencies\": {\n    \"@ant-design/icons\": \"^5.6.1\",\n    \"@ant-design/pro-components\": \"^2.8.10\",\n    \"antd\": \"^5.26.7\",\n    \"primeicons\": \"^7.0.0\",\n    \"primereact\": \"^10.9.7\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@vitejs/plugin-react\": \"^4.5.2\",\n    \"typescript\": \"^5.8.3\",\n    \"vite\": \"^6.3.5\"\n  },\n  \"engines\": {\n    \"node\": \">=20.0.0\",\n    \"npm\": \">=10.0.0\"\n  },\n  \"overrides\": {\n    \"path-to-regexp\": \"^8.4.0\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "interfacing",
+    "summary": "Interfacing remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 58579 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\interfacing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\interfacing\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\interfacing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\interfacing\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

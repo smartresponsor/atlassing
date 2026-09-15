@@ -1,0 +1,216 @@
+component: complying
+title: Complying
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T10:15:49.363021+00:00'
+repo_target:
+  github_repository: ''
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: config/reference.php
+    evidence:
+    - CMCP_CHANGELOG.md
+    - config/reference.php
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - .gating/src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - CMCP_CHANGELOG.md
+    - README.md
+    - docker-compose.yml
+    - docker/compliance/Dockerfile
+    - docs/compliance/helm-prod.md
+    - var/canonicalization-backup-20260912/docker-compose.yml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Registry/RuleRegistry.php
+    - .gating/tests/calibration.php
+    - fixtures
+    - tests/
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    evidence:
+    - .gating/src/Rule/Canon/Canon038ConfigYamlSubjectPrefixRule.php
+    - .github/workflows
+    - README.md
+    - php-docblock-ratio:438/602
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/AGENTS.md
+    - .gating/MANIFEST.json
+    - .github/workflows/compliance-ci.yml
+    - CMCP_CHANGELOG.md
+    - README.md
+    - docker-compose.yml
+    - docs/compliance/ops-metrics.md
+    - docs/compliance/ops.md
+    - docs/compliance/reporting-pack.md
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 1.75
+    summary: 2 fail, 3 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1408 lines); review SRP and refactoring pressure.
+    - Class exposes 15 public methods; review interface segregation and SRP.
+    - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
+    - PHP file is large (444 lines); review SRP pressure.
+    - PHP file is very large (565 lines); review SRP and refactoring pressure.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1408 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 15 public methods; review interface segregation and SRP.
+      path: src/Entity/ComplianceCaseQueue.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Entity/ComplianceDecisionLog.php
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (444 lines); review SRP pressure.
+      path: .gating/tests/calibration.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (565 lines); review SRP and refactoring pressure.
+      path: .gating/src/Runner/GatingRunner.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - .gating/src/Runner/GatingRunner.php
+    - .gating/tests/calibration.php
+    - config/reference.php
+    - src/Entity/ComplianceCaseQueue.php
+    - src/Entity/ComplianceDecisionLog.php
+summary:
+  overall_status: fail
+  average_score: 8.39
+  status_counts:
+    pass: 4
+    warn: 2
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - SOLID & Refactoring Pressure — PHP file is very large (1408 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Class exposes 15 public methods; review interface
+    segregation and SRP.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 1.75
+      summary: 2 fail, 3 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1408 lines); review SRP and refactoring pressure.
+      - Class exposes 15 public methods; review interface segregation and SRP.
+      - Constructor injects 7 parameters; review dependency inversion and class responsibilities.

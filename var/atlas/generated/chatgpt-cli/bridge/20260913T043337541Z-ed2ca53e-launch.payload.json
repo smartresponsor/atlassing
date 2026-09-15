@@ -1,0 +1,19 @@
+{
+    "runnerExecutionPlan":  {
+                                "tool":  "console.write.browser.session.cmcp.go",
+                                "arguments":  {
+                                                  "rawCommand":  "Quality Atlas scoring task for component accessing.\r\nTarget workspace: D:\\PhpstormProjects\\www\\Accessing\r\nRead the complete scoring specification from this local file using Console MCP repository/file capabilities: D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\accessing.prompt.txt\r\nFollow that specification exactly. Assessment only: do not modify the target repository, commit, or push.\r\nReturn only the strict JSON verdict requested by the scoring specification, without markdown or commentary.",
+                                                  "workspacePath":  "D:\\PhpstormProjects\\www\\Accessing",
+                                                  "componentName":  "accessing",
+                                                  "maxAutoIterations":  1,
+                                                  "confirmGo":  true,
+                                                  "promptMode":  "raw",
+                                                  "executorMode":  "engine",
+                                                  "manageLoop":  true,
+                                                  "activate":  false,
+                                                  "allowOverwrite":  false,
+                                                  "reasoningEnforcement":  "observe",
+                                                  "timeoutMs":  30000
+                                              }
+                            }
+}

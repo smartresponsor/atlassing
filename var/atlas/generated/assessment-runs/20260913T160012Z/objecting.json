@@ -1,0 +1,187 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "objecting",
+    "component_title": "Objecting",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Objecting",
+    "timestamp_utc": "2026-09-13T16:12:44.094767+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "release/objecting-field-pack-normalization-20260910"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "afc3e25cb7d17cf6b6a5b985b2af0fe8a05c7943"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/.gitignore\n M .gating/composer.json\n M .gating/composer.lock\n M .gating/contract/README.md\n M .gating/contract/contract.json\n M .gating/contract/ps1/gitignore-template-check.ps1\n M .gating/contract/ps1/root-contract-check.ps1\n M .gating/contract/sh/gitignore-template-check.sh\n M .gating/contract/sh/root-contract-check.sh\n M .gating/gate.ps1\n M .gating/gate.sh\n M .gating/linting/ps1/doc-name-check.ps1\n M .gating/linting/ps1/layer-mirror-check.ps1\n M .gating/linting/sh/doc-name-check.sh\n M .gating/linting/sh/layer-mirror-check.sh\n M .gating/quality/MANIFEST.json\n M .gating/quality/ps1/phpstan-run.ps1\n M .gating/quality/ps1/quality-run.ps1\n M .gating/quality/ps1/rector-run.ps1\n M .gating/quality/sh/quality-run.sh\n M .gating/src/Registry/RuleRegistry.php\n M .gating/src/Rule/Canon/Canon000ComponentPrefixRule.php\n M .gating/src/Rule/Canon/Canon001TechnicalRoleFirstRule.php\n M .gating/src/Rule/Canon/Canon010ArchitectureMigrationCompletenessRule.php\n M .gating/src/Rule/Canon/Canon015NoToolingArchitectureLeakRule.php\n M .gating/src/Rule/Canon/Canon017DocumentationMatchesRuntimeRule.php\n M .gating/src/Rule/Canon/Canon022StandaloneApplicationDependencyBaselineRule.php\n M .gating/src/Rule/Canon/Canon026PlatformVersionBaselineRule.php\n M .gating/src/Rule/Canon/Canon032BundleRegistrationRule.php\n M .gating/src/Rule/Canon/Canon035SymfonyContainerReuseRule.php\n M .gating/src/Rule/Mutation/MutationSafetyRule.php\n M .gating/src/Rule/Route/RoutePathSegmentSeparationRule.php\n M .gating/tests/calibration.php\n?? .gating/.gating/profile/component/cruding.yaml\n?? .gating/phpunit.xml.dist\n?? .gating/src/Rule/Canon/Canon039PhpTestToolingRule.php\n?? .gating/src/Rule/Canon/Canon040PhpTestCoverageRule.php\n?? .gating/src/Rule/Canon/Canon041BehavioralUiTestToolingRule.php\n?? .gating/src/Rule/Canon/Canon042BehavioralUiCoverageRule.php\n?? .gating/tests/Unit/\n?? .gating/tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "afc3e25 Preserve consumer primary-key ownership in Objecting canon\nebfa9e7 Embed canonical Gating runtime for Objecting\n2c6514f Align Objecting integration contracts with field-pack canon\n4917a55 Harden Objecting field-pack canon guards\n4b04f45 Canonicalize Objecting field-pack column mappings"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codex-tmp/\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\n.yamllint.yml\nAGENTS.md\napply-objecting-phpstan-cleanup.ps1\ncomposer.json\ncomposer.lock\nconfig/\nconfig/services.yaml\ndocs/\ndocs/architecture/\ndocs/field-pack/\ndocs/integration/\ndocs/release/\nLICENSE\nmanifest.json\nObjecting.zip\nOBJECTING_QUALITY_CLEANUP_AUDIT.md\nOBJECTING_RC2_HARDENING_PLAN.md\nphpstan.neon\nphpunit.xml.dist\nphpunit.xsd\nREADME.md\nremove-objecting-obsolete-files.ps1\nresources/\nresources/audit/\nresources/consumer/\nresources/entity-kind/\nresources/field-pack/\nresources/release/\nresources/title-alias/\nsrc/\nsrc/Contract/\nsrc/Decision/\nsrc/DependencyInjection/\nsrc/Diagnostic/\nsrc/Embeddable/\nsrc/EntityInterface/\nsrc/EntityTrait/\nsrc/Factory/\nsrc/Inspector/\nsrc/InspectorInterface/\nsrc/Manifest/\nsrc/Normalizer/\nsrc/NormalizerInterface/\nsrc/ObjectBundle.php\nsrc/Packet/\nsrc/Registry/\nsrc/RegistryInterface/\nsrc/Report/\nsrc/Reporter/\nsrc/ReporterInterface/\nsrc/Resolver/\nsrc/ResolverInterface/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Surface/\nsrc/ValueObject/\nTENANT_LIFECYCLE_AUDIT.md\ntests/\ntests/Integration/\ntests/Support/\ntests/Unit/\ntool/\ntool/.inventory.ps1\ntool/run-workspace-entity-kind-audit.ps1\ntools/\ntools/audit/\ntools/inspection/\ntools/objecting-suffix-layer-full/\ntools/objecting-valueobject-suffix-layer/\ntools/test/\nvar/\nvar/.php-cs-fixer.cache\nvendor/\nvendor/autoload.php\nvendor/bin/\nvendor/clue/\nvendor/composer/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "675"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"objecting/object\",\n  \"description\": \"Objecting process app\",\n  \"type\": \"library\",\n  \"license\": \"MIT\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko\",\n      \"homepage\": \"https://smartresponsor.com\",\n      \"role\": \"Maintainer\"\n    }\n  ],\n  \"require\": {\n    \"doctrine/orm\": \"^3.3\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.0\",\n    \"symfony/dependency-injection\": \"^8.0\",\n    \"symfony/http-kernel\": \"^8.0\",\n    \"symfony/uid\": \"^8.0\",\n    \"symfony/yaml\": \"^8.0\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \">=3.95 <4.0\",\n    \"phpstan/phpstan\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.0 || ^12.0\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Objecting\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Objecting\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"test:canon\": \"@php tools/test/objecting_canon_check.php\",\n    \"test:responsibility-boundary\": \"@php tools/test/objecting_responsibility_boundary_check.php\",\n    \"test:semantic-manifest\": \"@php tools/test/objecting_semantic_manifest_check.php\",\n    \"test:lifecycle-identity-canon\": \"@php tools/test/objecting_lifecycle_identity_canon_check.php\",\n    \"test:production-diagnostics\": \"@php tools/test/objecting_production_diagnostic_check.php\",\n    \"test:package-surface\": \"@php tools/test/objecting_package_surface_check.php\",\n    \"test:migration-readiness\": \"@php tools/test/objecting_backend_migration_readiness_check.php\",\n    \"test:quality\": [\n      \"@test:canon\",\n      \"@test:responsibility-boundary\",\n      \"@test:semantic-manifest\",\n      \"@test:lifecycle-identity-canon\",\n      \"@test:production-diagnostics\",\n      \"@test:internal-types\",\n      \"@test:layer-suffix\",\n      \"@test:package-surface\",\n      \"@test:platform-constraints\",\n      \"@test:systemic-field-packs\",\n      \"@test:entity-kind-policy\",\n      \"@test:title-alias-hardening\",\n      \"@test:embeddable-initialization\",\n      \"@test:doctrine-mapping\",\n      \"@test:schema-mirror\",\n      \"@test:exposing-bridge\",\n      \"@test:backend-import\",\n      \"@test:backend-clone-cleanup\",\n      \"@test:backend-migration-command\",\n      \"@test:release-readiness\",\n      \"@test:rc-stabilization\",\n      \"@test:rc\",\n      \"@test:sibling-pilot-migration-handoff\",\n      \"@test:migration-transition-freeze\",\n      \"@test:release-closure\",\n      \"@test:migration-readiness\",\n      \"@test:backend-adoption\",\n      \"@test:backend-handoff\",\n      \"@test:backend-adoption-packet\"\n    ],\n    \"phpstan\": \"phpstan analyse src tests tools --memory-limit=1G\",\n    \"test\": \"phpunit --testdox\",\n    \"test:backend-adoption\": \"@php tools/test/objecting_backend_adoption_manifest_check.php\",\n    \"test:backend-handoff\": \"@php tools/test/objecting_backend_handoff_contract_check.php\",\n    \"test:release-readiness\": \"@php tools/test/objecting_release_readiness_check.php\",\n    \"test:release-closure\": \"@php tools/test/objecting_release_closure_check.php\",\n    \"test:backend-adoption-packet\": \"@php tools/test/objecting_backend_adoption_packet_check.php\",\n    \"test:embeddable-initialization\": \"@php tools/test/objecting_embeddable_initialization_check.php\",\n    \"test:doctrine-mapping\": \"@php tools/test/objecting_doctrine_mapping_contract_check.php\",\n    \"test:schema-mirror\": \"@php tools/test/objecting_schema_mirror_contract_check.php\",\n    \"test:exposing-bridge\": \"@php tools/test/objecting_exposing_bridge_contract_check.php\",\n    \"test:backend-import\": \"@php tools/test/objecting_backend_import_contract_check.php\",\n    \"test:rc-stabilization\": \"@php tools/test/objecting_rc_stabilization_check.php\",\n    \"test:rc\": \"@php tools/test/objecting_rc2_check.php\",\n    \"test:rc1\": \"@php tools/test/objecting_rc1_check.php\",\n    \"test:platform-constraints\": \"@php tools/test/objecting_platform_constraint_check.php\",\n    \"test:systemic-field-packs\": \"@php tools/test/objecting_systemic_field_pack_check.php\",\n    \"test:entity-kind-policy\": \"@php tools/test/objecting_entity_kind_policy_check.php\",\n    \"audit:entity-kinds\": \"@php tools/audit/object"
+    }
+  },
+  "verdict": {
+    "component": "objecting",
+    "summary": "Objecting remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 53132 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\objecting\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\objecting\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\objecting\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\objecting\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

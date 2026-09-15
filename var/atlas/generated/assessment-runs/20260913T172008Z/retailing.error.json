@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "retailing",
+  "title": "Retailing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-task-bank-loop.ps1 : Method invocation failed because \n[System.Security.Cryptography.SHA256] does not contain a method named 'HashData'.\nAt D:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:90 char:14\n+ $runnerRaw = & $taskBankRunner @runnerArgs\n+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [runner-task-bank-loop.ps1], RuntimeException\n    + FullyQualifiedErrorId : MethodNotFound,runner-task-bank-loop.ps1",
+  "registry_entry": {
+    "component_id": "retailing",
+    "component_title": "Retailing",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/retailing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Retailing",
+    "timestamp_utc": "2026-09-13T17:20:08.660271+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "engine/retailing-b47af5-rc"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "a32a3cfb5166326627684f840b7ad76e85068c85"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M CMCP_CHANGELOG.md\n M composer.json\n D tests/Unit/Enum/Retail/RetailKindTest.php\n?? bin/\n?? composer.prod.json\n?? config/bundles.php\n?? config/packages/\n?? config/reference.php\n?? src/Kernel.php\n?? tests/Unit/Enum/Retail/RetailingBehaviorTest.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "a32a3cf fix(retailing): align current Cruding contracts\na731eae fix(retailing): add executable PHP quality gates\n890930a docs: record Retailing RC integration\n52e4bfa docs: record Retailing RC verification\n751aac6 fix(retailing): align Cruding lifecycle contract"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/services.bundle.yaml\nconfig/services.fixtures.yaml\nconfig/services.yaml\nmigrations/\nmigrations/Version20260812223000.php\nmigrations/Version20260817104500.php\nmigrations/Version20260817132500.php\nmigrations/Version20260817141000.php\nmigrations/Version20260819184500.php\nmigrations/Version20260819223000.php\nmigrations/Version20260819235500.php\nmigrations/Version20260820060000.php\nmigrations/Version20260820063000.php\nphpstan.neon\nphpunit.xml.dist\nsrc/\nsrc/DataFixtures/\nsrc/DependencyInjection/\nsrc/Entity/\nsrc/Enum/\nsrc/Form/\nsrc/Kernel.php\nsrc/Repository/\nsrc/RetailingBundle.php\nsrc/Service/\nsrc/Subscriber/\nsrc/Value/\nsrc/View/\ntemplates/\ntemplates/retail/\ntests/\ntests/Unit/\ntool/\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvar/coverage.txt\nvar/phpstan/\nvar/phpunit/\nvendor/\nvendor/administering/\nvendor/api-platform/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/cataloging/\nvendor/clue/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/interfacing/\nvendor/locating/\nvendor/monolog/\nvendor/myclabs/\nvendor/navigating/\nvendor/nelmio/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/phpdocumentor/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/radebatz/\nvendor/react/\nvendor/sebastian/\nvendor/staabm/\nvendor/symfony/\nvendor/theseer/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "53"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"retailing/retail\",\n  \"description\": \"Retail marketplace product component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"cataloging/catalog\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"interfacing/interface\": \"dev-master\",\n    \"locating/location\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Retailing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Retailing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"repositories\": [\n    { \"type\": \"path\", \"url\": \"../Administering\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Cataloging\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Cruding\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Interfacing\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Locating\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Navigating\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Objecting\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Viewing\", \"options\": { \"symlink\": true } }\n  ],\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"php-cs-fixer fix\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"test\": \"phpunit\",\n    \"test:coverage\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage.txt --path-coverage\",\n    \"schema:parity\": [\n      \"php bin/console doctrine:schema:validate --env=test\",\n      \"php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"gate\": \"@php .gating/bin/gating check --target=.\"\n  }\n}\n"
+    }
+  }
+}

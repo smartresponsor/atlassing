@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "rolling",
+  "title": "Rolling",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-task-bank-loop.ps1 : Method invocation failed because \n[System.Security.Cryptography.SHA256] does not contain a method named 'HashData'.\nAt D:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:90 char:14\n+ $runnerRaw = & $taskBankRunner @runnerArgs\n+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [runner-task-bank-loop.ps1], RuntimeException\n    + FullyQualifiedErrorId : MethodNotFound,runner-task-bank-loop.ps1",
+  "registry_entry": {
+    "component_id": "rolling",
+    "component_title": "Rolling",
+    "github_repository": "smartresponsor/rolling",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/rolling/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Rolling",
+    "timestamp_utc": "2026-09-13T17:49:13.958913+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "cmcp/engine-20260911155012-rolling-local-reconcile"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "5af5e52b8fc180231298ff8db3d39db310fc8c08"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '5af5e52b8fc180231298ff8db3d39db310fc8c08'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "5af5e52 Record Rolling RC acceptance\n1edfee1 Harden Rolling Symfony 8.1 platform floor\n0fd84b9 Verify Rolling after local reconciliation\n47fd6be Close Rolling final acceptance regression\n282da90 Canonize Rolling permission DTO contour"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/Rolling.iml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.php\nAGENTS.md\nbin/\nbin/autoload-continuity-audit.php\nbin/bootstrap-preflight.php\nbin/bootstrap-runtime-requirements.php\nbin/canon-scan.php\nbin/namespace-audit.php\nbin/no-namespace-audit.php\nbin/php-lint-all.php\nbin/php82-cs-fixer.php\nbin/role-admin.php\nbin/role-batch-perf.php\nbin/role-bench.php\nbin/role-janitor.php\nbin/role-policy.php\nbin/role-rebac.php\nCMCP_CHANGELOG.md\ncompose.yaml\ncomposer.json\ncomposer.lock\nconfig/\nconfig/audit.example.yaml\nconfig/component/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/role/\nconfig/role_attributes.yaml\nconfig/role_permissions.json\nconfig/role_shadow.yaml\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\ndeploy/\ndeploy/compose/\ndeploy/docker/\ndeploy/README.md\ndocs/\ndocs/admin/\ndocs/admin-4eyes.md\ndocs/admin.md\ndocs/admin_api_cli.md\ndocs/adr/\ndocs/api.http\ndocs/approval/\ndocs/architecture/\ndocs/attributes.md\ndocs/audit-explain-v2.md\ndocs/audit.md\ndocs/bulk.md\ndocs/cache/\ndocs/canon/\ndocs/CHANGELOG.md\ndocs/component/\ndocs/consistency.md\ndocs/consistency_tokens.md\ndocs/context_enricher.md\ndocs/CONTRIBUTING.md\ndocs/explain.md\ndocs/g9-lint-diff.md\ndocs/integrations.md\ndocs/local_stack.md\ndocs/model/\ndocs/obligation/\ndocs/obligations/\ndocs/obligations-masking.md\ndocs/opa_adapter.md\ndocs/openapi/\ndocs/pdp/\ndocs/pdp-cache.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "919"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"rolling/role\",\n  \"description\": \"Rolling role Symfony bundle package\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"MIT\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-ctype\": \"*\",\n    \"ext-curl\": \"*\",\n    \"ext-json\": \"*\",\n    \"ext-mbstring\": \"*\",\n    \"ext-openssl\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"configuring/config\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.0\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"psr/simple-cache\": \"^3.0\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/event-dispatcher\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-csrf\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.24\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"dbrekelmans/bdi\": \"^1.4.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/var-dumper\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Rolling\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Rolling\\\\Tests\\\\\": \"tests/\",\n      \"Rolling\\\\SDK\\\\V2\\\\\": \"SDK/php/\"\n    },\n    \"exclude-from-classmap\": [\n      \"tests/SDK/PHP/psr_stubs.php\"\n    ]\n  },\n  \"scripts\": {\n    \"canon:scan\": \"@php bin/canon-scan.php\",\n    \"canon:namespace-audit\": \"@php bin/namespace-audit.php\",\n    \"canon:no-namespace-audit\": \"@php bin/no-namespace-audit.php\",\n    \"canon:autoload-audit\": \"@php bin/autoload-continuity-audit.php\",\n    \"recovery:bootstrap-preflight\": \"@php tools/qa/bootstrap-preflight-report.php\",\n    \"recovery:dependency-readiness\": \"@php tools/qa/dependency-readiness.php\",\n    \"recovery:audits\": \"@php tools/qa/recovery-audits.php\",\n    \"recovery:readiness-smoke\": \"@php tools/qa/readiness-smoke.php\",\n    \"recovery:operator-preflight\": \"@php tools/qa/operator-preflight.php\",\n    \"recovery:current-summary\": \"@php tools/qa/current-summary.php\",\n    \"test\": [\n      \"@php tools/qa/phpunit-junit-gate.php unit-role-a tests/Role/Acl tests/Role/Administration tests/Role/Audit tests/Role/Batch tests/Role/Consistency --no-output\",\n      \"@php tools/qa/phpunit-junit-gate.php unit-role-b tests/Role/Console --no-output\",\n      \"@php tools/qa/phpunit-junit-gate.php unit-role-c tests/Role/Context tests/Role/Housekeeping tests/Role/Http tests/Role/Model tests/Role/Observability tests/Role/Opa tests/Role/Policy tests/Role/Rebac tests/Role/Resilience --no-output\",\n      \"@php tools/qa/phpunit-junit-gate.php unit-sdk tests/SDK --no-output\"\n    ],\n    \"host-smoke\": \"@php tools/qa/phpunit-junit-gate.php host-smoke --testsuite=e2e --filter=KernelAccessTest --do-not-fail-on-risky\",\n    \"lint\": [\n      \"@php tools/qa/php-lint.php\"\n    ],\n    \"phpstan\": \"vendor/bin/phpstan analyse --memory-limit=1G\",\n    \"cs:check\": \"vendor/bin/php-cs-fixer fix --allow-risky=yes --dry-run --diff --verbose\",\n    \"cs:fix\": \"vendor/bin/php-cs-fixer fix --allow-risky=yes --verbose\",\n    \"qa\": [\n      \"@lint\",\n      \"@phpstan\",\n      \"@test\",\n      \"@host-smoke\",\n      \"@surface:audit\",\n      \"@symfony81:audit\",\n      \"@http-payload:audit\",\n      \"@docblock:coverage\",\n      \"@checkbox-form:audit\",\n      \"@cruding-resource-readiness-audit\",\n      \"@easyadmin-surface:audit\",\n      \"@objecting:adoption:audit\",\n      \"@solid-canon:audit\"\n    ],\n    \"surface:audit\": \"@php tools/qa/rolling-surface-audit.php\",\n    \"symfony81:audit\": \"@php tools/qa/rolling-symfony81-audit.php\",\n    \"http-payload:audit\": \"@p",
+      "package.json": "{\n  \"name\": \"rolling-local-qa\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:e2e\": \"playwright test\",\n    \"test:e2e:headed\": \"playwright test --headed\",\n    \"playwright:install\": \"playwright install --with-deps chromium\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\"\n  }\n}\n"
+    }
+  }
+}

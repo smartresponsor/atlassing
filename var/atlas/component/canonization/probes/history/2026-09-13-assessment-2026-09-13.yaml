@@ -1,0 +1,198 @@
+component: canonization
+title: Canonization
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T09:58:40.402434+00:00'
+repo_target:
+  github_repository: ''
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 6.5
+    summary: 1 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: .canonization
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: .canonization/Governance/Architecture/CANONICAL_RULES_JOURNAL.md
+    evidence:
+    - .canonization
+    - .canonization/Governance/Architecture/CANONICAL_RULES_JOURNAL.md
+    - AGENTS.md
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected repository segment: src/.'
+    - 'Missing expected repository segment: tests/.'
+    findings:
+    - severity: warn
+      id: missing_vertical_segment
+      detail: 'Missing expected repository segment: src/.'
+    - severity: warn
+      id: missing_vertical_segment
+      detail: 'Missing expected repository segment: tests/.'
+    evidence:
+    - .canonization/Governance/Architecture/Rule/Canon009ComponentHostBoundaryRule.md
+    - .canonization/Governance/Architecture/Rule/Canon012TypedBoundaryContractRule.md
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No Docker or compose files were detected.
+    findings:
+    - severity: warn
+      id: docker_surface_missing
+      detail: No Docker or compose files were detected.
+    evidence:
+    - .canonization/Governance/Architecture/CANONICAL_RULES_JOURNAL.md
+    - .deploy/MANIFEST.md
+    - .gate/policy/acceptable/root-contract-fail-proposal.yml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: fail
+    score: 6.5
+    summary: 1 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - tests/ directory is missing.
+    - No fixtures directories were detected.
+    findings:
+    - severity: fail
+      id: tests_missing
+      detail: tests/ directory is missing.
+    - severity: warn
+      id: fixtures_missing
+      detail: No fixtures directories were detected.
+    evidence:
+    - .canonization/Governance/Architecture/CANONICAL_RULES_JOURNAL.md
+    - .canonization/Governance/Architecture/GUARD_MATRIX.md
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    evidence:
+    - .canonization/Governance/Architecture/Rule/Canon038ConfigYamlSubjectPrefixRule.md
+    - .github/workflows
+    - README.md
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .deploy/MANIFEST.md
+    - .deploy/docker/MANIFEST.md
+    - .github/workflows/consuming.yml
+    - .github/workflows/gate.yml
+    - .github/workflows/intelligence-codex-pr.yml
+    - .github/workflows/intelligence-dispatch.yml
+    - .ide/sr_default_inspector.xml
+    - AGENTS.md
+    - MANIFEST.json
+    - README.md
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence: []
+summary:
+  overall_status: fail
+  average_score: 8.43
+  status_counts:
+    pass: 2
+    warn: 3
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - 'Architecture & Boundaries — Missing expected repository segment: src/.'
+  - 'Architecture & Boundaries — Missing expected repository segment: tests/.'
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - QA & Behavioral Assurance — tests/ directory is missing.
+  - QA & Behavioral Assurance — No fixtures directories were detected.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 6.5
+      summary: 1 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected repository segment: src/.'
+      - 'Missing expected repository segment: tests/.'
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: fail
+      score: 6.5
+      summary: 1 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - tests/ directory is missing.
+      - No fixtures directories were detected.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []

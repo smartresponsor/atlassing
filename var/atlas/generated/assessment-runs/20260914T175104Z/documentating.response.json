@@ -1,0 +1,606 @@
+{
+  "ok": true,
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "documentating",
+  "verdict": {
+    "component": "documentating",
+    "summary": "Documentating is a mature documentation and publication repository with a clearly automated Antora build path, deterministic content verification, GitHub Pages deployment, and an integrated Quality Atlas workflow; its main readiness gaps are the very large dirty working tree, absence of tagged releases, and limited evidence for external market validation or deeper non-content runtime testing.",
+    "strengths": [
+      "Canonical Antora source and generated publication structure are both present.",
+      "Content verification is exposed through npm test and enforced in the GitHub Pages workflow.",
+      "GitHub Pages publication is fully automated from verification through Antora build and deployment.",
+      "Quality Atlas assessment has its own scheduled and manually dispatchable workflow.",
+      "Repository contains explicit governance, gate, deployment, release, smoke, and orchestration support directories."
+    ],
+    "risks": [
+      "The working tree contains a very large set of modified and untracked files, reducing release-state clarity.",
+      "No exact Git tag is present at the assessed commit, so release provenance is weaker than the build automation.",
+      "The supplied evidence demonstrates content-contract verification but not broad behavioral or end-to-end test depth.",
+      "External adoption, audience traction, or market validation is not evidenced by the supplied repository facts."
+    ],
+    "next_actions": [
+      "Reconcile the current modified and untracked files into intentional commits or generated-artifact cleanup so the repository returns to a reviewable clean baseline.",
+      "Introduce an explicit tagged release policy for publication milestones.",
+      "Add or evidence end-to-end validation of the generated site beyond the current content-contract verification.",
+      "Document measurable publication consumers or adoption signals if market maturity is intended to be scored above internal-platform readiness."
+    ],
+    "notes": [
+      "Assessment is based only on the deterministic repository facts and excerpts embedded in the authoritative prompt.",
+      "The repository is documentation-centric, so runtime scoring reflects build and publication execution rather than a long-running application service.",
+      "No PHP application manifest or PHPUnit/PHPStan configuration is present; this is not treated as a defect because the evidenced implementation is Node, Python, and Antora based."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "package.json",
+      ".github/workflows/gh-pages.yml",
+      ".github/workflows/quality-atlas-assessment.yml",
+      ".antora-src/antora.yml",
+      ".antora-src/modules/ROOT/nav.adoc",
+      ".antora-src/modules/ROOT/pages/index.adoc",
+      ".gate/",
+      ".deploy/",
+      ".release/",
+      ".smoke/"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.7,
+      "architecture": 8.6,
+      "runtime": 8.1,
+      "qa": 8.4,
+      "ops": 8.8,
+      "market": 7.4,
+      "overall": 8.4
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Documentating has a clear product identity as a canonical documentation and publication system built around Antora, with explicit content verification and owner-facing publication workflows.",
+        "risks": [
+          "External user adoption or audience traction is not evidenced in the supplied facts."
+        ],
+        "improvements": [
+          "Add measurable publication-consumer or audience evidence if product maturity is intended to include external validation."
+        ],
+        "evidence": [
+          "package.json",
+          ".antora-src/antora.yml",
+          ".antora-src/modules/ROOT/pages/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "The repository shows strong architectural separation between canonical content, build tooling, governance, deployment, release, smoke, and generated-site concerns.",
+        "risks": [
+          "A very large dirty working tree obscures the distinction between intentional source changes and generated or pending state."
+        ],
+        "improvements": [
+          "Restore a clean baseline and keep generated-state ownership explicit so architectural boundaries remain auditable."
+        ],
+        "evidence": [
+          ".antora-src/",
+          ".gate/",
+          ".deploy/",
+          ".release/",
+          ".smoke/",
+          ".commanding/"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime maturity is solid for a documentation system: the repository defines reproducible verification, canonical-site generation, Antora rendering, and static publication rather than a persistent application runtime.",
+        "risks": [
+          "The supplied evidence does not demonstrate performance, failure-mode, or recovery testing of the publication pipeline."
+        ],
+        "improvements": [
+          "Add explicit smoke or end-to-end checks against the generated site and publication result."
+        ],
+        "evidence": [
+          "package.json",
+          ".github/workflows/gh-pages.yml",
+          ".site_build/",
+          ".smoke/"
+        ]
+      },
+      "qa": {
+        "summary": "Quality assurance is well established through a deterministic content-contract test invoked by npm test and enforced before the canonical Antora build in CI.",
+        "risks": [
+          "Evidence is concentrated on content-contract verification and does not establish broad behavioral or browser-level test coverage."
+        ],
+        "improvements": [
+          "Extend verification with generated-site integrity and end-to-end publication checks."
+        ],
+        "evidence": [
+          "package.json",
+          ".github/workflows/gh-pages.yml",
+          "tools/verify_documentating_contract.py"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity is strong, with automated GitHub Pages deployment, concurrency controls, explicit dependency setup, scheduled Quality Atlas assessment, and dedicated deployment and release structures.",
+        "risks": [
+          "The assessed commit has no exact Git tag and the working tree is heavily modified, weakening operational release traceability."
+        ],
+        "improvements": [
+          "Adopt tagged publication milestones and reconcile the dirty tree before release-candidate assertions."
+        ],
+        "evidence": [
+          ".github/workflows/gh-pages.yml",
+          ".github/workflows/quality-atlas-assessment.yml",
+          ".deploy/",
+          ".release/"
+        ]
+      },
+      "market": {
+        "summary": "The repository demonstrates a coherent internal and owner-facing documentation product, but the supplied facts do not establish external demand, adoption, or competitive market validation.",
+        "risks": [
+          "Market alignment above internal ecosystem utility would be speculative without usage or audience evidence."
+        ],
+        "improvements": [
+          "Capture readership, downstream consumers, integrations, or other measurable adoption indicators."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/index.adoc",
+          ".site_build/",
+          ".github/workflows/gh-pages.yml"
+        ]
+      },
+      "overall": {
+        "summary": "Documentating is a solid-to-strong release candidate for its documentation-platform role, with mature build, verification, publication, and assessment automation; release hygiene and broader validation evidence are the main remaining constraints.",
+        "risks": [
+          "Large uncommitted repository state and missing release tags reduce confidence in a reproducible release baseline.",
+          "Testing evidence remains narrower than the otherwise mature build and operations footprint."
+        ],
+        "improvements": [
+          "Normalize the working tree, establish tagged releases, and add end-to-end generated-site validation."
+        ],
+        "evidence": [
+          "package.json",
+          ".github/workflows/gh-pages.yml",
+          ".github/workflows/quality-atlas-assessment.yml",
+          ".antora-src/",
+          ".gate/",
+          ".deploy/",
+          ".release/",
+          ".smoke/"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "tool/runner-task-bank-loop.ps1",
+    "promptMode": "raw",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\documentating.prompt.txt",
+    "chatId": "6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+    "targetId": "6B85629923B9543ACE007FEB699EF43C",
+    "acceptanceStatus": "M3_ACCEPTANCE_FAIL",
+    "acceptanceFailures": [
+      "target_repo_not_clean"
+    ],
+    "acceptanceArtifactPath": "D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\var\\runner\\task-bank\\acceptance\\repo-smoke-20260914175105-6d22dc1f56-20260914T175217Z.acceptance.json",
+    "cleanup": {
+      "ok": false,
+      "status": "CHATGPT_CHAT_DELETE_NEEDS_REVIEW",
+      "expected_chat_id": "6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+      "selected": {
+        "port": 9223,
+        "id": "6B85629923B9543ACE007FEB699EF43C",
+        "type": "page",
+        "title": "Quality Atlas Assessment",
+        "url": "https://chatgpt.com/c/6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+        "chat_id": "6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+        "has_web_socket_debugger_url": true
+      },
+      "delete": {
+        "ok": true,
+        "status": "CHAT_SOFT_DELETED",
+        "expected_chat_id": "6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+        "close_target": true,
+        "before_http_status": 200,
+        "before_body_preview": null,
+        "patch_http_status": 200,
+        "patch_http_status_text": "",
+        "patch_body_preview": null,
+        "auth_session_http_status": 200,
+        "auth_token_present": true,
+        "href": "https://chatgpt.com/c/6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+        "title": "Quality Atlas Assessment"
+      },
+      "target_close": {
+        "ok": true,
+        "status": "TARGET_CLOSE_REQUESTED",
+        "target_id": "6B85629923B9543ACE007FEB699EF43C",
+        "port": 9223,
+        "body": "Target is closing"
+      },
+      "after": {
+        "ports": [
+          9222,
+          9223
+        ],
+        "attempts": [
+          {
+            "port": 9222,
+            "ok": false,
+            "error": "connect ECONNREFUSED 127.0.0.1:9222"
+          },
+          {
+            "port": 9223,
+            "ok": true,
+            "target_count": 38
+          }
+        ],
+        "total_chatgpt_targets": 38,
+        "empty_home_count": 0,
+        "chat_target_count": 37,
+        "unique_chat_id_count": 37,
+        "duplicate_chat_id_count": 0,
+        "duplicate_chat_ids": [],
+        "empty_home_targets": [],
+        "targets": [
+          {
+            "port": 9223,
+            "id": "6B85629923B9543ACE007FEB699EF43C",
+            "type": "page",
+            "title": "Quality Atlas Assessment",
+            "url": "https://chatgpt.com/c/6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+            "chat_id": "6aa83417-65b8-83ea-9ac7-ee00eeabef9b",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "0C765285DFDFD12ECAC666110F7AC8D1",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/#settings/Plugins/plugin_asdk_app_6a387987d2f881918ffe72c70002307c",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "0A56BB8014C71374F20A2C1B93646E35",
+            "type": "page",
+            "title": "Adjudication Implementation Status",
+            "url": "https://chatgpt.com/c/6aa7bcad-2c8c-83ea-8c57-f061839b7d44",
+            "chat_id": "6aa7bcad-2c8c-83ea-8c57-f061839b7d44",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "54DCF5D523DB941DB3C2191C54F69FB9",
+            "type": "page",
+            "title": "Индексация RC hardening",
+            "url": "https://chatgpt.com/c/6aa7bc03-4a4c-83ea-94b1-a47559ee452d",
+            "chat_id": "6aa7bc03-4a4c-83ea-94b1-a47559ee452d",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "5AC463775B78541457F6080BE0D5510D",
+            "type": "page",
+            "title": "Discovering RC Analysis",
+            "url": "https://chatgpt.com/c/6aa7bb71-3f14-83e9-82f1-492fb15a469b",
+            "chat_id": "6aa7bb71-3f14-83e9-82f1-492fb15a469b",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "7EF2CFC4ACAB677C19A3950B20AAACD4",
+            "type": "page",
+            "title": "Objecting Migration Complete",
+            "url": "https://chatgpt.com/c/6aa7ba3e-622c-83ea-b2fb-7488e5a1117b",
+            "chat_id": "6aa7ba3e-622c-83ea-b2fb-7488e5a1117b",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "9706C8186AAB66E00CC9B976EBE2C1BA",
+            "type": "page",
+            "title": "Repository Implementation",
+            "url": "https://chatgpt.com/c/6aa7b911-bf70-83ea-8497-6e1baa1c7961",
+            "chat_id": "6aa7b911-bf70-83ea-8497-6e1baa1c7961",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "6EAEBA11F6BAECDC565234DA5ACE92FF",
+            "type": "page",
+            "title": "Repository implementation status",
+            "url": "https://chatgpt.com/c/6aa7b888-70f0-83e9-8844-be1f592a3d0e",
+            "chat_id": "6aa7b888-70f0-83e9-8844-be1f592a3d0e",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "A984AD1630AEED600AF3B970F3C81B45",
+            "type": "page",
+            "title": "Interfacing Implementation Pass",
+            "url": "https://chatgpt.com/c/6aa7b76b-b584-83ea-94a7-13c0ee5432ca",
+            "chat_id": "6aa7b76b-b584-83ea-94a7-13c0ee5432ca",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "047E8796DA2D0A6D8E6EE1B2AB276B47",
+            "type": "page",
+            "title": "Navigation implementation complete",
+            "url": "https://chatgpt.com/c/6aa7b672-7420-83ea-abfa-6d2de111abed",
+            "chat_id": "6aa7b672-7420-83ea-abfa-6d2de111abed",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "14C97F96B32D0AC883D8D5F5848B72B4",
+            "type": "page",
+            "title": "Addressing RC checkpoint",
+            "url": "https://chatgpt.com/c/6aa7b5f9-1f68-83ea-9247-ff56e11e6f99",
+            "chat_id": "6aa7b5f9-1f68-83ea-9247-ff56e11e6f99",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "2321A42335E5305A1EDDA87AD83D9921",
+            "type": "page",
+            "title": "Observability Migration Status",
+            "url": "https://chatgpt.com/c/6aa7b506-5b4c-83ea-b1fb-b3005a7f4c20",
+            "chat_id": "6aa7b506-5b4c-83ea-b1fb-b3005a7f4c20",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "FF959DC42DB5A05AE40504B7EA418E4E",
+            "type": "page",
+            "title": "Repository Analysis and Implementation",
+            "url": "https://chatgpt.com/c/6aa7b488-08a0-83ea-a3db-668b8f002a7e",
+            "chat_id": "6aa7b488-08a0-83ea-a3db-668b8f002a7e",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "8AEE9B5FE483ED4415920F084984F743",
+            "type": "page",
+            "title": "Paging implementation review",
+            "url": "https://chatgpt.com/c/6aa7b397-494c-83ea-8e33-e91a36d03edf",
+            "chat_id": "6aa7b397-494c-83ea-8e33-e91a36d03edf",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "CEC858063FDD598A3C7E7C1451282B71",
+            "type": "page",
+            "title": "Commissioning implementation summary",
+            "url": "https://chatgpt.com/c/6aa7b31e-12d4-83ea-9781-5eedeccffa6c",
+            "chat_id": "6aa7b31e-12d4-83ea-9781-5eedeccffa6c",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "D735026D6295D9C2C2796B28D91ABC69",
+            "type": "page",
+            "title": "Domaining Contract Hardening",
+            "url": "https://chatgpt.com/c/6aa7b2a1-3684-83ea-9ce0-79ea17b25810",
+            "chat_id": "6aa7b2a1-3684-83ea-9ce0-79ea17b25810",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "CFE5B226D20AC354103CCFC8C3B17C1D",
+            "type": "page",
+            "title": "Repository implementation",
+            "url": "https://chatgpt.com/c/6aa7b162-a264-83e9-92c1-49295f4eb36f",
+            "chat_id": "6aa7b162-a264-83e9-92c1-49295f4eb36f",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "1817BFD836F10711BF7BE2EDF235B108",
+            "type": "page",
+            "title": "Анализ Notifying",
+            "url": "https://chatgpt.com/c/6aa7b0f9-f1cc-83e9-a79f-46880519da24",
+            "chat_id": "6aa7b0f9-f1cc-83e9-a79f-46880519da24",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "50A80B1047E0E68EC5624C7AF625D743",
+            "type": "page",
+            "title": "Casing Implementation Complete",
+            "url": "https://chatgpt.com/c/6aa7b09d-b8c4-83e9-b736-3453ff41ddcc",
+            "chat_id": "6aa7b09d-b8c4-83e9-b736-3453ff41ddcc",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "6439F9122CCA380338BC8BD9777B49AC",
+            "type": "page",
+            "title": "Currencing RC Checkpoint",
+            "url": "https://chatgpt.com/c/6aa7b024-9a98-83e9-be00-6385a71b9f9c",
+            "chat_id": "6aa7b024-9a98-83e9-be00-6385a71b9f9c",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "798D3526E4E6E2018F4AD88379CE2367",
+            "type": "page",
+            "title": "Repository implementation complete",
+            "url": "https://chatgpt.com/c/6aa7afc9-dd50-83ea-bbb1-ebc30da5dfc2",
+            "chat_id": "6aa7afc9-dd50-83ea-bbb1-ebc30da5dfc2",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "2EF55171C67F0125C9D24FDC9791D7EB",
+            "type": "page",
+            "title": "Анализ репозитория Atlassing",
+            "url": "https://chatgpt.com/c/6aa7af71-d7c0-83ea-908e-7f7d6df41dd4",
+            "chat_id": "6aa7af71-d7c0-83ea-908e-7f7d6df41dd4",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "58B4929855F811B26010A3E348ADC3B0",
+            "type": "page",
+            "title": "Implement sort normalization",
+            "url": "https://chatgpt.com/c/6aa7af17-3918-83e9-941b-ce067921f2c0",
+            "chat_id": "6aa7af17-3918-83e9-941b-ce067921f2c0",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "A45322EDC63451B6BF6FDDE7D5F11D5C",
+            "type": "page",
+            "title": "Harden Tabling package",
+            "url": "https://chatgpt.com/c/6aa7aebd-0a18-83ea-b168-a4805425d302",
+            "chat_id": "6aa7aebd-0a18-83ea-b168-a4805425d302",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "8A4533E09AA779EEE82855174EADAE62",
+            "type": "page",
+            "title": "Repository implementation",
+            "url": "https://chatgpt.com/c/6aa7adf7-b3a0-83e9-b76c-9f3e68bd34e5",
+            "chat_id": "6aa7adf7-b3a0-83e9-b76c-9f3e68bd34e5",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "33CC7D080C57427E084CA841CB432F38",
+            "type": "page",
+            "title": "Faceting Hardening Verification",
+            "url": "https://chatgpt.com/c/6aa7ad9d-7e64-83e9-8d21-8c64e01cd1c7",
+            "chat_id": "6aa7ad9d-7e64-83e9-8d21-8c64e01cd1c7",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "207E05B0C0C8E8811F64FDAA5487EF9B",
+            "type": "page",
+            "title": "Withdrawing RC checkpoint",
+            "url": "https://chatgpt.com/c/6aa7ad3b-a0c0-83ea-8182-b12e15d4d416",
+            "chat_id": "6aa7ad3b-a0c0-83ea-8182-b12e15d4d416",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "41E787A1FC722D6D3563F60E7E77B472",
+            "type": "page",
+            "title": "Merchandising implementation verification",
+            "url": "https://chatgpt.com/c/6aa7ace2-f2a8-83ea-8c33-d90dfe18bb83",
+            "chat_id": "6aa7ace2-f2a8-83ea-8c33-d90dfe18bb83",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "9181AD643FC6552F13F258A51B4086B4",
+            "type": "page",
+            "title": "Retailing RC Checkpoint",
+            "url": "https://chatgpt.com/c/6aa7ac48-756c-83ea-a69a-fcb405913fed",
+            "chat_id": "6aa7ac48-756c-83ea-a69a-fcb405913fed",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "83018FBA3D3065B28192450245657417",
+            "type": "page",
+            "title": "Repository hardening complete",
+            "url": "https://chatgpt.com/c/6aa7abe9-d58c-83e9-b5b5-badd42ea8171",
+            "chat_id": "6aa7abe9-d58c-83e9-b5b5-badd42ea8171",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "FD9DB3B506E29FBFF121DDD85145F702",
+            "type": "page",
+            "title": "Cruding RC integration завершён",
+            "url": "https://chatgpt.com/c/6aa7ab9d-f6a8-83ea-a01b-97ab868edd53",
+            "chat_id": "6aa7ab9d-f6a8-83ea-a01b-97ab868edd53",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "56F096A153BCEC1E605BFCA545805792",
+            "type": "page",
+            "title": "Streaming RC Tooling",
+            "url": "https://chatgpt.com/c/6aa7ab4f-3cc8-83ea-8f96-202f89aaa4fb",
+            "chat_id": "6aa7ab4f-3cc8-83ea-8f96-202f89aaa4fb",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "B0AE5F40E40D0E52B766A03B7AADD271",
+            "type": "page",
+            "title": "Complying RC Hardening",
+            "url": "https://chatgpt.com/c/6aa7ab02-3870-83ea-b5be-3ca7b7bf8e2f",
+            "chat_id": "6aa7ab02-3870-83ea-b5be-3ca7b7bf8e2f",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "F7E57DF54F0DDEB0F765CA85E13C8516",
+            "type": "page",
+            "title": "Facting verification complete",
+            "url": "https://chatgpt.com/c/6aa7aab7-912c-83e9-b569-582ac3ebdb65",
+            "chat_id": "6aa7aab7-912c-83e9-b569-582ac3ebdb65",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "A6062AE016E828F23BD25E629560D43F",
+            "type": "page",
+            "title": "Carting RC checkpoint",
+            "url": "https://chatgpt.com/c/6aa7aa68-0ee8-83ea-bc18-c328077e9d7e",
+            "chat_id": "6aa7aa68-0ee8-83ea-bc18-c328077e9d7e",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "E6E1169FB70F567AE9E7793155FEF830",
+            "type": "page",
+            "title": "Subscripting Implementation Summary",
+            "url": "https://chatgpt.com/c/6aa7aa1c-ae7c-83ea-807a-e7cab2e6a574",
+            "chat_id": "6aa7aa1c-ae7c-83ea-807a-e7cab2e6a574",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "F1932FB13731FDA48BD57562F0DE4890",
+            "type": "page",
+            "title": "Реализация зависимостей",
+            "url": "https://chatgpt.com/c/6aa7a9d4-f6f8-83ea-a809-4fd93db6506b",
+            "chat_id": "6aa7a9d4-f6f8-83ea-a809-4fd93db6506b",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "1645F10A9BACB55D4A60CEBBF817FF7A",
+            "type": "page",
+            "title": "Messaging implementation status",
+            "url": "https://chatgpt.com/c/6aa6f034-04b4-83ea-bf51-6bd00992f09e",
+            "chat_id": "6aa6f034-04b4-83ea-bf51-6bd00992f09e",
+            "has_web_socket_debugger_url": true
+          }
+        ]
+      },
+      "still_visible": true,
+      "policy": {
+        "browser_mutation": true,
+        "chatgpt_host_only": true,
+        "deletes_chat": true,
+        "soft_delete_via_backend_api": true,
+        "requires_confirm_delete": true,
+        "requires_expected_chat_id": true,
+        "writes_input": false,
+        "submits_input": false
+      },
+      "tool": "console.write.browser.chatgpt.chat.delete.execute",
+      "bridge": {
+        "ok": false,
+        "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "requestTimeoutMs": 120000
+      },
+      "envBootstrap": {
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "tokenPresent": true,
+        "tokenSource": "env"
+      }
+    }
+  }
+}

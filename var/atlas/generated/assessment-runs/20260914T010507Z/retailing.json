@@ -1,0 +1,268 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "retailing",
+    "component_title": "Retailing",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/retailing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Retailing",
+    "timestamp_utc": "2026-09-14T01:05:07.214081+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "engine/retailing-debt-hardening-20260913"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "c4d9f06bc52488e4f4f31f5599294631bb7f5957"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M CMCP_CHANGELOG.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "c4d9f06 Retailing RC: canonical topology and standalone acceptance (#7)\n1bb5560 Merge pull request #6 from smartresponsor/engine/retailing-b47af5-rc\na32a3cf fix(retailing): align current Cruding contracts\na731eae fix(retailing): add executable PHP quality gates\n9f5d59d Merge pull request #5 from smartresponsor/engine/retailing-b47af5-rc"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/retail_services_bundle.yaml\nconfig/retail_services_fixtures.yaml\nconfig/services.yaml\nmigrations/\nmigrations/Version20260812223000.php\nmigrations/Version20260817104500.php\nmigrations/Version20260817132500.php\nmigrations/Version20260817141000.php\nmigrations/Version20260819184500.php\nmigrations/Version20260819223000.php\nmigrations/Version20260819235500.php\nmigrations/Version20260820060000.php\nmigrations/Version20260820063000.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage-lock.json\npackage.json\nphpstan.neon\nphpunit.xml.dist\nplaywright.config.ts\nsrc/\nsrc/DataFixtures/\nsrc/DependencyInjection/\nsrc/Entity/\nsrc/Enum/\nsrc/EventSubscriber/\nsrc/Factory/\nsrc/Form/\nsrc/Kernel.php\nsrc/Normalizer/\nsrc/Provider/\nsrc/Repository/\nsrc/RetailingBundle.php\nsrc/Service/\nsrc/ValueObject/\ntemplates/\ntemplates/retail/\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/Ui/\ntests/Unit/\ntool/\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvar/coverage.txt\nvar/phpstan/\nvar/phpunit/\nvar/retailing-factory-gitkeep.tmp\nvendor/\nvendor/administering/\nvendor/api-platform/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/cataloging/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/interfacing/\nvendor/locating/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "56"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"retailing/retail\",\n  \"description\": \"Retail marketplace product component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"cataloging/catalog\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"interfacing/interface\": \"dev-master\",\n    \"locating/location\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.3\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Retailing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Retailing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"repositories\": [\n    { \"type\": \"path\", \"url\": \"../Administering\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Cataloging\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Cruding\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Collectioning\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Tabling\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Interfacing\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Locating\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Navigating\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Objecting\", \"options\": { \"symlink\": true } },\n    { \"type\": \"path\", \"url\": \"../Viewing\", \"options\": { \"symlink\": true } }\n  ],\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"php-cs-fixer fix\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"test\": \"phpunit\",\n    \"test:coverage\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage.txt --path-coverage\",\n    \"schema:parity\": [\n      \"php bin/console doctrine:schema:validate --env=test\",\n      \"php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"gate\": \"@php .gating/bin/gating check --target=.\"\n  }\n}\n",
+      "package.json": "{\n  \"name\": \"retailing-ui-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"playwright:install\": \"playwright install chromium\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.55.0\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "retailing",
+    "summary": "Retailing has moved beyond bootstrap status into a credible RC-oriented Symfony 8.1 component with explicit ecosystem dependencies, database migrations, executable PHP quality gates, UI testing infrastructure, and recent canonical-topology hardening; remaining concerns are an unclean working tree, lack of an exact release tag, limited evidenced production-operability controls, and incomplete repository-level documentation evidence.",
+    "strengths": [
+      "Symfony 8.1 and PHP 8.4 baseline is explicit and current.",
+      "Recent commits show focused RC hardening, canonical topology work, Cruding contract alignment, and executable quality-gate work.",
+      "Repository includes PHPStan, PHPUnit, PHP-CS-Fixer, schema parity checks, centralized Gating integration, and Playwright UI tests.",
+      "Component dependencies are explicitly integrated with Smartresponsor ecosystem packages through dev-master path repositories.",
+      "Persistence evolution is represented by multiple Doctrine migrations and schema validation scripts."
+    ],
+    "risks": [
+      "Git working tree is not clean because CMCP_CHANGELOG.md is modified.",
+      "Current commit has no exact Git tag, reducing evidence of formal release packaging.",
+      "No concrete observability, alerting, deployment, rollback, or production runtime controls are evidenced by the supplied facts.",
+      "Repository-specific Antora navigation and index documentation are not evidenced.",
+      "Product-market validation is only weakly evidenced by repository metadata and cannot be strongly scored from code facts alone."
+    ],
+    "next_actions": [
+      "Restore a clean working tree before declaring the current commit an RC baseline.",
+      "Run and archive the full composer gate, PHPStan, PHPUnit, schema parity, and Playwright results against the exact RC commit.",
+      "Create a formal release tag only after all acceptance gates pass.",
+      "Add or expose concise component documentation covering responsibility boundary, integration contracts, runtime expectations, and release procedure.",
+      "Document production-operability expectations such as logging, monitoring, deployment, rollback, and failure handling where those responsibilities belong to Retailing."
+    ],
+    "notes": [
+      "Assessment is based only on the deterministic repository facts embedded in the authoritative prompt.",
+      "No repository mutations, staging, commits, or pushes were performed.",
+      "Runtime and operations scores are intentionally conservative because infrastructure presence is not equivalent to evidenced production behavior."
+    ],
+    "suggested_score_overrides": {
+      "product": 8.2,
+      "architecture": 8.8,
+      "runtime": 7.8,
+      "qa": 8.9,
+      "ops": 7.7,
+      "market": 7.6,
+      "overall": 8.3
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Retailing has a clear repository identity as a retail marketplace Symfony bundle with explicit framework and ecosystem dependencies, but repository-level product documentation evidence remains limited.",
+        "risks": [
+          "Component purpose is visible in composer metadata, but broader responsibility and user-facing behavior are not fully evidenced.",
+          "Repository-specific Antora index and navigation files are absent from the supplied facts."
+        ],
+        "improvements": [
+          "Document the component responsibility boundary and primary retail workflows.",
+          "Add concise canonical component documentation tied to acceptance and release expectations."
+        ],
+        "evidence": [
+          "composer.json",
+          "src/RetailingBundle.php",
+          "templates/retail"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture is strong for the evidenced scope, with a conventional Symfony-oriented source topology, explicit package boundaries, recent canonical-topology hardening, and aligned Smartresponsor component dependencies.",
+        "risks": [
+          "Heavy dev-master ecosystem coupling makes compatibility dependent on coordinated repository evolution.",
+          "The supplied facts do not demonstrate all runtime contracts between the numerous dependent components."
+        ],
+        "improvements": [
+          "Keep cross-component contracts executable and covered by acceptance tests.",
+          "Continue enforcing canonical Symfony topology and dependency-boundary checks through Gating."
+        ],
+        "evidence": [
+          "composer.json",
+          "src/DependencyInjection",
+          "src/Entity",
+          "src/Repository",
+          "src/Service",
+          ".gating"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime foundations are credible through Symfony 8.1, Doctrine ORM, migrations, fixtures, templates, and executable console integration, but production performance and resilience behavior are not directly evidenced.",
+        "risks": [
+          "No latency, throughput, caching, load, retry, timeout, or failure-mode measurements are present in the supplied facts.",
+          "Runtime readiness cannot be inferred solely from framework and migration structure."
+        ],
+        "improvements": [
+          "Capture representative runtime acceptance evidence for core retail workflows.",
+          "Add explicit resilience or performance checks where Retailing owns those concerns."
+        ],
+        "evidence": [
+          "composer.json",
+          "bin/console",
+          "config",
+          "migrations",
+          "src",
+          "templates/retail"
+        ]
+      },
+      "qa": {
+        "summary": "QA maturity is strong, with PHPStan, PHPUnit, PHP-CS-Fixer, schema parity scripts, centralized Gating, coverage support, and Playwright-based UI testing all evidenced in the repository.",
+        "risks": [
+          "The supplied facts prove tool presence but do not include current pass/fail outputs for every gate.",
+          "A modified working tree weakens reproducibility of any unstated acceptance result."
+        ],
+        "improvements": [
+          "Run the entire gate stack against the exact commit and retain deterministic pass evidence.",
+          "Keep unit, schema, static-analysis, style, and browser acceptance checks mandatory for RC promotion."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "package.json",
+          "playwright.config.ts",
+          "tests",
+          ".gating"
+        ]
+      },
+      "ops": {
+        "summary": "Delivery readiness is materially supported by GitHub workflows and centralized Gating, but production observability, deployment strategy, rollback, and operational monitoring are not evidenced by the supplied repository facts.",
+        "risks": [
+          "No exact Git tag exists for the assessed commit.",
+          "Working tree contains a modified CMCP_CHANGELOG.md.",
+          "No concrete logging, metrics, tracing, alerting, deployment, or rollback configuration is evidenced."
+        ],
+        "improvements": [
+          "Require a clean tree and complete gate evidence before release tagging.",
+          "Document or integrate the operational controls that apply to Retailing deployments.",
+          "Establish an immutable tagged RC baseline after acceptance."
+        ],
+        "evidence": [
+          ".github/workflows",
+          ".gating",
+          "composer.json",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "market": {
+        "summary": "The component is clearly positioned as a retail marketplace capability and is integrated with catalog, collection, CRUD, table, location, object, interface, and viewing components, but external market validation is not available in the supplied repository evidence.",
+        "risks": [
+          "No customer, adoption, revenue, conversion, or production-usage evidence is included.",
+          "Market fit cannot be reliably inferred from architecture alone."
+        ],
+        "improvements": [
+          "Link product-level usage or acceptance evidence into the Atlas workflow when available.",
+          "Keep market scoring distinct from engineering maturity unless real product evidence is supplied."
+        ],
+        "evidence": [
+          "composer.json",
+          "templates/retail",
+          "src"
+        ]
+      },
+      "overall": {
+        "summary": "Retailing is a solid RC candidate from an engineering perspective, especially in architecture and QA, but should not be treated as fully release-complete until the working tree is clean, all gates are evidenced on the exact commit, release tagging is formalized, and operational expectations are clearer.",
+        "risks": [
+          "Current state is not a pristine reproducible release baseline.",
+          "Operational maturity is less evidenced than code and QA maturity.",
+          "Product-market evidence is insufficient for a strong market-readiness conclusion."
+        ],
+        "improvements": [
+          "Produce a clean, fully gated, immutable RC commit.",
+          "Tag the accepted release baseline.",
+          "Strengthen component documentation and production-operability evidence."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "playwright.config.ts",
+          ".github/workflows",
+          ".gating",
+          "migrations",
+          "src",
+          "tests",
+          "CMCP_CHANGELOG.md"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "package.json",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      "playwright.config.ts",
+      ".github/workflows",
+      ".gating",
+      "migrations",
+      "src",
+      "tests",
+      "CMCP_CHANGELOG.md"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\retailing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\retailing\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\retailing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\retailing\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "ai_io": {
+    "request_file": "retailing.request.json",
+    "response_file": "retailing.response.json"
+  }
+}

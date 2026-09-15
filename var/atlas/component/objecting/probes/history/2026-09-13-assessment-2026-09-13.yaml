@@ -1,0 +1,266 @@
+component: objecting
+title: Objecting
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T16:12:50.996284+00:00'
+repo_target:
+  github_repository: ''
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: .gating/tests/Unit/Registry/RuleRegistryTest.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: .gating/tests/calibration.php
+    evidence:
+    - .gating/tests/Unit/Registry/RuleRegistryTest.php
+    - .gating/tests/calibration.php
+    - AGENTS.md
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - .gating/src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+    - docs/architecture/objecting-responsibility-boundary.md
+    - tools/test/objecting_responsibility_boundary_check.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No Docker or compose files were detected.
+    findings:
+    - severity: warn
+      id: docker_surface_missing
+      detail: No Docker or compose files were detected.
+    evidence:
+    - OBJECTING_QUALITY_CLEANUP_AUDIT.md
+    - README.md
+    - composer.json
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No fixtures directories were detected.
+    findings:
+    - severity: warn
+      id: fixtures_missing
+      detail: No fixtures directories were detected.
+    evidence:
+    - .gating/src/Registry/RuleRegistry.php
+    - .gating/tests/calibration.php
+    - tests/
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 8.0
+    summary: 0 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    - Public/protected docblock coverage is 367/1096 (33%).
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 367/1096 (33%).
+    evidence:
+    - .github/workflows
+    - OBJECTING_RC2_HARDENING_PLAN.md
+    - README.md
+    - php-docblock-ratio:367/1096
+    - tools/inspection/ObjectingStructuralCanonStatusReport.php
+    - tools/test/objecting_exposing_bridge_contract_check.php
+    - tools/test/objecting_responsibility_boundary_check.php
+  delivery_observability:
+    title: Delivery & Observability
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No GitHub workflow files were detected.
+    findings:
+    - severity: warn
+      id: workflows_missing
+      detail: No GitHub workflow files were detected.
+    evidence:
+    - AGENTS.md
+    - OBJECTING_QUALITY_CLEANUP_AUDIT.md
+    - OBJECTING_RC2_HARDENING_PLAN.md
+    - README.md
+    - TENANT_LIFECYCLE_AUDIT.md
+    - docs/integration/objecting-production-diagnostics.md
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 1 fail, 11 warn, 0 info findings detected.
+    blockers:
+    - PHP file is large (371 lines); review SRP pressure.
+    - PHP file is very large (524 lines); review SRP and refactoring pressure.
+    - Class exposes 16 public methods; review interface segregation and SRP.
+    - Constructor injects 14 parameters; review dependency inversion and class responsibilities.
+    - Class exposes 22 public methods; review interface segregation and SRP.
+    findings:
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (371 lines); review SRP pressure.
+      path: tools/audit/objecting_workspace_entity_kind_audit.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (524 lines); review SRP and refactoring pressure.
+      path: tools/inspection/ObjectingStructuralCanonStatusReport.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 16 public methods; review interface segregation and SRP.
+      path: src/Contract/ObjectBackendCloneCleanupContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 14 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Contract/ObjectBackendCloneCleanupContract.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 22 public methods; review interface segregation and SRP.
+      path: src/Contract/ObjectBackendImportContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 20 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Contract/ObjectBackendImportContract.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 15 public methods; review interface segregation and SRP.
+      path: src/Contract/ObjectDoctrineMappingContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 13 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Contract/ObjectDoctrineMappingContract.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 20 public methods; review interface segregation and SRP.
+      path: src/Contract/ObjectExposingBridgeContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 18 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Contract/ObjectExposingBridgeContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 7 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Contract/ObjectFieldPackConsumerContract.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 8 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Contract/ObjectResolvedFieldPackConsumerContract.php
+    evidence:
+    - src/Contract/ObjectBackendCloneCleanupContract.php
+    - src/Contract/ObjectBackendImportContract.php
+    - src/Contract/ObjectDoctrineMappingContract.php
+    - src/Contract/ObjectExposingBridgeContract.php
+    - src/Contract/ObjectFieldPackConsumerContract.php
+    - src/Contract/ObjectResolvedFieldPackConsumerContract.php
+    - tools/audit/objecting_workspace_entity_kind_audit.php
+    - tools/inspection/ObjectingStructuralCanonStatusReport.php
+summary:
+  overall_status: fail
+  average_score: 7.57
+  status_counts:
+    pass: 1
+    warn: 5
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - QA & Behavioral Assurance — No fixtures directories were detected.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 367/1096
+    (33%).
+  - Delivery & Observability — No GitHub workflow files were detected.
+  - SOLID & Refactoring Pressure — PHP file is large (371 lines); review SRP pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No fixtures directories were detected.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+      - Public/protected docblock coverage is 367/1096 (33%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 1 fail, 11 warn, 0 info findings detected.
+      blockers:
+      - PHP file is large (371 lines); review SRP pressure.
+      - PHP file is very large (524 lines); review SRP and refactoring pressure.
+      - Class exposes 16 public methods; review interface segregation and SRP.

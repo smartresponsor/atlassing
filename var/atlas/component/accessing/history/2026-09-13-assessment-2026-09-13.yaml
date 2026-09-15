@@ -1,0 +1,528 @@
+component: accessing
+title: Accessing
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  ref: master
+  origin: quality-atlas chatgpt-cli assessment
+  assessment_basis:
+    repository: D:\PhpstormProjects\www\Accessing
+    assessed_branch: refactor/accessing-canonical-structure
+    assessed_commit: 2674d3ccaa180692e30f9b4bef12ad2860d6c0ee
+    assessed_tag: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: 2674d3ccaa180692e30f9b4bef12ad2860d6c0ee
+    previous_tag: null
+    current_head_commit: 2674d3ccaa180692e30f9b4bef12ad2860d6c0ee
+    current_head_tag: null
+    changed_files_sample:
+    - .gating/config/severity.yaml
+    - .gating/profile/component/accessing.yaml
+    - tests/Unit/AccessApiFlowServiceTest.php
+    - tests/Unit/AccessBearerAuthenticatorTest.php
+    - tests/Unit/AccessCredentialPasswordSafetyTest.php
+    - tests/Unit/AccessMobilePendingAuthServiceTest.php
+    - tests/Unit/AccessPasskeyAuthenticationSuccessTest.php
+    - tests/Unit/AccessPasskeyChallengeServiceTest.php
+    - tests/Unit/AccessPasskeyCredentialServiceTest.php
+    - .gating/.canonization/Federation/MANIFEST.md
+    - .gating/.canonization/Governance/MANIFEST.md
+    - .gating/.canonization/Orchestration/MANIFEST.md
+    - .gating/.commanding/.gitattributes
+    - .gating/.commanding/.gitignore
+    - .gating/.commanding/README.md
+    - .gating/.commanding/backup/commanding.sh
+    - .gating/.commanding/backup/composer.sh
+    - .gating/.commanding/command.sh
+    - .gating/.commanding/commanding.cmd
+    - .gating/.commanding/commanding.sh
+report_status: current
+groups:
+  product_market:
+    score: 8.65
+  domain_architecture:
+    score: 8.7
+  data_persistence:
+    score: 8.6
+  api_contracts:
+    score: 8.55
+  runtime_performance:
+    score: 8.5
+  reliability_resilience:
+    score: 8.47
+  security_governance:
+    score: 8.4
+  delivery_operations:
+    score: 8.4
+  quality_testing:
+    score: 8.5
+profile_axes:
+  engineering:
+    product: 8.9
+    architecture: 8.7
+    data: 8.6
+    api: 8.55
+    runtime: 8.5
+    reliability: 8.45
+    security: 8.4
+    delivery: 8.4
+    quality: 8.5
+    overall: 8.5
+  owner:
+    identity: 8.9
+    consistency: 8.7
+    delivery: 8.4
+    quality: 8.5
+    governance: 8.4
+    fit: 8.65
+    debt: 2.4
+    overall: 8.5
+  investor:
+    product: 8.9
+    architecture: 8.7
+    delivery: 8.4
+    reliability: 8.5
+    governance: 8.4
+    clarity: 8.65
+    overall: 8.5
+  operations:
+    runtime: 8.5
+    reliability: 8.5
+    observability: 8.4
+    security: 8.4
+    traffic: 8.45
+    delivery: 8.4
+    recovery: 8.45
+    overall: 8.5
+metrics:
+  product:
+    relevant: true
+    maturity: strong
+    score: 8.9
+    summary: Accessing has a clearly articulated authentication and identity product
+      surface supported by dedicated product, market, architecture, bounding, audit,
+      and full manifests.
+    risks:
+    - The assessed product state remains on an active refactor branch rather than
+      an immutable release point.
+    improvements:
+    - Refresh product readiness from the clean merged and tagged RC commit.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: PRODUCT_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: MARKET_ANALYSIS.md
+      note: Metric-level assessment evidence.
+    - path: ARCHITECTURE_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: BOUNDING_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: AUDIT.md
+      note: Metric-level assessment evidence.
+    - path: FULL_MANIFEST.md
+      note: Metric-level assessment evidence.
+  architecture:
+    relevant: true
+    maturity: solid
+    score: 8.7
+    summary: The component shows a modern Symfony-oriented architecture with explicit
+      architectural and boundary documentation and recent canonicalization commits.
+    risks:
+    - Canonicalization is still represented by an active refactor branch with unresolved
+      working-tree changes.
+    improvements:
+    - Complete and verify the canonical migration, then reconcile it with the release
+      branch from a clean tree.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: ARCHITECTURE_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: BOUNDING_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: FULL_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: composer.json
+      note: Metric-level assessment evidence.
+  runtime:
+    relevant: true
+    maturity: solid
+    score: 8.5
+    summary: Runtime capability is materially developed around PHP 8.4, Symfony 8.1,
+      Doctrine ORM, Security, WebAuthn, OTP, rate limiting, mailer, notifier, serializer,
+      validator, and related application infrastructure.
+    risks:
+    - No immutable tagged runtime baseline exists at the assessed HEAD.
+    improvements:
+    - Verify the reconciled RC state with the repository's full runtime and browser-oriented
+      test pipeline before tagging.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: config
+      note: Metric-level assessment evidence.
+    - path: migrations/Version20260912003630.php
+      note: Metric-level assessment evidence.
+    - path: package.json
+      note: Metric-level assessment evidence.
+    - path: playwright.config.ts
+      note: Metric-level assessment evidence.
+  qa:
+    relevant: true
+    maturity: solid
+    score: 8.5
+    summary: QA maturity is strong for a pre-RC component, with PHPUnit 12, PHPStan
+      2.1, PHP CS Fixer, coverage tooling, Panther, Playwright, and substantial authentication-focused
+      unit-test expansion.
+    risks:
+    - Multiple QA files remain modified or untracked, so the current test corpus is
+      not yet a committed reproducible baseline.
+    improvements:
+    - Reconcile the pending test additions and modifications and run lint, coding
+      standards, PHPStan, PHPUnit, coverage, Panther, and applicable Playwright suites
+      on the resulting clean tree.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: phpstan.neon
+      note: Metric-level assessment evidence.
+    - path: phpunit.xml
+      note: Metric-level assessment evidence.
+    - path: package.json
+      note: Metric-level assessment evidence.
+    - path: playwright.config.ts
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessApiFlowServiceTest.php
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessBearerAuthenticatorTest.php
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessCredentialPasswordSafetyTest.php
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessMobilePendingAuthServiceTest.php
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessPasskeyAuthenticationSuccessTest.php
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessPasskeyChallengeServiceTest.php
+      note: Metric-level assessment evidence.
+    - path: tests/Unit/AccessPasskeyCredentialServiceTest.php
+      note: Metric-level assessment evidence.
+  ops:
+    relevant: true
+    maturity: strong
+    score: 8.4
+    summary: Operational and governance foundations are materially present through
+      GitHub workflows, deployment material, quality tooling, manifests, and security-oriented
+      framework dependencies.
+    risks:
+    - The gating area remains highly transitional, with deleted tracked configuration
+      and extensive untracked replacement content.
+    improvements:
+    - Resolve the gating migration into an intentional committed state and verify
+      all configured CI and local quality gates before RC designation.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .github/workflows
+      note: Metric-level assessment evidence.
+    - path: deploy
+      note: Metric-level assessment evidence.
+    - path: .gating
+      note: Metric-level assessment evidence.
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: AGENTS.md
+      note: Metric-level assessment evidence.
+    - path: AUDIT.md
+      note: Metric-level assessment evidence.
+  market:
+    relevant: true
+    maturity: solid
+    score: 8.4
+    summary: Business and ecosystem positioning are explicitly documented and remain
+      consistent with a specialized Accessing authentication component.
+    risks:
+    - Market-facing readiness remains coupled to a pre-RC engineering state rather
+      than a clean tagged release.
+    improvements:
+    - Reconfirm the market and portfolio narrative against the final clean RC artifact
+      after canonicalization is merged.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: MARKET_ANALYSIS.md
+      note: Metric-level assessment evidence.
+    - path: PRODUCT_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: Accessing.md
+      note: Metric-level assessment evidence.
+    - path: FULL_MANIFEST.md
+      note: Metric-level assessment evidence.
+  overall:
+    relevant: true
+    maturity: solid
+    score: 8.5
+    summary: Accessing is technically close to RC quality with strong architecture,
+      authentication capabilities, documentation, and QA tooling, but the active refactor
+      branch, dirty tree, transitional gating content, and absence of an exact tag
+      prevent treating the current snapshot as a finished RC.
+    risks:
+    - Current HEAD is not an immutable clean release candidate.
+    - Uncommitted gating and test work reduces reproducibility of the assessed state.
+    improvements:
+    - Finish reconciliation, run the full quality pipeline on a clean tree, merge
+      the canonical branch, and tag the verified RC before the next Atlas refresh.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: PRODUCT_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: ARCHITECTURE_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: BOUNDING_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: AUDIT.md
+      note: Metric-level assessment evidence.
+    - path: FULL_MANIFEST.md
+      note: Metric-level assessment evidence.
+    - path: composer.json
+      note: Metric-level assessment evidence.
+    - path: .gating
+      note: Metric-level assessment evidence.
+    - path: .github/workflows
+      note: Metric-level assessment evidence.
+    - path: tests/Unit
+      note: Metric-level assessment evidence.
+development_driving:
+  overall_status: fail
+  average_score: 7.11
+  status_counts:
+    pass: 2
+    warn: 3
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - QA & Behavioral Assurance — No fixtures directories were detected.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - Delivery & Observability — No GitHub workflow files were detected.
+  - SOLID & Refactoring Pressure — PHP file is very large (1637 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — Constructor injects 7 parameters; review dependency
+    inversion and class responsibilities.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 3.0
+      summary: 2 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - PHP namespace does not use the default App\ root.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No fixtures directories were detected.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 10 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1637 lines); review SRP and refactoring pressure.
+      - Constructor injects 7 parameters; review dependency inversion and class responsibilities.
+      - Constructor injects 9 parameters; review dependency inversion and class responsibilities.
+strengths:
+- Authentication and identity responsibilities are explicitly documented through product,
+  architecture, bounding, audit, and full manifests.
+- The implementation targets PHP 8.4 and Symfony 8.1 with dedicated security, WebAuthn,
+  OTP, rate-limiting, validation, serialization, mailer, and notifier capabilities.
+- QA infrastructure includes PHPUnit 12, PHPStan 2.1, PHP CS Fixer, coverage tooling,
+  Panther, and Playwright.
+- Recent commits show active canonicalization and RC-oriented test coverage work.
+risks:
+- The assessed HEAD is on refactor/accessing-canonical-structure and has no exact
+  release tag.
+- The working tree contains modified and untracked authentication tests, so the QA
+  baseline is not reproducible from HEAD alone.
+- The .gating area contains deleted tracked configuration alongside extensive untracked
+  replacement content.
+- RC confidence remains dependent on reconciliation and verification of the final
+  committed state.
+recommended_next_actions:
+- Reconcile and commit the intended gating migration.
+- Reconcile the pending authentication test changes and additions.
+- Run the repository's full lint, coding-standard, PHPStan, PHPUnit, coverage, Panther,
+  and applicable Playwright gates on the resulting clean tree.
+- Merge the canonical refactor into the intended release branch and create an immutable
+  verified RC tag.
+- Refresh the Quality Atlas snapshot from that clean tagged commit.
+evidence:
+- path: .antora-src/modules/ROOT/pages/component/accessing/report/index.adoc
+  note: Current component report page if present.
+- path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
+  note: Seeded atlas dataset source.
+- path: .sync/quality-atlas/components/accessing/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+- path: var/atlas/component/accessing/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+- path: composer.json
+  note: Assessment evidence path.
+- path: package.json
+  note: Assessment evidence path.
+- path: phpstan.neon
+  note: Assessment evidence path.
+- path: phpstan.neon.dist
+  note: Assessment evidence path.
+- path: phpunit.xml
+  note: Assessment evidence path.
+- path: phpunit.xml.dist
+  note: Assessment evidence path.
+- path: .github/workflows
+  note: Assessment evidence path.
+- path: Accessing.md
+  note: Assessment evidence path.
+- path: ARCHITECTURE_MANIFEST.md
+  note: Assessment evidence path.
+- path: BOUNDING_MANIFEST.md
+  note: Assessment evidence path.
+- path: FULL_MANIFEST.md
+  note: Assessment evidence path.
+- path: PRODUCT_MANIFEST.md
+  note: Assessment evidence path.
+- path: MARKET_ANALYSIS.md
+  note: Assessment evidence path.
+- path: AUDIT.md
+  note: Assessment evidence path.
+- path: docs
+  note: Assessment evidence path.
+- path: tests/Unit/AccessApiFlowServiceTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessBearerAuthenticatorTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessCredentialPasswordSafetyTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessMobilePendingAuthServiceTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessPasskeyAuthenticationSuccessTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessPasskeyChallengeServiceTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessPasskeyCredentialServiceTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessAdditionalEntityCoverageTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessAuthenticationServiceCoverageTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessEntityLifecycleCoverageTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessProgrammaticAuthenticatorTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessSecondFactorServiceCoverageTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessSessionServiceCoverageTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessSupportingComponentsCoverageTest.php
+  note: Assessment evidence path.
+- path: tests/Unit/AccessVerificationChallengeServiceCoverageTest.php
+  note: Assessment evidence path.
+- path: playwright.config.ts
+  note: Assessment evidence path.
+- path: .gating
+  note: Assessment evidence path.
+assessment_notes:
+- Accessing remains technically close to RC quality, with strong authentication-focused
+  product definition, Symfony-oriented architecture, modern runtime dependencies,
+  and substantial QA tooling, but the assessed state is still an untagged refactor
+  branch with a dirty working tree and a transitional gating migration.
+- The repository facts support preserving the existing scores because the principal
+  RC blockers identified by the current snapshot remain present.
+- No score increase is justified until the dirty working tree, transitional gating
+  state, and lack of an exact tag are resolved.
+assessment_confidence: high

@@ -1,0 +1,402 @@
+component: messaging
+title: Messaging
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  ref: master
+  origin: quality-atlas dry-run assessment
+  assessment_basis:
+    repository: D:\PhpstormProjects\www\Messaging
+    assessed_branch: master
+    assessed_commit: 274668a3f829ee8620641392ad7b43b88e1ed22c
+    assessed_tag: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: 12a67d6a40e39b3f526c33c048e19402e4bbbd78
+    previous_tag: null
+    current_head_commit: 274668a3f829ee8620641392ad7b43b88e1ed22c
+    current_head_tag: null
+    changed_files_sample:
+    - .codex/prompts/layer3-structure-and-naming-contract.md
+    - .codex/prompts/security-runtime-classification-contract.md
+    - .cursor/rules/messaging-layer3-canon.mdc
+    - .cursor/rules/messaging-security-runtime-classification.mdc
+    - .env.example.append
+    - .gitignore
+    - .php-cs-fixer.php
+    - .phpunit.result.cache
+    - AGENTS.md
+    - CHANGELOG.md
+    - CONTRIBUTING.md
+    - README.md
+    - bin/console
+    - bin/preflight.php
+    - bin/report-message-cutover-risk.php
+    - bin/report-message-first-cut-set.php
+    - bin/ws-gateway.php
+    - composer.json
+    - composer.lock
+    - config/bundles.php
+report_status: current
+groups:
+  product_market:
+    score: 8.5
+  domain_architecture:
+    score: 8.3
+  data_persistence:
+    score: 8.6
+  api_contracts:
+    score: 8.35
+  runtime_performance:
+    score: 8.9
+  reliability_resilience:
+    score: 8.73
+  security_governance:
+    score: 9.0
+  delivery_operations:
+    score: 9.0
+  quality_testing:
+    score: 8.3
+profile_axes:
+  engineering:
+    product: 8.6
+    architecture: 8.3
+    data: 8.6
+    api: 8.35
+    runtime: 8.9
+    reliability: 8.95
+    security: 9.0
+    delivery: 9.0
+    quality: 8.3
+    overall: 8.6
+  owner:
+    identity: 8.6
+    consistency: 8.3
+    delivery: 9.0
+    quality: 8.3
+    governance: 9.0
+    fit: 8.5
+    debt: 2.7
+    overall: 8.6
+  investor:
+    product: 8.6
+    architecture: 8.3
+    delivery: 9.0
+    reliability: 8.6
+    governance: 9.0
+    clarity: 8.5
+    overall: 8.6
+  operations:
+    runtime: 8.9
+    reliability: 8.6
+    observability: 9.0
+    security: 9.0
+    traffic: 8.95
+    delivery: 9.0
+    recovery: 8.65
+    overall: 8.6
+metrics:
+  product:
+    relevant: true
+    maturity: solid
+    score: 8.6
+    summary: Product identity is clear and documented (Symfony-native messaging runtime
+      with API/GraphQL exposure), supported by an OpenAPI contract and roadmap, but
+      still pre-RC.
+    risks:
+    - Docs site integration is incomplete (missing Antora nav/index), reducing product
+      discoverability
+    - No release tags; versioning remains implicit
+    improvements:
+    - Add Antora nav.adoc and a landing index to surface the report and API docs
+    - Cut a pre-release tag and update CHANGELOG to align with tagging cadence
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+  architecture:
+    relevant: true
+    maturity: solid
+    score: 8.3
+    summary: Architecture reads as a cohesive Symfony messaging/runtime layer with
+      eventing and realtime surfaces (Messenger, Mercure, event bus, outbox) and internal
+      analysis scripts.
+    risks:
+    - Architecture documentation for bounded contexts is not evident in-repo
+    - Emphasis skews runtime-heavy; domain boundaries could be made more explicit
+    improvements:
+    - Add lightweight ADRs describing core boundaries and messaging flows
+    - Document event bus/outbox patterns and integration points
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+  runtime:
+    relevant: true
+    maturity: strong
+    score: 8.9
+    summary: 'Runtime posture is strong: install/test/about scripts, realtime delivery
+      (Mercure/React Socket), QoS and observability wiring, and Prometheus rules.'
+    risks:
+    - Local scan used PHP 8.3 while the project requires ^8.4, which can mask runtime
+      issues
+    - No tag-based release channel yet for promoting tested builds
+    improvements:
+    - Ensure CI and container images run PHP 8.4+ consistently
+    - Publish boot-ledger summaries and runtime checks as CI artifacts
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+  qa:
+    relevant: true
+    maturity: solid
+    score: 8.3
+    summary: Quality toolchain is present (PHPUnit 11, PHPStan 2.x, CS Fixer, Panther)
+      with an additional Playwright harness, indicating solid pre-RC QA depth.
+    risks:
+    - Playwright/E2E integration into CI is not explicitly evidenced
+    - Coverage thresholds and reporting are not visible from the provided facts
+    improvements:
+    - Add a CI job to run Playwright and publish reports
+    - Expose PHPUnit coverage reports in CI artifacts
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+  ops:
+    relevant: true
+    maturity: strong
+    score: 9.0
+    summary: 'Operational and governance posture is mature: boot-ledger workflows,
+      security policy, Dependabot, CODEOWNERS, tracing/OTel configs, and Prometheus
+      alert rules.'
+    risks:
+    - Absence of git tags limits release automation and rollback strategies
+    - SLO/SLA documentation not observed in-repo
+    improvements:
+    - Adopt semantic pre-release tags and wire release.yml to produce artifacts
+    - Document basic SLOs and alert mappings tied to Prometheus rules
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+  market:
+    relevant: true
+    maturity: solid
+    score: 8.4
+    summary: Market-facing alignment is credible for an internal conversation/runtime
+      and realtime messaging capability; licensing indicates internal consumption
+      focus.
+    risks:
+    - Proprietary license constrains external adoption and community signals
+    - Docs surfacing gaps may reduce portfolio discoverability
+    improvements:
+    - Clarify intended distribution model in README and VERSION notes
+    - Surface report and API reference via Antora nav/index
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+  overall:
+    relevant: true
+    maturity: solid
+    score: 8.6
+    summary: Strong pre-RC posture with governed runtime, observability, and QA; proceed
+      to release hygiene (tags, CI PHP 8.4 pin, docs surfacing) to cross the RC threshold.
+    risks:
+    - No release tags reduce RC clarity and rollback safety
+    - Environment mismatch (PHP 8.3 vs ^8.4 target) may hide regressions
+    improvements:
+    - Introduce tagged pre-releases and ensure CI pins PHP 8.4+
+    - Wire Antora navigation and publish CI artifacts for boot-ledger and E2E
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+      note: Metric-level assessment evidence.
+development_driving:
+  overall_status: fail
+  average_score: 8.14
+  status_counts:
+    pass: 4
+    warn: 2
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 671/3234
+    (21%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1853 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is large (440 lines); review SRP pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 671/3234 (21%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 11 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1853 lines); review SRP and refactoring pressure.
+      - PHP file is large (440 lines); review SRP pressure.
+      - PHP file is large (415 lines); review SRP pressure.
+strengths:
+- Canonical snapshot/history contracts are present.
+- This component is wired into the atlas assessment registry.
+risks:
+- Dry-run mode does not perform a live AI verdict.
+- Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is
+  provided.
+- Deterministic probes currently report fail status.
+recommended_next_actions:
+- Enable responses mode with OPENAI_API_KEY for live verdict generation.
+- Expand repository registry coverage and local_path mappings for additional components.
+evidence:
+- path: .antora-src/modules/ROOT/pages/component/messaging/report/index.adoc
+  note: Current component report page if present.
+- path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
+  note: Seeded atlas dataset source.
+- path: .sync/quality-atlas/components/messaging/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+- path: composer.json
+  note: Assessment evidence path.
+- path: api/openapi.yaml
+  note: Assessment evidence path.
+- path: bin/boot-ledger.sh
+  note: Assessment evidence path.
+- path: bin/about-runtime.sh
+  note: Assessment evidence path.
+- path: bin/install-runtime.sh
+  note: Assessment evidence path.
+- path: bin/test-runtime.sh
+  note: Assessment evidence path.
+- path: alerts/prometheus_rules.yaml
+  note: Assessment evidence path.
+- path: config/services_mercure.yaml
+  note: Assessment evidence path.
+- path: config/services_audit_otel_v1.yaml
+  note: Assessment evidence path.
+- path: config/services_audit_tracing_v1.yaml
+  note: Assessment evidence path.
+- path: .github/workflows
+  note: Assessment evidence path.
+- path: .github/dependabot.yml
+  note: Assessment evidence path.
+- path: .github/CODEOWNERS
+  note: Assessment evidence path.
+- path: README.md
+  note: Assessment evidence path.
+- path: ROADMAP.md
+  note: Assessment evidence path.
+- path: SECURITY.md
+  note: Assessment evidence path.
+- path: phpstan.neon
+  note: Assessment evidence path.
+- path: phpunit.xml.dist
+  note: Assessment evidence path.
+- path: package.json
+  note: Assessment evidence path.
+- path: var/atlas/component/messaging/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+assessment_notes:
+- Messaging remains on a seeded snapshot because the assessment runner is in dry-run
+  mode.
+- 'Prompt length: 59964 characters.'
+- Base overall score retained at 8.60.
+assessment_confidence: dry-run

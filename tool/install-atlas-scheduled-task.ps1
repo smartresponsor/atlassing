@@ -5,8 +5,7 @@ param(
     [int]$EveryDays = 1,
     [ValidateSet('chatgpt-cli', 'responses', 'dry-run')]
     [string]$Mode = 'dry-run',
-    [switch]$StatusOnly,
-    [switch]$RegistryAudit
+    [switch]$StatusOnly
 )
 
 $ErrorActionPreference = 'Stop'
@@ -68,7 +67,7 @@ if ($startBoundary -le (Get-Date)) {
     $startBoundary = $startBoundary.AddDays(1)
 }
 
-$powershell = (Get-Command powershell.exe -ErrorAction Stop).Source
+$powershell = (Get-Command pwsh.exe -ErrorAction Stop).Source
 $arguments = '-NoProfile -NonInteractive -ExecutionPolicy Bypass -File "{0}" -Mode {1}' -f $runner, $Mode
 $action = New-ScheduledTaskAction -Execute $powershell -Argument $arguments -WorkingDirectory $repoRoot
 $trigger = New-ScheduledTaskTrigger -Daily -At $startBoundary -DaysInterval $EveryDays

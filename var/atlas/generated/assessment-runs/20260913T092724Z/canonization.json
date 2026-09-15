@@ -1,0 +1,187 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "canonization",
+    "component_title": "Canonization",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Canonization",
+    "timestamp_utc": "2026-09-13T09:58:37.780788+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "canon038-config-yaml-prefix"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "1b31675f4723fb6b922886ef6cc1f9dea5a8caf1"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "1b31675 canon: require collectioning and tabling\ne2b8907 canon: add behavioral UI testing rules\nb2ced5a canon: add PHP test coverage rules\nd82a7ca docs(canon): recognize snapshot role root\nd0f5a91 canon: narrow Canon037 generated reference invariant"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".canonization/\n.canonization/.editorconfig\n.canonization/.gitattributes\n.canonization/.gitignore\n.canonization/Federation/\n.canonization/Governance/\n.canonization/Orchestration/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/.gitattributes\n.commanding/.gitignore\n.commanding/backup/\n.commanding/cloudflare/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/git_diff.sh\n.commanding/git_status.sh\n.commanding/git_sync.sh\n.commanding/health.sh\n.commanding/helm/\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/logs/\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/systemd/\n.commanding/test/\n.commanding/zipper.sh\n.consuming/\n.consuming/.github/\n.consuming/.gitignore\n.consuming/consuming.json\n.consuming/consuming.ps1\n.deploy/\n.deploy/_template/\n.deploy/cloudflare/\n.deploy/docker/\n.deploy/helm/\n.deploy/MANIFEST.md\n.deploy/systemd/\n.editorconfig\n.gate/\n.gate/.github/\n.gate/.gitignore\n.gate/contract/\n.gate/gate.ps1\n.gate/gate.sh\n.gate/linting/\n.gate/MANIFEST.json\n.gate/policy/\n.gate/quality/\n.gate/README.md\n.gate/run.ps1\n.gate/run.sh\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.ide/\n.ide/sr_default_inspector.xml\n.idea/\n.idea/.gitignore\n.idea/bin/\n.idea/Canonization.iml\n.idea/inspectionProfiles/\n.idea/jsonCatalog.xml\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/sqldialects.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/.github/\n.intelligence/.gitignore\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.php\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/\nAGENTS.md\ncomposer.json\ncomposer.lock\nMANIFEST.json\nREADME.md\ntool/\nvar/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "226"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"smartresponsor/canonization\",\n    \"description\": \"Authoritative textual canon and owner-side policy tooling for SmartResponsor repositories.\",\n    \"license\": \"proprietary\",\n    \"require-dev\": {\n        \"friendsofphp/php-cs-fixer\": \"^3.94\"\n    }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "canonization",
+    "summary": "Canonization remains on a seeded snapshot because the assessment runner is in dry-run mode.",
+    "strengths": [
+      "Canonical snapshot/history contracts are present.",
+      "This component is wired into the atlas assessment registry."
+    ],
+    "risks": [
+      "Dry-run mode does not perform a live AI verdict.",
+      "Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is provided.",
+      "Deterministic probes currently report fail status."
+    ],
+    "next_actions": [
+      "Enable responses mode with OPENAI_API_KEY for live verdict generation.",
+      "Expand repository registry coverage and local_path mappings for additional components."
+    ],
+    "notes": [
+      "Prompt length: 47107 characters.",
+      "Base overall score retained at 8.00."
+    ],
+    "suggested_score_overrides": {
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      },
+      "architecture": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      },
+      "qa": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      },
+      "ops": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      },
+      "overall": {
+        "summary": "Bootstrap snapshot metric pending first live assessment.",
+        "risks": [
+          "Bootstrap metric should be replaced by an assessment verdict."
+        ],
+        "improvements": [
+          "Run assessment workflow and refresh narrative evidence."
+        ],
+        "evidence": [
+          ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+        ]
+      }
+    },
+    "confidence": "dry-run",
+    "evidence_paths": [
+      ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\probes\\history\\2026-09-13-assessment-2026-09-13.yaml"
+  }
+}

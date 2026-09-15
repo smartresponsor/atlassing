@@ -397,6 +397,8 @@ def call_chatgpt_cli(prompt: str, component_id: str, workspace_path: Path) -> tu
         ],
         cwd=ROOT,
         text=True,
+        encoding='utf-8',
+        errors='replace',
         capture_output=True,
         timeout=900,
     )

@@ -1,0 +1,289 @@
+component: addressing
+title: Addressing
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T09:38:26.318797+00:00'
+repo_target:
+  github_repository: smartresponsor/addressing
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 0.5
+    summary: 3 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - Repository/domain-named directory is too close to root for owner canon.
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Entity/Address
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/Repository/Address
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: src/RepositoryInterface/Address
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: config/reference.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: .gitlab-ci.yml
+    evidence:
+    - .gitlab-ci.yml
+    - config/reference.php
+    - src/Entity/Address
+    - src/Repository/Address
+    - src/RepositoryInterface/Address
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .gating/src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - .gating/src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+    - docs/addressing-entity-boundary-contract.md
+    - report/address-wave-p2-entity-boundary-clusters.md
+    - tests/AddressEntityBoundaryClustersTest.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - .commanding/docker/compose.yml
+    - CHANGELOG.md
+    - Dockerfile
+    - deploy/docker/Dockerfile
+    - docker-compose.yml
+    - report/addressdata-portrait-mid.md
+    - tools/inspection/AddressApplicationSurfaceReport.php
+    - vendor/deptrac/deptrac/vendor/jetbrains/phpstorm-stubs/docker-compose.yml
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - composer.json
+    - docker-compose.yml
+    - package-lock.json
+    - tests/
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/Core/Fixer/Fixtures
+    - vendor/viewing/view/vendor/squizlabs/php_codesniffer/tests/EndToEnd/Fixtures
+    - vendor/viewing/view/vendor/symfony/http-client-contracts/Test/Fixtures
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - Public/protected docblock coverage is 279/1085 (26%).
+    findings:
+    - severity: warn
+      id: docblock_coverage_low
+      detail: Public/protected docblock coverage is 279/1085 (26%).
+    evidence:
+    - .github/workflows
+    - CHANGELOG.md
+    - README.md
+    - docs/openapi.yaml
+    - openapi/address.yaml
+    - php-docblock-ratio:279/1085
+    - report/address-sketch31-manifest-contract-validated.md
+    - report/address-w18-external-contract-versioning.md
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 9.75
+    summary: 0 fail, 0 warn, 1 info findings detected.
+    blockers: []
+    findings:
+    - severity: info
+      id: observability_markers_missing
+      detail: No Prometheus/Grafana markers were detected.
+    evidence:
+    - .github/workflows/addressing-evidence-release.yml
+    - .github/workflows/addressing-gate-agent.yml
+    - .github/workflows/addressing-gate-master.yml
+    - .github/workflows/addressing-gate.yml
+    - .github/workflows/consuming.yml
+    - .github/workflows/intelligence-codex-pr.yml
+    - .github/workflows/intelligence-dispatch.yml
+    - .github/workflows/qodana-configuration-upload.yml
+    - .github/workflows/security.yml
+    - .gitlab-ci.yml
+    - AGENTS.md
+    - CHANGELOG.md
+    - CMCP_CHANGELOG.md
+    - composer.json
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 0.0
+    summary: 3 fail, 9 warn, 1 info findings detected.
+    blockers:
+    - PHP file is very large (1392 lines); review SRP and refactoring pressure.
+    - PHP file is very large (759 lines); review SRP and refactoring pressure.
+    - Class exposes 98 public methods; review interface segregation and SRP.
+    - Class exposes 34 public methods; review interface segregation and SRP.
+    - Class exposes 30 public methods; review interface segregation and SRP.
+    findings:
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1392 lines); review SRP and refactoring pressure.
+      path: config/reference.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (759 lines); review SRP and refactoring pressure.
+      path: src/Entity/AddressEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 98 public methods; review interface segregation and SRP.
+      path: src/Entity/AddressEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 34 public methods; review interface segregation and SRP.
+      path: src/Entity/AddressEvidenceSnapshotEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 30 public methods; review interface segregation and SRP.
+      path: src/Entity/AddressIndexEntity.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 26 public methods; review interface segregation and SRP.
+      path: src/Entity/AddressOutboxEntity.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (1029 lines); review SRP and refactoring pressure.
+      path: src/Repository/AbstractDoctrineAddressRepository.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 15 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Projection/AddressIndex/AddressIndexRecord.php
+    - severity: warn
+      id: constructor_injection_pressure
+      detail: Constructor injects 14 parameters; review dependency inversion and class
+        responsibilities.
+      path: src/Plan/Persistence/AddressValidatedMutationPlan.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 17 public methods; review interface segregation and SRP.
+      path: src/EntityInterface/Record/AddressEvidenceSnapshotInterface.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 49 public methods; review interface segregation and SRP.
+      path: src/EntityInterface/Record/AddressInterface.php
+    - severity: warn
+      id: public_api_pressure
+      detail: Class exposes 16 public methods; review interface segregation and SRP.
+      path: src/EntityInterface/Record/AddressValidationStateInterface.php
+    - severity: info
+      id: copy_paste_origin_marker
+      detail: Possible copy-paste provenance marker detected; review SOLID and ownership
+        fit.
+      path: config/reference.php
+    evidence:
+    - config/reference.php
+    - src/Entity/AddressEntity.php
+    - src/Entity/AddressEvidenceSnapshotEntity.php
+    - src/Entity/AddressIndexEntity.php
+    - src/Entity/AddressOutboxEntity.php
+    - src/EntityInterface/Record/AddressEvidenceSnapshotInterface.php
+    - src/EntityInterface/Record/AddressInterface.php
+    - src/EntityInterface/Record/AddressValidationStateInterface.php
+    - src/Plan/Persistence/AddressValidatedMutationPlan.php
+    - src/Projection/AddressIndex/AddressIndexRecord.php
+    - src/Repository/AbstractDoctrineAddressRepository.php
+summary:
+  overall_status: fail
+  average_score: 7.04
+  status_counts:
+    pass: 4
+    warn: 1
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 279/1085
+    (26%).
+  - SOLID & Refactoring Pressure — PHP file is very large (1392 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (759 lines); review SRP
+    and refactoring pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 0.5
+      summary: 3 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+      - Repository/domain-named directory is too close to root for owner canon.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - Public/protected docblock coverage is 279/1085 (26%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 9.75
+      summary: 0 fail, 0 warn, 1 info findings detected.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 3 fail, 9 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1392 lines); review SRP and refactoring pressure.
+      - PHP file is very large (759 lines); review SRP and refactoring pressure.
+      - Class exposes 98 public methods; review interface segregation and SRP.

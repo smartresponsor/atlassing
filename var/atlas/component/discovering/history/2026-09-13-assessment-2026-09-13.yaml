@@ -1,0 +1,352 @@
+component: discovering
+title: Discovering
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  ref: master
+  origin: quality-atlas dry-run assessment
+  assessment_basis:
+    repository: D:\PhpstormProjects\www\Discovering
+    assessed_branch: master
+    assessed_commit: 133023ac7b3780169ef64f879181a1da4e0c41ab
+    assessed_tag: null
+    trigger_reason: meaningful_local_worktree_change
+    previous_commit: null
+    previous_tag: null
+    current_head_commit: 133023ac7b3780169ef64f879181a1da4e0c41ab
+    current_head_tag: null
+    changed_files_sample:
+    - composer.json
+    - composer.lock
+    - config/bundles.php
+    - config/packages/doctrine.yaml
+    - config/packages/test/doctrine.yaml
+    - config/packages/twig.yaml
+    - config/services.yaml
+    - config/services/discovery.yaml
+    - phpunit.xml.dist
+    - src/Controller/Discovery/DiscoveryController.php
+    - src/Kernel.php
+    - src/RepositoryInterface/Discovery/DiscoveryFeedbackRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/DiscoveryIndexAliasRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/DiscoveryIndexDocumentRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/DiscoveryOperationEventRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/DiscoveryRateLimitBucketRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/DiscoveryRebuildEvidenceRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/DiscoverySearchLogRepositoryInterface.php
+    - src/RepositoryInterface/Discovery/LibsourceOperatorEventRepositoryInterface.php
+    - src/Service/Discovery/Adapter/SqliteFtsDiscoveryAdapter.php
+report_status: current
+groups:
+  product_market:
+    score: 8.0
+  domain_architecture:
+    score: 7.8
+  data_persistence:
+    score: 7.75
+  api_contracts:
+    score: 7.9
+  runtime_performance:
+    score: 7.7
+  reliability_resilience:
+    score: 7.33
+  security_governance:
+    score: 7.4
+  delivery_operations:
+    score: 7.4
+  quality_testing:
+    score: 6.9
+profile_axes:
+  engineering:
+    product: 8.0
+    architecture: 7.8
+    data: 7.75
+    api: 7.9
+    runtime: 7.7
+    reliability: 7.55
+    security: 7.4
+    delivery: 7.4
+    quality: 6.9
+    overall: 7.7
+  owner:
+    identity: 8.0
+    consistency: 7.8
+    delivery: 7.4
+    quality: 6.9
+    governance: 7.4
+    fit: 8.0
+    debt: 3.65
+    overall: 7.7
+  investor:
+    product: 8.0
+    architecture: 7.8
+    delivery: 7.4
+    reliability: 7.3
+    governance: 7.4
+    clarity: 8.0
+    overall: 7.7
+  operations:
+    runtime: 7.7
+    reliability: 7.3
+    observability: 7.4
+    security: 7.4
+    traffic: 7.55
+    delivery: 7.4
+    recovery: 7.15
+    overall: 7.7
+metrics:
+  product:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Component identity and market-facing shape are materially present.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+  architecture:
+    relevant: true
+    maturity: solid
+    score: 7.8
+    summary: Symfony-oriented architecture shape is materially present.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+  runtime:
+    relevant: true
+    maturity: solid
+    score: 7.7
+    summary: Runtime and application surface are materially present.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+  qa:
+    relevant: true
+    maturity: partial
+    score: 6.9
+    summary: Testing and QA posture are materially present but remain pre-RC.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+  ops:
+    relevant: true
+    maturity: partial
+    score: 7.4
+    summary: Operational, governance, and security posture are materially present
+      but remain pre-RC.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+  market:
+    relevant: true
+    maturity: solid
+    score: 8.0
+    summary: Business-facing and portfolio-facing alignment is materially present.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+  overall:
+    relevant: true
+    maturity: solid
+    score: 7.7
+    summary: Overall release-candidate direction is visible, but the component remains
+      in pre-RC life.
+    risks:
+    - Assessment seeded from current pre-RC atlas and should be enriched by regular
+      repository scans.
+    improvements:
+    - Refresh this metric from a scheduled repository assessment run.
+    implemented:
+    - Current component report contributes to the Quality Atlas dataset.
+    partial:
+    - Narrative evidence and automated probe evidence should be expanded over time.
+    absent: []
+    intentionally_not_needed: []
+    tradeoffs:
+    - Current snapshot is lightweight and optimized for portfolio generation rather
+      than exhaustive per-metric evidence.
+    evidence:
+    - path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+      note: Metric-level assessment evidence.
+development_driving:
+  overall_status: fail
+  average_score: 7.68
+  status_counts:
+    pass: 2
+    warn: 4
+    fail: 1
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Canon & Structure — Both MySQL and PostgreSQL dialect markers are present; keep
+    dialect trees clearly separated.
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - Documentation & GitHub Suite — Public/protected docblock coverage is 445/973 (46%).
+  - Delivery & Observability — No GitHub workflow files were detected.
+  - SOLID & Refactoring Pressure — PHP file is very large (1122 lines); review SRP
+    and refactoring pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (4023 lines); review SRP
+    and refactoring pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 8.0
+      summary: 0 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+      - Public/protected docblock coverage is 445/973 (46%).
+    delivery_observability:
+      title: Delivery & Observability
+      status: warn
+      score: 8.75
+      summary: 0 fail, 1 warn, 1 info findings detected.
+      blockers:
+      - No GitHub workflow files were detected.
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 0.0
+      summary: 2 fail, 10 warn, 1 info findings detected.
+      blockers:
+      - PHP file is very large (1122 lines); review SRP and refactoring pressure.
+      - PHP file is very large (4023 lines); review SRP and refactoring pressure.
+      - Class exposes 28 public methods; review interface segregation and SRP.
+strengths:
+- Canonical snapshot/history contracts are present.
+- This component is wired into the atlas assessment registry.
+risks:
+- Dry-run mode does not perform a live AI verdict.
+- Repository scan depth is limited to deterministic probes until OPENAI_API_KEY is
+  provided.
+- Deterministic probes currently report fail status.
+recommended_next_actions:
+- Enable responses mode with OPENAI_API_KEY for live verdict generation.
+- Expand repository registry coverage and local_path mappings for additional components.
+evidence:
+- path: .antora-src/modules/ROOT/pages/component/discovering/report/index.adoc
+  note: Current component report page if present.
+- path: .antora-src/modules/ROOT/pages/quality-atlas/dataset.json
+  note: Seeded atlas dataset source.
+- path: .sync/quality-atlas/components/discovering/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+- path: var/atlas/component/discovering/probes/current.yaml
+  note: Deterministic development-driving probe layer.
+assessment_notes:
+- Discovering remains on a seeded snapshot because the assessment runner is in dry-run
+  mode.
+- 'Prompt length: 54468 characters.'
+- Base overall score retained at 7.70.
+assessment_confidence: dry-run

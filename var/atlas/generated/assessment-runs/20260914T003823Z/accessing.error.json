@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "accessing",
+  "title": "Accessing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): progress {\"event\":\"taskCreated\",\"taskId\":\"repo-smoke-20260914003830-9ac566e79c\",\"taskBankPath\":\"D:\\\\PhpstormProjects\\\\www\\\\mcp\\\\chatgpt-loop\\\\var\\\\runner\\\\task-bank\\\\tasks\\\\repo-smoke-20260914003830-9ac566e79c.json\",\"chatBankPath\":\"D:\\\\PhpstormProjects\\\\www\\\\mcp\\\\chatgpt-loop\\\\var\\\\runner\\\\chat-bank\\\\chats\\\\repo-smoke-20260914003830-9ac566e79c.json\",\"adoptedChatId\":null}\n\n\u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:99\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  99 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer:\u001b[0m вЂ¦\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_CHAT_EXPERIENCE_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "accessing",
+    "component_title": "Accessing",
+    "github_repository": "smartresponsor/accessing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/accessing/report/index.adoc",
+    "notes": "Connected to the scheduled assessment runner via GitHub repository target smartresponsor/accessing."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Accessing",
+    "timestamp_utc": "2026-09-14T00:38:23.946592+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "refactor/accessing-canonical-structure"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2674d3ccaa180692e30f9b4bef12ad2860d6c0ee"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '2674d3ccaa180692e30f9b4bef12ad2860d6c0ee'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D .gating/config/severity.yaml\n D .gating/profile/component/accessing.yaml\n M tests/Unit/AccessApiFlowServiceTest.php\n M tests/Unit/AccessBearerAuthenticatorTest.php\n M tests/Unit/AccessCredentialPasswordSafetyTest.php\n M tests/Unit/AccessMobilePendingAuthServiceTest.php\n M tests/Unit/AccessPasskeyAuthenticationSuccessTest.php\n M tests/Unit/AccessPasskeyChallengeServiceTest.php\n M tests/Unit/AccessPasskeyCredentialServiceTest.php\n?? .gating/.canonization/\n?? .gating/.commanding/\n?? .gating/.consuming/\n?? .gating/.gating/\n?? .gating/.github/\n?? .gating/.gitignore\n?? .gating/.idea/\n?? .gating/.intelligence/\n?? .gating/.php-cs-fixer.dist.php\n?? .gating/AGENTS.md\n?? .gating/MANIFEST.json\n?? .gating/MIGRATION.gating.md\n?? .gating/README.md\n?? .gating/composer.json\n?? .gating/contract/\n?? .gating/docs/\n?? .gating/gate.ps1\n?? .gating/gate.sh\n?? .gating/linting/\n?? .gating/phpunit.xml.dist\n?? .gating/policy/\n?? .gating/quality/\n?? .gating/run.ps1\n?? .gating/run.sh\n?? .gating/src/\n?? .gating/tests/\n?? .gating/tool/\n?? tests/Unit/AccessAdditionalEntityCoverageTest.php\n?? tests/Unit/AccessAuthenticationServiceCoverageTest.php\n?? tests/Unit/AccessEntityLifecycleCoverageTest.php\n?? tests/Unit/AccessProgrammaticAuthenticatorTest.php\n?? tests/Unit/AccessSecondFactorServiceCoverageTest.php\n?? tests/Unit/AccessSessionServiceCoverageTest.php\n?? tests/Unit/AccessSupportingComponentsCoverageTest.php\n?? tests/Unit/AccessVerificationChallengeServiceCoverageTest.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2674d3c test(accessing): adopt canonical PHPUnit coverage tooling\n185ac18 refactor(accessing): complete canonical RC migration\n5335c67 refactor: canonicalize Accessing structure and naming\n4e7c885 Add marketplace customer and professional fixtures\ne007983 Harden Accessing mobile identity and fixtures"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/local-php-server-8091.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.env.test\n.env.test.postgres\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Accessing.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAccessing.md\nAGENTS.md\nARCHITECTURE_MANIFEST.md\nAUDIT.md\nbin/\nbin/.gitkeep\nbin/console\nbin/lint-php.php\nbin/MANIFEST.md\nbin/phpunit\nBOUNDING_MANIFEST.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/platform/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/services_test.yaml\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/component/\ndocs/deploy/\ndocs/market-analysis.md\ndocs/milestone/\ndocs/modules/\ndocs/passkeys-host-integration.md\nFULL_MANIFEST.md\nMARKET_ANALYSIS.md\nmigrations/\nmigrations/Version20260912003630.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage-lock.json\npackage.json\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\nPRODUCT_MANIFEST.md\npsalm.xml\npublic/\npublic/.gitkeep"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "834"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\":  \"accessing/access\",\n    \"description\":  \"Accessing process app\",\n    \"type\":  \"symfony-bundle\",\n    \"license\":  \"proprietary\",\n    \"require\":  {\n                    \"php\":  \"^8.4\",\n                    \"ext-ctype\":  \"*\",\n                    \"ext-iconv\":  \"*\",\n                    \"doctrine/doctrine-bundle\":  \"^3.2\",\n                    \"doctrine/doctrine-migrations-bundle\":  \"^4.0\",\n                    \"doctrine/orm\":  \"^3.3\",\n                    \"spomky-labs/otphp\":  \"^11.5\",\n                    \"symfony/console\":  \"^8.1\",\n                    \"symfony/dotenv\":  \"^8.1\",\n                    \"symfony/form\":  \"^8.1\",\n                    \"symfony/framework-bundle\":  \"^8.1\",\n                    \"symfony/mailer\":  \"^8.1\",\n                    \"symfony/monolog-bundle\":  \"^4.0\",\n                    \"symfony/notifier\":  \"^8.1\",\n                    \"symfony/password-hasher\":  \"^8.1\",\n                    \"symfony/rate-limiter\":  \"^8.1\",\n                    \"symfony/runtime\":  \"^8.1\",\n                    \"symfony/security-bundle\":  \"^8.1\",\n                    \"symfony/security-csrf\":  \"^8.1\",\n                    \"symfony/serializer\":  \"^8.1\",\n                    \"symfony/twig-bundle\":  \"^8.1\",\n                    \"symfony/translation\":  \"^8.1\",\n                    \"symfony/validator\":  \"^8.1\",\n                    \"symfony/yaml\":  \"^8.1\",\n                    \"symfonycasts/reset-password-bundle\":  \"^1.23\",\n                    \"symfonycasts/verify-email-bundle\":  \"^1.17\",\n                    \"twig/extra-bundle\":  \"^3.15\",\n                    \"twig/twig\":  \"^3.15\",\n                    \"web-auth/webauthn-lib\":  \"^5.3.5\",\n                    \"ext-pdo\":  \"*\",\n                    \"configuring/config\":  \"dev-master\",\n                    \"interfacing/interface\":  \"dev-master\",\n                    \"league/oauth2-google\":  \"^4.0\",\n                    \"objecting/object\":  \"dev-master\",\n                    \"easycorp/easyadmin-bundle\":  \"^5.0\",\n                    \"cruding/crud\":  \"dev-master\",\n                    \"viewing/view\":  \"dev-master\"\n                },\n    \"require-dev\":  {\n                        \"doctrine/doctrine-fixtures-bundle\":  \"^4.3\",\n                        \"fakerphp/faker\":  \"^1.24\",\n                        \"friendsofphp/php-cs-fixer\":  \"3.94\",\n                        \"phpstan/phpstan\":  \"^2.1\",\n                        \"phpunit/phpunit\":  \"^12.0\",\n                        \"symfony/browser-kit\":  \"^8.1\",\n                        \"symfony/css-selector\":  \"^8.1\",\n                        \"symfony/panther\":  \"^2.2\",\n                        \"symfony/phpunit-bridge\":  \"^8.1\"\n                    },\n    \"autoload\":  {\n                     \"psr-4\":  {\n                                   \"App\\\\Accessing\\\\\":  \"src/\"\n                               }\n                 },\n    \"autoload-dev\":  {\n                         \"psr-4\":  {\n                                       \"App\\\\Accessing\\\\Tests\\\\\":  \"tests/\"\n                                   }\n                     },\n    \"scripts\":  {\n                    \"lint\":  \"php bin/lint-php.php\",\n                    \"cs:check\":  \"php-cs-fixer fix --dry-run --diff --verbose\",\n                    \"cs:fix\":  \"php-cs-fixer fix --verbose\",\n                    \"stan\":  \"phpstan analyse\",\n                    \"test\":  \"vendor/bin/phpunit --testsuite Accessing\",\n                    \"test:coverage\":  [\n                                              \"@putenv XDEBUG_MODE=coverage\",\n                                              \"vendor/bin/phpunit --testsuite Accessing --coverage-text=var/coverage.txt --path-coverage\"\n                                          ],\n                    \"test:object-identity\":  \"vendor/bin/simple-phpunit tests/Unit/Entity/AccessEntityObjectingContractTest.php\",\n                    \"test:panther\":  \"vendor/bin/simple-phpunit --testsuite Panther\",\n                    \"pipeline:local:full\":  [\n                                                \"@lint\",\n                                         ",
+      "package.json": "{\n  \"name\": \"accessing-playwright\",\n  \"private\": true,\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.0\"\n  },\n  \"scripts\": {\n    \"test:e2e\": \"playwright test\"\n  }\n}\n"
+    }
+  }
+}

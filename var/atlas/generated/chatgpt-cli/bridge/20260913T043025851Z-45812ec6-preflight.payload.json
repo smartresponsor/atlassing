@@ -1,0 +1,8 @@
+{
+    "runnerExecutionPlan":  {
+                                "tool":  "console.read_.repo.workspace.status",
+                                "arguments":  {
+                                                  "workspacePath":  "D:\\PhpstormProjects\\www\\Atlassing"
+                                              }
+                            }
+}

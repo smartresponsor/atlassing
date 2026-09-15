@@ -1,0 +1,207 @@
+component: gating
+title: Gating
+snapshot:
+  date: '2026-09-13'
+  label: assessment-2026-09-13
+  origin: quality-atlas deterministic probes
+  generated_at: '2026-09-13T16:04:49.020386+00:00'
+repo_target:
+  github_repository: ''
+  local_path: ''
+  default_branch: master
+families:
+  canon_structure:
+    title: Canon & Structure
+    status: fail
+    score: 5.5
+    summary: 1 fail, 2 warn, 0 info findings detected.
+    blockers:
+    - Repository/domain-named directory is too close to root for owner canon.
+    - PHP namespace does not use the default App\ root.
+    - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees clearly
+      separated.
+    findings:
+    - severity: fail
+      id: forbidden_domain_depth
+      detail: Repository/domain-named directory is too close to root for owner canon.
+      path: .gating
+    - severity: warn
+      id: namespace_drift
+      detail: PHP namespace does not use the default App\ root.
+      path: tests/Unit/Registry/RuleRegistryTest.php
+    - severity: warn
+      id: dialect_mixing
+      detail: Both MySQL and PostgreSQL dialect markers are present; keep dialect
+        trees clearly separated.
+      path: tests/calibration.php
+    evidence:
+    - .gating
+    - AGENTS.md
+    - tests/Unit/Registry/RuleRegistryTest.php
+    - tests/calibration.php
+  architecture_boundaries:
+    title: Architecture & Boundaries
+    status: pass
+    score: 10.0
+    summary: No material probe findings detected in this family.
+    blockers: []
+    findings: []
+    evidence:
+    - src/Rule/Canon/Canon009ComponentHostBoundaryRule.php
+    - src/Rule/Canon/Canon012TypedBoundaryContractRule.php
+  runtime_surface:
+    title: Runtime & Application Surface
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No Docker or compose files were detected.
+    findings:
+    - severity: warn
+      id: docker_surface_missing
+      detail: No Docker or compose files were detected.
+    evidence:
+    - .gating/contract/review-contract.v1.json
+    - policy/acceptable/root-contract-fail-proposal.yml
+    - src/Rule/Canon/Canon013NoPlaceholderProductionLogicRule.php
+  qa_behavior:
+    title: QA & Behavioral Assurance
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - No fixtures directories were detected.
+    findings:
+    - severity: warn
+      id: fixtures_missing
+      detail: No fixtures directories were detected.
+    evidence:
+    - src/Registry/RuleRegistry.php
+    - tests/
+    - tests/calibration.php
+  documentation_suite:
+    title: Documentation & GitHub Suite
+    status: warn
+    score: 9.0
+    summary: 0 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - 'Missing expected documentation asset: CHANGELOG.md.'
+    findings:
+    - severity: warn
+      id: missing_doc_asset
+      detail: 'Missing expected documentation asset: CHANGELOG.md.'
+    evidence:
+    - .github/workflows
+    - README.md
+    - php-docblock-ratio:166/189
+    - src/Rule/Canon/Canon038ConfigYamlSubjectPrefixRule.php
+  delivery_observability:
+    title: Delivery & Observability
+    status: pass
+    score: 9.75
+    summary: 0 fail, 0 warn, 1 info findings detected.
+    blockers: []
+    findings:
+    - severity: info
+      id: observability_markers_missing
+      detail: No Prometheus/Grafana markers were detected.
+    evidence:
+    - .gating/MANIFEST.json
+    - .github/workflows/consuming.yml
+    - .github/workflows/gate.yml
+    - .github/workflows/intelligence-codex-pr.yml
+    - .github/workflows/intelligence-dispatch.yml
+    - AGENTS.md
+    - MANIFEST.json
+    - MIGRATION.gating.md
+    - README.md
+  solid_refactoring:
+    title: SOLID & Refactoring Pressure
+    status: fail
+    score: 6.5
+    summary: 1 fail, 1 warn, 0 info findings detected.
+    blockers:
+    - PHP file is large (444 lines); review SRP pressure.
+    - PHP file is very large (565 lines); review SRP and refactoring pressure.
+    findings:
+    - severity: warn
+      id: class_size_pressure
+      detail: PHP file is large (444 lines); review SRP pressure.
+      path: tests/calibration.php
+    - severity: fail
+      id: large_class
+      detail: PHP file is very large (565 lines); review SRP and refactoring pressure.
+      path: src/Runner/GatingRunner.php
+    evidence:
+    - src/Runner/GatingRunner.php
+    - tests/calibration.php
+summary:
+  overall_status: fail
+  average_score: 8.39
+  status_counts:
+    pass: 2
+    warn: 3
+    fail: 2
+    not_applicable: 0
+  top_blockers:
+  - Canon & Structure — Repository/domain-named directory is too close to root for
+    owner canon.
+  - Canon & Structure — PHP namespace does not use the default App\ root.
+  - Runtime & Application Surface — No Docker or compose files were detected.
+  - QA & Behavioral Assurance — No fixtures directories were detected.
+  - 'Documentation & GitHub Suite — Missing expected documentation asset: CHANGELOG.md.'
+  - SOLID & Refactoring Pressure — PHP file is large (444 lines); review SRP pressure.
+  - SOLID & Refactoring Pressure — PHP file is very large (565 lines); review SRP
+    and refactoring pressure.
+  families:
+    canon_structure:
+      title: Canon & Structure
+      status: fail
+      score: 5.5
+      summary: 1 fail, 2 warn, 0 info findings detected.
+      blockers:
+      - Repository/domain-named directory is too close to root for owner canon.
+      - PHP namespace does not use the default App\ root.
+      - Both MySQL and PostgreSQL dialect markers are present; keep dialect trees
+        clearly separated.
+    architecture_boundaries:
+      title: Architecture & Boundaries
+      status: pass
+      score: 10.0
+      summary: No material probe findings detected in this family.
+      blockers: []
+    runtime_surface:
+      title: Runtime & Application Surface
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No Docker or compose files were detected.
+    qa_behavior:
+      title: QA & Behavioral Assurance
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - No fixtures directories were detected.
+    documentation_suite:
+      title: Documentation & GitHub Suite
+      status: warn
+      score: 9.0
+      summary: 0 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - 'Missing expected documentation asset: CHANGELOG.md.'
+    delivery_observability:
+      title: Delivery & Observability
+      status: pass
+      score: 9.75
+      summary: 0 fail, 0 warn, 1 info findings detected.
+      blockers: []
+    solid_refactoring:
+      title: SOLID & Refactoring Pressure
+      status: fail
+      score: 6.5
+      summary: 1 fail, 1 warn, 0 info findings detected.
+      blockers:
+      - PHP file is large (444 lines); review SRP pressure.
+      - PHP file is very large (565 lines); review SRP and refactoring pressure.
