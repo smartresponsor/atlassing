@@ -86,11 +86,6 @@ try {
     $plan = Get-Content -Raw -Path $selectionPlan | ConvertFrom-Json
     $selected = @($plan.selected_components)
     Write-AtlasLog ("selected components=" + ($selected -join ','))
-    if ($Mode -eq 'chatgpt-cli' -and $selected.Count -gt 1) {
-        $deferred = @($selected | Select-Object -Skip 1)
-        $selected = @($selected | Select-Object -First 1)
-        Write-AtlasLog ("chatgpt-cli local throttle active component=" + ($selected -join ',') + " deferred=" + ($deferred -join ','))
-    }
 
     if ($SelectionOnly) {
         $plan | ConvertTo-Json -Depth 8
@@ -121,12 +116,16 @@ try {
     }
 
     & php @arguments
-    if ($LASTEXITCODE -ne 0) {
-        Write-AtlasLog "assessment failed exit=$LASTEXITCODE"
-        exit 30
+    $assessmentExit = $LASTEXITCODE
+    if ($assessmentExit -ne 0) {
+        Write-AtlasLog "assessment completed with one or more component failures exit=$assessmentExit; successful component artifacts will still be published"
     }
 
     if ($NoPublish) {
+        if ($assessmentExit -ne 0) {
+            Write-AtlasLog 'assessment completed with publication disabled and one or more component failures'
+            exit 30
+        }
         Write-AtlasLog 'assessment completed with publication disabled'
         exit 0
     }
@@ -171,6 +170,10 @@ try {
     }
 
     Write-AtlasLog ("scheduled run published components=" + ($selected -join ','))
+    if ($assessmentExit -ne 0) {
+        Write-AtlasLog 'scheduled run published successful component artifacts but completed with one or more component failures'
+        exit 30
+    }
     exit 0
 }
 finally {
