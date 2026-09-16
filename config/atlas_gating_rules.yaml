@@ -23,3 +23,6 @@ rule_set:
     - canon.040.php_test_coverage
     - canon.041.behavioral_ui_test_tooling
     - canon.042.behavioral_ui_coverage
+    - canon.043.development_composer_dependency_version
+    - canon.044.objecting_system_field_naming
+    - canon.045.development_composer_repository_closure

@@ -187,3 +187,27 @@ Date: 2026-09-13
 - Operational scheduler acceptance: direct scorer preflight under `pwsh` returns `{\"ok\":true,\"status\":\"SYSTEM_READY\"}` and the public scheduled preflight path also returns exit 0 / SYSTEM_READY after the host fix.
 - Production/development Composer dependency parity for the current standalone baseline is green under Canon022/023/024.
 - Repository is functionally RC-improved and has no hard gate failures. Remaining bounded debt is explicit: raise PHP line/method coverage toward 80% and materialize genuine Canon042 functional/behavioral/UI coverage evidence. Git publication requires separating the existing local `master` ahead/dirty history before a clean feature branch/PR can be produced safely.
+
+## repository_implementation-2026-09-16-atlassing
+
+### Baseline and canon mapping
+
+- Started from a clean `master` worktree and re-read Atlassing documentation/runtime/testing surfaces plus the mandatory Objecting, Cruding, Viewing, Interfacing, Gating, and Canonization contour. Interfacing has no root `MANIFEST.json` at the inspected path.
+- Canonization textual rules consulted directly: Canon039 PHP test tooling, Canon040 PHP executable coverage, Canon041 behavioral/UI tooling, Canon042 behavioral/UI coverage, Canon043 development dependency version identity, Canon045 development repository closure, plus the architecture guard matrix. Canon044 applicability is enforced by the executable Gating rule and no Objecting naming defect was found.
+- RC-critical workstream: close measured Canon040 line/method debt and any packaging/canon drift exposed by acceptance. Growth workstream remains genuine Canon042 inventory/evidence production and richer scorecard/rubric/trend/waiver UX; it does not block this RC because Gating classifies missing evidence as a warning rather than a hard failure.
+- Market benchmark used for scope discipline: mature engineering scorecard platforms emphasize reproducible checks, maturity/readiness state, and actionable diagnostics; Atlassing keeps generic CRUD, rendering, shell composition, and reusable system-field ownership in their owning components.
+
+### Material implementation
+
+- Added behavioral PHPUnit coverage for Atlas operational commands, component entity identity/default state, registry/snapshot edge cases, Python engine execution, documentation-index edge shapes, and bundle extension configuration without changing production semantics.
+- Coverage moved from classes 47.83%, methods 54.29%, branches 88.51%, lines 59.52% to classes 78.26%, methods 80.00%, branches 87.87%, lines 93.57%; Canon040 now meets all independent thresholds.
+- Replaced all local first-party `*@dev` constraints with Canon043 `dev-master` identity and added `options.versions` to all seven local path repositories. Refreshed the lock/install state against the canonical local branches.
+- Extended `config/atlas_gating_rules.yaml` through Canon043, Canon044, and Canon045 so current Canonization rules are executable rather than silently absent from Atlassing acceptance.
+
+### Verification and residual debt
+
+- `composer validate --strict --check-lock`: green after Canon043 normalization.
+- `composer quality`: green; PHP-CS-Fixer reports 0 fixable files, PHPStan reports 0 errors, PHPUnit reports 24 tests / 102 assertions.
+- `composer coverage`: green with lines 93.57%, methods 80.00%, branches 87.87%.
+- `composer gating:check`: 24 rules, 0 failed, 1 warning. Canon040, Canon043, Canon044, and Canon045 pass. Canon042 is the sole warning because no repository-owned behavioral/UI inventory producer has yet materialized `var/coverage/behavioral-ui.json`.
+- Remaining non-blocking growth debt: implement genuine Canon042 functional/behavioral/UI/critical surface inventories and evidence producer; no opaque counters or fabricated coverage percentages are acceptable.

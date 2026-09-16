@@ -9,45 +9,45 @@
     {
       "type": "path",
       "url": "../Collectioning",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "collectioning/collection": "dev-master" } }
     },
     {
       "type": "path",
       "url": "../Tabling",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "tabling/table": "dev-master" } }
     },
     {
       "type": "path",
       "url": "../Cruding",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "cruding/crud": "dev-master" } }
     },
     {
       "type": "path",
       "url": "../Gating",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "gating/gate": "dev-master" } }
     },
     {
       "type": "path",
       "url": "../Interfacing",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "interfacing/interface": "dev-master" } }
     },
     {
       "type": "path",
       "url": "../Objecting",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "objecting/object": "dev-master" } }
     },
     {
       "type": "path",
       "url": "../Viewing",
-      "options": { "symlink": true }
+      "options": { "symlink": true, "versions": { "viewing/view": "dev-master" } }
     }
   ],
   "require": {
-    "collectioning/collection": "*@dev",
-    "cruding/crud": "*@dev",
+    "collectioning/collection": "dev-master",
+    "cruding/crud": "dev-master",
     "easycorp/easyadmin-bundle": "^5.0",
-    "interfacing/interface": "*@dev",
-    "objecting/object": "*@dev",
+    "interfacing/interface": "dev-master",
+    "objecting/object": "dev-master",
     "php": "^8.4",
     "symfony/config": "^8.1",
     "symfony/dependency-injection": "^8.1",
@@ -55,14 +55,14 @@
     "symfony/http-kernel": "^8.1",
     "symfony/console": "^8.1",
     "symfony/yaml": "^8.1",
-    "tabling/table": "*@dev",
+    "tabling/table": "dev-master",
     "doctrine/orm": "^3.4",
     "symfony/process": "^8.1",
-    "viewing/view": "*@dev"
+    "viewing/view": "dev-master"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.95",
-    "gating/gate": "*@dev",
+    "gating/gate": "dev-master",
     "phpstan/phpstan": "^2.2",
     "phpunit/phpunit": "^12.0",
     "symfony/panther": "^2.4",
