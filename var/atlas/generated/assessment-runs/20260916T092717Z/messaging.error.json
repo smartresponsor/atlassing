@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "messaging",
+  "title": "Messaging",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mWrite-AcceptanceArtifact: \u001b[0mD:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-task-bank-loop.ps1:952\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 952 | \u001b[0m … cceptance = \u001b[36;1mWrite-AcceptanceArtifact -Task $Task -Chat $Chat -Answers\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mThe property 'readyToDelete' cannot be found on this object. Verify that the property exists.\u001b[0m",
+  "registry_entry": {
+    "component_id": "messaging",
+    "component_title": "Messaging",
+    "github_repository": "smartresponsor/messaging",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/messaging/report/index.adoc",
+    "notes": "Connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Messaging",
+    "timestamp_utc": "2026-09-16T09:28:36.516790+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "integration/messaging-final-20260913"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "da6057da6245807f3616c43c648297db113f4db4"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'da6057da6245807f3616c43c648297db113f4db4'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "da6057da Materialize Messaging current schema baseline\n28c3d72d Harden Messenger reliability config test typing\n65e1fa26 Ignore local Messaging orchestration artifacts\nf2639310 Canonize Messaging runtime boundaries and persistence\n7a0ddde4 Refresh Messaging RC readiness evidence"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codex/\n.codex/prompts/\n.codex-tmp/\n.console-mcp/\n.console-mcp/local-php-server-18000.json\n.console-mcp/local-php-server-18001.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.cursor/\n.cursor/rules/\n.dockerignore\n.editorconfig\n.env\n.env.example\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/CODEOWNERS\n.github/dependabot.yml\n.github/ISSUE_TEMPLATE/\n.github/PULL_REQUEST_TEMPLATE.md\n.github/release.yml\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/inspectionProfiles/\n.idea/Messaging.iml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbin/preflight.php\nbin/ws-gateway.php\nbuild/\nbuild/schema/\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/quality/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services/\nconfig/services.php\nconfig/services.yaml\nconfig/services_acl.yaml\nconfig/services_ai_enrichment_v1.yaml\nconfig/services_ai_enrichment_v2.yaml\nconfig/services_attachment_core.yaml\nconfig/services_attachment_core_v2.yaml\nconfig/services_attachments.yaml\nconfig/services_attachments_v2.yaml\nconfig/services_attachments_v21.yaml\nconfig/services_audit_otel_v1.yaml\nconfig/services_audit_tracing_v1.yaml\nconfig/services_cache.yaml\nconfig/services_delivery.yaml\nconfig/services_delivery_qos.yaml\nconfig/services_delivery_security.yaml\nconfig/services_edit.yaml\nconfig/services_eventbus.yaml\nconfig/services_export.yaml\nconfig/services_mercure.yaml\nconfig/services_moderation_retention.yaml\nconfig/services_moderation_v3.yaml\nconfig/services_moderation_v31.yaml\nconfig/services_observability.yaml\nconfig/services_outbox.yaml\nconfig/services_partitions.yaml\nconfig/services_presence.yaml\nconfig/services_presence_push.yaml\nconfig/services_presence_v1.yaml\nconfig/services_rate_listener.yaml\nconfig/services_ratelimit.yaml\nconfig/services_reaction.yaml"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "2725"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"messaging/message\",\n    \"description\": \"Messaging process app\",\n    \"type\": \"symfony-bundle\",\n    \"license\": \"proprietary\",\n    \"repositories\": [\n        {\n            \"type\": \"path\",\n            \"url\": \"../Administering\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Cruding\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Collectioning\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Tabling\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Viewing\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Interfacing\",\n            \"options\": {\n                \"symlink\": true\n            }\n        },\n        {\n            \"type\": \"path\",\n            \"url\": \"../Objecting\",\n            \"options\": {\n                \"symlink\": true\n            }\n        }\n    ],\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-curl\": \"*\",\n        \"ext-fileinfo\": \"*\",\n        \"ext-gd\": \"*\",\n        \"ext-openssl\": \"*\",\n        \"ext-pdo\": \"*\",\n        \"ext-zip\": \"*\",\n        \"ext-zlib\": \"*\",\n        \"api-platform/doctrine-orm\": \"^4.3\",\n        \"api-platform/graphql\": \"^4.3\",\n        \"api-platform/symfony\": \"^4.3\",\n        \"doctrine/dbal\": \"^4.3\",\n        \"doctrine/doctrine-bundle\": \"^3.2\",\n        \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n        \"doctrine/orm\": \"^3.3\",\n        \"administering/administration\": \"dev-master\",\n        \"collectioning/collection\": \"dev-master\",\n        \"cruding/crud\": \"dev-master\",\n        \"interfacing/interface\": \"dev-master\",\n        \"objecting/object\": \"dev-master\",\n        \"tabling/table\": \"dev-master\",\n        \"viewing/view\": \"dev-master\",\n        \"doctrine/persistence\": \"^4.0\",\n        \"predis/predis\": \"^2.2\",\n        \"ramsey/uuid\": \"^4.8\",\n        \"react/socket\": \"^1.15\",\n        \"symfony/cache\": \"^8.1\",\n        \"symfony/config\": \"^8.1\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/service-contracts\": \"^3.7\",\n        \"symfony/dependency-injection\": \"^8.1\",\n        \"symfony/dotenv\": \"^8.1\",\n        \"symfony/error-handler\": \"^8.1\",\n        \"symfony/event-dispatcher\": \"^8.1\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/http-client\": \"^8.1\",\n        \"symfony/http-foundation\": \"^8.1\",\n        \"symfony/http-kernel\": \"^8.1\",\n        \"symfony/mercure\": \"^0.8 || ^0.9\",\n        \"symfony/mercure-bundle\": \"^0.4\",\n        \"symfony/messenger\": \"^8.1\",\n        \"symfony/monolog-bundle\": \"^4.0\",\n        \"symfony/process\": \"^8.1\",\n        \"symfony/rate-limiter\": \"^8.1\",\n        \"symfony/routing\": \"^8.1\",\n        \"symfony/security-bundle\": \"^8.1\",\n        \"symfony/serializer\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/yaml\": \"^8.1\"\n    },\n    \"require-dev\": {\n        \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n        \"friendsofphp/php-cs-fixer\": \"^3.65\",\n        \"nelmio/api-doc-bundle\": \"^5.1\",\n        \"phpstan/phpstan\": \"^2.1\",\n        \"phpunit/phpunit\": \"^11.5\",\n        \"symfony/browser-kit\": \"^8.1\",\n        \"symfony/css-selector\": \"^8.1\",\n        \"symfony/panther\": \"^2.2\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Messaging\\\\\": \"src/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"App\\\\Messaging\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"config\": {\n        \"sort-packages\": true,\n        \"allow-plugins\": {\n            \"php-http/discovery\": true,\n            \"symfony/runtime\": true\n        }\n    },\n    \"scripts\": {\n        \"test\": \"@php vendor/bin/phpunit --configuration phpunit.xml.dist\",\n        \"console\": \"@php bin/console\",\n        \"check\": [\n            \"@",
+      "package.json": "{\n  \"name\": \"smartresponse-messaging\",\n  \"private\": true,\n  \"scripts\": {\n    \"playwright:install\": \"playwright install --with-deps chromium\",\n    \"e2e\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\"\n  }\n}\n"
+    }
+  }
+}

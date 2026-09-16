@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "vendoring",
+  "title": "Vendoring",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mWrite-AcceptanceArtifact: \u001b[0mD:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-task-bank-loop.ps1:952\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 952 | \u001b[0m … cceptance = \u001b[36;1mWrite-AcceptanceArtifact -Task $Task -Chat $Chat -Answers\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mThe property 'readyToDelete' cannot be found on this object. Verify that the property exists.\u001b[0m",
+  "registry_entry": {
+    "component_id": "vendoring",
+    "component_title": "Vendoring",
+    "github_repository": "smartresponsor/vendoring",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/vendoring/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Vendoring",
+    "timestamp_utc": "2026-09-16T09:29:42.084649+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "release/vendoring-local-head-20260904"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "1ccf3793c483a8272ce94768324628ee1f7f618a"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '1ccf3793c483a8272ce94768324628ee1f7f618a'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/AGENTS.md\n M .gating/src/Registry/RuleRegistry.php\n M .gating/src/Rule/Canon/Canon031PhpDocCoverageRule.php\n M .gating/src/Rule/Canon/Canon042BehavioralUiCoverageRule.php\n M .gating/src/Rule/Canon/CanonRuleMirrorRule.php\n M .gating/tests/calibration.php\n M src/Entity/Vendor/VendorCommissionEntity.php\n M src/Entity/Vendor/VendorConversationEntity.php\n M src/Entity/Vendor/VendorCustomerOrderEntity.php\n M src/Entity/Vendor/VendorGroupEntity.php\n M src/Entity/Vendor/VendorPaymentEntity.php\n M src/Entity/Vendor/VendorPayoutAccountEntity.php\n M src/Entity/Vendor/VendorPayoutEntity.php\n M src/Entity/Vendor/VendorShipmentEntity.php\n M src/Entity/Vendor/VendorTransactionEntity.php\n M src/Entity/Vendor/VendorUserAssignmentEntity.php\n M src/Entity/Vendor/VendorWishlistEntity.php\n?? .gating/src/Rule/Canon/Canon043DevelopmentComposerDependencyVersionRule.php\n?? .gating/src/Rule/Canon/Canon044ObjectingSystemFieldNamingRule.php\n?? .gating/src/Rule/Canon/Canon045DevelopmentComposerRepositoryClosureRule.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "1ccf379 Align remaining Vendoring schema drift\ne21de52 Normalize Vendoring schema contracts\n678f1af fix(vendoring): satisfy ownership array type contracts\n3de8133 chore(vendoring): refresh generated runtime metadata\naa637fc chore(gating): sync vendored canonical rules"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/logs/\n.editorconfig\n.env.example\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.idea/\n.idea/.gitignore\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\n.yamllint.yml\nAGENTS.md\nbin/\nbin/console\nbin/generate-openapi.php\nbin/generate-phpdocumentor-site.php\nbin/generate-rc-evidence.php\nbin/generate-release-manifest.php\nbin/vendor-host-fixtures.ps1\nbuild/\nbuild/docs/\nbuild/release/\nbuild/reports/\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/platform/\nconfig/reference.php\nconfig/routes/\nconfig/routes_business.yaml\nconfig/routes_runtime.php\nconfig/services.yaml\nconfig/vendor_services_transactions.yaml\ndelivery/\ndelivery/audit/\ndelivery/rc/\ndeploy/\ndeploy/_template/\ndeploy/cloudflare/\ndeploy/docker/\ndeploy/helm/\ndeploy/MANIFEST.hidden-deploy-migrated.md\ndeploy/systemd/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/ARCHITECTURE_REVIEW_120_CHECKLIST.md\ndocs/component/\ndocs/GITHUB_ISSUES_ARCHITECTURE_REVIEW_V2.md\ndocs/integration.md\ndocs/internal/\ndocs/modules/\ndocs/release/\ndocs/runtime-artifact-inventory.md\ndocs/tech/\ndocs/zero-controller-runtime-contract.md\ndrivers/\ndrivers/chromedriver\nmigrations/\nmigrations/MigrationPg/\nmigrations/MigrationSqlite/\nmigrations/SchemaPg/\nmigrations/Version20260812231630.php\nmigrations/Version20260819224500.php\nmigrations/Version20260821054500.php\nmigrations/Version20260915004200.php\nmigrations/Version20260915131500.php\nmigrations/Version20260915132000.php\nmigrations/Version20260915191000.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nops/\nops/policy/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1605"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"vendoring/vendor\",\n    \"description\": \"Vendoring process app\",\n    \"type\": \"symfony-bundle\",\n    \"license\": \"proprietary\",\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-json\": \"*\",\n        \"doctrine/dbal\": \"^4.3\",\n        \"doctrine/doctrine-bundle\": \"^3.2\",\n        \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n        \"doctrine/orm\": \"^3.3\",\n        \"doctrine/persistence\": \"^4.0\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/event-dispatcher-contracts\": \"^3.6\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/http-foundation\": \"^8.1\",\n        \"symfony/mailer\": \"^8.1\",\n        \"symfony/mime\": \"^8.1\",\n        \"symfony/routing\": \"^8.1\",\n        \"symfony/uid\": \"^8.1\",\n        \"symfony/var-exporter\": \"^8.1\",\n        \"twig/twig\": \"^3.15\",\n        \"symfony/twig-bundle\": \"^8.1\",\n        \"symfony/form\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/security-csrf\": \"^8.1\",\n        \"nelmio/api-doc-bundle\": \"^5.3\",\n        \"ext-pdo\": \"*\",\n        \"collectioning/collection\": \"dev-master\",\n        \"cruding/crud\": \"dev-master\",\n        \"easycorp/easyadmin-bundle\": \"^5.0\",\n        \"interfacing/interface\": \"dev-master\",\n        \"objecting/object\": \"dev-master\",\n        \"tabling/table\": \"dev-master\",\n        \"viewing/view\": \"dev-master\"\n    },\n    \"require-dev\": {\n        \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n        \"fakerphp/faker\": \"^1.24\",\n        \"friendsofphp/php-cs-fixer\": \"^3.66\",\n        \"phpstan/phpstan\": \"^2.1\",\n        \"phpunit/phpunit\": \"^11.5\",\n        \"symfony/panther\": \"^2.2\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Vendoring\\\\\": \"src/\"\n        },\n        \"exclude-from-classmap\": [\n            \"src/DTO/Ledger/VendorLedgerEntryDTO.php\"\n        ]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"App\\\\Vendoring\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"extra\": {\n        \"symfony\": {\n            \"bundle\": \"App\\\\Vendoring\\\\VendoringBundle\"\n        }\n    },\n    \"config\": {\n        \"sort-packages\": true,\n        \"allow-plugins\": {\n            \"php-http/discovery\": true\n        }\n    },\n    \"scripts\": {\n        \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n        \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n        \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n        \"docs:rc-evidence\": \"@php bin/generate-rc-evidence.php\",\n        \"lint\": \"@php tools/php/php84.php tools/qa/VendoringPhpLint.php\",\n        \"lint:php\": \"@php tools/php/php84.php tools/qa/VendoringPhpLint.php\",\n        \"md\": \"@php tools/php/php84.php vendor/bin/phpmd src text phpmd.xml.dist\",\n        \"md:tests\": \"@php tools/php/php84.php vendor/bin/phpmd tests text phpmd.xml.dist\",\n        \"phpstan\": \"@php tools/php/php84.php vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=1G\",\n        \"pipeline:local\": \"powershell -ExecutionPolicy Bypass -File tools/ci/run-vendor-local-pipeline.ps1\",\n        \"pipeline:local:full\": \"powershell -ExecutionPolicy Bypass -File tools/ci/run-vendor-local-pipeline.ps1 -IncludeSmokes -IncludeReports\",\n        \"pipeline:local:strict\": \"powershell -ExecutionPolicy Bypass -File tools/ci/run-vendor-local-pipeline.ps1 -FailOnErrors\",\n        \"qa:canon\": [\n            \"@report:canonical-structure\",\n            \"@report:mirror-enforcer\",\n            \"@report:config-guard\",\n            \"@report:config-drift\",\n            \"@report:php-surface\"\n        ],\n        \"qa:full\": [\n            \"@qa:style\",\n            \"@qa:static\",\n            \"@qa:smell\",\n            \"@qa:test\",\n            \"@qa:canon\"\n        ],\n        \"qa:smell\": [\n            \"@md\",\n            \"@md:tests\"\n        ],\n        \"qa:static\": [\n            \"@stan\"\n        ],\n        \"qa:style\": [\n            \"@lint\",\n            \"@cs:check\"\n        ],\n        \"qa:test\": [\n            \"@test\"\n        ],\n        \"quali",
+      "package.json": "{\n    \"name\": \"vendoring-local-qa\",\n    \"private\": true,\n    \"scripts\": {\n        \"test:e2e\": \"playwright test\"\n    },\n    \"devDependencies\": {\n        \"@playwright/test\": \"^1.58.2\"\n    }\n}\n"
+    }
+  }
+}

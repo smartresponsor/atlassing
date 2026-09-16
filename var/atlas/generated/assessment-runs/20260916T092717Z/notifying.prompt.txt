@@ -2,13 +2,13 @@ You are updating a Smartresponsor Quality Atlas snapshot. Use only the provided 
 
 Component registry entry:
 {
-  "component_id": "rolling",
-  "component_title": "Rolling",
-  "github_repository": "smartresponsor/rolling",
+  "component_id": "notifying",
+  "component_title": "Notifying",
+  "github_repository": "smartresponsor/notifying",
   "default_branch": "master",
   "enabled": true,
-  "report_path": ".antora-src/modules/ROOT/pages/component/rolling/report/index.adoc",
-  "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  "report_path": ".antora-src/modules/ROOT/pages/component/notifying/report/index.adoc",
+  "notes": "Active notification and recognized-needs backend; included explicitly in scheduled assessment coverage."
 }
 
 Assessment cards:
@@ -1690,99 +1690,99 @@ Scoring model:
 Current snapshot metric context:
 {
   "product": {
-    "score": 8.2,
-    "summary": "Component identity and market-facing shape are materially present.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   },
   "architecture": {
-    "score": 8.1,
-    "summary": "Symfony-oriented architecture shape is materially present.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   },
   "runtime": {
-    "score": 8.3,
-    "summary": "Runtime and application surface are materially present.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   },
   "qa": {
-    "score": 8.5,
-    "summary": "Testing and QA posture are materially present but remain pre-RC.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   },
   "ops": {
-    "score": 8.6,
-    "summary": "Operational, governance, and security posture are materially present but remain pre-RC.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   },
   "market": {
-    "score": 7.9,
-    "summary": "Business-facing and portfolio-facing alignment is materially present.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   },
   "overall": {
-    "score": 8.3,
-    "summary": "Overall release-candidate direction is visible, but the component remains in pre-RC life.",
+    "score": 8.0,
+    "summary": "Bootstrap snapshot metric pending first live assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Bootstrap metric should be replaced by an assessment verdict."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Run assessment workflow and refresh narrative evidence."
     ]
   }
 }
 
 Deterministic repository facts:
 {
-  "repo_root": "D:\\PhpstormProjects\\www\\Rolling",
-  "timestamp_utc": "2026-09-16T09:29:13.650901+00:00",
+  "repo_root": "D:\\PhpstormProjects\\www\\Notifying",
+  "timestamp_utc": "2026-09-16T09:30:21.587432+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,
-    "output": "cmcp/engine-20260911155012-rolling-local-reconcile"
+    "output": "release/notifying-20260817"
   },
   "git_commit": {
     "exit_code": 0,
-    "output": "5af5e52b8fc180231298ff8db3d39db310fc8c08"
+    "output": "a0b9ac07da21c08d24fa6d43bdea0480814743de"
   },
   "git_exact_tag": {
     "exit_code": 128,
-    "output": "fatal: no tag exactly matches '5af5e52b8fc180231298ff8db3d39db310fc8c08'"
+    "output": "fatal: No names found, cannot describe anything."
   },
   "has_composer_json": true,
-  "has_package_json": true,
+  "has_package_json": false,
   "has_phpstan_neon": true,
-  "has_phpstan_neon_dist": true,
-  "has_phpunit_xml": true,
+  "has_phpstan_neon_dist": false,
+  "has_phpunit_xml": false,
   "has_phpunit_xml_dist": true,
   "has__github_workflows": true,
   "has__antora-src_modules_ROOT_nav_adoc": false,
@@ -1793,7 +1793,7 @@ Deterministic repository facts:
   },
   "git_recent_commits": {
     "exit_code": 0,
-    "output": "5af5e52 Record Rolling RC acceptance\n1edfee1 Harden Rolling Symfony 8.1 platform floor\n0fd84b9 Verify Rolling after local reconciliation\n47fd6be Close Rolling final acceptance regression\n282da90 Canonize Rolling permission DTO contour"
+    "output": "a0b9ac0 Ignore local materialized Gating workspace\n56f1b00 Harden Notifying RC contracts and schema convergence\n45314d8 Keep push tokens out of dispatch claims\n5906438 Finalize Notifying bundle integration\n333be7f Update EasyAdmin security patch"
   },
   "php_version": {
     "exit_code": 0,
@@ -1805,15 +1805,14 @@ Deterministic repository facts:
   },
   "top_level_tree": {
     "exit_code": 0,
-    "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/Rolling.iml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.php\nAGENTS.md\nbin/\nbin/autoload-continuity-audit.php\nbin/bootstrap-preflight.php\nbin/bootstrap-runtime-requirements.php\nbin/canon-scan.php\nbin/namespace-audit.php\nbin/no-namespace-audit.php\nbin/php-lint-all.php\nbin/php82-cs-fixer.php\nbin/role-admin.php\nbin/role-batch-perf.php\nbin/role-bench.php\nbin/role-janitor.php\nbin/role-policy.php\nbin/role-rebac.php\nCMCP_CHANGELOG.md\ncompose.yaml\ncomposer.json\ncomposer.lock\nconfig/\nconfig/audit.example.yaml\nconfig/component/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/role/\nconfig/role_attributes.yaml\nconfig/role_permissions.json\nconfig/role_shadow.yaml\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\ndeploy/\ndeploy/compose/\ndeploy/docker/\ndeploy/README.md\ndocs/\ndocs/admin/\ndocs/admin-4eyes.md\ndocs/admin.md\ndocs/admin_api_cli.md\ndocs/adr/\ndocs/api.http\ndocs/approval/\ndocs/architecture/\ndocs/attributes.md\ndocs/audit-explain-v2.md\ndocs/audit.md\ndocs/bulk.md\ndocs/cache/\ndocs/canon/\ndocs/CHANGELOG.md\ndocs/component/\ndocs/consistency.md\ndocs/consistency_tokens.md\ndocs/context_enricher.md\ndocs/CONTRIBUTING.md\ndocs/explain.md\ndocs/g9-lint-diff.md\ndocs/integrations.md\ndocs/local_stack.md\ndocs/model/\ndocs/obligation/\ndocs/obligations/\ndocs/obligations-masking.md\ndocs/opa_adapter.md\ndocs/openapi/\ndocs/pdp/\ndocs/pdp-cache.md"
+    "output": ".console-mcp/\n.console-mcp/local-php-server-8014.json\n.console-mcp/local-php-server-log/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.dist.php\n.phpunit.result.cache\nbin/\nbin/console\nbin/notifying-console-diagnose.ps1\nbin/notifying-runtime-check.ps1\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/component/\nconfig/kernel/\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/services.yaml\nmigrations/\nmigrations/.gitkeep\nmigrations/baseline/\nmigrations/Version20260811054800.php\nmigrations/Version20260812184000.php\nmigrations/Version20260812220900.php\nmigrations/Version20260813150659.php\nmigrations/Version20260912210000.php\nphpstan.neon\nphpunit.xml.dist\npublic/\npublic/index.php\nREADME.md\nresources/\nresources/consumer/\nsrc/\nsrc/Controller/\nsrc/DependencyInjection/\nsrc/Entity/\nsrc/Enum/\nsrc/Kernel.php\nsrc/Message/\nsrc/MessageHandler/\nsrc/NotifyingBundle.php\nsrc/Repository/\nsrc/Service/\nsrc/ValueObject/\ntests/\ntests/.gitkeep\ntests/Entity/\ntests/Repository/\ntests/Service/\ntool/\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvar/coverage/\nvar/notifying_dev.sqlite\nvar/notifying_test.sqlite\nvar/phpstan/\nvendor/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/interfacing/\nvendor/myclabs/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/react/\nvendor/sebastian/\nvendor/staabm/"
   },
   "repo_file_count": {
     "exit_code": 0,
-    "output": "919"
+    "output": "83"
   },
   "key_file_excerpts": {
-    "composer.json": "{\n  \"name\": \"rolling/role\",\n  \"description\": \"Rolling role Symfony bundle package\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"MIT\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-ctype\": \"*\",\n    \"ext-curl\": \"*\",\n    \"ext-json\": \"*\",\n    \"ext-mbstring\": \"*\",\n    \"ext-openssl\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"configuring/config\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.0\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"psr/simple-cache\": \"^3.0\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/event-dispatcher\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-csrf\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.24\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"dbrekelmans/bdi\": \"^1.4.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/var-dumper\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Rolling\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Rolling\\\\Tests\\\\\": \"tests/\",\n      \"Rolling\\\\SDK\\\\V2\\\\\": \"SDK/php/\"\n    },\n    \"exclude-from-classmap\": [\n      \"tests/SDK/PHP/psr_stubs.php\"\n    ]\n  },\n  \"scripts\": {\n    \"canon:scan\": \"@php bin/canon-scan.php\",\n    \"canon:namespace-audit\": \"@php bin/namespace-audit.php\",\n    \"canon:no-namespace-audit\": \"@php bin/no-namespace-audit.php\",\n    \"canon:autoload-audit\": \"@php bin/autoload-continuity-audit.php\",\n    \"recovery:bootstrap-preflight\": \"@php tools/qa/bootstrap-preflight-report.php\",\n    \"recovery:dependency-readiness\": \"@php tools/qa/dependency-readiness.php\",\n    \"recovery:audits\": \"@php tools/qa/recovery-audits.php\",\n    \"recovery:readiness-smoke\": \"@php tools/qa/readiness-smoke.php\",\n    \"recovery:operator-preflight\": \"@php tools/qa/operator-preflight.php\",\n    \"recovery:current-summary\": \"@php tools/qa/current-summary.php\",\n    \"test\": [\n      \"@php tools/qa/phpunit-junit-gate.php unit-role-a tests/Role/Acl tests/Role/Administration tests/Role/Audit tests/Role/Batch tests/Role/Consistency --no-output\",\n      \"@php tools/qa/phpunit-junit-gate.php unit-role-b tests/Role/Console --no-output\",\n      \"@php tools/qa/phpunit-junit-gate.php unit-role-c tests/Role/Context tests/Role/Housekeeping tests/Role/Http tests/Role/Model tests/Role/Observability tests/Role/Opa tests/Role/Policy tests/Role/Rebac tests/Role/Resilience --no-output\",\n      \"@php tools/qa/phpunit-junit-gate.php unit-sdk tests/SDK --no-output\"\n    ],\n    \"host-smoke\": \"@php tools/qa/phpunit-junit-gate.php host-smoke --testsuite=e2e --filter=KernelAccessTest --do-not-fail-on-risky\",\n    \"lint\": [\n      \"@php tools/qa/php-lint.php\"\n    ],\n    \"phpstan\": \"vendor/bin/phpstan analyse --memory-limit=1G\",\n    \"cs:check\": \"vendor/bin/php-cs-fixer fix --allow-risky=yes --dry-run --diff --verbose\",\n    \"cs:fix\": \"vendor/bin/php-cs-fixer fix --allow-risky=yes --verbose\",\n    \"qa\": [\n      \"@lint\",\n      \"@phpstan\",\n      \"@test\",\n      \"@host-smoke\",\n      \"@surface:audit\",\n      \"@symfony81:audit\",\n      \"@http-payload:audit\",\n      \"@docblock:coverage\",\n      \"@checkbox-form:audit\",\n      \"@cruding-resource-readiness-audit\",\n      \"@easyadmin-surface:audit\",\n      \"@objecting:adoption:audit\",\n      \"@solid-canon:audit\"\n    ],\n    \"surface:audit\": \"@php tools/qa/rolling-surface-audit.php\",\n    \"symfony81:audit\": \"@php tools/qa/rolling-symfony81-audit.php\",\n    \"http-payload:audit\": \"@p",
-    "package.json": "{\n  \"name\": \"rolling-local-qa\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:e2e\": \"playwright test\",\n    \"test:e2e:headed\": \"playwright test --headed\",\n    \"playwright:install\": \"playwright install --with-deps chromium\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\"\n  }\n}\n"
+    "composer.json": "{\n  \"name\": \"smartresponsor/notifying\",\n  \"description\": \"Smart Responsor Notifying platform component: notification center, inbox, preferences, subscriptions, and delivery planning.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"ext-json\": \"*\",\n    \"doctrine/dbal\": \"^4.2\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"symfony/asset\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"twig/twig\": \"^3.27\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95.17\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/phpunit-bridge\": \"^8.0\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Notifying\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Notifying\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"test\": \"phpunit --testdox tests\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"phpstan\": \"phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"php-cs-fixer fix\",\n    \"lint:container\": \"php bin/console lint:container\",\n    \"lint:yaml\": \"php bin/console lint:yaml config --parse-tags\",\n    \"schema:reset:test\": \"@php -r \\\"if (is_file('var/notifying_test.sqlite')) { unlink('var/notifying_test.sqlite'); }\\\"\",\n    \"schema:migrate:test\": \"@php bin/console doctrine:migrations:migrate --env=test --no-interaction\",\n    \"schema:validate\": \"php bin/console doctrine:schema:validate --env=test\",\n    \"schema:diff\": \"php bin/console doctrine:schema:update --dump-sql --env=test\",\n    \"schema:parity\": [\n      \"@schema:reset:test\",\n      \"@schema:migrate:test\",\n      \"@schema:validate\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\",\n      \"@lint:container\",\n      \"@lint:yaml\",\n      \"@schema:parity\"\n    ]\n  },\n  \"config\": {\n    \""
   }
 }
 
@@ -1938,7 +1937,7 @@ Response contract description:
 
 Return strict JSON following this shape:
 {
-  "component": "rolling",
+  "component": "notifying",
   "summary": "Short owner-facing summary.",
   "strengths": [
     "list of strengths"

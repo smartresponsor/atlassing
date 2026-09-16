@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "temporaring",
+  "title": "Temporaring",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mWrite-AcceptanceArtifact: \u001b[0mD:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-task-bank-loop.ps1:952\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 952 | \u001b[0m … cceptance = \u001b[36;1mWrite-AcceptanceArtifact -Task $Task -Chat $Chat -Answers\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mThe property 'readyToDelete' cannot be found on this object. Verify that the property exists.\u001b[0m",
+  "registry_entry": {
+    "component_id": "temporaring",
+    "component_title": "Temporaring",
+    "github_repository": "smartresponsor/temporaring",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/temporaring/report/index.adoc",
+    "notes": "Active System Tempo engineering repository; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\temporaring",
+    "timestamp_utc": "2026-09-16T09:30:16.870104+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "08a211676a161e6391d9f247d43fa7b3ab82475f"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": false,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D .gating/config/gate.yaml\n D .gating/config/output.yaml\n D .gating/config/severity.yaml\n D .gating/profile/component/temporaring.yaml"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "08a2116 research: strengthen relative tempo compatibility test\n0280fba Harden Temporaring RC contracts and dependency wiring\ne830622 docs: finalize System Tempo research specification\nde5cdf5 feat: establish System Tempo v0.1 research runtime\n88c288d chore: bootstrap Temporaring research component"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".env\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitignore\n.php-cs-fixer.dist.php\nAGENTS.md\nartifacts/\nartifacts/.gitkeep\nbin/\nbin/check-python.ps1\nbin/console\nbin/setup-python.ps1\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes.yaml\nconfig/services.yaml\npublic/\npublic/index.php\npyrightconfig.json\npython/\npython/.pytest_cache/\npython/.venv/\npython/pyproject.toml\npython/src/\npython/tests/\nREADME.md\nresearch/\nresearch/architecture/\nresearch/decisions/\nresearch/hypothesis/\nresearch/notes/\nresearch/problem/\nresearch/README.md\nresearch/roadmap/\nresearch/schema/\nresearch/specification/\nresearch/tasks/\nsrc/\nsrc/Command/\nsrc/DTO/\nsrc/Kernel.php\nsrc/Service/\nsrc/ServiceInterface/\nsrc/TemporaringBundle.php\ntests/\ntests/.gitkeep\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvendor/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/gating/\nvendor/interfacing/\nvendor/myclabs/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/react/\nvendor/sebastian/\nvendor/symfony/\nvendor/tabling/\nvendor/theseer/\nvendor/twig/\nvendor/viewing/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "68"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"temporaring/tempo\",\n  \"description\": \"Temporaring component and System Tempo research orchestration runtime.\",\n  \"type\": \"project\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-ctype\": \"*\",\n    \"ext-iconv\": \"*\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/process\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95.4\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^10.5\",\n    \"symfony/phpunit-bridge\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Temporaring\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Temporaring\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint:php\": \"php -l src/Kernel.php && php -l src/TemporaringBundle.php && php -l bin/console && php -l public/index.php\",\n    \"lint:yaml\": \"php bin/console lint:yaml config --parse-tags\",\n    \"lint:container\": \"php bin/console lint:container\",\n    \"phpstan\": \"phpstan analyse src tests --level=8 --memory-limit=1G\",\n    \"gating\": \"gating check --target=.\",\n    \"test\": \"phpunit tests\"\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    }\n  },\n  \"repositories\": [\n    {\"type\": \"path\", \"url\": \"../Gating\", \"options\": {\"symlink\": true, \"versions\": {\"gating/gate\": \"dev-master\"}}},\n    {\"type\": \"path\", \"url\": \"../Cruding\", \"options\": {\"symlink\": true, \"versions\": {\"cruding/crud\": \"dev-master\"}}},\n    {\"type\": \"path\", \"url\": \"../Collectioning\", \"options\": {\"symlink\": true, \"versions\": {\"collectioning/collection\": \"dev-master\"}}},\n    {\"type\": \"path\", \"url\": \"../Tabling\", \"options\": {\"symlink\": true, \"versions\": {\"tabling/table\": \"dev-master\"}}},\n    {\"type\": \"path\", \"url\": \"../Viewing\", \"options\": {\"symlink\": true, \"versions\": {\"viewing/view\": \"dev-master\"}}},\n    {\"type\": \"path\", \"url\": \"../Objecting\", \"options\": {\"symlink\": true, \"versions\": {\"objecting/object\": \"dev-master\"}}},\n    {\"type\": \"path\", \"url\": \"../Interfacing\", \"options\": {\"symlink\": true, \"versions\": {\"interfacing/interface\": \"dev-master\"}}}\n  ]\n}\n"
+    }
+  }
+}
