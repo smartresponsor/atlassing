@@ -118,7 +118,7 @@ $runnerArgs = @{
     PromptMode = 'raw'
     InitialPromptMode = 'raw'
     ContinuePromptMode = 'raw'
-    ReasoningEnforcement = 'set_and_require'
+    ReasoningEnforcement = 'observe'
 }
 $runner = $null
 $runnerText = $null

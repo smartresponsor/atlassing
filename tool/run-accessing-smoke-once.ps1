@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $prompt = Get-ChildItem -Path (Join-Path $root 'var\atlas\generated') -Recurse -File |
-    Where-Object { $_.Name -match 'accessing' -and $_.Extension -in @('.txt','.md','.prompt') } |
+    Where-Object { $_.FullName -match 'accessing' -and $_.Name -match 'prompt|request|input' } |
     Sort-Object LastWriteTimeUtc -Descending |
     Select-Object -First 1
 if (-not $prompt) { throw 'No generated Accessing prompt file found.' }
