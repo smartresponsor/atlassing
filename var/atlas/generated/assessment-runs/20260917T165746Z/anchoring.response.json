@@ -1,0 +1,488 @@
+{
+  "ok": true,
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "anchoring",
+  "verdict": {
+    "component": "anchoring",
+    "summary": "Anchoring presents a mature, operations-aware verification and evidence product surface with unusually broad documentation, deployment, policy, observability, security, recovery, and SDK material; the main assessment concerns are repository hygiene, branch metadata drift, and limited deterministic evidence for executable QA tooling at the repository root.",
+    "strengths": [
+      "Extensive documentation covers verification, evidence, integrity, providers, receipts, ingestion, security, observability, recovery, deployment, and SDK concerns.",
+      "Repository includes GitHub workflows, Docker assets, Compose configurations, Helm chart material, Prometheus/Grafana operations assets, policies, public schemas/OpenAPI material, and a release manifest.",
+      "Security and operational topics are explicitly represented through threat-model, secrets, KMS, hardening, incidents, backup, disaster-recovery, canary, and multi-region documentation.",
+      "Recent commits indicate active repair of CLI build, verification flow, and snapshot drift."
+    ],
+    "risks": [
+      "Registry declares master while the deterministic repository fact reports the active branch as main.",
+      "Working tree is not clean: sdk/php/composer.json is modified and AGENTS.md is untracked.",
+      "No root composer.json, PHPUnit configuration, or PHPStan configuration is evidenced by the supplied facts.",
+      "No exact release tag is present for the assessed commit.",
+      "Repository facts expose structure and documentation breadth but do not include passing test, static-analysis, deployment, or runtime benchmark results."
+    ],
+    "next_actions": [
+      "Reconcile the component registry default branch with the repository's main branch.",
+      "Resolve or intentionally account for the modified sdk/php/composer.json and untracked AGENTS.md before establishing an RC baseline.",
+      "Capture deterministic CI, test, conformance, and static-analysis results in future Atlas runs rather than inferring quality from repository structure.",
+      "Establish a tagged release baseline when the component reaches the intended release state.",
+      "Keep operational, security, recovery, and API documentation synchronized with executable verification workflows."
+    ],
+    "notes": [
+      "Assessment is based only on the supplied deterministic repository facts and bootstrap snapshot.",
+      "Scores reflect repository evidence breadth rather than unobserved runtime behavior.",
+      "Absence of root PHP tooling is not treated as proof that no QA tooling exists elsewhere in the repository."
+    ],
+    "confidence": "medium",
+    "evidence_paths": [
+      "README.md",
+      "README-quickstart.md",
+      "doc/quickstart.md",
+      "doc/tests.md",
+      "doc/conformance.md",
+      "doc/verify.md",
+      "doc/observability.md",
+      "doc/security-hardening.md",
+      "doc/threat-model.md",
+      "doc/dr-runbook.md",
+      "doc/canary.md",
+      "compose.yml",
+      "compose.prod.yml",
+      "release/MANIFEST.json"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.6,
+      "architecture": 8.3,
+      "runtime": 8.4,
+      "qa": 7.7,
+      "ops": 8.9,
+      "market": 8.1,
+      "overall": 8.3
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Anchoring has a well-defined verification, evidence, receipt, provider, SDK, and operational product surface supported by extensive user and operator documentation.",
+        "risks": [
+          "The supplied facts do not demonstrate actual user adoption or live product behavior.",
+          "Branch metadata drift between the registry and repository can weaken release clarity."
+        ],
+        "improvements": [
+          "Keep quickstart, verification, evidence, SDK, and release documentation aligned with the executable product surface.",
+          "Reconcile registry branch metadata with the repository."
+        ],
+        "evidence": [
+          "README.md",
+          "README-quickstart.md",
+          "doc/quickstart.md",
+          "doc/verify.md",
+          "doc/evidence.md",
+          "doc/providers.md",
+          "doc/sdk-node.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Repository structure shows deliberate separation of documentation, policy, deployment charts, operations assets, public contracts, SDK concerns, and release artifacts.",
+        "risks": [
+          "The supplied facts do not expose implementation-level dependency boundaries or static architectural analysis.",
+          "The dirty working tree weakens confidence in the exact assessed architectural baseline."
+        ],
+        "improvements": [
+          "Capture dependency and architecture-conformance results in deterministic assessment inputs.",
+          "Assess from a clean working tree for release-candidate snapshots."
+        ],
+        "evidence": [
+          "policy/anchor-policy.json",
+          "policy/api-keys.json",
+          "public/openapi",
+          "public/schema",
+          "charts/anchoring-verify",
+          "release/MANIFEST.json",
+          "doc/dependency-guard.md",
+          "doc/conformance.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Anchoring exposes substantial runtime-readiness material across Docker, Compose, Helm, Redis, multi-region, concurrency, canary, metrics, and verification-service concerns.",
+        "risks": [
+          "No live latency, throughput, capacity, availability, or benchmark output is included in the supplied facts.",
+          "Runtime readiness is therefore evidenced primarily by repository assets and documentation rather than observed execution."
+        ],
+        "improvements": [
+          "Include deterministic service verification and representative runtime measurements in future Atlas evidence.",
+          "Continue aligning container, Compose, Helm, Redis, and multi-region guidance with tested deployment behavior."
+        ],
+        "evidence": [
+          "Dockerfile.verify",
+          "Dockerfile.cli",
+          "compose.yml",
+          "compose.prod.yml",
+          "doc/docker.md",
+          "doc/helm.md",
+          "doc/redis-prod.md",
+          "doc/multi-region.md",
+          "doc/concurrency.md",
+          "doc/service-verify.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA intent is strong through dedicated tests, conformance, integrity, verification, dependency-guard, gap-guard, chaos, and CI documentation, but the supplied facts do not include executable test or static-analysis results.",
+        "risks": [
+          "No root PHPUnit configuration is evidenced.",
+          "No root PHPStan configuration is evidenced.",
+          "Presence of GitHub workflows does not establish that current checks pass."
+        ],
+        "improvements": [
+          "Feed actual CI, test, conformance, lint, and static-analysis outcomes into the Atlas assessment.",
+          "Make the executable relationship between documented QA procedures and automated gates explicit."
+        ],
+        "evidence": [
+          "doc/tests.md",
+          "doc/conformance.md",
+          "doc/integrity.md",
+          "doc/verify.md",
+          "doc/dependency-guard.md",
+          "doc/gap-guard.md",
+          "doc/chaos.md",
+          "doc/ci.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity is a repository strength, with explicit observability, metrics, incident, backup, disaster-recovery, secrets, deployment, canary, multi-region, Prometheus, and Grafana material.",
+        "risks": [
+          "The supplied facts do not demonstrate successful production deployment or alert execution.",
+          "The current repository is dirty and has no exact release tag, reducing RC reproducibility."
+        ],
+        "improvements": [
+          "Capture deployment verification, monitoring checks, and recovery-drill results as deterministic evidence.",
+          "Use a clean, tagged repository state for release-candidate operational assessments."
+        ],
+        "evidence": [
+          "ops/prometheus",
+          "ops/grafana",
+          "doc/observability.md",
+          "doc/metrics.md",
+          "doc/incidents.md",
+          "doc/backup.md",
+          "doc/dr-runbook.md",
+          "doc/dr-drill.md",
+          "doc/canary.md",
+          "doc/multi-region.md"
+        ]
+      },
+      "market": {
+        "summary": "The repository communicates a coherent anchoring and verification offering through quickstart, evidence, integrity, receipt, provider, compliance, RFP, API, SDK, and proof-explorer documentation.",
+        "risks": [
+          "Repository facts alone do not establish external demand, adoption, revenue, or competitive position.",
+          "Market score therefore remains conservative despite strong product communication."
+        ],
+        "improvements": [
+          "Complement repository evidence with externally grounded adoption or integration evidence when available.",
+          "Maintain clear RFP, SDK, API, receipt, evidence, and proof-explorer documentation for integrators."
+        ],
+        "evidence": [
+          "README.md",
+          "doc/quickstart.md",
+          "doc/evidence-guide.md",
+          "doc/receipt.md",
+          "doc/providers.md",
+          "doc/rfp-answers.md",
+          "doc/sdk-node.md",
+          "doc/proof-explorer.md"
+        ]
+      },
+      "overall": {
+        "summary": "Anchoring is a comparatively mature and well-documented component with strong operational, security, deployment, verification, and integration surfaces, while RC confidence is constrained by branch metadata drift, a dirty worktree, absent exact tagging, and missing deterministic quality-tool results.",
+        "risks": [
+          "Registry default branch and observed repository branch disagree.",
+          "Assessment was taken from a modified and untracked working tree.",
+          "No exact tag or passing quality-tool outputs are included in the supplied evidence."
+        ],
+        "improvements": [
+          "Reconcile branch metadata and assess from a clean tagged baseline.",
+          "Add deterministic CI, test, conformance, static-analysis, deployment, and recovery results to future Atlas evidence."
+        ],
+        "evidence": [
+          "README.md",
+          "doc/tests.md",
+          "doc/observability.md",
+          "doc/security-hardening.md",
+          "doc/threat-model.md",
+          "doc/dr-runbook.md",
+          "compose.prod.yml",
+          "release/MANIFEST.json"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "tool/runner-task-bank-loop.ps1",
+    "promptMode": "raw",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\anchoring.prompt.txt",
+    "chatId": "6aac1d1f-926c-83ea-8d0f-a810517be66b",
+    "targetId": "899638D196450E788250589563D5256A",
+    "acceptanceStatus": "M3_ACCEPTANCE_FAIL",
+    "acceptanceFailures": [
+      "target_repo_not_clean"
+    ],
+    "acceptanceArtifactPath": "D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\var\\runner\\task-bank\\acceptance\\repo-smoke-20260917170205-45e2d4b16a-20260917T170334Z.acceptance.json",
+    "cleanup": {
+      "ok": false,
+      "status": "CHATGPT_CHAT_DELETE_NEEDS_REVIEW",
+      "expected_chat_id": "6aac1d1f-926c-83ea-8d0f-a810517be66b",
+      "selected": {
+        "port": 9223,
+        "id": "899638D196450E788250589563D5256A",
+        "type": "page",
+        "title": "Anchoring Assessment Summary",
+        "url": "https://chatgpt.com/c/6aac1d1f-926c-83ea-8d0f-a810517be66b",
+        "chat_id": "6aac1d1f-926c-83ea-8d0f-a810517be66b",
+        "has_web_socket_debugger_url": true
+      },
+      "delete": {
+        "ok": true,
+        "status": "CHAT_SOFT_DELETED",
+        "expected_chat_id": "6aac1d1f-926c-83ea-8d0f-a810517be66b",
+        "close_target": true,
+        "before_http_status": 200,
+        "before_body_preview": null,
+        "patch_http_status": 200,
+        "patch_http_status_text": "",
+        "patch_body_preview": null,
+        "auth_session_http_status": 200,
+        "auth_token_present": true,
+        "href": "https://chatgpt.com/c/6aac1d1f-926c-83ea-8d0f-a810517be66b",
+        "title": "Anchoring Assessment Summary"
+      },
+      "target_close": {
+        "ok": true,
+        "status": "TARGET_CLOSE_REQUESTED",
+        "target_id": "899638D196450E788250589563D5256A",
+        "port": 9223,
+        "body": "Target is closing"
+      },
+      "after": {
+        "ports": [
+          9222,
+          9223
+        ],
+        "attempts": [
+          {
+            "port": 9222,
+            "ok": false,
+            "error": "connect ECONNREFUSED 127.0.0.1:9222"
+          },
+          {
+            "port": 9223,
+            "ok": true,
+            "target_count": 16
+          }
+        ],
+        "total_chatgpt_targets": 16,
+        "empty_home_count": 2,
+        "chat_target_count": 14,
+        "unique_chat_id_count": 14,
+        "duplicate_chat_id_count": 0,
+        "duplicate_chat_ids": [],
+        "empty_home_targets": [
+          {
+            "description": "",
+            "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1",
+            "faviconUrl": "https://chatgpt.com/favicon.ico",
+            "id": "3A7ECBC811CA105C5B6108C3C6816DB1",
+            "title": "ChatGPT",
+            "type": "page",
+            "url": "https://chatgpt.com/",
+            "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1",
+            "port": 9223,
+            "chat_id": null,
+            "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1"
+          },
+          {
+            "description": "",
+            "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "faviconUrl": "https://chatgpt.com/favicon.ico",
+            "id": "001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "title": "ChatGPT",
+            "type": "page",
+            "url": "https://chatgpt.com/",
+            "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "port": 9223,
+            "chat_id": null,
+            "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2"
+          }
+        ],
+        "targets": [
+          {
+            "port": 9223,
+            "id": "899638D196450E788250589563D5256A",
+            "type": "page",
+            "title": "Anchoring Assessment Summary",
+            "url": "https://chatgpt.com/c/6aac1d1f-926c-83ea-8d0f-a810517be66b",
+            "chat_id": "6aac1d1f-926c-83ea-8d0f-a810517be66b",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "3A7ECBC811CA105C5B6108C3C6816DB1",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "8D907C99B4BD0C80B132B4BADFB3CC52",
+            "type": "page",
+            "title": "Shipping repository analysis",
+            "url": "https://chatgpt.com/c/6aaade66-6118-83ea-a52e-46f8e8ee9464",
+            "chat_id": "6aaade66-6118-83ea-a52e-46f8e8ee9464",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "CCDD859A7FB850CBE89C786A54E2AD41",
+            "type": "page",
+            "title": "Repository Analysis Progress",
+            "url": "https://chatgpt.com/c/6aaade65-9e78-83ea-84ba-4639bab0bd18",
+            "chat_id": "6aaade65-9e78-83ea-84ba-4639bab0bd18",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "868AFF00E41AF48D7EFA5920304500C6",
+            "type": "page",
+            "title": "Repository implementation summary",
+            "url": "https://chatgpt.com/c/6aaade65-ec74-83ea-a6a7-d71c0d56aa74",
+            "chat_id": "6aaade65-ec74-83ea-a6a7-d71c0d56aa74",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "88DC15F8B8194383A305A67233ECA405",
+            "type": "page",
+            "title": "Repository implementation status",
+            "url": "https://chatgpt.com/c/6aaade6b-a2a4-83ea-8be8-1a420c863e76",
+            "chat_id": "6aaade6b-a2a4-83ea-8be8-1a420c863e76",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "1872DD0E52A36CFA24035B76A2F47D99",
+            "type": "page",
+            "title": "Atlassing implementation report",
+            "url": "https://chatgpt.com/c/6aaade62-ff5c-83ea-9774-a077f5f2dc98",
+            "chat_id": "6aaade62-ff5c-83ea-9774-a077f5f2dc98",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "DC09F35C5332D1C189571274928EA1CC",
+            "type": "page",
+            "title": "Repository analysis complete",
+            "url": "https://chatgpt.com/c/6aaade6b-8080-83e9-a287-810d3e85b852",
+            "chat_id": "6aaade6b-8080-83e9-a287-810d3e85b852",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "60C62CBA65D5DC617BFED60EF5C71ABC",
+            "type": "page",
+            "title": "Shipping coverage baseline",
+            "url": "https://chatgpt.com/c/6aaade3c-c024-83ea-86eb-c1f46976fe3d",
+            "chat_id": "6aaade3c-c024-83ea-86eb-c1f46976fe3d",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "B37CA4BF7AAC021B3276A2DBE351DC3C",
+            "type": "page",
+            "title": "Отчёт по интеграции",
+            "url": "https://chatgpt.com/c/6aaa918c-7e84-83e9-821c-864023e5500f",
+            "chat_id": "6aaa918c-7e84-83e9-821c-864023e5500f",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "C94AD655EEDF93CAB402AF6DB4A05094",
+            "type": "page",
+            "title": "Repository analysis implementation",
+            "url": "https://chatgpt.com/c/6aaa9187-7078-83e9-a4db-4429d39bb4f7",
+            "chat_id": "6aaa9187-7078-83e9-a4db-4429d39bb4f7",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "FB542D95C8345BD3304843257B837011",
+            "type": "page",
+            "title": "Verify repository completion",
+            "url": "https://chatgpt.com/c/6aa96603-55c0-83ea-a7a0-262a5e43de57",
+            "chat_id": "6aa96603-55c0-83ea-a7a0-262a5e43de57",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "A20EA031A64C024198F8100A97625E18",
+            "type": "page",
+            "title": "[chatgpt-loop:6aa964831a] Execute repository task | ChatGPT",
+            "url": "https://chatgpt.com/c/6aa96483-1ab4-83e9-b554-ce5b82c3a238",
+            "chat_id": "6aa96483-1ab4-83e9-b554-ce5b82c3a238",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "41E1C30E88610E60FDA5E732340E433E",
+            "type": "page",
+            "title": "[chatgpt-loop:6aa946466c] Engine task execution request | ChatGPT",
+            "url": "https://chatgpt.com/c/6aa94646-6c10-83e9-ae68-f70acef33a0e",
+            "chat_id": "6aa94646-6c10-83e9-ae68-f70acef33a0e",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "6A5700B904A5646642967EA3C0C5799A",
+            "type": "page",
+            "title": "Completion verification blocked",
+            "url": "https://chatgpt.com/c/6aa9432c-6090-83e9-bd53-3e2033d8af86",
+            "chat_id": "6aa9432c-6090-83e9-bd53-3e2033d8af86",
+            "has_web_socket_debugger_url": true
+          }
+        ]
+      },
+      "still_visible": true,
+      "policy": {
+        "browser_mutation": true,
+        "chatgpt_host_only": true,
+        "deletes_chat": true,
+        "soft_delete_via_backend_api": true,
+        "requires_expected_chat_id": true,
+        "ordinary_delete_requires_confirm_delete": true,
+        "lifecycle_ready_to_delete_authorization_available": true,
+        "lifecycle_ready_to_delete_requires_true_signal": true,
+        "writes_input": false,
+        "submits_input": false
+      },
+      "tool": "console.write.browser.chatgpt.chat.delete.execute",
+      "bridge": {
+        "ok": false,
+        "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+        "capabilityClass": "atomic",
+        "authorityMode": "legacy",
+        "m5AtomicTransportEnabled": false,
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "requestTimeoutMs": 120000
+      },
+      "envBootstrap": {
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "tokenPresent": true,
+        "tokenSource": "env"
+      }
+    }
+  }
+}

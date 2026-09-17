@@ -1,0 +1,283 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "anchoring",
+    "component_title": "Anchoring",
+    "github_repository": "smartresponsor/anchoring",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/anchoring/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Anchoring",
+    "timestamp_utc": "2026-09-17T17:02:02.824630+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "main"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2fd8aa71d299ce3b9eac0479da4be693e17579cb"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M sdk/php/composer.json\n?? AGENTS.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2fd8aa7 Reduce CLI snapshot drift\n7c9277e Repair CLI build and verification flow\n8150d74 Initial import"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".env.example\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\ncharts/\ncharts/anchoring-verify/\ncompose.local.yml\ncompose.prod.yml\ncompose.yml\ndoc/\ndoc/admin-ui.md\ndoc/api-stability.md\ndoc/auth.md\ndoc/b2.md\ndoc/backup.md\ndoc/billing.md\ndoc/canary.md\ndoc/chain-policy.md\ndoc/chaos.md\ndoc/ci.md\ndoc/compliance/\ndoc/concurrency.md\ndoc/conformance.md\ndoc/dependency-guard.md\ndoc/docker.md\ndoc/docs-ui.md\ndoc/doctor.md\ndoc/dr-cli.md\ndoc/dr-drill.md\ndoc/dr-runbook.md\ndoc/eas-sdk.md\ndoc/eth-anchoring.md\ndoc/evidence-guide.md\ndoc/evidence.md\ndoc/faq.md\ndoc/gap-guard.md\ndoc/hardening-container.md\ndoc/hardening-http.md\ndoc/hardening-k8s.md\ndoc/helm.md\ndoc/images.md\ndoc/incidents-cli.md\ndoc/incidents.md\ndoc/ingestion.md\ndoc/integrity.md\ndoc/jsonld.md\ndoc/key-rotation.md\ndoc/kms.md\ndoc/l2-costs.md\ndoc/l2.md\ndoc/merge-note.md\ndoc/metrics.md\ndoc/multi-region.md\ndoc/observability.md\ndoc/onchain-verify.md\ndoc/ots.md\ndoc/pgp.md\ndoc/privacy/\ndoc/proof-explorer.md\ndoc/providers.md\ndoc/quickstart.md\ndoc/receipt.md\ndoc/receipts.md\ndoc/redis-prod.md\ndoc/redis.md\ndoc/release-notes-template.md\ndoc/release.md\ndoc/rfp-answers.md\ndoc/s3.md\ndoc/sbom-licenses.md\ndoc/schema.md\ndoc/sdk-node.md\ndoc/secrets-policy.md\ndoc/secrets.md\ndoc/security-hardening.md\ndoc/service-verify.md\ndoc/status.md\ndoc/tests.md\ndoc/threat-model.md\ndoc/ui.md\ndoc/upgrade-1.0.md\ndoc/verify-stream.md\ndoc/verify.md\ndoc/webhook.md\nDockerfile.cli\nDockerfile.verify\nenv/\nenv/.env.example\nenv/.env.prod.example\nenv/README.md\nfeed.ndjson\nincidents/\nincidents/INCIDENT-TEMPLATE.md\nops/\nops/grafana/\nops/prometheus/\nPATCH-NOTES.txt\npolicy/\npolicy/anchor-policy.json\npolicy/api-keys.json\npolicy/costs.json\npolicy/eas-quotas.json\npolicy/eas.json\npolicy/license-allowlist.json\npolicy/pii-denylist.json\npolicy/tsa.json\npolicy/vault-anchoring.hcl\npublic/\npublic/admin/\npublic/docs/\npublic/openapi/\npublic/proof/\npublic/schema/\npublic/ui/\npublic/vectors/\nREADME-quickstart.md\nREADME.md\nrelease/\nrelease/MANIFEST.json"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "280"
+    }
+  },
+  "verdict": {
+    "component": "anchoring",
+    "summary": "Anchoring presents a mature, operations-aware verification and evidence product surface with unusually broad documentation, deployment, policy, observability, security, recovery, and SDK material; the main assessment concerns are repository hygiene, branch metadata drift, and limited deterministic evidence for executable QA tooling at the repository root.",
+    "strengths": [
+      "Extensive documentation covers verification, evidence, integrity, providers, receipts, ingestion, security, observability, recovery, deployment, and SDK concerns.",
+      "Repository includes GitHub workflows, Docker assets, Compose configurations, Helm chart material, Prometheus/Grafana operations assets, policies, public schemas/OpenAPI material, and a release manifest.",
+      "Security and operational topics are explicitly represented through threat-model, secrets, KMS, hardening, incidents, backup, disaster-recovery, canary, and multi-region documentation.",
+      "Recent commits indicate active repair of CLI build, verification flow, and snapshot drift."
+    ],
+    "risks": [
+      "Registry declares master while the deterministic repository fact reports the active branch as main.",
+      "Working tree is not clean: sdk/php/composer.json is modified and AGENTS.md is untracked.",
+      "No root composer.json, PHPUnit configuration, or PHPStan configuration is evidenced by the supplied facts.",
+      "No exact release tag is present for the assessed commit.",
+      "Repository facts expose structure and documentation breadth but do not include passing test, static-analysis, deployment, or runtime benchmark results."
+    ],
+    "next_actions": [
+      "Reconcile the component registry default branch with the repository's main branch.",
+      "Resolve or intentionally account for the modified sdk/php/composer.json and untracked AGENTS.md before establishing an RC baseline.",
+      "Capture deterministic CI, test, conformance, and static-analysis results in future Atlas runs rather than inferring quality from repository structure.",
+      "Establish a tagged release baseline when the component reaches the intended release state.",
+      "Keep operational, security, recovery, and API documentation synchronized with executable verification workflows."
+    ],
+    "notes": [
+      "Assessment is based only on the supplied deterministic repository facts and bootstrap snapshot.",
+      "Scores reflect repository evidence breadth rather than unobserved runtime behavior.",
+      "Absence of root PHP tooling is not treated as proof that no QA tooling exists elsewhere in the repository."
+    ],
+    "suggested_score_overrides": {
+      "product": 8.6,
+      "architecture": 8.3,
+      "runtime": 8.4,
+      "qa": 7.7,
+      "ops": 8.9,
+      "market": 8.1,
+      "overall": 8.3
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Anchoring has a well-defined verification, evidence, receipt, provider, SDK, and operational product surface supported by extensive user and operator documentation.",
+        "risks": [
+          "The supplied facts do not demonstrate actual user adoption or live product behavior.",
+          "Branch metadata drift between the registry and repository can weaken release clarity."
+        ],
+        "improvements": [
+          "Keep quickstart, verification, evidence, SDK, and release documentation aligned with the executable product surface.",
+          "Reconcile registry branch metadata with the repository."
+        ],
+        "evidence": [
+          "README.md",
+          "README-quickstart.md",
+          "doc/quickstart.md",
+          "doc/verify.md",
+          "doc/evidence.md",
+          "doc/providers.md",
+          "doc/sdk-node.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Repository structure shows deliberate separation of documentation, policy, deployment charts, operations assets, public contracts, SDK concerns, and release artifacts.",
+        "risks": [
+          "The supplied facts do not expose implementation-level dependency boundaries or static architectural analysis.",
+          "The dirty working tree weakens confidence in the exact assessed architectural baseline."
+        ],
+        "improvements": [
+          "Capture dependency and architecture-conformance results in deterministic assessment inputs.",
+          "Assess from a clean working tree for release-candidate snapshots."
+        ],
+        "evidence": [
+          "policy/anchor-policy.json",
+          "policy/api-keys.json",
+          "public/openapi",
+          "public/schema",
+          "charts/anchoring-verify",
+          "release/MANIFEST.json",
+          "doc/dependency-guard.md",
+          "doc/conformance.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Anchoring exposes substantial runtime-readiness material across Docker, Compose, Helm, Redis, multi-region, concurrency, canary, metrics, and verification-service concerns.",
+        "risks": [
+          "No live latency, throughput, capacity, availability, or benchmark output is included in the supplied facts.",
+          "Runtime readiness is therefore evidenced primarily by repository assets and documentation rather than observed execution."
+        ],
+        "improvements": [
+          "Include deterministic service verification and representative runtime measurements in future Atlas evidence.",
+          "Continue aligning container, Compose, Helm, Redis, and multi-region guidance with tested deployment behavior."
+        ],
+        "evidence": [
+          "Dockerfile.verify",
+          "Dockerfile.cli",
+          "compose.yml",
+          "compose.prod.yml",
+          "doc/docker.md",
+          "doc/helm.md",
+          "doc/redis-prod.md",
+          "doc/multi-region.md",
+          "doc/concurrency.md",
+          "doc/service-verify.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA intent is strong through dedicated tests, conformance, integrity, verification, dependency-guard, gap-guard, chaos, and CI documentation, but the supplied facts do not include executable test or static-analysis results.",
+        "risks": [
+          "No root PHPUnit configuration is evidenced.",
+          "No root PHPStan configuration is evidenced.",
+          "Presence of GitHub workflows does not establish that current checks pass."
+        ],
+        "improvements": [
+          "Feed actual CI, test, conformance, lint, and static-analysis outcomes into the Atlas assessment.",
+          "Make the executable relationship between documented QA procedures and automated gates explicit."
+        ],
+        "evidence": [
+          "doc/tests.md",
+          "doc/conformance.md",
+          "doc/integrity.md",
+          "doc/verify.md",
+          "doc/dependency-guard.md",
+          "doc/gap-guard.md",
+          "doc/chaos.md",
+          "doc/ci.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity is a repository strength, with explicit observability, metrics, incident, backup, disaster-recovery, secrets, deployment, canary, multi-region, Prometheus, and Grafana material.",
+        "risks": [
+          "The supplied facts do not demonstrate successful production deployment or alert execution.",
+          "The current repository is dirty and has no exact release tag, reducing RC reproducibility."
+        ],
+        "improvements": [
+          "Capture deployment verification, monitoring checks, and recovery-drill results as deterministic evidence.",
+          "Use a clean, tagged repository state for release-candidate operational assessments."
+        ],
+        "evidence": [
+          "ops/prometheus",
+          "ops/grafana",
+          "doc/observability.md",
+          "doc/metrics.md",
+          "doc/incidents.md",
+          "doc/backup.md",
+          "doc/dr-runbook.md",
+          "doc/dr-drill.md",
+          "doc/canary.md",
+          "doc/multi-region.md"
+        ]
+      },
+      "market": {
+        "summary": "The repository communicates a coherent anchoring and verification offering through quickstart, evidence, integrity, receipt, provider, compliance, RFP, API, SDK, and proof-explorer documentation.",
+        "risks": [
+          "Repository facts alone do not establish external demand, adoption, revenue, or competitive position.",
+          "Market score therefore remains conservative despite strong product communication."
+        ],
+        "improvements": [
+          "Complement repository evidence with externally grounded adoption or integration evidence when available.",
+          "Maintain clear RFP, SDK, API, receipt, evidence, and proof-explorer documentation for integrators."
+        ],
+        "evidence": [
+          "README.md",
+          "doc/quickstart.md",
+          "doc/evidence-guide.md",
+          "doc/receipt.md",
+          "doc/providers.md",
+          "doc/rfp-answers.md",
+          "doc/sdk-node.md",
+          "doc/proof-explorer.md"
+        ]
+      },
+      "overall": {
+        "summary": "Anchoring is a comparatively mature and well-documented component with strong operational, security, deployment, verification, and integration surfaces, while RC confidence is constrained by branch metadata drift, a dirty worktree, absent exact tagging, and missing deterministic quality-tool results.",
+        "risks": [
+          "Registry default branch and observed repository branch disagree.",
+          "Assessment was taken from a modified and untracked working tree.",
+          "No exact tag or passing quality-tool outputs are included in the supplied evidence."
+        ],
+        "improvements": [
+          "Reconcile branch metadata and assess from a clean tagged baseline.",
+          "Add deterministic CI, test, conformance, static-analysis, deployment, and recovery results to future Atlas evidence."
+        ],
+        "evidence": [
+          "README.md",
+          "doc/tests.md",
+          "doc/observability.md",
+          "doc/security-hardening.md",
+          "doc/threat-model.md",
+          "doc/dr-runbook.md",
+          "compose.prod.yml",
+          "release/MANIFEST.json"
+        ]
+      }
+    },
+    "confidence": "medium",
+    "evidence_paths": [
+      "README.md",
+      "README-quickstart.md",
+      "doc/quickstart.md",
+      "doc/tests.md",
+      "doc/conformance.md",
+      "doc/verify.md",
+      "doc/observability.md",
+      "doc/security-hardening.md",
+      "doc/threat-model.md",
+      "doc/dr-runbook.md",
+      "doc/canary.md",
+      "compose.yml",
+      "compose.prod.yml",
+      "release/MANIFEST.json"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\anchoring\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\anchoring\\history\\2026-09-17-assessment-2026-09-17.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\anchoring\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\anchoring\\probes\\history\\2026-09-17-assessment-2026-09-17.yaml"
+  },
+  "ai_io": {
+    "request_file": "anchoring.request.json",
+    "response_file": "anchoring.response.json"
+  }
+}

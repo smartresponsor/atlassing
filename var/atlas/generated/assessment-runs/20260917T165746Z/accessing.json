@@ -1,0 +1,249 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "accessing",
+    "component_title": "Accessing",
+    "github_repository": "smartresponsor/accessing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/accessing/report/index.adoc",
+    "notes": "Connected to the scheduled assessment runner via GitHub repository target smartresponsor/accessing."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Accessing",
+    "timestamp_utc": "2026-09-17T16:57:46.792849+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "refactor/accessing-canonical-structure"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2b89521e36f6526a00e3f1263a885f8debd78841"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '2b89521e36f6526a00e3f1263a885f8debd78841'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M tests/Unit/AccessSupportingRuntimeCoverageTest.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2b89521 Complete Accessing concurrent RC reconciliation\n982f251 Harden Accessing diagnostics and HTTP coverage\n0ba9b1e Fix Accessing migration registration parity\nf21582a Make Accessing baseline adoption-safe\n1964e62 test: expand Accessing security coverage"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/local-php-server-8091.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.env.test\n.env.test.postgres\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/profile/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Accessing.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAccessing.md\nAGENTS.md\nARCHITECTURE_MANIFEST.md\nAUDIT.md\nbin/\nbin/.gitkeep\nbin/console\nbin/lint-php.php\nbin/MANIFEST.md\nbin/phpunit\nBOUNDING_MANIFEST.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/access_gating_profile.yaml\nconfig/access_gating_rules.yaml\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/platform/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/services_test.yaml\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/component/\ndocs/deploy/\ndocs/market-analysis.md\ndocs/milestone/\ndocs/modules/\ndocs/passkeys-host-integration.md\nFULL_MANIFEST.md\nMARKET_ANALYSIS.md\nmigrations/\nmigrations/Version20260912003630.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage-lock.json\npackage.json\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "512"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\":  \"accessing/access\",\n    \"description\":  \"Accessing process app\",\n    \"type\":  \"symfony-bundle\",\n    \"license\":  \"proprietary\",\n    \"require\":  {\n                    \"php\":  \"^8.4\",\n                    \"ext-ctype\":  \"*\",\n                    \"ext-iconv\":  \"*\",\n                    \"doctrine/doctrine-bundle\":  \"^3.2\",\n                    \"doctrine/doctrine-migrations-bundle\":  \"^4.0\",\n                    \"doctrine/orm\":  \"^3.3\",\n                    \"spomky-labs/otphp\":  \"^11.5\",\n                    \"symfony/console\":  \"^8.1\",\n                    \"symfony/dotenv\":  \"^8.1\",\n                    \"symfony/form\":  \"^8.1\",\n                    \"symfony/framework-bundle\":  \"^8.1\",\n                    \"symfony/mailer\":  \"^8.1\",\n                    \"symfony/monolog-bundle\":  \"^4.0\",\n                    \"symfony/notifier\":  \"^8.1\",\n                    \"symfony/password-hasher\":  \"^8.1\",\n                    \"symfony/rate-limiter\":  \"^8.1\",\n                    \"symfony/runtime\":  \"^8.1\",\n                    \"symfony/security-bundle\":  \"^8.1\",\n                    \"symfony/security-csrf\":  \"^8.1\",\n                    \"symfony/serializer\":  \"^8.1\",\n                    \"symfony/twig-bundle\":  \"^8.1\",\n                    \"symfony/translation\":  \"^8.1\",\n                    \"symfony/validator\":  \"^8.1\",\n                    \"symfony/yaml\":  \"^8.1\",\n                    \"symfonycasts/reset-password-bundle\":  \"^1.23\",\n                    \"symfonycasts/verify-email-bundle\":  \"^1.17\",\n                    \"twig/extra-bundle\":  \"^3.15\",\n                    \"twig/twig\":  \"^3.15\",\n                    \"web-auth/webauthn-lib\":  \"^5.3.5\",\n                    \"ext-pdo\":  \"*\",\n                    \"configuring/config\":  \"dev-master\",\n                    \"interfacing/interface\":  \"dev-master\",\n                    \"league/oauth2-google\":  \"^4.0\",\n                    \"objecting/object\":  \"dev-master\",\n                    \"easycorp/easyadmin-bundle\":  \"^5.0\",\n                    \"cruding/crud\":  \"dev-master\",\n                    \"collectioning/collection\":  \"dev-master\",\n                    \"tabling/table\":  \"dev-master\",\n                    \"viewing/view\":  \"dev-master\"\n                },\n    \"require-dev\":  {\n                        \"doctrine/doctrine-fixtures-bundle\":  \"^4.3\",\n                        \"fakerphp/faker\":  \"^1.24\",\n                        \"friendsofphp/php-cs-fixer\":  \"3.94\",\n                        \"gating/gate\":  \"dev-master\",\n                        \"phpstan/phpstan\":  \"^2.1\",\n                        \"phpunit/phpunit\":  \"^12.0\",\n                        \"symfony/browser-kit\":  \"^8.1\",\n                        \"symfony/css-selector\":  \"^8.1\",\n                        \"symfony/panther\":  \"^2.2\",\n                        \"symfony/phpunit-bridge\":  \"^8.1\",\n                        \"symfony/test-pack\":  \"^1.2\"\n                    },\n    \"autoload\":  {\n                     \"psr-4\":  {\n                                   \"App\\\\Accessing\\\\\":  \"src/\"\n                               }\n                 },\n    \"autoload-dev\":  {\n                         \"psr-4\":  {\n                                       \"App\\\\Accessing\\\\Tests\\\\\":  \"tests/\"\n                                   }\n                     },\n    \"scripts\":  {\n                    \"lint\":  \"php bin/lint-php.php\",\n                    \"cs:check\":  \"php-cs-fixer fix --dry-run --diff --verbose\",\n                    \"cs:fix\":  \"php-cs-fixer fix --verbose\",\n                    \"stan\":  \"phpstan analyse\",\n                    \"phpstan\":  \"@stan\",\n                    \"test\":  \"vendor/bin/phpunit --testsuite Accessing\",\n                    \"test:coverage\":  [\n                                              \"@putenv XDEBUG_MODE=coverage\",\n                                              \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n                                              \"vendor/bin/phpunit --testsuite Accessing --coverage-text=var/coverage/summary.txt --path-coverage\"\n    ",
+      "package.json": "{\n  \"name\": \"accessing-playwright\",\n  \"private\": true,\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.0\"\n  },\n  \"scripts\": {\n    \"test:e2e\": \"playwright test\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "accessing",
+    "summary": "Accessing remains close to RC quality and now shows substantially cleaner repository reconciliation, with only one modified runtime-coverage test remaining; however, the assessed HEAD is still on the refactor branch, has no exact release tag, and lacks evidence of a complete successful quality-pipeline run for this exact state.",
+    "strengths": [
+      "Clear authentication and identity component scope with dedicated architecture, boundary, audit, market, and full manifests.",
+      "Modern PHP 8.4 and Symfony 8.1 stack with Doctrine, Security, WebAuthn, OTP, rate limiting, serializer, validator, mailer, and notifier capabilities.",
+      "Strong QA toolchain including PHPUnit 12, PHPStan 2.1, PHP CS Fixer, Panther, Playwright, and coverage tooling.",
+      "Recent commits explicitly address RC reconciliation, diagnostics, HTTP coverage, migration registration, baseline adoption, and security testing.",
+      "Repository working tree is materially cleaner than the previous snapshot, with only one modified test file reported."
+    ],
+    "risks": [
+      "Current HEAD remains on refactor/accessing-canonical-structure rather than an immutable release point.",
+      "No exact Git tag matches commit 2b89521e36f6526a00e3f1263a885f8debd78841.",
+      "tests/Unit/AccessSupportingRuntimeCoverageTest.php remains modified.",
+      "No complete successful quality-pipeline result for the exact assessed HEAD is included in the supplied facts."
+    ],
+    "next_actions": [
+      "Resolve or intentionally commit the remaining runtime-coverage test modification.",
+      "Run the full configured lint, coding-standard, PHPStan, PHPUnit, coverage, Panther, and applicable Playwright checks on the clean reconciled tree.",
+      "Merge or otherwise finalize the canonical refactor branch according to repository release policy.",
+      "Create an exact RC tag only after the verified clean pipeline succeeds.",
+      "Refresh the Atlas snapshot from that immutable tagged commit."
+    ],
+    "notes": [
+      "The previous snapshot described extensive transitional gating changes; the current deterministic git status reports only tests/Unit/AccessSupportingRuntimeCoverageTest.php as modified.",
+      "The latest commit message, Complete Accessing concurrent RC reconciliation, supports a modest architecture and operations score improvement but does not by itself prove successful release validation."
+    ],
+    "suggested_score_overrides": {
+      "product": 8.9,
+      "architecture": 8.9,
+      "runtime": 8.5,
+      "qa": 8.5,
+      "ops": 8.6,
+      "market": 8.4,
+      "overall": 8.6
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Accessing retains a clearly articulated authentication and identity product surface supported by dedicated product, market, architecture, bounding, audit, and full manifests.",
+        "risks": [
+          "The assessed product state remains on an active refactor branch rather than an immutable tagged release point."
+        ],
+        "improvements": [
+          "Refresh product readiness from the clean merged and tagged RC commit."
+        ],
+        "evidence": [
+          "FULL_MANIFEST.md",
+          "BOUNDING_MANIFEST.md",
+          "ARCHITECTURE_MANIFEST.md",
+          "MARKET_ANALYSIS.md",
+          "AUDIT.md"
+        ]
+      },
+      "architecture": {
+        "summary": "The component shows a mature Symfony-oriented architecture with explicit architecture and boundary documentation, and recent commits indicate substantial canonical RC reconciliation.",
+        "risks": [
+          "The canonical structure is still represented by the active refactor/accessing-canonical-structure branch.",
+          "One runtime-coverage test remains modified in the working tree."
+        ],
+        "improvements": [
+          "Finalize the remaining working-tree change and validate the reconciled architecture from a clean release state."
+        ],
+        "evidence": [
+          "ARCHITECTURE_MANIFEST.md",
+          "BOUNDING_MANIFEST.md",
+          "composer.json",
+          "tests/Unit/AccessSupportingRuntimeCoverageTest.php"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime capability remains materially developed around PHP 8.4, Symfony 8.1, Doctrine ORM, Security, WebAuthn, OTP, rate limiting, mailer, notifier, serializer, validator, and related application infrastructure.",
+        "risks": [
+          "No immutable tagged runtime baseline exists at the assessed HEAD.",
+          "A runtime-coverage test remains modified."
+        ],
+        "improvements": [
+          "Verify the final clean RC state with the repository's complete runtime and browser-oriented test pipeline before tagging."
+        ],
+        "evidence": [
+          "composer.json",
+          "tests/Unit/AccessSupportingRuntimeCoverageTest.php",
+          "package.json"
+        ]
+      },
+      "qa": {
+        "summary": "QA maturity remains strong for a pre-RC component, with PHPUnit 12, PHPStan 2.1, PHP CS Fixer, coverage tooling, Panther, Playwright, and recent security and runtime-coverage work.",
+        "risks": [
+          "The supplied facts do not evidence a complete successful quality-pipeline run against the exact current HEAD.",
+          "The working tree contains a modified runtime-coverage test."
+        ],
+        "improvements": [
+          "Run lint, coding standards, PHPStan, PHPUnit, coverage, Panther, and applicable Playwright suites after returning the tree to an intentional clean state."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "phpstan.neon",
+          "phpunit.xml",
+          "tests/Unit/AccessSupportingRuntimeCoverageTest.php"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and governance foundations remain substantial through GitHub workflows, deployment material, manifests, and the gating system, while the current repository state is materially cleaner than the previous transitional snapshot.",
+        "risks": [
+          "The assessed commit is not exactly tagged.",
+          "The repository is not fully clean because one test file remains modified.",
+          "Successful execution of all configured CI and local gates for this exact HEAD is not evidenced."
+        ],
+        "improvements": [
+          "Return the repository to an intentional clean state, execute all configured quality gates, and tag the verified RC."
+        ],
+        "evidence": [
+          ".github/workflows",
+          ".gating",
+          "deploy",
+          "composer.json",
+          "tests/Unit/AccessSupportingRuntimeCoverageTest.php"
+        ]
+      },
+      "market": {
+        "summary": "Business and ecosystem positioning remain explicitly documented and consistent with a specialized Accessing authentication and identity component.",
+        "risks": [
+          "Market-facing readiness remains coupled to a pre-RC engineering state rather than a clean tagged release."
+        ],
+        "improvements": [
+          "Reconfirm the market and portfolio narrative against the final immutable RC artifact."
+        ],
+        "evidence": [
+          "MARKET_ANALYSIS.md",
+          "Accessing.md",
+          "FULL_MANIFEST.md"
+        ]
+      },
+      "overall": {
+        "summary": "Accessing is technically close to RC quality with strong architecture, authentication capabilities, documentation, QA tooling, and recent RC reconciliation, but the active refactor branch, one remaining modified test, absent exact tag, and unproven full pipeline keep the current snapshot short of a finished RC.",
+        "risks": [
+          "Current HEAD is not an immutable clean release candidate.",
+          "One modified runtime-coverage test prevents a fully clean assessed tree.",
+          "A complete successful quality-pipeline result for the exact current HEAD is not included in the supplied facts."
+        ],
+        "improvements": [
+          "Resolve the remaining modification, run the full quality pipeline on a clean tree, finalize the canonical branch, and tag the verified RC before the next Atlas refresh."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "ARCHITECTURE_MANIFEST.md",
+          "BOUNDING_MANIFEST.md",
+          "FULL_MANIFEST.md",
+          "AUDIT.md",
+          "MARKET_ANALYSIS.md",
+          ".github/workflows",
+          ".gating",
+          "tests/Unit/AccessSupportingRuntimeCoverageTest.php"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "package.json",
+      "ARCHITECTURE_MANIFEST.md",
+      "BOUNDING_MANIFEST.md",
+      "FULL_MANIFEST.md",
+      "AUDIT.md",
+      "MARKET_ANALYSIS.md",
+      ".github/workflows",
+      ".gating",
+      "tests/Unit/AccessSupportingRuntimeCoverageTest.php"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\accessing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\accessing\\history\\2026-09-17-assessment-2026-09-17.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\accessing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\accessing\\probes\\history\\2026-09-17-assessment-2026-09-17.yaml"
+  },
+  "ai_io": {
+    "request_file": "accessing.request.json",
+    "response_file": "accessing.response.json"
+  }
+}

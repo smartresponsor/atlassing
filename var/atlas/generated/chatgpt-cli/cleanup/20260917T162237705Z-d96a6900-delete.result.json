@@ -1,0 +1,262 @@
+{
+  "ok": false,
+  "status": "CHATGPT_CHAT_DELETE_NEEDS_REVIEW",
+  "expected_chat_id": "6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+  "selected": {
+    "port": 9223,
+    "id": "CECC034BAF4B7796636CB96C60280476",
+    "type": "page",
+    "title": "Rolling Assessment Summary",
+    "url": "https://chatgpt.com/c/6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+    "chat_id": "6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+    "has_web_socket_debugger_url": true
+  },
+  "delete": {
+    "ok": true,
+    "status": "CHAT_SOFT_DELETED",
+    "expected_chat_id": "6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+    "close_target": true,
+    "before_http_status": 200,
+    "before_body_preview": null,
+    "patch_http_status": 200,
+    "patch_http_status_text": "",
+    "patch_body_preview": null,
+    "auth_session_http_status": 200,
+    "auth_token_present": true,
+    "href": "https://chatgpt.com/c/6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+    "title": "Rolling Assessment Summary"
+  },
+  "target_close": {
+    "ok": true,
+    "status": "TARGET_CLOSE_REQUESTED",
+    "target_id": "CECC034BAF4B7796636CB96C60280476",
+    "port": 9223,
+    "body": "Target is closing"
+  },
+  "after": {
+    "ports": [
+      9222,
+      9223
+    ],
+    "attempts": [
+      {
+        "port": 9222,
+        "ok": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:9222"
+      },
+      {
+        "port": 9223,
+        "ok": true,
+        "target_count": 16
+      }
+    ],
+    "total_chatgpt_targets": 16,
+    "empty_home_count": 2,
+    "chat_target_count": 14,
+    "unique_chat_id_count": 14,
+    "duplicate_chat_id_count": 0,
+    "duplicate_chat_ids": [],
+    "empty_home_targets": [
+      {
+        "description": "",
+        "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1",
+        "faviconUrl": "https://chatgpt.com/favicon.ico",
+        "id": "3A7ECBC811CA105C5B6108C3C6816DB1",
+        "title": "ChatGPT",
+        "type": "page",
+        "url": "https://chatgpt.com/",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1",
+        "port": 9223,
+        "chat_id": null,
+        "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1"
+      },
+      {
+        "description": "",
+        "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2",
+        "faviconUrl": "https://chatgpt.com/favicon.ico",
+        "id": "001F31C148CF6BC9DF2E36EF51A7CDC2",
+        "title": "ChatGPT",
+        "type": "page",
+        "url": "https://chatgpt.com/",
+        "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2",
+        "port": 9223,
+        "chat_id": null,
+        "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2"
+      }
+    ],
+    "targets": [
+      {
+        "port": 9223,
+        "id": "CECC034BAF4B7796636CB96C60280476",
+        "type": "page",
+        "title": "Rolling Assessment Summary",
+        "url": "https://chatgpt.com/c/6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+        "chat_id": "6aac1391-2a50-83e9-806c-55ab3ffcbf1a",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "3A7ECBC811CA105C5B6108C3C6816DB1",
+        "type": "page",
+        "title": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "chat_id": null,
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "001F31C148CF6BC9DF2E36EF51A7CDC2",
+        "type": "page",
+        "title": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "chat_id": null,
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "8D907C99B4BD0C80B132B4BADFB3CC52",
+        "type": "page",
+        "title": "Shipping repository analysis",
+        "url": "https://chatgpt.com/c/6aaade66-6118-83ea-a52e-46f8e8ee9464",
+        "chat_id": "6aaade66-6118-83ea-a52e-46f8e8ee9464",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "CCDD859A7FB850CBE89C786A54E2AD41",
+        "type": "page",
+        "title": "Repository Analysis Progress",
+        "url": "https://chatgpt.com/c/6aaade65-9e78-83ea-84ba-4639bab0bd18",
+        "chat_id": "6aaade65-9e78-83ea-84ba-4639bab0bd18",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "868AFF00E41AF48D7EFA5920304500C6",
+        "type": "page",
+        "title": "Repository implementation summary",
+        "url": "https://chatgpt.com/c/6aaade65-ec74-83ea-a6a7-d71c0d56aa74",
+        "chat_id": "6aaade65-ec74-83ea-a6a7-d71c0d56aa74",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "88DC15F8B8194383A305A67233ECA405",
+        "type": "page",
+        "title": "Repository implementation status",
+        "url": "https://chatgpt.com/c/6aaade6b-a2a4-83ea-8be8-1a420c863e76",
+        "chat_id": "6aaade6b-a2a4-83ea-8be8-1a420c863e76",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "1872DD0E52A36CFA24035B76A2F47D99",
+        "type": "page",
+        "title": "Atlassing implementation report",
+        "url": "https://chatgpt.com/c/6aaade62-ff5c-83ea-9774-a077f5f2dc98",
+        "chat_id": "6aaade62-ff5c-83ea-9774-a077f5f2dc98",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "DC09F35C5332D1C189571274928EA1CC",
+        "type": "page",
+        "title": "Repository analysis complete",
+        "url": "https://chatgpt.com/c/6aaade6b-8080-83e9-a287-810d3e85b852",
+        "chat_id": "6aaade6b-8080-83e9-a287-810d3e85b852",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "60C62CBA65D5DC617BFED60EF5C71ABC",
+        "type": "page",
+        "title": "Shipping coverage baseline",
+        "url": "https://chatgpt.com/c/6aaade3c-c024-83ea-86eb-c1f46976fe3d",
+        "chat_id": "6aaade3c-c024-83ea-86eb-c1f46976fe3d",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "B37CA4BF7AAC021B3276A2DBE351DC3C",
+        "type": "page",
+        "title": "Отчёт по интеграции",
+        "url": "https://chatgpt.com/c/6aaa918c-7e84-83e9-821c-864023e5500f",
+        "chat_id": "6aaa918c-7e84-83e9-821c-864023e5500f",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "C94AD655EEDF93CAB402AF6DB4A05094",
+        "type": "page",
+        "title": "Repository analysis implementation",
+        "url": "https://chatgpt.com/c/6aaa9187-7078-83e9-a4db-4429d39bb4f7",
+        "chat_id": "6aaa9187-7078-83e9-a4db-4429d39bb4f7",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "FB542D95C8345BD3304843257B837011",
+        "type": "page",
+        "title": "Verify repository completion",
+        "url": "https://chatgpt.com/c/6aa96603-55c0-83ea-a7a0-262a5e43de57",
+        "chat_id": "6aa96603-55c0-83ea-a7a0-262a5e43de57",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "A20EA031A64C024198F8100A97625E18",
+        "type": "page",
+        "title": "[chatgpt-loop:6aa964831a] Execute repository task | ChatGPT",
+        "url": "https://chatgpt.com/c/6aa96483-1ab4-83e9-b554-ce5b82c3a238",
+        "chat_id": "6aa96483-1ab4-83e9-b554-ce5b82c3a238",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "41E1C30E88610E60FDA5E732340E433E",
+        "type": "page",
+        "title": "[chatgpt-loop:6aa946466c] Engine task execution request | ChatGPT",
+        "url": "https://chatgpt.com/c/6aa94646-6c10-83e9-ae68-f70acef33a0e",
+        "chat_id": "6aa94646-6c10-83e9-ae68-f70acef33a0e",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "6A5700B904A5646642967EA3C0C5799A",
+        "type": "page",
+        "title": "Completion verification blocked",
+        "url": "https://chatgpt.com/c/6aa9432c-6090-83e9-bd53-3e2033d8af86",
+        "chat_id": "6aa9432c-6090-83e9-bd53-3e2033d8af86",
+        "has_web_socket_debugger_url": true
+      }
+    ]
+  },
+  "still_visible": true,
+  "policy": {
+    "browser_mutation": true,
+    "chatgpt_host_only": true,
+    "deletes_chat": true,
+    "soft_delete_via_backend_api": true,
+    "requires_expected_chat_id": true,
+    "ordinary_delete_requires_confirm_delete": true,
+    "lifecycle_ready_to_delete_authorization_available": true,
+    "lifecycle_ready_to_delete_requires_true_signal": true,
+    "writes_input": false,
+    "submits_input": false
+  },
+  "tool": "console.write.browser.chatgpt.chat.delete.execute",
+  "bridge": {
+    "ok": false,
+    "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+    "capabilityClass": "atomic",
+    "authorityMode": "legacy",
+    "m5AtomicTransportEnabled": false,
+    "endpoint": "http://127.0.0.1:3334/mcp",
+    "requestTimeoutMs": 120000
+  },
+  "envBootstrap": {
+    "endpoint": "http://127.0.0.1:3334/mcp",
+    "tokenPresent": true,
+    "tokenSource": "env"
+  }
+}

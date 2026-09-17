@@ -1,0 +1,253 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "boundarying",
+    "component_title": "Boundarying",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Boundarying",
+    "timestamp_utc": "2026-09-17T17:08:14.556431+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "03d6277e9e75069673ec39534940ffb6c65dfc77"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? AGENTS.md\n?? README.md\n?? boundary-common.md\n?? boundary-common.yaml\n?? boundary-domain-index.md\n?? boundary-domain-index.yaml\n?? boundary-evidence-map.yaml\n?? boundary-examples.md\n?? boundary-global.md\n?? boundary-global.yaml\n?? canonization/\n?? consumer/\n?? docs/\n?? report/\n?? schema/\n?? tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "03d6277 init"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gitattributes\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\nboundary-common.md\nboundary-common.yaml\nboundary-domain-index.md\nboundary-domain-index.yaml\nboundary-evidence-map.yaml\nboundary-examples.md\nboundary-global.md\nboundary-global.yaml\ncanonization/\ncanonization/analytics/\ncanonization/anchoring/\ncanonization/billing/\ncanonization/category/\ncanonization/command/\ncanonization/commerce/\ncanonization/common/\ncanonization/complying/\ncanonization/consuming/\ncanonization/containerizing/\ncanonization/evaluating/\ncanonization/financing/\ncanonization/gating/\ncanonization/indexing/\ncanonization/interfacing/\ncanonization/locating/\ncanonization/message/\ncanonization/mobile-edge/\ncanonization/objecting/\ncanonization/observabiliting/\ncanonization/operation/\ncanonization/order/\ncanonization/paying/\ncanonization/product/\ncanonization/project/\ncanonization/role/\ncanonization/rolling/\ncanonization/runtiming/\ncanonization/shipping/\ncanonization/tag/\ncanonization/tagging/\ncanonization/taxation/\ncanonization/vendor/\nconsumer/\nconsumer/analytics/\nconsumer/anchoring/\nconsumer/billing/\nconsumer/category/\nconsumer/command/\nconsumer/commerce/\nconsumer/complying/\nconsumer/consuming/\nconsumer/containerizing/\nconsumer/evaluating/\nconsumer/financing/\nconsumer/gating/\nconsumer/indexing/\nconsumer/interfacing/\nconsumer/locating/\nconsumer/message/\nconsumer/mobile-edge/\nconsumer/objecting/\nconsumer/observabiliting/\nconsumer/operation/\nconsumer/order/\nconsumer/paying/\nconsumer/product/\nconsumer/project/\nconsumer/rolling/\nconsumer/runtiming/\nconsumer/shipping/\nconsumer/tagging/\nconsumer/taxation/\nconsumer/vendor/\ndocs/\ndocs/milestone/\nREADME.md\nreport/\nreport/evidence/\nschema/\nschema/boundary-v1.schema.json\nschema/evidence-map-v1.schema.json\ntool/\ntool/validate-boundary.ps1\ntool/validate-boundary.sh"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "153"
+    }
+  },
+  "verdict": {
+    "component": "boundarying",
+    "summary": "Boundarying has a substantial repository-level boundary specification structure with global/common rules, per-component canonization and consumer material, schemas, validation tooling, documentation, evidence reporting, and CI workflow presence. The strongest evidence is architectural and governance-oriented; runtime and market maturity are not sufficiently evidenced by the supplied facts. The principal repository risk is that nearly all substantive content is currently untracked while the Git history contains only the initial commit.",
+    "strengths": [
+      "Extensive boundary-oriented repository structure covering global, common, canonization, consumer, schema, documentation, reporting, and validation concerns.",
+      "Per-component canonization material exists across a broad set of ecosystem components.",
+      "Explicit JSON schemas are present for boundary and evidence-map contracts.",
+      "Cross-platform validation entry points are present for PowerShell and shell environments.",
+      "A GitHub workflows directory is present, providing evidence of CI-oriented repository intent."
+    ],
+    "risks": [
+      "Nearly all substantive repository content is untracked, so the assessed working tree is not represented by the current Git commit.",
+      "Git history contains only the initial commit and no exact release tag, limiting maturity and change-history evidence.",
+      "No Composer, package.json, PHPUnit, or PHPStan configuration is present, so conventional executable test/static-analysis depth is not evidenced.",
+      "Runtime behavior, performance characteristics, and production operational behavior are not established by the supplied repository facts.",
+      "Market adoption or external consumer validation is not evidenced by the supplied facts."
+    ],
+    "next_actions": [
+      "Bring the intended Boundarying specification, schemas, documentation, validation tools, and workflow files under version control.",
+      "Run and retain deterministic validation results for the boundary and evidence-map schemas.",
+      "Add repository-level automated checks that exercise the validation tools against representative valid and invalid boundary fixtures.",
+      "Establish tagged or otherwise traceable assessment baselines after the repository content is committed.",
+      "Keep runtime and market scores evidence-neutral until repository facts establish those dimensions."
+    ],
+    "notes": [
+      "Assessment is based only on the deterministic facts embedded in the authoritative prompt.",
+      "The repository contains 153 files in the supplied working-tree fact set.",
+      "The assessed branch is master at commit 03d6277e9e75069673ec39534940ffb6c65dfc77.",
+      "The substantive Boundarying files and directories shown in git status are currently untracked."
+    ],
+    "suggested_score_overrides": {
+      "product": 8.1,
+      "architecture": 8.6,
+      "qa": 7.2,
+      "ops": 6.9,
+      "overall": 7.8
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Boundarying has a clearly identifiable product role as a repository of canonical boundary specifications, schemas, examples, consumer material, and validation tooling.",
+        "risks": [
+          "The substantive product definition is currently untracked and therefore not represented by the committed baseline."
+        ],
+        "improvements": [
+          "Commit the intended canonical specification set and keep README and boundary examples synchronized with the schemas and validation tooling."
+        ],
+        "evidence": [
+          "README.md",
+          "boundary-global.md",
+          "boundary-common.md",
+          "boundary-examples.md",
+          "schema/boundary-v1.schema.json"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture is strongly structured around global/common contracts, per-component canonization, consumer views, explicit schemas, and an evidence map.",
+        "risks": [
+          "The architectural structure is visible only in the untracked working tree, while Git history currently provides no durable evolution evidence beyond the initial commit."
+        ],
+        "improvements": [
+          "Version the full architecture baseline and validate consistency between global rules, common rules, component canonization, consumer views, and schemas."
+        ],
+        "evidence": [
+          "boundary-global.yaml",
+          "boundary-common.yaml",
+          "boundary-domain-index.yaml",
+          "boundary-evidence-map.yaml",
+          "canonization/",
+          "consumer/",
+          "schema/boundary-v1.schema.json",
+          "schema/evidence-map-v1.schema.json"
+        ]
+      },
+      "runtime": {
+        "summary": "Bootstrap runtime assessment remains effectively unresolved because the supplied repository facts describe specification and validation assets rather than production runtime behavior.",
+        "risks": [
+          "No supplied fact establishes latency, throughput, capacity, caching, runtime dependencies, or production execution characteristics."
+        ],
+        "improvements": [
+          "Refresh this metric only when deterministic runtime or execution evidence becomes part of the assessment facts."
+        ],
+        "evidence": [
+          "tool/validate-boundary.ps1",
+          "tool/validate-boundary.sh"
+        ]
+      },
+      "qa": {
+        "summary": "Quality assurance has a concrete validation foundation through explicit schemas and cross-platform boundary validation scripts, but conventional automated test-suite evidence is absent.",
+        "risks": [
+          "No PHPUnit configuration, PHPStan configuration, package manifest, or other supplied test-runner configuration is present.",
+          "The supplied facts do not include actual validation execution results."
+        ],
+        "improvements": [
+          "Add deterministic valid/invalid fixtures and CI assertions around the boundary and evidence-map validators.",
+          "Persist validator results as assessment evidence."
+        ],
+        "evidence": [
+          "schema/boundary-v1.schema.json",
+          "schema/evidence-map-v1.schema.json",
+          "tool/validate-boundary.ps1",
+          "tool/validate-boundary.sh",
+          ".github/workflows/"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity is partially evidenced by GitHub workflow presence and portable validation entry points, but release discipline and reproducible committed baselines are weakly evidenced.",
+        "risks": [
+          "There is no exact Git tag and only one recorded commit.",
+          "Nearly all substantive files are untracked, undermining reproducibility of the current assessment state."
+        ],
+        "improvements": [
+          "Commit the working baseline, make CI validation authoritative, and establish traceable tagged or immutable assessment baselines."
+        ],
+        "evidence": [
+          ".github/workflows/",
+          "tool/validate-boundary.ps1",
+          "tool/validate-boundary.sh"
+        ]
+      },
+      "market": {
+        "summary": "Bootstrap market assessment remains unresolved because the supplied facts establish internal ecosystem coverage but provide no evidence of external adoption, demand, or market validation.",
+        "risks": [
+          "No supplied repository fact establishes external users, adoption, commercial traction, or comparable market evidence."
+        ],
+        "improvements": [
+          "Preserve this metric without speculative scoring until explicit adoption or consumer evidence is available."
+        ],
+        "evidence": [
+          "consumer/",
+          "boundary-domain-index.md"
+        ]
+      },
+      "overall": {
+        "summary": "Boundarying shows solid-to-strong specification architecture with schemas, ecosystem-wide canonization coverage, validation tooling, and CI intent, but repository reproducibility and QA evidence are constrained by the almost entirely untracked working tree and minimal Git history.",
+        "risks": [
+          "The current working-tree implementation is not captured by the sole Git commit.",
+          "Automated validation execution results and deeper test evidence are not supplied.",
+          "Runtime and market dimensions remain insufficiently evidenced."
+        ],
+        "improvements": [
+          "Commit the canonical baseline, enforce schema and boundary validation in CI, add deterministic validation fixtures, and establish traceable release or assessment baselines."
+        ],
+        "evidence": [
+          "boundary-global.yaml",
+          "boundary-common.yaml",
+          "boundary-domain-index.yaml",
+          "boundary-evidence-map.yaml",
+          "canonization/",
+          "consumer/",
+          "schema/boundary-v1.schema.json",
+          "schema/evidence-map-v1.schema.json",
+          "tool/validate-boundary.ps1",
+          "tool/validate-boundary.sh",
+          ".github/workflows/"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "README.md",
+      "boundary-common.md",
+      "boundary-common.yaml",
+      "boundary-domain-index.md",
+      "boundary-domain-index.yaml",
+      "boundary-evidence-map.yaml",
+      "boundary-examples.md",
+      "boundary-global.md",
+      "boundary-global.yaml",
+      "canonization/",
+      "consumer/",
+      "docs/",
+      "report/evidence/",
+      "schema/boundary-v1.schema.json",
+      "schema/evidence-map-v1.schema.json",
+      "tool/validate-boundary.ps1",
+      "tool/validate-boundary.sh",
+      ".github/workflows/"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\history\\2026-09-17-assessment-2026-09-17.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\probes\\history\\2026-09-17-assessment-2026-09-17.yaml"
+  },
+  "ai_io": {
+    "request_file": "boundarying.request.json",
+    "response_file": "boundarying.response.json"
+  }
+}

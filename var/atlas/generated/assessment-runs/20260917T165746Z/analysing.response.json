@@ -1,0 +1,463 @@
+{
+  "ok": true,
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "analysing",
+  "verdict": {
+    "component": "analysing",
+    "summary": "Analysing has a materially mature Symfony 8.1/PHP 8.4 implementation, strong repository quality tooling, browser-level behavioral coverage infrastructure, and active RC hardening, but it is not yet release-candidate complete because the current commit is untagged and the working tree contains staged or unstaged destructive changes affecting gating configuration and a domain-hygiene guard.",
+    "strengths": [
+      "Symfony 8.1 and PHP 8.4 baseline with Doctrine ORM/DBAL and explicit component dependencies.",
+      "Repository includes PHPStan at maximum level, PHPUnit, PHP CS Fixer, Psalm, PHPMD, Qodana, Gitleaks, gating, coverage, schema-parity, and standalone smoke commands.",
+      "Playwright-based browser tests and a behavioral-coverage command provide explicit UI-level QA infrastructure.",
+      "Recent commits show focused canonical migration and RC verification hardening.",
+      "Docker, Docker Compose, CI workflows, QA environment checks, migrations, and runtime smoke checks provide substantial operational readiness."
+    ],
+    "risks": [
+      "Current commit has no exact release tag.",
+      "Working tree is not clean: the Analysing gating profile and analytics-domain-hygiene guard are deleted while composer.json is modified.",
+      "Composer production dependencies use multiple dev-master component versions, increasing reproducibility and release-governance risk.",
+      "Repository identity still exposes historical Analytics naming in package metadata, IDE metadata, scripts, and documentation, which may indicate residual canonical migration debt.",
+      "Antora component navigation/index files are not present in the repository facts, so documentation integration is not fully evidenced."
+    ],
+    "next_actions": [
+      "Resolve and verify the current working-tree deletions and composer.json modification before RC acceptance.",
+      "Run the repository gate, PHPUnit suite, PHPStan max analysis, schema parity, standalone smoke, and Playwright behavioral tests on a clean candidate commit.",
+      "Tag the verified RC commit once all required gates are green.",
+      "Finish remaining Analysing-versus-Analytics naming reconciliation where legacy names are no longer intentional.",
+      "Review dev-master inter-component dependencies and establish a reproducible release dependency policy."
+    ],
+    "notes": [
+      "Assessment is based exclusively on the deterministic facts embedded in the authoritative prompt.",
+      "No repository mutations were performed.",
+      "The repository is currently on rc/analysing-canon-vendor-20260913 at commit 9ea6128f0ac2bbd5c59e7cd3f973b2a2144d65c1."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "package.json",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      ".github/workflows",
+      ".gitleaks.toml",
+      "docker-compose.yml",
+      "docker/Dockerfile",
+      "playwright.config.ts",
+      "psalm.xml",
+      "phpmd.xml.dist",
+      "qodana.yaml",
+      "docs/qa-environment.md",
+      "migrations/Version20260914083153.php",
+      "CMCP_CHANGELOG.md"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.0,
+      "architecture": 8.4,
+      "runtime": 8.2,
+      "qa": 8.6,
+      "ops": 8.5,
+      "market": 7.9,
+      "overall": 8.3
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity is materially established as Analysing, with a dedicated package, repository, runtime surface, documentation, and RC branch, although residual Analytics naming remains visible in repository metadata and tooling.",
+        "risks": [
+          "Legacy Analytics naming may blur the final canonical component identity."
+        ],
+        "improvements": [
+          "Complete intentional naming reconciliation and document any retained Analytics terminology."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "README.md",
+          "docs/analytics-core-doc-layer-map.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture maturity is strong: the repository is Symfony 8.1 oriented, uses explicit component dependencies, Doctrine persistence, canonical gating, migrations, and recent commits dedicated to canonical migration and RC hardening.",
+        "risks": [
+          "Multiple dev-master component dependencies reduce architectural release reproducibility.",
+          "Deletion of the component gating profile and domain-hygiene guard in the current working tree could weaken canonical enforcement if intentional changes are not replaced equivalently."
+        ],
+        "improvements": [
+          "Restore or intentionally replace canonical guard coverage, then verify the clean candidate through the component gate.",
+          "Adopt a reproducible dependency-release policy for inter-component packages."
+        ],
+        "evidence": [
+          "composer.json",
+          ".gating",
+          "migrations/Version20260914083153.php",
+          "MANIFEST.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime readiness is materially present through Symfony console/application bootstrap, Doctrine schema validation, standalone smoke checks, Docker assets, and explicit PHP 8.4/Symfony 8.1 requirements.",
+        "risks": [
+          "Runtime validation results are not included in the supplied facts, so successful execution of smoke and schema commands is not proven for the current commit.",
+          "Current working-tree changes may alter the exact candidate being assessed."
+        ],
+        "improvements": [
+          "Execute standalone smoke and schema-parity commands on the clean RC candidate and retain their results in the assessment pipeline."
+        ],
+        "evidence": [
+          "composer.json",
+          "bin/console",
+          "config/bootstrap.php",
+          "config/bundles.php",
+          "docker-compose.yml",
+          "docker/Dockerfile"
+        ]
+      },
+      "qa": {
+        "summary": "QA depth is strong for a pre-RC component, with PHPUnit, coverage generation, PHPStan max analysis, PHP CS Fixer, Psalm, PHPMD, Qodana, QA environment checks, Playwright browser tests, and behavioral UI coverage tooling.",
+        "risks": [
+          "The supplied facts prove tooling presence but not green results for the current commit.",
+          "Deletion of a hygiene guard from the working tree may reduce static quality enforcement if not replaced."
+        ],
+        "improvements": [
+          "Run and capture green results for PHPUnit, coverage, PHPStan max, repository gating, and Playwright behavioral coverage on the exact clean RC commit."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "playwright.config.ts",
+          "psalm.xml",
+          "phpmd.xml.dist",
+          "qodana.yaml",
+          "docs/qa-environment.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and governance posture is strong, with GitHub workflows, Docker packaging, Gitleaks configuration, repository gating, QA environment validation, migration checks, and recent RC verification hardening.",
+        "risks": [
+          "The assessed commit is not exactly tagged.",
+          "The dirty working tree prevents treating the present filesystem state as an immutable release candidate."
+        ],
+        "improvements": [
+          "Clean and verify the working tree, execute the full operational gate set, and create an exact tag for the accepted candidate."
+        ],
+        "evidence": [
+          ".github/workflows",
+          ".gitleaks.toml",
+          "docker-compose.yml",
+          "docker/Dockerfile",
+          "composer.json",
+          ".gating"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing alignment remains materially present through a clearly named Analysing component and integration with the wider Smartresponsor component ecosystem, but the supplied evidence is primarily engineering-focused rather than market-validation focused.",
+        "risks": [
+          "No new market or user-adoption evidence is included in the deterministic facts.",
+          "Residual Analytics naming may reduce portfolio-facing clarity."
+        ],
+        "improvements": [
+          "Preserve the existing market assessment while adding explicit owner-facing purpose and ecosystem-role documentation during a future scheduled assessment."
+        ],
+        "evidence": [
+          "composer.json",
+          "README.md",
+          "MANIFEST.md"
+        ]
+      },
+      "overall": {
+        "summary": "Analysing is a strong pre-RC component with mature architecture, QA, and operational controls; the principal remaining RC blockers evidenced here are an unclean working tree, deleted canonical guard assets, dev-master dependency reproducibility, and absence of an exact release tag.",
+        "risks": [
+          "Current filesystem state is not an immutable release candidate.",
+          "Required quality tooling is present, but green execution results for this exact candidate are not included in the facts.",
+          "Inter-component dev-master dependencies and residual naming debt remain release-quality concerns."
+        ],
+        "improvements": [
+          "Produce a clean candidate, resolve guard/profile deletions, run all defined quality and runtime gates, then tag the verified commit."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          ".gating",
+          ".github/workflows",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "playwright.config.ts",
+          "docker-compose.yml"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "tool/runner-task-bank-loop.ps1",
+    "promptMode": "raw",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\analysing.prompt.txt",
+    "chatId": "6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+    "targetId": "D620AEAEF5049210EDEA1AD91CA7C9B5",
+    "acceptanceStatus": "M3_ACCEPTANCE_FAIL",
+    "acceptanceFailures": [
+      "target_repo_not_clean"
+    ],
+    "acceptanceArtifactPath": "D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\var\\runner\\task-bank\\acceptance\\repo-smoke-20260917170031-58c70d2610-20260917T170152Z.acceptance.json",
+    "cleanup": {
+      "ok": false,
+      "status": "CHATGPT_CHAT_DELETE_NEEDS_REVIEW",
+      "expected_chat_id": "6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+      "selected": {
+        "port": 9223,
+        "id": "D620AEAEF5049210EDEA1AD91CA7C9B5",
+        "type": "page",
+        "title": "Quality Atlas Assessment",
+        "url": "https://chatgpt.com/c/6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+        "chat_id": "6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+        "has_web_socket_debugger_url": true
+      },
+      "delete": {
+        "ok": true,
+        "status": "CHAT_SOFT_DELETED",
+        "expected_chat_id": "6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+        "close_target": true,
+        "before_http_status": 0,
+        "before_body_preview": "AbortError: signal is aborted without reason",
+        "patch_http_status": 200,
+        "patch_http_status_text": "",
+        "patch_body_preview": null,
+        "auth_session_http_status": 200,
+        "auth_token_present": true,
+        "href": "https://chatgpt.com/c/6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+        "title": "Quality Atlas Assessment"
+      },
+      "target_close": {
+        "ok": true,
+        "status": "TARGET_CLOSE_REQUESTED",
+        "target_id": "D620AEAEF5049210EDEA1AD91CA7C9B5",
+        "port": 9223,
+        "body": "Target is closing"
+      },
+      "after": {
+        "ports": [
+          9222,
+          9223
+        ],
+        "attempts": [
+          {
+            "port": 9222,
+            "ok": false,
+            "error": "connect ECONNREFUSED 127.0.0.1:9222"
+          },
+          {
+            "port": 9223,
+            "ok": true,
+            "target_count": 16
+          }
+        ],
+        "total_chatgpt_targets": 16,
+        "empty_home_count": 2,
+        "chat_target_count": 14,
+        "unique_chat_id_count": 14,
+        "duplicate_chat_id_count": 0,
+        "duplicate_chat_ids": [],
+        "empty_home_targets": [
+          {
+            "description": "",
+            "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1",
+            "faviconUrl": "https://chatgpt.com/favicon.ico",
+            "id": "3A7ECBC811CA105C5B6108C3C6816DB1",
+            "title": "ChatGPT",
+            "type": "page",
+            "url": "https://chatgpt.com/",
+            "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1",
+            "port": 9223,
+            "chat_id": null,
+            "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/3A7ECBC811CA105C5B6108C3C6816DB1"
+          },
+          {
+            "description": "",
+            "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "faviconUrl": "https://chatgpt.com/favicon.ico",
+            "id": "001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "title": "ChatGPT",
+            "type": "page",
+            "url": "https://chatgpt.com/",
+            "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "port": 9223,
+            "chat_id": null,
+            "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/001F31C148CF6BC9DF2E36EF51A7CDC2"
+          }
+        ],
+        "targets": [
+          {
+            "port": 9223,
+            "id": "D620AEAEF5049210EDEA1AD91CA7C9B5",
+            "type": "page",
+            "title": "Quality Atlas Assessment",
+            "url": "https://chatgpt.com/c/6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+            "chat_id": "6aac1cc0-5360-83ea-a3b6-649419ca4d03",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "3A7ECBC811CA105C5B6108C3C6816DB1",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "001F31C148CF6BC9DF2E36EF51A7CDC2",
+            "type": "page",
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "chat_id": null,
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "8D907C99B4BD0C80B132B4BADFB3CC52",
+            "type": "page",
+            "title": "Shipping repository analysis",
+            "url": "https://chatgpt.com/c/6aaade66-6118-83ea-a52e-46f8e8ee9464",
+            "chat_id": "6aaade66-6118-83ea-a52e-46f8e8ee9464",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "CCDD859A7FB850CBE89C786A54E2AD41",
+            "type": "page",
+            "title": "Repository Analysis Progress",
+            "url": "https://chatgpt.com/c/6aaade65-9e78-83ea-84ba-4639bab0bd18",
+            "chat_id": "6aaade65-9e78-83ea-84ba-4639bab0bd18",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "868AFF00E41AF48D7EFA5920304500C6",
+            "type": "page",
+            "title": "Repository implementation summary",
+            "url": "https://chatgpt.com/c/6aaade65-ec74-83ea-a6a7-d71c0d56aa74",
+            "chat_id": "6aaade65-ec74-83ea-a6a7-d71c0d56aa74",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "88DC15F8B8194383A305A67233ECA405",
+            "type": "page",
+            "title": "Repository implementation status",
+            "url": "https://chatgpt.com/c/6aaade6b-a2a4-83ea-8be8-1a420c863e76",
+            "chat_id": "6aaade6b-a2a4-83ea-8be8-1a420c863e76",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "1872DD0E52A36CFA24035B76A2F47D99",
+            "type": "page",
+            "title": "Atlassing implementation report",
+            "url": "https://chatgpt.com/c/6aaade62-ff5c-83ea-9774-a077f5f2dc98",
+            "chat_id": "6aaade62-ff5c-83ea-9774-a077f5f2dc98",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "DC09F35C5332D1C189571274928EA1CC",
+            "type": "page",
+            "title": "Repository analysis complete",
+            "url": "https://chatgpt.com/c/6aaade6b-8080-83e9-a287-810d3e85b852",
+            "chat_id": "6aaade6b-8080-83e9-a287-810d3e85b852",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "60C62CBA65D5DC617BFED60EF5C71ABC",
+            "type": "page",
+            "title": "Shipping coverage baseline",
+            "url": "https://chatgpt.com/c/6aaade3c-c024-83ea-86eb-c1f46976fe3d",
+            "chat_id": "6aaade3c-c024-83ea-86eb-c1f46976fe3d",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "B37CA4BF7AAC021B3276A2DBE351DC3C",
+            "type": "page",
+            "title": "Отчёт по интеграции",
+            "url": "https://chatgpt.com/c/6aaa918c-7e84-83e9-821c-864023e5500f",
+            "chat_id": "6aaa918c-7e84-83e9-821c-864023e5500f",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "C94AD655EEDF93CAB402AF6DB4A05094",
+            "type": "page",
+            "title": "Repository analysis implementation",
+            "url": "https://chatgpt.com/c/6aaa9187-7078-83e9-a4db-4429d39bb4f7",
+            "chat_id": "6aaa9187-7078-83e9-a4db-4429d39bb4f7",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "FB542D95C8345BD3304843257B837011",
+            "type": "page",
+            "title": "Verify repository completion",
+            "url": "https://chatgpt.com/c/6aa96603-55c0-83ea-a7a0-262a5e43de57",
+            "chat_id": "6aa96603-55c0-83ea-a7a0-262a5e43de57",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "A20EA031A64C024198F8100A97625E18",
+            "type": "page",
+            "title": "[chatgpt-loop:6aa964831a] Execute repository task | ChatGPT",
+            "url": "https://chatgpt.com/c/6aa96483-1ab4-83e9-b554-ce5b82c3a238",
+            "chat_id": "6aa96483-1ab4-83e9-b554-ce5b82c3a238",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "41E1C30E88610E60FDA5E732340E433E",
+            "type": "page",
+            "title": "[chatgpt-loop:6aa946466c] Engine task execution request | ChatGPT",
+            "url": "https://chatgpt.com/c/6aa94646-6c10-83e9-ae68-f70acef33a0e",
+            "chat_id": "6aa94646-6c10-83e9-ae68-f70acef33a0e",
+            "has_web_socket_debugger_url": true
+          },
+          {
+            "port": 9223,
+            "id": "6A5700B904A5646642967EA3C0C5799A",
+            "type": "page",
+            "title": "Completion verification blocked",
+            "url": "https://chatgpt.com/c/6aa9432c-6090-83e9-bd53-3e2033d8af86",
+            "chat_id": "6aa9432c-6090-83e9-bd53-3e2033d8af86",
+            "has_web_socket_debugger_url": true
+          }
+        ]
+      },
+      "still_visible": true,
+      "policy": {
+        "browser_mutation": true,
+        "chatgpt_host_only": true,
+        "deletes_chat": true,
+        "soft_delete_via_backend_api": true,
+        "requires_expected_chat_id": true,
+        "ordinary_delete_requires_confirm_delete": true,
+        "lifecycle_ready_to_delete_authorization_available": true,
+        "lifecycle_ready_to_delete_requires_true_signal": true,
+        "writes_input": false,
+        "submits_input": false
+      },
+      "tool": "console.write.browser.chatgpt.chat.delete.execute",
+      "bridge": {
+        "ok": false,
+        "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+        "capabilityClass": "atomic",
+        "authorityMode": "legacy",
+        "m5AtomicTransportEnabled": false,
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "requestTimeoutMs": 120000
+      },
+      "envBootstrap": {
+        "endpoint": "http://127.0.0.1:3334/mcp",
+        "tokenPresent": true,
+        "tokenSource": "env"
+      }
+    }
+  }
+}

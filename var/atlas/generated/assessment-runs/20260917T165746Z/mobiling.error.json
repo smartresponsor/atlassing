@@ -1,0 +1,67 @@
+{
+  "status": "error",
+  "component": "mobiling",
+  "title": "Mobiling",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "mobiling",
+    "component_title": "Mobiling",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/mobiling/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Mobiling",
+    "timestamp_utc": "2026-09-17T17:15:37.442608+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "test/android-access-behavior-baseline"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "633fce301bfeed9ae4b997a3d1cb371ab74c9131"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M README.md\n M client/android/Contract/Notification/NotificationInboxContracts.kt\n M client/android/Data/Notification/NotificationGateway.kt\n M client/android/Data/Notification/NotificationHttpGateway.kt\n M client/android/settings.gradle.kts\n M client/ios/Contract/Notification/NotificationInboxContracts.swift\n M client/ios/Data/Notification/NotificationGateway.swift\n M client/ios/Data/Notification/NotificationHttpGateway.swift\n M client/ios/project.yml\n M mobile-edge/dist/env.js\n M mobile-edge/dist/routes/notification/mobile.js\n M mobile-edge/src/env.ts\n M mobile-edge/src/routes/notification/mobile.ts\n M tool/android-design-refresh.ps1\n M tool/android-tap-capture.ps1\n M tool/android-test-access.ps1\n M tool/android-ui-login.ps1\n?? client/android/OneTaskerWidget/\n?? client/ios/Config/Brand/OneTaskerWidget.xcconfig\n?? client/ios/Widget/\n?? docs/one-tasker-widget-architecture.md\n?? docs/one-tasker-widget-milestone-0.md\n?? docs/one-tasker-widget-speech-and-privacy.md\n?? tool/visual-artifact-path.ps1"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "633fce30 Add native mobile currency contracts and gateways\n074aa8e9 Integrate Currencing routes into mobile edge\nf4d917f5 build(edge): refresh compiled runtime artifacts\ndbebc9b2 feat(edge): route upstreams by application runtime\nc2e28b36 feat(ios): propagate application runtime headers"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/collect-environment-snapshot.ps1\n.codebase-memory/environment-snapshot.json\n.codebase-memory/environment-snapshot.md\n.console-mcp/\n.console-mcp/powershell-script-run/\n.githooks/\n.githooks/pre-commit\n.github/\n.github/workflows/\n.gitignore\n.mobile-cookie.txt\nAGENTS.md\nbin/\nbuild/\nbuild/live-auth-cookie.txt\nbuild/live-auth-payload.json\nbuild/live-auth-session.json\nbuild/live-auth-signin.json\nbuild/live-crud-order-get.json\nbuild/live-crud-product-get.json\nbuild/live-crud-product-payload.json\nbuild/live-crud-product-post.json\nbuild/live-crud-retail-delete.json\nbuild/live-crud-retail-get.json\nbuild/live-crud-retail-patch.json\nbuild/live-crud-retail-payload.json\nbuild/live-crud-retail-post.json\nbuild/runtime-log/\nbuild/test-result/\nclient/\nclient/android/\nclient/contract/\nclient/docs/\nclient/ios/\nclient/README.md\nclient/richtext-web/\nCURRENT_WORKING_SPEC.txt\ndist/\ndist/Mobiling-debug.apk\ndocs/\ndocs/firebase-push-provisioning.md\ndocs/MATERIALIZATION_BASELINE.md\ndocs/milestone/\ndocs/mobile-api-contract.md\ndocs/mobile-quality-gate.md\ndocs/mobiling/\ndocs/one-tasker-widget-architecture.md\ndocs/one-tasker-widget-milestone-0.md\ndocs/one-tasker-widget-speech-and-privacy.md\ndocs/product-configuration.md\ndocs/rc/\ndocs/transitional/\nmaterialize-mobiling.ps1\nmobile-client/\nmobile-client/android/\nmobile-client/contract/\nmobile-client/docs/\nmobile-client/ios/\nmobile-client/README.md\nmobile-edge/\nmobile-edge/.console-mcp/\nmobile-edge/clients/\nmobile-edge/contract/\nmobile-edge/dist/\nmobile-edge/EDGE_CANON_WAVE_002.txt\nmobile-edge/EDGE_ROUTE_GROUPS_WAVE_016.txt\nmobile-edge/EDGE_TARGET_STRUCTURE_WAVE_003.txt\nmobile-edge/fixture/\nmobile-edge/node_modules/\nmobile-edge/openapi/\nmobile-edge/package-lock.json\nmobile-edge/package.json\nmobile-edge/public/\nmobile-edge/README.md\nmobile-edge/README_CURATION.md\nmobile-edge/receiver-verify-example.js\nmobile-edge/src/\nmobile-edge/tools/\nmobile-edge/tsconfig.json\nmobile-edge/var/\nREADME.md\nSTRUCTURE_CANON.txt\ntool/\ntool/.mobile-edge-current.ps1\ntool/android-avd-light.ps1\ntool/android-casing-build.ps1\ntool/android-compile.ps1\ntool/android-design-refresh.ps1\ntool/android-design-watch.ps1\ntool/android-display-verify.ps1\ntool/android-emulator-keyboard-diagnose.ps1\ntool/android-keyboard-enable.ps1\ntool/android-read-runtime-logs.ps1\ntool/android-tap-capture.ps1\ntool/android-test-access.ps1\ntool/android-ui-login.ps1\ntool/android-ui-open-signin.ps1\ntool/android-window-recover.ps1\ntool/build-richtext.ps1\ntool/casing-mobile-contract-gate.ps1\ntool/cleanup-richtext-node-modules.ps1\ntool/mobile-edge-reset.ps1\ntool/mobile-edge-restart-local.ps1\ntool/mobile-edge-run-local.ps1\ntool/mobile-live-auth-smoke.ps1\ntool/mobile-placement-readonly-smoke.ps1\ntool/visual-artifact-path.ps1\ntools/\ntools/validate_repository.py\nvar/\nwatchdog/\nwatchdog/runtime/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "8695"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "objecting",
+  "title": "Objecting",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "objecting",
+    "component_title": "Objecting",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/objecting/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Objecting",
+    "timestamp_utc": "2026-09-17T17:15:55.577339+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "release/objecting-field-pack-normalization-20260910"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "24d40b48ae0882f9e137c4526250c6b368f407bb"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/AGENTS.md\n M .gating/composer.json\n M .gating/src/Registry/RuleRegistry.php\n M .gating/src/Rule/Canon/Canon029MandatoryPhpQualityToolingRule.php\n M .gating/src/Rule/Canon/Canon031PhpDocCoverageRule.php\n M .gating/src/Rule/Canon/Canon033ComposerManifestIdentityParityRule.php\n M .gating/src/Rule/Canon/Canon034GitignoreBaselineRule.php\n M .gating/src/Rule/Canon/Canon037GeneratedReferenceArtifactRule.php\n M .gating/src/Rule/Canon/Canon041BehavioralUiTestToolingRule.php\n M .gating/src/Rule/Canon/Canon042BehavioralUiCoverageRule.php\n M .gating/src/Rule/Canon/Canon043DevelopmentComposerDependencyVersionRule.php\n M .gating/src/Rule/Canon/CanonRuleMirrorRule.php\n M .gating/tests/calibration.php\n?? .gating/src/Rule/Canon/Canon044ObjectingSystemFieldNamingRule.php\n?? .gating/src/Rule/Canon/Canon045DevelopmentComposerRepositoryClosureRule.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "24d40b4 Enforce Doctrine optimistic locking in Objecting\nfe87beb fix(objecting): enforce entity-native system fields\na0433d1 Update projected Gating canon and test tooling\n507e692 Refresh projected Gating contracts and runners\n784beab test"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codex-tmp/\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.yamllint.yml\nAGENTS.md\napply-objecting-phpstan-cleanup.ps1\nbin/\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/services.yaml\ndocs/\ndocs/architecture/\ndocs/field-pack/\ndocs/integration/\ndocs/release/\nLICENSE\nmanifest.json\nObjecting.zip\nOBJECTING_QUALITY_CLEANUP_AUDIT.md\nOBJECTING_RC2_HARDENING_PLAN.md\nphpstan.neon\nphpunit.xml.dist\nphpunit.xsd\nREADME.md\nremove-objecting-obsolete-files.ps1\nresources/\nresources/audit/\nresources/consumer/\nresources/entity-kind/\nresources/field-pack/\nresources/release/\nresources/title-alias/\nsrc/\nsrc/Contract/\nsrc/Decision/\nsrc/DependencyInjection/\nsrc/Diagnostic/\nsrc/Embeddable/\nsrc/EntityInterface/\nsrc/EntityTrait/\nsrc/Factory/\nsrc/Inspector/\nsrc/InspectorInterface/\nsrc/Manifest/\nsrc/Normalizer/\nsrc/NormalizerInterface/\nsrc/ObjectBundle.php\nsrc/Packet/\nsrc/Registry/\nsrc/RegistryInterface/\nsrc/Report/\nsrc/Reporter/\nsrc/ReporterInterface/\nsrc/Resolver/\nsrc/ResolverInterface/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Surface/\nsrc/ValueObject/\nTENANT_LIFECYCLE_AUDIT.md\ntests/\ntests/Integration/\ntests/Support/\ntests/Unit/\ntool/\ntool/.inventory.ps1\ntool/run-workspace-entity-kind-audit.ps1\ntools/\ntools/audit/\ntools/inspection/\ntools/objecting-suffix-layer-full/\ntools/objecting-valueobject-suffix-layer/\ntools/test/\nvar/\nvar/.php-cs-fixer.cache\nvar/cmcp-push-current-tools.ps1\nvar/cmcp-push-current.ps1"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "679"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"objecting/object\",\n  \"description\": \"Objecting process app\",\n  \"type\": \"library\",\n  \"license\": \"MIT\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko\",\n      \"homepage\": \"https://smartresponsor.com\",\n      \"role\": \"Maintainer\"\n    }\n  ],\n  \"require\": {\n    \"doctrine/orm\": \"^3.3\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/uid\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \">=3.95 <4.0\",\n    \"phpstan/phpstan\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.0 || ^12.0\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Objecting\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Objecting\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"test:canon\": \"@php tools/test/objecting_canon_check.php\",\n    \"test:responsibility-boundary\": \"@php tools/test/objecting_responsibility_boundary_check.php\",\n    \"test:semantic-manifest\": \"@php tools/test/objecting_semantic_manifest_check.php\",\n    \"test:lifecycle-identity-canon\": \"@php tools/test/objecting_lifecycle_identity_canon_check.php\",\n    \"test:production-diagnostics\": \"@php tools/test/objecting_production_diagnostic_check.php\",\n    \"test:package-surface\": \"@php tools/test/objecting_package_surface_check.php\",\n    \"test:migration-readiness\": \"@php tools/test/objecting_backend_migration_readiness_check.php\",\n    \"test:quality\": [\n      \"@test:canon\",\n      \"@test:responsibility-boundary\",\n      \"@test:semantic-manifest\",\n      \"@test:lifecycle-identity-canon\",\n      \"@test:production-diagnostics\",\n      \"@test:internal-types\",\n      \"@test:layer-suffix\",\n      \"@test:package-surface\",\n      \"@test:platform-constraints\",\n      \"@test:systemic-field-packs\",\n      \"@test:entity-kind-policy\",\n      \"@test:title-alias-hardening\",\n      \"@test:embeddable-initialization\",\n      \"@test:doctrine-mapping\",\n      \"@test:schema-mirror\",\n      \"@test:exposing-bridge\",\n      \"@test:backend-import\",\n      \"@test:backend-clone-cleanup\",\n      \"@test:backend-migration-command\",\n      \"@test:release-readiness\",\n      \"@test:rc-stabilization\",\n      \"@test:rc\",\n      \"@test:sibling-pilot-migration-handoff\",\n      \"@test:migration-transition-freeze\",\n      \"@test:release-closure\",\n      \"@test:migration-readiness\",\n      \"@test:backend-adoption\",\n      \"@test:backend-handoff\",\n      \"@test:backend-adoption-packet\"\n    ],\n    \"phpstan\": \"phpstan analyse src tests tools --memory-limit=1G\",\n    \"test\": \"phpunit --testdox\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"test:backend-adoption\": \"@php tools/test/objecting_backend_adoption_manifest_check.php\",\n    \"test:backend-handoff\": \"@php tools/test/objecting_backend_handoff_contract_check.php\",\n    \"test:release-readiness\": \"@php tools/test/objecting_release_readiness_check.php\",\n    \"test:release-closure\": \"@php tools/test/objecting_release_closure_check.php\",\n    \"test:backend-adoption-packet\": \"@php tools/test/objecting_backend_adoption_packet_check.php\",\n    \"test:embeddable-initialization\": \"@php tools/test/objecting_embeddable_initialization_check.php\",\n    \"test:doctrine-mapping\": \"@php tools/test/objecting_doctrine_mapping_contract_check.php\",\n    \"test:schema-mirror\": \"@php tools/test/objecting_schema_mirror_contract_check.php\",\n    \"test:exposing-bridge\": \"@php tools/test/objecting_exposing_bridge_contract_check.php\",\n    \"test:backend-import\": \"@php tools/test/objecting_backend_import_contract_check.php\",\n    \"test:rc-stabilization\": \"@php tools/test/objecting_rc_stabilization_check.php\",\n    \"test:rc\": \"@php tools/test/objecting_rc2_check.php\",\n    \"test:rc1\": \"@php tools/test/objecting_rc1_check.php\",\n    \"test:platform-constraints\": \"@php tools/test/objecting_platform_constraint_check.php\","
+    }
+  }
+}

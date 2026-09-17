@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "cruding",
+  "title": "Cruding",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "cruding",
+    "component_title": "Cruding",
+    "github_repository": "smartresponsor/cruding",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/cruding/report/index.adoc",
+    "notes": "Canonical CRUD infrastructure component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Cruding",
+    "timestamp_utc": "2026-09-17T17:19:50.824132+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "cruding-rc-journal-close-v2"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "d43603fa05e6d603e26a820da5f14528891ee7b7"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M  composer.json\nM  tools/cruding/interfacing-provider-rendering-guard.php\nD  tools/smoke/cruding-dto-suffix-smoke.php\nD  tools/smoke/cruding-service-role-suffix-smoke.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "d43603f test(cruding): deepen page provider coverage\nd9ef454 test(cruding): raise contract method coverage\nfe76c79 test(cruding): deepen method coverage\neb440a9 test(cruding): close branch coverage target\n46cfe44 docs(cruding): close RC integration journal"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/powershell-script-run/\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/crud_reserved_token.yaml\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nCONTRIBUTING.md\ncruding-my-actor-scope-tokenized-resolver-report-20260610.adoc\ndocs/\ndocs/cruding/\nLICENSE.md\nMANIFEST.json\nphpstan.neon\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\npsalm.xml\npublic/\npublic/interfacing/\nREADME.adoc\nREADME.md\nrector.neon\nSECURITY.md\nsrc/\nsrc/Builder/\nsrc/Command/\nsrc/Contract/\nsrc/Controller/\nsrc/CrudingBundle.php\nsrc/DependencyInjection/\nsrc/DTO/\nsrc/EventSubscriber/\nsrc/Exception/\nsrc/Factory/\nsrc/Guard/\nsrc/Handler/\nsrc/Invoker/\nsrc/Normalizer/\nsrc/Parser/\nsrc/Policy/\nsrc/Provider/\nsrc/Resolver/\nsrc/Responder/\nsrc/Runner/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/ValueObject/\ntemplates/\ntests/\ntests/bootstrap.php\ntests/Fixture/\ntests/Unit/\ntool/\ntool/apply-dto-canon-hardening.ps1\ntool/apply-phpdoc-hardening.ps1\ntool/audit-canon-role-moves.ps1\ntool/audit-product-hardening.ps1\ntool/cmcp-tree-delta.ps1\ntool/fix-canon-role-path-references.ps1\ntool/fix-dispatcher-interface-mirror.ps1\ntool/fix-dto-namespace.ps1\ntool/fix-psr4-namespaces.ps1\ntool/migrate-canon-role-tree.ps1\ntool/migrate-config-yaml-prefix.ps1\ntool/phpstan-report.ps1\ntool/reinstall-composer-vendor.ps1\ntool/run-composer-gates.ps1\ntool/run-rc-gates.ps1\ntools/\ntools/cruding/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "321"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"cruding/crud\",\n  \"description\": \"Universal CRUD route processor bundle for Symfony host applications.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/orm\": \"^3.0\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Cruding\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Cruding\\\\Tests\\\\\": \"tests/\",\n      \"App\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"extra\": {\n    \"symfony\": {\n      \"bundle\": \"App\\\\Cruding\\\\CrudingBundle\"\n    }\n  },\n  \"config\": {\n    \"sort-packages\": true\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"phpstan/phpstan\": \"^2.0\",\n    \"symfony/dotenv\": \"^8.1\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"cs:check\": \"@php vendor/bin/php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"@php vendor/bin/php-cs-fixer fix\",\n    \"phpstan\": \"@php vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"canon:cruding\": [\n      \"php tools/cruding/interfacing-provider-rendering-guard.php\"\n    ],\n    \"smoke:cruding\": [\n      \"@php tools/smoke/cruding-catch-all-resource-boundary-smoke.php\",\n      \"@php tools/smoke/cruding-composer-autoload-dev-psr4-smoke.php\",\n      \"@php tools/smoke/cruding-config-declarative-only-smoke.php\",\n      \"@php tools/smoke/cruding-config-driven-operation-token-router-smoke.php\",\n      \"@php tools/smoke/cruding-direct-entity-fqcn-canon-smoke.php\",\n      \"@php tools/smoke/cruding-phpdoc-coverage-smoke.php\",\n      \"@php tools/smoke/cruding-service-layout-smoke.php\",\n      \"@php tools/smoke/cruding-entrypoint-contract-finalization-smoke.php\",\n      \"@php tools/smoke/cruding-entrypoint-migration-contract-smoke.php\",\n      \"@php tools/smoke/cruding-entrypoint-operation-method-parity-smoke.php\",\n      \"@php tools/smoke/cruding-entrypoint-readonly-inheritance-smoke.php\",\n      \"@php tools/smoke/cruding-entrypoint-safe-hook-invocation-smoke.php\",\n      \"@php tools/smoke/cruding-entrypoint-trace-diagnostics-smoke.php\",\n      \"@php tools/smoke/cruding-create-lifecycle-smoke.php\",\n      \"@php tools/smoke/cruding-index-operation-grammar-smoke.php\",\n      \"@php tools/smoke/cruding-legacy-invokable-entrypoint-bridge-smoke.php\",\n      \"@php tools/smoke/cruding-operation-token-route-coverage-smoke.php\",\n      \"@php tools/smoke/cruding-positional-operation-token-grammar-smoke.php\",\n      \"@php tools/smoke/cruding-reserved-identity-token-guard.php\",\n      \"@php tools/smoke/cruding-resource-path-operation-suffix-regex-smoke.php\",\n      \"@php tools/smoke/cruding-route-parameter-fallback-smoke.php\",\n      \"@php tools/smoke/cruding-single-route-runtime-smoke.php\",\n      \"@php tools/smoke/cruding-tokenized-before-legacy-resource-route-order-smoke.php\",\n      \"@php t"
+    }
+  }
+}

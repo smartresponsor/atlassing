@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "taxating",
+  "title": "Taxating",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "taxating",
+    "component_title": "Taxating",
+    "github_repository": "smartresponsor/taxating",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/taxating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Taxating",
+    "timestamp_utc": "2026-09-17T17:17:37.966670+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc1/taxating-green-delivery"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "8d73e38804fef366f7f6c0840777772824b02cc8"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M  tools/ci/canonical-structure-check.php\nD  tools/ci/mirror-enforcer.php\nM  tools/ci/run-taxating-local-pipeline.ps1\nM  tools/ci/run-taxating-local-pipeline.sh"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "8d73e388 docs: record Taxating RC closure\n8a34d697 chore: enforce Canon037 generated reference policy\n5921218e style: finish Taxating formatter baseline\n5e0cac43 chore: align Taxating validation tooling\n0ce475ab test: materialize Taxating RC contracts"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/.gitattributes\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/health.sh\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.env\n.env.dist\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.githooks/\n.githooks/pre-commit\n.github/\n.github/workflows/\n.gitignore\n.gitlab-ci.yml\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nazure-pipelines.yml\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/app.php\nconfig/bundle/\nconfig/bundles.php\nconfig/jwks/\nconfig/packages/\nconfig/prometheus/\nconfig/reference.php\nconfig/routes/\nconfig/runtime.php\nconfig/schema/\nconfig/security_tax.yaml\nconfig/serializer/\nconfig/services.yaml\nconfig/services_doctrine_repositories.yaml\nconfig/services_taxation.yaml\nconfig/services_taxation_cache.yaml\nconfig/services_taxation_extras.yaml\nconfig/slo.json\nconfig/slo.yaml\nconfig/source/\nconfig/taxation/\ndeploy/\ndeploy/compose/\ndeploy/docker/\ndeploy/helm/\ndeploy/observability/\ndeploy/openapi/\ndeploy/README.adoc\ndeploy/terraform/\ndocs/\ndocs/ADAPTIVE_ROUTER.md\ndocs/ADMIN_UI_SPEC.md\ndocs/ADR_0001_taxation_component.md\ndocs/ANCHORING.md\ndocs/API_EXAMPLES.md\ndocs/ARCHIVE_STORAGE.md\ndocs/AUDIT.md\ndocs/AUDIT_API.md\ndocs/AUDIT_APPEND.md\ndocs/AUDIT_EXPLAIN.md\ndocs/BASKET_RULES.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "2185"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"taxating/taxation\",\n  \"description\": \"Standalone Symfony runtime harness and component package for Smart Responsor Taxating/Taxation workflows.\",\n  \"type\": \"library\",\n  \"license\": \"proprietary\",\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Taxating\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"Tests\\\\\": \"tests/\"\n    }\n  },\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"promphp/prometheus_client_php\": \"^2.10\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"ext-yaml\": \"*\",\n    \"ext-curl\": \"*\",\n    \"ext-zip\": \"*\",\n    \"ext-openssl\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"ext-redis\": \"*\",\n    \"ext-simplexml\": \"*\",\n    \"google/apiclient\": \"^2.19\",\n    \"nelmio/api-doc-bundle\": \"^5.10\",\n    \"symfony/asset\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"objecting/object\": \"*@dev\",\n    \"cruding/crud\": \"*@dev\",\n    \"collectioning/collection\": \"*@dev\",\n    \"tabling/table\": \"*@dev\",\n    \"viewing/view\": \"*@dev\",\n    \"interfacing/interface\": \"*@dev\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"doctrine/doctrine-migrations-bundle\": \"4.0\",\n    \"symfony/validator\": \"8.1\"\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^10.0\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"fakerphp/faker\": \"*\",\n    \"doctrine/data-fixtures\": \"*\"\n  },\n  \"scripts\": {\n    \"test\": \"vendor/bin/phpunit --configuration phpunit.xml.dist --colors=always\",\n    \"phpstan\": \"phpstan analyse --configuration=phpstan.neon --no-progress\",\n    \"phpstan:max\": \"phpstan analyse --configuration=phpstan.neon --level=max --no-progress\",\n    \"fix\": \"php -d memory_limit=1G vendor/bin/php-cs-fixer fix\",\n    \"fix:check\": \"php -d memory_limit=1G vendor/bin/php-cs-fixer fix --dry-run --diff\"\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true\n      }\n    }\n  ]\n}\n",
+      "package.json": "{\n  \"name\": \"taxating-e2e\",\n  \"private\": true,\n  \"version\": \"0.1.0-rc.1\",\n  \"scripts\": {\n    \"test:e2e\": \"playwright test\",\n    \"test:e2e:headed\": \"playwright test --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\",\n    \"typescript\": \"^5.9.2\"\n  }\n}\n"
+    }
+  }
+}

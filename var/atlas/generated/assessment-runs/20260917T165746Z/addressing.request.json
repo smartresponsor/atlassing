@@ -1,0 +1,6 @@
+{
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "addressing",
+  "workspace": "D:\\PhpstormProjects\\www\\Addressing",
+  "prompt_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\addressing.prompt.txt"
+}

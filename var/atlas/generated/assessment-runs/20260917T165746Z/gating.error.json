@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "gating",
+  "title": "Gating",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId\u001b[0m",
+  "registry_entry": {
+    "component_id": "gating",
+    "component_title": "Gating",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/gating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Gating",
+    "timestamp_utc": "2026-09-17T17:14:29.445454+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "cruding-profile-scope-fix-v2"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "a71a2189bddfefad1b69a9e067be0299c52b080c"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'a71a2189bddfefad1b69a9e067be0299c52b080c'"
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "a71a218 gate: enforce development Composer policy\nebdb9d2 fix(canon): calibrate documentation and UI evidence gates\n2115001 feat(canon): enforce Objecting system field naming\n7b0d91c feat(gate): validate canon evidence contracts\nc0a7740 wip(gate): checkpoint Canon043 dependency version rule"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".canonization/\n.canonization/Federation/\n.canonization/Governance/\n.canonization/Orchestration/\n.commanding/\n.commanding/.gitattributes\n.commanding/.gitignore\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/git_diff.sh\n.commanding/git_status.sh\n.commanding/git_sync.sh\n.commanding/health.sh\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/log/\n.commanding/logs/\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.gating/\n.gating/.gitignore\n.gating/bin/\n.gating/composer.json\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/evidence/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/policy/\n.gating/profile/\n.gating/quality/\n.gating/README.md\n.gating/report/\n.gating/run.ps1\n.gating/run.sh\n.gating/schema/\n.gating/src/\n.gating/tool/\n.gating/var/\n.gating/VERSION\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Gating.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/shelf/\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.dist.php\nAGENTS.md\nbin/\nbin/.check-carting.ps1\nbin/gating\ncomposer.json\ncomposer.lock\ncontract/\ncontract/contract-canon.json\ncontract/contract-consumer.json\ncontract/contract.json\ncontract/fix.ps1\ncontract/fix.sh\ncontract/ps1/\ncontract/README.md\ncontract/sh/\ndocs/\ndocs/canon-rule-contract.md\ngate.ps1\ngate.sh\nlinting/\nlinting/js/\nlinting/ps1/\nlinting/sh/\nMANIFEST.json\nMIGRATION.gating.md\nphpunit.xml.dist\npolicy/\npolicy/acceptable/\nquality/\nquality/MANIFEST.json\nquality/php/\nquality/ps1/\nquality/README.md\nquality/sh/\nREADME.md\nrun.ps1\nrun.sh\nsrc/\nsrc/Command/\nsrc/Console/\nsrc/Contract/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "338"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"gating/gate\",\n  \"type\": \"library\",\n  \"description\": \"Smart Responsor Symfony-oriented executable ecosystem gate.\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/finder\": \"^8.1\",\n    \"symfony/filesystem\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95.4\",\n    \"phpstan/phpstan\": \"^2.2.2\",\n    \"phpunit/phpunit\": \"^13.3.3\",\n    \"rector/rector\": \"^2.4.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"Gating\\\\Gate\\\\\": \"src/\"\n    }\n  },\n  \"bin\": [\n    \"bin/gating\"\n  ],\n  \"scripts\": {\n    \"gate\": \"@php bin/gating check --target=.\",\n    \"scan\": \"@php bin/gating scan --target=.\",\n    \"test\": \"@php tests/calibration.php\",\n    \"test:unit\": \"phpunit tests/Unit\",\n    \"test:coverage\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --branch-coverage --coverage-text=var/coverage/summary.txt\",\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"phpstan\": \"phpstan analyse -c .gating/quality/owner/php/phpstan.neon\",\n    \"rector:check\": \"rector process --dry-run --config .gating/quality/owner/php/rector.php\",\n    \"rector:fix\": \"rector process --config .gating/quality/owner/php/rector.php\",\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@rector:check\",\n      \"@test\",\n      \"@gate\"\n    ]\n  }\n}\n"
+    }
+  }
+}

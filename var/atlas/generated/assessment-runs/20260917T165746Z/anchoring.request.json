@@ -1,0 +1,6 @@
+{
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "anchoring",
+  "workspace": "D:\\PhpstormProjects\\www\\Anchoring",
+  "prompt_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\anchoring.prompt.txt"
+}

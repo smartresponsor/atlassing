@@ -1,0 +1,6 @@
+{
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "boundarying",
+  "workspace": "D:\\PhpstormProjects\\www\\Boundarying",
+  "prompt_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\boundarying.prompt.txt"
+}

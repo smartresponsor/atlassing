@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "atlassing",
+  "title": "Atlassing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "atlassing",
+    "component_title": "Atlassing",
+    "github_repository": "smartresponsor/atlassing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/atlassing/report/index.adoc",
+    "notes": "Active Quality Atlas implementation repository; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Atlassing",
+    "timestamp_utc": "2026-09-17T17:18:16.127982+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "fix/atlas-scoring-runtime"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "25259a73bcc2ff516397d36f0aadab34fd261719"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M var/atlas/component/accessing/current.yaml\n M var/atlas/component/accessing/probes/current.yaml\n M var/atlas/component/addressing/current.yaml\n M var/atlas/component/addressing/probes/current.yaml\n M var/atlas/component/analysing/current.yaml\n M var/atlas/component/analysing/probes/current.yaml\n M var/atlas/component/anchoring/current.yaml\n M var/atlas/component/anchoring/probes/current.yaml\n M var/atlas/component/automating/current.yaml\n M var/atlas/component/automating/probes/current.yaml\n M var/atlas/component/billing/current.yaml\n M var/atlas/component/billing/probes/current.yaml\n M var/atlas/component/boundarying/current.yaml\n M var/atlas/component/boundarying/probes/current.yaml\n M var/atlas/generated/chatgpt-cli/accessing.prompt.txt\n M var/atlas/generated/chatgpt-cli/addressing.prompt.txt\n M var/atlas/generated/chatgpt-cli/analysing.prompt.txt\n M var/atlas/generated/chatgpt-cli/applicating.prompt.txt\n M var/atlas/generated/chatgpt-cli/attaching.prompt.txt\n M var/atlas/generated/chatgpt-cli/billing.prompt.txt\n M var/atlas/generated/chatgpt-cli/cataloging.prompt.txt\n M var/atlas/generated/chatgpt-cli/discovering.prompt.txt\n M var/atlas/generated/chatgpt-cli/documentating.prompt.txt\n M var/atlas/generated/chatgpt-cli/indexing.prompt.txt\n M var/atlas/generated/chatgpt-cli/locating.prompt.txt\n M var/atlas/generated/chatgpt-cli/messaging.prompt.txt\n M var/atlas/generated/chatgpt-cli/ordering.prompt.txt\n M var/atlas/generated/chatgpt-cli/paying.prompt.txt\n M var/atlas/generated/chatgpt-cli/projecting.prompt.txt\n M var/atlas/generated/chatgpt-cli/retailing.prompt.txt\n M var/atlas/generated/chatgpt-cli/rolling.prompt.txt\n M var/atlas/generated/chatgpt-cli/shipping.prompt.txt\n M var/atlas/generated/chatgpt-cli/tagging.prompt.txt\n M var/atlas/generated/chatgpt-cli/taxating.prompt.txt\n M var/atlas/generated/chatgpt-cli/vendoring.prompt.txt\n M var/atlas/generated/selection-plan.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "25259a7 fix: complete scheduled Atlas publish guards\nb7360a7 fix: harden scheduled Atlas publish logging\n74185c9 fix: stabilize Atlas ChatGPT scoring runtime\n6953069 test: add one-shot Accessing smoke helper\nd95eb25 chore(atlas): refresh local assessment snapshots 2026-09-17 04:33"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/powershell-script-run/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\nAGENTS.md\nATLAS_ENGINE_EXPORT_MANIFEST.json\nATLAS_REPOSITORY_MANIFEST.json\nATLAS_W01_ENGINE_CUMULATIVE_MANIFEST.json\nATLAS_W02_ENGINE_SHELL_MANIFEST.json\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/atlas_gating_profile.yaml\nconfig/atlas_gating_rules.yaml\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\ndelivery/\ndelivery/jira/\ndocs/\ndocs/architecture/\ndocs/import/\ndocs/migration/\ndocs/operations/\ndocs/runtime/\nimport/\nimport/documentating-export/\nMANIFEST.json\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage-lock.json\npackage.json\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.js\nREADME.md\nsrc/\nsrc/AtlassingBundle.php\nsrc/Command/\nsrc/DependencyInjection/\nsrc/Entity/\nsrc/Enum/\nsrc/Kernel.php\nsrc/Resources/\nsrc/Service/\nsrc/ServiceInterface/\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/Command/\ntests/Entity/\ntests/Service/\ntool/\ntool/atlas-console-mcp-score-cli.ps1\ntool/atlas-console-mcp-score-preflight.ps1\ntool/atlas-console-mcp-score.mjs\ntool/atlas-console-mcp-score.ps1\ntool/atlas-local-scheduled.ps1\ntool/install-atlas-scheduled-task.ps1\ntool/run-accessing-smoke-once.ps1\ntools/\ntools/atlas/\nvar/\nvar/.php-cs-fixer.cache\nvar/atlas/\nvar/cache/\nvar/coverage/\nvar/log/\nvar/phpstan/\nvar/phpunit/\nvar/restore-readiness-selection-plan.ps1"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "981"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"atlassing/atlas\",\n  \"description\": \"Smart Responsor Atlas component for quality, maturity, readiness, and documentation coverage surfaces.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": { \"symlink\": true, \"versions\": { \"collectioning/collection\": \"dev-master\" } }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": { \"symlink\": true, \"versions\": { \"tabling/table\": \"dev-master\" } }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": { \"symlink\": true, \"versions\": { \"cruding/crud\": \"dev-master\" } }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": { \"symlink\": true, \"versions\": { \"gating/gate\": \"dev-master\" } }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": { \"symlink\": true, \"versions\": { \"interfacing/interface\": \"dev-master\" } }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": { \"symlink\": true, \"versions\": { \"objecting/object\": \"dev-master\" } }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": { \"symlink\": true, \"versions\": { \"viewing/view\": \"dev-master\" } }\n    }\n  ],\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/orm\": \"^3.4\",\n    \"symfony/process\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"test:functional\": \"phpunit --testsuite functional\",\n    \"test:browser\": \"phpunit --testsuite browser\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"gating:check\": \"php vendor/bin/gating check --target=. --profile=config/atlas_gating_profile.yaml --rule-set=config/atlas_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml\",\n    \"phpstan\": \"phpstan analyse --memory-limit=1G\",\n    \"test\": \"phpunit\",\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\"\n    ]\n  },\n  \"config\": {\n    \"sort-packages\": true\n  },\n  \"extra\": {\n    \"smart_responsor\": {\n      \"component\": \"atlassing\",\n      \"package\": \"atlassing/atlas\",\n      \"business_prefix\": \"Atlas\",\n      \"database_prefix\": \"atlas_\",\n      \"surface_owner_root\": \"atlassing\"\n    }\n  }\n}\n",
+      "package.json": "{\n  \"name\": \"atlassing-atlas-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test --pass-with-no-tests\",\n    \"test:ui\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\"\n  }\n}\n\n"
+    }
+  }
+}
