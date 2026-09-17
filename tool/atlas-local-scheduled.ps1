@@ -160,7 +160,7 @@ try {
     }
     $upstreamParts = $upstream -split '/', 2
     if ($upstreamParts.Count -ne 2 -or $upstreamParts[0] -ne 'origin') {
-        Add-Content -Path $logPath -Value "$(Get-Date -Format o) git push skipped: unsupported upstream=$upstream"
+        Add-Content -Path $logFile -Value "$(Get-Date -Format o) git push skipped: unsupported upstream=$upstream"
         exit 43
     }
     & git push origin "HEAD:$($upstreamParts[1])"
