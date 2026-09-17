@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "managing",
+  "title": "Managing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mWrite-AcceptanceArtifact: \u001b[0mD:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-task-bank-loop.ps1:952\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 952 | \u001b[0m … cceptance = \u001b[36;1mWrite-AcceptanceArtifact -Task $Task -Chat $Chat -Answers\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mThe property 'readyToDelete' cannot be found on this object. Verify that the property exists.\u001b[0m",
+  "registry_entry": {
+    "component_id": "managing",
+    "component_title": "Managing",
+    "github_repository": "smartresponsor/managing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/managing/report/index.adoc",
+    "notes": "Active mature component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Managing",
+    "timestamp_utc": "2026-09-17T09:32:05.498299+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "checkpoint/managing-admin-crud-20260821"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "703c3e0a68ff417ccb500e207d7fca004d3966d3"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '703c3e0a68ff417ccb500e207d7fca004d3966d3'"
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M src/Controller/Crud/Generated/AttachingCrudController.php\n M src/Controller/Crud/Generated/CatalogingCrudController.php\n M src/Controller/Crud/Generated/OrderingCrudController.php\n M src/Controller/Crud/Generated/PagingCrudController.php\n M src/Controller/Crud/Generated/PayingCrudController.php\n M src/Controller/Crud/Generated/ShippingCrudController.php\n M src/Controller/Crud/Generated/WalletingCrudController.php\n?? .gating/\n?? src/Controller/Crud/Generated/CurrencingCrudController.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "703c3e0 fix: harden Managing RC boundaries and quality gates\n230f0d6 Format generated admin controllers\neef3348 Expand generated admin CRUD surface\n97eaedd Ignore generated code memory artifacts\n025cd23 Document Managing component responsibilities"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\nAGENTS.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/packages/\nconfig/routes/\nconfig/services.yaml\ndelivery/\ndelivery/patches/\ndelivery/rc/\ndocs/\ndocs/component/\ndocs/examples/\ndocs/manage-content-crud.adoc\ndocs/manage-field-access-visibility-readiness.adoc\ndocs/manage-field-external-rolling-access.adoc\ndocs/manage-field-view-profile-host-activation.adoc\ndocs/manage-field-view-profile-storage.adoc\ndocs/manage-field-visibility-explainability.adoc\ndocs/manage-field-visibility-inspection.adoc\ndocs/manage-final-service-layer-cleanup.adoc\npackage-lock.json\nphpstan.neon\nphpunit.xml.dist\npsalm.xml\nREADME.adoc\nREADME.md\nrector.neon\nsrc/\nsrc/Accessor/\nsrc/Builder/\nsrc/BuilderInterface/\nsrc/Cache/\nsrc/Command/\nsrc/Configurator/\nsrc/Controller/\nsrc/DependencyInjection/\nsrc/Discovery/\nsrc/Entity/\nsrc/Extractor/\nsrc/Factory/\nsrc/FactoryInterface/\nsrc/Filter/\nsrc/FilterInterface/\nsrc/Formatter/\nsrc/Generator/\nsrc/Handler/\nsrc/HandlerInterface/\nsrc/Inspector/\nsrc/InspectorInterface/\nsrc/Instantiator/\nsrc/Labeler/\nsrc/ManagingBundle.php\nsrc/Normalizer/\nsrc/Policy/\nsrc/Provider/\nsrc/ProviderInterface/\nsrc/Reader/\nsrc/ReaderInterface/\nsrc/Registry/\nsrc/RegistryInterface/\nsrc/Renderer/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Resolver/\nsrc/ResolverInterface/\nsrc/Scorer/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Stringifier/\nsrc/Trait/\nsrc/Validator/\nsrc/ValidatorInterface/\nsrc/Value/\nsrc/Workflow/\nsrc/Writer/\nsrc/WriterInterface/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "674"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"managing/manage\",\n  \"description\": \"Managing process app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.5.1\",\n    \"cruding/crud\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/ux-live-component\": \"^3.1\",\n    \"symfony/ux-turbo\": \"^3.0\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/html-extra\": \"^3.24\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.65\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Managing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Managing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"repositories\": [\n    {\"type\": \"path\", \"url\": \"../Administering\", \"options\": {\"symlink\": true}},\n    {\"type\": \"path\", \"url\": \"../Cruding\", \"options\": {\"symlink\": true}},\n    {\"type\": \"path\", \"url\": \"../Collectioning\", \"options\": {\"symlink\": true}},\n    {\"type\": \"path\", \"url\": \"../Tabling\", \"options\": {\"symlink\": true}},\n    {\"type\": \"path\", \"url\": \"../Interfacing\", \"options\": {\"symlink\": true}},\n    {\"type\": \"path\", \"url\": \"../Objecting\", \"options\": {\"symlink\": true}},\n    {\"type\": \"path\", \"url\": \"../Viewing\", \"options\": {\"symlink\": true}}\n  ],\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"test:coverage\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage-summary.txt\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"cs:check\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php --verbose\",\n    \"quality\": [\"@cs:check\", \"@phpstan\", \"@test\"]\n  },\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  }\n}\n"
+    }
+  }
+}
