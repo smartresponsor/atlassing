@@ -155,7 +155,7 @@ try {
 
     $upstream = (& git rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>$null).Trim()
     if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($upstream)) {
-        Add-Content -Path $logPath -Value "$(Get-Date -Format o) git push skipped: current branch has no upstream"
+        Add-Content -Path $logFile -Value "$(Get-Date -Format o) git push skipped: current branch has no upstream"
         exit 43
     }
     $upstreamParts = $upstream -split '/', 2
