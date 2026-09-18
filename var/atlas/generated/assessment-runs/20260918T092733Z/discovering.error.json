@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "discovering",
+  "title": "Discovering",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId,target_repo_not_clean\u001b[0m",
+  "registry_entry": {
+    "component_id": "discovering",
+    "component_title": "Discovering",
+    "github_repository": "smartresponsor/discovering",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Discovering",
+    "timestamp_utc": "2026-09-18T09:28:52.020946+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "ef3068a4314e54dc58abe8b859d17f08db151973"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/.commanding/.gitignore\n?? .gating/.commanding/log/\n?? .gating/.commanding/logs/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "ef3068a RC: canonicalize Discovering and close runtime acceptance (#5)\nf95b411 fix\nf564434 ets\n3a9758a ets\n51f8b50 ets"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".console-mcp/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8123.json\n.console-mcp/local-php-server-log/\n.env\n.env.example\n.env.test\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/MANIFEST.md\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services/\nconfig/services.yaml\nconfig/services_test.yaml\ndocs/\ndocs/antora.yml\ndocs/component/\ndocs/discovery/\ndocs/generated/\ndocs/MANIFEST.md\ndocs/manifests/\ndocs/modules/\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage-lock.json\npackage.json\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.ts\npublic/\npublic/index.php\nREADME.md\nreport/\nreport/.gitkeep\nreport/discovering-installability-proof-2026-04-03.md\nreport/discovering-status-2026-04-03.md\nreport/legacy/\nresources/\nresources/discovery/\nsrc/\nsrc/Command/\nsrc/Controller/\nsrc/Dto/\nsrc/Entity/\nsrc/EventSubscriber/\nsrc/Form/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/MANIFEST.md\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Subscriber/\nsrc/ValueObject/\ntemplates/\ntemplates/base.html.twig\ntemplates/discovery/\ntemplates/index.html.twig\ntemplates/management/\ntemplates/MANIFEST.md\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/Behavioral/\ntests/bootstrap.php\ntests/Contract/\ntests/Functional/\ntests/MANIFEST.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "822"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"discovering/discovery\",\n  \"description\": \"Discovering process app\",\n  \"type\": \"project\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"ext-pdo_sqlite\": \"*\",\n    \"php\": \">=8.4\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.0\",\n    \"doctrine/orm\": \"^3.6\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/security-bundle\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/dom-crawler\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"nelmio/api-doc-bundle\": \"^5.6\",\n    \"phpstan/phpstan\": \"^2.1\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"lint:php\": \"php tools/lint_php.php\",\n    \"validate:composer\": \"composer validate --strict\",\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"verify:runtime-preflight\": \"php tools/runtime_preflight.php\",\n    \"verify:console\": \"php bin/console list --raw\",\n    \"test:unit\": \"phpunit --testsuite Unit\",\n    \"test:object-identity\": \"phpunit tests/Unit/Discovery/DiscoveringObjectIdentityContractTest.php\",\n    \"test:functional\": \"phpunit --testsuite Functional\",\n    \"test:contract\": \"phpunit --testsuite Contract\",\n    \"test:behavioral\": \"phpunit --testsuite Behavioral\",\n    \"test:all\": [\n      \"@test:unit\",\n      \"@test:contract\",\n      \"@test:behavioral\",\n      \"@test:functional\"\n    ],\n    \"ci\": [\n      \"@ci:local\",\n      \"@ci:runtime\",\n      \"@ci:quality\"\n    ],\n    \"analyse\": \"php tools/qa_guard.php analyse\",\n    \"lint:cs\": \"php tools/qa_guard.php lint:cs\",\n    \"lint:cs:fix\": \"php tools/qa_guard.php lint:cs:fix\",\n    \"verify:docblocks\": \"php tools/docblock_policy_check.php\",\n    \"verify:security\": \"php tools/security_preflight.php\",\n    \"docs:openapi:dump:public\": \"php tools/qa_guard.php docs:openapi:dump:public\",\n    \"docs:openapi:dump:management\": \"php tools/qa_guard.php docs:openapi:dump:management\",\n    \"verify:runtime-extensions\": \"php tools/runtime_preflight.php --check-runtime-extensions\",\n    \"verify:composer-runtime\": \"php tools/runtime_preflight.php --require-composer\",\n    \"verify:vendor-runtime\": \"php tools/runtime_preflight.php --require-vendor\",\n    \"verify:test-runtime\": \"php tools/runtime_preflight.php --test-runtime\",\n    \"ci:local\": [\n      \"@validate:composer\",\n      \"@verify:runtime-preflight\",\n      \"@verify:security\",\n      \"@verify:docblocks\",\n      \"@lint:php\"\n    ],\n    \"ci:runtime\": [\n      \"@verify:composer-runtime\",\n      \"@verify:vendor-runtime\",\n      \"@verify:runtime-extensions\",\n      \"@verify:test-runtime\",\n      \"@verify:console\",\n      \"@test:all\"\n    ],\n    \"ci:quality\": [\n      \"@analyse\",\n      \"@lint:cs\"\n    ],\n    \"ci:local:direct\": \"php tools/local_ci.php\",\n    \"verify:structural-closure\": \"php tools/structural_closure_evidence.php\",\n    \"verify:runtime-dependency-evidence\": \"php tools/runtime_dependency_evidence.php\",\n    \"verify:console-container-evidence\": \"php tools/console_container_evidence.php\",\n    \"verify:evidence-index\": \"php tools/evidence_index.php\",\n    \"verify:evidence-summary\": \"php tools/evidence_summary.php\",\n    \"verify:evidence-bundle\": \"php tools/evidence_bundle.php\",\n    \"evidence:cleanup\": \"php tools/evidence_artifact_cleanup.php\",\n    \"evide",
+      "package.json": "{\n  \"name\": \"@discovering/browser-tests\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"test:ui:headed\": \"playwright test --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.53.0\"\n  }\n}\n"
+    }
+  }
+}

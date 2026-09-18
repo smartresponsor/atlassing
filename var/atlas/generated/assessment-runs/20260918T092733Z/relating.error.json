@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "relating",
+  "title": "Relating",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId\u001b[0m",
+  "registry_entry": {
+    "component_id": "relating",
+    "component_title": "Relating",
+    "github_repository": "smartresponsor/relating",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/relating/report/index.adoc",
+    "notes": "Mature CRM and qualification component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Relating",
+    "timestamp_utc": "2026-09-18T09:32:47.162331+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/relating-canonical-hardening"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "e7dc38d16cba6848f7d8321e8aa74b8913100a5d"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": false,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "e7dc38d Harden Relating for RC and canonical Symfony layout\ne93c50b Wire vendor lead read service explicitly\nf8483b6 Limit Relating bundle to ready runtime slice\n3fe50eb Canonicalize Relating package name\nb35ca83 Expose vendor lead read runtime wiring"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitignore\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/relating.yaml.dist\nconfig/relating_wiring.yaml.dist\nconfig/routes/\nconfig/routes.yaml\nconfig/services/\nconfig/services.yaml\ndocs/\ndocs/ai-review-trace.md\ndocs/ai-suggestion-lifecycle.md\ndocs/anti-pattern-rejection-catalog.md\ndocs/api-entity-leakage-boundary.md\ndocs/application-command-catalog.md\ndocs/application-event-dispatch-map.md\ndocs/application-service-roadmap.md\ndocs/application-service-skeleton.md\ndocs/archive-hash-verification.md\ndocs/async-business-processing.md\ndocs/audit-decision-trace-skeleton.md\ndocs/automation-security-guardrails.md\ndocs/automation-trigger-condition-action-catalog.md\ndocs/automation-workflow-matrix.md\ndocs/boundary-adr-001-relating-owns-relationship-not-crud.md\ndocs/boundary-adr-index.md\ndocs/boundary-map.md\ndocs/business-chain-catalog.md\ndocs/business-contract-naming-catalog.md\ndocs/business-lifecycle-demo-flow.md\ndocs/business-policy-catalog.md\ndocs/business-route-handler-skeleton.md\ndocs/business-route-request-contract.md\ndocs/business-route-surface.md\ndocs/canonical-object-matrix.md\ndocs/composer-autoload-notes.md\ndocs/config-boundary-checklist.md\ndocs/decision-trace-catalog.md\ndocs/demo-seed-readiness.md\ndocs/docs-entrypoint.md\ndocs/docs-link-integrity.md\ndocs/doctrine-mapping-readiness.md\ndocs/documentation-finalization-pack.md\ndocs/duplicate-concept-review.md\ndocs/entity-invariant-catalog.md\ndocs/entityfirst-correction-report.md\ndocs/entityfirst-open-issue-map.md\ndocs/event-message-catalog.md\ndocs/final-gap-review.md\ndocs/first-extraction-flow.md\ndocs/fixture-scenario-catalog.md\ndocs/host-app-integration-checklist.md\ndocs/implementation-milestone-map.md\ndocs/implementation-order.md\ndocs/implementation-roadmap-final.md\ndocs/inventory-discipline.md\ndocs/local-install-validation.md\ndocs/manifest-verification.md\ndocs/message-handler-map.md\ndocs/message-handler-skeleton.md\ndocs/messenger-message-roadmap.md\ndocs/messenger-routing-draft.md\ndocs/naming-cleanup-report.md\ndocs/neighbor-contract-catalog.md\ndocs/neighbor-integration-matrix.md\ndocs/neighbor-ownership-boundary.md\ndocs/neighbor-reference-contracts.md\ndocs/neighbor-signal-contracts.md\ndocs/no-bundle-magic-boundary.md\ndocs/object-catalog.md\ndocs/obsolete-term-scan.md\ndocs/open-source-vacuum-plan.md\ndocs/package-install-readiness.md\ndocs/payload-validation-contract.md\ndocs/policy-decision-trace.md\ndocs/preinstall-rc-checklist.md\ndocs/preinstall-rc-freeze.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "730"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"relating/relation\",\n  \"description\": \"SmartResponsor Relating CRM relationship lifecycle component.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": { \"symlink\": true }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": { \"symlink\": true }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": { \"symlink\": true }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": { \"symlink\": true }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": { \"symlink\": true }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": { \"symlink\": true }\n    }\n  ],\n  \"require\": {\n    \"php\": \">=8.4 <8.5\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/migrations\": \"^3.9\",\n    \"doctrine/orm\": \"^3.0\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"symfony/console\": \"8.1.*\",\n    \"symfony/framework-bundle\": \"8.1.*\",\n    \"symfony/runtime\": \"8.1.*\",\n    \"symfony/yaml\": \"8.1.*\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:fix\": \"php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n    \"doctrine:schema:validate\": \"php tools/validate-doctrine-parity.php\",\n    \"schema:parity\": \"php tools/validate-doctrine-parity.php\",\n    \"gating:check\": \"php ../Gating/bin/gating check --target=. --policy-root=../Gating/.gating --severity-config=../Gating/.gating/config/severity.yaml\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"test\": \"phpunit tests\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ]\n  },\n  \"extra\": {\n    \"symfony\": {\n      \"allow-contrib\": false,\n      \"require\": \"8.1.*\",\n      \"bundle\": \"App\\\\RelatingBundle\"\n    }\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  }\n}\n",
+      "package.json": "{\n  \"name\": \"relating-ui-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test --pass-with-no-tests\",\n    \"test:ui\": \"playwright test --pass-with-no-tests\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\"\n  }\n}\n"
+    }
+  }
+}

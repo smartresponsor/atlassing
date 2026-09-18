@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "paying",
+  "title": "Paying",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId\u001b[0m",
+  "registry_entry": {
+    "component_id": "paying",
+    "component_title": "Paying",
+    "github_repository": "smartresponsor/paying",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/paying/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Paying",
+    "timestamp_utc": "2026-09-18T09:31:06.465188+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "checkpoint/paying-release-audit-20260818"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "d435aef70bf4359fcdab042d9aef7c9e4cf7838c"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'd435aef70bf4359fcdab042d9aef7c9e4cf7838c'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "d435aef Close Paying generated artifact tracking\nc4a9f0b Harden Paying dependency contracts\n3128d98 Add Paying current schema baseline\n31ebd94 fix(paying): align Cruding provider imports\n6f4eeb2 chore: ignore local gating mirror"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codex-tmp/\n.codex-tmp/cache/\n.codex-tmp/payment.test.data.sqlite\n.codex-tmp/payment.test.infra.sqlite\n.codex-tmp/php8E8C.tmp\n.codex-tmp/phpstan/\n.codex-tmp/phpunit/\n.codex-tmp/symfony-lock/\n.editorconfig\n.env\n.env.example\n.env.test\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.idea/\n.idea/.gitignore\n.idea/codeception.xml\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/modules.xml\n.idea/Paying.iml\n.idea/Payment.iml\n.idea/php.xml\n.idea/phpspec.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.mcp.json\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.yamllint.yml\nbin/\nbin/cmcp-generate-current-baseline.ps1\nbin/console\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncompose.yml\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/schema/\nconfig/services/\nconfig/services.bundle.yaml\nconfig/services.yaml\ndelivery/\ndelivery/rc/\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/api/\ndocs/API.md\ndocs/architecture/\ndocs/ARCHITECTURE.md\ndocs/component/\ndocs/index.md\ndocs/INSTALL.md\ndocs/LIMITS.md\ndocs/modules/\ndocs/OPERATIONS.md\ndocs/postman/\ndocs/PROOF_PACK.md\ndocs/qa/\ndocs/release/\ndocs/sequence/\ndocs/site/\ndoctum.php\nMigrations/\nMigrations/baseline/\nMigrations/Version20251107Audit.php\nMigrations/Version20251107Circuit.php\nMigrations/Version20251107Data.php\nMigrations/Version20251107Idempotency.php\nMigrations/Version20251107Infra.php\nMigrations/Version20251107Outbox.php\nMigrations/Version20251108WebhookLog.php\nMigrations/Version20260401030000.php"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "678"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"paying/payment\",\n    \"description\": \"Symfony payment component for payment lifecycle, providers, webhooks, reconciliation, and operational payment workflows.\",\n    \"type\": \"library\",\n    \"license\": \"proprietary\",\n    \"minimum-stability\": \"dev\",\n    \"prefer-stable\": true,\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"cataloging/catalog\": \"dev-master\",\n        \"collectioning/collection\": \"dev-master\",\n        \"cruding/crud\": \"dev-master\",\n        \"doctrine/doctrine-bundle\": \"^3.0\",\n        \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n        \"doctrine/orm\": \"^3.4\",\n        \"easycorp/easyadmin-bundle\": \"^5.0\",\n        \"nelmio/api-doc-bundle\": \"^5.1\",\n        \"interfacing/interface\": \"dev-master\",\n        \"navigating/navigation\": \"dev-master\",\n        \"symfony/asset\": \"^8.1\",\n        \"symfony/config\": \"^8.1\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/dependency-injection\": \"^8.1\",\n        \"symfony/form\": \"^8.1\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/http-foundation\": \"^8.1\",\n        \"symfony/intl\": \"^8.1\",\n        \"symfony/messenger\": \"^8.1\",\n        \"symfony/monolog-bundle\": \"^4.0\",\n        \"symfony/rate-limiter\": \"^8.1\",\n        \"symfony/routing\": \"^8.1\",\n        \"symfony/runtime\": \"^8.1\",\n        \"symfony/security-bundle\": \"^8.1\",\n        \"symfony/serializer\": \"^8.1\",\n        \"symfony/twig-bundle\": \"^8.1\",\n        \"symfony/uid\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/workflow\": \"^8.1\",\n        \"symfony/yaml\": \"^8.1\",\n        \"ext-openssl\": \"*\",\n        \"ext-redis\": \"*\",\n        \"objecting/object\": \"dev-master\",\n        \"tabling/table\": \"dev-master\",\n        \"viewing/view\": \"dev-master\"\n    },\n    \"require-dev\": {\n        \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n        \"friendsofphp/php-cs-fixer\": \"3.95\",\n        \"phpstan/phpstan\": \"2.1\",\n        \"phpunit/phpunit\": \"^12.5\",\n        \"symfony/browser-kit\": \"^8.1\",\n        \"symfony/css-selector\": \"^8.1\",\n        \"symfony/dotenv\": \"^8.1\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Paying\\\\\": \"src/\"\n        }\n    },\n    \"config\": {\n        \"platform\": {\n            \"php\": \"8.4.13\"\n        },\n        \"sort-packages\": true,\n        \"process-timeout\": 900,\n        \"allow-plugins\": {\n            \"symfony/runtime\": true\n        }\n    },\n    \"scripts\": {\n        \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n        \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n        \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n        \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n        \"docs:docblock:check\": \"@docs:docblock:report\",\n        \"docs:docblock:report\": \"@php tools/php/php84.php tools/inspection/PaymentSemanticDocBlockReport.php\",\n        \"docs:doctum\": \"@php tools/php/php84.php tools/runtime/doctum.phar update doctum.php --force\",\n        \"docs:doctum:check\": \"@php tools/ci/doctum-check.php\",\n        \"docs:openapi:lint\": \"@php tools/php/php84.php tools/inspection/PaymentOpenApiLint.php\",\n        \"fixtures:payment:append\": \"@php tools/php/php84.php bin/console doctrine:fixtures:load --group=payment --append --no-interaction\",\n        \"fixtures:payment:dry-run:docker\": \"bash tools/runtime/payment_fixture_dry_run.sh\",\n        \"fixtures:payment:load\": \"@php tools/php/php84.php bin/console doctrine:fixtures:load --group=payment --no-interaction\",\n        \"install:preflight\": \"@php tools/ci/install-preflight.php\",\n        \"install:proof:checklist\": \"@php tools/php/php84.php tools/inspection/PaymentRuntimeProofReport.php\",\n        \"lint\": \"@php tools/php/php84.php tools/qa/PayingPhpLint.php\",\n        \"lint:container\": \"@php tools/ci/console-test-env.php lint:container\",\n        \"lint:yaml\": \"@php tools/ci/console-test-env.php lint:yaml config --parse-tags\",\n        \"pipeline:local\": \"powers",
+      "package.json": "{\n  \"name\": \"paying-playwright\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:playwright\": \"playwright test --config=tests/Playwright/playwright.config.ts\",\n    \"test:playwright:headed\": \"playwright test --config=tests/Playwright/playwright.config.ts --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.53.0\"\n  }\n}\n"
+    }
+  }
+}
