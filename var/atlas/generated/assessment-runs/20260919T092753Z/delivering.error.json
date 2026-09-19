@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "delivering",
+  "title": "Delivering",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId\u001b[0m",
+  "registry_entry": {
+    "component_id": "delivering",
+    "component_title": "Delivering",
+    "github_repository": "smartresponsor/delivering",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/delivering/report/index.adoc",
+    "notes": "Active delivery integration component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Delivering",
+    "timestamp_utc": "2026-09-19T09:38:00.527040+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "fix/delivering-deterministic-crypto-journal-20260914"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "15b4db21506f750e6651db8f44f3210aceab44b8"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "15b4db2 Make crypto and journal tests deterministic\ncd00b62 Harden FCM credentials and provider fixtures (#9)\n8a7a0a9 Harden Telnyx ingress and canonicalize package contracts\nd2ff607 Fix Telnyx webhook routing and raise coverage (#6)\n1a39e9e Harden Delivering RC dependencies and coverage (#5)"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.dist.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/component/\nconfig/routes.yaml\nfailure.ps1\nphpstan.neon\nphpunit.xml.dist\nREADME.md\nrun.ps1\nsrc/\nsrc/Command/\nsrc/Controller/\nsrc/DeliveringBundle.php\nsrc/Entity/\nsrc/Enum/\nsrc/Event/\nsrc/EventSubscriber/\nsrc/Exception/\nsrc/Message/\nsrc/MessageHandler/\nsrc/Provider/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/ValueObject/\nstatus.ps1\ntests/\ntests/Bundle/\ntests/Controller/\ntests/Entity/\ntests/EventSubscriber/\ntests/Message/\ntests/Operational/\ntests/Provider/\ntests/Service/\ntool/\ntool/delivery-subject-prefix-migration.ps1\ntool/failure.ps1\ntool/run.ps1\ntool/status.ps1\ntool/validate.ps1\nvar/\nvar/.php-cs-fixer.cache\nvar/coverage/\nvendor/\nvendor/autoload.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/interfacing/\nvendor/myclabs/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/react/\nvendor/sebastian/\nvendor/staabm/\nvendor/symfony/\nvendor/tabling/\nvendor/theseer/\nvendor/twig/\nvendor/viewing/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "80"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"delivering/delivery\",\n    \"description\": \"Provider-neutral outbound delivery component for the Smart Responsor ecosystem\",\n    \"type\": \"symfony-bundle\",\n    \"license\": \"proprietary\",\n    \"minimum-stability\": \"dev\",\n    \"prefer-stable\": true,\n    \"require\": {\n        \"cruding/crud\": \"dev-master\",\n        \"ext-sodium\": \"*\",\n        \"interfacing/interface\": \"dev-master\",\n        \"objecting/object\": \"dev-master\",\n        \"php\": \"^8.4\",\n        \"viewing/view\": \"dev-master\",\n        \"doctrine/orm\": \"^3.3\",\n        \"psr/log\": \"^3.0\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/dependency-injection\": \"^8.1\",\n        \"symfony/doctrine-messenger\": \"^8.1\",\n        \"symfony/event-dispatcher-contracts\": \"^3.7\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/http-client\": \"^8.1\",\n        \"symfony/http-foundation\": \"^8.1\",\n        \"symfony/http-kernel\": \"^8.1\",\n        \"symfony/messenger\": \"^8.1\",\n        \"symfony/routing\": \"^8.1\",\n        \"symfony/uid\": \"^8.1\"\n    },\n    \"require-dev\": {\n        \"friendsofphp/php-cs-fixer\": \"^3.95.17\",\n        \"phpstan/phpstan\": \"^2.2\",\n        \"phpstan/phpstan-doctrine\": \"^2.0\",\n        \"phpunit/phpunit\": \"^11.5\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Delivering\\\\\": \"src/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"App\\\\Delivering\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"repositories\": [\n        {\"type\": \"path\", \"url\": \"../Cruding\", \"options\": {\"symlink\": true, \"versions\": {\"cruding/crud\": \"dev-master\"}}},\n        {\"type\": \"path\", \"url\": \"../Collectioning\", \"options\": {\"symlink\": true, \"versions\": {\"collectioning/collection\": \"dev-master\"}}},\n        {\"type\": \"path\", \"url\": \"../Tabling\", \"options\": {\"symlink\": true, \"versions\": {\"tabling/table\": \"dev-master\"}}},\n        {\"type\": \"path\", \"url\": \"../Interfacing\", \"options\": {\"symlink\": true, \"versions\": {\"interfacing/interface\": \"dev-master\"}}},\n        {\"type\": \"path\", \"url\": \"../Objecting\", \"options\": {\"symlink\": true, \"versions\": {\"objecting/object\": \"dev-master\"}}},\n        {\"type\": \"path\", \"url\": \"../Viewing\", \"options\": {\"symlink\": true, \"versions\": {\"viewing/view\": \"dev-master\"}}}\n    ],\n    \"config\": {\n        \"sort-packages\": true\n    },\n    \"scripts\": {\n        \"test\": \"@php vendor/bin/phpunit --configuration phpunit.xml.dist\",\n        \"test:coverage\": [\n            \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n            \"@php -d xdebug.mode=coverage vendor/bin/phpunit --configuration phpunit.xml.dist --path-coverage --coverage-text=var/coverage/summary.txt\"\n        ],\n        \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n        \"cs:fix\": \"php-cs-fixer fix --verbose\",\n        \"phpstan\": \"phpstan analyse --configuration=phpstan.neon --memory-limit=1G\",\n        \"quality\": [\n            \"@cs:check\",\n            \"@phpstan\",\n            \"@test\"\n        ]\n    },\n    \"extra\": {\n        \"symfony\": {\n            \"require\": \"8.1.*\"\n        }\n    }\n}\n"
+    }
+  }
+}

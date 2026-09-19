@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "indexing",
+  "title": "Indexing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId\u001b[0m",
+  "registry_entry": {
+    "component_id": "indexing",
+    "component_title": "Indexing",
+    "github_repository": "smartresponsor/indexing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/indexing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Indexing",
+    "timestamp_utc": "2026-09-19T09:31:42.577551+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "growth/index-meili-tuning-20260914-publish"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "76dccde36319bf7cad3d6d014d2370bc2c0fb073"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "76dccde feat: add meilisearch tuning extensions\n09c0b5d Merge pull request #22 from smartresponsor/growth/index-tuning-catalog-20260914-publish\n9ea1c3a feat: add per-index setting catalog\n780600b Merge pull request #21 from smartresponsor/growth/index-backpressure-20260914-publish\n66f4868 feat: add indexing worker backpressure"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".canonization/\n.canonization/backup/\n.canonization/backups/\n.canonization/Boundary/\n.canonization/Federation/\n.canonization/Governance/\n.canonization/Orchestration/\n.canonization/retired/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/.gitattributes\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/git_diff.sh\n.commanding/git_status.sh\n.commanding/git_sync.sh\n.commanding/health.sh\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/logs/\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.editorconfig\n.env\n.gate/\n.gate/contract/\n.gate/gate.ps1\n.gate/gate.sh\n.gate/linting/\n.gate/MANIFEST.json\n.gate/policy/\n.gate/quality/\n.gate/README.md\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.githooks/\n.githooks/pre-commit\n.github/\n.github/codex/\n.github/dependabot.yml\n.github/prompts/\n.github/release.yml\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpspec.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.key/\n.key/qwerty1234567890\n.key/qwerty1234567890.pub\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.report/\n.report/gate-fix-proposal.ndjson"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "637"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"indexing/index\",\n  \"description\": \"Indexing process app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/orm\": \"^3.3\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"code-lts/doctum\": \"^5.6\",\n    \"doctrine/migrations\": \"^3.9\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1.40\",\n    \"phpstan/phpstan-phpunit\": \"^2.0.16\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"rector/rector\": \"^2.4.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/property-info\": \"^8.1\",\n    \"symfony/type-info\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Indexing\\\\\": \"src/\",\n      \"App\\\\Indexing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Indexing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"ci:lint\": [\n      \"@php -r \\\"foreach (['.github', 'config', 'doc'] as $dir) { if (!is_dir($dir)) { continue; } $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir)); foreach ($it as $file) { if (!$file->isFile()) { continue; } $path = $file->getPathname(); $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION)); if ($ext === 'json') { json_decode(file_get_contents($path)); if (JSON_ERROR_NONE !== json_last_error()) { fwrite(STDERR, 'Invalid JSON: ' . $path . PHP_EOL); exit(1); } } } }\\\"\",\n      \"@php -r \\\"require 'bootstrap.php'; foreach (['.github', 'config'] as $dir) { if (!is_dir($dir)) { continue; } $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir)); foreach ($it as $file) { if (!$file->isFile()) { continue; } $path = $file->getPathname(); $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION)); if (!in_array($ext, ['yml', 'yaml'], true)) { continue; } try { Symfony\\\\Component\\\\Yaml\\\\Yaml::parseFile($path); } catch (Throwable $exception) { fwrite(STDERR, 'Invalid YAML: ' . $path . PHP_EOL . $exception->getMessage() . PHP_EOL); exit(1); } } }\\\"\"\n    ],\n    \"ci:phpstan\": \"phpstan analyse\",\n    \"ci:phpunit\": \"phpunit\",\n    \"ci:docs\": [\n      \"@php -r \\\"foreach (['README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'deploy/docker/compose.yaml', 'doctum.php', 'doc/index/README.md', 'documentation/index/TOC.md', 'documentation/index/GITHUB-OPERATIONS.md', '.canonization/Boundary/index.boundary.yaml', 'documentation/portal/antora.yml', 'documentation/portal/modules/ROOT/nav.adoc', 'documentation/portal/modules/ROOT/pages/index.adoc'] as $file) { if (!file_exists($file)) { fwrite(STDERR, 'Missing documentation file: ' . $file . PHP_EOL); exit(1); } }\\\"\",\n      \"@php -r \\\"foreach (['documentation/index/QA-SURFACE.md', 'documentation/index/RELEASE-CHECKLIST.md', 'documentation/index/RC1-READINESS.md'] as $file) { if (!file_exists($file)) { fwrite(STDERR, 'Missing QA/release file: ' . $file . PHP_EOL); exit(1); } }\\\"\",\n      \"@ci:docs:consistency\",\n      \"@docs:doctum:clean\",\n      \"@docs:doctum\"\n    ],\n    \"ci:syntax\": \"@php -r \\\"$dirs=['src','tests','config','bin','tools']; foreach ($dirs as $dir) { if (!is_dir($dir)) { continue; } $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS)); foreach ($it as $file) { if (!$file->isFile() || strtolower($file->getExtension()) !== 'php') { continue; } $cmd = escapeshellarg(PHP_BINARY) . ' -l ' . escapeshellarg($file->getPathname()); exec($cmd, $o"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "shipping",
+  "title": "Shipping",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:140\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 140 | \u001b[0m     \u001b[36;1mthrow \"ChatGPT task-bank runner did not capture a scoring answer \u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=TASK_BANK_LOOP_FAILED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfinalStatus=CMCP_GO_PREFLIGHT_BLOCKED\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mfailures=interactionCycleCount_mismatch,submittedCount_mismatch,assistantCapturedCount_mismatch,unstable_chatId\u001b[0m",
+  "registry_entry": {
+    "component_id": "shipping",
+    "component_title": "Shipping",
+    "github_repository": "smartresponsor/shipping",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/shipping/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Shipping",
+    "timestamp_utc": "2026-09-19T09:34:45.044048+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "checkpoint/shipping-canonical-hardcut-20260818"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "173fd1675447932228b2ac4e222b608a32b4189e"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "173fd16 Close Shipping Canon040 acceptance\nd0a4f3e Harden Shipping RC runtime surfaces\nbcb9fa3 Fix Shipping carrier and reference repository contracts\n6b5d01c Close Shipping PostgreSQL acceptance\ne5577ca Reconcile Shipping schema parity"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.dockerignore\n.editorconfig\n.env\n.env.local\n.env.test\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/Shipping.iml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\nAGENTS.md\nbin/\nbin/cmcp-generate-current-baseline.ps1\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services.bundle.yaml\nconfig/services.yaml\nconfig/shipment_doctrine_migrations_pg.yaml\nconfig/shipment_doctrine_migrations_sqlite.yaml\ndelivery/\ndelivery/01-change-manifest.json\ndelivery/01-removed-paths.txt\ndelivery/01-touched-paths.txt\ndelivery/02-change-manifest.json\ndelivery/02-removed-paths.txt\ndelivery/02-touched-paths.txt\ndelivery/03-change-manifest.json\ndelivery/03-touched-paths.txt\ndelivery/04-change-manifest.json\ndelivery/04-removed-paths.txt\ndelivery/04-touched-paths.txt\ndelivery/05-change-manifest.json\ndelivery/05-removed-paths.txt\ndelivery/05-touched-paths.txt\ndelivery/06-change-manifest.json\ndelivery/06-removed-paths.txt\ndelivery/06-touched-paths.txt\ndelivery/07-change-manifest.json\ndelivery/07-removed-paths.txt\ndelivery/07-touched-paths.txt\ndelivery/08-change-manifest.json\ndelivery/08-removed-paths.txt\ndelivery/08-touched-paths.txt\ndelivery/09-change-manifest.json\ndelivery/09-removed-paths.txt\ndelivery/09-touched-paths.txt\ndelivery/10-change-manifest.json\ndelivery/10-removed-paths.txt\ndelivery/10-touched-paths.txt\ndelivery/11-change-manifest.json\ndelivery/11-removed-paths.txt\ndelivery/11-touched-paths.txt\ndelivery/12-change-manifest.json\ndelivery/12-removed-paths.txt\ndelivery/12-touched-paths.txt\ndelivery/13-change-manifest.json\ndelivery/13-removed-paths.txt\ndelivery/13-touched-paths.txt\ndelivery/14-change-manifest.json\ndelivery/14-removed-paths.txt\ndelivery/14-touched-paths.txt\ndelivery/15-change-manifest.json\ndelivery/15-removed-paths.txt"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "764"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"shipping/shipment\",\n  \"description\": \"Shipping process app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"administering/administration\": \"dev-master\",\n    \"cataloging/catalog\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"monolog/monolog\": \"^3.5\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/intl\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-csrf\": \"^8.1\",\n    \"symfony/twig-bridge\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/uid\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/var-exporter\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.21\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^12.5.8\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Shipping\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"classmap\": [\n      \"tests/\"\n    ]\n  },\n  \"scripts\": {\n    \"canon:mirror\": \"php tools/linter/shipment_mirror_check.php\",\n    \"canon:platform-manifests\": \"php tools/linter/shipment_platform_manifest_check.php\",\n    \"canon:dependency-integrity\": \"php tools/linter/shipment_dependency_integrity_check.php\",\n    \"canon:database-profile\": \"php tools/linter/shipment_database_profile_check.php\",\n    \"canon:roots\": \"php tools/linter/shipment_canonical_roots_check.php\",\n    \"canon:deploy-tooling\": \"php tools/linter/shipment_deploy_tooling_check.php\",\n    \"cs:check\": \"php vendor/bin/php-cs-fixer fix --dry-run --diff --verbose\",\n    \"lint\": \"php tools/qa/shipping_lint.php\",\n    \"md\": \"php tools/qa/shipping_md.php\",\n    \"md:tests\": \"php tools/qa/shipping_md_tests.php\",\n    \"pipeline:local\": \"php tools/ci/shipping_local_pipeline.php local\",\n    \"pipeline:local:full\": \"php tools/ci/shipping_local_pipeline.php full\",\n    \"pipeline:local:strict\": \"php tools/ci/shipping_local_pipeline.php strict\",\n    \"report:route-inventory\": \"php tools/inspection/shipping_route_inventory_report.php\",\n    \"report:runtime-proof\": \"php tools/inspection/shipping_runtime_proof_report.php\",\n    \"smoke:runtime\": \"php tools/smoke/shipping_runtime_smoke.php\",\n    \"stan\": \"php tools/qa/shipping_stan.php\",\n    \"schema:parity\": \"php tools/qa/shipping_schema_parity.php\",\n    \"test\": \"php vendor/bin/phpunit --testsuite fast\",\n    \"test:coverage\": \"php tools/qa/shipping_schema_parity.php --test-suite=all --coverage\",\n    \"test:all\": \"php tools/qa/shipping_schema_parity.php --test-suite=all\",\n    \"test:e2e\": \"php tools/qa/shipping_schema_parity.php --test-suite=e2e\",\n    \"fixture:load\": \"php bin/console doctrine:fixtures:load --no-interaction\",\n    \"canon:interfaces\": \"php tools/linter/shipment_interface_layer_check.php\",\n    \"canon:service-interface-mirror\": \"php tools/linter/shipment_service_interface_mirror_check.php\",\n    \"canon:command-support-naming\": \"php tools/linter/shipment_command_support_naming_check.php\",\n    \"canon:dto-support-naming\": \"php tools/linter/shipment_dto_support_naming_check.php\",\n    \"fixt",
+      "package.json": "{\n  \"name\": \"shipping-e2e\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:e2e\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\"\n  }\n}\n"
+    }
+  }
+}

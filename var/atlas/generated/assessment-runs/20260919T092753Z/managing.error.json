@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "managing",
+  "title": "Managing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-console-mcp-bridge.ps1:105\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 105 | \u001b[0m     \u001b[36;1mthrow (\"CONSOLE_MCP_ENDPOINT_UNREACHABLE \" + ([pscustomobject]$Bo\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCONSOLE_MCP_ENDPOINT_UNREACHABLE {\"endpoint\":\"http://127.0.0.1:3334/mcp\",\"tokenPresent\":true,\"tokenSource\":\"env\"}\u001b[0m",
+  "registry_entry": {
+    "component_id": "managing",
+    "component_title": "Managing",
+    "github_repository": "smartresponsor/managing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/managing/report/index.adoc",
+    "notes": "Active mature component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Managing",
+    "timestamp_utc": "2026-09-19T09:36:32.492821+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/managing-composer-contour-verify-20260918"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "216414a4bf55ca1153fb5d11a6f190721d332437"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '216414a4bf55ca1153fb5d11a6f190721d332437'"
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M composer.json\n M composer.lock\n M src/Controller/Crud/AbstractManageContentCrudController.php\n M src/Controller/Crud/Generated/AttachingCrudController.php\n M src/Controller/Crud/Generated/CatalogingCrudController.php\n M src/Controller/Crud/Generated/PagingCrudController.php\n M src/DependencyInjection/ManagingConfigurationDefaults.php\n M src/DependencyInjection/ManagingCrudBehaviorConfigurationDefaultsTrait.php\n M src/DependencyInjection/ManagingCrudFieldConfigurationDefaultsTrait.php\n M src/Discovery/Admin/Host/ManageHostCrudResourceDiscovery.php\n M src/Entity/Crud/ManageCrudFieldViewProfileRule.php\n M src/Factory/Crud/ManageCrudFieldDefinitionFactory.php\n M src/Handler/Crud/ManageCrudFieldUserProfileApplyHandler.php\n M src/Handler/Crud/ManagePublicationStateHandler.php\n M src/Inspector/Crud/ManageEntityMetadataInspector.php\n M src/Normalizer/Policy/ManagePolicyValueNormalizer.php\n M src/Policy/Admin/ManageCrudResourcePolicy.php\n M src/Policy/Crud/ManageCrudBehaviorPolicy.php\n M src/Policy/Crud/ManageCrudFieldPolicy.php\n M src/Policy/Crud/ManageCrudFieldTypeOverridePolicy.php\n M src/Provider/Admin/Host/ManageHostApplicationAdminProvider.php\n M src/Registry/Crud/ManageCrudResourceRegistry.php\n M src/Repository/Crud/ManageDoctrineCrudFieldViewProfileRuleRepository.php\n M src/Resolver/Crud/ManageConstructorArgumentResolver.php\n M src/Resolver/Crud/ManageCrudEntitySurfaceResolver.php\n M src/Resolver/Crud/ManageCrudRollingFieldExternalAccessResolver.php\n M src/Service/Administration/ManagingFieldAccessMutationApplyService.php\n M src/Service/Administration/ManagingFieldAccessMutationReviewService.php\n M src/Trait/Crud/ManageCrudControllerRuntimeInjectionTrait.php\n M src/Trait/Crud/ManageCrudFieldUserProfileRuleExtractionTrait.php\n M src/Trait/Crud/ManageCrudFieldViewProfileRuleAccessorTrait.php\n M src/Validator/Administration/ManagingFieldAccessReviewValidator.php\n M src/Value/Administration/ManagingFieldAccessMutationReviewResult.php\n M src/Value/Crud/ManageCrudFieldUserProfileRuleSet.php\n M src/Value/Crud/ManageCrudFieldUserProfileWriteRequest.php\n M src/Value/Crud/ManageCrudFieldVisibilityRuleSet.php\n M src/Workflow/Crud/ManageCrudPublicationWorkflow.php\n M src/Writer/Crud/ManageCrudConfigShapeFieldUserProfileWriter.php\n M tests/Unit/Admin/AttachmentIdentifierMigrationSqlSplitTest.php\n M tests/Unit/Admin/AttachmentIdentifierMigrationSupportTest.php\n M tests/Unit/Administration/ManagingFieldAccessReviewValidatorTest.php\n M tests/Unit/Crud/ManageCrudCreateEntityTest.php\n M tests/Unit/DependencyInjection/ManagingFieldUserProfileDoctrineStorageWiringTest.php\n M tools/qa/managing-first-party-dependency-contour.php\n?? .console-mcp/\n?? delivery/rc/runtime-proof-results/managing-closure-summary.json\n?? delivery/rc/runtime-proof-results/managing-composer-prod-validate.log\n?? delivery/rc/runtime-proof-results/managing-composer-update.log\n?? delivery/rc/runtime-proof-results/managing-composer-validate.log\n?? delivery/rc/runtime-proof-results/managing-dependency-contour.log\n?? delivery/rc/runtime-proof-results/managing-gating.log\n?? delivery/rc/runtime-proof-results/managing-php-lint.log\n?? delivery/rc/runtime-proof-results/managing-phpstan.log\n?? delivery/rc/runtime-proof-results/managing-phpunit.log\n?? src/Controller/Crud/Generated/CurrencingCrudController.php\n?? src/Controller/Crud/Generated/OrderingCrudController.php\n?? src/Controller/Crud/Generated/PayingCrudController.php\n?? src/Controller/Crud/Generated/ShippingCrudController.php\n?? src/Controller/Crud/Generated/WalletingCrudController.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "216414a Remove superseded Managing RC diagnostics\ne17c373 Remove superseded Managing RC diagnostics\n12a1c54 Remove superseded Managing RC diagnostics\n3f914c2 Remove superseded Managing RC diagnostics\n0bf655c Remove superseded Managing RC diagnostics"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/powershell-script-run/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\nAGENTS.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/packages/\nconfig/routes/\nconfig/services.yaml\ndelivery/\ndelivery/patches/\ndelivery/rc/\ndocs/\ndocs/component/\ndocs/examples/\ndocs/manage-content-crud.adoc\ndocs/manage-field-access-visibility-readiness.adoc\ndocs/manage-field-external-rolling-access.adoc\ndocs/manage-field-view-profile-host-activation.adoc\ndocs/manage-field-view-profile-storage.adoc\ndocs/manage-field-visibility-explainability.adoc\ndocs/manage-field-visibility-inspection.adoc\ndocs/manage-final-service-layer-cleanup.adoc\npackage-lock.json\nphpstan.neon\nphpunit.xml.dist\npsalm.xml\nREADME.adoc\nREADME.md\nrector.neon\nsrc/\nsrc/Accessor/\nsrc/Builder/\nsrc/BuilderInterface/\nsrc/Cache/\nsrc/Command/\nsrc/Configurator/\nsrc/Controller/\nsrc/DependencyInjection/\nsrc/Discovery/\nsrc/Entity/\nsrc/Extractor/\nsrc/Factory/\nsrc/FactoryInterface/\nsrc/Filter/\nsrc/FilterInterface/\nsrc/Formatter/\nsrc/Generator/\nsrc/Handler/\nsrc/HandlerInterface/\nsrc/Inspector/\nsrc/InspectorInterface/\nsrc/Instantiator/\nsrc/Labeler/\nsrc/ManagingBundle.php\nsrc/Normalizer/\nsrc/Policy/\nsrc/Provider/\nsrc/ProviderInterface/\nsrc/Reader/\nsrc/ReaderInterface/\nsrc/Registry/\nsrc/RegistryInterface/\nsrc/Renderer/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Resolver/\nsrc/ResolverInterface/\nsrc/Scorer/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Stringifier/\nsrc/Trait/\nsrc/Validator/\nsrc/ValidatorInterface/\nsrc/Value/\nsrc/Workflow/\nsrc/Writer/\nsrc/WriterInterface/\ntemplates/\ntemplates/admin/\ntests/\ntests/Architecture/\ntests/Unit/\ntool/\ntools/\ntools/qa/\ntools/runtime/\nvar/\nvar/.cmcp-php-cs-fixer.dist.php\nvar/.php-cs-fixer.cache\nvar/backup/\nvar/backups/\nvar/coverage-summary.txt\nvar/gating-preservation-20260918/\nvar/patch-backup/\nvar/patch-backups/\nvendor/\nvendor/administering/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/configuring/\nvendor/cruding/\nvendor/doctrine/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "352"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"managing/manage\",\n  \"description\": \"Managing process app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"rolling/role\": \"dev-master\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/ux-live-component\": \"^3.0\",\n    \"symfony/ux-turbo\": \"^3.0\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/html-extra\": \"^3.24\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.65\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Managing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Managing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"test:coverage\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage-summary.txt\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"cs:check\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php --verbose\",\n    \"verify:first-party-dependencies\": \"@php tools/qa/managing-first-party-dependency-contour.php\",\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\"\n    ]\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"administering/administration\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Configuring\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"configuring/config\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Rolling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"rolling/role\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    }\n  ]\n}\n"
+    }
+  }
+}
