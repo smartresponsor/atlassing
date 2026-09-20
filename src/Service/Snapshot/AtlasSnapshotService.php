@@ -6,6 +6,7 @@ namespace App\Service\Snapshot;
 
 use App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
+use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 final class AtlasSnapshotService implements AtlasSnapshotServiceInterface
@@ -47,6 +48,13 @@ final class AtlasSnapshotService implements AtlasSnapshotServiceInterface
      */
     public function loadCurrentComponentSnapshot(string $componentId): array
     {
+        if (preg_match('/\\A[a-z0-9]+(?:[a-z0-9_-]*[a-z0-9])?\\z/', $componentId) !== 1) {
+            return [
+                'status' => 'invalid-component',
+                'component' => $componentId,
+            ];
+        }
+
         $path = $this->atlasRoot . '/component/' . $componentId . '/current.yaml';
 
         if (!is_file($path)) {
@@ -57,7 +65,15 @@ final class AtlasSnapshotService implements AtlasSnapshotServiceInterface
             ];
         }
 
-        $payload = Yaml::parseFile($path);
+        try {
+            $payload = Yaml::parseFile($path);
+        } catch (ParseException) {
+            return [
+                'status' => 'invalid',
+                'component' => $componentId,
+                'path' => $path,
+            ];
+        }
 
         return is_array($payload) ? $payload : [
             'status' => 'invalid',

@@ -28,6 +28,11 @@ final class AtlasStateEdgeCaseTest extends TestCase
             ['enabled'],
             array_column($registry->listEnabledRepository(), 'component_id'),
         );
+
+        file_put_contents($root . '/repository/ecosystem-repositories.yaml', "repositories:\n  - [invalid\n");
+        $invalid = $registry->loadRegistry();
+        self::assertTrue($invalid['invalid']);
+        self::assertSame([], $invalid['repositories']);
     }
 
     public function testSnapshotReportsMissingAndInvalidPayloads(): void
@@ -44,6 +49,18 @@ final class AtlasStateEdgeCaseTest extends TestCase
         mkdir($root . '/component/atlassing', 0777, true);
         file_put_contents($root . '/component/atlassing/current.yaml', "scalar\n");
         self::assertSame('invalid', $snapshot->loadCurrentComponentSnapshot('atlassing')['status']);
+
+        file_put_contents($root . '/component/atlassing/current.yaml', "component: [invalid\n");
+        self::assertSame('invalid', $snapshot->loadCurrentComponentSnapshot('atlassing')['status']);
+
+        self::assertSame(
+            'invalid-component',
+            $snapshot->loadCurrentComponentSnapshot('../generated')['status'],
+        );
+        self::assertSame(
+            'invalid-component',
+            $snapshot->loadCurrentComponentSnapshot('atlassing/../../generated')['status'],
+        );
     }
 
     private static function tempDirectory(string $suffix): string

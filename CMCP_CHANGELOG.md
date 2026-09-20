@@ -211,3 +211,29 @@ Date: 2026-09-13
 - `composer coverage`: green with lines 93.57%, methods 80.00%, branches 87.87%.
 - `composer gating:check`: 24 rules, 0 failed, 1 warning. Canon040, Canon043, Canon044, and Canon045 pass. Canon042 is the sole warning because no repository-owned behavioral/UI inventory producer has yet materialized `var/coverage/behavioral-ui.json`.
 - Remaining non-blocking growth debt: implement genuine Canon042 functional/behavioral/UI/critical surface inventories and evidence producer; no opaque counters or fabricated coverage percentages are acceptable.
+
+## repository_implementation-2026-09-20-atlassing
+
+### Reconnaissance, canon mapping, and RC selection
+
+- Workspace: `D:\PhpstormProjects\www\Atlassing`; current branch: `fix/atlas-scoring-runtime`.
+- Pre-existing worktree change: `tool/atlas-console-mcp-score-cli.ps1`; it is unrelated to this bounded hardening pass and is preserved unstaged/unmodified by this work.
+- Read Atlassing `AGENTS.md`, `README.md`, development/production Composer manifests, `MANIFEST.json`, architecture/import AsciiDoc, CI workflow, runtime services/interfaces, tests, and Gating profile/rule set.
+- Read the required Objecting, Cruding, Viewing, and Interfacing contracts/manifests available in the sibling workspaces. Development Composer uses `dev-master` sibling path repositories with `symlink: true`; production Composer resolves packaged/VCS dependencies and keeps the four mandatory application dependencies direct.
+- Read Canonization as a read-only normative source: repository contract plus materialized Canon001, Canon002, Canon019, Canon021-026, Canon029, and Canon032-045 textual rules. Gating was inspected as the executable enforcement companion.
+- Target-to-canon mapping: preserve technical-role-first and mirrored service/interface trees; no alternate Domain/Port/Adapter taxonomy; no local generic CRUD; keep dual standalone/bundle runtime and development/production Composer topology; retain PHP 8.4/Symfony 8.1 baseline and standard PHP/test tooling; no Objecting persistence change is part of this pass.
+- Initial `composer validate --strict` passed. Initial `composer gating:check` reported 24 rules, 0 failures, one Canon042 warning for missing behavioral/UI coverage evidence; Canon040 evidence was 93.6% lines, 80.0% methods, 87.9% branches.
+- Market/maturity contour: Atlassing remains responsible for deterministic assessment/scorecard state, criteria/metrics, diagnostics, readiness/maturity, and payload contracts. Generic CRUD, presentation composition, shell ownership, and reusable system fields remain outside this component.
+- RC-critical work selected: harden Atlas state reads. `AtlasSnapshotService` previously interpolated an unchecked component identifier into a filesystem path, and malformed registry/component YAML could propagate parser exceptions. The implementation now rejects non-slug path segments and maps malformed YAML to explicit invalid-state results, with regression coverage.
+- Material risk: path-like or dotted component identifiers are intentionally rejected because repository component IDs are filesystem-safe slug identifiers; no sibling repository is mutated.
+- Growth workstream remains separate and non-blocking: genuine Canon042 behavioral/UI evidence production, configurable weighted scorecards/thresholds, historical trends, richer metric ingestion, and component/org rollups.
+- Acceptance gates: strict Composer validation, Composer quality, Gating, final diff/status, branch/upstream inspection, and coherent Git integration without staging the unrelated scorer CLI edit.
+
+### Verification and integration readiness
+
+- `composer validate --strict`: green.
+- `composer quality`: green; PHP-CS-Fixer found 0 fixable files, PHPStan reported 0 errors, PHPUnit passed 25 tests / 113 assertions.
+- Fresh `composer coverage`: green; Canon040 now passes at 94.4% lines, 80.0% methods, and 90.0% branches after adding coverage for Atlas selection failure/default-option behavior.
+- Final `composer gating:check`: 24 rules, 0 failures, one non-blocking Canon042 warning for missing behavioral/UI inventory evidence.
+- Production Composer dependency URLs were cross-checked against local repository wiring where ambiguity existed; the unusual Tabling VCS URL `smartresponsor/tabling-.git` matches the actual sibling repository origin and is not a typo introduced by Atlassing.
+- Pre-commit diff contains five owned files plus the unrelated pre-existing `tool/atlas-console-mcp-score-cli.ps1` modification. Git integration must stage only the five owned files.

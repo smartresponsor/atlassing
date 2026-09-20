@@ -65,6 +65,21 @@ final class AtlasAssessmentCommandTest extends TestCase
         self::assertStringContainsString('selected', $tester->getDisplay());
     }
 
+    public function testSelectCommandNormalizesEmptyOptionsAndSurfacesFailure(): void
+    {
+        $service = $this->createMock(AtlasTargetSelectionServiceInterface::class);
+        $service->expects(self::once())
+            ->method('selectTargets')
+            ->with(null, 'workflow_dispatch', null)
+            ->willReturn(self::selectionResult(false, '', 'selection failed', 'selection.json'));
+
+        $tester = new CommandTester(new AtlasAssessmentSelectCommand($service));
+        $exit = $tester->execute([]);
+
+        self::assertSame(Command::FAILURE, $exit);
+        self::assertStringContainsString('selection failed', $tester->getDisplay());
+    }
+
     public function testCycleStopsOnSelectionFailure(): void
     {
         $selection = $this->createStub(AtlasTargetSelectionServiceInterface::class);

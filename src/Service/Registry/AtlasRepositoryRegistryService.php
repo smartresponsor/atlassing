@@ -6,6 +6,7 @@ namespace App\Service\Registry;
 
 use App\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
+use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 final class AtlasRepositoryRegistryService implements AtlasRepositoryRegistryServiceInterface
@@ -31,7 +32,15 @@ final class AtlasRepositoryRegistryService implements AtlasRepositoryRegistrySer
             ];
         }
 
-        $payload = Yaml::parseFile($path);
+        try {
+            $payload = Yaml::parseFile($path);
+        } catch (ParseException) {
+            return [
+                'repositories' => [],
+                'invalid' => true,
+                'path' => $path,
+            ];
+        }
 
         return is_array($payload) ? $payload : ['repositories' => []];
     }
