@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "cataloging",
+  "title": "Cataloging",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mConvertFrom-Json: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:77\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  77 | \u001b[0m … te.Substring($start, $end - $start + 1) | \u001b[36;1mConvertFrom-Json -Depth 100\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConversion from JSON failed with error: Bad JSON escape sequence: \\C. Path 'strengths', line 5, position 71.\u001b[0m",
+  "registry_entry": {
+    "component_id": "cataloging",
+    "component_title": "Cataloging",
+    "github_repository": "smartresponsor/cataloging",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/cataloging/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Cataloging",
+    "timestamp_utc": "2026-09-21T10:12:07.380410+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "feature/catalog-runtime-vocabulary-rebased-20260820"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "b83752cda0526d6cb2baf1609c59264d019c2c08"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'b83752cda0526d6cb2baf1609c59264d019c2c08'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? PRODUCT_CAPABILITY_AUDIT.adoc"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "b83752cd Ignore retired Cataloging canon guard artifacts\na2346fc8 Harden Cataloging RC gates and coverage evidence\nf2ecec43 Record Cataloging RC integration handoff\nea0542d2 Align Cataloging CI sibling dependencies\n2dd77b1d Finalize Cataloging RC verification and journal"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/packs.json\n.automation/README.md\n.automation/tool/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/.gitattributes\n.commanding/.github/\n.commanding/.gitignore\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.lnk\n.commanding/commanding.ps1\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/health.sh\n.commanding/history.sh\n.commanding/lib/\n.commanding/local_ci.sh\n.commanding/log/\n.commanding/logs/\n.commanding/MANIFEST.md\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.editorconfig\n.env\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Cataloging.iml\n.idea/codeception.xml\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php-test-framework.xml\n.idea/php.xml\n.idea/phpspec.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.mcp.json\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\napi/\napi/catalog-openapi.yaml\napi/category-openapi.yaml\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nconfig/\nconfig/catalog_bundles.php\nconfig/catalog_category_services_graphql.yaml\nconfig/catalog_services.yaml\nconfig/catalog_services_graphql.yaml\nconfig/catalog_webhook.sample.json\nconfig/component/\nconfig/packages/\nconfig/policy/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1450"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"cataloging/catalog\",\n  \"description\": \"Cataloging processing app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko / Marketing America Corp\",\n      \"email\": \"17111337+taa0662621456@users.noreply.github.com\"\n    }\n  ],\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-json\": \"*\",\n        \"ext-pdo\": \"*\",\n        \"administering/administration\": \"dev-master\",\n        \"cruding/crud\": \"dev-master\",\n        \"interfacing/interface\": \"dev-master\",\n        \"viewing/view\": \"dev-master\",\n        \"api-platform/doctrine-orm\": \"^4.3\",\n    \"api-platform/graphql\": \"^4.3\",\n    \"api-platform/symfony\": \"^4.3\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"nelmio/api-doc-bundle\": \"^5.0\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/doctrine-bridge\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"ext-openssl\": \"*\",\n    \"symfony/serializer\": \"^8.1\",\n    \"objecting/object\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/panther\": \"^2.4\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Cataloging\\\\\": \"src/\"\n    },\n    \"files\": [\n      \"src/EventInterface/CategoryWorkflowTransitionedInterface.php\",\n      \"src/EventInterface/SyndicationDeliveryRecordedInterface.php\",\n      \"src/EventInterface/SyndicationDestinationGovernanceSummaryBuiltInterface.php\",\n      \"src/EventInterface/SyndicationDestinationHistoryBuiltInterface.php\",\n      \"src/EventInterface/SyndicationDestinationRegisteredInterface.php\",\n      \"src/Event/CategoryWorkflowTransitioned.php\",\n      \"src/Event/SyndicationDeliveryRecorded.php\",\n      \"src/Event/SyndicationDestinationGovernanceSummaryBuilt.php\",\n      \"src/Event/SyndicationDestinationHistoryBuilt.php\",\n      \"src/Event/SyndicationDestinationRegistered.php\",\n      \"src/Exception/CategoryLinkConflict.php\",\n      \"src/Exception/TaxonomyConflict.php\",\n      \"src/ValueObject/CategoryAccessAssignmentRequest.php\",\n      \"src/ValueObject/CategoryAccessAssignmentSelection.php\",\n      \"src/ValueObject/CategoryLinkRequest.php\"\n    ],\n    \"exclude-from-classmap\": [\n      \"src/Event/CategoryWorkflowTransitioned.php\",\n      \"src/Event/SyndicationDeliveryRecorded.php\",\n      \"src/Event/SyndicationDestinationGovernanceSummaryBuilt.php\",\n      \"src/Event/SyndicationDestinationHistoryBuilt.php\",\n      \"src/Event/SyndicationDestinationRegistered.php\",\n      \"src/EventInterface/CategoryWorkflowTransitionedInterface.php\",\n      \"src/EventInterface/SyndicationDeliveryRecordedInterface.php\",\n      \"src/EventInterface/SyndicationDestinationGovernanceSummaryBuiltInterface.php\",\n      \"src/EventInterface/SyndicationDestinationHistoryBuiltInterface.php\",\n      \"src/EventInterface/SyndicationDestinationRegisteredInterface.php\",\n      \"src/Exception/CategoryLinkConflict.php\",\n      \"src/Exception/TaxonomyConflict.php\",\n      \"src/ValueObject/CategoryAccessAssignmentRequest.php\",\n      \"src/ValueObject/CategoryAccessAssignmentSelection.php\",\n      \"src/ValueObject/CategoryLinkRequest.php\"\n    ]\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Cataloging\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.ph",
+      "package.json": "{\n    \"name\": \"cataloging-playwright-tests\",\n    \"private\": true,\n    \"version\": \"1.0.0\",\n    \"description\": \"Playwright browser tests for UI coverage not exercised by Panther\",\n    \"scripts\": {\n        \"mcp:chrome\": \"npx -y chrome-devtools-mcp@latest --headless --isolated --no-usage-statistics --no-performance-crux\",\n        \"mcp:chrome:check\": \"npx -y chrome-devtools-mcp@latest --help\",\n        \"test:playwright\": \"playwright test\"\n    },\n    \"devDependencies\": {\n        \"@playwright/test\": \"^1.54.2\"\n    }\n}\n"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "addressing",
+  "title": "Addressing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mConvertFrom-Json: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:77\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  77 | \u001b[0m … te.Substring($start, $end - $start + 1) | \u001b[36;1mConvertFrom-Json -Depth 100\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConversion from JSON failed with error: Additional text encountered after finished reading JSON content: V. Path\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1m'', line 196, position 0.\u001b[0m",
+  "registry_entry": {
+    "component_id": "addressing",
+    "component_title": "Addressing",
+    "github_repository": "smartresponsor/addressing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/addressing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Addressing",
+    "timestamp_utc": "2026-09-21T09:34:03.837858+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/addressing-rc-final-v2"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "6521566aa8e7a42948fbe7f804f9694e8e645dbe"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '6521566aa8e7a42948fbe7f804f9694e8e645dbe'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D  .deptrac.cache\n M .gitignore\n M CMCP_CHANGELOG.md\n M src/Command/AddressCreateCommand.php\n D src/Http/Dto/AddressManageDto.php\n M src/Http/Factory/AddressInputFactory.php\n M src/Http/Form/AddressManageType.php\n M src/Service/Fixture/AddressDemoFixtureService.php\n M src/Service/Http/Address/AddressManageHttpService.php\n M tests/Entity/AddressLifecycleCompatibilityTest.php\n M tools/qa/addressing-platform-canon.yaml\n?? PRODUCT_CAPABILITY_AUDIT.adoc\n?? src/DTO/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "6521566 Finalize Addressing RC post-merge contracts\neb7143e Addressing RC dependency and QA closure (#81)\n209d637 RC: complete Addressing canon and runtime integration (#78)\n7690abd Add shared Gitleaks and Semgrep security scanning (#77)\n04b8403 build(deps): bump sharp and wrangler in /tool/template/worker (#80)"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/packs.json\n.automation/README.md\n.automation/tool/\n.canonization/\n.canonization/.idea/\n.codex/\n.codex/config.toml\n.commanding/\n.commanding/.gitignore\n.commanding/commanding.cmd\n.commanding/commanding.lnk\n.commanding/commanding.sh\n.commanding/docker/\n.commanding/git/\n.commanding/lib/\n.commanding/logs/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/run.sh\n.commanding/sh/\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.deptrac.cache\n.dist/\n.dist/evidence/\n.editorconfig\n.env\n.env.dist\n.env.test.dist\n.gate/\n.gate/check/\n.gate/env/\n.gate/install/\n.gate/report/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/codex/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitlab-ci.yml\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/Addressing.iml\n.idea/bin/\n.idea/dataSources.local.xml\n.idea/dataSources.xml\n.idea/inspectionProfiles/\n.idea/jsLibraryMappings.xml\n.idea/jsonCatalog.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php-test-framework.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/sqldialects.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/\nAGENTS.md\nbin/\nbin/address-apply-validated\nbin/address-audit-retention\nbin/address-backfill-dedupe\nbin/address-cleanup-soft-delete\nbin/address-create"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "856"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"addressing/address\",\n    \"description\": \"Addressing process app\",\n    \"type\": \"library\",\n    \"license\": \"MIT\",\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-curl\": \"*\",\n        \"ext-pdo\": \"*\",\n        \"collectioning/collection\": \"dev-master\",\n        \"cruding/crud\": \"dev-master\",\n        \"tabling/table\": \"dev-master\",\n        \"doctrine/doctrine-bundle\": \"^3.2\",\n        \"doctrine/orm\": \"^2.15 || ^3.0\",\n        \"easycorp/easyadmin-bundle\": \"^5.0\",\n        \"interfacing/interface\": \"dev-master\",\n        \"objecting/object\": \"dev-master\",\n        \"viewing/view\": \"dev-master\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/form\": \"^8.1\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/intl\": \"^8.1\",\n        \"symfony/property-access\": \"^8.1\",\n        \"symfony/property-info\": \"^8.1\",\n        \"symfony/security-bundle\": \"^8.1\",\n        \"symfony/security-csrf\": \"^8.1\",\n        \"symfony/serializer\": \"^8.1\",\n        \"symfony/translation\": \"^8.1\",\n        \"symfony/twig-bundle\": \"^8.1\",\n        \"symfony/uid\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/yaml\": \"^8.1\",\n        \"twig/twig\": \"^3.24\"\n    },\n    \"require-dev\": {\n        \"dbrekelmans/bdi\": \"^1.4\",\n        \"deptrac/deptrac\": \"^3.0\",\n        \"fakerphp/faker\": \"^1.23\",\n        \"friendsofphp/php-cs-fixer\": \"^3.94\",\n        \"phpstan/phpstan\": \"^2.2\",\n        \"phpstan/phpstan-doctrine\": \"^2.0\",\n        \"phpstan/phpstan-symfony\": \"^2.0\",\n        \"phpunit/phpunit\": \"^12.5\",\n        \"rector/rector\": \"^2.6\",\n        \"symfony/dotenv\": \"^8.1\",\n        \"symfony/panther\": \"^2.2\",\n        \"symfony/test-pack\": \"^1.2\",\n        \"vimeo/psalm\": \"^7.0\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Addressing\\\\\": \"src/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"lint\": \"@php tools/qa/AddressPhpLint.php\",\n        \"phpstan\": \"vendor/bin/phpstan analyse src --level=max\",\n        \"psalm\": \"vendor/bin/psalm\",\n        \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n        \"test:coverage\": [\n            \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n            \"@php -d xdebug.mode=coverage vendor/bin/phpunit -c phpunit.xml.dist --path-coverage --coverage-text=var/coverage/summary.txt\"\n        ],\n        \"stan\": \"@stan:conservative\",\n        \"rector:dry\": \"vendor/bin/rector process --dry-run\",\n        \"rector:fix\": \"php vendor/bin/rector process\",\n        \"qodana\": \"pwsh -NoProfile -ExecutionPolicy Bypass -File bin/qodana-local.ps1\",\n        \"quality\": [\n            \"@stan\",\n            \"@rector:dry\"\n        ],\n        \"qa:phpstan\": \"php -d memory_limit=1G vendor/bin/phpstan analyse -c phpstan.neon.dist\",\n        \"phpstan:clear\": \"php vendor/bin/phpstan clear-result-cache -c phpstan.neon.dist\",\n        \"qa:rector\": \"php vendor/bin/rector process --dry-run\",\n        \"qa:deptrac\": \"php vendor/bin/deptrac analyse --config-file=config/addressing_deptrac.yaml\",\n        \"gating\": \"@php .gating/bin/gating check --target=. --profile=.gating/.gating/profile/component/_template.yaml --rule-set=tools/qa/addressing-platform-canon.yaml --policy-root=.gating/.gating --severity-config=.gating/.gating/config/severity.yaml\",\n        \"qa:trust-surface\": \"@php tools/php/php84.php tools/qa/AddressTrustSurfaceRunner.php\",\n        \"qa:cs\": \"php vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php\",\n        \"qa:qodana\": \"@qodana\",\n        \"qa\": [\n            \"@qa:phpstan\",\n            \"@qa:deptrac\",\n            \"@qa:trust-surface\",\n            \"@qa:rector\"\n        ],\n        \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n        \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n        \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.p",
+      "package.json": "{\n    \"name\": \"addressing-e2e\",\n    \"private\": true,\n    \"scripts\": {\n        \"test:e2e\": \"playwright test\",\n        \"test:e2e:headed\": \"playwright test --headed\",\n        \"test:e2e:install\": \"playwright install chromium\"\n    },\n    \"devDependencies\": {\n        \"@playwright/test\": \"^1.54.2\"\n    }\n}\n"
+    }
+  }
+}
