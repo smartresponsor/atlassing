@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "temporaring",
+  "title": "Temporaring",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260922094357-temporaring-261c1e\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=chat_bind blockedReason=NEED_DEVTOOLS_BROWSER\u001b[0m",
+  "registry_entry": {
+    "component_id": "temporaring",
+    "component_title": "Temporaring",
+    "github_repository": "smartresponsor/temporaring",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/temporaring/report/index.adoc",
+    "notes": "Active System Tempo engineering repository; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\temporaring",
+    "timestamp_utc": "2026-09-22T09:43:41.196847+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "df5114508c240a7c5c6a210656985b0275db3c24"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": false,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D .gating/config/gate.yaml\n D .gating/config/output.yaml\n D .gating/config/severity.yaml\n D .gating/profile/component/temporaring.yaml\n M composer.json\n M composer.lock\n M composer.prod.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "df51145 test: close Temporaring RC tooling debt\nd5b16eb Close Temporaring Canon041 test tooling\ncb51405 Add Temporaring PHP test coverage baseline\n08a2116 research: strengthen relative tempo compatibility test\n0280fba Harden Temporaring RC contracts and dependency wiring"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".env\n.gating/\n.gating/README.md\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nartifacts/\nartifacts/.gitkeep\nbin/\nbin/check-python.ps1\nbin/console\nbin/setup-python.ps1\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes.yaml\nconfig/services.yaml\nconfig/tempo_gating_profile.yaml\nconfig/tempo_gating_rules.yaml\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage-lock.json\npackage.json\nphpstan.neon\nphpunit.xml.dist\nplaywright.config.js\npublic/\npublic/index.php\npyrightconfig.json\npython/\npython/.pytest_cache/\npython/.venv/\npython/pyproject.toml\npython/src/\npython/tests/\nREADME.md\nresearch/\nresearch/architecture/\nresearch/decisions/\nresearch/hypothesis/\nresearch/notes/\nresearch/problem/\nresearch/README.md\nresearch/roadmap/\nresearch/schema/\nresearch/specification/\nresearch/tasks/\nsrc/\nsrc/Command/\nsrc/DTO/\nsrc/Kernel.php\nsrc/Service/\nsrc/ServiceInterface/\nsrc/TemporaringBundle.php\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/.gitkeep\ntests/Unit/\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvar/coverage/\nvendor/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/gating/\nvendor/interfacing/\nvendor/myclabs/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/php-webdriver/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/react/\nvendor/sebastian/\nvendor/staabm/\nvendor/symfony/\nvendor/tabling/\nvendor/theseer/\nvendor/twig/\nvendor/viewing/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "77"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"temporaring/tempo\",\n  \"description\": \"Temporaring component and System Tempo research orchestration runtime.\",\n  \"type\": \"project\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-ctype\": \"*\",\n    \"ext-iconv\": \"*\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/process\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95.4\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^11.5.55\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Temporaring\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Temporaring\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint:php\": \"php -l src/Kernel.php && php -l src/TemporaringBundle.php && php -l bin/console && php -l public/index.php\",\n    \"lint:yaml\": \"php bin/console lint:yaml config --parse-tags\",\n    \"lint:container\": \"php bin/console lint:container\",\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"phpstan\": \"phpstan analyse --memory-limit=1G\",\n    \"schema:validate\": [\n      \"@putenv DATABASE_URL=sqlite:///:memory:\",\n      \"@putenv INFRA_DATABASE_URL=sqlite:///:memory:\",\n      \"php bin/console doctrine:schema:validate --skip-sync --env=test\"\n    ],\n    \"migrations:up-to-date\": [\n      \"@putenv DATABASE_URL=sqlite:///:memory:\",\n      \"@putenv INFRA_DATABASE_URL=sqlite:///:memory:\",\n      \"php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"schema:parity\": [\n      \"@schema:validate\",\n      \"@migrations:up-to-date\"\n    ],\n    \"gating\": \"php vendor/bin/gating check --target=. --profile=config/tempo_gating_profile.yaml --rule-set=config/tempo_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml\",\n    \"test\": \"phpunit --configuration phpunit.xml.dist\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --configuration phpunit.xml.dist --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n    ",
+      "package.json": "{\n  \"name\": \"temporaring-playwright\",\n  \"private\": true,\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.0\"\n  },\n  \"scripts\": {\n    \"test\": \"npm run test:e2e\",\n    \"test:e2e\": \"playwright test --pass-with-no-tests\"\n  }\n}\n"
+    }
+  }
+}

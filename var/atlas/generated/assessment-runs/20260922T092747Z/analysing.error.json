@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "analysing",
+  "title": "Analysing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260922092824-analysing-4334e9\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=chat_bind blockedReason=NEED_DEVTOOLS_BROWSER\u001b[0m",
+  "registry_entry": {
+    "component_id": "analysing",
+    "component_title": "Analysing",
+    "github_repository": "smartresponsor/analysing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Analysing",
+    "timestamp_utc": "2026-09-22T09:28:18.172085+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/analysing-canon-vendor-20260913"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "9ea6128f0ac2bbd5c59e7cd3f973b2a2144d65c1"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '9ea6128f0ac2bbd5c59e7cd3f973b2a2144d65c1'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D .gating/profile/component/analysing.yaml\nMM composer.json\n M composer.prod.json\nD  tools/analytics-domain-hygiene-guard.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "9ea6128 Harden Analysing RC verification\n68109f4 Complete Analysing RC canonical migration\n416c4f1 Repair automate-kit-sync workflow for Analysing\n660a464 sync\n7805c7c sync"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".console-mcp/\n.console-mcp/local-php-server-8098.json\n.console-mcp/local-php-server-log/\n.editorconfig\n.gating/\n.gating/README.md\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.idea/\n.idea/.gitignore\n.idea/Analytics.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/.editorconfig\nconfig/.gitattributes\nconfig/.gitignore\nconfig/.keep\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/cron/\nconfig/guard/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes.php\nconfig/routes.yaml\nconfig/services.php\nconfig/services.yaml\ndelivery/\ndelivery/rc/\ndocker/\ndocker/docker-compose.yml\ndocker/Dockerfile\ndocker/nginx.conf\ndocker-compose.yml\ndocs/\ndocs/analytics-core-doc-layer-map.md\ndocs/analytics-core-doc-namespace-target.md\ndocs/analytics-core-doc-rwe-sketch9.md\ndocs/analytics-core-doc-source-domain.md\ndocs/component/\ndocs/qa-environment.md\nMANIFEST.md\nmigrations/\nmigrations/.gitkeep\nmigrations/Version20260914083153.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\npackage.json\npatch.py\nphp-cs-fixer.dist.php\nphpmd.xml.dist\nphpstan.neon\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\npsalm.xml\npublic/\npublic/index.php\nqodana.yaml\nREADME.md\nRECONCILIATION_SUMMARY.txt\nrector.neon\nreport/\nreport/analytics-domain-hygiene.txt\nreport/analytics-duplicate-basename.csv\nreport/analytics-interfaceinterface-purge.txt\nreport/analytics-layer-map.json\nreport/analytics-namespace-guard.txt\nreport/analytics-php-header-guard.txt\nreport/analytics-scan-summary.json\nreport/analytics-wave-01-summary.md\nreport/namespace-guard.txt\nreport/sk10-set1-delete.txt\nreport/sk10-set2-delete.txt\nreport/sk10-set3-delete.txt\nreport/sk10-set4-delete.txt\nreport/sk10-set5-delete.txt\nreport/sk10-set6-delete.txt\nreport/sk10-set7-delete.txt\nreport/wave02-added-files.txt\nreport/wave02-changed-files.txt\nreport/wave02-deleted-files.txt\nreport/wave02-diff-summary.json\nreport/wave02-namespace-touched.txt\nreport/wave05-added-files.txt\nreport/wave05-alert-files-after.txt\nreport/wave05-deleted-files.txt\nreport/wave05-diff-summary.json\nreport/wave05-php-lint.txt\nreport/wave05-remaining-domain-alert-refs.txt"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "384"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"analysing/analytics\",\n  \"description\": \"Analysing process package\",\n  \"type\": \"library\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko\",\n      \"email\": \"dev@highhopesamerica.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"doctrine/orm\": \"^3.3\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"psr/log\": \"^3.0\",\n    \"ext-zlib\": \"*\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.20\",\n    \"symfony/var-dumper\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"symfony/panther\": \"^2.4\",\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Analysing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Analysing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"scan\": \"php tools/analytics-scan-layer-map.php\",\n    \"lint:canon\": \"php tools/analytics-scan-layer-map.php\",\n    \"guard:interfaceinterface\": \"php tools/analytics-interfaceinterface-guard.php\",\n    \"guard:namespace\": \"php tools/analytics-namespace-guard.php --mode=report\",\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"qa:env\": \"php tools/qa/AnalyticsQaEnvironmentCheck.php\",\n    \"test\": [\n      \"@qa:env\",\n      \"phpunit\"\n    ],\n    \"analyse\": \"phpstan analyse src --level=max\",\n    \"standalone:smoke\": \"@php bin/console about --env=test\",\n    \"schema:validate\": \"@php bin/console doctrine:schema:validate --env=test\",\n    \"schema:parity\": [\n      \"@schema:validate\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"fix\": \"php-cs-fixer fix --allow-risky=yes\",\n    \"clean:config-garbage\": \"php tools/analytics-config-garbage-clean.php\",\n    \"purge:interfaceinterface\": \"php tools/analytics-interfaceinterface-purge.php\",\n    \"guard:php-header\": \"php tools/analytics-php-header-guard.php\",\n    \"quality\": [\n      \"@analyse\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"config\": {\n    \"sort-packages\": true,\n    \"optimize-autoloader\": true,\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"administering/administration\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n      ",
+      "package.json": "{\n  \"name\": \"analysing-browser-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"test:behavioral-coverage\": \"playwright test && node tools/qa/write-behavioral-ui-coverage.js\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\"\n  }\n}\n"
+    }
+  }
+}

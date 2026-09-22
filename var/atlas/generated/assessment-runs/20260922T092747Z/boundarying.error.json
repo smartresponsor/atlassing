@@ -1,0 +1,67 @@
+{
+  "status": "error",
+  "component": "boundarying",
+  "title": "Boundarying",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260922092930-boundarying-1a6b0e\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=chat_bind blockedReason=NEED_DEVTOOLS_BROWSER\u001b[0m",
+  "registry_entry": {
+    "component_id": "boundarying",
+    "component_title": "Boundarying",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Boundarying",
+    "timestamp_utc": "2026-09-22T09:29:26.659580+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "03d6277e9e75069673ec39534940ffb6c65dfc77"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? AGENTS.md\n?? README.md\n?? boundary-common.md\n?? boundary-common.yaml\n?? boundary-domain-index.md\n?? boundary-domain-index.yaml\n?? boundary-evidence-map.yaml\n?? boundary-examples.md\n?? boundary-global.md\n?? boundary-global.yaml\n?? canonization/\n?? consumer/\n?? docs/\n?? report/\n?? schema/\n?? tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "03d6277 init"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gitattributes\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\nboundary-common.md\nboundary-common.yaml\nboundary-domain-index.md\nboundary-domain-index.yaml\nboundary-evidence-map.yaml\nboundary-examples.md\nboundary-global.md\nboundary-global.yaml\ncanonization/\ncanonization/analytics/\ncanonization/anchoring/\ncanonization/billing/\ncanonization/category/\ncanonization/command/\ncanonization/commerce/\ncanonization/common/\ncanonization/complying/\ncanonization/consuming/\ncanonization/containerizing/\ncanonization/evaluating/\ncanonization/financing/\ncanonization/gating/\ncanonization/indexing/\ncanonization/interfacing/\ncanonization/locating/\ncanonization/message/\ncanonization/mobile-edge/\ncanonization/objecting/\ncanonization/observabiliting/\ncanonization/operation/\ncanonization/order/\ncanonization/paying/\ncanonization/product/\ncanonization/project/\ncanonization/role/\ncanonization/rolling/\ncanonization/runtiming/\ncanonization/shipping/\ncanonization/tag/\ncanonization/tagging/\ncanonization/taxation/\ncanonization/vendor/\nconsumer/\nconsumer/analytics/\nconsumer/anchoring/\nconsumer/billing/\nconsumer/category/\nconsumer/command/\nconsumer/commerce/\nconsumer/complying/\nconsumer/consuming/\nconsumer/containerizing/\nconsumer/evaluating/\nconsumer/financing/\nconsumer/gating/\nconsumer/indexing/\nconsumer/interfacing/\nconsumer/locating/\nconsumer/message/\nconsumer/mobile-edge/\nconsumer/objecting/\nconsumer/observabiliting/\nconsumer/operation/\nconsumer/order/\nconsumer/paying/\nconsumer/product/\nconsumer/project/\nconsumer/rolling/\nconsumer/runtiming/\nconsumer/shipping/\nconsumer/tagging/\nconsumer/taxation/\nconsumer/vendor/\ndocs/\ndocs/milestone/\nREADME.md\nreport/\nreport/evidence/\nschema/\nschema/boundary-v1.schema.json\nschema/evidence-map-v1.schema.json\ntool/\ntool/validate-boundary.ps1\ntool/validate-boundary.sh"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "153"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "interfacing",
+  "title": "Interfacing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260922093411-interfacing-410f89\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=chat_bind blockedReason=NEED_DEVTOOLS_BROWSER\u001b[0m",
+  "registry_entry": {
+    "component_id": "interfacing",
+    "component_title": "Interfacing",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/interfacing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Interfacing",
+    "timestamp_utc": "2026-09-22T09:34:04.858226+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "34c65c769e4306fb5c79395c937bb682d32a42a0"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M composer.json\n M composer.lock\n M composer.prod.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "34c65c7 Document Interfacing RC integration closure\n319cbbe Materialize Interfacing provider build\nbe332c2 Harden Interfacing RC boundaries and tooling\n71f94a8 Recover canonical Interfacing templates\n09aaf65 Normalize Provider handoff template"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.editorconfig\n.env\n.env.dev\n.env.interfacing.example\n.env.test\n.gating/\n.gating/README.md\n.gitattributes\n.github/\n.github/codex/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/inspectionProfiles/\n.idea/Interfacing.iml\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.interfacing/\n.interfacing/workspace/\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nassets/\nassets/app.js\nassets/controllers/\nassets/controllers.json\nassets/navigation_active_state.js\nassets/stimulus_bootstrap.js\nassets/styles/\nassets/vendor/\nbin/\nbin/console\nbin/phpunit\nbin/sync-provider-assets.ps1\nbin/sync-provider-baseline.ps1\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncompose.override.yaml\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/interfacing/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/preload.php\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services/\nconfig/services.yaml\ndocs/\ndocs/interfacing/\ndocs/interfacing-canonical-crud-directory.md\ndocs/interfacing-category-integration.md\ndocs/interfacing-dev-ergonomics.md\ndocs/interfacing-doctor.md\ndocs/interfacing-observability.md\ndocs/interfacing-quick-start.md\ndocs/interfacing-rc1-stab-1.md\ndocs/interfacing-rc1-stab-2.md\ndocs/interfacing-rc1-stab-3-screens.md\ndocs/interfacing-rc1-stab-4-dx-and-tests.md\ndocs/interfacing-renderer-contract.md\ndocs/interfacing-shell-navigation-footer-density.md\ndocs/interfacing-shell-uniformity-audit.md\ndocs/interfacing-sketch-13.md\ndocs/interfacing-sketch-14-error-flash-validation.md\ndocs/interfacing-template-structure-canon.md\ndocs/interfacing.md\ndocs/template-view-prefix-canon.md\nimportmap.php\nInterfacing.zip\nMANIFEST.md\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/.vite-temp/\nnode_modules/@ant-design/\nnode_modules/@babel/\nnode_modules/@chenshuai2144/\nnode_modules/@ctrl/\nnode_modules/@dnd-kit/\nnode_modules/@emotion/\nnode_modules/@esbuild/\nnode_modules/@jridgewell/\nnode_modules/@playwright/\nnode_modules/@rc-component/\nnode_modules/@rolldown/\nnode_modules/@rollup/\nnode_modules/@types/\nnode_modules/@umijs/\nnode_modules/@vitejs/\nnode_modules/add-dom-event-listener/\nnode_modules/antd/\nnode_modules/baseline-browser-mapping/\nnode_modules/browserslist/\nnode_modules/caniuse-lite/\nnode_modules/classnames/\nnode_modules/compute-scroll-into-view/\nnode_modules/convert-source-map/\nnode_modules/copy-to-clipboard/\nnode_modules/csstype/\nnode_modules/dayjs/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1241"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"interfacing/interface\",\n  \"description\": \"Interfacing Symfony package bundle\",\n  \"type\": \"library\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"composer-runtime-api\": \"^2.2\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5.1\",\n    \"ext-ctype\": \"*\",\n    \"ext-iconv\": \"*\",\n    \"objecting/object\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"tabling/table\": \"dev-master\",\n    \"symfony/uid\": \"^8.1\",\n    \"symfony/service-contracts\": \"^3.7\",\n    \"symfony/asset\": \"8.1.*\",\n    \"symfony/asset-mapper\": \"8.1.*\",\n    \"symfony/console\": \"8.1.*\",\n    \"symfony/dependency-injection\": \"8.1.*\",\n    \"symfony/dotenv\": \"8.1.*\",\n    \"symfony/framework-bundle\": \"8.1.*\",\n    \"symfony/form\": \"8.1.*\",\n    \"symfony/intl\": \"8.1.*\",\n    \"symfony/security-core\": \"8.1.*\",\n    \"symfony/twig-bundle\": \"8.1.*\",\n    \"symfony/validator\": \"8.1.*\",\n    \"symfony/yaml\": \"8.1.*\",\n    \"twig/twig\": \"^3.27.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95.4\",\n    \"phpstan/extension-installer\": \"^1.4.3\",\n    \"phpstan/phpstan\": \"^2.2.2\",\n    \"phpstan/phpstan-phpunit\": \"^2.0.16\",\n    \"phpstan/phpstan-symfony\": \"^2.0.19\",\n    \"phpunit/phpunit\": \"^11.5.55\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Interfacing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Interfacing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"replace\": {\n    \"symfony/polyfill-ctype\": \"*\",\n    \"symfony/polyfill-iconv\": \"*\",\n    \"symfony/polyfill-php84\": \"*\"\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"phpstan/extension-installer\": true\n    },\n    \"bump-after-update\": true,\n    \"optimize-autoloader\": true,\n    \"preferred-install\": {\n      \"*\": \"dist\"\n    },\n    \"sort-packages\": true\n  },\n  \"scripts\": {\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"lint\": \"php tools/qa/php-lint.php\",\n    \"lint:yaml\": \"php bin/console lint:yaml config src tests --parse-tags\",\n    \"lint:container\": \"php bin/console lint:container\",\n    \"lint:twig\": \"php bin/console lint:twig templates\",\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"stan\": \"phpstan analyse --memory-limit=1G\",\n    \"serve:dev\": \"php -S 127.0.0.1:8000 -t public public/router.php\",\n    \"test\": \"phpunit\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdeb",
+      "package.json": "{\n  \"name\": \"interfacing-interface-ui\",\n  \"version\": \"0.38.0\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"scripts\": {\n    \"build\": \"npm run ui:build\",\n    \"test:e2e\": \"playwright test\",\n    \"typecheck\": \"npm run ui:check\",\n    \"ui:build\": \"vite build --config .interfacing/workspace/vite.config.ts\",\n    \"ui:check\": \"tsc -p .interfacing/workspace/tsconfig.json --noEmit\",\n    \"ui:audit\": \"npm audit\"\n  },\n  \"dependencies\": {\n    \"@ant-design/icons\": \"^5.6.1\",\n    \"@ant-design/pro-components\": \"^2.8.10\",\n    \"antd\": \"^5.26.7\",\n    \"primeicons\": \"^7.0.0\",\n    \"primereact\": \"^10.9.7\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.55.0\",\n    \"@vitejs/plugin-react\": \"^4.5.2\",\n    \"typescript\": \"^5.8.3\",\n    \"vite\": \"^6.3.5\"\n  },\n  \"engines\": {\n    \"node\": \">=20.0.0\",\n    \"npm\": \">=10.0.0\"\n  },\n  \"overrides\": {\n    \"path-to-regexp\": \"^8.4.0\"\n  }\n}\n"
+    }
+  }
+}

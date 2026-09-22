@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "observabiliting",
+  "title": "Observabiliting",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260922093639-observabiliting-384456\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=chat_bind blockedReason=NEED_DEVTOOLS_BROWSER\u001b[0m",
+  "registry_entry": {
+    "component_id": "observabiliting",
+    "component_title": "Observabiliting",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/observabiliting/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Observabiliting",
+    "timestamp_utc": "2026-09-22T09:36:34.484413+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "feat/canonical-observability"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "030ebb4d80a7442f44e0b4402a86c2cc0c2e56ff"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M composer.json\n M composer.lock\n M composer.prod.json\n M src/Repository/ObservabilityDebugEventRepository.php\n M src/Service/Config/ObservabilityProfileConfigService.php\n?? tests/Functional/ObservabilityDebugEventRepositoryFunctionalTest.php\n?? tests/Unit/Service/Config/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "030ebb4 Cover observability controllers and SQL\na6ad192 Cover observability middleware telemetry\n6d16383 Raise observability service coverage\nd926b65 Expand observability core coverage\n34d061a Harden emitter sampling and contracts"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/docs/\n.automation/packs.json\n.automation/tool/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.console-mcp/\n.console-mcp/local-php-server-8098.json\n.console-mcp/local-php-server-log/\n.env\n.gating/\n.gating/README.md\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/observability_routes_api.yaml\nconfig/observability_services_http.yaml\nconfig/observability_services_misc.yaml\nconfig/observability_services_queue.yaml\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/services.yaml\ndemo/\ndemo/debug-event-demo.ndjson\ndemo/demo.ndjson\ndist/\ndist/assets/\ndist/index.html\ndist/index.php\ndocs/\ndocs/canary-guide.md\ndocs/component/\ndocs/dev-guide.md\ndocs/ops-guide.md\ndocs/README.md\ndocs/usage.md\ndocs/user-guide.md\nindex.html\nmanifest/\nmanifest/observabiliting.gating-profile.yaml\nmigrations/\nmigrations/Version20260914ObservabilityDebugEvent.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/.vite-temp/\nnode_modules/@babel/\nnode_modules/@esbuild/\nnode_modules/@jridgewell/\nnode_modules/@oxc-project/\nnode_modules/@playwright/\nnode_modules/@rolldown/\nnode_modules/@rollup/\nnode_modules/@types/\nnode_modules/@vitejs/\nnode_modules/csstype/\nnode_modules/detect-libc/\nnode_modules/fdir/\nnode_modules/js-tokens/\nnode_modules/lightningcss/\nnode_modules/lightningcss-win32-x64-msvc/\nnode_modules/loose-envify/\nnode_modules/nanoid/\nnode_modules/picocolors/\nnode_modules/picomatch/\nnode_modules/playwright/\nnode_modules/playwright-core/\nnode_modules/postcss/\nnode_modules/react/\nnode_modules/react-dom/\nnode_modules/rolldown/\nnode_modules/scheduler/\nnode_modules/source-map-js/\nnode_modules/tinyglobby/\nnode_modules/typescript/\nnode_modules/vite/\nopenapi/\nopenapi/observability-openapi.yaml\nops/\nops/grafana/\npackage-lock.json\npackage.json\nphpstan.neon\nphpunit.xml.dist\nplaywright.config.ts\npublic/\npublic/index.php\nREADME.md\nsrc/\nsrc/component/\nsrc/Contract/\nsrc/Controller/\nsrc/DTO/\nsrc/Entity/\nsrc/Enum/\nsrc/EventSubscriber/\nsrc/Form/\nsrc/index.css\nsrc/index.tsx\nsrc/Kernel.php"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "205"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"observabiliting/observability\",\n  \"description\": \"Symfony observability instrumentation, telemetry collection, correlation, and diagnostics component.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"promphp/prometheus_client_php\": \"^2.15\",\n    \"psr/cache\": \"^3.0\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-core\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95.4\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Observabiliting\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Observabiliting\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"doctrine:schema:validate\": [\n      \"php bin/console doctrine:schema:validate --skip-sync\",\n      \"@doctrine:schema:diff:read\"\n    ],\n    \"doctrine:migrations:currentness\": \"php bin/console doctrine:migrations:up-to-date --no-interaction\",\n    \"doctrine:schema:diff:read\": \"php tools/schema/observability-schema-diff.php\",\n    \"test\": \"phpunit\",\n    \"test:coverage\": [\n      \"php -r \\\"is_dir('var/coverage') || mkdir('var/coverage', 0777, true);\\\"\",\n      \"php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"test:ui\": \"npm run test:ui\",\n    \"test:behavioral-coverage\": \"php tools/coverage/observability-behavioral-ui-coverage.php\",\n    \"gating\": \"gating check --target=. --profile=manifest/observabiliting.gating-profile.yaml --policy-root=vendor/gating/gate/.gating\",\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\",\n      \"@gating\",\n      \"@gate\"\n    ],\n    \"gate\": \"@php vendor/bin/gating check --target=.\"\n  },\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"administering/administration\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"syml",
+      "package.json": "{\n  \"name\": \"smartresponsor-observability-ui-sketch-11\",\n  \"version\": \"0.0.1-sketch.11\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\",\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\",\n    \"@types/react\": \"^18.3.3\",\n    \"@types/react-dom\": \"^18.3.0\",\n    \"typescript\": \"^5.6.3\",\n    \"vite\": \"^8.3.0\",\n    \"@vitejs/plugin-react\": \"^6.1.1\"\n  }\n}"
+    }
+  }
+}
