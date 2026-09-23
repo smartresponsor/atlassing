@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "status": "CHATGPT_CHAT_DELETE_DONE",
+  "expected_chat_id": "6ab39cdf-ec98-83e9-890b-825273ba2ee1",
+  "selected": {
+    "port": 9223,
+    "id": "7A8D1AFB3F790633619B79E988B519C5",
+    "type": "page",
+    "title": "Addressing Verification Summary",
+    "url": "https://chatgpt.com/c/6ab39cdf-ec98-83e9-890b-825273ba2ee1",
+    "chat_id": "6ab39cdf-ec98-83e9-890b-825273ba2ee1",
+    "has_web_socket_debugger_url": true
+  },
+  "delete": {
+    "ok": true,
+    "status": "CHAT_SOFT_DELETED",
+    "expected_chat_id": "6ab39cdf-ec98-83e9-890b-825273ba2ee1",
+    "close_target": true,
+    "patch_http_status": 200,
+    "patch_http_status_text": "",
+    "patch_body_preview": null,
+    "auth_token_present": true,
+    "href": "https://chatgpt.com/c/6ab39cdf-ec98-83e9-890b-825273ba2ee1",
+    "title": "Addressing Verification Summary"
+  },
+  "target_close": {
+    "ok": true,
+    "status": "TARGET_CLOSE_REQUESTED",
+    "target_id": "7A8D1AFB3F790633619B79E988B519C5",
+    "port": 9223,
+    "body": "Target is closing"
+  },
+  "after": {
+    "ports": [
+      9222,
+      9223
+    ],
+    "attempts": [
+      {
+        "port": 9222,
+        "ok": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:9222"
+      },
+      {
+        "port": 9223,
+        "ok": true,
+        "target_count": 4
+      }
+    ],
+    "total_chatgpt_targets": 4,
+    "empty_home_count": 0,
+    "chat_target_count": 2,
+    "unique_chat_id_count": 2,
+    "duplicate_chat_id_count": 0,
+    "duplicate_chat_ids": [],
+    "empty_home_targets": [],
+    "targets": [
+      {
+        "port": 9223,
+        "id": "2FD46E22FF66586007FEB23788AA38CF",
+        "type": "page",
+        "title": "ChatGPT Plugins | Browse and add plugins to ChatGPT",
+        "url": "https://chatgpt.com/plugins",
+        "chat_id": null,
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "FB1E1A6DF06E383D0C12BE83C04E5241",
+        "type": "page",
+        "title": "ChatGPT",
+        "url": "https://chatgpt.com/#settings/Plugins/plugin_asdk_app_6a387987d2f881918ffe72c70002307c",
+        "chat_id": null,
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "10114A864AE1E563070CEFAE94B8502D",
+        "type": "page",
+        "title": "Read Attached Prompt",
+        "url": "https://chatgpt.com/c/6ab2df72-9f48-83ea-98d3-3595919c88b6",
+        "chat_id": "6ab2df72-9f48-83ea-98d3-3595919c88b6",
+        "has_web_socket_debugger_url": true
+      },
+      {
+        "port": 9223,
+        "id": "D00CB9174A00815C70B7AD941C44D530",
+        "type": "page",
+        "title": "Prompt Artifact Unavailable",
+        "url": "https://chatgpt.com/c/6ab2df86-0cf8-83ea-b91f-abda0c6beb0e",
+        "chat_id": "6ab2df86-0cf8-83ea-b91f-abda0c6beb0e",
+        "has_web_socket_debugger_url": true
+      }
+    ]
+  },
+  "still_visible": false,
+  "policy": {
+    "browser_mutation": true,
+    "chatgpt_host_only": true,
+    "deletes_chat": true,
+    "soft_delete_via_backend_api": true,
+    "requires_expected_chat_id": true,
+    "ordinary_delete_requires_confirm_delete": true,
+    "lifecycle_ready_to_delete_authorization_available": true,
+    "lifecycle_ready_to_delete_requires_true_signal": true,
+    "writes_input": false,
+    "submits_input": false
+  },
+  "tool": "console.write.browser.chatgpt.chat.delete.execute",
+  "bridge": {
+    "ok": true,
+    "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+    "capabilityClass": "atomic",
+    "authorityMode": "legacy",
+    "m5AtomicTransportEnabled": false,
+    "endpoint": "http://127.0.0.1:3334/mcp",
+    "requestTimeoutMs": 120000
+  },
+  "envBootstrap": {
+    "endpoint": "http://127.0.0.1:3334/mcp",
+    "tokenPresent": true,
+    "tokenSource": "env"
+  }
+}
