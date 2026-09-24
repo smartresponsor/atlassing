@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "billing",
+  "title": "Billing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260924095346-billing-ef709e\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=chat_bind blockedReason=NEED_DEVTOOLS_BROWSER\u001b[0m",
+  "registry_entry": {
+    "component_id": "billing",
+    "component_title": "Billing",
+    "github_repository": "smartresponsor/billing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/billing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Billing",
+    "timestamp_utc": "2026-09-24T09:53:13.453920+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "ac0bf4a603bcba8917b443984fb67defa93d271e"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'ac0bf4a603bcba8917b443984fb67defa93d271e'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\n M composer.json\n M composer.lock\n?? .gating/.canonization/\n?? .gating/.commanding/\n?? .gating/.consuming/\n?? .gating/.gating/\n?? .gating/.gitattributes\n?? .gating/.github/\n?? .gating/.gitignore\n?? .gating/.idea/\n?? .gating/.intelligence/\n?? .gating/.php-cs-fixer.dist.php\n?? .gating/AGENTS.md\n?? .gating/CMCP_CHANGELOG.md\n?? .gating/MANIFEST.json\n?? .gating/MIGRATION.gating.md\n?? .gating/composer.json\n?? .gating/composer.lock\n?? .gating/config/\n?? .gating/contract/\n?? .gating/docs/\n?? .gating/gate.ps1\n?? .gating/gate.sh\n?? .gating/linting/\n?? .gating/phpunit.xml.dist\n?? .gating/policy/\n?? .gating/quality/\n?? .gating/run.ps1\n?? .gating/run.sh\n?? .gating/src/\n?? .gating/tests/\n?? .gating/tool/\n?? LICENSE\n?? NOTICE\n?? PRODUCT_CAPABILITY_AUDIT.adoc\n?? composer.prod.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "ac0bf4a6 Activate Objecting metadata in Billing\n50bff409 Activate Objecting metadata policy\n23f98c4d Retain Gating artifact surface\n459f82a0 Canonicalize Billing role topology\n8b54d85e Harden Billing RC package and Objecting contract"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.deptrac.cache\n.editorconfig\n.env\n.env.example\n.env.local\n.env.test\n.env.test.local\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/CODEOWNERS\n.github/docs-producer-registry.json\n.github/ISSUE_TEMPLATE/\n.github/pull_request_template.md\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Billing.iml\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbundles.php\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/reference.php\nconfig/routes.yaml\nconfig/services_dev.yaml\nconfig/services_test.yaml\ndelivery/\ndelivery/rc/\ndeptrac.yaml\ndocs/\ndocs/antora.yml\ndocs/api-error-contract.md\ndocs/api-versioning.md\ndocs/architecture/\ndocs/billing-boundary.md\ndocs/component/\ndocs/documentation-guidelines.md\ndocs/documentation-surface-map.md\ndocs/generated/\ndocs/modules/\ndocs/operations/\ndocs/quality-gates.md\ndocs/release-readiness.md\ndocs/reports/\ndocs/security/\ndocs/testing-strategy.md\nLICENSE\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpdoc.xml.dist\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.js\nPRODUCT_CAPABILITY_AUDIT.adoc"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "716"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"billing/billing\",\n  \"type\": \"symfony-bundle\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"administering/administration\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/orm\": \"^3.3\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/security-core\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"zircote/swagger-php\": \"^5.0\",\n    \"objecting/object\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"deptrac/deptrac\": \"^4.6\",\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"phpstan/extension-installer\": \"^1.4\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Billing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Billing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"config\": {\n    \"sort-packages\": true,\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true,\n      \"phpstan/extension-installer\": true\n    }\n  },\n  \"extra\": {\n    \"symfony\": {\n      \"require\": \"8.*\"\n    }\n  },\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"scripts\": {\n    \"test\": \"@test:phpunit\",\n    \"test:phpunit\": \"vendor/bin/phpunit\",\n    \"cs:fix\": \"php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php\",\n    \"phpstan\": \"php vendor/bin/phpstan analyse src tests --no-progress --level=max\",\n    \"deptrac\": \"php vendor/bin/deptrac analyse --config-file=deptrac.yaml --no-progress --fail-on-uncovered\",\n    \"deptrac:unassigned\": \"php vendor/bin/deptrac debug:unassigned --config-file=deptrac.yaml\",\n    \"deptrac:unused\": \"php vendor/bin/deptrac debug:unused --config-file=deptrac.yaml\",\n    \"docs:openapi\": \"php vendor/bin/openapi src --format yaml --output docs/modules/ROOT/attachments/api/openapi.yaml\",\n    \"docs:phpdoc\": \"php scripts/build-code-reference.php\",\n    \"lint:container:test\": \"@php bin/console lint:container --env=test\",\n    \"lint:yaml\": \"@php bin/console lint:yaml config --parse-tags\",\n    \"docs:openapi:lint\": \"@php bin/console lint:yaml docs/modules/ROOT/attachments/api/openapi.yaml\",\n    \"qa:static\": [\n      \"@lint:container:test\",\n      \"@lint:yaml\",\n      \"@phpstan\",\n      \"@deptrac\",\n      \"@docs:openapi\",\n      \"@docs:openapi:lint\"\n    ],\n    \"qa\": [\n      \"@qa:static\"\n    ],\n    \"test:integration\": \"php scripts/run-billing-test-suite.php integration\",\n    \"test:e2e:ux\": \"php scripts/run-billing-test-suite.php e2e:ux\",\n    \"test:e2e\": \"php scripts/run-billing-test-suite.php e2e\",\n    \"test:package-smoke\": \"php vendor/bin/phpunit tests/Contract/Billing/BillingPackageSmokeTest.php\",\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"quality\": [\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"description\": \"Tenant-aware Billing foundation with Antora and OpenAPI producer surfaces for Smart Responsor-oriented Symfony ecosystems.\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"option",
+      "package.json": "{\n  \"name\": \"billing\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"npm run test:playwright\",\n    \"test:playwright\": \"playwright test --project=api\",\n    \"test:playwright:install\": \"playwright install chromium\",\n    \"test:playwright:headed\": \"playwright test --project=api --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.59.1\"\n  }\n}\n"
+    }
+  }
+}
