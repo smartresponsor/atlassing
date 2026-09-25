@@ -1,5 +1,12 @@
 # CMCP Execution Journal
 
+## 2026-09-25 - Systemic scoring circuit breaker
+
+- Added a consecutive systemic-failure circuit breaker to the Python assessment runner for `SESSION_SUBMIT_NOT_CONFIRMED`, `WATCHDOG_STALE`, and `COMPOSER_OWNERSHIP_NOT_READY`.
+- After three consecutive failures with the same systemic reason, the assessment loop stops issuing further expensive ChatGPT scoring calls and marks the remaining selected components as `CircuitBreakerDeferred` with the triggering reason/component recorded in the run summary.
+- A successful component or a non-systemic component failure resets the systemic streak; unrelated component-level failures therefore do not trip the breaker.
+- Validation green: Python `py_compile`, direct classifier checks, and focused PHPUnit command/runtime suites (12 tests / 60 assertions).
+
 ## engine-20260911143031-atlassing-f2b5f9
 
 ### Iteration 1 — RECONNAISSANCE_AND_BASELINE

@@ -380,6 +380,15 @@ def call_openai(prompt: str, model: str) -> tuple[dict[str, Any], dict[str, Any]
     raise RuntimeError('Responses API did not return structured output text.')
 
 
+SYSTEMIC_CMCP_FAILURE_REASONS = (
+    'SESSION_SUBMIT_NOT_CONFIRMED',
+    'WATCHDOG_STALE',
+    'COMPOSER_OWNERSHIP_NOT_READY',
+)
+
+def classify_systemic_cmcp_failure(error_text: str) -> str | None:
+    return next((token for token in SYSTEMIC_CMCP_FAILURE_REASONS if token in error_text), None)
+
 def call_chatgpt_cli(prompt: str, component_id: str, workspace_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     prompt_dir = ROOT / 'var' / 'atlas' / 'generated' / 'chatgpt-cli'
     prompt_dir.mkdir(parents=True, exist_ok=True)
@@ -729,6 +738,9 @@ def main() -> None:
     latest_components: list[dict[str, Any]] = []
     failures: list[dict[str, Any]] = []
     selected_components = set(args.components or [])
+    systemic_failure_reason: str | None = None
+    systemic_failure_count = 0
+    circuit_breaker: dict[str, Any] | None = None
     for component in registry['repositories']:
         if not component.get('enabled'):
             continue
@@ -798,6 +810,8 @@ def main() -> None:
                 (run_dir / f"{component['component_id']}.request.json").write_text(json.dumps(raw_ai_io['request_payload'], indent=2, ensure_ascii=False), encoding='utf-8')
                 (run_dir / f"{component['component_id']}.response.json").write_text(json.dumps(raw_ai_io['response_payload'], indent=2, ensure_ascii=False), encoding='utf-8')
             assessments.append(item)
+            systemic_failure_reason = None
+            systemic_failure_count = 0
             latest_components.append({
                 'component': component['component_id'],
                 'title': component['component_title'],
@@ -819,6 +833,20 @@ def main() -> None:
             }
             failures.append(failure)
             (run_dir / f"{component['component_id']}.error.json").write_text(json.dumps(failure, indent=2, ensure_ascii=False), encoding='utf-8')
+            error_text = str(exc)
+            reason = classify_systemic_cmcp_failure(error_text)
+            if reason is not None:
+                if reason == systemic_failure_reason:
+                    systemic_failure_count += 1
+                else:
+                    systemic_failure_reason = reason
+                    systemic_failure_count = 1
+                if systemic_failure_count >= 3:
+                    circuit_breaker = {'reason': reason, 'consecutive_failures': systemic_failure_count, 'component': component['component_id']}
+                    break
+            else:
+                systemic_failure_reason = None
+                systemic_failure_count = 0
         finally:
             if cleanup_root is not None:
                 import shutil
@@ -835,8 +863,13 @@ def main() -> None:
             "component": component_id,
             "title": registry_entry.get("component_title", component_id.title()),
             "mode": args.mode,
-            "error_type": "MissingAssessmentArtifact",
-            "error": "Selected component completed without success or error artifact.",
+            "error_type": "CircuitBreakerDeferred" if circuit_breaker else "MissingAssessmentArtifact",
+            "error": (
+                f"Assessment deferred after systemic circuit breaker: reason={circuit_breaker['reason']} "
+                f"consecutive_failures={circuit_breaker['consecutive_failures']} trigger_component={circuit_breaker['component']}"
+                if circuit_breaker
+                else "Selected component completed without success or error artifact."
+            ),
             "registry_entry": registry_entry,
             "facts": {},
         }
@@ -851,6 +884,7 @@ def main() -> None:
         'label': args.label,
         'status': 'failed' if failures else 'ok',
         'selected_components': sorted(selected_components),
+        'circuit_breaker': circuit_breaker,
     }
     (run_dir / 'index.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     update_latest_summary(run_dir, args.mode, latest_components, failures, sorted(selected_components))
