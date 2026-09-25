@@ -114,19 +114,19 @@ if ([string]::IsNullOrWhiteSpace([string]$cmcp.task_id)) {
 }
 
 $taskId = [string]$cmcp.task_id
-$eventTail = Invoke-ConsoleJson -Arguments @('engine', 'event-tail', $taskId, '--limit=50')
-$answerEvent = @($eventTail.events | Where-Object { $_.event -eq 'executor_answer_captured' } | Select-Object -Last 1)
-if (-not $answerEvent) {
-    throw "CMCP native engine did not capture a scoring answer: taskId=$taskId status=$($cmcp.status) blockedStage=$($cmcp.blocked_stage) blockedReason=$($cmcp.blocked_reason)"
-}
-
-$stableText = [string]$answerEvent.data.latest_assistant.text
-if ([string]::IsNullOrWhiteSpace($stableText)) { throw "CMCP native engine captured an empty scoring answer: taskId=$taskId" }
 $taskStatus = Invoke-ConsoleJson -Arguments @('engine', 'task-status', $taskId)
 $chatId = [string]$taskStatus.task.chat_id
 $targetId = [string]$taskStatus.task.target_id
 $cleanup = $null
 try {
+    $eventTail = Invoke-ConsoleJson -Arguments @('engine', 'event-tail', $taskId, '--limit=50')
+    $answerEvent = @($eventTail.events | Where-Object { $_.event -eq 'executor_answer_captured' } | Select-Object -Last 1)
+    if (-not $answerEvent) {
+        throw "CMCP native engine did not capture a scoring answer: taskId=$taskId status=$($cmcp.status) blockedStage=$($cmcp.blocked_stage) blockedReason=$($cmcp.blocked_reason)"
+    }
+
+    $stableText = [string]$answerEvent.data.latest_assistant.text
+    if ([string]::IsNullOrWhiteSpace($stableText)) { throw "CMCP native engine captured an empty scoring answer: taskId=$taskId" }
     $verdict = ConvertFrom-AssistantJson -Text $stableText
 } finally {
     $cleanup = if (-not [string]::IsNullOrWhiteSpace($chatId)) {
