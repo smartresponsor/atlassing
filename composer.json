@@ -1,6 +1,6 @@
 {
   "name": "atlassing/atlas",
-  "description": "Smart Responsor Atlas component for quality, maturity, readiness, and documentation coverage surfaces.",
+  "description": "Atlas component for platform quality, maturity, readiness, and documentation coverage surfaces.",
   "type": "symfony-bundle",
   "license": "proprietary",
   "minimum-stability": "dev",
@@ -9,37 +9,72 @@
     {
       "type": "path",
       "url": "../Collectioning",
-      "options": { "symlink": true, "versions": { "collectioning/collection": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "collectioning/collection": "dev-master"
+        }
+      }
     },
     {
       "type": "path",
       "url": "../Tabling",
-      "options": { "symlink": true, "versions": { "tabling/table": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "tabling/table": "dev-master"
+        }
+      }
     },
     {
       "type": "path",
       "url": "../Cruding",
-      "options": { "symlink": true, "versions": { "cruding/crud": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "cruding/crud": "dev-master"
+        }
+      }
     },
     {
       "type": "path",
       "url": "../Gating",
-      "options": { "symlink": true, "versions": { "gating/gate": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "gating/gate": "dev-master"
+        }
+      }
     },
     {
       "type": "path",
       "url": "../Interfacing",
-      "options": { "symlink": true, "versions": { "interfacing/interface": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "interfacing/interface": "dev-master"
+        }
+      }
     },
     {
       "type": "path",
       "url": "../Objecting",
-      "options": { "symlink": true, "versions": { "objecting/object": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "objecting/object": "dev-master"
+        }
+      }
     },
     {
       "type": "path",
       "url": "../Viewing",
-      "options": { "symlink": true, "versions": { "viewing/view": "dev-master" } }
+      "options": {
+        "symlink": true,
+        "versions": {
+          "viewing/view": "dev-master"
+        }
+      }
     }
   ],
   "require": {
@@ -94,8 +129,10 @@
     "quality": [
       "@cs:check",
       "@phpstan",
-      "@test"
-    ]
+      "@test",
+      "@gate"
+    ],
+    "gate": "@php vendor/bin/gating check --target=."
   },
   "config": {
     "sort-packages": true

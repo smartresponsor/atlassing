@@ -248,3 +248,12 @@ Date: 2026-09-13
 - Current aggregate `composer quality` reaches PHP-CS-Fixer green, PHPStan green, PHPUnit 25/25 / 113 assertions, then fails the newly materialized Canon055 terminology gate. Atlassing-owned clean documentation findings were normalized to neutral platform wording or explicit Smart Responder consumer-domain context.
 - Remaining Canon055 findings are in concurrent dirty Composer/Gating surfaces and the generated/installed `.gating` tree. Those surfaces are not folded into this bounded commit without ownership reconciliation.
 
+### Final integration closure
+
+- Canon055 enforcement in Gating was corrected at the owner: generated consumer `.gating/` artifact documentation is excluded from current-repository terminology scanning. Gating commit `8685a0e` is green and published to `origin/master`.
+- Atlassing Composer/Gating integration was reconciled with the current sibling revisions; human-facing package descriptions now use neutral platform terminology, while machine identifiers remain unchanged.
+- Dated `tool/*-once.ps1` diagnostics are classified as local investigation artifacts and excluded from source control through `.gitignore`; reusable tooling remains tracked.
+- Native scorer migration is retained as product value: `atlas-console-mcp-score-cli.ps1` now uses the CMCP native engine/file-attachment lifecycle instead of the legacy task-bank loop. Its guarded `-Preflight` returns `SYSTEM_READY` with exit 0.
+- Final acceptance: Composer strict validation green; npm behavioral evidence green at functional 5/5, behavioral 4/4, UI 0/0 with absence guard, critical 1/1; profiled Gating 24/24 green; aggregate Composer quality green with PHP-CS-Fixer, PHPStan, PHPUnit 25/25 / 113 assertions, and Canon055 green.
+
+

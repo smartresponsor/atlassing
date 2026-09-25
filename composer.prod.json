@@ -1,6 +1,6 @@
 {
   "name": "atlassing/atlas",
-  "description": "Smart Responsor Atlas production component runtime.",
+  "description": "Atlas production component runtime for the multi-domain SaaS platform.",
   "type": "symfony-bundle",
   "license": "proprietary",
   "minimum-stability": "dev",
@@ -34,6 +34,11 @@
     {
       "type": "vcs",
       "url": "https://github.com/smartresponsor/viewing.git",
+      "no-api": true
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/smartresponsor/gating.git",
       "no-api": true
     }
   ],
@@ -71,5 +76,8 @@
       "database_prefix": "atlas_",
       "surface_owner_root": "atlassing"
     }
+  },
+  "require-dev": {
+    "gating/gate": "dev-master"
   }
 }

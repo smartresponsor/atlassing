@@ -3,7 +3,8 @@
 /test-results/
 /playwright-report/
 /.console-mcp/
-/.gating/
+/.gating/*
+!/.gating/README.md
 /var/
 /.phpunit.cache/
 /.codebase-memory/
@@ -28,3 +29,4 @@ Thumbs.db
 config/reference.php
 __pycache__/
 *.pyc
+/tool/*-once.ps1
