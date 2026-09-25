@@ -35,30 +35,64 @@ function Invoke-ConsoleJson {
     try { return $text | ConvertFrom-Json } catch { throw "Console MCP CLI returned invalid JSON: $text" }
 }
 
-function Invoke-TechnicalChatCleanup {
-    param([Parameter(Mandatory=$true)][string]$ChatId)
+function Invoke-TechnicalChatDelete {
+    param(
+        [Parameter(Mandatory=$true)][string]$ChatId,
+        [Parameter(Mandatory=$true)][bool]$CloseTarget
+    )
 
     $stamp = '{0}-{1}' -f ([DateTimeOffset]::UtcNow.ToString('yyyyMMddTHHmmssfffZ')), ([guid]::NewGuid().ToString('N').Substring(0, 8))
-    $payloadPath = Join-Path $cleanupRuntimeDir "$stamp-delete.payload.json"
-    $resultPath = Join-Path $cleanupRuntimeDir "$stamp-delete.result.json"
+    $phase = if ($CloseTarget) { 'close' } else { 'delete' }
+    $payloadPath = Join-Path $cleanupRuntimeDir "$stamp-$phase.payload.json"
+    $resultPath = Join-Path $cleanupRuntimeDir "$stamp-$phase.result.json"
     $payload = [pscustomobject]@{
         runnerExecutionPlan = [pscustomobject]@{
             tool = 'console.write.browser.chatgpt.chat.delete.execute'
             arguments = [pscustomobject]@{
                 expectedChatId = $ChatId
                 confirmDelete = $true
-                closeTarget = $true
+                closeTarget = $CloseTarget
                 timeoutMs = 10000
             }
         }
     }
     [IO.File]::WriteAllText($payloadPath, ($payload | ConvertTo-Json -Depth 20), [Text.UTF8Encoding]::new($false))
+    $raw = & $consoleMcpBridge -PayloadPath $payloadPath -ResultPath $resultPath 2>&1
+    if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $resultPath -PathType Leaf)) {
+        throw "Console MCP technical chat $phase failed: $($raw | Out-String)"
+    }
+    return Get-Content -Raw -LiteralPath $resultPath | ConvertFrom-Json
+}
+
+function Invoke-TechnicalChatCleanup {
+    param([Parameter(Mandatory=$true)][string]$ChatId)
+
     try {
-        $raw = & $consoleMcpBridge -PayloadPath $payloadPath -ResultPath $resultPath 2>&1
-        if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $resultPath -PathType Leaf)) {
-            return [pscustomobject]@{ ok = $false; status = 'TECHNICAL_CHAT_CLEANUP_FAILED'; chatId = $ChatId; error = (($raw | Out-String).Trim()) }
+        $deleteResult = Invoke-TechnicalChatDelete -ChatId $ChatId -CloseTarget $false
+        $deleteReceipt = if ($deleteResult.delete) { $deleteResult.delete } else { $deleteResult }
+        $deleteConfirmed = ($deleteReceipt.ok -eq $true) -and (@('CHAT_SOFT_DELETED', 'CHAT_ALREADY_DELETED') -contains [string]$deleteReceipt.status)
+        if (-not $deleteConfirmed) {
+            return [pscustomobject]@{
+                ok = $false
+                status = 'TECHNICAL_CHAT_CONVERSATION_DELETE_NOT_CONFIRMED'
+                chatId = $ChatId
+                conversationDelete = $deleteResult
+                targetClose = $null
+            }
         }
-        return Get-Content -Raw -LiteralPath $resultPath | ConvertFrom-Json
+
+        $closeResult = Invoke-TechnicalChatDelete -ChatId $ChatId -CloseTarget $true
+        $closeReceipt = if ($closeResult.delete) { $closeResult.delete } else { $closeResult }
+        $closeDeleteConfirmed = ($closeReceipt.ok -eq $true) -and (@('CHAT_SOFT_DELETED', 'CHAT_ALREADY_DELETED') -contains [string]$closeReceipt.status)
+        $targetCloseRequested = $closeResult.target_close -and ($closeResult.target_close.ok -eq $true)
+
+        return [pscustomobject]@{
+            ok = $deleteConfirmed -and $closeDeleteConfirmed -and $targetCloseRequested
+            status = if ($deleteConfirmed -and $closeDeleteConfirmed -and $targetCloseRequested) { 'TECHNICAL_CHAT_CONVERSATION_DELETED_AND_TARGET_CLOSE_REQUESTED' } else { 'TECHNICAL_CHAT_TARGET_CLOSE_NOT_CONFIRMED' }
+            chatId = $ChatId
+            conversationDelete = $deleteResult
+            targetClose = $closeResult
+        }
     } catch {
         return [pscustomobject]@{ ok = $false; status = 'TECHNICAL_CHAT_CLEANUP_EXCEPTION'; chatId = $ChatId; error = $_.Exception.Message }
     }
