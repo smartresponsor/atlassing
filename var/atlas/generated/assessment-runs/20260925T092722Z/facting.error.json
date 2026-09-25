@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "facting",
+  "title": "Facting",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925093550-facting-d998f8\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=prompt_submit blockedReason=SESSION_SUBMIT_NOT_CONFIRMED\u001b[0m",
+  "registry_entry": {
+    "component_id": "facting",
+    "component_title": "Facting",
+    "github_repository": "smartresponsor/facting",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/facting/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Facting",
+    "timestamp_utc": "2026-09-25T09:35:47.695910+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "feature/facting-journal-shipped-publish-20260824"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "7f55a64c1323c47f0a9a2976a0ce718dd87bbe07"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\n M composer.json\n?? LICENSE\n?? NOTICE"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "7f55a64 fix: align facting doctrine identifier naming\nd29eba2 chore(facting): bound schema parity Docker probe\n5d5e91b docs(facting): record RC verification refresh\n433ea65 Refresh canonical Gating lock reference\neb9e011 Retain Gating artifact surface"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".aiignore\n.commanding/\n.commanding/.gitattributes\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/health.sh\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.console-mcp/\n.console-mcp/powershell-script-run/\n.dockerignore\n.editorconfig\n.env\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/codeStyles/\n.idea/Facting.iml\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/remote-targets.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAGENTS.md\napp/\napp/Kernel.php\nbin/\nbin/canonicalize-runtime.ps1\nbin/console\nbin/schema-parity.ps1\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/service/\nconfig/services.yaml\nconfig/services_test.yaml\ndemo/\ndemo/order/\ndeploy/\ndeploy/docker/\ndeploy/grafana/\ndeploy/helm/\ndeploy/prometheus/\ndoc/\ndoc/architecture.md\ndoc/architecture.svg\ndoc/engineering-audit-2026-02-05.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "324"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"facting/fact\",\n  \"description\": \"Append-oriented auditable business fact ledger for SmartResponsor platform capabilities\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"php\": \">=8.4\",\n    \"ext-json\": \"*\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/process\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"accessing/access\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"ext-pdo\": \"*\",\n    \"ext-pdo_pgsql\": \"*\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"ext-pdo_sqlite\": \"*\"\n  },\n  \"require-dev\": {\n    \"league/openapi-psr7-validator\": \"^0.22.0\",\n    \"nyholm/psr7\": \"^1.8\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Facting\\\\\": \"src/\",\n      \"App\\\\\": \"app/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Facting\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"test\": \"phpunit -c phpunit.xml.dist\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit -c phpunit.xml.dist --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"schema:validate\": [\n      \"@php bin/console doctrine:schema:validate\",\n      \"@php bin/console doctrine:migrations:up-to-date\"\n    ],\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ],\n    \"gate\": \"@php vendor/bin/gating check --target=.\"\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": false\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Accessing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"accessing/access\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Configuring\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"configuring/config\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": ",
+      "package.json": "{\n  \"name\": \"facting-fact-test-ui\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:e2e\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\"\n  },\n  \"engines\": {\n    \"node\": \">=20.0.0\"\n  }\n}\n"
+    }
+  }
+}

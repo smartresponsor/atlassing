@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "retailing",
+  "title": "Retailing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925094158-retailing-f6463f\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=prompt_submit blockedReason=SESSION_SUBMIT_NOT_CONFIRMED\u001b[0m",
+  "registry_entry": {
+    "component_id": "retailing",
+    "component_title": "Retailing",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/retailing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Retailing",
+    "timestamp_utc": "2026-09-25T09:41:53.828893+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "engine/retailing-rc-hardening-20260914"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2785d7e5b5331b8d74964d29cfd924bf7e712f9c"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2785d7e Finalize Retailing production resolution\ne5838e8 Record sibling publication and Stocking blocker\nd04272f Record Retailing database acceptance\n8c555b1 Record Retailing RC integration status\necd2881 Record Retailing RC convergence evidence"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/README.md\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/retail_gating_profile.yaml\nconfig/retail_services_bundle.yaml\nconfig/retail_services_fixtures.yaml\nconfig/services.yaml\nLICENSE\nmigrations/\nmigrations/Version20260812223000.php\nmigrations/Version20260817104500.php\nmigrations/Version20260817132500.php\nmigrations/Version20260817141000.php\nmigrations/Version20260819184500.php\nmigrations/Version20260819223000.php\nmigrations/Version20260819235500.php\nmigrations/Version20260820060000.php\nmigrations/Version20260820063000.php\nmigrations/Version20260821050000.php\nmigrations/Version20260914224500.php\nmigrations/Version20260922153000.php\nmigrations/Version20260924144500.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon\nphpunit.xml.dist\nplaywright.config.ts\nPRODUCT_CAPABILITY_AUDIT.adoc\nsrc/\nsrc/DataFixtures/\nsrc/DependencyInjection/\nsrc/Entity/\nsrc/Enum/\nsrc/EventSubscriber/\nsrc/Factory/\nsrc/Form/\nsrc/Kernel.php\nsrc/Normalizer/\nsrc/Provider/\nsrc/Repository/\nsrc/RetailingBundle.php\nsrc/Service/\nsrc/ValueObject/\ntemplates/\ntemplates/retail/\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/Ui/\ntests/Unit/\ntool/\ntools/\ntools/coverage/\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvar/cmcp-retail-prod-resolve.log\nvar/cmcp-retail-prod-resolve2.log\nvar/cmcp-retail-prod-solver-exit.txt\nvar/coverage/\nvar/coverage.txt\nvar/gating-consumer.superseded.php\nvar/legacy-gating-20260924/\nvar/phpstan/\nvar/phpunit/\nvar/retailing-factory-gitkeep.tmp\nvar/retailing_gating_profile.superseded.yaml\nvendor/\nvendor/.backup-pre-vcs-20260924/\nvendor/administering/\nvendor/api-platform/\nvendor/autoload.php\nvendor/autoload_runtime.php\nvendor/bin/\nvendor/cataloging/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/currencing/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/gating/\nvendor/interfacing/\nvendor/locating/\nvendor/monolog/\nvendor/myclabs/\nvendor/navigating/\nvendor/nelmio/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/php-webdriver/\nvendor/phpdocumentor/\nvendor/phpstan/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "71"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"retailing/retail\",\n  \"description\": \"Retail marketplace product component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"cataloging/catalog\": \"dev-feature/cataloging-post-merge-20260921-v2\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"interfacing/interface\": \"dev-master\",\n    \"locating/location\": \"dev-env/locating-l2\",\n    \"objecting/object\": \"dev-master\",\n    \"pricing/price\": \"dev-master\",\n    \"stocking/stock\": \"dev-master\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.3\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Retailing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Retailing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"administering/administration\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"../Cataloging\"\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"../Locating\"\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"../Navigating\"\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"../Pricing\"\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"../Stocking\"\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"../Currencing\"\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"php-cs-fixer fix\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"test\": \"phpunit\",\n    \"test:coverage\": \"@php tools/coverage/retail-php-coverage.php --coverage-text=var/coverage.txt\",\n    \"test:coverage:path\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-tex",
+      "package.json": "{\n  \"name\": \"retailing-ui-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"playwright:install\": \"playwright install chromium\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.55.0\"\n  }\n}\n"
+    }
+  }
+}

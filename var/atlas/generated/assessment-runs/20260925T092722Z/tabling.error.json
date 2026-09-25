@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "tabling",
+  "title": "Tabling",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925094651-tabling-163fce\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=runtime_capacity blockedReason=WATCHDOG_STALE\u001b[0m",
+  "registry_entry": {
+    "component_id": "tabling",
+    "component_title": "Tabling",
+    "github_repository": "smartresponsor/tabling",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/tabling/report/index.adoc",
+    "notes": "Canonical backend tabular-data component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Tabling",
+    "timestamp_utc": "2026-09-25T09:46:46.977738+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "initial-platform-primitive"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "e42a781348a0150f25e9775b6faf2a67f80cf69a"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": false,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\n M composer.json\n M composer.lock\n M composer.prod.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "e42a781 license: adopt PolyForm Noncommercial 1.0.0\n0110010 Retain Gating artifact surface\nbeb4818 Canonicalize vendor identity fixture\n5d875e1 feat(tabling): add bulk action scope policy (#15)\n7b9be0a Fail closed on table query policy violations (#14)"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.gitignore\n.php-cs-fixer.dist.php\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/services.yaml\nLICENSE\nNOTICE\nphpstan.neon\nphpunit.xml.dist\nREADME.md\nsrc/\nsrc/Builder/\nsrc/DependencyInjection/\nsrc/DTO/\nsrc/Provider/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/TablingBundle.php\ntests/\ntests/Unit/\nvar/\nvar/.php-cs-fixer.cache\nvar/coverage/\nvar/phpstan/\nvar/phpunit/\nvendor/\nvendor/autoload.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/doctrine/\nvendor/ergebnis/\nvendor/evenement/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/myclabs/\nvendor/nikic/\nvendor/phar-io/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/react/\nvendor/sebastian/\nvendor/staabm/\nvendor/symfony/\nvendor/theseer/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "64"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"tabling/table\",\n  \"description\": \"Symfony backend table-definition primitive for provider-neutral columns, filters, actions and security.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\"\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Tabling\\\\\": \"src/\"\n    }\n  },\n  \"extra\": {\n    \"symfony\": {\n      \"bundle\": \"App\\\\Tabling\\\\TablingBundle\"\n    }\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^13.3\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit tests\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --branch-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"php-cs-fixer fix\",\n    \"quality\": [\n      \"@test\",\n      \"@test:coverage\",\n      \"@phpstan\",\n      \"@cs:check\",\n      \"@validate:prod\",\n      \"@gate\"\n    ],\n    \"gate\": \"@php vendor/bin/gating check --target=.\"\n  }\n}\n"
+    }
+  }
+}

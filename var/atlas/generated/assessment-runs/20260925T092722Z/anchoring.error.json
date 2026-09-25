@@ -1,0 +1,67 @@
+{
+  "status": "error",
+  "component": "anchoring",
+  "title": "Anchoring",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925092844-anchoring-b20742\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=prompt_submit blockedReason=SESSION_SUBMIT_NOT_CONFIRMED\u001b[0m",
+  "registry_entry": {
+    "component_id": "anchoring",
+    "component_title": "Anchoring",
+    "github_repository": "smartresponsor/anchoring",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/anchoring/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Anchoring",
+    "timestamp_utc": "2026-09-25T09:28:41.414846+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "main"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2fd8aa71d299ce3b9eac0479da4be693e17579cb"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M sdk/php/composer.json\n?? AGENTS.md\n?? LICENSE\n?? NOTICE"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2fd8aa7 Reduce CLI snapshot drift\n7c9277e Repair CLI build and verification flow\n8150d74 Initial import"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".env.example\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\ncharts/\ncharts/anchoring-verify/\ncompose.local.yml\ncompose.prod.yml\ncompose.yml\ndoc/\ndoc/admin-ui.md\ndoc/api-stability.md\ndoc/auth.md\ndoc/b2.md\ndoc/backup.md\ndoc/billing.md\ndoc/canary.md\ndoc/chain-policy.md\ndoc/chaos.md\ndoc/ci.md\ndoc/compliance/\ndoc/concurrency.md\ndoc/conformance.md\ndoc/dependency-guard.md\ndoc/docker.md\ndoc/docs-ui.md\ndoc/doctor.md\ndoc/dr-cli.md\ndoc/dr-drill.md\ndoc/dr-runbook.md\ndoc/eas-sdk.md\ndoc/eth-anchoring.md\ndoc/evidence-guide.md\ndoc/evidence.md\ndoc/faq.md\ndoc/gap-guard.md\ndoc/hardening-container.md\ndoc/hardening-http.md\ndoc/hardening-k8s.md\ndoc/helm.md\ndoc/images.md\ndoc/incidents-cli.md\ndoc/incidents.md\ndoc/ingestion.md\ndoc/integrity.md\ndoc/jsonld.md\ndoc/key-rotation.md\ndoc/kms.md\ndoc/l2-costs.md\ndoc/l2.md\ndoc/merge-note.md\ndoc/metrics.md\ndoc/multi-region.md\ndoc/observability.md\ndoc/onchain-verify.md\ndoc/ots.md\ndoc/pgp.md\ndoc/privacy/\ndoc/proof-explorer.md\ndoc/providers.md\ndoc/quickstart.md\ndoc/receipt.md\ndoc/receipts.md\ndoc/redis-prod.md\ndoc/redis.md\ndoc/release-notes-template.md\ndoc/release.md\ndoc/rfp-answers.md\ndoc/s3.md\ndoc/sbom-licenses.md\ndoc/schema.md\ndoc/sdk-node.md\ndoc/secrets-policy.md\ndoc/secrets.md\ndoc/security-hardening.md\ndoc/service-verify.md\ndoc/status.md\ndoc/tests.md\ndoc/threat-model.md\ndoc/ui.md\ndoc/upgrade-1.0.md\ndoc/verify-stream.md\ndoc/verify.md\ndoc/webhook.md\nDockerfile.cli\nDockerfile.verify\nenv/\nenv/.env.example\nenv/.env.prod.example\nenv/README.md\nfeed.ndjson\nincidents/\nincidents/INCIDENT-TEMPLATE.md\nLICENSE\nNOTICE\nops/\nops/grafana/\nops/prometheus/\nPATCH-NOTES.txt\npolicy/\npolicy/anchor-policy.json\npolicy/api-keys.json\npolicy/costs.json\npolicy/eas-quotas.json\npolicy/eas.json\npolicy/license-allowlist.json\npolicy/pii-denylist.json\npolicy/tsa.json\npolicy/vault-anchoring.hcl\npublic/\npublic/admin/\npublic/docs/\npublic/openapi/\npublic/proof/\npublic/schema/\npublic/ui/\npublic/vectors/\nREADME-quickstart.md\nREADME.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "282"
+    }
+  }
+}

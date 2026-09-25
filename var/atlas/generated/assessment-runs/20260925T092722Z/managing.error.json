@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "managing",
+  "title": "Managing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925094634-managing-da49ef\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=runtime_capacity blockedReason=WATCHDOG_STALE\u001b[0m",
+  "registry_entry": {
+    "component_id": "managing",
+    "component_title": "Managing",
+    "github_repository": "smartresponsor/managing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/managing/report/index.adoc",
+    "notes": "Active mature component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Managing",
+    "timestamp_utc": "2026-09-25T09:46:25.316265+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/managing-canonical-gates-20260924"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "ec95fc077be92e14673dd5e8ca4ff06965106683"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'ec95fc077be92e14673dd5e8ca4ff06965106683'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? LICENSE\n?? NOTICE\n?? config/reference.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "ec95fc0 Close Managing RC canonical gates\n989ccb0 Close Managing sibling Composer topology\n55675d2 Close compact Managing canonical debt\n5903e63 Retain Gating artifact surface\n724bf5c Integrate canonical Gating package contract"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/powershell-script-run/\n.gating/\n.gating/README.md\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/services.yaml\ndelivery/\ndelivery/patches/\ndelivery/rc/\ndocs/\ndocs/component/\ndocs/examples/\ndocs/manage-content-crud.adoc\ndocs/manage-field-access-visibility-readiness.adoc\ndocs/manage-field-external-rolling-access.adoc\ndocs/manage-field-view-profile-host-activation.adoc\ndocs/manage-field-view-profile-storage.adoc\ndocs/manage-field-visibility-explainability.adoc\ndocs/manage-field-visibility-inspection.adoc\ndocs/manage-final-service-layer-cleanup.adoc\nLICENSE\nmigrations/\nmigrations/.gitkeep\nmigrations/Version20260924190351.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon\nphpunit.xml.dist\nplaywright.config.js\npsalm.xml\nREADME.adoc\nREADME.md\nrector.neon\nsrc/\nsrc/Accessor/\nsrc/Builder/\nsrc/BuilderInterface/\nsrc/Cache/\nsrc/Command/\nsrc/Configurator/\nsrc/Controller/\nsrc/DependencyInjection/\nsrc/Discovery/\nsrc/Entity/\nsrc/Extractor/\nsrc/Factory/\nsrc/FactoryInterface/\nsrc/Filter/\nsrc/FilterInterface/\nsrc/Formatter/\nsrc/Generator/\nsrc/Handler/\nsrc/HandlerInterface/\nsrc/Inspector/\nsrc/InspectorInterface/\nsrc/Instantiator/\nsrc/Kernel.php\nsrc/Labeler/\nsrc/ManagingBundle.php\nsrc/Normalizer/\nsrc/Policy/\nsrc/Provider/\nsrc/ProviderInterface/\nsrc/Reader/\nsrc/ReaderInterface/\nsrc/Registry/\nsrc/RegistryInterface/\nsrc/Renderer/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Resolver/\nsrc/ResolverInterface/\nsrc/Scorer/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Stringifier/\nsrc/Trait/\nsrc/Validator/\nsrc/ValidatorInterface/\nsrc/Value/\nsrc/Workflow/\nsrc/Writer/\nsrc/WriterInterface/\ntemplates/\ntemplates/admin/\ntests/\ntests/Architecture/\ntests/Unit/\ntool/\ntools/\ntools/qa/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "369"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"managing/manage\",\n  \"description\": \"Managing process app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.0\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"rolling/role\": \"dev-master\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/ux-live-component\": \"^3.0\",\n    \"symfony/ux-turbo\": \"^3.0\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"twig/html-extra\": \"^3.24\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.65\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Managing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Managing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"test:coverage\": \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage-summary.txt\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon --memory-limit=1G\",\n    \"cs:check\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff --verbose\",\n    \"cs:fix\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php --verbose\",\n    \"verify:first-party-dependencies\": \"@php tools/qa/managing-first-party-dependency-contour.php\",\n    \"schema:validate\": \"@php bin/console doctrine:schema:validate --env=test\",\n    \"schema:parity\": [\n      \"@php bin/console doctrine:migrations:migrate --no-interaction --env=test\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\",\n      \"@schema:validate\"\n    ],\n    \"quality\": [\n      \"@cs:check\",\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ],\n    \"gate\": \"@php vendor/bin/gating check --target=.\"\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true\n    },\n    \"sort-packages\": true\n  },\n  \"repositories\": [\n    {\n      \"type\": \"vcs\",\n      \"url\": \"git@github.com:smartresponsor/administering.git\"\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"git@github.com:smartresponsor/configuring.git\"\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"vcs\",\n      \"url\": \"git@github.com:taa0662621456/rolling.git\"\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    },\n    {",
+      "package.json": "{\n  \"name\": \"managing-browser-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test --pass-with-no-tests\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\"\n  }\n}\n"
+    }
+  }
+}

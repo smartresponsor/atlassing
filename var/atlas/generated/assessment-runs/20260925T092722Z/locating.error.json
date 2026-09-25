@@ -1,0 +1,70 @@
+{
+  "status": "error",
+  "component": "locating",
+  "title": "Locating",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925093724-locating-c8ab45\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=runtime_capacity blockedReason=WATCHDOG_STALE\u001b[0m",
+  "registry_entry": {
+    "component_id": "locating",
+    "component_title": "Locating",
+    "github_repository": "smartresponsor/locating",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/locating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Locating",
+    "timestamp_utc": "2026-09-25T09:37:17.365194+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "env/locating-l2"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2dc64322c7d4764fffaa7af03d90512ece6c1747"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D src/Service/Provider/Location/Runtime/Resilience/CircuitTuningPolicy.php\n D src/ServiceInterface/Provider/Location/Runtime/Resilience/CircuitTuningPolicyInterface.php\n?? src/Policy/Provider/Location/Runtime/Resilience/CircuitTuningPolicy.php\n?? src/PolicyInterface/Provider/Location/Runtime/Resilience/CircuitTuningPolicyInterface.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2dc6432 refactor: move sla policy to Policy root\n4eb24af refactor: move retry policy to Policy root\n814d56e refactor: move provider quota policies to Policy root\n80f7dc5 refactor: move provider health policies to Policy root\nae1886d refactor: move adaptive ttl policy to Policy root"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".canonization/\n.canonization/Federation/\n.canonization/Governance/\n.canonization/Orchestration/\n.commanding/\n.commanding/.gitattributes\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/git_diff.sh\n.commanding/git_status.sh\n.commanding/git_sync.sh\n.commanding/health.sh\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/logs/\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.console-mcp/\n.console-mcp/powershell-script-run/\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.editorconfig\n.gate/\n.gate/check/\n.gate/contract/\n.gate/gate.ps1\n.gate/gate.sh\n.gate/install/\n.gate/linting/\n.gate/MANIFEST.json\n.gate/policy/\n.gate/quality/\n.gate/README.md\n.gate/run-location-protocol.sh\n.gate/run.ps1\n.gate/run.sh\n.gating/\n.gating/README.md\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.idea/\n.idea/.gitignore\n.idea/codeception.xml\n.idea/inspectionProfiles/\n.idea/Locating.iml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpspec.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.dist.php\n.phpunit.cache/\n.phpunit.cache/test-results\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.semgrep/\n.semgrep/location-security.yml\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/\nAGENTS.md\nbin/\nbin/console\nbin/locator\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/reference.php\nconfig/routes/\nconfig/services.php\ndeploy/\ndeploy/nginx/\ndocs/\ndocs/coding-style.md\ndocs/contributing.md\ndocs/dom-drive-architecture-article.md\ndocs/env.md\ndocs/legacy/\ndocs/locating-canonization-audit-and-milestone.md\ndocs/locating-lc02-root-tooling-cleanup.md\ndocs/locating-lc03-source-inventory-and-class-form.md\ndocs/locating-lc04-entity-first-inventory.md\ndocs/locating-lc05-entity-family-map.md\ndocs/locating-lc06-entity-location-path-normalization.md\ndocs/locating-lc07-service-family-audit.md\ndocs/locating-lc08-service-address-location-path-normalization.md\ndocs/locating-lc09-service-http-location-path-normalization.md\ndocs/locating-lc10-service-batch-location-path-normalization.md\ndocs/locating-lc11-service-observability-location-path-normalization.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1443"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"locating/location\",\n  \"description\": \"Location Symfony-oriented application for normalization, validation, and geocoding workflows.\",\n  \"type\": \"project\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Locating\\\\\": \"src/\"\n    }\n  },\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"navigating/navigation\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^10.5\",\n    \"phpstan/phpstan-phpunit\": \"^2.0\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"config\": {\n    \"process-timeout\": 900\n  },\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"scripts\": {\n    \"lint\": [\n      \"php -l .gate/check/location-entity-first-canon.php\",\n      \"php -l .gate/check/location-protocol-canon.php\",\n      \"php -l .gate/check/location-root-tooling-canon.php\",\n      \"php -l .gate/check/location-source-inventory-canon.php\",\n      \"php -l tools/canon/location-entity-first-inventory.php\",\n      \"php -l tools/canon/location-root-tooling-audit.php\",\n      \"php -l tools/canon/location-source-inventory.php\",\n      \"php -l tools/canon/location-structure-audit.php\",\n      \"php -l .gate/check/location-entity-location-path-canon.php\",\n      \"php -l tools/canon/location-entity-location-path-audit.php\",\n      \"php -l .gate/check/location-service-family-canon.php\",\n      \"php -l tools/canon/location-service-family-audit.php\",\n      \"php -l .gate/check/location-service-address-location-path-canon.php\",\n      \"php -l tools/canon/location-service-address-location-path-audit.php\",\n      \"php -l src/Service/Address/Location/AddressReverseCapability.php\",\n      \"php -l src/Service/Address/Location/AddressSuggestCapability.php\",\n      \"php -l src/ServiceInterface/Address/Location/AddressReverseCapabilityInterface.php\",\n      \"php -l src/ServiceInterface/Address/Location/AddressSuggestCapabilityInterface.php\",\n      \"php -l .gate/check/location-service-http-location-path-canon.php\",\n      \"php -l tools/canon/location-service-http-location-path-audit.php\",\n      \"php -l src/Service/Http/Location/LocationAddressReverseService.php\",\n      \"php -l src/Service/Http/Location/LocationAddressSuggestService.php\",\n      \"php -l src/ServiceInterface/Http/Location/LocationAddressReverseServiceInterface.php\",\n      \"php -l src/ServiceInterface/Http/Location/LocationAddressSuggestServiceInterface.php\",\n      \"php -l .gate/check/location-service-batch-location-path-canon.php\",\n      \"php -l tools/canon/location-service-batch-location-path-audit.php\",\n      \"php -l src/Factory/Batch/Location/AddressBatchJobFactory.php\",\n      \"php -l src/Service/Batch/Location/LocationAddressBatchService.php\",\n      \"php -l src/Service/Batch/Location/LocationAddressBatchServiceMetricDecorator.php\",\n      \"php -l src/FactoryInterface/Batch/Location/AddressBatchJobFactoryInterface.php\",\n      \"php -l src/ServiceInterface/Batch/Location/LocationAddressBatchServiceInterface.php\",\n      \"php -l .gate/check/location-service-observability-location-path-canon.php\",\n      \"php -l tools/canon/location-service-observability-location-path-audit.php\",\n      \"php -l src/Service/Observability/Location/LocationMetricsExportService.php\",\n      \"php -l src/Service/Observability/Location/LocationProviderGovernanceAcknowledgementService.php\",\n      \"php -l src/Service/O"
+    }
+  }
+}

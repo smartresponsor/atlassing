@@ -1,0 +1,67 @@
+{
+  "status": "error",
+  "component": "automating",
+  "title": "Automating",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925092942-automating-5e1b13\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=prompt_submit blockedReason=SESSION_SUBMIT_NOT_CONFIRMED\u001b[0m",
+  "registry_entry": {
+    "component_id": "automating",
+    "component_title": "Automating",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/automating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Automating",
+    "timestamp_utc": "2026-09-25T09:29:38.682516+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "556c55a2ed3f52c6d49993dddcb18f206d2e8b51"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "AD .automation.zip\n M .automation/tool/automater-pack-sync.ps1\n D consumer-src/.github/prompts/prompt-audit.yml\n D consumer-src/.github/workflows/automate-kit-sync.yml\n?? AGENTS.md\n?? consumer-src/.github/workflows/consuming.yml"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "556c55a inspection\nce170f5 Merge remote-tracking branch 'origin/master'\n3640800 fix: not release\nebab9e2 automater pack sync: automate-kit@branch-master\n0de404b fix: not release"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/.gitignore\n.automation/ai/\n.automation/automator/\n.automation/client/\n.automation/demo/\n.automation/docs/\n.automation/lock/\n.automation/packs.json\n.automation/payload/\n.automation/README-automation-kit.txt\n.automation/README.md\n.automation/template/\n.automation/tool/\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\nAGENTS.md\nconsumer-src/\nconsumer-src/.automation/\nconsumer-src/.github/\nconsumer-src/.gitignore"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "53"
+    }
+  }
+}

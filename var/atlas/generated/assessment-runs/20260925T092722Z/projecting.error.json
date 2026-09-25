@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "projecting",
+  "title": "Projecting",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:120\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 120 | \u001b[0m     \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: taskI\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260925094120-projecting-3a04ce\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=prompt_submit blockedReason=SESSION_SUBMIT_NOT_CONFIRMED\u001b[0m",
+  "registry_entry": {
+    "component_id": "projecting",
+    "component_title": "Projecting",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/projecting/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Projecting",
+    "timestamp_utc": "2026-09-25T09:41:13.488735+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "w48-projecting-app-namespace"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "ca413fd29339f5d08b1ee56f83d97dbb7d2c2628"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": true,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M Projecting-zero-controller-full-fix.patch\n?? config/reference.php"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "ca413fd Canonicalize Projecting runtime and RC workflows\nbdfd1b0 Clean empty legacy Projecting schema shadows\ncd66b74 Retain Gating artifact surface\n565011b refactor(projecting): rename Symfony reference canon\n5ce1d4d chore(projecting): refresh Symfony reference catalog"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.env\n.env.example\n.env.projecting_ai_guard.example\n.gating/\n.gating/README.md\n.gitattributes\n.github/\n.github/PULL_REQUEST_TEMPLATE.md\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/codeception.xml\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpspec.xml\n.idea/phpunit.xml\n.idea/Projecting.iml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\nAGENTS.md\nassets/\nassets/controllers/\nbin/\nbin/console\nbin/outbox_worker.php\nbin/php-lint.php\nbin/test_setup.sh\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/.idea/\nconfig/bundles.php\nconfig/component/\nconfig/export-samples/\nconfig/gating/\nconfig/packages/\nconfig/project-template-packs/\nconfig/project-templates/\nconfig/project_services_api_keys.yaml\nconfig/project_services_attachment.yaml\nconfig/project_services_flags.yaml\nconfig/project_services_outbox.yaml\nconfig/project_services_projecting_acceptance_048.yaml\nconfig/project_services_projecting_ai_cache.yaml\nconfig/project_services_projecting_ai_guard.yaml\nconfig/project_services_projecting_audit.yaml\nconfig/project_services_projecting_config.yaml\nconfig/project_services_projecting_dispute_policy.yaml\nconfig/project_services_projecting_evaluation.yaml\nconfig/project_services_projecting_killswitch.yaml\nconfig/project_services_projecting_metric.yaml\nconfig/project_services_projecting_moderation_decision.yaml\nconfig/project_services_projecting_moderation_workflow.yaml\nconfig/project_services_projecting_openapi.yaml\nconfig/project_services_projecting_policy.yaml\nconfig/project_services_projecting_policy_engine.yaml\nconfig/project_services_projecting_policy_evidence.yaml\nconfig/project_services_projecting_policy_explain.yaml\nconfig/project_services_projecting_policy_expression.yaml\nconfig/project_services_projecting_rate_limit.yaml\nconfig/project_services_projecting_schema.yaml\nconfig/project_services_projecting_schema_registry.yaml\nconfig/project_services_projecting_security.yaml\nconfig/project_services_projecting_security_residency.yaml\nconfig/project_services_projecting_wizard_049.yaml\nconfig/project_services_projecting_workflow.yaml\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/template-catalog/\nconfig/testing/\ndocker/\ndocker/nginx.conf\ndocker-compose.yml\nDockerfile\ndocs/\ndocs/acl_enforcement_notes.txt\ndocs/arch/\ndocs/ARCHITECTURE_PROJECTING_059.md\ndocs/component/\ndocs/EDGE.md\ndocs/gating-artifacts.md\ndocs/OTEL.md\ndocs/OTEL_SDK.md\ndocs/project_import_csv_sample.csv\ndocs/projecting/\ndocs/projecting-canon-079.md\ndocs/projecting-kill-switch.md\ndocs/projecting-readiness-horizon-043.md\ndocs/projecting-rollback-guide-064.md\ndocs/projecting-security-hmac.md\ndocs/projecting-test-e2e.md\ndocs/PROJECTIONS.md\ndocs/quota_enforcement_notes.txt\ndocs/rbac_patch_notes.txt\ndocs/rc/\ndocs/RELEASE_NOTES_060.md\ndocs/RETRY.md\ndocs/sla_ui_notes.txt\ndocs/SLO.md\ndocs/UPGRADE_PROJECTING_046.md"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "934"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"projecting/project\",\n  \"description\": \"Projecting standalone Symfony application and reusable Symfony bundle\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/collections\": \"^2.2\",\n    \"doctrine/dbal\": \"^4.0\",\n    \"doctrine/doctrine-bundle\": \"^2.13 || ^3.0\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/migrations\": \"^3.6\",\n    \"doctrine/orm\": \"^3.3\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"ext-json\": \"*\",\n    \"interfacing/interface\": \"dev-master\",\n    \"moneyphp/money\": \"^4.6\",\n    \"nyholm/psr7\": \"^1.8\",\n    \"objecting/object\": \"dev-master\",\n    \"open-telemetry/exporter-otlp\": \"^1.0\",\n    \"open-telemetry/sdk\": \"^1.0\",\n    \"php\": \"^8.4\",\n    \"psr/log\": \"^3.0\",\n    \"symfony/cache\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/workflow\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Projecting\\\\\": \"src/\"\n    }\n  },\n  \"require-dev\": {\n    \"administering/administration\": \"dev-master\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpunit/phpunit\": \"^13.3\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/dom-crawler\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit --colors=always\",\n    \"test:coverage\": \"@php -d memory_limit=-1 -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage-summary.txt --branch-coverage\",\n    \"test:coverage:path-smoke\": \"@php -d memory_limit=-1 -d xdebug.mode=coverage vendor/bin/phpunit tests/Unit/Project/ProjectingObjectIdentityContractTest.php --coverage-text=var/coverage-path-smoke.txt --path-coverage\",\n    \"test:coverage:summary\": \"@php -d memory_limit=-1 -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage-summary.txt\",\n    \"test:object-identity\": \"phpunit --colors=always tests/Unit/Project/ProjectingObjectIdentityContractTest.php\",\n    \"test:behavioral-coverage\": \"@php tool/generate-behavioral-ui-coverage.php\",\n    \"route:callables\": \"@php tool/check-route-callables.php\",\n    \"lint\": \"php bin/php-lint.php\",\n    \"php-cs-fixer\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"gating\": \"@php -d auto_prepend_file=vendor/autoload.php vendor/bin/gating check --target=. --profile=config/gating/project_gating.yaml\",\n    \"schema:validate\": \"php bin/console doctrine:schema:validate --skip-sync --env=test\",\n    \"schema:parity\": [\n      \"php bin/console doctrine:schema:validate --skip-sync --env=test --no-interaction\",\n      \"php bin/console doctrine:migrations:up-to-date --env=test --no-interaction\"\n    ],\n    \"start:dev\": \"php -S 127.0.0.1:8080 -t public\",\n    \"consume\": \"php -d variables_order=EGPCS -r \\\"passthru('php bin/console messenger:consume async -vv', $e); exit($e);\\\"\",\n    \"retry-failed\": \"php -r \\\"passthru('php bin/console messenger:failed:retry --force', $e); exit($e);\\\"\",\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"quality\": [\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"symfony/runtime\": true,\n      \"tbachert/spi\": true,\n      \"php-http/discovery\": true\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"administering/administration\": \"dev-master\"\n        }\n      }\n    },\n",
+      "package.json": "{\n  \"name\": \"projecting-test-surface\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.55.0\"\n  }\n}\n"
+    }
+  }
+}
