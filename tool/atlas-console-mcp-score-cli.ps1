@@ -13,13 +13,13 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $workspaceRoot = Split-Path -Parent $repoRoot
 $consoleRoot = Join-Path $workspaceRoot 'mcp\console-mcp'
 $devConsole = Join-Path $consoleRoot 'tool\dev-console.ps1'
+$cmcpCli = Join-Path $consoleRoot 'bin\cmcp.ps1'
 $chatgptLoopRoot = Join-Path $workspaceRoot 'mcp\chatgpt-loop'
-$taskBankRunner = Join-Path $chatgptLoopRoot 'tool\runner-task-bank-loop.ps1'
 $consoleMcpBridge = Join-Path $chatgptLoopRoot 'tool\runner-console-mcp-bridge.ps1'
 $cleanupRuntimeDir = Join-Path $repoRoot 'var\atlas\generated\chatgpt-cli\cleanup'
 
 if (-not (Test-Path -LiteralPath $devConsole -PathType Leaf)) { throw "Console MCP CLI not found: $devConsole" }
-if (-not (Test-Path -LiteralPath $taskBankRunner -PathType Leaf)) { throw "ChatGPT task-bank runner not found: $taskBankRunner" }
+if (-not (Test-Path -LiteralPath $cmcpCli -PathType Leaf)) { throw "CMCP CLI not found: $cmcpCli" }
 if (-not (Test-Path -LiteralPath $consoleMcpBridge -PathType Leaf)) { throw "Console MCP bridge not found: $consoleMcpBridge" }
 New-Item -ItemType Directory -Force -Path $cleanupRuntimeDir | Out-Null
 
@@ -101,76 +101,56 @@ if (-not (Test-Path -LiteralPath $Workspace -PathType Container)) { throw "Works
 if (-not (Test-Path -LiteralPath $PromptFile -PathType Leaf)) { throw "Prompt file not found: $PromptFile" }
 
 $promptPath = [IO.Path]::GetFullPath($PromptFile)
-$bootstrap = @"
-Quality Atlas scoring task for component $Component.
-The authoritative task prompt is stored at this local file:
-$promptPath
-Read that file through the available Console MCP repository/file capabilities and follow it exactly.
-Assessment only: do not modify, stage, commit, or push the target repository.
-Return only the strict JSON verdict required by the authoritative prompt, with no markdown or commentary.
-"@
-
-$runnerArgs = @{
-    TargetRepo = [IO.Path]::GetFullPath($Workspace)
-    MaxIterations = 1
-    Name = $Component
-    InitialPrompt = $bootstrap
-    PromptMode = 'raw'
-    InitialPromptMode = 'raw'
-    ContinuePromptMode = 'raw'
-    ReasoningEnforcement = 'observe'
+$workspacePath = [IO.Path]::GetFullPath($Workspace)
+$cmcpRaw = & $cmcpCli go $Component 'M5' "--workspace=$workspacePath" "--prompt-file=$promptPath" '--native-engine' '--first-answer-only' '--recover-composer' '--readiness-profile=long_run' 2>&1
+$cmcpText = ($cmcpRaw | Out-String).Trim()
+try {
+    $cmcp = $cmcpText | ConvertFrom-Json -Depth 100
+} catch {
+    throw "CMCP native engine returned invalid JSON: $cmcpText"
 }
-$runner = $null
-$runnerText = $null
-$transientStatuses = @('CMCP_GO_CHAT_EXPERIENCE_BLOCKED', 'CMCP_GO_DRAFTED_BUT_BLOCKED_RATE_LIMIT', 'CMCP_GO_DRAFT_BLOCKED', 'CMCP_GO_SUBMIT_BLOCKED')
-for ($runnerAttempt = 1; $runnerAttempt -le 3; $runnerAttempt++) {
-    $runnerRaw = & $taskBankRunner @runnerArgs 6>$null
-    $runnerText = ($runnerRaw | Out-String).Trim()
-    try {
-        $runner = $runnerText | ConvertFrom-Json
-    } catch {
-        throw "ChatGPT task-bank runner returned invalid JSON: $runnerText"
+if ([string]::IsNullOrWhiteSpace([string]$cmcp.task_id)) {
+    throw "CMCP native engine did not return a task id: status=$($cmcp.status) blockedStage=$($cmcp.blocked_stage) blockedReason=$($cmcp.blocked_reason)"
+}
+
+$taskId = [string]$cmcp.task_id
+$eventTail = Invoke-ConsoleJson -Arguments @('engine', 'event-tail', $taskId, '--limit=50')
+$answerEvent = @($eventTail.events | Where-Object { $_.event -eq 'executor_answer_captured' } | Select-Object -Last 1)
+if (-not $answerEvent) {
+    throw "CMCP native engine did not capture a scoring answer: taskId=$taskId status=$($cmcp.status) blockedStage=$($cmcp.blocked_stage) blockedReason=$($cmcp.blocked_reason)"
+}
+
+$stableText = [string]$answerEvent.data.latest_assistant.text
+if ([string]::IsNullOrWhiteSpace($stableText)) { throw "CMCP native engine captured an empty scoring answer: taskId=$taskId" }
+$taskStatus = Invoke-ConsoleJson -Arguments @('engine', 'task-status', $taskId)
+$chatId = [string]$taskStatus.task.chat_id
+$targetId = [string]$taskStatus.task.target_id
+$cleanup = $null
+try {
+    $verdict = ConvertFrom-AssistantJson -Text $stableText
+} finally {
+    $cleanup = if (-not [string]::IsNullOrWhiteSpace($chatId)) {
+        Invoke-TechnicalChatCleanup -ChatId $chatId
+    } else {
+        [pscustomobject]@{ ok = $false; status = 'TECHNICAL_CHAT_CLEANUP_SKIPPED_CHAT_ID_MISSING'; chatId = $null }
     }
-    if ([int]$runner.submittedCount -ge 1 -and [int]$runner.assistantCapturedCount -ge 1) { break }
-    if ($runnerAttempt -ge 3 -or $transientStatuses -notcontains [string]$runner.finalStatus) { break }
-    Start-Sleep -Seconds (5 * $runnerAttempt)
-}
-
-if ([int]$runner.submittedCount -lt 1 -or [int]$runner.assistantCapturedCount -lt 1) {
-    throw "ChatGPT task-bank runner did not capture a scoring answer after bounded retry: status=$($runner.status) finalStatus=$($runner.finalStatus) failures=$(@($runner.acceptanceFailures) -join ',')"
-}
-if ([string]::IsNullOrWhiteSpace([string]$runner.acceptanceArtifactPath) -or -not (Test-Path -LiteralPath $runner.acceptanceArtifactPath -PathType Leaf)) {
-    throw "ChatGPT task-bank runner did not return an acceptance artifact path."
-}
-
-$acceptance = Get-Content -Raw -LiteralPath $runner.acceptanceArtifactPath | ConvertFrom-Json
-$answerCheck = @($acceptance.answerChecks | Where-Object { $_.captured -eq $true -and [int]$_.textLength -gt 0 } | Select-Object -First 1)
-if (-not $answerCheck -or [string]::IsNullOrWhiteSpace([string]$answerCheck.path) -or -not (Test-Path -LiteralPath $answerCheck.path -PathType Leaf)) {
-    throw "ChatGPT task-bank runner captured an answer but its answer artifact is unavailable."
-}
-$answer = Get-Content -Raw -LiteralPath $answerCheck.path | ConvertFrom-Json
-$stableText = [string]$answer.assistantText
-$verdict = if ($answer.assistantJson) { $answer.assistantJson } else { ConvertFrom-AssistantJson -Text $stableText }
-$cleanup = if (-not [string]::IsNullOrWhiteSpace([string]$runner.chatId)) {
-    Invoke-TechnicalChatCleanup -ChatId ([string]$runner.chatId)
-} else {
-    [pscustomobject]@{ ok = $false; status = 'TECHNICAL_CHAT_CLEANUP_SKIPPED_CHAT_ID_MISSING'; chatId = $null }
 }
 
 [pscustomobject]@{
     ok = $true
-    transport = 'chatgpt-loop-task-bank-raw'
+    transport = 'native-cmcp-engine-file-attachment'
     component = $Component
     verdict = $verdict
     lifecycle = [pscustomobject]@{
-        runner = 'tool/runner-task-bank-loop.ps1'
-        promptMode = 'raw'
+        runner = 'bin/cmcp.ps1'
+        promptTransport = 'FILE_ATTACHMENT'
         promptFile = $promptPath
-        chatId = $runner.chatId
-        targetId = $runner.targetId
-        acceptanceStatus = $runner.acceptanceStatus
-        acceptanceFailures = @($runner.acceptanceFailures)
-        acceptanceArtifactPath = $runner.acceptanceArtifactPath
+        taskId = $taskId
+        chatId = $chatId
+        targetId = $targetId
+        cmcpStatus = $cmcp.status
+        blockedStage = $cmcp.blocked_stage
+        blockedReason = $cmcp.blocked_reason
         cleanup = $cleanup
     }
 } | ConvertTo-Json -Depth 100 -Compress
