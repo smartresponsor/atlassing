@@ -2,7 +2,7 @@
 
 The API owner root is `atlassing`.
 
-The expected public host contour is `atlass.smartresponsor.com`.
+For the Smart Responder consumer domain, the expected public host contour is `atlass.smartresponsor.com`.
 
 Valid route examples:
 

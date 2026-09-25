@@ -237,3 +237,14 @@ Date: 2026-09-13
 - Final `composer gating:check`: 24 rules, 0 failures, one non-blocking Canon042 warning for missing behavioral/UI inventory evidence.
 - Production Composer dependency URLs were cross-checked against local repository wiring where ambiguity existed; the unusual Tabling VCS URL `smartresponsor/tabling-.git` matches the actual sibling repository origin and is not a typo introduced by Atlassing.
 - Pre-commit diff contains five owned files plus the unrelated pre-existing `tool/atlas-console-mcp-score-cli.ps1` modification. Git integration must stage only the five owned files.
+
+### Canon042 evidence closure and Canon055 terminology pass
+
+- Added a repository-owned Canon042 evidence manifest at `config/atlas_behavioral_coverage.yaml` and producer at `tool/generate-behavioral-ui-coverage.php`.
+- The producer is declared through npm as `test:behavioral-coverage`; standard `npm test` runs Playwright tooling, the command test suite, and the evidence producer.
+- Evidence is inventory-based rather than counter-based: functional command surfaces 5/5, behavioral workflows 4/4, critical workflow 1/1. UI is 0/0 only after the producer verifies that no files exist under `src/Controller`, `templates`, or `assets`; a future UI surface with an empty inventory makes the producer fail.
+- `npm test` passes: 11 command tests / 52 assertions and writes `var/coverage/behavioral-ui.json`.
+- Profiled `composer gating:check` is fully green: 24 rules, 0 failures, 0 warnings; Canon042 passes all four thresholds.
+- Current aggregate `composer quality` reaches PHP-CS-Fixer green, PHPStan green, PHPUnit 25/25 / 113 assertions, then fails the newly materialized Canon055 terminology gate. Atlassing-owned clean documentation findings were normalized to neutral platform wording or explicit Smart Responder consumer-domain context.
+- Remaining Canon055 findings are in concurrent dirty Composer/Gating surfaces and the generated/installed `.gating` tree. Those surfaces are not folded into this bounded commit without ownership reconciliation.
+

@@ -2,8 +2,9 @@
   "name": "atlassing-atlas-tests",
   "private": true,
   "scripts": {
-    "test": "playwright test --pass-with-no-tests",
-    "test:ui": "playwright test"
+    "test": "playwright test --pass-with-no-tests && npm run test:behavioral-coverage",
+    "test:ui": "playwright test",
+    "test:behavioral-coverage": "php vendor/bin/phpunit tests/Command && php tool/generate-behavioral-ui-coverage.php"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0"

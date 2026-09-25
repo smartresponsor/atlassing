@@ -33,7 +33,7 @@ Polling can therefore run daily without forcing a full daily rescore of every re
 
 Default task settings:
 
-* task name: `SmartResponsor Atlassing Quality Atlas`
+* Smart Responder consumer-domain task name: `SmartResponsor Atlassing Quality Atlas`
 * poll interval: daily
 * local start time: `04:27`
 * assessment mode: `chatgpt-cli` after successful local `system-ready-status` preflight; otherwise keep `dry-run` while canonical `cmcp go` dispatch is paused

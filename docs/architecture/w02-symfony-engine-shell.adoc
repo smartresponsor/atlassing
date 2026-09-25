@@ -4,7 +4,7 @@ W02 converts the imported Atlas Python engine into a Symfony-oriented component 
 
 Current runtime mode is bundle plus standalone shell.
 
-Atlassing exposes Symfony commands and services for a host application and ships its own `bin/console` for local and `atlass.smartresponsor.com` operations. CI should prefer the Symfony shell and keep the Python engine fallback only as a controlled migration path.
+Atlassing exposes Symfony commands and services for a host application and ships its own `bin/console` for local operations and, for the Smart Responder consumer domain, `atlass.smartresponsor.com` operations. CI should prefer the Symfony shell and keep the Python engine fallback only as a controlled migration path.
 
 
 == Ownership

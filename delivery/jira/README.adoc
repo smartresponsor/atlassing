@@ -1,6 +1,6 @@
 = Jira Import Surface
 
-This folder is reserved for the Smart Responsor uniform Jira-ready delivery surface.
+This folder is reserved for the platform-wide uniform Jira-ready delivery surface.
 
 Required future files:
 

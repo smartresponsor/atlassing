@@ -1,6 +1,6 @@
 # Atlassing / Atlas
 
-`atlassing/atlas` owns the Smart Responsor Atlas responsibility: quality signals, maturity/readiness assessment, documentation coverage, component profiles, dashboard payloads, and host-application surfaces.
+`atlassing/atlas` owns the platform Atlas responsibility: quality signals, maturity/readiness assessment, documentation coverage, component profiles, dashboard payloads, and host-application surfaces.
 
 This repository is separated from `documentating/documentation`:
 
@@ -15,7 +15,7 @@ Atlassing is the canonical owner of Atlas assessment lifecycle and state.
 - Atlassing owns scoring contracts, metric catalogs, probe families, repository registry, assessment schedules, snapshots, generated Atlas payloads, and Atlas API surfaces.
 - Documentating may publish static documentation derived from Atlas outputs, but it does not own the scoring lifecycle.
 - Interfacing may expose interface-level navigation or links to Atlas, but it does not own Atlas scoring state.
-- The public Atlas contour is expected to live under `atlass.smartresponsor.com` when deployed as an own site.
+- For the Smart Responder consumer domain, the public Atlas contour is expected to live under `atlass.smartresponsor.com` when deployed as an own site.
 
 ## Modes
 

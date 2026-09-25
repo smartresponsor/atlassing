@@ -1,0 +1,45 @@
+dimensions:
+  functional:
+    - id: command:atlas:assessment:select
+      source: src/Command/AtlasAssessmentSelectCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: new AtlasAssessmentSelectCommand(
+    - id: command:atlas:assessment:run
+      source: src/Command/AtlasAssessmentRunCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: new AtlasAssessmentRunCommand(
+    - id: command:atlas:assessment:cycle
+      source: src/Command/AtlasAssessmentCycleCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: new AtlasAssessmentCycleCommand(
+    - id: command:atlas:status
+      source: src/Command/AtlasStatusCommand.php
+      evidence: tests/Command/AtlasOperationalCommandTest.php
+      marker: new AtlasStatusCommand(
+    - id: command:atlas:import:documentating-export
+      source: src/Command/AtlasImportDocumentatingExportCommand.php
+      evidence: tests/Command/AtlasOperationalCommandTest.php
+      marker: new AtlasImportDocumentatingExportCommand(
+  behavioral:
+    - id: workflow:assessment-selection
+      source: src/Command/AtlasAssessmentSelectCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: testSelectCommandPassesOptionsAndSurfacesOutput
+    - id: workflow:assessment-run
+      source: src/Command/AtlasAssessmentRunCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: testRunCommandPassesOptionsAndReturnsSuccess
+    - id: workflow:assessment-cycle
+      source: src/Command/AtlasAssessmentCycleCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: testCycleCompletesSuccessfulLifecycle
+    - id: workflow:documentating-import
+      source: src/Command/AtlasImportDocumentatingExportCommand.php
+      evidence: tests/Command/AtlasOperationalCommandTest.php
+      marker: testImportCommandValidatesSourceDirectory
+  ui: []
+  critical:
+    - id: workflow:assessment-cycle
+      source: src/Command/AtlasAssessmentCycleCommand.php
+      evidence: tests/Command/AtlasAssessmentCommandTest.php
+      marker: testCycleCompletesSuccessfulLifecycle
