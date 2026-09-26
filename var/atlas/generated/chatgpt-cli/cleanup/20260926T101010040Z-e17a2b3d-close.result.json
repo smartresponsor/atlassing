@@ -1,0 +1,487 @@
+{
+  "ok": true,
+  "status": "CHATGPT_CHAT_DELETE_DONE",
+  "expected_chat_id": "6ab79792-5cbc-83ea-a5bf-cb16fd346dba",
+  "delete": {
+    "ok": true,
+    "status": "CHAT_ALREADY_DELETED",
+    "expected_chat_id": "6ab79792-5cbc-83ea-a5bf-cb16fd346dba",
+    "close_target": true,
+    "auth_session_http_status": 200,
+    "patch_http_status": 404,
+    "patch_http_status_text": "",
+    "patch_body_preview": null,
+    "auth_token_present": true,
+    "href": "https://chatgpt.com/",
+    "title": "Repository reconnaissance request",
+    "auth_target_id": "C6FEB6C6C92F13CCEEBDDF7E6887BACD",
+    "attempts": [
+      {
+        "target_id": "C6FEB6C6C92F13CCEEBDDF7E6887BACD",
+        "chat_id": null,
+        "settings_surface": false,
+        "ok": true,
+        "status": "CHAT_ALREADY_DELETED",
+        "auth_session_http_status": 200,
+        "patch_http_status": 404,
+        "auth_token_present": true
+      }
+    ]
+  },
+  "deletion_transport": "authenticated_target_broker",
+  "conversation_deleted": true,
+  "resolver": {
+    "ok": false,
+    "status": "CHAT_DELETE_TARGET_NOT_FOUND",
+    "candidate_count": 29,
+    "duplicate_chat_id_count": 0,
+    "inventory": {
+      "ports": [
+        9222,
+        9223
+      ],
+      "attempts": [
+        {
+          "port": 9222,
+          "ok": false,
+          "error": "connect ECONNREFUSED 127.0.0.1:9222"
+        },
+        {
+          "port": 9223,
+          "ok": true,
+          "target_count": 35
+        }
+      ],
+      "total_chatgpt_targets": 35,
+      "empty_home_count": 6,
+      "chat_target_count": 29,
+      "unique_chat_id_count": 29,
+      "duplicate_chat_id_count": 0,
+      "duplicate_chat_ids": [],
+      "empty_home_targets": [
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/C6FEB6C6C92F13CCEEBDDF7E6887BACD",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "C6FEB6C6C92F13CCEEBDDF7E6887BACD",
+          "title": "Repository reconnaissance request",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/C6FEB6C6C92F13CCEEBDDF7E6887BACD",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/C6FEB6C6C92F13CCEEBDDF7E6887BACD"
+        },
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/82534902E7F547B7088146425538B15E",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "82534902E7F547B7088146425538B15E",
+          "title": "Engine reconnaissance request",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/82534902E7F547B7088146425538B15E",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/82534902E7F547B7088146425538B15E"
+        },
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/47126DC46A5FDA9E14A376A4EED611B4",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "47126DC46A5FDA9E14A376A4EED611B4",
+          "title": "Engine task reconnaissance",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/47126DC46A5FDA9E14A376A4EED611B4",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/47126DC46A5FDA9E14A376A4EED611B4"
+        },
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/A0B72958002CA56023C148969FCC9962",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "A0B72958002CA56023C148969FCC9962",
+          "title": "Execute repository reconnaissance",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/A0B72958002CA56023C148969FCC9962",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/A0B72958002CA56023C148969FCC9962"
+        },
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/5C2CB59B67101E5408116ED094F9D570",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "5C2CB59B67101E5408116ED094F9D570",
+          "title": "ChatGPT",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/5C2CB59B67101E5408116ED094F9D570",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/5C2CB59B67101E5408116ED094F9D570"
+        },
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@9aab8632678bdbd60c393455e1394ee523ba682d/inspector.html?ws=127.0.0.1:9223/devtools/page/24BC39E5A4EB0A77A01277DE5361A6EA",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "24BC39E5A4EB0A77A01277DE5361A6EA",
+          "title": "ChatGPT",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/24BC39E5A4EB0A77A01277DE5361A6EA",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/24BC39E5A4EB0A77A01277DE5361A6EA"
+        }
+      ],
+      "targets": [
+        {
+          "port": 9223,
+          "id": "C6FEB6C6C92F13CCEEBDDF7E6887BACD",
+          "type": "page",
+          "title": "Repository reconnaissance request",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "82534902E7F547B7088146425538B15E",
+          "type": "page",
+          "title": "Engine reconnaissance request",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "47126DC46A5FDA9E14A376A4EED611B4",
+          "type": "page",
+          "title": "Engine task reconnaissance",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "A0B72958002CA56023C148969FCC9962",
+          "type": "page",
+          "title": "Execute repository reconnaissance",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "6CB2AAEA3CCDA802747AC5F5F71EBDD1",
+          "type": "page",
+          "title": "Engine task execution",
+          "url": "https://chatgpt.com/c/6ab78b14-c6d0-83ea-866c-d23682fdf427",
+          "chat_id": "6ab78b14-c6d0-83ea-866c-d23682fdf427",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "82A7471CAF1851411C0069FA533B82CA",
+          "type": "page",
+          "title": "Engine reconnaissance request",
+          "url": "https://chatgpt.com/c/6ab78ac9-22d4-83e9-8afb-d69d50a11bb0",
+          "chat_id": "6ab78ac9-22d4-83e9-8afb-d69d50a11bb0",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "8772376751D43BF704C74D07F1386F8A",
+          "type": "page",
+          "title": "Engine task execution",
+          "url": "https://chatgpt.com/c/6ab7893e-2320-83e9-ab4d-571e58313905",
+          "chat_id": "6ab7893e-2320-83e9-ab4d-571e58313905",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "F35443FE8DE61AE140842C33741A8E71",
+          "type": "page",
+          "title": "Execute engine task",
+          "url": "https://chatgpt.com/c/6ab788db-abd8-83ea-8726-ab45893e1009",
+          "chat_id": "6ab788db-abd8-83ea-8726-ab45893e1009",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "37C0F8E62E735D087B822C920996C8B7",
+          "type": "page",
+          "title": "Execute Repository Reconnaissance",
+          "url": "https://chatgpt.com/c/6ab78845-8be8-83e9-ba12-06f9b7e00f31",
+          "chat_id": "6ab78845-8be8-83e9-ba12-06f9b7e00f31",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "20870C476FEFE37D0E454EEDB2E64884",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab787d8-87b8-83ea-98d1-2bc1e8942eea",
+          "chat_id": "6ab787d8-87b8-83ea-98d1-2bc1e8942eea",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "96898E3C1C6E29AA7B353FDADD534ED3",
+          "type": "page",
+          "title": "Repository reconnaissance request",
+          "url": "https://chatgpt.com/c/6ab7875d-180c-83ea-8eea-082e032d17f9",
+          "chat_id": "6ab7875d-180c-83ea-8eea-082e032d17f9",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "784D3585E1DEA9F19420C5F457A39187",
+          "type": "page",
+          "title": "Execute repository reconnaissance",
+          "url": "https://chatgpt.com/c/6ab786d9-3940-83ea-a7d8-72a91462c6e7",
+          "chat_id": "6ab786d9-3940-83ea-a7d8-72a91462c6e7",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "B3F9282F3436307EDA6CD221A1297F0D",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab7867e-ae28-83e9-b726-5c1c7f869db2",
+          "chat_id": "6ab7867e-ae28-83e9-b726-5c1c7f869db2",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "2B80BC9D13447CD0773DDDE80E0B90D7",
+          "type": "page",
+          "title": "Execute Engine Task",
+          "url": "https://chatgpt.com/c/6ab785f8-2cc4-83e9-847c-7498cc026f96",
+          "chat_id": "6ab785f8-2cc4-83e9-847c-7498cc026f96",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "196068B509C1BCF6319CF71D34F3CF4D",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab78575-e4b4-83ea-ba05-d737c00e980d",
+          "chat_id": "6ab78575-e4b4-83ea-ba05-d737c00e980d",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "AF47AC26C3FCA396362FE64D1E3C474D",
+          "type": "page",
+          "title": "Execute engine task",
+          "url": "https://chatgpt.com/c/6ab78522-6398-83ea-81a8-bbc7dcbfabc6",
+          "chat_id": "6ab78522-6398-83ea-81a8-bbc7dcbfabc6",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "4C53C0B4674170A09AFA69AA41B77BF0",
+          "type": "page",
+          "title": "Execute engine task",
+          "url": "https://chatgpt.com/c/6ab78497-3008-83ea-87b7-8e978f6e3fff",
+          "chat_id": "6ab78497-3008-83ea-87b7-8e978f6e3fff",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "F17E330FC976977161176237CF52575E",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab7840b-7f8c-83ea-bd28-fbd0b4cb2f94",
+          "chat_id": "6ab7840b-7f8c-83ea-bd28-fbd0b4cb2f94",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "900475119C753E5BDC680145FCA658EB",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab783bc-d284-83ea-a0c5-cdab8fe4404f",
+          "chat_id": "6ab783bc-d284-83ea-a0c5-cdab8fe4404f",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "612A8E9713EF8260BD316890687E5AC2",
+          "type": "page",
+          "title": "Engine reconnaissance request",
+          "url": "https://chatgpt.com/c/6ab78315-c140-83ea-932d-e285e31bb812",
+          "chat_id": "6ab78315-c140-83ea-932d-e285e31bb812",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "9073705F18193FCE32406204D0E08D4F",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab782bb-14b4-83e9-bace-e0f0f38149dd",
+          "chat_id": "6ab782bb-14b4-83e9-bace-e0f0f38149dd",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "D9C113086FF7470ED6DE96A4FE9AA345",
+          "type": "page",
+          "title": "Reconnaissance request",
+          "url": "https://chatgpt.com/c/6ab7826e-339c-83ea-8135-3f4cafee241e",
+          "chat_id": "6ab7826e-339c-83ea-8135-3f4cafee241e",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "5C2CB59B67101E5408116ED094F9D570",
+          "type": "page",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "6781D83BF219FD048A9458705092954C",
+          "type": "page",
+          "title": "Execute repository reconnaissance",
+          "url": "https://chatgpt.com/c/6ab78170-7824-83e9-827c-94d743362598",
+          "chat_id": "6ab78170-7824-83e9-827c-94d743362598",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "964F1E98559D38C0D6A8DC13C83EFC23",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab78117-8c9c-83ea-8ef1-f6e89c6e0755",
+          "chat_id": "6ab78117-8c9c-83ea-8ef1-f6e89c6e0755",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "5F4D23560ABB81BF6BD4E9D4A36D963C",
+          "type": "page",
+          "title": "Execute engine task",
+          "url": "https://chatgpt.com/c/6ab780cb-40d4-83ea-9766-527bdfcacddc",
+          "chat_id": "6ab780cb-40d4-83ea-9766-527bdfcacddc",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "54A32FD9C02875D83C727A27B7E9D98A",
+          "type": "page",
+          "title": "Reconnaissance and Baseline",
+          "url": "https://chatgpt.com/c/6ab7800c-54dc-83e9-b81b-93fbeb6eb378",
+          "chat_id": "6ab7800c-54dc-83e9-b81b-93fbeb6eb378",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "E601AFEE499716300D839E8DDE4F0277",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab77fc2-1160-83e9-a685-60c39eb4ea70",
+          "chat_id": "6ab77fc2-1160-83e9-a685-60c39eb4ea70",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "23D2A3D18B3EB2B070BE832AB7398AE7",
+          "type": "page",
+          "title": "Execute engine task",
+          "url": "https://chatgpt.com/c/6ab77f76-ece4-83ea-a73d-6f61c859d7ce",
+          "chat_id": "6ab77f76-ece4-83ea-a73d-6f61c859d7ce",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "C128B59320AEE98052FA368CC6D4258F",
+          "type": "page",
+          "title": "Execute engine task",
+          "url": "https://chatgpt.com/c/6ab77eb9-4328-83ea-ba9e-914360ecae9c",
+          "chat_id": "6ab77eb9-4328-83ea-ba9e-914360ecae9c",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "A503B194E024DD7DBE5F81DCEBB43C33",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6ab77e6b-f85c-83e9-9ccf-8e92f2d1534b",
+          "chat_id": "6ab77e6b-f85c-83e9-9ccf-8e92f2d1534b",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "9354F6E8804C532C1DC113DB7B3FBE38",
+          "type": "page",
+          "title": "Execute Repository Reconnaissance",
+          "url": "https://chatgpt.com/c/6ab77e20-3d38-83ea-9a7b-a54a206e3f71",
+          "chat_id": "6ab77e20-3d38-83ea-9a7b-a54a206e3f71",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "B13F901E3D1421CF5643618E412EB167",
+          "type": "page",
+          "title": "Execute pricing task",
+          "url": "https://chatgpt.com/c/6ab77d63-a3ec-83ea-817d-514e72d32c79",
+          "chat_id": "6ab77d63-a3ec-83ea-817d-514e72d32c79",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "CDB8EBD7D2A50DB7B8A260F4214F6493",
+          "type": "page",
+          "title": "Execute reconnaissance task",
+          "url": "https://chatgpt.com/c/6ab77d17-6acc-83ea-a008-5d90b59ccbf0",
+          "chat_id": "6ab77d17-6acc-83ea-a008-5d90b59ccbf0",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "24BC39E5A4EB0A77A01277DE5361A6EA",
+          "type": "page",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        }
+      ]
+    }
+  },
+  "policy": {
+    "browser_mutation": true,
+    "chatgpt_host_only": true,
+    "deletes_chat": true,
+    "soft_delete_via_backend_api": true,
+    "requires_expected_chat_id": true,
+    "ordinary_delete_requires_confirm_delete": true,
+    "lifecycle_ready_to_delete_authorization_available": true,
+    "lifecycle_ready_to_delete_requires_true_signal": true,
+    "writes_input": false,
+    "submits_input": false
+  },
+  "tool": "console.write.browser.chatgpt.chat.delete.execute",
+  "bridge": {
+    "ok": true,
+    "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+    "capabilityClass": "atomic",
+    "authorityMode": "legacy",
+    "m5AtomicTransportEnabled": false,
+    "endpoint": "http://127.0.0.1:3334/mcp",
+    "requestTimeoutMs": 120000
+  },
+  "envBootstrap": {
+    "endpoint": "http://127.0.0.1:3334/mcp",
+    "tokenPresent": true,
+    "tokenSource": "env"
+  }
+}

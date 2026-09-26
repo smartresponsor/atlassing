@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "applicating",
+  "title": "Applicating",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:159\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 159 | \u001b[0m         \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: t\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260926101015-applicating-5415ce\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=answer_capture blockedReason=ANSWER_MAX_WAIT_EXPIRED\u001b[0m",
+  "registry_entry": {
+    "component_id": "applicating",
+    "component_title": "Applicating",
+    "github_repository": "smartresponsor/applicating",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/applicating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Applicating",
+    "timestamp_utc": "2026-09-26T10:10:13.122441+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "2571f3736a0f45ad5b4a0e687813b2ac3884565f"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\n?? .gating/.canonization/\n?? .gating/.commanding/\n?? .gating/.consuming/\n?? .gating/.gating/\n?? .gating/.gitattributes\n?? .gating/.github/\n?? .gating/.gitignore\n?? .gating/.intelligence/\n?? .gating/.php-cs-fixer.dist.php\n?? .gating/AGENTS.md\n?? .gating/CMCP_CHANGELOG.md\n?? .gating/LICENSE\n?? .gating/MANIFEST.json\n?? .gating/MIGRATION.gating.md\n?? .gating/NOTICE\n?? .gating/composer.json\n?? .gating/composer.lock\n?? .gating/config/\n?? .gating/contract/\n?? .gating/docs/\n?? .gating/gate.ps1\n?? .gating/gate.sh\n?? .gating/linting/\n?? .gating/phpunit.xml.dist\n?? .gating/policy/\n?? .gating/quality/\n?? .gating/run.ps1\n?? .gating/run.sh\n?? .gating/src/\n?? .gating/tests/\n?? .gating/tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "2571f37 fix: align Applicating platform identity terminology\n999ce7a chore: ignore Applicating generated runtime artifacts\nb1b2623 refactor: converge Applicating on canonical Symfony structure\nbd2bd8f Retain Gating artifact surface\naa35434 docs: close Applicating RC journal"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".console-mcp/\n.console-mcp/powershell-script-run/\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Applicating.iml\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbootstrap.sh\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/applicating_reference.php\nconfig/applicating_reference.php.bak-name-entity-20260611-071541\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services/\ndelivery/\ndelivery/rc/\ndocker/\ndocker/docker-compose.async.yml\ndocker/docker-compose.otel.yml\ndocker/docker-compose.yml\ndocker/Dockerfile\ndocker/init/\ndockerignore\ndocs/\ndocs/ADMIN_AUTH_ROLES.md\ndocs/ADMIN_CONSOLE.md\ndocs/APPLICATION_WORKSPACE_OVERVIEW.md\ndocs/architecture/\ndocs/CHANGELOG.md\ndocs/component/\ndocs/INSTALL.md\ndocs/MAINTENANCE.md\ndocs/MASTER_BRANCH_ANALYSIS_2026-04-10.md\ndocs/OBSERVABILITY.md\ndocs/OPERATIONS.md\ndocs/RELEASE.md\ndocs/RELEASE_NOTES.md\ndocs/RELIABILITY.md\ndocs/ROLLBACK.md\ndocs/THREAT_MODEL.md\neditorconfig\nenv\nenv.docker\nenv.example\nenv.test\ngitattributes\ngitignore\nhelm/\nhelm/applicating/\nk8s/\nk8s/sealedsecrets/\nLICENSE\nMakefile\nmigrations/\nmigrations/Version20260824184100.php\nNOTICE\npackage.json\nphp-cs-fixer.php\nphpmd.xml.dist"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "620"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"applicating/application\",\n  \"description\": \"Applicating process component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko / Marketing America Corp\",\n      \"email\": \"17111337+taa0662621456@users.noreply.github.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5.1\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/doctrine-bridge\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/var-exporter\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"nelmio/api-doc-bundle\": \"^5.8\",\n    \"phpmd/phpmd\": \"3.x-dev@dev\",\n    \"pdepend/pdepend\": \"3.x-dev@dev\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/debug-bundle\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/web-profiler-bundle\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint\": \"@php tools/php/php84.php tools/qa/ApplicationPhpLint.php\",\n    \"lint:service-interface-parity\": \"@php tools/php/php84.php tools/linter/applicating_service_interface_parity_check.php\",\n    \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n    \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n    \"stan\": \"@stan:runtime-target\",\n    \"stan:conservative\": \"@php tools/php/php82.php vendor/bin/phpstan analyse\",\n    \"stan:runtime-target\": \"@php tools/php/php84.php vendor/bin/phpstan analyse\",\n    \"md\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze src --format=text --ruleset=phpmd.xml.dist\",\n    \"md:tests\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze tests --format=text --ruleset=phpmd.xml.dist\",\n    \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n    \"test:unit\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite unit\",\n    \"test:integration\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite integration\",\n    \"test:functional\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite functional\",\n    \"test:panther\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:e2e\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:playwright\": \"npm run test:playwright\",\n    \"test:coverage\": [\n      \"@php -r \\\"is_dir('var/cover",
+      "package.json": "{\n  \"name\": \"applicating\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:playwright\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.53.2\"\n  }\n}\n"
+    }
+  }
+}

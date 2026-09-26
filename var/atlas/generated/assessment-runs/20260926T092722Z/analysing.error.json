@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "analysing",
+  "title": "Analysing",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:159\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 159 | \u001b[0m         \u001b[36;1mthrow \"CMCP native engine did not capture a scoring answer: t\u001b[0m …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mCMCP native engine did not capture a scoring answer: taskId=engine-20260926094852-analysing-c5d2ef\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mstatus=ENGINE_CLI_GO_CYCLE_BLOCKED blockedStage=answer_capture blockedReason=ANSWER_MAX_WAIT_EXPIRED\u001b[0m",
+  "registry_entry": {
+    "component_id": "analysing",
+    "component_title": "Analysing",
+    "github_repository": "smartresponsor/analysing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/analysing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Analysing",
+    "timestamp_utc": "2026-09-26T09:48:47.850147+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/analysing-canon-vendor-20260913"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "21caa1c45c4aac07e1301881901caf6fbf1489fb"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '21caa1c45c4aac07e1301881901caf6fbf1489fb'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\nMM composer.json\n M composer.prod.json\nD  tools/analytics-domain-hygiene-guard.php\n?? LICENSE\n?? NOTICE"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "21caa1c Retain Gating artifact surface\n9ea6128 Harden Analysing RC verification\n68109f4 Complete Analysing RC canonical migration\n416c4f1 Repair automate-kit-sync workflow for Analysing\n660a464 sync"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".console-mcp/\n.console-mcp/local-php-server-8098.json\n.console-mcp/local-php-server-log/\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitleaks.toml\n.idea/\n.idea/.gitignore\n.idea/Analytics.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/.editorconfig\nconfig/.gitattributes\nconfig/.gitignore\nconfig/.keep\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/cron/\nconfig/guard/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes.php\nconfig/routes.yaml\nconfig/services.php\nconfig/services.yaml\ndelivery/\ndelivery/rc/\ndocker/\ndocker/docker-compose.yml\ndocker/Dockerfile\ndocker/nginx.conf\ndocker-compose.yml\ndocs/\ndocs/analytics-core-doc-layer-map.md\ndocs/analytics-core-doc-namespace-target.md\ndocs/analytics-core-doc-rwe-sketch9.md\ndocs/analytics-core-doc-source-domain.md\ndocs/component/\ndocs/qa-environment.md\nLICENSE\nMANIFEST.md\nmigrations/\nmigrations/.gitkeep\nmigrations/Version20260914083153.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage.json\npatch.py\nphp-cs-fixer.dist.php\nphpmd.xml.dist\nphpstan.neon\nphpunit.xml.dist\nphpunit.xsd"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "386"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"analysing/analytics\",\n  \"description\": \"Analysing process package\",\n  \"type\": \"library\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko\",\n      \"email\": \"dev@highhopesamerica.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"doctrine/orm\": \"^3.3\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"psr/log\": \"^3.0\",\n    \"ext-zlib\": \"*\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"friendsofphp/php-cs-fixer\": \"^3.20\",\n    \"symfony/var-dumper\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"symfony/panther\": \"^2.4\",\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Analysing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Analysing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"scan\": \"php tools/analytics-scan-layer-map.php\",\n    \"lint:canon\": \"php tools/analytics-scan-layer-map.php\",\n    \"guard:interfaceinterface\": \"php tools/analytics-interfaceinterface-guard.php\",\n    \"guard:namespace\": \"php tools/analytics-namespace-guard.php --mode=report\",\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"qa:env\": \"php tools/qa/AnalyticsQaEnvironmentCheck.php\",\n    \"test\": [\n      \"@qa:env\",\n      \"phpunit\"\n    ],\n    \"analyse\": \"phpstan analyse src --level=max\",\n    \"standalone:smoke\": \"@php bin/console about --env=test\",\n    \"schema:validate\": \"@php bin/console doctrine:schema:validate --env=test\",\n    \"schema:parity\": [\n      \"@schema:validate\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"fix\": \"php-cs-fixer fix --allow-risky=yes\",\n    \"clean:config-garbage\": \"php tools/analytics-config-garbage-clean.php\",\n    \"purge:interfaceinterface\": \"php tools/analytics-interfaceinterface-purge.php\",\n    \"guard:php-header\": \"php tools/analytics-php-header-guard.php\",\n    \"quality\": [\n      \"@analyse\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"config\": {\n    \"sort-packages\": true,\n    \"optimize-autoloader\": true,\n    \"allow-plugins\": {\n      \"symfony/runtime\": true\n    }\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"administering/administration\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"o",
+      "package.json": "{\n  \"name\": \"analysing-browser-tests\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"test:behavioral-coverage\": \"playwright test && node tools/qa/write-behavioral-ui-coverage.js\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.63.0\"\n  }\n}\n"
+    }
+  }
+}
