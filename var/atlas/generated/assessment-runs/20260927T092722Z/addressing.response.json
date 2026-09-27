@@ -1,0 +1,191 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "addressing",
+  "verdict": {
+    "component": "addressing",
+    "summary": "Addressing remains architecturally strong and broadly instrumented for RC validation, but the current repository cannot be considered all-green: the read-only RC validation is blocked because the default composer phpstan path loads phpstan.neon containing two unsupported PHPStan configuration keys. Composer validation, repository-wide PHP lint, and Composer security audit are green. The existing runtime on port 8000 is not running, so behavioral/UI evidence was not verified; no restart was performed under the READ_ONLY and REUSE_EXISTING_FIRST contract.",
+    "strengths": [
+      "Symfony 8.1 / PHP 8.4 dependency baseline with explicit component dependencies and a substantial Symfony-oriented Addressing implementation.",
+      "Broad QA surface is present: PHPStan, Psalm, PHPUnit suites, Deptrac, Rector, PHP-CS-Fixer, Gating, security checks, Panther, Playwright, smoke probes, Doctrine parity checks, and inspection reports.",
+      "composer validate --strict --check-lock passed.",
+      "Repository PHP lint passed for 209 PHP files during RC validation.",
+      "composer audit reported no security vulnerability advisories.",
+      "RC validator found no blocking canon violations; the two canon findings are warning-level TODO/placeholder markers.",
+      "Visual Gallery service is healthy and reachable."
+    ],
+    "risks": [
+      "Current composer phpstan fails before analysis because phpstan.neon contains unsupported checkMissingIterableValueType and checkGenericClassInNonGenericObjectType settings.",
+      "The assessed HEAD remains on rc/addressing-rc-final-v3 without an exact release tag.",
+      "A pre-existing modification to .gating/README.md remains in the working tree and was deliberately left untouched.",
+      "The managed Addressing PHP runtime on 127.0.0.1:8000 is not running, so runtime, Panther, Playwright, and user-flow behavior were not verified in this read-only assessment.",
+      "No current all-green aggregate evidence bundle was established for PHPStan, PHPUnit, Gating, Deptrac, Rector, style, security, Doctrine parity, and E2E together."
+    ],
+    "next_actions": [
+      "Reconcile phpstan.neon with the current PHPStan 2.x configuration surface; phpstan.neon.dist already omits the two unsupported keys.",
+      "After the PHPStan configuration is corrected in a WRITE_ALLOWED task, rerun composer phpstan and the repository's canonical qa/full and gating paths.",
+      "Run the applicable PHPUnit, security, Doctrine parity, and dependency-boundary checks and retain an all-green RC evidence bundle.",
+      "For a task requiring behavioral/UI acceptance, reuse an existing healthy runtime if available or start it only under appropriate write/runtime authority, then execute the configured Panther/Playwright paths and capture visual evidence under the central workspace artifact contract.",
+      "Keep the pre-existing .gating/README.md work isolated unless its owner explicitly includes it in the RC closure.",
+      "Only after deterministic gates are green should the RC branch reconciliation and exact release tagging be treated as closure work."
+    ],
+    "notes": [
+      "No repository source, configuration, Git staging, commit, push, or destructive mutation was performed.",
+      "The RC validator was invoked with evidence writing disabled; its modeled var/rc-run paths were not persisted.",
+      "The RC validation command classified the PHPStan failure as configuration_failure with readiness blocker validation_failed.",
+      "The current task specification identifies the component as Addressing, repository smartresponsor/addressing, default branch master, with the supplied assessment snapshot and deterministic repository facts. fileciteturn0file0L5-L10",
+      "Visual evidence: NOT_VERIFIED. No new screenshot was produced because this reconnaissance task contains no user-observable UI change and the existing runtime probe was not healthy.",
+      "http://100.101.253.65:9477/Addressing/today"
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      "README.md",
+      "composer.json",
+      "phpstan.neon",
+      "phpstan.neon.dist",
+      "phpunit.xml.dist",
+      "config/address_deptrac.yaml",
+      "tools/qa/addressing-platform-canon.yaml",
+      ".github/workflows/addressing-gate-master.yml",
+      ".gating/README.md",
+      "docs/page/RELEASE_CHECKLIST.md"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.1,
+      "architecture": 9.1,
+      "runtime": 8.3,
+      "qa": 8.7,
+      "ops": 8.7,
+      "market": 7.9,
+      "overall": 8.5
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity remains clearly established as the Addressing address-lifecycle application/component, while the current reconnaissance adds engineering evidence rather than new end-user or market validation.",
+        "risks": [
+          "Market-facing usage and adoption evidence remain outside the supplied repository evidence."
+        ],
+        "improvements": [
+          "Preserve repository-driven product identity evidence and supplement future assessments with validated product usage or outcome evidence."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture remains strongly evidenced by the Symfony 8.1 / PHP 8.4 baseline, explicit first-party component dependencies, layered implementation, Deptrac configuration, canon rules, and substantial RC remediation history.",
+        "risks": [
+          "Final post-release architectural stability is not yet evidenced because the assessed HEAD remains on an untagged RC branch."
+        ],
+        "improvements": [
+          "Preserve Deptrac and canon enforcement as release gates and close the RC only after the deterministic validation failure is resolved."
+        ],
+        "evidence": [
+          "composer.json",
+          "AGENTS.md",
+          "config/address_deptrac.yaml",
+          "tools/qa/addressing-platform-canon.yaml",
+          "README.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime capability remains materially supported by the standalone Symfony runtime, Doctrine integration, smoke tooling, HTTP surface, and runtime-oriented tests, but no live Addressing runtime was available during this assessment.",
+        "risks": [
+          "The managed 127.0.0.1:8000 runtime was not running, so current behavioral and long-running runtime behavior were not verified."
+        ],
+        "improvements": [
+          "On the next behavior-bearing task, probe/reuse the managed runtime and execute applicable smoke and E2E checks without unnecessary restart."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json",
+          "phpunit.xml.dist"
+        ]
+      },
+      "qa": {
+        "summary": "QA breadth remains strong, but current RC validation is not green because composer phpstan fails at configuration loading before static analysis begins.",
+        "risks": [
+          "phpstan.neon contains unsupported checkMissingIterableValueType and checkGenericClassInNonGenericObjectType options.",
+          "The current execution did not establish fresh green results for every configured PHPUnit, Gating, Deptrac, Rector, security, Doctrine, Panther, and Playwright suite."
+        ],
+        "improvements": [
+          "Align phpstan.neon with the current PHPStan configuration contract and then archive a fresh aggregate all-green QA evidence bundle."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpstan.neon.dist",
+          "composer.json",
+          "phpunit.xml.dist",
+          "tools/qa/addressing-platform-canon.yaml"
+        ]
+      },
+      "ops": {
+        "summary": "Operational scaffolding remains mature, with CI workflows, release tooling, security automation, smoke infrastructure, and a healthy central Visual Gallery, but current RC readiness is blocked by deterministic validation and release closure remains incomplete.",
+        "risks": [
+          "The assessed commit remains untagged on an RC branch.",
+          "The worktree contains a pre-existing .gating/README.md modification.",
+          "No current production monitoring, rollback execution, deployment-topology evidence, or complete behavioral acceptance run was established in this assessment."
+        ],
+        "improvements": [
+          "Resolve the deterministic blocker, gather full release evidence, isolate unrelated dirty work, and only then reconcile/tag the RC."
+        ],
+        "evidence": [
+          ".github/workflows/addressing-gate-master.yml",
+          "composer.json",
+          "docs/page/RELEASE_CHECKLIST.md",
+          ".gating/README.md"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing alignment remains materially present in the existing snapshot, but this repository reconnaissance provides no new adoption, customer, or market-validation evidence.",
+        "risks": [
+          "Engineering maturity must not be treated as direct evidence of market validation."
+        ],
+        "improvements": [
+          "Supplement future Atlas assessments with usage, consumer integration, or portfolio-level adoption evidence."
+        ],
+        "evidence": [
+          "README.md"
+        ]
+      },
+      "overall": {
+        "summary": "Addressing remains a strong RC-stage component with mature architecture and extensive quality/release scaffolding, but the current deterministic PHPStan configuration failure prevents an all-green RC assessment and live behavioral evidence was not established.",
+        "risks": [
+          "RC validation currently reports validation_failed because composer phpstan cannot load its configuration.",
+          "The assessed HEAD is untagged and remains on rc/addressing-rc-final-v3.",
+          "Behavioral/UI verification is NOT_VERIFIED because no healthy existing runtime was available."
+        ],
+        "improvements": [
+          "Repair the PHPStan configuration drift, rerun the complete deterministic gate set, capture applicable behavioral evidence, then perform release-branch reconciliation and exact tagging."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpstan.neon.dist",
+          "composer.json",
+          ".github/workflows/addressing-gate-master.yml",
+          "README.md",
+          "tools/qa/addressing-platform-canon.yaml"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\addressing.prompt.txt",
+    "taskId": "engine-20260927093801-addressing-917dae",
+    "chatId": "6ab8e408-c3c0-83e9-a5e3-df65fcde0634",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ab8e408-c3c0-83e9-a5e3-df65fcde0634",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "addressing",
+    "component_title": "Addressing",
+    "github_repository": "smartresponsor/addressing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/addressing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Addressing",
+    "timestamp_utc": "2026-09-27T09:37:58.091156+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/addressing-rc-final-v3"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "4fad15ff421bb3ef1ebf1843bc502468f1823f46"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '4fad15ff421bb3ef1ebf1843bc502468f1823f46'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "4fad15f Align Addressing license metadata\n0038104 Align Addressing fixer configs\n1bc3018 Fix Addressing lifecycle test style\n9c99c99 Record Addressing RC gate convergence\n57bbdf5 Harden Addressing mutation scripts"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/packs.json\n.automation/README.md\n.automation/tool/\n.canonization/\n.canonization/.idea/\n.codex/\n.codex/config.toml\n.commanding/\n.commanding/.gitignore\n.commanding/commanding.cmd\n.commanding/commanding.lnk\n.commanding/commanding.sh\n.commanding/docker/\n.commanding/git/\n.commanding/lib/\n.commanding/logs/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/run.sh\n.commanding/sh/\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.deptrac.cache\n.dist/\n.dist/evidence/\n.editorconfig\n.env\n.env.dist\n.env.test.dist\n.gate/\n.gate/check/\n.gate/env/\n.gate/install/\n.gate/report/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/codex/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitlab-ci.yml\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/Addressing.iml\n.idea/bin/\n.idea/dataSources.local.xml\n.idea/dataSources.xml\n.idea/inspectionProfiles/\n.idea/jsLibraryMappings.xml\n.idea/jsonCatalog.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php-test-framework.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/sqldialects.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/\nAGENTS.md\nbin/\nbin/address-apply-validated"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "539"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"addressing/address\",\n  \"description\": \"Addressing process app\",\n  \"type\": \"library\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-curl\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^2.15 || ^3.0\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/intl\": \"^8.1\",\n    \"symfony/property-access\": \"^8.1\",\n    \"symfony/property-info\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/security-csrf\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/translation\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/uid\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.24\"\n  },\n  \"require-dev\": {\n    \"dbrekelmans/bdi\": \"^1.4\",\n    \"deptrac/deptrac\": \"^3.0\",\n    \"fakerphp/faker\": \"^1.23\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^12.5\",\n    \"rector/rector\": \"^2.6\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"vimeo/psalm\": \"^7.0\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Addressing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint\": \"@php tools/qa/AddressPhpLint.php\",\n    \"phpstan\": \"vendor/bin/phpstan analyse src --level=max\",\n    \"psalm\": \"vendor/bin/psalm\",\n    \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit -c phpunit.xml.dist --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"stan\": \"@stan:conservative\",\n    \"rector:dry\": \"vendor/bin/rector process --dry-run\",\n    \"rector:fix\": \"php vendor/bin/rector process\",\n    \"qodana\": \"pwsh -NoProfile -ExecutionPolicy Bypass -File bin/qodana-local.ps1\",\n    \"quality\": [\n      \"@stan\",\n      \"@rector:dry\",\n      \"@gate\"\n    ],\n    \"qa:phpstan\": \"php -d memory_limit=1G vendor/bin/phpstan analyse -c phpstan.neon.dist\",\n    \"phpstan:clear\": \"php vendor/bin/phpstan clear-result-cache -c phpstan.neon.dist\",\n    \"qa:rector\": \"php vendor/bin/rector process --dry-run\",\n    \"qa:deptrac\": \"php vendor/bin/deptrac analyse --config-file=config/address_deptrac.yaml\",\n    \"gating\": \"@php vendor/bin/gating check --target=. --rule-set=tools/qa/addressing-platform-canon.yaml\",\n    \"qa:trust-surface\": \"@php tools/php/php84.php tools/qa/AddressTrustSurfaceRunner.php\",\n    \"qa:cs\": \"php vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php\",\n    \"qa:qodana\": \"@qodana\",\n    \"qa\": [\n      \"@qa:phpstan\",\n      \"@qa:deptrac\",\n      \"@qa:trust-surface\",\n      \"@qa:rector\"\n    ],\n    \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n    \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n    \"stan:conservative\": \"tools/php/php82.php vendor/bin/phpstan analyse\",\n    \"stan:runtime-target\": \"@php tools/php/php84.php vendor/bin/phpstan analyse\",\n    \"test:unit\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite unit\",\n    \"test:object-identity\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist tests/Unit/Address/A",
+      "package.json": "{\n    \"name\": \"addressing-e2e\",\n    \"private\": true,\n    \"scripts\": {\n        \"test:e2e\": \"playwright test\",\n        \"test:e2e:headed\": \"playwright test --headed\",\n        \"test:e2e:install\": \"playwright install chromium\"\n    },\n    \"devDependencies\": {\n        \"@playwright/test\": \"^1.54.2\"\n    }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "addressing",
+    "summary": "Addressing remains architecturally strong and broadly instrumented for RC validation, but the current repository cannot be considered all-green: the read-only RC validation is blocked because the default composer phpstan path loads phpstan.neon containing two unsupported PHPStan configuration keys. Composer validation, repository-wide PHP lint, and Composer security audit are green. The existing runtime on port 8000 is not running, so behavioral/UI evidence was not verified; no restart was performed under the READ_ONLY and REUSE_EXISTING_FIRST contract.",
+    "strengths": [
+      "Symfony 8.1 / PHP 8.4 dependency baseline with explicit component dependencies and a substantial Symfony-oriented Addressing implementation.",
+      "Broad QA surface is present: PHPStan, Psalm, PHPUnit suites, Deptrac, Rector, PHP-CS-Fixer, Gating, security checks, Panther, Playwright, smoke probes, Doctrine parity checks, and inspection reports.",
+      "composer validate --strict --check-lock passed.",
+      "Repository PHP lint passed for 209 PHP files during RC validation.",
+      "composer audit reported no security vulnerability advisories.",
+      "RC validator found no blocking canon violations; the two canon findings are warning-level TODO/placeholder markers.",
+      "Visual Gallery service is healthy and reachable."
+    ],
+    "risks": [
+      "Current composer phpstan fails before analysis because phpstan.neon contains unsupported checkMissingIterableValueType and checkGenericClassInNonGenericObjectType settings.",
+      "The assessed HEAD remains on rc/addressing-rc-final-v3 without an exact release tag.",
+      "A pre-existing modification to .gating/README.md remains in the working tree and was deliberately left untouched.",
+      "The managed Addressing PHP runtime on 127.0.0.1:8000 is not running, so runtime, Panther, Playwright, and user-flow behavior were not verified in this read-only assessment.",
+      "No current all-green aggregate evidence bundle was established for PHPStan, PHPUnit, Gating, Deptrac, Rector, style, security, Doctrine parity, and E2E together."
+    ],
+    "next_actions": [
+      "Reconcile phpstan.neon with the current PHPStan 2.x configuration surface; phpstan.neon.dist already omits the two unsupported keys.",
+      "After the PHPStan configuration is corrected in a WRITE_ALLOWED task, rerun composer phpstan and the repository's canonical qa/full and gating paths.",
+      "Run the applicable PHPUnit, security, Doctrine parity, and dependency-boundary checks and retain an all-green RC evidence bundle.",
+      "For a task requiring behavioral/UI acceptance, reuse an existing healthy runtime if available or start it only under appropriate write/runtime authority, then execute the configured Panther/Playwright paths and capture visual evidence under the central workspace artifact contract.",
+      "Keep the pre-existing .gating/README.md work isolated unless its owner explicitly includes it in the RC closure.",
+      "Only after deterministic gates are green should the RC branch reconciliation and exact release tagging be treated as closure work."
+    ],
+    "notes": [
+      "No repository source, configuration, Git staging, commit, push, or destructive mutation was performed.",
+      "The RC validator was invoked with evidence writing disabled; its modeled var/rc-run paths were not persisted.",
+      "The RC validation command classified the PHPStan failure as configuration_failure with readiness blocker validation_failed.",
+      "The current task specification identifies the component as Addressing, repository smartresponsor/addressing, default branch master, with the supplied assessment snapshot and deterministic repository facts. fileciteturn0file0L5-L10",
+      "Visual evidence: NOT_VERIFIED. No new screenshot was produced because this reconnaissance task contains no user-observable UI change and the existing runtime probe was not healthy.",
+      "http://100.101.253.65:9477/Addressing/today"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.1,
+      "architecture": 9.1,
+      "runtime": 8.3,
+      "qa": 8.7,
+      "ops": 8.7,
+      "market": 7.9,
+      "overall": 8.5
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity remains clearly established as the Addressing address-lifecycle application/component, while the current reconnaissance adds engineering evidence rather than new end-user or market validation.",
+        "risks": [
+          "Market-facing usage and adoption evidence remain outside the supplied repository evidence."
+        ],
+        "improvements": [
+          "Preserve repository-driven product identity evidence and supplement future assessments with validated product usage or outcome evidence."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture remains strongly evidenced by the Symfony 8.1 / PHP 8.4 baseline, explicit first-party component dependencies, layered implementation, Deptrac configuration, canon rules, and substantial RC remediation history.",
+        "risks": [
+          "Final post-release architectural stability is not yet evidenced because the assessed HEAD remains on an untagged RC branch."
+        ],
+        "improvements": [
+          "Preserve Deptrac and canon enforcement as release gates and close the RC only after the deterministic validation failure is resolved."
+        ],
+        "evidence": [
+          "composer.json",
+          "AGENTS.md",
+          "config/address_deptrac.yaml",
+          "tools/qa/addressing-platform-canon.yaml",
+          "README.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime capability remains materially supported by the standalone Symfony runtime, Doctrine integration, smoke tooling, HTTP surface, and runtime-oriented tests, but no live Addressing runtime was available during this assessment.",
+        "risks": [
+          "The managed 127.0.0.1:8000 runtime was not running, so current behavioral and long-running runtime behavior were not verified."
+        ],
+        "improvements": [
+          "On the next behavior-bearing task, probe/reuse the managed runtime and execute applicable smoke and E2E checks without unnecessary restart."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json",
+          "phpunit.xml.dist"
+        ]
+      },
+      "qa": {
+        "summary": "QA breadth remains strong, but current RC validation is not green because composer phpstan fails at configuration loading before static analysis begins.",
+        "risks": [
+          "phpstan.neon contains unsupported checkMissingIterableValueType and checkGenericClassInNonGenericObjectType options.",
+          "The current execution did not establish fresh green results for every configured PHPUnit, Gating, Deptrac, Rector, security, Doctrine, Panther, and Playwright suite."
+        ],
+        "improvements": [
+          "Align phpstan.neon with the current PHPStan configuration contract and then archive a fresh aggregate all-green QA evidence bundle."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpstan.neon.dist",
+          "composer.json",
+          "phpunit.xml.dist",
+          "tools/qa/addressing-platform-canon.yaml"
+        ]
+      },
+      "ops": {
+        "summary": "Operational scaffolding remains mature, with CI workflows, release tooling, security automation, smoke infrastructure, and a healthy central Visual Gallery, but current RC readiness is blocked by deterministic validation and release closure remains incomplete.",
+        "risks": [
+          "The assessed commit remains untagged on an RC branch.",
+          "The worktree contains a pre-existing .gating/README.md modification.",
+          "No current production monitoring, rollback execution, deployment-topology evidence, or complete behavioral acceptance run was established in this assessment."
+        ],
+        "improvements": [
+          "Resolve the deterministic blocker, gather full release evidence, isolate unrelated dirty work, and only then reconcile/tag the RC."
+        ],
+        "evidence": [
+          ".github/workflows/addressing-gate-master.yml",
+          "composer.json",
+          "docs/page/RELEASE_CHECKLIST.md",
+          ".gating/README.md"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing alignment remains materially present in the existing snapshot, but this repository reconnaissance provides no new adoption, customer, or market-validation evidence.",
+        "risks": [
+          "Engineering maturity must not be treated as direct evidence of market validation."
+        ],
+        "improvements": [
+          "Supplement future Atlas assessments with usage, consumer integration, or portfolio-level adoption evidence."
+        ],
+        "evidence": [
+          "README.md"
+        ]
+      },
+      "overall": {
+        "summary": "Addressing remains a strong RC-stage component with mature architecture and extensive quality/release scaffolding, but the current deterministic PHPStan configuration failure prevents an all-green RC assessment and live behavioral evidence was not established.",
+        "risks": [
+          "RC validation currently reports validation_failed because composer phpstan cannot load its configuration.",
+          "The assessed HEAD is untagged and remains on rc/addressing-rc-final-v3.",
+          "Behavioral/UI verification is NOT_VERIFIED because no healthy existing runtime was available."
+        ],
+        "improvements": [
+          "Repair the PHPStan configuration drift, rerun the complete deterministic gate set, capture applicable behavioral evidence, then perform release-branch reconciliation and exact tagging."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpstan.neon.dist",
+          "composer.json",
+          ".github/workflows/addressing-gate-master.yml",
+          "README.md",
+          "tools/qa/addressing-platform-canon.yaml"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      "README.md",
+      "composer.json",
+      "phpstan.neon",
+      "phpstan.neon.dist",
+      "phpunit.xml.dist",
+      "config/address_deptrac.yaml",
+      "tools/qa/addressing-platform-canon.yaml",
+      ".github/workflows/addressing-gate-master.yml",
+      ".gating/README.md",
+      "docs/page/RELEASE_CHECKLIST.md"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\addressing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\addressing\\history\\2026-09-27-assessment-2026-09-27.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\addressing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\addressing\\probes\\history\\2026-09-27-assessment-2026-09-27.yaml"
+  },
+  "ai_io": {
+    "request_file": "addressing.request.json",
+    "response_file": "addressing.response.json"
+  }
+}

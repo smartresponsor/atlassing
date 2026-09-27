@@ -1,0 +1,230 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "anchoring",
+  "verdict": {
+    "component": "anchoring",
+    "summary": "Anchoring remains a mature verification and anchoring component with strong documentation, deployment, conformance, and operational surfaces. Current Console MCP reconnaissance confirms the repository is on branch main with the same pre-existing dirty paths recorded in the supplied snapshot, while the registry still declares master. Deterministic CLI verification materially improves QA evidence: Vitest passes 3/3 test files and 3/3 tests. RC confidence is nevertheless constrained by the dirty baseline, absence of an exact Git tag, branch metadata drift, and a failing npm audit containing high-severity dependency findings. fileciteturn0file0L1782-L1808",
+    "strengths": [
+      "CLI verification is now executable evidence rather than documentation-only evidence: 3 test files and 3 tests pass.",
+      "Conformance coverage explicitly exercises JCS/hash/Merkle behavior.",
+      "Repository documentation covers verification, deployment, observability, recovery, security, providers, SDKs, receipts, evidence, and operational procedures.",
+      "GitHub Actions assets provide canary, dependency-guard, OTS-smoke, SBOM/license, and container-image automation surfaces.",
+      "Visual Gallery infrastructure is healthy and reachable, although no UI evidence was applicable to this read-only assessment."
+    ],
+    "risks": [
+      "Registry default branch master disagrees with the observed repository branch main.",
+      "The assessed worktree is dirty: sdk/php/composer.json is modified and AGENTS.md, LICENSE, and NOTICE are untracked.",
+      "No exact Git tag identifies the assessed commit.",
+      "npm audit exits non-zero and reports high-severity transitive dependency vulnerabilities plus additional moderate findings.",
+      "Some GitHub workflows are permissive through commands suffixed with || true, reducing their value as hard RC gates.",
+      "No live latency, throughput, availability, production deployment, recovery-drill, or service-behavior result was produced in this read-only reconnaissance."
+    ],
+    "next_actions": [
+      "Reconcile the Quality Atlas registry default branch with the canonical repository branch.",
+      "Resolve or intentionally disposition the existing dirty worktree before taking an RC snapshot.",
+      "Remediate and re-run npm audit, prioritizing high-severity dependencies and the direct viem dependency chain.",
+      "Review permissive CI steps using || true and distinguish informational probes from required release gates.",
+      "Create or assess from an exact release tag once the repository reaches a clean RC baseline.",
+      "Preserve the now-demonstrated CLI test gate as deterministic Atlas evidence in subsequent assessments."
+    ],
+    "notes": [
+      "Execution authority was READ_ONLY; no repository files were changed, staged, committed, pushed, deleted, or reset.",
+      "Post-verification git status is unchanged from the initial baseline.",
+      "npm build was not executed because the build script writes dist artifacts and repository mutation was forbidden.",
+      "No browser/mobile UI change occurred, so behavioral UI screenshots were not applicable.",
+      "Visual evidence status: NOT_VERIFIED; no new screenshot was required or produced.",
+      "The Visual Gallery service itself returned a healthy HTTP 200 status."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "README.md",
+      "README-quickstart.md",
+      "doc/tests.md",
+      "doc/conformance.md",
+      "doc/ci.md",
+      "doc/service-verify.md",
+      "src/tool/anchoring/cli/package.json",
+      "src/tool/anchoring/cli/package-lock.json",
+      "sdk/php/composer.json",
+      "compose.yml",
+      "compose.local.yml",
+      ".github/workflows/canary-gate.yml",
+      ".github/workflows/dependency-guard.yml",
+      ".github/workflows/ots-smoke.yml",
+      ".github/workflows/sbom-licenses.yml",
+      ".github/workflows/images-buildx.yml"
+    ],
+    "suggested_score_overrides": {
+      "product": null,
+      "architecture": null,
+      "runtime": null,
+      "qa": 8.0,
+      "ops": null,
+      "market": null,
+      "overall": 8.2
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Anchoring retains a well-defined verification, evidence, receipt, provider, SDK, and operational product surface, with no new product-behavior evidence in this read-only assessment.",
+        "risks": [
+          "Repository evidence still does not establish actual adoption or production user behavior.",
+          "Registry branch metadata remains inconsistent with the observed repository branch."
+        ],
+        "improvements": [
+          "Keep quickstart, verification, evidence, SDK, and release documentation aligned with executable behavior.",
+          "Reconcile registry branch metadata with the canonical repository branch."
+        ],
+        "evidence": [
+          "README.md",
+          "README-quickstart.md",
+          "doc/evidence.md",
+          "doc/receipt.md",
+          "doc/providers.md",
+          "doc/sdk-node.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Repository structure continues to show deliberate separation of CLI, verification service, public contracts, policy, deployment, SDK, documentation, and operations concerns, but the dirty baseline and absent implementation-level architecture analysis remain constraints.",
+        "risks": [
+          "Implementation-level dependency/conformance analysis was not evidenced by this assessment.",
+          "The dirty worktree weakens reproducibility of the exact architectural baseline."
+        ],
+        "improvements": [
+          "Capture deterministic dependency and architecture-conformance results in future Atlas evidence.",
+          "Use a clean worktree for RC architecture snapshots."
+        ],
+        "evidence": [
+          "README.md",
+          "compose.yml",
+          "public/openapi/verify.yaml",
+          "sdk/php/composer.json"
+        ]
+      },
+      "runtime": {
+        "summary": "Anchoring continues to expose substantial runtime-readiness material across Docker Compose, Ethereum/L2 anchoring, OTS, Redis, verification service, canary, metrics, and multi-region concerns, but no representative live performance measurement was collected.",
+        "risks": [
+          "No latency, throughput, capacity, availability, or benchmark output was produced.",
+          "Runtime maturity remains supported mainly by implementation assets and documentation rather than production observations."
+        ],
+        "improvements": [
+          "Add deterministic verify-service health and behavior evidence to future assessments.",
+          "Capture representative runtime measurements when an applicable managed runtime is available."
+        ],
+        "evidence": [
+          "compose.yml",
+          "compose.local.yml",
+          "Dockerfile.cli",
+          "Dockerfile.verify",
+          "doc/service-verify.md",
+          "doc/metrics.md",
+          "doc/multi-region.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA evidence materially improves because the documented CLI Vitest suite was executed successfully through Console MCP: 3/3 test files and 3/3 tests pass, including conformance, Merkle, and JCS/hash tests; dependency audit remains a significant quality/security blocker.",
+        "risks": [
+          "npm audit exits non-zero with high-severity dependency findings.",
+          "The observed suite is small and does not by itself establish full service, integration, deployment, or behavioral coverage.",
+          "No root PHPUnit or PHPStan configuration is applicable/evidenced for this primarily Node CLI surface."
+        ],
+        "improvements": [
+          "Remediate dependency-audit findings and preserve npm audit as an explicit RC gate.",
+          "Expand deterministic service/integration verification where existing repository contracts require it.",
+          "Feed passing CLI test and conformance results directly into future Atlas snapshots."
+        ],
+        "evidence": [
+          "src/tool/anchoring/cli/package.json",
+          "src/tool/anchoring/cli/test/conformance.spec.ts",
+          "src/tool/anchoring/cli/test/merkle.spec.ts",
+          "src/tool/anchoring/cli/test/jcs-hash.spec.ts",
+          "doc/tests.md",
+          "doc/conformance.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity remains a repository strength through observability, metrics, incident, recovery, backup, deployment, canary, multi-region, SBOM, image, Prometheus, and Grafana assets, while RC reproducibility and dependency hygiene remain unresolved.",
+        "risks": [
+          "No successful production deployment, alert execution, or recovery drill was observed.",
+          "The repository is dirty and not exactly tagged.",
+          "Several workflow steps tolerate failures with || true, so their presence does not guarantee hard-gate behavior."
+        ],
+        "improvements": [
+          "Differentiate informational CI probes from mandatory RC gates and remove permissive failure handling where enforcement is intended.",
+          "Capture deployment, monitoring, and recovery-drill outcomes as deterministic evidence.",
+          "Assess operational RC readiness from a clean tagged baseline."
+        ],
+        "evidence": [
+          "doc/observability.md",
+          "doc/metrics.md",
+          "doc/dr-runbook.md",
+          "doc/dr-drill.md",
+          ".github/workflows/canary-gate.yml",
+          ".github/workflows/ots-smoke.yml",
+          ".github/workflows/sbom-licenses.yml",
+          ".github/workflows/images-buildx.yml"
+        ]
+      },
+      "market": {
+        "summary": "The repository continues to communicate a coherent anchoring and verification offering through quickstart, evidence, integrity, receipt, provider, compliance, RFP, API, SDK, and proof-explorer documentation; this assessment adds no external adoption or market evidence.",
+        "risks": [
+          "Repository evidence does not establish demand, adoption, revenue, or competitive position.",
+          "Market readiness therefore remains constrained to product communication and integration surfaces."
+        ],
+        "improvements": [
+          "Complement repository evidence with externally grounded integration or adoption evidence when available.",
+          "Maintain clear API, SDK, receipt, evidence, RFP, and proof-explorer materials for integrators."
+        ],
+        "evidence": [
+          "README.md",
+          "doc/rfp-answers.md",
+          "doc/proof-explorer.md",
+          "doc/evidence-guide.md",
+          "public/openapi/verify.yaml"
+        ]
+      },
+      "overall": {
+        "summary": "Anchoring remains a comparatively mature and well-documented component; passing deterministic CLI tests improve RC confidence, but the benefit is partially offset by a failing dependency audit, branch metadata drift, an unchanged dirty worktree, absence of an exact tag, and lack of live production/runtime verification.",
+        "risks": [
+          "Registry master and observed main branch disagree.",
+          "The assessment baseline contains one modified tracked file and three untracked files.",
+          "No exact release tag identifies the assessed commit.",
+          "Dependency audit contains high-severity findings.",
+          "Production/runtime behavior remains unverified."
+        ],
+        "improvements": [
+          "Resolve branch metadata and dirty-baseline issues before RC assessment.",
+          "Remediate npm audit findings and make dependency health deterministic.",
+          "Create a clean exact-tag baseline.",
+          "Retain passing test/conformance outputs and add service/runtime verification to future Atlas evidence."
+        ],
+        "evidence": [
+          "src/tool/anchoring/cli/package.json",
+          "src/tool/anchoring/cli/package-lock.json",
+          "doc/tests.md",
+          "doc/conformance.md",
+          "sdk/php/composer.json",
+          ".github/workflows/canary-gate.yml",
+          ".github/workflows/dependency-guard.yml"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\anchoring.prompt.txt",
+    "taskId": "engine-20260927095936-anchoring-6215ad",
+    "chatId": "6ab8e917-240c-83ea-9321-8de34c323936",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ab8e917-240c-83ea-9321-8de34c323936",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}

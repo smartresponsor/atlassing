@@ -1,0 +1,225 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "analysing",
+  "verdict": {
+    "component": "analysing",
+    "summary": "Analysing remains a strong pre-RC component with mature Symfony-oriented architecture and extensive established QA evidence, but the current candidate is not release-immutable: the RC branch is dirty, three commits ahead of upstream, has a staged deletion of a previously verified domain-hygiene guard, and contains unresolved Gating packaging duplication. Current composer validation is GREEN, while the reused managed PHP server still returns 404 for /status through its production-style router; the repository documents this routing artifact and uses a dedicated Playwright QA router for behavioral verification.",
+    "strengths": [
+      "Symfony 8.1/PHP 8.4 component with Doctrine persistence, explicit routes, migrations, and established RC verification history.",
+      "Current composer validate --strict --check-lock passes.",
+      "PHPStan max, PHPUnit, coverage, Gating, schema parity, and Playwright behavioral tooling are materially evidenced by repository configuration and prior journaled verification.",
+      "Existing managed runtime was reused rather than restarted.",
+      "The /status route and dedicated Playwright routing workaround are explicitly present in the repository."
+    ],
+    "risks": [
+      "Working tree has six dirty paths and therefore is not an immutable RC candidate.",
+      "tools/analytics-domain-hygiene-guard.php is staged for deletion despite prior verification history treating that guard as part of local canonical enforcement.",
+      "composer.json currently contains two equivalent ../Gating path repository entries.",
+      ".gating/README.md is being expanded into normative Gating documentation even though the repository journal and its own text define consumer .gating as an artifact surface.",
+      "The existing managed PHP server returns 404 for /status when routed directly through public/index.php; behavioral health through the repository's Playwright router was not re-executed under READ_ONLY authority.",
+      "Inter-component dependencies remain dev-master based and the current HEAD has no exact release tag."
+    ],
+    "next_actions": [
+      "Reconcile the staged domain-hygiene guard deletion with equivalent canonical Gating coverage before accepting the candidate.",
+      "Remove or otherwise intentionally resolve the duplicate Gating path repository declaration.",
+      "Reconcile consumer .gating artifact ownership so normative Gating documentation does not drift into the generated artifact surface.",
+      "Bring the working tree to an intentional clean candidate and rerun the established deterministic quality stack.",
+      "Run the existing Playwright /status behavioral check on the exact clean candidate using its repository-owned QA router.",
+      "After green verification, synchronize the RC branch and create an exact release tag according to release policy."
+    ],
+    "notes": [
+      "Execution authority was READ_ONLY; no repository files, Git index state, commits, branches, runtime processes, or generated artifacts were modified.",
+      "The authoritative assessment specification identifies this component as Analysing and repository smartresponsor/analysing. fileciteturn0file0L5-L11",
+      "Console MCP reported branch rc/analysing-canon-vendor-20260913 at 53c33d7dbbe110c42aba3ad134e58d2b554ab1d1, dirty with six paths and ahead of upstream by three commits.",
+      "Current deterministic gate executed under read-only Console MCP capability: composer validate --no-interaction --strict --check-lock, exit code 0.",
+      "The reused managed PHP runtime on port 8098 is running, but GET /status returns 404 through public/index.php. Repository history explicitly documents this built-in-server routing artifact and provides tools/qa/playwright-router.php for browser verification.",
+      "No current-task UI change was made and no new visual artifact was required or produced."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "composer.prod.json",
+      "composer.lock",
+      "CMCP_CHANGELOG.md",
+      ".gating/README.md",
+      "tools/analytics-domain-hygiene-guard.php",
+      "config/routes.php",
+      "config/routes.yaml",
+      "playwright.config.ts",
+      "tools/qa/playwright-router.php",
+      "package.json",
+      "phpstan.neon",
+      "phpunit.xml.dist"
+    ],
+    "suggested_score_overrides": {
+      "product": null,
+      "architecture": null,
+      "runtime": null,
+      "qa": null,
+      "ops": null,
+      "market": null,
+      "overall": null
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity remains materially established as Analysing with a dedicated repository, package, runtime surface, documentation, and RC branch, while residual Analytics naming continues to be intentionally visible in package and implementation identifiers.",
+        "risks": [
+          "Residual Analytics terminology continues to blur complete naming convergence.",
+          "Current packaging changes have not yet been stabilized into a clean candidate."
+        ],
+        "improvements": [
+          "Complete intentional naming reconciliation and document retained Analytics terminology.",
+          "Keep component-facing identity documentation outside generated consumer artifact surfaces."
+        ],
+        "evidence": [
+          "composer.json",
+          "CMCP_CHANGELOG.md",
+          ".gating/README.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture remains strong and Symfony-oriented, but the present working tree introduces canonical-enforcement uncertainty through the staged hygiene-guard deletion, duplicated Gating repository configuration, and a consumer .gating ownership contradiction.",
+        "risks": [
+          "Staged deletion of tools/analytics-domain-hygiene-guard.php may remove previously verified canonical enforcement unless fully superseded.",
+          "composer.json contains duplicate ../Gating path repository declarations.",
+          ".gating/README.md currently carries normative Gating documentation despite the declared consumer-artifact boundary.",
+          "dev-master inter-component dependencies continue to limit release reproducibility."
+        ],
+        "improvements": [
+          "Prove equivalent Gating coverage before retiring the domain-hygiene guard.",
+          "Deduplicate the Gating repository declaration.",
+          "Restore a clear separation between normative Gating ownership and consumer artifact state.",
+          "Adopt reproducible release constraints for inter-component dependencies."
+        ],
+        "evidence": [
+          "composer.json",
+          ".gating/README.md",
+          "tools/analytics-domain-hygiene-guard.php",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime capability remains materially present through Symfony bootstrap, routes, Doctrine tooling, and the established standalone/browser verification design; the currently reused port-8098 server is alive but returns 404 for /status through the direct public/index.php router, matching a previously documented built-in-server routing artifact.",
+        "risks": [
+          "The currently managed direct-router runtime does not provide a successful /status probe.",
+          "Behavioral verification through the repository-owned Playwright QA router was not re-executed during this READ_ONLY assessment.",
+          "The dirty worktree means the exact runtime candidate is not release-immutable."
+        ],
+        "improvements": [
+          "On the clean candidate, rerun standalone smoke, schema parity, and the existing Playwright /status check using tools/qa/playwright-router.php.",
+          "Retain behavioral results with the exact verified commit."
+        ],
+        "evidence": [
+          "config/routes.php",
+          "config/routes.yaml",
+          "playwright.config.ts",
+          "tools/qa/playwright-router.php",
+          "CMCP_CHANGELOG.md",
+          "composer.json"
+        ]
+      },
+      "qa": {
+        "summary": "QA depth remains strong, with PHPUnit, PHPStan max, coverage, Gating, schema checks, environment checks, and Playwright behavioral coverage materially evidenced; this read-only pass additionally proves the current composer manifest and lock relationship validates cleanly.",
+        "risks": [
+          "The complete PHPStan, PHPUnit, Gating, schema-parity, and Playwright suites were not freshly executed for the dirty candidate in this read-only assessment.",
+          "Removal of the domain-hygiene guard could reduce independent static/canonical coverage if no equivalent rule is proven.",
+          "Existing repository history records test-coverage debt as a non-blocking warning."
+        ],
+        "improvements": [
+          "After resolving dirty-tree changes, rerun the established quality stack on the exact candidate.",
+          "Verify canonical guard equivalence before deleting legacy enforcement.",
+          "Retain fresh behavioral-coverage evidence for the accepted commit."
+        ],
+        "evidence": [
+          "composer.json",
+          "package.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "CMCP_CHANGELOG.md",
+          "tools/analytics-domain-hygiene-guard.php"
+        ]
+      },
+      "ops": {
+        "summary": "Operational posture remains mature with CI assets, Docker packaging, Gitleaks, Gating, schema tooling, and a persistent managed runtime; current composer validation is green, but branch and filesystem state remain unsuitable for release acceptance.",
+        "risks": [
+          "The RC branch is dirty and three commits ahead of its configured upstream.",
+          "HEAD is not exactly tagged according to the supplied deterministic facts.",
+          "Current Gating-related manifest edits are internally inconsistent through duplicate repository configuration and consumer-artifact documentation drift."
+        ],
+        "improvements": [
+          "Resolve the Gating configuration inconsistencies and produce an intentional clean tree.",
+          "Run the complete operational gates on that exact commit.",
+          "Synchronize branch state and create the exact release tag only after acceptance."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          ".gating/README.md",
+          ".github/workflows",
+          ".gitleaks.toml",
+          "docker",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing alignment remains materially unchanged: Analysing has a distinct role in the Smartresponsor ecosystem, while the available evidence is still predominantly engineering and RC-readiness oriented rather than adoption or market-validation oriented.",
+        "risks": [
+          "No new adoption, customer, or market-validation evidence is present.",
+          "Residual Analytics terminology and unstable RC packaging can reduce portfolio-facing clarity."
+        ],
+        "improvements": [
+          "Preserve the existing market assessment until new market evidence exists.",
+          "Add concise owner-facing purpose and ecosystem-role documentation after canonical naming and packaging stabilize."
+        ],
+        "evidence": [
+          "composer.json",
+          "CMCP_CHANGELOG.md",
+          "docs"
+        ]
+      },
+      "overall": {
+        "summary": "Analysing remains a strong pre-RC component, with the current read-only reconnaissance confirming valid Composer metadata and substantial established quality infrastructure; acceptance is still blocked by a dirty non-immutable candidate, staged guard deletion without demonstrated replacement equivalence, Gating configuration drift, absence of an exact tag, and lack of fresh full-suite evidence for this filesystem state.",
+        "risks": [
+          "Current filesystem state is not an immutable release candidate.",
+          "Canonical guard retirement is not yet demonstrated to be coverage-neutral.",
+          "Gating packaging and artifact-boundary changes need reconciliation.",
+          "Fresh full deterministic and behavioral verification is absent for the current dirty tree.",
+          "dev-master dependencies and lack of an exact tag remain release-quality concerns."
+        ],
+        "improvements": [
+          "Resolve guard and Gating-boundary issues first.",
+          "Produce a clean deterministic candidate.",
+          "Run Composer validation, PHPStan, PHPUnit, Gating, schema parity, and Playwright behavioral verification on that exact candidate.",
+          "Synchronize and tag only the accepted green commit."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          "CMCP_CHANGELOG.md",
+          ".gating/README.md",
+          "tools/analytics-domain-hygiene-guard.php",
+          "playwright.config.ts",
+          "tools/qa/playwright-router.php"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\analysing.prompt.txt",
+    "taskId": "engine-20260927094850-analysing-942394",
+    "chatId": "6ab8e68f-592c-83e9-aade-6fb6f10a1c80",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ab8e68f-592c-83e9-aade-6fb6f10a1c80",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}

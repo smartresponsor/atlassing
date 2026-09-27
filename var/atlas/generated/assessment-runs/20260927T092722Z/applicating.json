@@ -1,0 +1,246 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "applicating",
+    "component_title": "Applicating",
+    "github_repository": "smartresponsor/applicating",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/applicating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Applicating",
+    "timestamp_utc": "2026-09-27T10:10:20.987345+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "77dfc4326992b84c8bac98d7f0307ebee5c23028"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\n?? .gating/.canonization/\n?? .gating/.commanding/\n?? .gating/.consuming/\n?? .gating/.gating/\n?? .gating/.gitattributes\n?? .gating/.github/\n?? .gating/.gitignore\n?? .gating/.intelligence/\n?? .gating/.php-cs-fixer.dist.php\n?? .gating/AGENTS.md\n?? .gating/CMCP_CHANGELOG.md\n?? .gating/LICENSE\n?? .gating/MANIFEST.json\n?? .gating/MIGRATION.gating.md\n?? .gating/NOTICE\n?? .gating/composer.json\n?? .gating/composer.lock\n?? .gating/config/\n?? .gating/contract/\n?? .gating/docs/\n?? .gating/gate.ps1\n?? .gating/gate.sh\n?? .gating/linting/\n?? .gating/phpunit.xml.dist\n?? .gating/policy/\n?? .gating/quality/\n?? .gating/run.ps1\n?? .gating/run.sh\n?? .gating/src/\n?? .gating/tests/\n?? .gating/tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "77dfc43 docs: record Applicating RC verification closure\n2571f37 fix: align Applicating platform identity terminology\n999ce7a chore: ignore Applicating generated runtime artifacts\nb1b2623 refactor: converge Applicating on canonical Symfony structure\nbd2bd8f Retain Gating artifact surface"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".console-mcp/\n.console-mcp/powershell-script-run/\n.editorconfig\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Applicating.iml\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbootstrap.sh\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/applicating_reference.php\nconfig/applicating_reference.php.bak-name-entity-20260611-071541\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services/\ndelivery/\ndelivery/rc/\ndocker/\ndocker/docker-compose.async.yml\ndocker/docker-compose.otel.yml\ndocker/docker-compose.yml\ndocker/Dockerfile\ndocker/init/\ndockerignore\ndocs/\ndocs/ADMIN_AUTH_ROLES.md\ndocs/ADMIN_CONSOLE.md\ndocs/APPLICATION_WORKSPACE_OVERVIEW.md\ndocs/architecture/\ndocs/CHANGELOG.md\ndocs/component/\ndocs/INSTALL.md\ndocs/MAINTENANCE.md\ndocs/MASTER_BRANCH_ANALYSIS_2026-04-10.md\ndocs/OBSERVABILITY.md\ndocs/OPERATIONS.md\ndocs/RELEASE.md\ndocs/RELEASE_NOTES.md\ndocs/RELIABILITY.md\ndocs/ROLLBACK.md\ndocs/THREAT_MODEL.md\neditorconfig\nenv\nenv.docker\nenv.example\nenv.test\ngitattributes\ngitignore\nhelm/\nhelm/applicating/\nk8s/\nk8s/sealedsecrets/\nLICENSE\nMakefile\nmigrations/\nmigrations/Version20260824184100.php\nNOTICE\npackage.json\nphp-cs-fixer.php\nphpmd.xml.dist"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "632"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"applicating/application\",\n  \"description\": \"Applicating process component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko / Marketing America Corp\",\n      \"email\": \"17111337+taa0662621456@users.noreply.github.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5.1\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/doctrine-bridge\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/var-exporter\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"nelmio/api-doc-bundle\": \"^5.8\",\n    \"phpmd/phpmd\": \"3.x-dev@dev\",\n    \"pdepend/pdepend\": \"3.x-dev@dev\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/debug-bundle\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/web-profiler-bundle\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint\": \"@php tools/php/php84.php tools/qa/ApplicationPhpLint.php\",\n    \"lint:service-interface-parity\": \"@php tools/php/php84.php tools/linter/applicating_service_interface_parity_check.php\",\n    \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n    \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n    \"stan\": \"@stan:runtime-target\",\n    \"stan:conservative\": \"@php tools/php/php82.php vendor/bin/phpstan analyse\",\n    \"stan:runtime-target\": \"@php tools/php/php84.php vendor/bin/phpstan analyse\",\n    \"md\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze src --format=text --ruleset=phpmd.xml.dist\",\n    \"md:tests\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze tests --format=text --ruleset=phpmd.xml.dist\",\n    \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n    \"test:unit\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite unit\",\n    \"test:integration\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite integration\",\n    \"test:functional\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite functional\",\n    \"test:panther\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:e2e\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:playwright\": \"npm run test:playwright\",\n    \"test:coverage\": [\n      \"@php -r \\\"is_dir('var/cover",
+      "package.json": "{\n  \"name\": \"applicating\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:playwright\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.53.2\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "applicating",
+    "summary": "Applicating shows a strong pre-RC engineering posture on the current master snapshot: Composer validation, PHP lint, coding-style verification, repository-native PHPStan, PHPUnit, and Gating all pass. The main unresolved repository-state concern is the pre-existing local .gating materialization, while operational documentation explicitly limits claims around production-grade tracing and metrics.",
+    "strengths": [
+      "Current deterministic validation passes: Composer manifest validation, PHP lint, coding style, repository-native PHPStan, PHPUnit, and Gating.",
+      "PHPStan runs at level max over src and tests and currently reports no errors.",
+      "PHPUnit exposes unit, integration, functional, and Panther suites; the current run passes 14 tests and 43 assertions.",
+      "Gating reports zero failed rules and confirms typed-layer placement, forbidden-architecture absence, platform constraints, mutation safety, and secret scanning.",
+      "Release, rollback, threat-model, observability, Symfony, Doctrine, Kubernetes, Helm, and container operational surfaces are materially documented.",
+      "The post-verification Git status is unchanged from baseline, so verification introduced no tracked repository drift."
+    ],
+    "risks": [
+      "The worktree remains dirty under .gating, including one modified file and a substantial untracked local Gating materialization.",
+      "The Console MCP generic phpstan gate preset is miswired to a nonexistent Composer script named phpstan; the repository correctly exposes stan and that canonical script passes.",
+      "Gating skips profile.contract_validity and namespace.profile_match when no profile is supplied, so those two checks were not exercised by the current target-only invocation.",
+      "Observability documentation explicitly does not claim production-grade OpenTelemetry export, distributed tracing, or platform dashboards.",
+      "The repository has no exact Git tag at the assessed commit, so release identity is commit-based rather than tag-based."
+    ],
+    "next_actions": [
+      "Resolve or formally classify the existing .gating materialization so the repository can return to an intentional clean baseline.",
+      "Align the Console MCP phpstan allowed-check preset with the repository's canonical stan Composer script.",
+      "Run Gating with the component profile when the orchestration path supplies one so profile validity and namespace/profile matching are exercised.",
+      "Continue scheduled repository assessment runs so the Quality Atlas stays tied to deterministic current evidence.",
+      "Add metrics/tracing export only when operational requirements justify moving beyond the documented lightweight observability baseline."
+    ],
+    "notes": [
+      "Assessment source and required response contract were read from the authoritative task attachment. fileciteturn0file0L1690-L1760",
+      "Execution remained READ_ONLY with respect to source, staging, commits, and pushes.",
+      "The generic Console MCP phpstan preset failure is not evidence of a PHPStan code failure: repository-native composer run-script stan completed successfully with no errors.",
+      "No user-observable UI change was made, so new visual evidence is NOT_VERIFIED and not required for this reconnaissance assessment.",
+      "http://100.101.253.65:9477/Applicating/today"
+    ],
+    "suggested_score_overrides": {
+      "architecture": 8.6,
+      "runtime": 8.2,
+      "qa": 9.0,
+      "ops": 8.6,
+      "overall": 8.6
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity and application responsibility remain materially present, with the current repository manifest and operational documentation providing concrete product shape.",
+        "risks": [
+          "The current evidence is predominantly engineering and operational, so it does not materially strengthen market-facing product validation."
+        ],
+        "improvements": [
+          "Continue scheduled repository assessments and preserve concise component-responsibility documentation."
+        ],
+        "evidence": [
+          "composer.json",
+          "AGENTS.md",
+          "docs/RELEASE.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Symfony-oriented architecture is strongly evidenced by the current namespace, typed-layer rules, declared component dependencies, and a passing Gating architecture check.",
+        "risks": [
+          "Two profile-dependent Gating rules were skipped because the current invocation supplied no profile."
+        ],
+        "improvements": [
+          "Exercise Gating with the canonical component profile in scheduled assessment runs."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "composer.json",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "runtime": {
+        "summary": "The runtime surface is materially defined through Symfony 8.1 dependencies, Doctrine, Messenger, security, documented health/readiness endpoints, containers, Kubernetes, Helm, and runtime smoke tooling.",
+        "risks": [
+          "The current assessment did not restart or alter runtime state, and production-grade metrics/tracing are explicitly not claimed."
+        ],
+        "improvements": [
+          "Preserve the existing reuse-first runtime policy and extend telemetry only when concrete operational requirements demand it."
+        ],
+        "evidence": [
+          "composer.json",
+          "docs/OBSERVABILITY.md",
+          "docs/ROLLBACK.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA is strongly evidenced by PHPStan at maximum level, dedicated unit/integration/functional/Panther suites, Playwright configuration, repository-specific linting, and current passing deterministic gates.",
+        "risks": [
+          "The generic Console MCP phpstan preset currently targets a nonexistent Composer script name even though the repository-native stan script passes.",
+          "The current PHPUnit execution covers 14 tests, so breadth should continue to be evaluated as the component evolves."
+        ],
+        "improvements": [
+          "Correct the orchestration-level PHPStan preset to invoke stan.",
+          "Maintain the existing lint, static-analysis, test, Panther, Playwright, inspection, and smoke layers."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and security posture is well established through release verification, rollback guidance, health/readiness semantics, correlation IDs, threat modeling, rate limiting, CI/CD surfaces, containers, Kubernetes, and Helm.",
+        "risks": [
+          "Observability remains intentionally lightweight and does not yet claim full trace or metrics export.",
+          "The current commit has no exact Git tag."
+        ],
+        "improvements": [
+          "Keep release verification and rollback documentation synchronized with the runtime.",
+          "Introduce explicit metrics and distributed tracing when production operations require them."
+        ],
+        "evidence": [
+          "docs/RELEASE.md",
+          "docs/ROLLBACK.md",
+          "docs/THREAT_MODEL.md",
+          "docs/OBSERVABILITY.md",
+          "composer.json"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing and portfolio-facing alignment remains materially present, but the current deterministic evidence is primarily technical rather than market-validation evidence.",
+        "risks": [
+          "No new repository evidence in this assessment materially validates adoption, demand, customer outcomes, or external market traction."
+        ],
+        "improvements": [
+          "Preserve the existing score until market-specific evidence becomes available through the assessment pipeline."
+        ],
+        "evidence": [
+          "composer.json",
+          "docs/RELEASE.md"
+        ]
+      },
+      "overall": {
+        "summary": "Applicating is technically close to a strong RC posture: current deterministic source-quality gates pass and release/operations controls are substantial, while dirty .gating state and orchestration/profile gaps remain the clearest closure items.",
+        "risks": [
+          "The repository is not clean because of pre-existing .gating materialization.",
+          "Two profile-sensitive Gating checks remain unverified in the current invocation.",
+          "The Console MCP generic PHPStan preset needs alignment with the repository's stan script."
+        ],
+        "improvements": [
+          "Normalize the .gating worktree state.",
+          "Repair the orchestration PHPStan command mapping.",
+          "Include the canonical profile in scheduled Gating execution and keep deterministic assessment scans recurring."
+        ],
+        "evidence": [
+          "CMCP_CHANGELOG.md",
+          "composer.json",
+          "AGENTS.md",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "docs/RELEASE.md",
+          "docs/ROLLBACK.md",
+          "docs/OBSERVABILITY.md",
+          "docs/THREAT_MODEL.md"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      "CMCP_CHANGELOG.md",
+      "composer.json",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      "docs/RELEASE.md",
+      "docs/ROLLBACK.md",
+      "docs/THREAT_MODEL.md",
+      "docs/OBSERVABILITY.md"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\applicating\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\applicating\\history\\2026-09-27-assessment-2026-09-27.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\applicating\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\applicating\\probes\\history\\2026-09-27-assessment-2026-09-27.yaml"
+  },
+  "ai_io": {
+    "request_file": "applicating.request.json",
+    "response_file": "applicating.response.json"
+  }
+}
