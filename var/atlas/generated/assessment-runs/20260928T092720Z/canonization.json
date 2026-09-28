@@ -1,0 +1,243 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "canonization",
+    "component_title": "Canonization",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/canonization/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Canonization",
+    "timestamp_utc": "2026-09-28T10:11:25.357761+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "rc/canonization-entity-suffix-publish-20260921"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "ccf39bcf22a7f7f7719f1766855db6937f113956"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'ccf39bcf22a7f7f7719f1766855db6937f113956'"
+    },
+    "has_composer_json": true,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .canonization/Governance/Architecture/GUARD_MATRIX.md\n M .canonization/Governance/Architecture/Rule/Canon029MandatoryPhpQualityToolingRule.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "ccf39bc docs(canon): require Failing standalone adoption\n62159c9 docs(canon): define failure inventory completeness\n93213de docs(canon): define failure applicability semantics\nf827b83 docs(canon): require deterministic failure evidence export\nf30d717 docs(canon): record failure contract calibration"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".canonization/\n.canonization/.editorconfig\n.canonization/.gitattributes\n.canonization/.gitignore\n.canonization/Federation/\n.canonization/Governance/\n.canonization/Orchestration/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/Canon047EntityDomainRootRule.md\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/.gitattributes\n.commanding/.gitignore\n.commanding/backup/\n.commanding/cloudflare/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/git_diff.sh\n.commanding/git_status.sh\n.commanding/git_sync.sh\n.commanding/health.sh\n.commanding/helm/\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/logs/\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/systemd/\n.commanding/test/\n.commanding/zipper.sh\n.consuming/\n.consuming/.github/\n.consuming/.gitignore\n.consuming/consuming.json\n.consuming/consuming.ps1\n.deploy/\n.deploy/_template/\n.deploy/cloudflare/\n.deploy/docker/\n.deploy/helm/\n.deploy/MANIFEST.md\n.deploy/systemd/\n.editorconfig\n.gate/\n.gate/.github/\n.gate/.gitignore\n.gate/contract/\n.gate/gate.ps1\n.gate/gate.sh\n.gate/linting/\n.gate/MANIFEST.json\n.gate/policy/\n.gate/quality/\n.gate/README.md\n.gate/run.ps1\n.gate/run.sh\n.gitattributes\n.github/\n.github/workflows/\n.gitignore\n.ide/\n.ide/sr_default_inspector.xml\n.idea/\n.idea/.gitignore\n.idea/bin/\n.idea/Canonization.iml\n.idea/inspectionProfiles/\n.idea/jsonCatalog.xml\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/sqldialects.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.intelligence/\n.intelligence/.github/\n.intelligence/.gitignore\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.php\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/\nAGENTS.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\nMANIFEST.json\nREADME.md\ntools/\nvar/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "251"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n    \"name\": \"smartresponsor/canonization\",\n    \"description\": \"Authoritative textual canon and owner-side policy tooling for the multi-domain SaaS platform.\",\n    \"license\": \"proprietary\",\n    \"require-dev\": {\n        \"friendsofphp/php-cs-fixer\": \"^3.94\"\n    }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "canonization",
+    "summary": "Canonization has a clear owner-side policy/tooling identity, an extensive executable canon surface, and a deterministic RC diagnostic that is currently green. The strongest evidence is architectural/governance structure rather than application runtime behavior. The main quality limitation is that the repository exposes no PHPStan/PHPUnit configuration or Composer quality scripts, while the standalone Inspecting pass completed with zero findings but no active analyzers or metrics.",
+    "strengths": [
+      "Repository identity is explicit: authoritative textual canon plus owner-side policy tooling.",
+      "The root contract, AGENTS projection, canonical Rule tree, GUARD_MATRIX, executable gate pack, and GitHub workflows provide strong governance structure.",
+      "composer validate --strict --check-lock passed.",
+      "RC validation returned rc_diagnostic_green with zero canon issues.",
+      "Standalone Inspecting execution completed successfully with zero reported findings.",
+      "Pre-existing Canon029 and GUARD_MATRIX modifications were preserved without modification or commingling."
+    ],
+    "risks": [
+      "Inspecting reported no active analyzers or metrics, so its zero-finding result is not equivalent to deep static-analysis coverage.",
+      "The deterministic facts expose no PHPStan configuration, PHPUnit configuration, or Composer quality scripts.",
+      "Canon029 currently states that canonical PHP repositories require PHPStan plus PHP-CS-Fixer dependencies/configuration/execution paths, while this repository's composer.json only evidences PHP-CS-Fixer.",
+      "Runtime, behavioral UI, cohort, and market evidence are absent or inapplicable from the repository evidence supplied.",
+      "The worktree remains dirty because of two pre-existing user modifications plus the task-owned CMCP_CHANGELOG.md update."
+    ],
+    "next_actions": [
+      "Resolve whether Canon029's local PHPStan requirement is intended to apply to Canonization itself; if applicable, bring Canonization's own Composer/config/script surface into parity.",
+      "Add or enable applicable Inspecting analyzers before treating standalone inspection as substantive static-analysis evidence.",
+      "Preserve the current role-aware distinction between tooling-repository verification and Symfony application runtime/UI verification.",
+      "Keep Quality Atlas scoring for runtime and market conservative until repository-specific evidence exists."
+    ],
+    "notes": [
+      "Task specification identified Canonization on master in the component registry and defined the Quality Atlas assessment contract. fileciteturn0file0L1-L10",
+      "Task-owned repository mutation: CMCP_CHANGELOG.md only; 12 lines added.",
+      "Pre-existing modified files: .canonization/Governance/Architecture/GUARD_MATRIX.md and .canonization/Governance/Architecture/Rule/Canon029MandatoryPhpQualityToolingRule.md.",
+      "Verification: composer validate GREEN; composer audit completed with no packages to audit; RC diagnostic GREEN with zero canon issues; Inspecting execution completed with zero findings but zero analyzers/metrics.",
+      "Git stage, commit, and push were not performed, as required.",
+      "No browser/mobile UI change occurred; visual evidence is NOT_VERIFIED because UI verification is not applicable to this assessment."
+    ],
+    "suggested_score_overrides": {
+      "product": 8.4,
+      "architecture": 8.7,
+      "qa": 7.4,
+      "ops": 8.5,
+      "overall": 8.2
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Canonization has a well-defined product identity as the platform's authoritative textual canon and owner-side policy/tooling repository.",
+        "risks": [
+          "The evidence establishes repository purpose and governance role, not end-user product behavior."
+        ],
+        "improvements": [
+          "Continue keeping README, MANIFEST, AGENTS projection, and canonical rules aligned as the policy surface evolves."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json",
+          "MANIFEST.json",
+          "AGENTS.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture governance is strong, with an explicit root contract, a large canonical rule surface, guardability mapping, and zero issues from the current RC canon diagnostic.",
+        "risks": [
+          "Two pre-existing edits are changing Canon029 ownership semantics and its GUARD_MATRIX representation and remain uncommitted."
+        ],
+        "improvements": [
+          "Verify and integrate the pending Canon029/GUARD_MATRIX changes through their normal review path."
+        ],
+        "evidence": [
+          ".canonization/Governance/Architecture/GUARD_MATRIX.md",
+          ".canonization/Governance/Architecture/Rule/Canon029MandatoryPhpQualityToolingRule.md",
+          "MANIFEST.json",
+          "AGENTS.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime evidence remains insufficient for a score change: Canonization is evidenced as an owner-side tooling repository rather than a Symfony application runtime.",
+        "risks": [
+          "Application availability, latency, throughput, persistence, and runtime resilience are not evidenced by this assessment."
+        ],
+        "improvements": [
+          "Keep runtime checks role-aware rather than inventing Symfony application verification for this repository."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json",
+          "MANIFEST.json"
+        ]
+      },
+      "qa": {
+        "summary": "Deterministic Composer and RC verification passed, but quality depth is constrained by the absence of evidenced PHPStan/PHPUnit configuration and by an Inspecting run with no active analyzers.",
+        "risks": [
+          "No phpstan.neon/phpstan.neon.dist or phpunit.xml/phpunit.xml.dist is evidenced.",
+          "Inspecting's zero findings were produced without active analyzers or metrics."
+        ],
+        "improvements": [
+          "Clarify Canon029 self-applicability and add the applicable PHPStan execution contract.",
+          "Enable substantive Inspecting analyzers appropriate to this repository."
+        ],
+        "evidence": [
+          "composer.json",
+          ".php-cs-fixer.php",
+          ".canonization/Governance/Architecture/Rule/Canon029MandatoryPhpQualityToolingRule.md",
+          "D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Canonization-20260928-101453.json"
+        ]
+      },
+      "ops": {
+        "summary": "Operational structure is mature for a tooling repository, with repository gates, GitHub workflows, release/deploy/smoke surfaces, and a green current RC diagnostic.",
+        "risks": [
+          "This assessment verified structural and RC evidence, not production deployment behavior."
+        ],
+        "improvements": [
+          "Continue using deterministic RC validation and persisted external quality evidence as orchestration inputs."
+        ],
+        "evidence": [
+          ".gate/README.md",
+          ".gate/MANIFEST.json",
+          ".github/workflows/gate.yml",
+          "README.md",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "market": {
+        "summary": "Market evidence remains insufficient for a score change; the repository facts establish platform governance purpose but contain no market-validation data.",
+        "risks": [
+          "No adoption, customer, competitive, revenue, or external market evidence is present in the supplied repository facts."
+        ],
+        "improvements": [
+          "Keep market scoring unchanged until portfolio or adoption evidence is supplied."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json"
+        ]
+      },
+      "overall": {
+        "summary": "Canonization is a structurally mature governance/tooling repository with strong architectural and operational evidence, while QA depth and non-applicable runtime/market evidence constrain a stronger overall assessment.",
+        "risks": [
+          "Quality evidence is shallower than the governance surface because PHPStan/PHPUnit execution is not evidenced and Inspecting had no active analyzers.",
+          "The repository remains intentionally dirty with two preserved user changes and the task-owned journal update."
+        ],
+        "improvements": [
+          "Close the Canon029 self-compliance question and strengthen executable static-analysis evidence.",
+          "Retain role-aware assessment so unsupported runtime and market claims are not introduced."
+        ],
+        "evidence": [
+          "README.md",
+          "MANIFEST.json",
+          "AGENTS.md",
+          ".gate/README.md",
+          ".canonization/Governance/Architecture/GUARD_MATRIX.md",
+          ".canonization/Governance/Architecture/Rule/Canon029MandatoryPhpQualityToolingRule.md",
+          "CMCP_CHANGELOG.md"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      "README.md",
+      "MANIFEST.json",
+      "composer.json",
+      ".php-cs-fixer.php",
+      ".gate/README.md",
+      ".gate/MANIFEST.json",
+      ".canonization/Governance/Architecture/GUARD_MATRIX.md",
+      ".canonization/Governance/Architecture/Rule/Canon029MandatoryPhpQualityToolingRule.md",
+      "CMCP_CHANGELOG.md",
+      "D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Canonization-20260928-101453.json"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\history\\2026-09-28-assessment-2026-09-28.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\canonization\\probes\\history\\2026-09-28-assessment-2026-09-28.yaml"
+  },
+  "ai_io": {
+    "request_file": "canonization.request.json",
+    "response_file": "canonization.response.json"
+  }
+}

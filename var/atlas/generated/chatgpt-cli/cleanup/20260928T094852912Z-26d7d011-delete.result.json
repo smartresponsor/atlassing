@@ -1,0 +1,174 @@
+{
+  "ok": true,
+  "status": "CHATGPT_CHAT_DELETE_DONE",
+  "expected_chat_id": "6aba3595-2ff4-83e9-ab3f-2b2b4cc83e6d",
+  "delete": {
+    "ok": true,
+    "status": "CHAT_SOFT_DELETED",
+    "expected_chat_id": "6aba3595-2ff4-83e9-ab3f-2b2b4cc83e6d",
+    "close_target": false,
+    "auth_session_http_status": 200,
+    "patch_http_status": 200,
+    "patch_http_status_text": "",
+    "patch_body_preview": null,
+    "auth_token_present": true,
+    "href": "https://chatgpt.com/c/6aba37a1-b0a4-83ea-92fe-14045427e694",
+    "title": "Engine task execution",
+    "auth_target_id": "6C490DBA22B58EC1BCB839FFEA7998AE",
+    "attempts": [
+      {
+        "target_id": "6C490DBA22B58EC1BCB839FFEA7998AE",
+        "chat_id": "6aba37a1-b0a4-83ea-92fe-14045427e694",
+        "settings_surface": false,
+        "ok": true,
+        "status": "CHAT_SOFT_DELETED",
+        "auth_session_http_status": 200,
+        "patch_http_status": 200,
+        "auth_token_present": true
+      }
+    ]
+  },
+  "deletion_transport": "authenticated_target_broker",
+  "conversation_deleted": true,
+  "resolver": {
+    "ok": false,
+    "status": "CHAT_DELETE_TARGET_NOT_FOUND",
+    "candidate_count": 4,
+    "duplicate_chat_id_count": 0,
+    "inventory": {
+      "ports": [
+        9222,
+        9223
+      ],
+      "attempts": [
+        {
+          "port": 9222,
+          "ok": false,
+          "error": "connect ECONNREFUSED 127.0.0.1:9222"
+        },
+        {
+          "port": 9223,
+          "ok": true,
+          "target_count": 6
+        }
+      ],
+      "total_chatgpt_targets": 6,
+      "empty_home_count": 2,
+      "chat_target_count": 4,
+      "unique_chat_id_count": 4,
+      "duplicate_chat_id_count": 0,
+      "duplicate_chat_ids": [],
+      "empty_home_targets": [
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@f6ddc7bb8d2ad05a6979ebc09b83893c2d128a62/inspector.html?ws=127.0.0.1:9223/devtools/page/34AB319E3C3C78171B12DDB073769CD0",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "34AB319E3C3C78171B12DDB073769CD0",
+          "title": "ChatGPT",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/34AB319E3C3C78171B12DDB073769CD0",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/34AB319E3C3C78171B12DDB073769CD0"
+        },
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@f6ddc7bb8d2ad05a6979ebc09b83893c2d128a62/inspector.html?ws=127.0.0.1:9223/devtools/page/C2FF6C2A55659565700CE92780F1C24C",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "C2FF6C2A55659565700CE92780F1C24C",
+          "title": "ChatGPT",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/C2FF6C2A55659565700CE92780F1C24C",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/C2FF6C2A55659565700CE92780F1C24C"
+        }
+      ],
+      "targets": [
+        {
+          "port": 9223,
+          "id": "6C490DBA22B58EC1BCB839FFEA7998AE",
+          "type": "page",
+          "title": "Engine task execution",
+          "url": "https://chatgpt.com/c/6aba37a1-b0a4-83ea-92fe-14045427e694",
+          "chat_id": "6aba37a1-b0a4-83ea-92fe-14045427e694",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "878B8FE93CF68DC3DE4E101CCEF18887",
+          "type": "page",
+          "title": "Engine task execution request. Task ID: engine-20260928094830-faceting-6021d6 Component: Faceting Workspace: D:\\PhpstormProjects\\www\\Faceting Workspace access contract: Console MCP is the mandatory execution plane for the target repository. Treat the Windows Workspace path as a Console-MCP-resolved repository locator, not as a path that must exist in ChatGPT&#39;s container filesystem. Do not probe /mnt, /mnt/data, /workspace, /workspaces, or other container paths to decide whether the Windows workspace is available. Do not substitute GitHub for the local workspace. Use GitHub only for explicitly required remote integration after local state has been inspected through Console MCP. The attached specification may be staged from container storage; that attachment location is instructions transport only and is never the target repository location. A workspace/runtime blocker is valid only after the relevant Console MCP repository capability fails or the connector lacks the required capability. Execution authority: WRITE_ALLOWED Execution mode: AUTONOMOUS_REPOSITORY_RC Task origin: COMPONENT_AUTODISCOVERY Current execution focus: RECONNAISSANCE_AND_BASELINE Engine round accounting is orchestration-internal. Do not simulate, increment, complete, or report engine rounds in the assistant response. Use the current response as one execution window and perform as many safe in-scope work passes as useful before returning a material checkpoint. Repository mutation: ALLOWED Git stage: FOLLOW_SPECIFICATION Git commit: FOLLOW_SPECIFICATION Git push: FOLLOW_SPECIFICATION Destructive operations: FORBIDDEN Verification contract: deterministic gates are required; runtime and behavioral verification are applicability-driven; visual artifacts are required for user-observable UI changes. Runtime policy: REUSE_EXISTING_FIRST. Probe the existing managed Symfony/mobile runtime before any restart; do not start or restart a healthy runtime just because this CMCP Go run began. Behavioral policy: when changed files affect browser/mobile UI, navigation, forms, interaction, or user flows, discover and execute the repository&#39;s existing Panther/Playwright/mobile UI stack where configured. Cohort policy: verify new-user and existing-user cohorts when the repository exposes those cohorts; do not invent missing cohorts. Visual artifact policy: route screenshots through the central visual artifact contract under the workspace root var/&lt;component&gt;/&lt;date&gt;/&lt;run-id&gt;; do not invent per-tool screenshot roots. Visual Gallery: http://100.101.253.65:9477/Faceting/today Response policy: include the exact Visual Gallery URL above on its own line near the end of every assistant response, even when no new screenshot was produced in that round. If visual evidence exists, briefly mention whether it is GREEN, ATTENTION, or NOT_VERIFIED before the URL. Conversation cleanup signal: the final line of every assistant response must be exactly one JSON object with exactly one boolean field named ready_to_delete: {&quot;ready_to_delete&quot;} or {&quot;ready_to_delete&quot;}. Use true only when the substantive objective of the original task is complete and this conversation is no longer needed for that task; otherwise use false. Do not add text after this JSON line. Completion policy: applicable behavioral/UI evidence is part of engine verification; a textual claim of completion is insufficient when required evidence is absent. The attached file is the complete authoritative execution specification for this task. Read the attachment in full before making conclusions or changing files. Execute the repository task described in the attachment; do not stop after task initialization or planning. Complete factual reconnaissance and initialize/update the root CMCP_CHANGELOG.md orchestration journal when repository mutation is allowed. Reconnaissance or journal initialization alone is never terminal completion for a WRITE_ALLOWED autonomous run; materially execute and verify the task while safe in-scope work remains. Preserve every stated repository boundary, runtime restriction, canon rule, and progress-reporti",
+          "url": "https://chatgpt.com/c/6aba3802-3d60-83e9-af24-a51bd9388c8f",
+          "chat_id": "6aba3802-3d60-83e9-af24-a51bd9388c8f",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "CFC6BDA9E4E2D140FFC41A83CE7762EF",
+          "type": "page",
+          "title": "Engine task execution",
+          "url": "https://chatgpt.com/c/6aba36ee-bc48-83ea-b52b-afbef9a4841b",
+          "chat_id": "6aba36ee-bc48-83ea-b52b-afbef9a4841b",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "ED07320D0B4933E4C0A92402F6706B46",
+          "type": "page",
+          "title": "Execute repository task",
+          "url": "https://chatgpt.com/c/6aba364e-04a8-83ea-8da2-27233d470f50",
+          "chat_id": "6aba364e-04a8-83ea-8da2-27233d470f50",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "34AB319E3C3C78171B12DDB073769CD0",
+          "type": "page",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "C2FF6C2A55659565700CE92780F1C24C",
+          "type": "page",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        }
+      ]
+    }
+  },
+  "policy": {
+    "browser_mutation": true,
+    "chatgpt_host_only": true,
+    "deletes_chat": true,
+    "soft_delete_via_backend_api": true,
+    "requires_expected_chat_id": true,
+    "ordinary_delete_requires_confirm_delete": true,
+    "lifecycle_ready_to_delete_authorization_available": true,
+    "lifecycle_ready_to_delete_requires_true_signal": true,
+    "writes_input": false,
+    "submits_input": false
+  },
+  "tool": "console.write.browser.chatgpt.chat.delete.execute",
+  "bridge": {
+    "ok": true,
+    "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+    "capabilityClass": "atomic",
+    "authorityMode": "legacy",
+    "m5AtomicTransportEnabled": false,
+    "endpoint": "http://127.0.0.1:3335/mcp",
+    "requestTimeoutMs": 120000
+  },
+  "envBootstrap": {
+    "endpoint": "http://127.0.0.1:3335/mcp",
+    "tokenPresent": true,
+    "tokenSource": "env"
+  }
+}

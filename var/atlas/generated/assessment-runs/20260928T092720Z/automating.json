@@ -1,0 +1,235 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "automating",
+    "component_title": "Automating",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/automating/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Automating",
+    "timestamp_utc": "2026-09-28T09:38:10.260380+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "556c55a2ed3f52c6d49993dddcb18f206d2e8b51"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "AD .automation.zip\n M .automation/tool/automater-pack-sync.ps1\n D consumer-src/.github/prompts/prompt-audit.yml\n D consumer-src/.github/workflows/automate-kit-sync.yml\n?? AGENTS.md\n?? consumer-src/.github/workflows/consuming.yml"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "556c55a inspection\nce170f5 Merge remote-tracking branch 'origin/master'\n3640800 fix: not release\nebab9e2 automater pack sync: automate-kit@branch-master\n0de404b fix: not release"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/.gitignore\n.automation/ai/\n.automation/automator/\n.automation/client/\n.automation/demo/\n.automation/docs/\n.automation/lock/\n.automation/packs.json\n.automation/payload/\n.automation/README-automation-kit.txt\n.automation/README.md\n.automation/template/\n.automation/tool/\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\nAGENTS.md\nconsumer-src/\nconsumer-src/.automation/\nconsumer-src/.github/\nconsumer-src/.gitignore"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "53"
+    }
+  },
+  "verdict": {
+    "component": "automating",
+    "summary": "Automating remains a compact automation-kit repository with a real tested Cloudflare worker subcomponent, but the current working tree is not RC-ready: local master is 15 commits behind origin/master, six paths are dirty, and the modified pack-sync path contains two material safety/correctness regressions that are not present in origin/master.",
+    "strengths": [
+      "Automation-kit responsibility is explicit through .automation, consumer-src, synchronization tooling, and GitHub workflows.",
+      "The nested agent-trigger worker has a deterministic Node test suite.",
+      "All three agent-trigger worker tests pass in the current workspace.",
+      "SHA verification and release/branch fallback logic are explicitly implemented in the pack-sync tooling."
+    ],
+    "risks": [
+      "Local master is 15 commits behind origin/master, so the current working tree is not based on the current upstream baseline.",
+      "The modified ShouldThrottle function references zipName, consumerSlug, and tag outside their valid execution context while Set-StrictMode Latest is enabled.",
+      "The modified pack-sync script recursively removes targetRoot before copying, while packs.json configures targetRoot as '.', creating a repository-root deletion hazard.",
+      "The primary pack-sync path has no evidenced deterministic test covering throttling, target-root safety, synchronization, or destructive-path guards.",
+      "The worktree contains staged, modified, deleted, and untracked state, including an AD .automation.zip index/worktree mismatch."
+    ],
+    "next_actions": [
+      "Do not execute the current modified automater-pack-sync.ps1 against a consumer repository.",
+      "Reconcile the 15 upstream commits with the local dirty worktree without losing unrelated local work.",
+      "Remove the out-of-context template expansion from ShouldThrottle and place expansion only after tag and asset names are resolved.",
+      "Replace unconditional targetRoot recursive deletion with an explicitly bounded synchronization strategy that cannot remove repository root.",
+      "Add deterministic tests for targetRoot='.', throttling, asset-template expansion, SHA256SUMS parsing, and synchronization safety.",
+      "Re-run the Quality Atlas assessment after the worktree is reconciled and the pack-sync safety path is verified."
+    ],
+    "notes": [
+      "Repository mutation, staging, commit, push, fetch, pull, runtime restart, and destructive execution were not performed because execution authority is READ_ONLY.",
+      "The configured Symfony/PHP application runtime is not applicable here because the repository has no root composer.json and the assessed implementation is primarily PowerShell/GitHub automation plus a nested Node worker.",
+      "Behavioral verification executed only where safely applicable: .automation/ai/agent-trigger/worker npm test passed 3/3.",
+      "No browser/mobile UI change is present in the assessed working tree; visual evidence is NOT_VERIFIED / not applicable.",
+      "The supplied Quality Atlas baseline identifies master at 556c55a2ed3f52c6d49993dddcb18f206d2e8b51 with the same dirty-state family and no root Composer/PHPUnit/PHPStan configuration. fileciteturn0file0L1767-L1815",
+      "Visual Gallery: http://100.101.253.65:9477/Automating/today"
+    ],
+    "suggested_score_overrides": {
+      "architecture": 6.8,
+      "runtime": 5.2,
+      "qa": 6.8,
+      "ops": 5.5,
+      "overall": 6.3
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "The repository still has a recognizable automation-kit identity through .automation assets, synchronization tooling, consumer-src material, and worker functionality, but current evidence does not establish broader consumer adoption or end-to-end product completeness.",
+        "risks": [
+          "Consumer outcomes and end-to-end supported synchronization behavior remain insufficiently demonstrated."
+        ],
+        "improvements": [
+          "Capture deterministic consumer acceptance scenarios after the pack-sync safety path is corrected."
+        ],
+        "evidence": [
+          ".automation/README.md",
+          ".automation/packs.json",
+          "consumer-src/.github/workflows/consuming.yml"
+        ]
+      },
+      "architecture": {
+        "summary": "The repository retains clear separation between kit assets, automation tooling, workflows, and consumer material, but the current architecture baseline is unstable because master is 15 commits behind upstream and the dirty tree contains conflicting synchronization changes.",
+        "risks": [
+          "The assessed local structure is not aligned with the current upstream master.",
+          "Current synchronization changes introduce unsafe repository-root handling."
+        ],
+        "improvements": [
+          "Reconcile upstream and local work first, then establish one committed authoritative synchronization design with explicit path-safety invariants."
+        ],
+        "evidence": [
+          ".automation/tool/automater-pack-sync.ps1",
+          ".automation/packs.json",
+          "consumer-src/.github/workflows/consuming.yml"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime confidence is materially reduced because the modified pack-sync execution path contains out-of-context strict-mode variable references and an unconditional recursive targetRoot removal while targetRoot is configured as repository root.",
+        "risks": [
+          "ShouldThrottle can fail under Set-StrictMode because it references variables not established in that function's execution context.",
+          "targetRoot='.' combined with recursive Remove-Item creates a potentially destructive synchronization path."
+        ],
+        "improvements": [
+          "Correct variable lifetime/order and enforce a non-destructive, bounded destination synchronization algorithm before any behavioral execution of pack-sync."
+        ],
+        "evidence": [
+          ".automation/tool/automater-pack-sync.ps1",
+          ".automation/packs.json"
+        ]
+      },
+      "qa": {
+        "summary": "Quality evidence is stronger than the previous snapshot because the nested Node worker test suite passes 3/3, but the critical PowerShell pack synchronization path remains without evidenced deterministic coverage.",
+        "risks": [
+          "Passing worker tests do not cover the currently risky pack-sync changes.",
+          "No Pester or PSScriptAnalyzer configuration was found for the PowerShell synchronization path."
+        ],
+        "improvements": [
+          "Add deterministic PowerShell synchronization tests covering root-path guards, throttling, template expansion, checksum parsing, and copy semantics."
+        ],
+        "evidence": [
+          ".automation/ai/agent-trigger/worker/package.json",
+          ".automation/ai/agent-trigger/worker/test/worker.test.js",
+          ".automation/tool/automater-pack-sync.ps1",
+          ".automation/tool/automater-task.ps1"
+        ]
+      },
+      "ops": {
+        "summary": "Operational automation is extensive, but current RC reproducibility is weak because master is behind origin/master, the worktree has six dirty paths, .automation.zip has divergent staged/worktree state, and the local synchronization implementation is unsafe to execute.",
+        "risks": [
+          "Local master is 15 commits behind origin/master.",
+          "The worktree contains staged, modified, deleted, and untracked state.",
+          "No exact release tag is established for the assessed HEAD.",
+          "The current local pack-sync implementation should not be executed until corrected."
+        ],
+        "improvements": [
+          "Reconcile upstream safely, stabilize the worktree, establish deterministic pack-sync validation, and only then restore automated synchronization execution."
+        ],
+        "evidence": [
+          ".github/workflows/automate-kit-sync.yml",
+          "consumer-src/.github/workflows/consuming.yml",
+          ".automation/tool/automater-pack-sync.ps1",
+          ".automation/packs.json"
+        ]
+      },
+      "market": {
+        "summary": "The repository continues to establish an internal automation-kit component, but no new evidence demonstrates market demand, external adoption, pricing, or competitive positioning.",
+        "risks": [
+          "Market alignment cannot be validated from the current repository evidence."
+        ],
+        "improvements": [
+          "Attach owner-facing consumer/adoption evidence if market scoring is required."
+        ],
+        "evidence": [
+          ".automation/README.md"
+        ]
+      },
+      "overall": {
+        "summary": "Automating has meaningful automation assets and a passing tested worker, but the current local RC baseline is not trustworthy enough for an 8.0 assessment because it is 15 commits behind upstream and contains an unverified pack-sync change with both strict-mode correctness and repository-root deletion hazards.",
+        "risks": [
+          "The current local baseline is stale and dirty.",
+          "Critical synchronization behavior has a material safety defect.",
+          "Verification depth is uneven: worker tests pass, while the pack-sync execution path lacks deterministic coverage."
+        ],
+        "improvements": [
+          "Reconcile upstream, correct and test pack-sync safety, reach a clean committed baseline, then repeat deterministic RC assessment."
+        ],
+        "evidence": [
+          ".automation/tool/automater-pack-sync.ps1",
+          ".automation/packs.json",
+          ".automation/ai/agent-trigger/worker/test/worker.test.js",
+          "consumer-src/.github/workflows/consuming.yml"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      ".automation/packs.json",
+      ".automation/README.md",
+      ".automation/tool/automater-pack-sync.ps1",
+      ".automation/tool/automater-task.ps1",
+      ".automation/ai/agent-trigger/worker/package.json",
+      ".automation/ai/agent-trigger/worker/test/worker.test.js",
+      ".github/workflows/automate-kit-sync.yml",
+      ".automation/payload/.github/workflows/automate-pack-sync.yml",
+      "consumer-src/.github/workflows/consuming.yml"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\automating\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\automating\\history\\2026-09-28-assessment-2026-09-28.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\automating\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\automating\\probes\\history\\2026-09-28-assessment-2026-09-28.yaml"
+  },
+  "ai_io": {
+    "request_file": "automating.request.json",
+    "response_file": "automating.response.json"
+  }
+}
