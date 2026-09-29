@@ -93,7 +93,7 @@ function ConvertFrom-AssistantJson {
 }
 
 if ($Preflight) {
-    $probe = Invoke-ConsoleMcpBridge -Tool 'console.read_.repo.workspace.status' -Arguments ([pscustomobject]@{ workspacePath = $repoRoot }) -Label 'preflight'
+    $probe = Invoke-ConsoleMcpBridge -Tool 'read_.repo.workspace.status' -Arguments ([pscustomobject]@{ workspacePath = $repoRoot }) -Label 'preflight'
     [pscustomobject]@{
         ok = ($probe.ok -eq $true)
         status = 'CONSOLE_MCP_RAW_SCORING_PREFLIGHT'
@@ -118,7 +118,7 @@ Follow that specification exactly. Assessment only: do not modify the target rep
 Return only the strict JSON verdict requested by the scoring specification, without markdown or commentary.
 "@.Trim()
 
-$started = Invoke-ConsoleMcpBridge -Tool 'console.write.browser.chatgpt.chat.create.send' -Arguments ([pscustomobject]@{
+$started = Invoke-ConsoleMcpBridge -Tool 'write.browser.chatgpt.chat.create.send' -Arguments ([pscustomobject]@{
     prompt = $rawCommand
     component = $Component
     taskId = ('quality-atlas-' + $Component)
@@ -136,7 +136,7 @@ if ($started.ok -ne $true -or [string]::IsNullOrWhiteSpace([string]$chatId)) {
     throw "Console MCP scoring chat launch failed: $($started | ConvertTo-Json -Depth 12 -Compress)"
 }
 
-$settled = Invoke-ConsoleMcpBridge -Tool 'console.read_.browser.chatgpt.answer.settle' -Arguments ([pscustomobject]@{
+$settled = Invoke-ConsoleMcpBridge -Tool 'read_.browser.chatgpt.answer.settle' -Arguments ([pscustomobject]@{
     preferredChatId = $chatId
     requireChatId = $true
     maxMessages = 30

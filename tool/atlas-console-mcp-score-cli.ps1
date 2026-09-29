@@ -47,7 +47,7 @@ function Invoke-TechnicalChatDelete {
     $resultPath = Join-Path $cleanupRuntimeDir "$stamp-$phase.result.json"
     $payload = [pscustomobject]@{
         runnerExecutionPlan = [pscustomobject]@{
-            tool = 'console.write.browser.chatgpt.chat.delete.execute'
+            tool = 'write.browser.chatgpt.chat.delete.execute'
             arguments = [pscustomobject]@{
                 expectedChatId = $ChatId
                 confirmDelete = $true

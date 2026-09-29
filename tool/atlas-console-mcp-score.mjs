@@ -58,7 +58,7 @@ async function main() {
   await client.connect(transport);
   try {
     if (args.preflight) {
-      const described = payload(await client.callTool({ name: "console.read_.system.console.describe", arguments: {} }));
+      const described = payload(await client.callTool({ name: "read_.system.console.describe", arguments: {} }));
       process.stdout.write(JSON.stringify({ ok: described?.server_name === "console-mcp", status: "CONSOLE_MCP_RAW_SCORING_PREFLIGHT", secret_source: secret.source, endpoint: endpoint.origin }) + "\n");
       return;
     }
@@ -69,7 +69,7 @@ async function main() {
       "Follow it exactly. Assessment only: do not modify the target repository, commit, or push.",
       "Return only the strict JSON verdict requested by the scoring specification.",
     ].join("\n");
-    const started = payload(await client.callTool({ name: "console.write.browser.chatgpt.chat.create.send", arguments: {
+    const started = payload(await client.callTool({ name: "write.browser.chatgpt.chat.create.send", arguments: {
       prompt: rawCommand,
       component,
       taskId: `quality-atlas-${component}`,
@@ -82,7 +82,7 @@ async function main() {
     }}));
     const chatId = started?.chat_id ?? started?.chatId;
     if (started?.ok !== true || !chatId) throw new Error(`Console MCP launch failed: ${JSON.stringify(started).slice(0, 8000)}`);
-    const settled = payload(await client.callTool({ name: "console.read_.browser.chatgpt.answer.settle", arguments: {
+    const settled = payload(await client.callTool({ name: "read_.browser.chatgpt.answer.settle", arguments: {
       preferredChatId: chatId, requireChatId: true, maxMessages: 30, readinessProfile: "long_run",
       maxWaitMs: 600000, observationBudgetMs: 60000, pollMs: 2000, minStableSamples: 2,
       requireComposerSendMode: false, timeoutMs: 10000,
