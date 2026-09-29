@@ -1,0 +1,6 @@
+{
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "codexing",
+  "workspace": "D:\\PhpstormProjects\\www\\Codexing",
+  "prompt_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\codexing.prompt.txt"
+}

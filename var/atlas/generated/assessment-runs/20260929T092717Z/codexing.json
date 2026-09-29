@@ -1,0 +1,245 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "codexing",
+    "component_title": "Codexing",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/codexing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Codexing",
+    "timestamp_utc": "2026-09-29T09:59:58.660877+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 128,
+      "output": "HEAD\n\nfatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'"
+    },
+    "git_commit": {
+      "exit_code": 128,
+      "output": "HEAD\n\nfatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? .github/\n?? AGENTS.md\n?? SPS1/\n?? locating.md\n?? ps1/\n?? report/\n?? run.ps1\n?? run.ps1.bak\n?? run.sh"
+    },
+    "git_recent_commits": {
+      "exit_code": 128,
+      "output": "fatal: your current branch 'master' does not have any commits yet"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".github/\n.github/workflows/\nAGENTS.md\nlocating.md\nps1/\nps1/codex-queue.ps1\nps1/codex-queue.ps1.bak\nreport/\nreport/envelope/\nrun.ps1\nrun.ps1.bak\nrun.sh\nSPS1/\nSPS1/envelope/\nSPS1/report/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "49"
+    }
+  },
+  "verdict": {
+    "component": "codexing",
+    "summary": "Codexing is a small PowerShell-based Codex envelope dispatcher with explicit Git/PR orchestration, report capture, and a reusable scheduled security workflow. The repository is operationally recognizable, but it is still an uncommitted initial workspace with no project manifest, no automated test suite, and no repository-local deterministic validation commands; the read-only RC diagnostic therefore reports green only with the material warning `no_validation_commands_detected`.",
+    "strengths": [
+      "The dispatcher has a clear execution path from envelope parsing through Codex execution, patch validation, commit/push, PR creation, and optional merge handling.",
+      "Execution artifacts are persisted per consumer/envelope, including prompt, Codex output, patch, status, changed-file list, and PR metadata.",
+      "Patch mode performs `git apply --check` before applying a generated patch and stops on native-command failure.",
+      "A reusable GitHub security workflow is configured for push, pull request, manual dispatch, and scheduled execution.",
+      "Repository governance is explicitly documented in AGENTS.md."
+    ],
+    "risks": [
+      "The master branch has no commits and every visible repository asset is currently untracked.",
+      "There is no composer.json, package.json, PHPUnit, PHPStan, or equivalent repository-local validation stack.",
+      "The RC validator detected zero validation commands, so its green diagnostic is not evidence of tested behavior.",
+      "run.sh is empty, leaving the advertised shell entry point without implementation.",
+      "Tracked-looking `.bak` copies duplicate the PowerShell implementation and create drift risk.",
+      "Historical execution evidence is incomplete: the inspected locating-l1 run has changed/status artifacts but an empty PR artifact, while expected locating-l3 status/changed/PR artifacts were absent.",
+      "No evidence supports a market-position assessment."
+    ],
+    "next_actions": [
+      "Create the initial Git baseline so repository state, reviews, and CI results become attributable to commits.",
+      "Add deterministic repository-local checks for PowerShell parsing/static validation and dispatcher behavior, then expose them through the normal gate surface.",
+      "Add focused tests for envelope parsing, front-matter repository resolution, patch extraction, changed-file detection, failure propagation, and PR/merge branching.",
+      "Either implement run.sh as a supported entry point or remove it.",
+      "Remove or formally exclude backup copies once their necessity is resolved so there is one authoritative implementation.",
+      "Document Codexing's dispatcher responsibility, prerequisites, execution modes, artifact contract, and recovery behavior in repository-local documentation.",
+      "Verify one controlled end-to-end envelope run after deterministic tests exist and retain its complete status/patch/PR evidence."
+    ],
+    "notes": [
+      "Assessment was performed read-only through Console MCP against D:\\PhpstormProjects\\www\\Codexing; no repository mutation, staging, commit, push, runtime restart, or destructive operation was performed.",
+      "Console MCP confirmed branch `master`, HEAD absent, no upstream, and nine untracked top-level entries.",
+      "The read-only RC validation returned `rc_diagnostic_green` with zero validation commands and warning `no_validation_commands_detected`; this was treated as limited structural evidence rather than a behavioral pass.",
+      "Inspecting is available and reports a native analyzer for this target, but running the persistence-producing Inspecting action was not compatible with the task's READ_ONLY authority.",
+      "Behavioral/browser/mobile verification was not applicable from the inspected repository surface; no UI implementation or user flow was evidenced.",
+      "Visual evidence: NOT_VERIFIED / not applicable — no user-observable UI change or UI implementation was under assessment.",
+      "The authoritative task specification identifies Codexing as component `codexing`, default branch `master`, and supplies the bootstrap snapshot and deterministic repository facts used as the assessment baseline. fileciteturn0file0L1764-L1812"
+    ],
+    "suggested_score_overrides": {
+      "product": 6.8,
+      "architecture": 6.4,
+      "runtime": 6.0,
+      "qa": 3.8,
+      "ops": 6.3,
+      "overall": 5.9
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Codexing has a discernible product responsibility as an envelope-driven Codex dispatcher, but that identity is primarily encoded in scripts and governance rather than dedicated product documentation.",
+        "risks": [
+          "No README or manifest was present to define the dispatcher contract independently of implementation.",
+          "The repository is still entirely outside a committed baseline."
+        ],
+        "improvements": [
+          "Document the dispatcher purpose, supported modes, prerequisites, artifact contract, and recovery model.",
+          "Commit the authoritative repository baseline."
+        ],
+        "evidence": [
+          "run.ps1",
+          "ps1/codex-queue.ps1",
+          "AGENTS.md"
+        ]
+      },
+      "architecture": {
+        "summary": "The PowerShell orchestration has a coherent linear envelope-to-PR workflow with explicit helper functions and fail-fast native-command handling, but it remains concentrated in one large script with duplicate backup copies.",
+        "risks": [
+          "The main queue script combines parsing, Codex execution, Git mutation, GitHub PR handling, reporting, and merge polling.",
+          "Backup script copies create parallel authoritative-looking implementations."
+        ],
+        "improvements": [
+          "Separate independently testable parsing, execution, reporting, and GitHub orchestration responsibilities without introducing unnecessary architectural layers.",
+          "Retire redundant backup copies after preserving any required history in Git."
+        ],
+        "evidence": [
+          "ps1/codex-queue.ps1",
+          "ps1/codex-queue.ps1.bak",
+          "run.ps1",
+          "run.ps1.bak"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime behavior is explicitly parameterized and guarded for required commands, but repository-local runtime verification is absent and the shell entry point is empty.",
+        "risks": [
+          "The dispatcher depends on git, codex, gh, PowerShell, remote availability, and target-repository state without a deterministic local smoke gate.",
+          "run.sh contains no implementation."
+        ],
+        "improvements": [
+          "Add a non-destructive smoke path that validates prerequisites and parses a fixture envelope without repository mutation.",
+          "Implement or remove the empty shell entry point."
+        ],
+        "evidence": [
+          "run.ps1",
+          "run.sh",
+          "ps1/codex-queue.ps1"
+        ]
+      },
+      "qa": {
+        "summary": "Quality assurance is the weakest evidenced area: patch application is prechecked and external security CI exists, but no repository-local test or static-validation suite is configured.",
+        "risks": [
+          "The RC diagnostic found no deterministic validation commands.",
+          "Envelope parsing, patch extraction, failure paths, and GitHub-flow branches have no evidenced automated tests."
+        ],
+        "improvements": [
+          "Add deterministic PowerShell/static checks and unit-level tests for the pure orchestration helpers.",
+          "Add controlled integration fixtures covering no-change, malformed patch, failed apply, PR creation, and merge-state handling."
+        ],
+        "evidence": [
+          "ps1/codex-queue.ps1",
+          ".github/workflows/security.yml"
+        ]
+      },
+      "ops": {
+        "summary": "Operational mechanics are materially developed through per-run artifacts, explicit failure stops, PR automation, merge polling, and scheduled security CI, but the evidence chain is incomplete and lacks repository-local health gates.",
+        "risks": [
+          "An inspected historical run contains status and changed-file artifacts but an empty PR artifact.",
+          "Some expected later run artifacts were absent, so successful lifecycle completion cannot be generalized from the current snapshot."
+        ],
+        "improvements": [
+          "Define a complete run manifest/status contract with explicit terminal states and failure reason capture.",
+          "Gate successful completion on the required artifact set and deterministic validation results."
+        ],
+        "evidence": [
+          "ps1/codex-queue.ps1",
+          ".github/workflows/security.yml",
+          "SPS1/envelope/Locating/locating-l1/status.txt",
+          "SPS1/envelope/Locating/locating-l1/changed.txt",
+          "SPS1/envelope/Locating/locating-l1/pr.txt"
+        ]
+      },
+      "market": {
+        "summary": "The current repository facts do not provide sufficient evidence to replace the bootstrap market narrative with a substantive market-alignment assessment.",
+        "risks": [
+          "No repository evidence establishes users, adoption, alternatives, positioning, or market outcomes."
+        ],
+        "improvements": [
+          "Add product/consumer context only when supported by concrete usage or portfolio evidence."
+        ],
+        "evidence": []
+      },
+      "overall": {
+        "summary": "Codexing demonstrates useful orchestration mechanics and operational intent, but it is below RC-grade confidence because the repository has no committed baseline and no deterministic local validation suite.",
+        "risks": [
+          "Current green RC status is structurally shallow because no validation commands were available.",
+          "Uncommitted repository state and incomplete historical run evidence limit reproducibility."
+        ],
+        "improvements": [
+          "Establish the Git baseline, deterministic test/gate surface, and one fully evidenced controlled execution before treating the component as RC-ready."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "run.ps1",
+          "run.sh",
+          "ps1/codex-queue.ps1",
+          ".github/workflows/security.yml",
+          "SPS1/envelope/Locating/locating-l1/status.txt",
+          "SPS1/envelope/Locating/locating-l1/changed.txt",
+          "SPS1/envelope/Locating/locating-l1/pr.txt"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      "run.ps1",
+      "run.sh",
+      "ps1/codex-queue.ps1",
+      ".github/workflows/security.yml",
+      "SPS1/envelope/Locating/locating-l1/status.txt",
+      "SPS1/envelope/Locating/locating-l1/changed.txt",
+      "SPS1/envelope/Locating/locating-l1/pr.txt"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\codexing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\codexing\\history\\2026-09-29-assessment-2026-09-29.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\codexing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\codexing\\probes\\history\\2026-09-29-assessment-2026-09-29.yaml"
+  },
+  "ai_io": {
+    "request_file": "codexing.request.json",
+    "response_file": "codexing.response.json"
+  }
+}

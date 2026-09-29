@@ -1,0 +1,260 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "cataloging",
+    "component_title": "Cataloging",
+    "github_repository": "smartresponsor/cataloging",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/cataloging/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Cataloging",
+    "timestamp_utc": "2026-09-29T09:49:03.412855+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "feature/cataloging-post-merge-20260921-v2"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "7b237f9033a722be90e1c94981a6290008cb4ad8"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '7b237f9033a722be90e1c94981a6290008cb4ad8'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M .gating/README.md\n M CMCP_CHANGELOG.md\n M composer.json\n M composer.prod.json\n D config/catalog_bundles.php\n M config/catalog_category_services_graphql.yaml\n M config/catalog_services.yaml\n D config/component/component.yaml\n D config/component/config_tools.yaml\n D config/component/env.yaml\n D config/component/runtime.yaml\n M config/component/services.yaml\n D config/component/smoke.yaml\n D config/gating/cataloging.yaml\n D config/gating/severity.yaml\n M config/packages/catalog_category_infra.yaml\n M config/packages/catalog_category_region.yaml\n M config/packages/catalog_category_search.yaml\n M config/packages/catalog_category_security_api.yaml\n M config/packages/catalog_category_webhook.yaml\n M config/packages/catalog_doctrine.yaml\n M config/packages/catalog_region.yaml\n M config/packages/catalog_search.yaml\n M config/packages/catalog_webhook.yaml\nD  config/reference.php\n M config/routes/catalog_category_move.yaml\n M config/services.yaml\n M docs/category-rc-readiness.md\n M docs/category-rc1-ops.md\n M ops/category-canary.yaml\n M phpstan.neon\n M public/robots.txt\n M public/sitemap-category.xml.php\n D src/Ai/CatalogSuggestService.php\n M src/Command/CatalogSlugSmokeCommand.php\n M src/Command/CatalogSyndicationDestinationGovernanceSummaryCommand.php\n M src/Command/CategoryCliInputTrait.php\n M src/Command/CategoryProjectionRunCommand.php\n M src/Command/CategorySyndicationCategoryGovernanceSummaryCommand.php\n M src/Command/ExportRedirectCommand.php\n M src/Command/ExportRedirectNdjsonCommand.php\n M src/Command/ProjectionPauseCommand.php\n M src/Controller/Catalog/CatalogAdminCategoryController.php\n M src/Controller/Catalog/CatalogCategoryActorTraceabilityController.php\n M src/Controller/Catalog/CatalogCategoryAdminController.php\n M src/Controller/Catalog/CatalogCategoryApiController.php\n M src/Controller/Catalog/CatalogCategoryAuditController.php\n M src/Controller/Catalog/CatalogCategoryBatchEditController.php\n M src/Controller/Catalog/CatalogCategoryBulkController.php\n M src/Controller/Catalog/CatalogCategoryCollectionController.php\n M src/Controller/Catalog/CatalogCategoryController.php\n M src/Controller/Catalog/CatalogCategoryDlqController.php\n M src/Controller/Catalog/CatalogCategoryGovernanceController.php\n M src/Controller/Catalog/CatalogCategoryListController.php\n M src/Controller/Catalog/CatalogCategoryMerchantController.php\n M src/Controller/Catalog/CatalogCategoryOpsController.php\n M src/Controller/Catalog/CatalogCategoryPermsController.php\n M src/Controller/Catalog/CatalogCategoryRuntimeStatusController.php\n M src/Controller/Catalog/CatalogCategorySitemapController.php\n M src/Controller/Catalog/CatalogCategoryStorefrontController.php\n M src/Controller/Catalog/CatalogCategorySuggestController.php\n M src/Controller/Catalog/CatalogLegacyCategoryListController.php\n M src/Controller/Catalog/CatalogLegacyCollectionListController.php\n M src/Controller/MetricsController.php\n D src/Dto/CategoryAdminCategoryDTO.php\n D src/Event/CategoryWorkflowTransitioned.php\n D src/Event/SyndicationDeliveryRecorded.php\n D src/Event/SyndicationDestinationGovernanceSummaryBuilt.php\n D src/Event/SyndicationDestinationHistoryBuilt.php\n D src/Event/SyndicationDestinationRegistered.php\n M src/EventInterface/Catalog/CatalogSyndicationDestinationGovernanceSummaryBuiltEventInterface.php\n D src/EventInterface/CategoryWorkflowTransitionedInterface.php\n D src/EventInterface/SyndicationDeliveryRecordedInterface.php\n D src/EventInterface/SyndicationDestinationGovernanceSummaryBuiltInterface.php\n D src/EventInterface/SyndicationDestinationHistoryBuiltInterface.php\n D src/EventInterface/SyndicationDestinationRegisteredInterface.php\n M src/EventSubscriber/MetricsSubscriber.php\n M src/EventSubscriber/RequestCorrelationSubscriber.php\n D src/Exception/CategoryLinkConflict.php\n D src/Exception/TaxonomyConflict.php\n M src/Form/CategoryAdminCategoryType.php\n M src/Idempotency/CategoryIdempotencyStore.php\n D src/Infrastructure/CacheInvalidator.php\n D src/Infrastructure/CategoryAuditLogger.php\n D src/Infrastructure/HttpWebhookSender.php\n D src/Infrastructure/MessengerOutboxDispatcher.php\n D src/Infrastructure/MessengerOutboxMessage.php\n D src/Infrastructure/OrderWebhookPublisher.php\n D src/Infrastructure/ProductWebhookPublisher.php\n D src/Infrastructure/ProjectionSync.php\n D src/InfrastructureInterface/OutboxDispatcherInterface.php\n D src/InfrastructureInterface/WebhookSenderInterface.php\n M src/Kernel.php\n D src/Lifecycle/CatalogCategoryLifecyclePolicy.php\n D src/MessageHandler/RecomputeVirtualCategoryHandler.php\n M src/Observability/MonologCorrelationProcessor.php\n D src/Observability/RequestCorrelationIdProvider.php\n M src/Policy/CategoryCompletenessPolicy.php\n M src/Policy/CategoryDestinationMediaFallbackPolicy.php\n M src/Policy/CategoryDestinationMediaPolicyPreferencePolicy.php\n M src/Policy/CategoryDestinationMediaReadinessPolicy.php\n M src/Policy/CategoryMediaApplicabilityPolicy.php\n M src/Policy/CategorySyndicationCategoryGovernanceSummaryPolicy.php\n M src/Policy/CategorySyndicationGovernanceSummaryAccumulator.php\n M src/Policy/CategorySyndicationGovernanceTrailPolicy.php\n M src/Repository/Catalog/CatalogVirtualCategoryRepository.php\n M src/RepositoryInterface/Catalog/CatalogVirtualCategoryRepositoryInterface.php\n M src/Request/CategoryBulkRequest.php\n D src/Request/Support/RequestValueNormalizer.php\n M src/Request/WebhookDispatchRequest.php\n M src/Rule/CategoryRule.php\n D src/Rule/CategoryRulePolicy.php\n D src/Service/AbVariantResolver.php\n D src/Service/ArrayValueNormalizer.php\n D src/Service/Catalog/CatalogCategoryMoveSurfaceBuilder.php\n D src/Service/Catalog/CatalogContractFactory.php\n M src/Service/CatalogAliasRouterService.php\n D src/Service/CatalogCacheInvalidationRecorderService.php\n D src/Service/CatalogCanonicalPolicyService.php\n D src/Service/CatalogCanonicalResolverService.php\n M src/Service/CatalogCategoryAttachmentAuthorizationService.php\n D src/Service/CatalogCategoryBreadcrumbBuilderService.php\n M src/Service/C"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "7b237f90 Align Cataloging config tool contract\nae543e93 Name Catalog outbox key uniqueness\n2dfe6e6c Retain Gating artifact surface\nc6ed87a3 Integrate Cataloging post-merge contracts\nf4981bb4 Rebase Cataloging runtime vocabulary and production-readiness work (#92)"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".automation/\n.automation/packs.json\n.automation/README.md\n.automation/tool/\n.codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.commanding/\n.commanding/.gitattributes\n.commanding/.github/\n.commanding/.gitignore\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.lnk\n.commanding/commanding.ps1\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/health.sh\n.commanding/history.sh\n.commanding/lib/\n.commanding/local_ci.sh\n.commanding/log/\n.commanding/logs/\n.commanding/MANIFEST.md\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.console-mcp/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.gitattributes\n.gating/.github/\n.gating/.gitignore\n.gating/.idea/\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/bin/\n.gating/CMCP_CHANGELOG.md\n.gating/composer.json\n.gating/composer.lock\n.gating/config/\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/LICENSE\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/NOTICE\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gating/vendor/\n.gitattributes\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Cataloging.iml\n.idea/codeception.xml\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php-test-framework.xml\n.idea/php.xml\n.idea/phpspec.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.mcp.json\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\nAGENTS.md\napi/\napi/catalog-openapi.yaml\napi/category-openapi.yaml\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/catalog_category_services_graphql.yaml\nconfig/catalog_services.yaml"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "1580"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"cataloging/catalog\",\n  \"description\": \"Cataloging processing app\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko / Marketing America Corp\",\n      \"email\": \"17111337+taa0662621456@users.noreply.github.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"administering/administration\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"api-platform/doctrine-orm\": \"^4.3\",\n    \"api-platform/graphql\": \"^4.3\",\n    \"api-platform/symfony\": \"^4.3\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"nelmio/api-doc-bundle\": \"^5.0\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/doctrine-bridge\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"ext-openssl\": \"*\",\n    \"symfony/serializer\": \"^8.1\",\n    \"objecting/object\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Cataloging\\\\\": \"src/\"\n    },\n    \"files\": [\n      \"src/EventInterface/CatalogCategoryWorkflowEntityTransitionedInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDeliveryRecordedInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDestinationGovernanceSummaryBuiltInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDestinationHistoryBuiltInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDestinationRegisteredInterface.php\",\n      \"src/Event/CatalogCategoryWorkflowEntityTransitioned.php\",\n      \"src/Event/CatalogSyndicationDeliveryRecorded.php\",\n      \"src/Event/CatalogSyndicationDestinationGovernanceSummaryBuilt.php\",\n      \"src/Event/CatalogSyndicationDestinationHistoryBuilt.php\",\n      \"src/Event/CatalogSyndicationDestinationRegistered.php\",\n      \"src/Exception/CatalogCategoryLinkEntityConflict.php\",\n      \"src/Exception/CatalogTaxonomyConflict.php\",\n      \"src/ValueObject/CatalogCategoryAccessAssignmentEntityRequest.php\",\n      \"src/ValueObject/CatalogCategoryAccessAssignmentEntitySelection.php\",\n      \"src/ValueObject/CatalogCategoryLinkEntityRequest.php\"\n    ],\n    \"exclude-from-classmap\": [\n      \"src/Event/CatalogCategoryWorkflowEntityTransitioned.php\",\n      \"src/Event/CatalogSyndicationDeliveryRecorded.php\",\n      \"src/Event/CatalogSyndicationDestinationGovernanceSummaryBuilt.php\",\n      \"src/Event/CatalogSyndicationDestinationHistoryBuilt.php\",\n      \"src/Event/CatalogSyndicationDestinationRegistered.php\",\n      \"src/EventInterface/CatalogCategoryWorkflowEntityTransitionedInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDeliveryRecordedInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDestinationGovernanceSummaryBuiltInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDestinationHistoryBuiltInterface.php\",\n      \"src/EventInterface/CatalogSyndicationDestinationRegisteredInterface.php\",\n      \"src/Exception/CatalogCategoryLinkEntityConflict.php\",\n      \"src/Exception/CatalogTaxonomyConflict.php\",\n      \"src/ValueObject/CatalogCategoryA",
+      "package.json": "{\n    \"name\": \"cataloging-playwright-tests\",\n    \"private\": true,\n    \"version\": \"1.0.0\",\n    \"description\": \"Playwright browser tests for UI coverage not exercised by Panther\",\n    \"scripts\": {\n        \"mcp:chrome\": \"npx -y chrome-devtools-mcp@latest --headless --isolated --no-usage-statistics --no-performance-crux\",\n        \"mcp:chrome:check\": \"npx -y chrome-devtools-mcp@latest --help\",\n        \"test:playwright\": \"playwright test\"\n    },\n    \"devDependencies\": {\n        \"@playwright/test\": \"^1.54.2\"\n    }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "cataloging",
+    "summary": "Cataloging remains a substantial RC working line with strong repository structure, documentation, Symfony 8/PHP 8.4 tooling, CI, static-analysis, test, readiness-report, security and observability surfaces. Fresh Console MCP reconnaissance confirms strict Composer validation and the changed-PHP syntax gate are green, while the current workspace contains a very large uncommitted migration: 340 status entries and a 252-file diff of approximately +697/-5303. The repository itself explicitly states that canon convergence is still transitional. The present tree therefore has good engineering depth but reduced RC confidence until the large migration receives full static/test/Gating/runtime acceptance.",
+    "strengths": [
+      "Composer manifest validates successfully with --strict --check-lock.",
+      "Console MCP changed-PHP lint returned green across its 100-file tracked batch.",
+      "PHPStan is configured at level max for both src and tests.",
+      "PHPUnit, Panther and Playwright test surfaces are explicitly configured.",
+      "Repository provides extensive machine-readable RC, runtime, security, boundary, migration, idempotency and search readiness reports.",
+      "CI, OpenAPI contracts, Doctrine migrations, observability, security and canary surfaces are materially present.",
+      "RC diagnostic reports no hard blocker; its placeholder warning is a false positive against legitimate UI contract placeholder keys."
+    ],
+    "risks": [
+      "Current workspace is heavily dirty: 340 status entries and 252 changed files, so HEAD alone does not represent the assessed implementation.",
+      "The active migration removes or relocates many services, interfaces, infrastructure classes and configuration files; full integration gates were not executed under this READ_ONLY task.",
+      "Repository documentation explicitly says the RC line is not yet final canon-clean and still carries mixed Category/Catalog compatibility vocabulary.",
+      "Managed Symfony runtime on 127.0.0.1:8000 was not running, so current browser-facing behavior was not verified.",
+      "Admin routes and UI links are being changed to /catalog/... paths; configured Playwright evidence exists but could not be regenerated without an execution path that may write test artifacts.",
+      "CI depends on Automater GitHub App credentials and sibling repository checkout, adding an external operational dependency."
+    ],
+    "next_actions": [
+      "After the current migration is stabilized, run the repository's full deterministic quality contour: cs:check, PHPStan, PHPUnit and Gating.",
+      "Run schema:parity and the RC/readiness report suite against the current working tree.",
+      "Verify the /catalog/admin/category route migration with the configured Playwright/Panther surface and capture central visual artifacts.",
+      "Reconcile the 340-entry working tree into coherent migration provenance before treating RC evidence as final.",
+      "Retain CatalogContractFactory placeholder keys; classify the generic RC placeholder warning as a scanner false positive rather than production-stub debt.",
+      "Refresh the Quality Atlas snapshot after full gates and behavioral evidence are available."
+    ],
+    "notes": [
+      "Repository mutation, stage, commit and push were not performed.",
+      "Existing managed PHP runtime was probed first and was absent; it was not started or restarted under READ_ONLY authority.",
+      "Console-owned browser bridge is available on DevTools port 9223, but no repository runtime was available to exercise the changed routes.",
+      "Visual evidence: NOT_VERIFIED — no new screenshot was produced.",
+      "The authoritative specification identifies Cataloging as component_id cataloging, repository smartresponsor/cataloging, with master as the registered default branch. fileciteturn0file0L5-L10",
+      "The supplied snapshot baseline scored product 8.4, architecture 8.2, runtime 8.3, QA 8.8, ops 8.7, market 8.2 and overall 8.4 before this fresh working-tree reconnaissance. fileciteturn0file0L1692-L1759",
+      "http://100.101.253.65:9477/Cataloging/today"
+    ],
+    "suggested_score_overrides": {
+      "architecture": 8.0,
+      "qa": 8.4,
+      "ops": 8.5,
+      "overall": 8.2
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Cataloging has a clear marketplace/catalog responsibility and substantial API, documentation and operational surfaces, while compatibility vocabulary remains transitional.",
+        "risks": [
+          "Mixed Category/Catalog compatibility vocabulary remains explicitly documented as unfinished RC convergence."
+        ],
+        "improvements": [
+          "Complete the documented API/docs truth reset after the structural migration stabilizes."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/catalog-current-status.md",
+          "api/catalog-openapi.yaml",
+          "api/category-openapi.yaml"
+        ]
+      },
+      "architecture": {
+        "summary": "Symfony-oriented architecture is materially developed, but the current 252-file migration is too broad to retain full prior architecture confidence without complete post-migration gates.",
+        "risks": [
+          "Large-scale deletions, relocations and configuration rewiring are present in the uncommitted working tree.",
+          "Repository documentation still describes the component as not final canon-clean."
+        ],
+        "improvements": [
+          "Run Gating, PHPStan, PHPUnit and boundary/readiness checks over the exact stabilized migration tree.",
+          "Reconcile remaining structural and vocabulary transition debt."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "composer.json",
+          "README.md",
+          "docs/catalog-current-status.md",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime architecture, routes, Doctrine, Messenger, security and explicit proof tooling are present, but live behavioral evidence for this working tree was unavailable during the READ_ONLY assessment.",
+        "risks": [
+          "No managed Symfony runtime was running on the probed 127.0.0.1:8000 endpoint.",
+          "Current route-prefix changes therefore lack fresh live acceptance evidence."
+        ],
+        "improvements": [
+          "Execute runtime proof, smoke proof, route inventory and schema parity after a permitted runtime is available."
+        ],
+        "evidence": [
+          "composer.json",
+          "docs/category-rc-readiness.md",
+          "ops/category-canary.yaml",
+          "src/Controller/Catalog/CatalogCategoryAdminController.php"
+        ]
+      },
+      "qa": {
+        "summary": "QA depth is strong in configuration and tooling, with fresh strict Composer validation and changed-PHP syntax checks green, but the large current migration lacks a fresh complete quality-suite result.",
+        "risks": [
+          "No fresh full PHPUnit, PHPStan, PHP-CS-Fixer, Gating or Playwright result was produced for the exact 340-entry dirty tree.",
+          "Configured UI behavior changed and remains visually unverified."
+        ],
+        "improvements": [
+          "Run composer quality plus applicable Playwright/Panther verification against the stabilized tree.",
+          "Capture fresh central visual evidence for affected admin flows."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpunit.xml.dist",
+          "phpstan.neon",
+          "package.json",
+          "tests/Playwright/category-admin-form-ui.spec.ts"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity is broad, with CI, canary, readiness reports, logging/correlation and deployment documentation, but current acceptance depends on unresolved working-tree integration and external CI credentials.",
+        "risks": [
+          "GitHub CI requires Automater App credentials and sibling repository access.",
+          "The current dirty working tree prevents treating existing historical acceptance evidence as final evidence for this slice."
+        ],
+        "improvements": [
+          "Re-run CI-equivalent local gates and then verify the remote required-check path after integration."
+        ],
+        "evidence": [
+          ".github/workflows/category-ci.yml",
+          "ops/category-canary.yaml",
+          "docs/category-rc-readiness.md",
+          "src/Observability/MonologCorrelationProcessor.php",
+          "src/EventSubscriber/RequestCorrelationSubscriber.php"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing catalog and marketplace intent remains materially documented, with task, order, product and service catalog concepts represented in the current contract factory.",
+        "risks": [
+          "Market-facing confidence still depends on completing the Catalog/Category vocabulary transition and validating the changed navigation surfaces."
+        ],
+        "improvements": [
+          "Finish market-facing terminology convergence and verify customer/admin navigation against the canonical /catalog route family."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/catalog-current-status.md",
+          "src/Factory/CatalogContractFactory.php"
+        ]
+      },
+      "overall": {
+        "summary": "Cataloging shows strong RC-oriented engineering depth, but the current large uncommitted migration and missing fresh full behavioral/quality evidence justify a modest reduction in overall RC confidence from the previous snapshot.",
+        "risks": [
+          "A 252-file migration is being assessed before full deterministic and behavioral acceptance.",
+          "Live UI/runtime evidence is currently NOT_VERIFIED."
+        ],
+        "improvements": [
+          "Stabilize the migration, execute the complete deterministic gate contour, verify runtime/UI behavior, then refresh the immutable Quality Atlas snapshot."
+        ],
+        "evidence": [
+          "composer.json",
+          "README.md",
+          "CMCP_CHANGELOG.md",
+          "docs/category-rc-readiness.md",
+          ".github/workflows/category-ci.yml",
+          "tests/Playwright/category-admin-form-ui.spec.ts"
+        ]
+      }
+    },
+    "confidence": "medium",
+    "evidence_paths": [
+      "composer.json",
+      "composer.prod.json",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      "package.json",
+      "README.md",
+      "AGENTS.md",
+      "CMCP_CHANGELOG.md",
+      "docs/catalog-current-status.md",
+      "docs/category-rc-readiness.md",
+      "docs/modules/ROOT/pages/index.adoc",
+      ".github/workflows/category-ci.yml",
+      "ops/category-canary.yaml",
+      "tests/Playwright/category-admin-form-ui.spec.ts",
+      "templates/category/admin/ops.html.twig",
+      "src/Controller/Catalog/CatalogCategoryAdminController.php",
+      "src/Factory/CatalogContractFactory.php"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\cataloging\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\cataloging\\history\\2026-09-29-assessment-2026-09-29.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\cataloging\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\cataloging\\probes\\history\\2026-09-29-assessment-2026-09-29.yaml"
+  },
+  "ai_io": {
+    "request_file": "cataloging.request.json",
+    "response_file": "cataloging.response.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "runnerExecutionPlan": {
+    "tool": "write.browser.chatgpt.chat.delete.execute",
+    "arguments": {
+      "expectedChatId": "6abb8488-e14c-83e9-88c0-302d42d205a6",
+      "confirmDelete": true,
+      "closeTarget": false,
+      "timeoutMs": 10000
+    }
+  }
+}

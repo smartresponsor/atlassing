@@ -1,0 +1,255 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "boundarying",
+    "component_title": "Boundarying",
+    "github_repository": "",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/boundarying/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Boundarying",
+    "timestamp_utc": "2026-09-29T09:38:08.311937+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "03d6277e9e75069673ec39534940ffb6c65dfc77"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": false,
+    "has_package_json": false,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": false,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "?? AGENTS.md\n?? README.md\n?? boundary-common.md\n?? boundary-common.yaml\n?? boundary-domain-index.md\n?? boundary-domain-index.yaml\n?? boundary-evidence-map.yaml\n?? boundary-examples.md\n?? boundary-global.md\n?? boundary-global.yaml\n?? canonization/\n?? consumer/\n?? docs/\n?? report/\n?? schema/\n?? tool/"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "03d6277 init"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gitattributes\n.github/\n.github/workflows/\n.gitignore\nAGENTS.md\nboundary-common.md\nboundary-common.yaml\nboundary-domain-index.md\nboundary-domain-index.yaml\nboundary-evidence-map.yaml\nboundary-examples.md\nboundary-global.md\nboundary-global.yaml\ncanonization/\ncanonization/analytics/\ncanonization/anchoring/\ncanonization/billing/\ncanonization/category/\ncanonization/command/\ncanonization/commerce/\ncanonization/common/\ncanonization/complying/\ncanonization/consuming/\ncanonization/containerizing/\ncanonization/evaluating/\ncanonization/financing/\ncanonization/gating/\ncanonization/indexing/\ncanonization/interfacing/\ncanonization/locating/\ncanonization/message/\ncanonization/mobile-edge/\ncanonization/objecting/\ncanonization/observabiliting/\ncanonization/operation/\ncanonization/order/\ncanonization/paying/\ncanonization/product/\ncanonization/project/\ncanonization/role/\ncanonization/rolling/\ncanonization/runtiming/\ncanonization/shipping/\ncanonization/tag/\ncanonization/tagging/\ncanonization/taxation/\ncanonization/vendor/\nconsumer/\nconsumer/analytics/\nconsumer/anchoring/\nconsumer/billing/\nconsumer/category/\nconsumer/command/\nconsumer/commerce/\nconsumer/complying/\nconsumer/consuming/\nconsumer/containerizing/\nconsumer/evaluating/\nconsumer/financing/\nconsumer/gating/\nconsumer/indexing/\nconsumer/interfacing/\nconsumer/locating/\nconsumer/message/\nconsumer/mobile-edge/\nconsumer/objecting/\nconsumer/observabiliting/\nconsumer/operation/\nconsumer/order/\nconsumer/paying/\nconsumer/product/\nconsumer/project/\nconsumer/rolling/\nconsumer/runtiming/\nconsumer/shipping/\nconsumer/tagging/\nconsumer/taxation/\nconsumer/vendor/\ndocs/\ndocs/milestone/\nREADME.md\nreport/\nreport/evidence/\nschema/\nschema/boundary-v1.schema.json\nschema/evidence-map-v1.schema.json\ntool/\ntool/validate-boundary.ps1\ntool/validate-boundary.sh"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "153"
+    }
+  },
+  "verdict": {
+    "component": "boundarying",
+    "summary": "Boundarying has a substantial specification/evidence architecture, but the current repository baseline is not yet a trustworthy release-candidate artifact: almost all substantive content remains untracked, the canonical boundary policy conflicts with the repository's current platform instructions on src/Domain usage, and the PowerShell validator produces parser/runtime errors while still exiting 0 and printing OK.",
+    "strengths": [
+      "Clear responsibility as the platform boundary and evidence-discipline layer.",
+      "Broad canonization and consumer coverage across component boundary specifications.",
+      "Explicit JSON schemas, evidence-map contracts, normative/non-normative separation, and portable validation entry points.",
+      "Git master is synchronized with origin/master at 03d6277e9e75069673ec39534940ffb6c65dfc77."
+    ],
+    "risks": [
+      "Almost all substantive repository content is untracked, so the effective specification is not represented by the committed baseline.",
+      "boundary-common.yaml permits src/Domain and src/DomainInterface while AGENTS.md explicitly prohibits separate src/Domain trees, creating direct canon drift.",
+      "tool/validate-boundary.ps1 emits errors for its leading backslash and Param placement but still exits 0 and reports OK, creating false-green validation evidence.",
+      "No executable GitHub Actions workflow content was found by repository search despite the .github/workflows path being present.",
+      "Runtime and external market/adoption dimensions remain unsupported by repository evidence."
+    ],
+    "next_actions": [
+      "Remove the canon contradiction between AGENTS.md and boundary-common.yaml, then propagate the corrected common boundary contract to its canonical copies.",
+      "Repair tool/validate-boundary.ps1 so any parser or invocation error produces a non-zero result before treating its validation as deterministic evidence.",
+      "Add deterministic valid/invalid validator fixtures and verify both positive and negative paths.",
+      "Establish an authoritative CI gate that executes the boundary validators and preserves evidence output.",
+      "Version the intended 153-file baseline so assessments are reproducible from Git rather than an untracked working tree."
+    ],
+    "notes": [
+      "READ_ONLY contract honored: no repository files, Git index, commits, branches, or remotes were modified.",
+      "PowerShell validation execution: exitCode=0 and stdout reported OK, but stderr contained command errors at tool/validate-boundary.ps1 lines 1-2; therefore the result is classified ATTENTION rather than GREEN.",
+      "The supplied execution specification identifies Boundarying and its master branch and records the same untracked baseline used as the starting snapshot. fileciteturn0file0L5-L10",
+      "The supplied deterministic facts record HEAD 03d6277e9e75069673ec39534940ffb6c65dfc77, absence of Composer/PHPStan/PHPUnit manifests, the untracked substantive tree, and the 153-file repository inventory. fileciteturn0file0L1769-L1817",
+      "Behavioral/UI verification: NOT_APPLICABLE; the repository evidence describes specification and validation assets, and no user-observable UI change exists in this READ_ONLY task.",
+      "Visual evidence: NOT_VERIFIED / not applicable — no user-observable UI changes.",
+      "http://100.101.253.65:9477/Boundarying/today"
+    ],
+    "suggested_score_overrides": {
+      "product": 7.8,
+      "architecture": 7.5,
+      "qa": 6.2,
+      "ops": 6.4,
+      "overall": 7.2
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Boundarying has a clear product role as the platform's boundary and evidence-discipline specification pack, but its effective canonical product definition currently includes contradictory platform rules and is almost entirely outside the committed baseline.",
+        "risks": [
+          "The substantive specification remains untracked.",
+          "The common boundary policy conflicts with the current repository instructions over src/Domain."
+        ],
+        "improvements": [
+          "Reconcile the common boundary policy with the current platform canon and version the resulting authoritative specification set."
+        ],
+        "evidence": [
+          "README.md",
+          "AGENTS.md",
+          "boundary-common.yaml",
+          "docs/milestone/boundarying-milestone-roadmap.md"
+        ]
+      },
+      "architecture": {
+        "summary": "The repository has strong structural separation among global/common policy, per-component canonization, consumer copies, schemas, and evidence mapping, but a direct contradiction in the foundational common policy prevents the current architecture from being considered internally canonical.",
+        "risks": [
+          "AGENTS.md prohibits separate src/Domain trees while boundary-common.yaml explicitly lists src/Domain and src/DomainInterface as allowed roots.",
+          "Duplicated common policy under canonization/common increases the blast radius of unresolved canon drift."
+        ],
+        "improvements": [
+          "Make one current Symfony-oriented boundary model authoritative and validate all replicated common/component/consumer specifications against it."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "boundary-common.yaml",
+          "canonization/common/boundary-common.yaml",
+          "boundary-global.yaml",
+          "canonization/gating/gating-boundary.yaml",
+          "consumer/gating/gating-boundary.yaml"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime assessment remains unresolved because Boundarying is evidenced primarily as a specification and validation repository rather than a production runtime, with no latency, throughput, capacity, caching, or production execution measurements available.",
+        "risks": [
+          "No repository evidence establishes production runtime characteristics."
+        ],
+        "improvements": [
+          "Preserve the runtime score until deterministic runtime evidence becomes relevant to this component."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/milestone/boundarying-milestone-roadmap.md"
+        ]
+      },
+      "qa": {
+        "summary": "Boundarying has explicit schemas and cross-platform validator scripts, but current deterministic verification is materially weakened because the PowerShell validator emits execution errors while still returning exit code 0 and printing a success message.",
+        "risks": [
+          "tool/validate-boundary.ps1 begins with a stray backslash, causing an execution error.",
+          "Param is consequently processed outside a valid script parameter block and also errors.",
+          "The script still continues to the validation body and exits 0, permitting false-green automation.",
+          "No deterministic valid/invalid fixture suite or conventional automated test configuration is evidenced."
+        ],
+        "improvements": [
+          "Fix the PowerShell validator's entry syntax and require clean stderr/non-zero failure semantics.",
+          "Add positive and negative fixtures for boundary and evidence-map validation.",
+          "Persist validator execution results as assessment evidence."
+        ],
+        "evidence": [
+          "tool/validate-boundary.ps1",
+          "tool/validate-boundary.sh",
+          "schema/boundary-v1.schema.json",
+          "schema/evidence-map-v1.schema.json",
+          "report/evidence/README.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity remains limited by an almost entirely untracked implementation, a one-commit history with no exact tag, and lack of evidenced authoritative CI execution despite portable validator entry points.",
+        "risks": [
+          "The committed repository cannot reproduce the substantive working-tree state.",
+          "No exact Git tag exists.",
+          "Repository searches found no workflow_dispatch, actions/checkout, or runs-on declarations to substantiate executable CI behavior."
+        ],
+        "improvements": [
+          "Version the intended baseline, make clean validator execution authoritative in CI, and establish immutable traceable assessment or release baselines."
+        ],
+        "evidence": [
+          "README.md",
+          "tool/validate-boundary.ps1",
+          "tool/validate-boundary.sh",
+          "docs/milestone/boundarying-milestone-roadmap.md"
+        ]
+      },
+      "market": {
+        "summary": "Market assessment remains unresolved: the repository demonstrates broad internal SmartResponsor ecosystem intent but provides no evidence of external adoption, users, commercial traction, or independent market validation.",
+        "risks": [
+          "No repository evidence establishes external adoption or market demand."
+        ],
+        "improvements": [
+          "Preserve the existing market score without speculative adjustment until explicit adoption evidence is available."
+        ],
+        "evidence": [
+          "README.md",
+          "boundary-domain-index.yaml"
+        ]
+      },
+      "overall": {
+        "summary": "Boundarying has a valuable and comparatively rich boundary-specification structure, but RC confidence is currently constrained by an uncommitted baseline, direct canon inconsistency, and a validator capable of reporting success despite execution errors.",
+        "risks": [
+          "The sole committed baseline does not contain the effective implementation.",
+          "Foundational boundary policy conflicts with the current platform instructions.",
+          "Current PowerShell deterministic verification can yield false-green results.",
+          "Runtime and market dimensions remain insufficiently evidenced."
+        ],
+        "improvements": [
+          "Resolve the canon drift, repair validator failure semantics, add deterministic negative fixtures and authoritative CI evidence, then commit an immutable reproducible baseline before reassessing RC maturity."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "boundary-common.yaml",
+          "boundary-evidence-map.yaml",
+          "tool/validate-boundary.ps1",
+          "schema/boundary-v1.schema.json",
+          "schema/evidence-map-v1.schema.json",
+          "report/evidence/README.md",
+          "docs/milestone/boundarying-milestone-roadmap.md"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "AGENTS.md",
+      "README.md",
+      "boundary-common.yaml",
+      "boundary-global.yaml",
+      "boundary-domain-index.yaml",
+      "boundary-evidence-map.yaml",
+      "boundary-examples.md",
+      "canonization/common/boundary-common.yaml",
+      "canonization/gating/gating-boundary.yaml",
+      "consumer/gating/gating-boundary.yaml",
+      "schema/boundary-v1.schema.json",
+      "schema/evidence-map-v1.schema.json",
+      "tool/validate-boundary.ps1",
+      "tool/validate-boundary.sh",
+      "report/evidence/README.md",
+      "docs/milestone/boundarying-milestone-roadmap.md"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\history\\2026-09-29-assessment-2026-09-29.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\boundarying\\probes\\history\\2026-09-29-assessment-2026-09-29.yaml"
+  },
+  "ai_io": {
+    "request_file": "boundarying.request.json",
+    "response_file": "boundarying.response.json"
+  }
+}

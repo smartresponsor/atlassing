@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "cataloging",
+  "verdict": {
+    "component": "cataloging",
+    "summary": "Cataloging remains a substantial RC working line with strong repository structure, documentation, Symfony 8/PHP 8.4 tooling, CI, static-analysis, test, readiness-report, security and observability surfaces. Fresh Console MCP reconnaissance confirms strict Composer validation and the changed-PHP syntax gate are green, while the current workspace contains a very large uncommitted migration: 340 status entries and a 252-file diff of approximately +697/-5303. The repository itself explicitly states that canon convergence is still transitional. The present tree therefore has good engineering depth but reduced RC confidence until the large migration receives full static/test/Gating/runtime acceptance.",
+    "strengths": [
+      "Composer manifest validates successfully with --strict --check-lock.",
+      "Console MCP changed-PHP lint returned green across its 100-file tracked batch.",
+      "PHPStan is configured at level max for both src and tests.",
+      "PHPUnit, Panther and Playwright test surfaces are explicitly configured.",
+      "Repository provides extensive machine-readable RC, runtime, security, boundary, migration, idempotency and search readiness reports.",
+      "CI, OpenAPI contracts, Doctrine migrations, observability, security and canary surfaces are materially present.",
+      "RC diagnostic reports no hard blocker; its placeholder warning is a false positive against legitimate UI contract placeholder keys."
+    ],
+    "risks": [
+      "Current workspace is heavily dirty: 340 status entries and 252 changed files, so HEAD alone does not represent the assessed implementation.",
+      "The active migration removes or relocates many services, interfaces, infrastructure classes and configuration files; full integration gates were not executed under this READ_ONLY task.",
+      "Repository documentation explicitly says the RC line is not yet final canon-clean and still carries mixed Category/Catalog compatibility vocabulary.",
+      "Managed Symfony runtime on 127.0.0.1:8000 was not running, so current browser-facing behavior was not verified.",
+      "Admin routes and UI links are being changed to /catalog/... paths; configured Playwright evidence exists but could not be regenerated without an execution path that may write test artifacts.",
+      "CI depends on Automater GitHub App credentials and sibling repository checkout, adding an external operational dependency."
+    ],
+    "next_actions": [
+      "After the current migration is stabilized, run the repository's full deterministic quality contour: cs:check, PHPStan, PHPUnit and Gating.",
+      "Run schema:parity and the RC/readiness report suite against the current working tree.",
+      "Verify the /catalog/admin/category route migration with the configured Playwright/Panther surface and capture central visual artifacts.",
+      "Reconcile the 340-entry working tree into coherent migration provenance before treating RC evidence as final.",
+      "Retain CatalogContractFactory placeholder keys; classify the generic RC placeholder warning as a scanner false positive rather than production-stub debt.",
+      "Refresh the Quality Atlas snapshot after full gates and behavioral evidence are available."
+    ],
+    "notes": [
+      "Repository mutation, stage, commit and push were not performed.",
+      "Existing managed PHP runtime was probed first and was absent; it was not started or restarted under READ_ONLY authority.",
+      "Console-owned browser bridge is available on DevTools port 9223, but no repository runtime was available to exercise the changed routes.",
+      "Visual evidence: NOT_VERIFIED — no new screenshot was produced.",
+      "The authoritative specification identifies Cataloging as component_id cataloging, repository smartresponsor/cataloging, with master as the registered default branch. fileciteturn0file0L5-L10",
+      "The supplied snapshot baseline scored product 8.4, architecture 8.2, runtime 8.3, QA 8.8, ops 8.7, market 8.2 and overall 8.4 before this fresh working-tree reconnaissance. fileciteturn0file0L1692-L1759",
+      "http://100.101.253.65:9477/Cataloging/today"
+    ],
+    "confidence": "medium",
+    "evidence_paths": [
+      "composer.json",
+      "composer.prod.json",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      "package.json",
+      "README.md",
+      "AGENTS.md",
+      "CMCP_CHANGELOG.md",
+      "docs/catalog-current-status.md",
+      "docs/category-rc-readiness.md",
+      "docs/modules/ROOT/pages/index.adoc",
+      ".github/workflows/category-ci.yml",
+      "ops/category-canary.yaml",
+      "tests/Playwright/category-admin-form-ui.spec.ts",
+      "templates/category/admin/ops.html.twig",
+      "src/Controller/Catalog/CatalogCategoryAdminController.php",
+      "src/Factory/CatalogContractFactory.php"
+    ],
+    "suggested_score_overrides": {
+      "product": null,
+      "architecture": 8.0,
+      "runtime": null,
+      "qa": 8.4,
+      "ops": 8.5,
+      "market": null,
+      "overall": 8.2
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Cataloging has a clear marketplace/catalog responsibility and substantial API, documentation and operational surfaces, while compatibility vocabulary remains transitional.",
+        "risks": [
+          "Mixed Category/Catalog compatibility vocabulary remains explicitly documented as unfinished RC convergence."
+        ],
+        "improvements": [
+          "Complete the documented API/docs truth reset after the structural migration stabilizes."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/catalog-current-status.md",
+          "api/catalog-openapi.yaml",
+          "api/category-openapi.yaml"
+        ]
+      },
+      "architecture": {
+        "summary": "Symfony-oriented architecture is materially developed, but the current 252-file migration is too broad to retain full prior architecture confidence without complete post-migration gates.",
+        "risks": [
+          "Large-scale deletions, relocations and configuration rewiring are present in the uncommitted working tree.",
+          "Repository documentation still describes the component as not final canon-clean."
+        ],
+        "improvements": [
+          "Run Gating, PHPStan, PHPUnit and boundary/readiness checks over the exact stabilized migration tree.",
+          "Reconcile remaining structural and vocabulary transition debt."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "composer.json",
+          "README.md",
+          "docs/catalog-current-status.md",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime architecture, routes, Doctrine, Messenger, security and explicit proof tooling are present, but live behavioral evidence for this working tree was unavailable during the READ_ONLY assessment.",
+        "risks": [
+          "No managed Symfony runtime was running on the probed 127.0.0.1:8000 endpoint.",
+          "Current route-prefix changes therefore lack fresh live acceptance evidence."
+        ],
+        "improvements": [
+          "Execute runtime proof, smoke proof, route inventory and schema parity after a permitted runtime is available."
+        ],
+        "evidence": [
+          "composer.json",
+          "docs/category-rc-readiness.md",
+          "ops/category-canary.yaml",
+          "src/Controller/Catalog/CatalogCategoryAdminController.php"
+        ]
+      },
+      "qa": {
+        "summary": "QA depth is strong in configuration and tooling, with fresh strict Composer validation and changed-PHP syntax checks green, but the large current migration lacks a fresh complete quality-suite result.",
+        "risks": [
+          "No fresh full PHPUnit, PHPStan, PHP-CS-Fixer, Gating or Playwright result was produced for the exact 340-entry dirty tree.",
+          "Configured UI behavior changed and remains visually unverified."
+        ],
+        "improvements": [
+          "Run composer quality plus applicable Playwright/Panther verification against the stabilized tree.",
+          "Capture fresh central visual evidence for affected admin flows."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpunit.xml.dist",
+          "phpstan.neon",
+          "package.json",
+          "tests/Playwright/category-admin-form-ui.spec.ts"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity is broad, with CI, canary, readiness reports, logging/correlation and deployment documentation, but current acceptance depends on unresolved working-tree integration and external CI credentials.",
+        "risks": [
+          "GitHub CI requires Automater App credentials and sibling repository access.",
+          "The current dirty working tree prevents treating existing historical acceptance evidence as final evidence for this slice."
+        ],
+        "improvements": [
+          "Re-run CI-equivalent local gates and then verify the remote required-check path after integration."
+        ],
+        "evidence": [
+          ".github/workflows/category-ci.yml",
+          "ops/category-canary.yaml",
+          "docs/category-rc-readiness.md",
+          "src/Observability/MonologCorrelationProcessor.php",
+          "src/EventSubscriber/RequestCorrelationSubscriber.php"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing catalog and marketplace intent remains materially documented, with task, order, product and service catalog concepts represented in the current contract factory.",
+        "risks": [
+          "Market-facing confidence still depends on completing the Catalog/Category vocabulary transition and validating the changed navigation surfaces."
+        ],
+        "improvements": [
+          "Finish market-facing terminology convergence and verify customer/admin navigation against the canonical /catalog route family."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/catalog-current-status.md",
+          "src/Factory/CatalogContractFactory.php"
+        ]
+      },
+      "overall": {
+        "summary": "Cataloging shows strong RC-oriented engineering depth, but the current large uncommitted migration and missing fresh full behavioral/quality evidence justify a modest reduction in overall RC confidence from the previous snapshot.",
+        "risks": [
+          "A 252-file migration is being assessed before full deterministic and behavioral acceptance.",
+          "Live UI/runtime evidence is currently NOT_VERIFIED."
+        ],
+        "improvements": [
+          "Stabilize the migration, execute the complete deterministic gate contour, verify runtime/UI behavior, then refresh the immutable Quality Atlas snapshot."
+        ],
+        "evidence": [
+          "composer.json",
+          "README.md",
+          "CMCP_CHANGELOG.md",
+          "docs/category-rc-readiness.md",
+          ".github/workflows/category-ci.yml",
+          "tests/Playwright/category-admin-form-ui.spec.ts"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\cataloging.prompt.txt",
+    "taskId": "engine-20260929094907-cataloging-247b13",
+    "chatId": "6abb89ac-1f0c-83ea-b2d4-c87c7df3726c",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6abb89ac-1f0c-83ea-b2d4-c87c7df3726c",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}
