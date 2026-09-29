@@ -3,5 +3,5 @@ services:
     autowire: true
     autoconfigure: true
 
-  App\Kernel:
+  App\Atlassing\Kernel:
     public: false

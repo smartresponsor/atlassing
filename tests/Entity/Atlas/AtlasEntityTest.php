@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Entity\Atlas;
+namespace App\Atlassing\Tests\Entity\Atlas;
 
-use App\Entity\Atlas\AtlasAssessmentEntity;
-use App\Entity\Atlas\AtlasDocumentationCoverageEntity;
+use App\Atlassing\Entity\Atlas\AtlasAssessmentEntity;
+use App\Atlassing\Entity\Atlas\AtlasDocumentationCoverageEntity;
 use PHPUnit\Framework\TestCase;
 
 final class AtlasEntityTest extends TestCase

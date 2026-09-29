@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Command;
+namespace App\Atlassing\Tests\Command;
 
-use App\Command\AtlasAssessmentCycleCommand;
-use App\Command\AtlasAssessmentRunCommand;
-use App\Command\AtlasAssessmentSelectCommand;
-use App\ServiceInterface\Assessment\AtlasAssessmentServiceInterface;
-use App\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface;
+use App\Atlassing\Command\AtlasAssessmentCycleCommand;
+use App\Atlassing\Command\AtlasAssessmentRunCommand;
+use App\Atlassing\Command\AtlasAssessmentSelectCommand;
+use App\Atlassing\ServiceInterface\Assessment\AtlasAssessmentServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;

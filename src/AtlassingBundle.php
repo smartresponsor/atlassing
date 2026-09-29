@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Atlassing;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

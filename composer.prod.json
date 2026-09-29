@@ -38,6 +38,11 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/smartresponsor/failing.git",
+      "no-api": true
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/smartresponsor/gating.git",
       "no-api": true
     }
@@ -45,6 +50,7 @@
   "require": {
     "collectioning/collection": "dev-master",
     "cruding/crud": "dev-master",
+    "failing/failure": "dev-master",
     "doctrine/orm": "^3.4",
     "easycorp/easyadmin-bundle": "^5.0",
     "interfacing/interface": "dev-master",
@@ -62,7 +68,7 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "App\\Atlassing\\": "src/"
     }
   },
   "config": {

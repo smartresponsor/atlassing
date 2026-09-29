@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Command;
+namespace App\Atlassing\Tests\Command;
 
-use App\Command\AtlasImportDocumentatingExportCommand;
-use App\Command\AtlasStatusCommand;
+use App\Atlassing\Command\AtlasImportDocumentatingExportCommand;
+use App\Atlassing\Command\AtlasStatusCommand;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;

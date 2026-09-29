@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ServiceInterface\Snapshot;
+namespace App\Atlassing\ServiceInterface\Snapshot;
 
 interface AtlasSnapshotServiceInterface
 {

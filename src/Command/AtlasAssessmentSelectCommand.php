@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Command;
+namespace App\Atlassing\Command;
 
-use App\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

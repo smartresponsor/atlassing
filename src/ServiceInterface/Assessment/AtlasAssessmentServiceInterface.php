@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ServiceInterface\Assessment;
+namespace App\Atlassing\ServiceInterface\Assessment;
 
 interface AtlasAssessmentServiceInterface
 {

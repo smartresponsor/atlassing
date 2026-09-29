@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Service;
+namespace App\Atlassing\Tests\Service;
 
-use App\Service\Registry\AtlasRepositoryRegistryService;
-use App\Service\Snapshot\AtlasSnapshotService;
+use App\Atlassing\Service\Registry\AtlasRepositoryRegistryService;
+use App\Atlassing\Service\Snapshot\AtlasSnapshotService;
 use PHPUnit\Framework\TestCase;
 
 final class AtlasStateEdgeCaseTest extends TestCase

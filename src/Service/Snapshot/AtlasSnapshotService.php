@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Snapshot;
+namespace App\Atlassing\Service\Snapshot;
 
-use App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
+use App\Atlassing\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;

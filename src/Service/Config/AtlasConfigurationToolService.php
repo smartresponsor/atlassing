@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Config;
+namespace App\Atlassing\Service\Config;
 
 final class AtlasConfigurationToolService
 {

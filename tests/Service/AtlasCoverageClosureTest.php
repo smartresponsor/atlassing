@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Service;
+namespace App\Atlassing\Tests\Service;
 
-use App\DependencyInjection\AtlassingExtension;
-use App\Service\Assessment\AtlasPythonEngineService;
-use App\Service\Atlas\AtlasDocumentationCoverageService;
-use App\Service\Registry\AtlasRepositoryRegistryService;
+use App\Atlassing\DependencyInjection\AtlassingExtension;
+use App\Atlassing\Service\Assessment\AtlasPythonEngineService;
+use App\Atlassing\Service\Atlas\AtlasDocumentationCoverageService;
+use App\Atlassing\Service\Registry\AtlasRepositoryRegistryService;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 

@@ -38,6 +38,16 @@
     },
     {
       "type": "path",
+      "url": "../Failing",
+      "options": {
+        "symlink": true,
+        "versions": {
+          "failing/failure": "dev-master"
+        }
+      }
+    },
+    {
+      "type": "path",
       "url": "../Gating",
       "options": {
         "symlink": true,
@@ -80,6 +90,7 @@
   "require": {
     "collectioning/collection": "dev-master",
     "cruding/crud": "dev-master",
+    "failing/failure": "dev-master",
     "easycorp/easyadmin-bundle": "^5.0",
     "interfacing/interface": "dev-master",
     "objecting/object": "dev-master",
@@ -106,12 +117,12 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "App\\Atlassing\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "App\\Tests\\": "tests/"
+      "App\\Atlassing\\Tests\\": "tests/"
     }
   },
   "scripts": {

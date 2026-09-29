@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Registry;
+namespace App\Atlassing\Service\Registry;
 
-use App\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface;
+use App\Atlassing\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;

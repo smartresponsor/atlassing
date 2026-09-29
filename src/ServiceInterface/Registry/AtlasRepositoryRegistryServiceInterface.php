@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ServiceInterface\Registry;
+namespace App\Atlassing\ServiceInterface\Registry;
 
 interface AtlasRepositoryRegistryServiceInterface
 {

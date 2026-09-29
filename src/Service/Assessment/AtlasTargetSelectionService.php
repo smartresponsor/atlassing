@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Assessment;
+namespace App\Atlassing\Service\Assessment;
 
-use App\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
-use App\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 
 final class AtlasTargetSelectionService implements AtlasTargetSelectionServiceInterface

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Service;
+namespace App\Atlassing\Tests\Service;
 
-use App\Service\Atlas\AtlasDocumentationCoverageService;
+use App\Atlassing\Service\Atlas\AtlasDocumentationCoverageService;
 use PHPUnit\Framework\TestCase;
 
 final class AtlasDocumentationCoverageEdgeTest extends TestCase

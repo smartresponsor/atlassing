@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Atlas;
+namespace App\Atlassing\Service\Atlas;
 
 final class AtlassingAtlasReadinessService
 {

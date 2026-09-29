@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Assessment;
+namespace App\Atlassing\Service\Assessment;
 
-use App\ServiceInterface\Assessment\AtlasAssessmentServiceInterface;
-use App\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasAssessmentServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
 
 final class AtlasAssessmentService implements AtlasAssessmentServiceInterface
 {

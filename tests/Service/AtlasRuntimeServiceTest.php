@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Service;
+namespace App\Atlassing\Tests\Service;
 
-use App\Service\Assessment\AtlasAssessmentService;
-use App\Service\Assessment\AtlasPythonEngineService;
-use App\Service\Assessment\AtlasTargetSelectionService;
-use App\Service\Atlas\AtlasDocumentationCoverageService;
-use App\Service\Atlas\AtlassingAtlasComponentService;
-use App\Service\Atlas\AtlassingAtlasComponentSlugService;
-use App\Service\Atlas\AtlassingAtlasMaturityService;
-use App\Service\Atlas\AtlassingAtlasReadinessService;
-use App\Service\Atlas\AtlassingAtlasService;
-use App\Service\Atlas\AtlasSurfacePayloadService;
-use App\Service\Config\AtlasConfigurationToolService;
-use App\Service\Registry\AtlasRepositoryRegistryService;
-use App\Service\Snapshot\AtlasSnapshotService;
-use App\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
-use App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
+use App\Atlassing\Service\Assessment\AtlasAssessmentService;
+use App\Atlassing\Service\Assessment\AtlasPythonEngineService;
+use App\Atlassing\Service\Assessment\AtlasTargetSelectionService;
+use App\Atlassing\Service\Atlas\AtlasDocumentationCoverageService;
+use App\Atlassing\Service\Atlas\AtlassingAtlasComponentService;
+use App\Atlassing\Service\Atlas\AtlassingAtlasComponentSlugService;
+use App\Atlassing\Service\Atlas\AtlassingAtlasMaturityService;
+use App\Atlassing\Service\Atlas\AtlassingAtlasReadinessService;
+use App\Atlassing\Service\Atlas\AtlassingAtlasService;
+use App\Atlassing\Service\Atlas\AtlasSurfacePayloadService;
+use App\Atlassing\Service\Config\AtlasConfigurationToolService;
+use App\Atlassing\Service\Registry\AtlasRepositoryRegistryService;
+use App\Atlassing\Service\Snapshot\AtlasSnapshotService;
+use App\Atlassing\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
+use App\Atlassing\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
 use PHPUnit\Framework\TestCase;
 
 final class AtlasRuntimeServiceTest extends TestCase

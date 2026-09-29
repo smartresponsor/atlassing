@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Enum\Atlas;
+namespace App\Atlassing\Enum\Atlas;
 
 enum AtlasReadinessLevel: string
 {

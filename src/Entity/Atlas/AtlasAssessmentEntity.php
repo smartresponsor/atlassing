@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Entity\Atlas;
+namespace App\Atlassing\Entity\Atlas;
 
 use Doctrine\ORM\Mapping as ORM;
 

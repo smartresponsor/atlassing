@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Assessment;
+namespace App\Atlassing\Service\Assessment;
 
-use App\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
+use App\Atlassing\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\Process\Process;
 

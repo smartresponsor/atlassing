@@ -12,7 +12,7 @@
 - `Documentating` consumes or publishes Atlas outputs, but does not own Atlas scoring lifecycle.
 - `Interfacing` links to Atlassing surfaces or consumes Atlassing contracts, but does not duplicate Atlas state.
 - For the Smart Responder consumer domain, public Atlas routes are expected to be deployable under `atlass.smartresponsor.com`.
-- Keep the package name `atlassing/atlas`, autoload root `App\\`, and route root `/atlassing/atlas` unless an explicit migration says otherwise.
+- Keep the package name `atlassing/atlas`, autoload root `App\\Atlassing\\`, and route root `/atlassing/atlas` unless an explicit migration says otherwise.
 - Imported Documentating exports under `import/documentating-export/` are migration evidence, not runtime UI ownership.
 - Prefer precise changes to the Atlas engine, contracts, registry, routes, and state model over broad workspace-level rewrites.
 

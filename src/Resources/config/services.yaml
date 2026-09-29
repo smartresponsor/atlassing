@@ -3,23 +3,23 @@ services:
     autowire: true
     autoconfigure: true
 
-  App\Command\:
+  App\Atlassing\Command\:
     resource: '../../Command/'
 
-  App\Service\:
+  App\Atlassing\Service\:
     resource: '../../Service/'
 
-  App\ServiceInterface\Assessment\AtlasAssessmentServiceInterface:
-    alias: App\Service\Assessment\AtlasAssessmentService
-  App\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface:
-    alias: App\Service\Assessment\AtlasPythonEngineService
-  App\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface:
-    alias: App\Service\Assessment\AtlasTargetSelectionService
-  App\ServiceInterface\Atlas\AtlasDocumentationCoverageServiceInterface:
-    alias: App\Service\Atlas\AtlasDocumentationCoverageService
-  App\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface:
-    alias: App\Service\Atlas\AtlasSurfacePayloadService
-  App\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface:
-    alias: App\Service\Registry\AtlasRepositoryRegistryService
-  App\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface:
-    alias: App\Service\Snapshot\AtlasSnapshotService
+  App\Atlassing\ServiceInterface\Assessment\AtlasAssessmentServiceInterface:
+    alias: App\Atlassing\Service\Assessment\AtlasAssessmentService
+  App\Atlassing\ServiceInterface\Assessment\AtlasPythonEngineServiceInterface:
+    alias: App\Atlassing\Service\Assessment\AtlasPythonEngineService
+  App\Atlassing\ServiceInterface\Assessment\AtlasTargetSelectionServiceInterface:
+    alias: App\Atlassing\Service\Assessment\AtlasTargetSelectionService
+  App\Atlassing\ServiceInterface\Atlas\AtlasDocumentationCoverageServiceInterface:
+    alias: App\Atlassing\Service\Atlas\AtlasDocumentationCoverageService
+  App\Atlassing\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface:
+    alias: App\Atlassing\Service\Atlas\AtlasSurfacePayloadService
+  App\Atlassing\ServiceInterface\Registry\AtlasRepositoryRegistryServiceInterface:
+    alias: App\Atlassing\Service\Registry\AtlasRepositoryRegistryService
+  App\Atlassing\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface:
+    alias: App\Atlassing\Service\Snapshot\AtlasSnapshotService

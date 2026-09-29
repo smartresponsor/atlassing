@@ -56,7 +56,7 @@ php bin/console atlas:status --component documentating
 ## Canon
 
 - Composer package: `atlassing/atlas`.
-- Autoload root: `App\`.
+- Autoload root: `App\Atlassing\`.
 - Business class prefix: `Atlas*`.
 - Database table prefix: `atlas_`.
 - API owner root: `/api/atlassing/...`.
