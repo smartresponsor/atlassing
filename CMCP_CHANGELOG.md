@@ -1,5 +1,48 @@
 # CMCP Execution Journal
 
+## engine-20260926091209-atlassing-fd143d — 2026-09-29
+
+### Reconnaissance and RC baseline
+
+- Workspace: `D:\\PhpstormProjects\\www\\Atlassing`; active branch: `fix/atlas-scoring-runtime`, tracking `origin/fix/atlas-scoring-runtime` with no initial ahead/behind divergence.
+- Pre-existing dirty state preserved: Failing dependency/bundle integration plus a wording change in `.gating/README.md`; no reset, clean, stash, or destructive reconciliation was used.
+- Atlassing owns Atlas assessment/scoring lifecycle, maturity/readiness state, documentation coverage, registry/snapshot payloads, and neutral Atlas surfaces. Generic CRUD, final rendering, shell composition, and static documentation publication remain outside this repository.
+- Market benchmark: Backstage-style catalog metadata and mature scorecard products converge on component catalogs, continuously evaluated checks, maturity/readiness scorecards, actionable gaps, and diagnostics. RC scope therefore stays on deterministic identity, dependency/runtime correctness, evidence, and operability; richer rubric authoring, trends, waivers, campaigns, and remediation UX remain growth work.
+
+### Canonization mapping consulted
+
+- `Canon018ComposerIdentityMappingRule.md`: `atlassing/atlas` maps to `App\\Atlassing\\ => src/`; previous `App\\ => src/` mapping was a hard identity drift.
+- `Canon019NoAlternativeLayerTaxonomyRule.md`: preserve technical-role topology and do not introduce Domain/Application/Infrastructure/Port/Adapter/Adaptor roots.
+- `Canon022StandaloneApplicationDependencyBaselineRule.md`: standalone Atlassing must directly declare Cruding, Collectioning, Tabling, Viewing, Interfacing, Objecting, Failing, EasyAdmin, and register `App\\Failing\\FailingBundle`.
+- Gating remains the executable companion; the pre-change repository-specific gate was green but its reduced profile did not expose Canon018, so normative Canonization text governs this repair.
+
+### Material implementation selected and applied
+
+- Migrated Atlassing-owned production PHP and tests from the legacy root `App\\...` namespace to canonical `App\\Atlassing\\...`.
+- Updated development and production Composer PSR-4 mappings, test autoload, standalone Kernel/bootstrap wiring, bundle registration, service wiring, and Atlassing Gating profile to the component namespace.
+- Preserved the external `App\\Failing\\FailingBundle` namespace and existing Failing dependency work.
+- Refreshed Composer lock/autoload state through the bounded `failing/failure` update path after manifest changes.
+
+### Gates to run
+
+- Composer validate/lock consistency and audit.
+- PHP lint for changed PHP files, PHPStan, PHPUnit, CS check, executable Gating.
+- Symfony container and YAML lint where registered/applicable.
+- Final Git diff/status/branch inspection, coherent commit, and push if verification is green and unrelated dirty state can be preserved safely.
+
+### Acceptance
+
+- Composer validate/lock consistency: GREEN; Composer audit: no security advisories.
+- Changed-PHP syntax gate: GREEN across 41 PHP files.
+- PHP-CS-Fixer: GREEN; PHPStan: GREEN; PHPUnit: GREEN (25 tests / 113 assertions).
+- Executable Gating: GREEN (9 selected rules, 0 failures/warnings; namespace profile now `App\\Atlassing`).
+- Symfony container lint: GREEN; YAML lint: GREEN across 9 files.
+- Managed PHP web-runtime probe is not applicable to this repository's current standalone CLI shell because no `public/` directory exists; no healthy runtime was restarted and no replacement runtime was invented.
+- No browser/mobile/user-observable UI surface changed, so behavioral UI screenshots are not applicable to this RC slice.
+- Dependency contour was re-read from Objecting, Cruding, Viewing, Interfacing, and Gating; Interfacing has no root `MANIFEST.json`. Tabling production repository spelling was verified against Tabling's actual `origin` and is intentionally `tabling-.git` rather than a typo.
+- Repository-facing README/AGENTS autoload documentation now matches the canonical `App\\Atlassing\\` runtime identity.
+
+
 ## 2026-09-25 - Systemic scoring circuit breaker
 
 - Added a consecutive systemic-failure circuit breaker to the Python assessment runner for `SESSION_SUBMIT_NOT_CONFIRMED`, `WATCHDOG_STALE`, and `COMPOSER_OWNERSHIP_NOT_READY`.
