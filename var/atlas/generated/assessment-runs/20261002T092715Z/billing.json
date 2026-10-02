@@ -1,0 +1,272 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "billing",
+    "component_title": "Billing",
+    "github_repository": "smartresponsor/billing",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/billing/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Billing",
+    "timestamp_utc": "2026-10-02T09:39:23.878901+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "b169ec4538149551539b122e3ce58b216d675b3f"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches 'b169ec4538149551539b122e3ce58b216d675b3f'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D .gating/README.md\n M AGENTS.md\n M composer.json\n M composer.lock\n?? PRODUCT_CAPABILITY_AUDIT.adoc\n?? composer.prod.json"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "b169ec45 fix: align billing config contracts\n3fd3c8dc license: adopt PolyForm Noncommercial 1.0.0\nac0bf4a6 Activate Objecting metadata in Billing\n50bff409 Activate Objecting metadata policy\n23f98c4d Retain Gating artifact surface"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.deptrac.cache\n.editorconfig\n.env\n.env.example\n.env.local\n.env.test\n.env.test.local\n.gating/\n.gitattributes\n.github/\n.github/CODEOWNERS\n.github/docs-producer-registry.json\n.github/ISSUE_TEMPLATE/\n.github/pull_request_template.md\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Billing.iml\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbundles.php\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/packages/\nconfig/reference.php\nconfig/routes.yaml\nconfig/services_dev.yaml\nconfig/services_test.yaml\ndelivery/\ndelivery/rc/\ndeptrac.yaml\ndocs/\ndocs/antora.yml\ndocs/api-error-contract.md\ndocs/api-versioning.md\ndocs/architecture/\ndocs/billing-boundary.md\ndocs/component/\ndocs/documentation-guidelines.md\ndocs/documentation-surface-map.md\ndocs/generated/\ndocs/modules/\ndocs/operations/\ndocs/quality-gates.md\ndocs/release-readiness.md\ndocs/reports/\ndocs/security/\ndocs/testing-strategy.md\nLICENSE\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpdoc.xml.dist\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.js\nPRODUCT_CAPABILITY_AUDIT.adoc\npsalm.xml\npublic/\npublic/index.php\nqodana.yaml\nREADME.md\nrector.neon\nscripts/\nscripts/build-code-reference.php\nscripts/ensure-test-postgres.php\nscripts/ensure-test-postgres.ps1\nscripts/run-billing-test-suite.php\nscripts/start-billing-test-server.php\nscripts/start-billing-test-server.ps1\nsrc/\nsrc/BillingBundle.php\nsrc/Command/\nsrc/DataFixtures/\nsrc/DependencyInjection/\nsrc/Endpoint/\nsrc/Entity/\nsrc/EntityInterface/\nsrc/Fixture/\nsrc/FixtureInterface/\nsrc/Form/\nsrc/Http/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Security/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Value/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "357"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"billing/billing\",\n  \"type\": \"symfony-bundle\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"administering/administration\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/orm\": \"^3.3\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/security-core\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"zircote/swagger-php\": \"^5.0\",\n    \"objecting/object\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"deptrac/deptrac\": \"^4.6\",\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"phpstan/extension-installer\": \"^1.4\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Billing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Billing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"config\": {\n    \"sort-packages\": true,\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true,\n      \"phpstan/extension-installer\": true\n    }\n  },\n  \"extra\": {\n    \"symfony\": {\n      \"require\": \"8.*\"\n    }\n  },\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"scripts\": {\n    \"test\": \"@test:phpunit\",\n    \"test:phpunit\": \"vendor/bin/phpunit\",\n    \"cs:fix\": \"php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php\",\n    \"phpstan\": \"php vendor/bin/phpstan analyse src tests --no-progress --level=max\",\n    \"deptrac\": \"php vendor/bin/deptrac analyse --config-file=deptrac.yaml --no-progress --fail-on-uncovered\",\n    \"deptrac:unassigned\": \"php vendor/bin/deptrac debug:unassigned --config-file=deptrac.yaml\",\n    \"deptrac:unused\": \"php vendor/bin/deptrac debug:unused --config-file=deptrac.yaml\",\n    \"docs:openapi\": \"php vendor/bin/openapi src --format yaml --output docs/modules/ROOT/attachments/api/openapi.yaml\",\n    \"docs:phpdoc\": \"php scripts/build-code-reference.php\",\n    \"lint:container:test\": \"@php bin/console lint:container --env=test\",\n    \"lint:yaml\": \"@php bin/console lint:yaml config --parse-tags\",\n    \"docs:openapi:lint\": \"@php bin/console lint:yaml docs/modules/ROOT/attachments/api/openapi.yaml\",\n    \"qa:static\": [\n      \"@lint:container:test\",\n      \"@lint:yaml\",\n      \"@phpstan\",\n      \"@deptrac\",\n      \"@docs:openapi\",\n      \"@docs:openapi:lint\"\n    ],\n    \"qa\": [\n      \"@qa:static\"\n    ],\n    \"test:integration\": \"php scripts/run-billing-test-suite.php integration\",\n    \"test:e2e:ux\": \"php scripts/run-billing-test-suite.php e2e:ux\",\n    \"test:e2e\": \"php scripts/run-billing-test-suite.php e2e\",\n    \"test:package-smoke\": \"php vendor/bin/phpunit tests/Contract/Billing/BillingPackageSmokeTest.php\",\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"quality\": [\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"description\": \"Tenant-aware Billing foundation with Antora and OpenAPI producer surfaces for Smart Responsor-oriented Symfony ecosystems.\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Administering\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"option",
+      "package.json": "{\n  \"name\": \"billing\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"test\": \"npm run test:playwright\",\n    \"test:playwright\": \"playwright test --project=api\",\n    \"test:playwright:install\": \"playwright install chromium\",\n    \"test:playwright:headed\": \"playwright test --project=api --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.59.1\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "billing",
+    "summary": "Billing remains a mature near-RC Symfony component with strong domain boundaries and documented verification surfaces, but it is not RC-green: PHPStan is still reported with four blocking type errors, the current loopback health probe returns HTTP 500, production-manifest parity is not fully coherent, master is five commits ahead of origin/master, and the assessed HEAD is untagged. The authoritative snapshot requires complete updates for all seven base metrics. fileciteturn13file0L151-L164",
+    "strengths": [
+      "Tenant-aware Billing ownership is explicitly separated from Paying, Subscripting, and Taxating responsibilities.",
+      "Composer validation with strict lock checking is GREEN in the current Console MCP execution.",
+      "Composer security audit is GREEN with no vulnerability advisories reported.",
+      "Deptrac and PHPUnit evidence in the supplied assessment remains materially positive.",
+      "The repository declares layered unit, integration, contract, Panther, and Playwright verification surfaces.",
+      "Current live workspace drift is six visible entries rather than the stale 37-entry narrative in the prior metric summary."
+    ],
+    "risks": [
+      "PHPStan remains a deterministic RC blocker with four reported return-type errors in BillingCredentialConfigService and BillingEnvironmentConfigService. fileciteturn13file0L43-L53",
+      "The existing 127.0.0.1:8000 health probe returns HTTP 500 and is not owned by a healthy managed Billing runtime.",
+      "composer.prod.json still identifies the license as proprietary while composer.json uses PolyForm-Noncommercial-1.0.0.",
+      "The production and development Composer manifests are not yet a fully proven parity pair.",
+      "master is five commits ahead of origin/master and the workspace contains six modified, deleted, or untracked entries.",
+      "The assessed HEAD has no exact release tag. fileciteturn13file0L95-L127",
+      "Full integration, package-smoke, Panther, Playwright, and new-user/existing-user cohort evidence was not reproduced during this READ_ONLY window."
+    ],
+    "next_actions": [
+      "Repair the four PHPStan return-type failures and rerun maximum-level PHPStan.",
+      "Reconcile composer.json and composer.prod.json semantics, especially license and production dependency/repository parity.",
+      "Diagnose the current HTTP 500 on the existing loopback runtime without replacing a healthy managed runtime.",
+      "Run the complete static and PHPUnit acceptance surface after the workspace becomes immutable enough for RC verification.",
+      "Execute applicable integration, package-smoke, Panther, Playwright, and new-user/existing-user cohort verification.",
+      "Reconcile the six workspace changes and five unpublished commits through the normal integration path.",
+      "Create a semantic release tag only after deterministic and behavioral RC evidence is green."
+    ],
+    "notes": [
+      "No repository files were modified, staged, committed, pushed, deleted, or generated during this READ_ONLY execution.",
+      "Console MCP resolved D:\\PhpstormProjects\\www\\Billing as the canonical Billing repository scope.",
+      "Current Console MCP git status reports six dirty entries; the previous 37-entry ops narrative is stale and was refreshed accordingly.",
+      "Composer validate --strict --check-lock exited successfully.",
+      "Composer audit exited successfully with no vulnerability advisories.",
+      "The managed PHP-server record for port 8000 is not running; probing /healthz nevertheless reached an existing server and returned HTTP 500, so no restart was attempted.",
+      "The Visual Gallery service itself is healthy, but no new UI screenshot was required or produced because this task made no UI changes.",
+      "The supplied source snapshot explicitly records the PHPStan failure, PHPUnit result, release-state risks, and incomplete behavioral verification. fileciteturn13file0L43-L90"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.8,
+      "architecture": 8.9,
+      "runtime": 8.2,
+      "qa": 8.4,
+      "ops": 8.6,
+      "market": 8.7,
+      "overall": 8.5
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Billing retains a clearly stated tenant-aware billing-document identity with explicit invoice/document ownership boundaries and a capability audit that avoids absorbing payment, subscription, and tax state machines.",
+        "risks": [
+          "Receipt history, credit/debit notes, partial invoicing, numbering, rendering, and several integration capabilities remain PARTIAL."
+        ],
+        "improvements": [
+          "Advance the documented M1-M4 capability milestones while preserving explicit Paying, Subscripting, and Taxating boundaries."
+        ],
+        "evidence": [
+          "PRODUCT_CAPABILITY_AUDIT.adoc",
+          "docs/billing-boundary.md",
+          "docs/release-readiness.md"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture remains strong with explicit Symfony-oriented boundaries, role-oriented source organization, Deptrac enforcement, and documented contracts, but development-versus-production Composer parity is not yet fully coherent.",
+        "risks": [
+          "Several sibling dependencies remain on dev-master.",
+          "composer.prod.json and composer.json disagree on license semantics and have not been proven as an immutable parity pair.",
+          "Uncommitted Composer changes remain part of the current workspace."
+        ],
+        "improvements": [
+          "Preserve zero-violation Deptrac enforcement and reconcile composer.json/composer.prod.json before RC closure."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          "deptrac.yaml",
+          "docs/billing-boundary.md",
+          "docs/release-readiness.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Billing exposes a materially developed Symfony 8.1 runtime contract, but current live evidence is ATTENTION because the managed server is not running and the existing loopback /healthz probe returns HTTP 500.",
+        "risks": [
+          "The current 127.0.0.1:8000 /healthz response is HTTP 500.",
+          "The process responding on port 8000 is not recorded as the managed Billing PHP runtime.",
+          "No fresh latency, throughput, capacity, or successful endpoint measurements were captured."
+        ],
+        "improvements": [
+          "Diagnose the loopback 500 and then capture health, readiness, metrics, alert, and capacity evidence from the dependency-complete managed runtime."
+        ],
+        "evidence": [
+          "public/index.php",
+          "config/routes.yaml",
+          "docs/release-readiness.md",
+          "playwright.config.js"
+        ]
+      },
+      "qa": {
+        "summary": "QA breadth remains substantial, but deterministic acceptance is not green because the authoritative assessment reports four maximum-level PHPStan errors despite green PHPUnit and Deptrac evidence.",
+        "risks": [
+          "PHPStan reports four blocking return-type errors across the two Billing configuration services.",
+          "The recorded PHPUnit run contains 11 skipped tests.",
+          "Integration, package-smoke, Panther, Playwright, and cohort verification were not fully reproduced in this READ_ONLY window."
+        ],
+        "improvements": [
+          "Fix PHPStan first, then rerun static acceptance and the complete applicable behavioral test surface."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "docs/testing-strategy.md",
+          "playwright.config.js",
+          "src/Service/Config/BillingCredentialConfigService.php",
+          "src/Service/Config/BillingEnvironmentConfigService.php"
+        ]
+      },
+      "ops": {
+        "summary": "Operational governance remains comparatively mature and current Composer validation/security audit are green; live workspace drift is six entries rather than the previous 37, but five unpublished commits, manifest parity concerns, and the absence of an exact release tag still block an immutable RC baseline.",
+        "risks": [
+          "The current workspace contains six dirty entries.",
+          "master is five commits ahead of origin/master.",
+          "The assessed HEAD is not exactly tagged.",
+          "composer.prod.json still requires reconciliation with the development manifest."
+        ],
+        "improvements": [
+          "Reconcile the six workspace changes and production manifest, rerun RC gates, publish the coherent commit set, and tag only the verified immutable candidate."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.lock",
+          "composer.prod.json",
+          "AGENTS.md",
+          ".gating/README.md",
+          "docs/release-readiness.md"
+        ]
+      },
+      "market": {
+        "summary": "Portfolio alignment remains supported by Billing's explicit tenant-aware foundation role and sharply documented ownership boundary, but no new customer, revenue, usage, or external adoption evidence is present.",
+        "risks": [
+          "Repository evidence does not establish new external market validation.",
+          "Several product-level billing capabilities remain explicitly partial."
+        ],
+        "improvements": [
+          "Keep release and market claims limited to implemented Billing-owned capabilities until externally observable adoption or portfolio evidence changes."
+        ],
+        "evidence": [
+          "PRODUCT_CAPABILITY_AUDIT.adoc",
+          "docs/release-readiness.md",
+          "composer.json"
+        ]
+      },
+      "overall": {
+        "summary": "Billing remains a mature near-RC component with strong boundaries, documentation, dependency governance, PHPUnit/Deptrac evidence, and security-audit hygiene, but PHPStan failure, a live HTTP 500 runtime probe, production-manifest drift, unpublished commits, and incomplete behavioral evidence prevent RC-green status.",
+        "risks": [
+          "PHPStan blocks deterministic static acceptance.",
+          "The current loopback health endpoint returns HTTP 500.",
+          "master remains five commits ahead with six dirty workspace entries.",
+          "No exact release tag exists for the assessed HEAD.",
+          "Full integration/E2E/cohort evidence was not reproduced."
+        ],
+        "improvements": [
+          "Close static errors and manifest drift, restore a healthy verified runtime, complete applicable behavioral/cohort verification, reconcile and publish the workspace, then create the semantic release tag."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          "PRODUCT_CAPABILITY_AUDIT.adoc",
+          "docs/release-readiness.md",
+          "docs/testing-strategy.md",
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "deptrac.yaml",
+          "playwright.config.js"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "composer.lock",
+      "composer.prod.json",
+      "PRODUCT_CAPABILITY_AUDIT.adoc",
+      "docs/billing-boundary.md",
+      "docs/release-readiness.md",
+      "docs/testing-strategy.md",
+      "deptrac.yaml",
+      "phpstan.neon",
+      "phpunit.xml.dist",
+      "playwright.config.js",
+      "src/Service/Config/BillingCredentialConfigService.php",
+      "src/Service/Config/BillingEnvironmentConfigService.php"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\billing\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\billing\\history\\2026-10-02-assessment-2026-10-02.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\billing\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\billing\\probes\\history\\2026-10-02-assessment-2026-10-02.yaml"
+  },
+  "ai_io": {
+    "request_file": "billing.request.json",
+    "response_file": "billing.response.json"
+  }
+}
