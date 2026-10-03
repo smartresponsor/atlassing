@@ -1,0 +1,229 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "analysing",
+  "verdict": {
+    "component": "analysing",
+    "summary": "Analysing retains a strong Symfony-oriented architecture and substantial established QA infrastructure, but the current candidate is not RC-acceptable: fresh read-only validation now exposes a PHPStan max failure with two return-contract errors, the managed port-8098 runtime is stopped, and the repository remains dirty, three commits ahead of upstream, untagged, and internally inconsistent around Gating configuration and guard retirement.",
+    "strengths": [
+      "Composer metadata validates cleanly with --strict --check-lock.",
+      "Canonical layer scan is green with 186 files, zero duplicate basenames, zero source-domain candidates, and zero InterfaceInterface anomalies.",
+      "Symfony standalone smoke boots successfully under PHP 8.4.13 and Symfony 8.1.6.",
+      "Repository contains extensive PHPUnit, PHPStan max, schema, Gating, Playwright, migration-parity, and behavioral coverage infrastructure.",
+      "The /status endpoint has both kernel-level and Playwright behavioral coverage."
+    ],
+    "risks": [
+      "Fresh PHPStan max validation fails with two return-type violations in AnalyticsAnalysingEnvironmentConfigService.",
+      "Managed runtime on 127.0.0.1:8098 is stopped and /status currently returns connection refused.",
+      "The worktree contains seven changes and is not an immutable release candidate.",
+      "The branch is three commits ahead of its configured upstream and HEAD has no exact release tag.",
+      "composer.json contains duplicate ../Gating path repository declarations.",
+      "The staged deletion of analytics-domain-hygiene-guard.php is not accompanied by fresh proof of equivalent canonical enforcement."
+    ],
+    "next_actions": [
+      "Resolve the two PHPStan return-contract errors in AnalyticsAnalysingEnvironmentConfigService and rerun PHPStan max.",
+      "Reconcile the duplicate Gating repository declaration and production/development Gating dependency model.",
+      "Prove replacement coverage before accepting deletion of analytics-domain-hygiene-guard.php.",
+      "Produce a clean immutable candidate, then rerun PHPStan, PHPUnit, Gating, schema parity, and applicable behavioral checks on that exact commit.",
+      "Verify the managed runtime only after the candidate is clean; do not accept the stale port-8098 state as runtime evidence.",
+      "Synchronize upstream state and create an exact release tag only after all deterministic gates are green."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "composer.prod.json",
+      "phpstan.neon",
+      "src/Service/Config/AnalyticsAnalysingEnvironmentConfigService.php",
+      "tools/analytics-domain-hygiene-guard.php",
+      "CMCP_CHANGELOG.md",
+      "playwright.config.ts",
+      "tests/status.spec.js",
+      "tests/Unit/Analytics/KernelRuntimeSmokeTest.php",
+      "config/routes.php",
+      ".console-mcp/local-php-server-8098.json",
+      "README.md"
+    ],
+    "suggested_score_overrides": {
+      "product": null,
+      "architecture": 8.2,
+      "runtime": 7.8,
+      "qa": 7.9,
+      "ops": 8.0,
+      "market": null,
+      "overall": 7.9
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity remains materially established as Analysing through its dedicated repository, Symfony bundle, runtime surface, documentation, and tests, while retained Analytics terminology continues to be visible by design.",
+        "risks": [
+          "Residual Analytics terminology still prevents complete naming convergence.",
+          "Current packaging instability can reduce component-facing clarity."
+        ],
+        "improvements": [
+          "Complete or explicitly document the intended Analysing versus Analytics naming boundary.",
+          "Keep component identity documentation synchronized after packaging stabilization."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json",
+          "src/AnalysingBundle.php"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture remains strongly Symfony-oriented, but current integration state has measurable contract and canonical-enforcement pressure from the fresh PHPStan failure, duplicate Gating repository configuration, staged guard deletion, and dev-master sibling dependencies.",
+        "risks": [
+          "Fresh static analysis identifies an inter-component return-contract mismatch in the environment configuration service.",
+          "composer.json declares ../Gating twice.",
+          "Staged removal of the domain-hygiene guard lacks fresh replacement-equivalence evidence.",
+          "dev-master sibling dependencies expose the candidate to cross-repository contract drift."
+        ],
+        "improvements": [
+          "Reconcile the environment configuration return contract with its Administration-owned interface.",
+          "Deduplicate the Gating path repository.",
+          "Demonstrate canonical-rule equivalence before retiring the legacy guard.",
+          "Move accepted release candidates toward reproducible dependency constraints."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          "src/Service/Config/AnalyticsAnalysingEnvironmentConfigService.php",
+          "src/ServiceInterface/Config/AnalyticsAnalysingEnvironmentConfigServiceInterface.php",
+          "tools/analytics-domain-hygiene-guard.php",
+          "AGENTS.md"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime capability remains structurally present and the Symfony test kernel boots successfully, but the previously managed port-8098 process is currently stopped and therefore provides no live /status evidence for this candidate.",
+        "risks": [
+          "Managed port 8098 is stopped and /status currently fails with ECONNREFUSED.",
+          "The repository-owned Playwright behavioral path was not rerun because this assessment is READ_ONLY and the current changes are not user-observable UI changes.",
+          "The dirty worktree prevents tying runtime behavior to an immutable release commit."
+        ],
+        "improvements": [
+          "After candidate cleanup, re-establish the managed runtime using the repository-owned routing contract and verify /status.",
+          "Rerun the existing Playwright /status smoke on the exact accepted commit.",
+          "Retain runtime evidence against the verified commit rather than a mutable worktree."
+        ],
+        "evidence": [
+          ".console-mcp/local-php-server-8098.json",
+          "config/routes.php",
+          "playwright.config.ts",
+          "tests/status.spec.js",
+          "tests/Unit/Analytics/KernelRuntimeSmokeTest.php",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA infrastructure remains deep, but the current candidate is not green because fresh PHPStan max execution fails with two return-type errors despite Composer validation, canonical scanning, and standalone Symfony smoke passing.",
+        "risks": [
+          "PHPStan max currently fails with two errors in AnalyticsAnalysingEnvironmentConfigService.",
+          "PHPUnit, Gating, schema parity, and Playwright were not all freshly rerun for this dirty candidate.",
+          "Retiring the independent domain-hygiene guard may reduce canonical coverage unless replacement behavior is proven.",
+          "Historical coverage evidence records non-blocking line, method, and branch coverage debt."
+        ],
+        "improvements": [
+          "Fix the two PHPStan return-type violations first.",
+          "Rerun the full established deterministic QA stack on the resulting clean candidate.",
+          "Verify canonical enforcement equivalence before guard retirement.",
+          "Regenerate behavioral and coverage evidence for the exact accepted commit."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpunit.xml.dist",
+          "src/Service/Config/AnalyticsAnalysingEnvironmentConfigService.php",
+          "composer.json",
+          "playwright.config.ts",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "ops": {
+        "summary": "Operational tooling remains mature, but RC operations are presently blocked by the failed deterministic validation, stopped managed runtime, dirty worktree, three-commit upstream divergence, missing exact tag, and unresolved Gating packaging drift.",
+        "risks": [
+          "Current deterministic RC validation is blocked by composer:analyse.",
+          "The RC branch is dirty and three commits ahead of upstream.",
+          "HEAD has no exact release tag according to the supplied deterministic facts.",
+          "The previously managed PHP runtime is no longer running.",
+          "Gating packaging differs between composer.json and composer.prod.json and includes a duplicate development repository declaration."
+        ],
+        "improvements": [
+          "Restore all deterministic gates to green before release operations.",
+          "Normalize Gating dependency and repository ownership across development and production manifests.",
+          "Produce and verify a clean candidate before synchronization.",
+          "Tag only the exact commit that passes the complete acceptance surface."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          ".github/workflows/automate-kit-sync.yml",
+          ".console-mcp/local-php-server-8098.json",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing alignment is materially unchanged: Analysing has a clear analytics role in the Smartresponsor ecosystem, while available evidence remains engineering- and RC-readiness-focused rather than adoption- or market-validation-focused.",
+        "risks": [
+          "No new customer, adoption, revenue, or external market-validation evidence is present.",
+          "Naming and RC packaging instability can still reduce portfolio-facing clarity."
+        ],
+        "improvements": [
+          "Preserve the existing market assessment until new market evidence exists.",
+          "Add concise owner-facing ecosystem-role documentation after naming and packaging stabilize."
+        ],
+        "evidence": [
+          "README.md",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "overall": {
+        "summary": "Analysing remains a technically mature pre-RC component, but current acceptance is blocked by a fresh PHPStan max failure, stopped managed runtime, mutable dirty candidate, unresolved Gating and guard-transition issues, upstream divergence, and absence of an exact tag.",
+        "risks": [
+          "The current candidate fails a required deterministic static-analysis gate.",
+          "Live runtime evidence is unavailable because the managed server is stopped.",
+          "Filesystem state is not immutable.",
+          "Canonical guard retirement has not been proven coverage-neutral.",
+          "Gating packaging remains internally inconsistent.",
+          "Fresh complete deterministic and behavioral verification is absent for this exact state."
+        ],
+        "improvements": [
+          "Fix the PHPStan contract errors and Gating/guard inconsistencies.",
+          "Produce a clean deterministic candidate.",
+          "Run the complete applicable verification stack against that exact commit.",
+          "Synchronize and tag only after all acceptance gates are green."
+        ],
+        "evidence": [
+          "composer.json",
+          "composer.prod.json",
+          "phpstan.neon",
+          "src/Service/Config/AnalyticsAnalysingEnvironmentConfigService.php",
+          "CMCP_CHANGELOG.md",
+          ".console-mcp/local-php-server-8098.json"
+        ]
+      }
+    },
+    "notes": [
+      "Repository mutation, Git staging, commit, push, changelog modification, and runtime restart were not performed because execution authority is READ_ONLY.",
+      "The supplied deterministic snapshot established branch, commit, dirty state, and missing exact tag; live Console MCP reconnaissance confirmed the branch and seven-entry dirty worktree. fileciteturn0file0L1792-L1824",
+      "Fresh Console MCP RC validation returned composer_validate GREEN, lint:canon GREEN, standalone:smoke GREEN, and composer:analyse RED with two PHPStan errors.",
+      "Visual evidence: NOT_VERIFIED. No new screenshot was produced because the inspected changes do not constitute a user-observable UI change, and the managed application runtime is currently stopped.",
+      "Visual Gallery server itself is healthy.",
+      "http://100.101.253.65:9477/Analysing/today"
+    ]
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\analysing.prompt.txt",
+    "taskId": "engine-20261003094847-analysing-83aa1f",
+    "chatId": "6ac0cf8d-92a0-83ea-94cc-945f279f6ad6",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ac0cf8d-92a0-83ea-94cc-945f279f6ad6",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}

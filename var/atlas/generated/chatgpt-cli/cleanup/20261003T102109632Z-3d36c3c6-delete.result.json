@@ -1,0 +1,134 @@
+{
+  "ok": true,
+  "status": "CHATGPT_CHAT_DELETE_DONE",
+  "expected_chat_id": "6ac0d4aa-9ae4-83e9-b338-e71b8a681c6f",
+  "delete": {
+    "ok": true,
+    "status": "CHAT_SOFT_DELETED",
+    "expected_chat_id": "6ac0d4aa-9ae4-83e9-b338-e71b8a681c6f",
+    "close_target": false,
+    "auth_session_http_status": 200,
+    "patch_http_status": 200,
+    "patch_http_status_text": "",
+    "patch_body_preview": null,
+    "auth_token_present": true,
+    "href": "https://chatgpt.com/",
+    "title": "ChatGPT",
+    "auth_target_id": "12C6E0C0C4E29BDBCE197C38B39FB16D",
+    "attempts": [
+      {
+        "target_id": "12C6E0C0C4E29BDBCE197C38B39FB16D",
+        "chat_id": null,
+        "settings_surface": false,
+        "ok": true,
+        "status": "CHAT_SOFT_DELETED",
+        "auth_session_http_status": 200,
+        "patch_http_status": 200,
+        "auth_token_present": true
+      }
+    ]
+  },
+  "deletion_transport": "authenticated_target_broker",
+  "conversation_deleted": true,
+  "resolver": {
+    "ok": false,
+    "status": "CHAT_DELETE_TARGET_NOT_FOUND",
+    "candidate_count": 2,
+    "duplicate_chat_id_count": 0,
+    "inventory": {
+      "ports": [
+        9222,
+        9223
+      ],
+      "attempts": [
+        {
+          "port": 9222,
+          "ok": false,
+          "error": "connect ECONNREFUSED 127.0.0.1:9222"
+        },
+        {
+          "port": 9223,
+          "ok": true,
+          "target_count": 3
+        }
+      ],
+      "total_chatgpt_targets": 3,
+      "empty_home_count": 1,
+      "chat_target_count": 2,
+      "unique_chat_id_count": 2,
+      "duplicate_chat_id_count": 0,
+      "duplicate_chat_ids": [],
+      "empty_home_targets": [
+        {
+          "description": "",
+          "devtoolsFrontendUrl": "https://aka.ms/docs-landing-page/serve_rev/@f6ddc7bb8d2ad05a6979ebc09b83893c2d128a62/inspector.html?ws=127.0.0.1:9223/devtools/page/12C6E0C0C4E29BDBCE197C38B39FB16D",
+          "faviconUrl": "https://chatgpt.com/cdn/assets/favicon.6a33781f61.svg",
+          "id": "12C6E0C0C4E29BDBCE197C38B39FB16D",
+          "title": "ChatGPT",
+          "type": "page",
+          "url": "https://chatgpt.com/",
+          "webSocketDebuggerUrl": "ws://127.0.0.1:9223/devtools/page/12C6E0C0C4E29BDBCE197C38B39FB16D",
+          "port": 9223,
+          "chat_id": null,
+          "web_socket_debugger_url": "ws://127.0.0.1:9223/devtools/page/12C6E0C0C4E29BDBCE197C38B39FB16D"
+        }
+      ],
+      "targets": [
+        {
+          "port": 9223,
+          "id": "12C6E0C0C4E29BDBCE197C38B39FB16D",
+          "type": "page",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "chat_id": null,
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "202B55F57C22D41F164DF8221BFB4E66",
+          "type": "page",
+          "title": "Reconnaissance Summary",
+          "url": "https://chatgpt.com/c/6abf85ea-5128-83ea-a4ba-482b3e0ec24e",
+          "chat_id": "6abf85ea-5128-83ea-a4ba-482b3e0ec24e",
+          "has_web_socket_debugger_url": true
+        },
+        {
+          "port": 9223,
+          "id": "B0A0FD18C6B61DCF911FB9D0ADBB1ED4",
+          "type": "page",
+          "title": "ChatGPT",
+          "url": "https://chatgpt.com/c/6abc7182-8bf8-83ea-a74a-05e6027a5da0",
+          "chat_id": "6abc7182-8bf8-83ea-a74a-05e6027a5da0",
+          "has_web_socket_debugger_url": true
+        }
+      ]
+    }
+  },
+  "policy": {
+    "browser_mutation": true,
+    "chatgpt_host_only": true,
+    "deletes_chat": true,
+    "soft_delete_via_backend_api": true,
+    "requires_expected_chat_id": true,
+    "ordinary_delete_requires_confirm_delete": true,
+    "lifecycle_ready_to_delete_authorization_available": true,
+    "lifecycle_ready_to_delete_requires_true_signal": true,
+    "writes_input": false,
+    "submits_input": false
+  },
+  "tool": "write.browser.chatgpt.chat.delete.execute",
+  "bridge": {
+    "ok": true,
+    "status": "CONSOLE_MCP_BRIDGE_TOOL_EXECUTED",
+    "capabilityClass": "atomic",
+    "authorityMode": "legacy",
+    "m5AtomicTransportEnabled": false,
+    "endpoint": "http://127.0.0.1:3335/mcp",
+    "requestTimeoutMs": 120000
+  },
+  "envBootstrap": {
+    "endpoint": "http://127.0.0.1:3335/mcp",
+    "tokenPresent": true,
+    "tokenSource": "env"
+  }
+}

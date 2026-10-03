@@ -1,0 +1,6 @@
+{
+  "transport": "chatgpt-loop-task-bank-raw",
+  "component": "accessing",
+  "workspace": "D:\\PhpstormProjects\\www\\Accessing",
+  "prompt_file": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\accessing.prompt.txt"
+}

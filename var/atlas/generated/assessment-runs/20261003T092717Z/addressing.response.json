@@ -1,0 +1,188 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "addressing",
+  "verdict": {
+    "component": "addressing",
+    "summary": "Addressing remains a strong RC-stage Symfony component with green canonical Gating, PHPUnit, container smoke, runtime smoke, and Composer validation. RC readiness is nevertheless blocked: the default composer phpstan path deterministically fails because phpstan.neon contains two unsupported options, qa:phpstan currently encounters a separate Windows Symfony-cache rename failure, and the existing managed HTTP runtime is alive but /address/manage returns HTTP 500.",
+    "strengths": [
+      "Canonical Addressing Gating is GREEN: 16 rules, 0 failures, with Canon052, Canon056, Canon061, and Canon063 passing.",
+      "PHPUnit is GREEN: 22 tests, 112 assertions, 1 notice, 1 intentional skip.",
+      "Standalone container and runtime smoke checks are GREEN.",
+      "Composer validation and repository PHP lint are GREEN.",
+      "Visual Gallery service is healthy on the configured Tailscale endpoint."
+    ],
+    "risks": [
+      "RC validation is blocked because composer phpstan loads phpstan.neon and rejects checkMissingIterableValueType and checkGenericClassInNonGenericObjectType.",
+      "qa:phpstan using phpstan.neon.dist is not freshly green; analysis encountered a Symfony test-cache file rename failure on Windows.",
+      "The managed 127.0.0.1:8000 process is running, but GET /address/manage returns HTTP 500.",
+      "Functional coverage remains 2/16 (12.5%) and PHPUnit coverage remains HIGH_TEST_DEBT at 32.7% lines, 34.9% methods, and 26.8% branches.",
+      "The worktree is dirty with deletion of .gating/README.md and modification of AGENTS.md; both were preserved untouched."
+    ],
+    "next_actions": [
+      "Remove or update the two obsolete PHPStan configuration parameters in phpstan.neon, then rerun composer phpstan.",
+      "Diagnose the qa:phpstan Symfony cache rename race without masking it or restarting unrelated healthy infrastructure.",
+      "Diagnose the existing managed HTTP runtime's /address/manage HTTP 500 while preserving REUSE_EXISTING_FIRST.",
+      "After the blockers are resolved, rerun the complete deterministic RC validation contour and applicable behavioral browser verification.",
+      "Keep the pre-existing .gating/README.md and AGENTS.md work isolated from any future RC integration."
+    ],
+    "notes": [
+      "Repository mutation, staging, commit, push, destructive operations, and CMCP_CHANGELOG.md updates were intentionally not performed because this execution is READ_ONLY.",
+      "The previous snapshot statement that no managed runtime was running is now superseded: PID 27236 is running, but its configured health endpoint returns HTTP 500.",
+      "Internal runtime bootability and live HTTP health diverge: smoke:container and smoke:runtime pass while /address/manage fails.",
+      "Visual evidence status: NOT_VERIFIED. No new screenshot was produced because the live UI endpoint returned HTTP 500.",
+      "The authoritative assessment contract requires complete updates for product, architecture, runtime, qa, ops, market, and overall metrics, preserving prior narratives where new evidence is insufficient. fileciteturn1file1L1846-L1963"
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "composer.json",
+      "phpstan.neon",
+      "phpstan.neon.dist",
+      "phpunit.xml.dist",
+      "tools/qa/addressing-platform-canon.yaml",
+      "config/address_deptrac.yaml",
+      ".console-mcp/local-php-server-8000.json",
+      "CMCP_CHANGELOG.md",
+      "AGENTS.md"
+    ],
+    "suggested_score_overrides": {
+      "product": null,
+      "architecture": null,
+      "runtime": null,
+      "qa": null,
+      "ops": null,
+      "market": null,
+      "overall": null
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Component identity remains clearly established as the Addressing address-lifecycle application/component; current reconnaissance adds engineering and runtime evidence rather than new end-user or market validation.",
+        "risks": [
+          "Market-facing usage and adoption evidence remain outside the supplied repository evidence."
+        ],
+        "improvements": [
+          "Preserve repository-driven product identity evidence and supplement future assessments with validated product usage or outcome evidence."
+        ],
+        "evidence": [
+          "README.md",
+          "composer.json"
+        ]
+      },
+      "architecture": {
+        "summary": "Architecture remains strongly evidenced by Symfony 8.1/PHP 8.4, explicit first-party dependencies, role-oriented implementation, Deptrac configuration, Symfony routing/OpenAPI parity, and a canonical Gating run with zero failed rules.",
+        "risks": [
+          "Final release stability remains unproven because HEAD is still on untagged rc/addressing-rc-final-v3 and the worktree contains preserved unrelated changes."
+        ],
+        "improvements": [
+          "Preserve Deptrac, OpenAPI parity, and canonical Gating as release gates while resolving the remaining deterministic RC blockers."
+        ],
+        "evidence": [
+          "composer.json",
+          "config/address_deptrac.yaml",
+          "config/openapi/address_openapi.yaml",
+          "tools/qa/addressing-platform-canon.yaml"
+        ]
+      },
+      "runtime": {
+        "summary": "Standalone container and runtime smoke checks pass, but the existing managed PHP server is currently unhealthy at the user-facing boundary because /address/manage returns HTTP 500.",
+        "risks": [
+          "A running managed process does not constitute healthy behavioral evidence; the configured HTTP health route currently returns 500.",
+          "No fresh successful browser/UI interaction was established in this read-only pass."
+        ],
+        "improvements": [
+          "Diagnose the existing managed runtime in place, restore a successful /address/manage response, then execute the configured Panther/Playwright behavioral contour without unnecessary restart."
+        ],
+        "evidence": [
+          ".console-mcp/local-php-server-8000.json",
+          "composer.json",
+          "tests/E2E/AddressApiPantherE2ETest.php",
+          "tests/playwright/address-ui.spec.js"
+        ]
+      },
+      "qa": {
+        "summary": "QA breadth remains strong with green PHPUnit, lint, canonical Gating, container smoke, and runtime smoke, but RC static validation is not green because the default PHPStan configuration is invalid and the dist-config run encountered a separate cache rename failure.",
+        "risks": [
+          "phpstan.neon still contains unsupported checkMissingIterableValueType and checkGenericClassInNonGenericObjectType parameters.",
+          "qa:phpstan reached analysis through phpstan.neon.dist but terminated on a Symfony test-cache rename error, so no fresh complete PHPStan pass is established.",
+          "Canon031, Canon040, and Canon042 remain explicit warning-class documentation and testing debt."
+        ],
+        "improvements": [
+          "Repair phpstan.neon configuration drift, stabilize the cache/container interaction affecting qa:phpstan, and archive a fresh aggregate all-green QA evidence bundle."
+        ],
+        "evidence": [
+          "phpstan.neon",
+          "phpstan.neon.dist",
+          "phpunit.xml.dist",
+          "tools/qa/addressing-platform-canon.yaml",
+          "composer.json"
+        ]
+      },
+      "ops": {
+        "summary": "Operational scaffolding remains mature with CI workflows, release tooling, smoke infrastructure, security automation, and a healthy central Visual Gallery, but RC readiness is blocked by static validation and the managed HTTP endpoint is unhealthy.",
+        "risks": [
+          "The assessed commit remains untagged on an RC branch.",
+          "The worktree contains D .gating/README.md and M AGENTS.md.",
+          "Managed HTTP health currently returns 500 despite successful internal runtime smoke checks."
+        ],
+        "improvements": [
+          "Resolve the static and live-HTTP blockers, preserve unrelated dirty work, rerun release evidence, and only then reconcile/tag the RC."
+        ],
+        "evidence": [
+          ".github/workflows/addressing-gate.yml",
+          ".github/workflows/addressing-gate-master.yml",
+          ".console-mcp/local-php-server-8000.json",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "market": {
+        "summary": "Business-facing alignment remains materially present in the existing snapshot, while this repository reconnaissance contributes no new adoption, customer, or market-validation evidence.",
+        "risks": [
+          "Engineering maturity and canonical conformance must not be treated as direct evidence of market validation."
+        ],
+        "improvements": [
+          "Supplement future Atlas assessments with validated usage, consumer-integration, or portfolio adoption evidence."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/page/address-business-flows.md"
+        ]
+      },
+      "overall": {
+        "summary": "Addressing remains architecturally mature and broadly well-tested, with zero canonical Gating failures and green PHPUnit/container/runtime smokes, but it is not currently all-green RC evidence because default PHPStan configuration fails, qa:phpstan has an additional cache error, and the managed HTTP endpoint returns 500.",
+        "risks": [
+          "RC validation reports validation_failed from the reproducible composer phpstan configuration failure.",
+          "Live behavioral/UI verification is NOT_VERIFIED because the existing managed endpoint returns HTTP 500.",
+          "The branch remains untagged and the worktree contains two preserved unrelated changes."
+        ],
+        "improvements": [
+          "Repair PHPStan configuration and cache execution, restore healthy live HTTP behavior, rerun complete deterministic and applicable behavioral verification, then perform release-branch reconciliation and exact tagging."
+        ],
+        "evidence": [
+          "composer.json",
+          "phpstan.neon",
+          "phpstan.neon.dist",
+          "tools/qa/addressing-platform-canon.yaml",
+          ".console-mcp/local-php-server-8000.json",
+          "CMCP_CHANGELOG.md"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\addressing.prompt.txt",
+    "taskId": "engine-20261003093807-addressing-353c6a",
+    "chatId": "6ac0cd0c-ffc0-83e9-b8b7-09cb54652120",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ac0cd0c-ffc0-83e9-b8b7-09cb54652120",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}

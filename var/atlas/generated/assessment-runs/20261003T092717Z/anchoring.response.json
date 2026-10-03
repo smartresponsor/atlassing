@@ -1,0 +1,243 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "anchoring",
+  "verdict": {
+    "component": "anchoring",
+    "summary": "Anchoring remains structurally mature and well documented, with both CLI and verify-service Vitest suites passing, but RC confidence is reduced by unresolved high-severity dependency findings, source/OpenAPI route drift, a documented-port runtime that does not mirror the current source tree, branch/registry drift, a dirty worktree, no exact release tag, and no configured Git remote/upstream.",
+    "strengths": [
+      "CLI deterministic tests pass: 3/3 files and 3/3 tests.",
+      "Verify-service deterministic test passes: 1/1 file and 1/1 test.",
+      "Repository contains substantial verification, anchoring, observability, canary, recovery, deployment, SDK, OpenAPI, and operational documentation.",
+      "An existing listener on documented port 8080 responds successfully to GET /health."
+    ],
+    "risks": [
+      "public/openapi/verify.yaml and doc/service-verify.md expose POST /verify/record while src/service/verify/server.ts implements POST /verify.",
+      "The listener on port 8080 does not mirror current server.ts: /health lacks the current ts field and /batches is absent.",
+      "npm audit fails for both CLI and verify-service dependency trees with high-severity findings.",
+      "Registry default branch master disagrees with repository branch main.",
+      "The worktree contains one modified tracked file and three untracked files.",
+      "No exact Git tag identifies the assessed commit.",
+      "No origin remote or upstream is configured in the inspected local repository."
+    ],
+    "next_actions": [
+      "Make the verify-service implementation, OpenAPI contract, and service documentation expose one canonical route contract.",
+      "Identify or replace the stale port-8080 runtime and verify the current source build without restarting a healthy unrelated listener.",
+      "Add contract-level tests that fail when executable verify routes drift from public/openapi/verify.yaml.",
+      "Remediate high-severity npm audit findings in both Node package trees.",
+      "Reconcile registry default_branch with the canonical repository branch.",
+      "Produce the next RC assessment from a clean, exact-tagged, reproducible Git baseline."
+    ],
+    "notes": [
+      "Repository mutation, staging, commit, push, dependency installation, runtime restart, and destructive operations were not performed.",
+      "The authoritative response contract requires all seven base metric updates and fixed-key score overrides. fileciteturn19file0L9-L22",
+      "Runtime verification status: ATTENTION. A listener exists at the repository-documented port, but evidence does not establish that it is the current Anchoring source snapshot.",
+      "Visual evidence: NOT_VERIFIED; no repository changes or user-observable UI changes occurred, so screenshot generation was not applicable."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "README.md",
+      "doc/tests.md",
+      "doc/service-verify.md",
+      "doc/observability.md",
+      "doc/canary.md",
+      "doc/release.md",
+      "public/openapi/verify.yaml",
+      "src/service/verify/server.ts",
+      "src/service/verify/test/basic.spec.ts",
+      "src/service/verify/package.json",
+      "src/tool/anchoring/cli/package.json",
+      "src/tool/anchoring/cli/test/conformance.spec.ts",
+      "src/tool/anchoring/cli/test/jcs-hash.spec.ts",
+      "src/tool/anchoring/cli/test/merkle.spec.ts",
+      ".github/workflows/canary-gate.yml",
+      ".github/workflows/ots-smoke.yml",
+      ".github/workflows/sbom-licenses.yml",
+      "sdk/php/composer.json"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.3,
+      "architecture": 8.0,
+      "runtime": 8.1,
+      "qa": 7.8,
+      "ops": 8.5,
+      "market": 7.9,
+      "overall": 7.9
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Anchoring retains a clear verification, anchoring, evidence, provider, SDK, and operational product surface, but executable verify-service behavior is no longer fully mirrored by its documented public API contract.",
+        "risks": [
+          "OpenAPI and service documentation advertise POST /verify/record while the current server implements POST /verify.",
+          "Repository evidence still does not establish external adoption or production user behavior.",
+          "Registry branch metadata disagrees with the observed branch."
+        ],
+        "improvements": [
+          "Restore one canonical executable/documented verify API contract.",
+          "Keep quickstart, verification, evidence, SDK, and release documentation synchronized with executable behavior.",
+          "Reconcile registry branch metadata with the canonical repository branch."
+        ],
+        "evidence": [
+          "README.md",
+          "doc/service-verify.md",
+          "public/openapi/verify.yaml",
+          "src/service/verify/server.ts"
+        ]
+      },
+      "architecture": {
+        "summary": "Repository structure continues to separate CLI, verification service, public contracts, policy, deployment, SDK, documentation, and operations concerns, but executable-to-contract drift and an unreproducible dirty Git baseline weaken architectural consistency.",
+        "risks": [
+          "Verify-service routing differs from the checked-in OpenAPI contract.",
+          "Implementation-level dependency/conformance analysis was not executed because the available Inspecting operation persists reports and this run is strictly read-only.",
+          "The worktree is dirty and no origin/upstream is configured."
+        ],
+        "improvements": [
+          "Add deterministic source-to-OpenAPI conformance validation.",
+          "Capture architecture-conformance evidence in a mutation-permitted Atlas run.",
+          "Use a clean, remotely attributable Git baseline for RC architecture snapshots."
+        ],
+        "evidence": [
+          "src/service/verify/server.ts",
+          "public/openapi/verify.yaml",
+          "src/tool/anchoring/cli/package.json",
+          "src/service/verify/package.json"
+        ]
+      },
+      "runtime": {
+        "summary": "Anchoring retains substantial runtime-readiness assets and a listener responds on the documented port 8080, but that listener does not mirror current source routes or health payload shape, so the current repository runtime remains unverified.",
+        "risks": [
+          "GET /health on port 8080 returns 200 but omits the ts field present in current server.ts.",
+          "GET /batches is absent on the existing port-8080 listener despite being implemented in current server.ts.",
+          "No representative latency, throughput, capacity, or production availability measurements were collected."
+        ],
+        "improvements": [
+          "Establish runtime identity before treating the current listener as Anchoring evidence.",
+          "Run the current verify-service build in the managed runtime when mutation/restart authority permits and verify documented routes.",
+          "Capture representative runtime and SLO measurements against the source-mirroring deployment."
+        ],
+        "evidence": [
+          "doc/service-verify.md",
+          "src/service/verify/server.ts",
+          "doc/observability.md",
+          "compose.yml",
+          "compose.local.yml",
+          "compose.prod.yml"
+        ]
+      },
+      "qa": {
+        "summary": "Deterministic QA evidence now includes passing CLI tests (3/3) and a passing verify-service test (1/1), but the suites do not detect the observed source/OpenAPI contract drift and npm audit fails with high-severity dependency findings in both Node package trees.",
+        "risks": [
+          "Both CLI and verify-service npm audit commands exit non-zero with high-severity findings.",
+          "The verify-service test covers Merkle proof arithmetic rather than HTTP route/OpenAPI conformance.",
+          "The current suites permit a documented route contract mismatch to remain undetected."
+        ],
+        "improvements": [
+          "Remediate dependency-audit findings and preserve npm audit as an explicit RC gate.",
+          "Add HTTP contract tests covering every public/openapi/verify.yaml route.",
+          "Retain passing CLI conformance, JCS/hash, Merkle, and verify-service tests as deterministic Atlas evidence."
+        ],
+        "evidence": [
+          "src/tool/anchoring/cli/test/conformance.spec.ts",
+          "src/tool/anchoring/cli/test/jcs-hash.spec.ts",
+          "src/tool/anchoring/cli/test/merkle.spec.ts",
+          "src/service/verify/test/basic.spec.ts",
+          "src/tool/anchoring/cli/package-lock.json",
+          "src/service/verify/package-lock.json",
+          "public/openapi/verify.yaml"
+        ]
+      },
+      "ops": {
+        "summary": "Operational maturity remains strong through observability, canary, deployment, recovery, metrics, Prometheus, Grafana, image, SBOM, and workflow assets, but stale-runtime evidence, permissive workflow steps, dependency hygiene, dirty Git state, and absent remote/upstream attribution prevent a clean RC operational baseline.",
+        "risks": [
+          "The listener on documented port 8080 does not mirror the inspected source snapshot.",
+          "Several workflow commands tolerate failures with || true.",
+          "No successful production deployment, alert execution, or recovery drill was observed.",
+          "The repository is dirty, untagged, and has no configured origin/upstream."
+        ],
+        "improvements": [
+          "Differentiate informational workflow probes from mandatory RC gates.",
+          "Make managed runtime identity and deployed commit/source fingerprint observable.",
+          "Capture deployment, monitoring, canary, and recovery-drill outcomes as deterministic evidence.",
+          "Assess operational RC readiness from a clean exact-tag baseline with canonical remote metadata."
+        ],
+        "evidence": [
+          "doc/observability.md",
+          "doc/canary.md",
+          "doc/release.md",
+          ".github/workflows/canary-gate.yml",
+          ".github/workflows/ots-smoke.yml",
+          ".github/workflows/sbom-licenses.yml",
+          "ops/prometheus",
+          "ops/grafana"
+        ]
+      },
+      "market": {
+        "summary": "The repository still communicates a coherent anchoring and verification offering through evidence, integrity, receipt, provider, API, SDK, compliance, RFP, and proof-explorer materials, but API documentation that diverges from implementation reduces integration readiness.",
+        "risks": [
+          "Integrator-facing OpenAPI currently disagrees with executable verify routing.",
+          "Repository evidence does not establish demand, adoption, revenue, or competitive position.",
+          "Market readiness remains grounded primarily in product communication and integration assets."
+        ],
+        "improvements": [
+          "Treat executable/OpenAPI parity as an integrator-facing release requirement.",
+          "Maintain clear API, SDK, receipt, evidence, RFP, and proof-explorer materials.",
+          "Complement repository evidence with externally grounded integration or adoption evidence when available."
+        ],
+        "evidence": [
+          "README.md",
+          "public/openapi/verify.yaml",
+          "doc/service-verify.md",
+          "doc/evidence.md",
+          "doc/providers.md",
+          "doc/rfp-answers.md",
+          "doc/proof-explorer.md"
+        ]
+      },
+      "overall": {
+        "summary": "Anchoring remains a mature repository with strong documentation and passing deterministic Node tests, but RC readiness is materially constrained by verify API contract drift, a documented-port runtime that does not mirror current source, high-severity dependency findings, branch/registry mismatch, dirty state, absent exact tag, and missing remote/upstream attribution.",
+        "risks": [
+          "Executable verify routing and public OpenAPI are inconsistent.",
+          "The current repository build is not verified as the process serving documented port 8080.",
+          "High-severity dependency findings remain in both Node package trees.",
+          "Registry master and observed main branch disagree.",
+          "The baseline contains one modified tracked file and three untracked files.",
+          "No exact release tag or configured origin/upstream identifies a reproducible RC source."
+        ],
+        "improvements": [
+          "Repair executable/OpenAPI contract parity and cover it with deterministic tests.",
+          "Verify a source-mirroring managed runtime before claiming behavioral RC evidence.",
+          "Remediate npm audit findings.",
+          "Reconcile branch metadata and Git remote attribution.",
+          "Create a clean exact-tag baseline for the next RC snapshot."
+        ],
+        "evidence": [
+          "src/service/verify/server.ts",
+          "public/openapi/verify.yaml",
+          "doc/service-verify.md",
+          "src/service/verify/test/basic.spec.ts",
+          "src/tool/anchoring/cli/test/conformance.spec.ts",
+          "src/tool/anchoring/cli/test/jcs-hash.spec.ts",
+          "src/tool/anchoring/cli/test/merkle.spec.ts",
+          "sdk/php/composer.json"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\anchoring.prompt.txt",
+    "taskId": "engine-20261003095928-anchoring-0d4755",
+    "chatId": "6ac0d20e-5af4-83ea-9370-13e285ea2137",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ac0d20e-5af4-83ea-9370-13e285ea2137",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}
