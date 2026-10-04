@@ -11,12 +11,12 @@ Set-StrictMode -Version Latest
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $workspaceRoot = Split-Path -Parent $repoRoot
-$consoleRoot = Join-Path $workspaceRoot 'mcp\console-mcp'
-$devConsole = Join-Path $consoleRoot 'tool\dev-console.ps1'
-$cmcpCli = Join-Path $consoleRoot 'bin\cmcp.ps1'
-$chatgptLoopRoot = Join-Path $workspaceRoot 'mcp\chatgpt-loop'
-$consoleMcpBridge = Join-Path $chatgptLoopRoot 'tool\runner-console-mcp-bridge.ps1'
-$cleanupRuntimeDir = Join-Path $repoRoot 'var\atlas\generated\chatgpt-cli\cleanup'
+$consoleRoot = Join-Path $workspaceRoot 'mcp/console-mcp'
+$devConsole = Join-Path $consoleRoot 'tool/dev-console.ps1'
+$cmcpCli = Join-Path $consoleRoot 'bin/cmcp.ps1'
+$chatgptLoopRoot = Join-Path $workspaceRoot 'mcp/chatgpt-loop'
+$consoleMcpBridge = Join-Path $chatgptLoopRoot 'tool/runner-console-mcp-bridge.ps1'
+$cleanupRuntimeDir = Join-Path $repoRoot 'var/atlas/generated/chatgpt-cli/cleanup'
 
 if (-not (Test-Path -LiteralPath $devConsole -PathType Leaf)) { throw "Console MCP CLI not found: $devConsole" }
 if (-not (Test-Path -LiteralPath $cmcpCli -PathType Leaf)) { throw "CMCP CLI not found: $cmcpCli" }

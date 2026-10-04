@@ -27,6 +27,7 @@ final class AtlasPythonEngineService implements AtlasPythonEngineServiceInterfac
     public function runScript(string $scriptName, array $arguments = [], array $environment = []): array
     {
         $scriptPath = $this->pythonEngineDir . '/' . $scriptName;
+        $pythonCommand = PHP_OS_FAMILY === 'Windows' ? ['py', '-3'] : ['python3'];
 
         if (!is_file($scriptPath)) {
             return [
@@ -34,11 +35,11 @@ final class AtlasPythonEngineService implements AtlasPythonEngineServiceInterfac
                 'successful' => false,
                 'output' => '',
                 'errorOutput' => sprintf('Atlas Python engine script was not found: %s', $scriptPath),
-                'command' => ['py', '-3', $scriptPath, ...$arguments],
+                'command' => [...$pythonCommand, $scriptPath, ...$arguments],
             ];
         }
 
-        $command = ['py', '-3', $scriptPath, ...$arguments];
+        $command = [...$pythonCommand, $scriptPath, ...$arguments];
         $process = new Process($command, $this->projectDir, $environment, null, 3600);
         $process->run();
 

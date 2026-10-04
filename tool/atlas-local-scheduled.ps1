@@ -10,8 +10,10 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$selectionPlan = Join-Path $repoRoot 'var\atlas\generated\selection-plan.json'
-$logDir = Join-Path $repoRoot 'var\log\atlas'
+$selectionPlan = Join-Path $repoRoot 'var/atlas/generated/selection-plan.json'
+$logDir = Join-Path $repoRoot 'var/log/atlas'
+$pythonCommand = if ($IsWindows) { (Get-Command py -ErrorAction Stop).Source } else { (Get-Command python3 -ErrorAction Stop).Source }
+$pythonPrefix = if ($IsWindows) { @('-3') } else { @() }
 $logFile = Join-Path $logDir 'scheduled-assessment.log'
 New-Item -ItemType Directory -Force -Path $logDir | Out-Null
 
@@ -29,12 +31,12 @@ try {
         $apiKeyPresent = -not [string]::IsNullOrWhiteSpace($env:OPENAI_API_KEY)
         & git remote get-url origin *> $null
         $originPresent = ($LASTEXITCODE -eq 0)
-        & py -3 -c 'import yaml' *> $null
+        & $pythonCommand @pythonPrefix -c 'import yaml' *> $null
         $pyYamlPresent = ($LASTEXITCODE -eq 0)
-        $consoleMcpRoot = Join-Path (Split-Path -Parent $repoRoot) 'mcp\console-mcp'
-        $consoleMcpDevConsole = Join-Path $consoleMcpRoot 'tool\dev-console.ps1'
+        $consoleMcpRoot = Join-Path (Split-Path -Parent $repoRoot) 'mcp/console-mcp'
+        $consoleMcpDevConsole = Join-Path $consoleMcpRoot 'tool/dev-console.ps1'
         $consoleMcpPresent = Test-Path -LiteralPath $consoleMcpDevConsole -PathType Leaf
-        $scoreCli = Join-Path $repoRoot 'tool\atlas-console-mcp-score-cli.ps1'
+        $scoreCli = Join-Path $repoRoot 'tool/atlas-console-mcp-score-cli.ps1'
         $highLevelRawScoringCliReady = $false
         $consoleMcpSystemStatus = $null
         $consoleMcpSystemReason = $null
