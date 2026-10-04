@@ -11,7 +11,7 @@
 - Verification GREEN: `composer validate --strict --check-lock`; `composer audit` with no advisories; `composer quality` (CS Fixer 0 fixable, PHPStan 0 errors, PHPUnit 25 tests / 113 assertions, default Gating 0 failures); Symfony YAML lint 11/11; Symfony container lint; profiled Gating 29 rules with 0 failures; Canon004/018/030/052/054 all pass.
 - Coverage evidence refreshed: lines 93.7%, methods 78.6%, branches 89.7%; method coverage remains a non-hard Canon040 warning below the 80% target. Canon042 behavioral evidence remains stale; this task changed no user-observable UI/navigation/form flow, and the standalone `test:functional` suite currently reports no tests executed.
 - Fresh Inspecting post-mutation evidence: GREEN. Report `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261004-092446.json`; PHPStan 0 errors, structural analysis 32 files / 70 methods, maximum complexity 8, and 0 findings. Two earlier attempts failed with transient Console MCP HTTP 502 before the successful bounded run; no stale pre-mutation report was used as acceptance.
-- Remaining acceptance tail: inspect final diff/status/upstream state and perform coherent Git commit/push only if the verified worktree can be integrated without disturbing unrelated work.
+- Integration closure: final diff/status/upstream inspection found one coherent Atlassing RC change set and no unrelated dirty paths. Signed commit `344dccfc4462c77acdcd676938a71e347f126e68` (`fix: close Atlassing canon and schema parity debt`) was created from a cleanly classified worktree and pushed successfully to `origin/master`; post-push acceptance is clean/aligned.
 
 ## engine-20261004082944-atlassing-da06b7 — 2026-10-04
 
