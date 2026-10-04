@@ -1,0 +1,241 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "commanding",
+  "verdict": {
+    "component": "commanding",
+    "summary": "Commanding has a clear tool-centric producer identity and substantial operational scripting, but the current repository state is not RC-ready. Console MCP resolved the authoritative workspace on master at ad7c89e38be824f4cf9b54d5ed2c56f8881b26a9. The deterministic capture verdict is RED because the repository is heavily dirty, including removal of the embedded .commanding projection, large staged .sandbox/vendor content, and extensive source changes. The proving application is present under .sandbox, but its Composer contract is Symfony 7.3 while repository canon requires Symfony 8.x, documentation still describes a root proving application that is not present as a root Composer project, and the existing runtime probe on 127.0.0.1:8000 returned HTTP 404 for /health. No repository mutation, staging, commit, push, restart, or destructive operation was performed.",
+    "strengths": [
+      "README.md and MANIFEST.md clearly describe Commanding as the producer/source-of-truth layer with embedded dot copies as consumer projections.",
+      "commanding.sh and run.sh expose a broad, structured command surface covering tests, QA, runtime, data, repository, diagnostics, infrastructure, health, support bundles, and agent preparation.",
+      "The reusable .sandbox proving application has App\\\\ PSR-4 namespace configuration, Symfony Console commands, HTTP probe routes, PHPUnit configuration, Doctrine integration, and explicit sandbox/watchdog policy documents.",
+      "Operational infrastructure is substantial: Docker definitions, health probes, logging conventions, Git helpers, runtime menus, and a persistent visual-gallery service are present.",
+      "Console MCP reports the standalone Inspecting engine as available with its native analyzer for this repository."
+    ],
+    "risks": [
+      "Deterministic repository capture is RED with 506 dirty status entries and no HEAD change; this prevents an RC-clean assessment.",
+      "The staged index contains a large .sandbox/vendor dependency tree, contrary to the repository canon that generated vendor trees should not be part of source analysis or committed artifacts.",
+      "The entire tracked .commanding projection is currently deleted while the producer scripts are simultaneously undergoing extensive unstaged edits, creating high projection/export consistency risk.",
+      ".sandbox/composer.json requires Symfony ^7.3 even though AGENTS.md declares Symfony 8.x+ as the repository canon.",
+      "README.md and MANIFEST.md describe a root Symfony proving application with root composer.json/src/config/tests markers, while the observed repository facts place the application under .sandbox and report no root composer.json.",
+      ".sandbox/policy/entrypoints.yaml has structurally suspicious indentation around the smoke entrypoint and should be validated before relying on it as an executable contract.",
+      "The existing port-8000 runtime was not Console-MCP-managed and answered /health with HTTP 404; under REUSE_EXISTING_FIRST it was deliberately not restarted.",
+      "QA evidence is shallow for the size of the operational surface: the inspected sandbox exposes a basic KernelBootTest and PHPUnit suites, while root PHPStan configuration is absent."
+    ],
+    "next_actions": [
+      "Reconcile the intended producer/projection transition before RC gating: confirm whether deletion of .commanding is deliberate and ensure the export/self-consumption contract remains valid.",
+      "Remove generated .sandbox/vendor content from the intended tracked source set and rely on Composer installation/lock state instead.",
+      "Align the proving application with the Symfony 8.x canon or explicitly revise the repository canon if Symfony 7.3 is intentionally supported.",
+      "Reconcile README.md and MANIFEST.md with the actual .sandbox application-root contract so there is one authoritative proving-app topology.",
+      "Validate and correct .sandbox/policy/entrypoints.yaml, especially the smoke entrypoint structure.",
+      "After the dirty transition is coherently settled, run repository-local deterministic gates including Composer validation, shell/self-checks, PHPUnit, Symfony container/YAML/router checks, and the available Inspecting analysis.",
+      "Probe the intended managed .sandbox runtime again only after identifying the authoritative runtime/port; do not restart the unrelated healthy listener merely to satisfy verification."
+    ],
+    "notes": [
+      "Execution authority was READ_ONLY, so CMCP_CHANGELOG.md was not initialized or updated and no repository files were changed.",
+      "The authoritative specification requires all seven base metric updates and a strict assessment response. fileciteturn4file0L25-L142",
+      "The specification explicitly requires metric_updates for product, architecture, runtime, qa, ops, market, and overall and requires evidence-grounded narratives. fileciteturn4file0L144-L255",
+      "The supplied component registry identifies this assessment as Commanding on default branch master. fileciteturn0file0L5-L10",
+      "Visual evidence is NOT_VERIFIED: no user-observable UI change was made in this read-only assessment, so no new screenshot was required. The central visual-gallery server itself is healthy."
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "README.md",
+      "MANIFEST.md",
+      "AGENTS.md",
+      "commanding.sh",
+      "run.sh",
+      "lib/ui.sh",
+      "sh/health-list-probes.sh",
+      "sh/health-probe-phpunit.sh",
+      "sh/health-probe-console.sh",
+      "sh/health-probe-routes.sh",
+      "sh/harness-category-run.sh",
+      "sh/canary-catalog-run.sh",
+      "docker/compose.yml",
+      "docker/README.md",
+      ".sandbox/composer.json",
+      ".sandbox/README.md",
+      ".sandbox/MANIFEST.md",
+      ".sandbox/phpunit.xml",
+      ".sandbox/phpunit.dist.xml",
+      ".sandbox/policy/sandbox-contract.yaml",
+      ".sandbox/policy/entrypoints.yaml",
+      ".sandbox/policy/watchdog-integration.yaml",
+      ".sandbox/tests/Smoke/KernelBootTest.php",
+      ".sandbox/src/Command/AppSandboxHealthCommand.php",
+      ".sandbox/src/Command/AppSandboxLogEmitCommand.php",
+      ".sandbox/src/Controller/HomeController.php",
+      ".sandbox/src/Controller/ProbeController.php",
+      ".sandbox/src/Service/CacheProbeService.php"
+    ],
+    "suggested_score_overrides": {
+      "product": 7.8,
+      "architecture": 6.6,
+      "runtime": 6.2,
+      "qa": 5.8,
+      "ops": 6.5,
+      "market": 7.0,
+      "overall": 6.6
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Commanding has a well-defined tool-centric producer identity and broad operator command surface, but documentation currently conflicts with the actual proving-application topology.",
+        "risks": [
+          "Root documentation describes a root Symfony proving application while current repository facts expose the proving app under .sandbox.",
+          "The producer-versus-projection transition is unresolved while .commanding is deleted in the worktree."
+        ],
+        "improvements": [
+          "Make the producer/projection and proving-app topology consistent across README.md, MANIFEST.md, policy, and current filesystem state.",
+          "Document the current supported runtime contract without stale root-app markers."
+        ],
+        "evidence": [
+          "README.md",
+          "MANIFEST.md",
+          "commanding.sh",
+          ".sandbox/README.md",
+          ".sandbox/MANIFEST.md"
+        ]
+      },
+      "architecture": {
+        "summary": "The repository has explicit source-of-truth, projection, sandbox, App\\\\ namespace, and watchdog boundaries, but the current dirty migration exposes material consistency and canon drift.",
+        "risks": [
+          "Symfony ^7.3 in .sandbox conflicts with the Symfony 8.x+ canon in AGENTS.md.",
+          "Tracked projection deletion, staged generated dependencies, and documentation/application-root mismatch weaken architectural consistency.",
+          "The sandbox entrypoint policy appears structurally inconsistent around the smoke entry."
+        ],
+        "improvements": [
+          "Converge on one Symfony 8-oriented application contract and one producer/projection model.",
+          "Validate policy YAML and exclude generated dependency trees from the source boundary."
+        ],
+        "evidence": [
+          "AGENTS.md",
+          "README.md",
+          "MANIFEST.md",
+          ".sandbox/composer.json",
+          ".sandbox/policy/sandbox-contract.yaml",
+          ".sandbox/policy/entrypoints.yaml",
+          ".sandbox/policy/watchdog-integration.yaml"
+        ]
+      },
+      "runtime": {
+        "summary": "Commanding provides extensive runtime, health, Docker, routing, cache, logging, and server tooling, but the probed existing port-8000 runtime did not expose the expected sandbox /health route.",
+        "risks": [
+          "The existing listener returned HTTP 404 for /health and was not associated with Console MCP managed state.",
+          "Runtime verification is ambiguous until the authoritative sandbox runtime/port is identified.",
+          "Runtime dependency state is noisy because .sandbox/vendor is staged and simultaneously modified/deleted."
+        ],
+        "improvements": [
+          "Establish the authoritative managed sandbox runtime and re-run health, console, and route probes without unnecessary restart.",
+          "Restore reproducible dependency installation from Composer metadata rather than tracked vendor contents."
+        ],
+        "evidence": [
+          "commanding.sh",
+          "run.sh",
+          "sh/health-probe-console.sh",
+          "sh/health-probe-routes.sh",
+          "sh/health-probe-phpunit.sh",
+          "docker/compose.yml",
+          ".sandbox/src/Controller/ProbeController.php",
+          ".sandbox/src/Command/AppSandboxHealthCommand.php"
+        ]
+      },
+      "qa": {
+        "summary": "There is an explicit PHPUnit and health-probe framework plus an available native Inspecting analyzer, but current direct test depth and clean deterministic evidence are insufficient for RC confidence.",
+        "risks": [
+          "The deterministic capture verdict is RED because the repository is dirty.",
+          "Root PHPStan configuration is absent and Inspecting reports only its native analyzer available for this target.",
+          "The inspected sandbox test evidence is limited to a basic kernel-class smoke test despite declared unit, integration, and e2e suites."
+        ],
+        "improvements": [
+          "After repository state is reconciled, run the configured PHPUnit suites and Symfony validation gates.",
+          "Expand deterministic behavioral coverage for the command dispatch, health probes, policy parsing, and producer/projection contracts.",
+          "Run Inspecting once report persistence is allowed by execution authority."
+        ],
+        "evidence": [
+          ".sandbox/phpunit.xml",
+          ".sandbox/phpunit.dist.xml",
+          ".sandbox/tests/Smoke/KernelBootTest.php",
+          "sh/health-probe-phpunit.sh",
+          "run.sh"
+        ]
+      },
+      "ops": {
+        "summary": "Operational breadth is a core strength, with Docker, health, logging, support, diagnostics, repository, and runtime command surfaces, but the present worktree is too inconsistent for release-candidate operational confidence.",
+        "risks": [
+          "A 506-entry dirty state obscures which operational configuration represents the intended release state.",
+          "Large generated vendor staging materially increases release and review noise.",
+          "The current runtime probe does not confirm the documented sandbox health contract."
+        ],
+        "improvements": [
+          "Reduce the change set to intentional source/configuration artifacts and restore a deterministic clean gate baseline.",
+          "Validate health, runtime, Docker, and support commands against the resolved sandbox target after topology reconciliation."
+        ],
+        "evidence": [
+          "commanding.sh",
+          "run.sh",
+          "docker/compose.yml",
+          "docker/README.md",
+          "sh/health-list-probes.sh",
+          "sh/health-probe-console.sh",
+          "sh/health-probe-routes.sh"
+        ]
+      },
+      "market": {
+        "summary": "Commanding's internal platform purpose is clear as reusable operational tooling for Smartresponsor repositories, but external product/market evidence remains limited and the registry has no GitHub repository configured.",
+        "risks": [
+          "The supplied registry has an empty github_repository field, limiting connected scheduled-assessment and external portfolio evidence.",
+          "Current evidence primarily establishes engineering utility rather than independent market validation."
+        ],
+        "improvements": [
+          "Connect the canonical repository in the component registry when ready for scheduled assessment.",
+          "Keep product-facing documentation focused on concrete reusable operator outcomes and supported consumer contracts."
+        ],
+        "evidence": [
+          "README.md",
+          "MANIFEST.md",
+          "docker/README.md"
+        ]
+      },
+      "overall": {
+        "summary": "Commanding shows meaningful engineering and operational maturity, but the current RC baseline is blocked by a deterministic RED dirty-state verdict, generated dependency staging, Symfony-version canon drift, topology/documentation inconsistency, and an unverified sandbox runtime contract.",
+        "risks": [
+          "The repository cannot currently be treated as an RC-clean baseline.",
+          "Multiple simultaneous structural transitions make release intent difficult to distinguish from accidental state.",
+          "Runtime and QA evidence do not yet compensate for the breadth of the pending repository changes."
+        ],
+        "improvements": [
+          "First reconcile repository boundaries and dependency tracking, then align Symfony/documentation/policy contracts, then execute the full deterministic and applicable runtime verification stack.",
+          "Do not publish or score the current dirty tree as strong/RC-ready until those blockers are resolved."
+        ],
+        "evidence": [
+          "README.md",
+          "MANIFEST.md",
+          "AGENTS.md",
+          "commanding.sh",
+          "run.sh",
+          ".sandbox/composer.json",
+          ".sandbox/policy/entrypoints.yaml",
+          ".sandbox/phpunit.xml"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\commanding.prompt.txt",
+    "taskId": "engine-20261004092808-commanding-f08a05",
+    "chatId": "6ac21c41-8464-83e9-a098-14a8b3c80da9",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ac21c41-8464-83e9-a098-14a8b3c80da9",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}

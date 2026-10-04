@@ -1,0 +1,266 @@
+{
+  "status": "ok",
+  "registry_entry": {
+    "component_id": "discovering",
+    "component_title": "Discovering",
+    "github_repository": "smartresponsor/discovering",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Discovering",
+    "timestamp_utc": "2026-10-04T10:04:47.874397+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "0ff66ca86d6383f285ef11d2e73ecd6b602ae74d"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "D .gating/README.md\n M AGENTS.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "0ff66ca chore: record Discovering Canon052 RC closure\nee428ed fix: align Doctrine migrations bundle with host\n8af7dde fix: close Discovering canon OpenAPI runtime\nf46d683 feat(failure): adopt mandatory Failing runtime\n0d02197 chore: record discovering rc checkpoint"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".console-mcp/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8123.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.env\n.env.example\n.env.test\n.gating/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/MANIFEST.md\nconfig/openapi/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services/\nconfig/services.yaml\nconfig/services_test.yaml\ndocs/\ndocs/antora.yml\ndocs/component/\ndocs/discovery/\ndocs/generated/\ndocs/MANIFEST.md\ndocs/manifests/\ndocs/modules/\nLICENSE\nmigrations/\nmigrations/.gitkeep\nmigrations/Version20260923192125.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.ts\npublic/\npublic/index.php\nREADME.md\nreport/\nreport/.gitkeep\nreport/discovering-installability-proof-2026-04-03.md\nreport/discovering-status-2026-04-03.md\nreport/legacy/\nresources/\nresources/discovery/\nsrc/\nsrc/Builder/\nsrc/Command/\nsrc/Controller/\nsrc/DependencyInjection/\nsrc/DiscoveringBundle.php\nsrc/DTO/\nsrc/Entity/\nsrc/EventSubscriber/\nsrc/Factory/\nsrc/Form/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/MANIFEST.md\nsrc/Normalizer/\nsrc/Policy/\nsrc/Provider/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Resolver/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Subscriber/\nsrc/ValueObject/\ntemplates/\ntemplates/base.html.twig\ntemplates/bundles/\ntemplates/discovery/\ntemplates/index.html.twig\ntemplates/interfacing/\ntemplates/management/\ntemplates/MANIFEST.md\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/Behavioral/\ntests/bootstrap.php\ntests/Contract/\ntests/Functional/\ntests/MANIFEST.md\ntests/Playwright/\ntests/Support/\ntests/Unit/\ntools/\ntools/behavioral_ui_coverage.php\ntools/console_container_evidence.php\ntools/discovering_canon_audit.php\ntools/discovering_canon_audit.php.bak-name-entity-20260611-071541\ntools/docblock_policy_check.php\ntools/doctrine_schema_parity.php\ntools/evidence_artifact_cleanup.php\ntools/evidence_bundle.php\ntools/evidence_index.php"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "489"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"discovering/discovery\",\n  \"description\": \"Discovering process app\",\n  \"type\": \"project\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"require\": {\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"ext-pdo_sqlite\": \"*\",\n    \"php\": \">=8.4\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.0\",\n    \"doctrine/orm\": \"^3.6\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"nelmio/api-doc-bundle\": \"^5.6\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/security-bundle\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/dom-crawler\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"lint:php\": \"php tools/lint_php.php\",\n    \"validate:composer\": \"composer validate --strict\",\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"verify:runtime-preflight\": \"php tools/runtime_preflight.php\",\n    \"verify:console\": \"php bin/console list --raw\",\n    \"verify:schema\": \"php tools/doctrine_schema_parity.php\",\n    \"verify:migrations\": \"@verify:schema\",\n    \"verify:schema:current\": \"php bin/console doctrine:schema:validate --em=infra\",\n    \"verify:migrations:current\": \"php bin/console doctrine:migrations:up-to-date --em=infra\",\n    \"test:unit\": \"phpunit --testsuite Unit\",\n    \"test:object-identity\": \"phpunit tests/Unit/Discovery/DiscoveringObjectIdentityContractTest.php\",\n    \"test:functional\": \"phpunit --testsuite Functional\",\n    \"test:contract\": \"phpunit --testsuite Contract\",\n    \"test:behavioral\": \"phpunit --testsuite Behavioral\",\n    \"test:behavioral-coverage\": \"php tools/behavioral_ui_coverage.php\",\n    \"test:all\": [\n      \"@test:unit\",\n      \"@test:contract\",\n      \"@test:behavioral\",\n      \"@test:functional\"\n    ],\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"ci\": [\n      \"@ci:local\",\n      \"@ci:runtime\",\n      \"@ci:quality\"\n    ],\n    \"analyse\": \"php tools/qa_guard.php analyse\",\n    \"phpstan\": \"phpstan analyse --configuration=phpstan.neon.dist --memory-limit=1G\",\n    \"lint:cs\": \"php tools/qa_guard.php lint:cs\",\n    \"lint:cs:fix\": \"php tools/qa_guard.php lint:cs:fix\",\n    \"php-cs-fixer\": \"php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php\",\n    \"php-cs-fixer:fix\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php\",\n    \"verify:docblocks\": \"php tools/docblock_policy_check.php\",\n    \"verify:security\": \"php tools/security_preflight.php\",\n    \"docs:openapi:dump:public\": \"php tools/qa_guard.php docs:openapi:dump:public\",\n    \"docs:openapi:dump:management\": \"php tools/qa_guard.php docs:openapi:dump:management\",\n    \"verify:runtime-extensions\": \"php tools/runtime_preflight.php --check-runtime-extensions\",\n    \"verify:composer-runtime\": \"php tools/runtime_preflight.php --require-composer\",\n    \"verify:vendor-runtime\": \"php tools/runtime_preflight.php --require-vendor\",\n    \"verify:test-runtime\": \"php tools/runtime_preflight.php --test-runtime\",\n    \"ci:local",
+      "package.json": "{\n  \"name\": \"@discovering/browser-tests\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"test:ui:headed\": \"playwright test --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.53.0\"\n  }\n}\n"
+    }
+  },
+  "verdict": {
+    "component": "discovering",
+    "summary": "Discovering has a substantial Symfony application/discovery surface with explicit product identity, versioned and compatibility API contracts, security controls, observability, PHPUnit taxonomy, Playwright UI coverage, Composer quality gates, and documented RC evidence. Current read-only reconnaissance confirmed strict Composer validity, no known Composer security advisories, synchronized master at 0ff66ca86d6383f285ef11d2e73ecd6b602ae74d, and a previously passing Playwright result. The principal current concern is verification/tooling drift: repository code still uses src/EventSubscriber while the large canonicalization audit expects src/Subscriber/Discovery, so some historical canon/security evidence cannot be treated as freshly authoritative without reconciliation.",
+    "strengths": [
+      "Clear resource-discovery product identity with public UI, management UI, JSON API, ranking, feedback, diagnostics, and operational discovery capabilities.",
+      "Explicit OpenAPI 3.1 contract covers versioned /api/v1/discovery operations plus deprecated compatibility endpoints.",
+      "Concrete endpoint protection includes management/write tokens, payload/content-type checks, rate limiting, correlation IDs, security headers, and request-surface policy.",
+      "Repository exposes Unit, Functional, Contract, Behavioral, and Playwright verification surfaces together with PHPStan and PHP-CS-Fixer quality gates.",
+      "Strict composer validation passed in this assessment and composer audit reported no known vulnerability advisories.",
+      "Local master is synchronized with origin/master at the assessed HEAD."
+    ],
+    "risks": [
+      "Working tree was already dirty before assessment: .gating/README.md is deleted and AGENTS.md is modified; neither was changed during this READ_ONLY run.",
+      "Canonicalization audit expectations have drifted from the implemented namespace/topology: it expects src/Subscriber/Discovery and other older App-root paths while current classes remain under App\\Discovering and src/EventSubscriber.",
+      "Because repository mutation is forbidden, test/runtime scripts that can create caches, databases, coverage, or result artifacts were not freshly executed.",
+      "Historical runtime and browser evidence is strong but does not substitute for a fresh current-HEAD behavioral/runtime pass.",
+      "No exact Git tag exists for the assessed HEAD."
+    ],
+    "next_actions": [
+      "Reconcile tools/discovering_canon_audit.php and tools/security_preflight.php with the actual current canonical Symfony topology before treating those gates as authoritative.",
+      "After write/execution authority permits generated artifacts, run the declared ci:local, ci:runtime, ci:quality, schema, PHPUnit, behavioral coverage, and Playwright gates on the same HEAD.",
+      "Resolve or explicitly preserve the pre-existing AGENTS.md and .gating/README.md working-tree changes before release integration.",
+      "Refresh browser screenshots through the central var/Discovering/<date>/<run-id> visual-artifact contract during the next applicable UI verification."
+    ],
+    "notes": [
+      "Assessment specification identifies component_id discovering, repository smartresponsor/discovering, default branch master, and requires all seven base metric updates. fileciteturn0file0L5-L10",
+      "Current repository fact baseline supplied with the task reported HEAD 0ff66ca86d6383f285ef11d2e73ecd6b602ae74d and pre-existing changes to .gating/README.md and AGENTS.md; Console MCP independently confirmed the same state. fileciteturn0file0L1764-L1796",
+      "Fresh read-only gates: composer validate --strict PASS; composer audit found no known vulnerability advisories; Inspecting capability reports PHPStan and native analyzers available.",
+      "Visual evidence status: NOT_VERIFIED in this READ_ONLY assessment; no new screenshot was produced.",
+      "http://100.101.253.65:9477/Discovering/today"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.5,
+      "architecture": 7.6,
+      "runtime": 8.1,
+      "qa": 8.1,
+      "ops": 8.0,
+      "market": 8.4,
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Discovering has a well-defined resource-discovery product surface spanning human search, management workflows, APIs, relevance controls, feedback, and diagnostics.",
+        "risks": [
+          "Product breadth is evidenced primarily by repository implementation/documentation rather than fresh end-user behavioral verification in this read-only run."
+        ],
+        "improvements": [
+          "Refresh end-to-end evidence for the principal public and management workflows on the current HEAD."
+        ],
+        "evidence": [
+          "README.md",
+          "config/openapi/discovery_openapi.yaml",
+          "templates/discovery/",
+          "templates/management/"
+        ]
+      },
+      "architecture": {
+        "summary": "The repository has substantial Symfony-oriented separation across controllers, DTOs, entities, policies, factories, services, interfaces, repositories, resolvers, and value objects, but canonical audit rules and implemented topology are currently inconsistent.",
+        "risks": [
+          "tools/discovering_canon_audit.php expects several paths/namespaces that no longer match the actual App\\Discovering topology, weakening deterministic architecture-gate confidence."
+        ],
+        "improvements": [
+          "Make the canonical audit describe the actual intended current architecture, then rerun it against the same revision."
+        ],
+        "evidence": [
+          "src/MANIFEST.md",
+          "src/EventSubscriber/DiscoveryEndpointSecuritySubscriber.php",
+          "src/Policy/Http/DiscoveryRequestSurfacePolicy.php",
+          "src/Service/Operations/DiscoveryOperationLogger.php",
+          "tools/discovering_canon_audit.php"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime maturity is materially above the seeded baseline through explicit PHP 8.4/Symfony requirements, runtime preflight modes, console and HTTP entrypoints, Doctrine schema tooling, and historically recorded successful runtime acceptance.",
+        "risks": [
+          "No fresh runtime execution was performed because the assessment is READ_ONLY and declared runtime/test scripts can create repository-local cache, database, or evidence artifacts."
+        ],
+        "improvements": [
+          "On an execution-authorized pass, reuse the existing managed runtime and rerun runtime, console, schema, and behavioral checks without unnecessary restart."
+        ],
+        "evidence": [
+          "composer.json",
+          "tools/runtime_preflight.php",
+          "tools/doctrine_schema_parity.php",
+          "public/index.php",
+          "bin/console",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA posture is strong for a pre-RC component: four PHPUnit suites, Playwright browser tests, PHPStan, PHP-CS-Fixer, behavioral/UI coverage tooling, and prior recorded green acceptance materially exceed the previous seeded assessment.",
+        "risks": [
+          "Current test-results only establishes a prior passing Playwright run; fresh same-HEAD PHPUnit and Playwright execution was intentionally not claimed."
+        ],
+        "improvements": [
+          "Freshly execute Unit, Contract, Behavioral, Functional, static analysis, CS, behavioral coverage, and Playwright gates once artifact-producing verification is allowed."
+        ],
+        "evidence": [
+          "phpunit.xml.dist",
+          "tests/MANIFEST.md",
+          "package.json",
+          "playwright.config.ts",
+          "tools/behavioral_ui_coverage.php",
+          "test-results/.last-run.json",
+          "composer.json"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and security posture is materially implemented through request correlation, operation logging, token guards, mutation hardening, rate limiting, response security headers, OpenAPI documentation, and Composer security auditing.",
+        "risks": [
+          "security_preflight.php validates legacy EventSubscriber paths and therefore requires reconciliation with the repository's intended canon before it can serve as a trustworthy canonical security gate."
+        ],
+        "improvements": [
+          "Align security/canon preflight expectations, then rerun security, observability, OpenAPI, and runtime evidence gates."
+        ],
+        "evidence": [
+          "src/EventSubscriber/DiscoveryEndpointSecuritySubscriber.php",
+          "src/EventSubscriber/DiscoveryRateLimitSubscriber.php",
+          "src/EventSubscriber/DiscoveryRequestCorrelationSubscriber.php",
+          "src/EventSubscriber/DiscoveryResponseSecurityHeadersSubscriber.php",
+          "src/Policy/Http/DiscoveryRequestSurfacePolicy.php",
+          "src/Service/Operations/DiscoveryOperationLogger.php",
+          "tools/security_preflight.php",
+          "config/packages/nelmio_api_doc.php"
+        ]
+      },
+      "market": {
+        "summary": "The component has coherent portfolio-facing positioning as a Symfony resource-discovery layer with explainable ranking, hybrid retrieval, management tooling, feedback learning, API exposure, and a deliberately bounded mission rather than generic search-engine scope.",
+        "risks": [
+          "Repository evidence supports product positioning but does not provide external adoption, usage, or comparative market validation metrics."
+        ],
+        "improvements": [
+          "Add measurable consumer/adoption evidence when available instead of inferring market strength solely from implementation breadth."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/manifests/",
+          "docs/discovery/",
+          "config/openapi/discovery_openapi.yaml"
+        ]
+      },
+      "overall": {
+        "summary": "Discovering is materially closer to RC maturity than the seeded 7.7 snapshot suggests, with broad implementation and verification infrastructure, but a tooling/canon drift and absence of fresh artifact-producing runtime tests in this read-only window prevent a stronger current-HEAD verdict.",
+        "risks": [
+          "Deterministic architecture/security gate drift can create false confidence until expected topology and actual implementation are reconciled.",
+          "Pre-existing dirty working-tree changes must remain isolated from release integration."
+        ],
+        "improvements": [
+          "Reconcile deterministic gate definitions first, then perform one fresh same-HEAD full acceptance pass and visual verification before raising the RC score further."
+        ],
+        "evidence": [
+          "composer.json",
+          "CMCP_CHANGELOG.md",
+          "tools/discovering_canon_audit.php",
+          "tools/security_preflight.php",
+          "phpunit.xml.dist",
+          "playwright.config.ts",
+          "config/openapi/discovery_openapi.yaml"
+        ]
+      }
+    },
+    "confidence": "high",
+    "evidence_paths": [
+      "README.md",
+      "composer.json",
+      "phpunit.xml.dist",
+      "package.json",
+      "playwright.config.ts",
+      "CMCP_CHANGELOG.md",
+      "config/openapi/discovery_openapi.yaml",
+      "config/packages/nelmio_api_doc.php",
+      "config/routes/nelmio_api_doc.php",
+      "src/EventSubscriber/DiscoveryEndpointSecuritySubscriber.php",
+      "src/EventSubscriber/DiscoveryRateLimitSubscriber.php",
+      "src/EventSubscriber/DiscoveryRequestCorrelationSubscriber.php",
+      "src/EventSubscriber/DiscoveryResponseSecurityHeadersSubscriber.php",
+      "src/Policy/Http/DiscoveryRequestSurfacePolicy.php",
+      "src/Service/Operations/DiscoveryOperationLogger.php",
+      "tests/MANIFEST.md",
+      "tools/discovering_canon_audit.php",
+      "tools/security_preflight.php",
+      "tools/behavioral_ui_coverage.php",
+      "tools/doctrine_schema_parity.php",
+      "tools/runtime_preflight.php",
+      "tools/qa_guard.php",
+      "test-results/.last-run.json"
+    ]
+  },
+  "snapshot_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\history\\2026-10-04-assessment-2026-10-04.yaml"
+  },
+  "probe_paths": {
+    "current": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\probes\\current.yaml",
+    "history": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\component\\discovering\\probes\\history\\2026-10-04-assessment-2026-10-04.yaml"
+  },
+  "ai_io": {
+    "request_file": "discovering.request.json",
+    "response_file": "discovering.response.json"
+  }
+}

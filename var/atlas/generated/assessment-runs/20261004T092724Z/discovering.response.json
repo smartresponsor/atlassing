@@ -1,0 +1,210 @@
+{
+  "ok": true,
+  "transport": "native-cmcp-engine-file-attachment",
+  "component": "discovering",
+  "verdict": {
+    "component": "discovering",
+    "summary": "Discovering has a substantial Symfony application/discovery surface with explicit product identity, versioned and compatibility API contracts, security controls, observability, PHPUnit taxonomy, Playwright UI coverage, Composer quality gates, and documented RC evidence. Current read-only reconnaissance confirmed strict Composer validity, no known Composer security advisories, synchronized master at 0ff66ca86d6383f285ef11d2e73ecd6b602ae74d, and a previously passing Playwright result. The principal current concern is verification/tooling drift: repository code still uses src/EventSubscriber while the large canonicalization audit expects src/Subscriber/Discovery, so some historical canon/security evidence cannot be treated as freshly authoritative without reconciliation.",
+    "strengths": [
+      "Clear resource-discovery product identity with public UI, management UI, JSON API, ranking, feedback, diagnostics, and operational discovery capabilities.",
+      "Explicit OpenAPI 3.1 contract covers versioned /api/v1/discovery operations plus deprecated compatibility endpoints.",
+      "Concrete endpoint protection includes management/write tokens, payload/content-type checks, rate limiting, correlation IDs, security headers, and request-surface policy.",
+      "Repository exposes Unit, Functional, Contract, Behavioral, and Playwright verification surfaces together with PHPStan and PHP-CS-Fixer quality gates.",
+      "Strict composer validation passed in this assessment and composer audit reported no known vulnerability advisories.",
+      "Local master is synchronized with origin/master at the assessed HEAD."
+    ],
+    "risks": [
+      "Working tree was already dirty before assessment: .gating/README.md is deleted and AGENTS.md is modified; neither was changed during this READ_ONLY run.",
+      "Canonicalization audit expectations have drifted from the implemented namespace/topology: it expects src/Subscriber/Discovery and other older App-root paths while current classes remain under App\\Discovering and src/EventSubscriber.",
+      "Because repository mutation is forbidden, test/runtime scripts that can create caches, databases, coverage, or result artifacts were not freshly executed.",
+      "Historical runtime and browser evidence is strong but does not substitute for a fresh current-HEAD behavioral/runtime pass.",
+      "No exact Git tag exists for the assessed HEAD."
+    ],
+    "next_actions": [
+      "Reconcile tools/discovering_canon_audit.php and tools/security_preflight.php with the actual current canonical Symfony topology before treating those gates as authoritative.",
+      "After write/execution authority permits generated artifacts, run the declared ci:local, ci:runtime, ci:quality, schema, PHPUnit, behavioral coverage, and Playwright gates on the same HEAD.",
+      "Resolve or explicitly preserve the pre-existing AGENTS.md and .gating/README.md working-tree changes before release integration.",
+      "Refresh browser screenshots through the central var/Discovering/<date>/<run-id> visual-artifact contract during the next applicable UI verification."
+    ],
+    "notes": [
+      "Assessment specification identifies component_id discovering, repository smartresponsor/discovering, default branch master, and requires all seven base metric updates. fileciteturn0file0L5-L10",
+      "Current repository fact baseline supplied with the task reported HEAD 0ff66ca86d6383f285ef11d2e73ecd6b602ae74d and pre-existing changes to .gating/README.md and AGENTS.md; Console MCP independently confirmed the same state. fileciteturn0file0L1764-L1796",
+      "Fresh read-only gates: composer validate --strict PASS; composer audit found no known vulnerability advisories; Inspecting capability reports PHPStan and native analyzers available.",
+      "Visual evidence status: NOT_VERIFIED in this READ_ONLY assessment; no new screenshot was produced.",
+      "http://100.101.253.65:9477/Discovering/today"
+    ],
+    "confidence": "high",
+    "evidence_paths": [
+      "README.md",
+      "composer.json",
+      "phpunit.xml.dist",
+      "package.json",
+      "playwright.config.ts",
+      "CMCP_CHANGELOG.md",
+      "config/openapi/discovery_openapi.yaml",
+      "config/packages/nelmio_api_doc.php",
+      "config/routes/nelmio_api_doc.php",
+      "src/EventSubscriber/DiscoveryEndpointSecuritySubscriber.php",
+      "src/EventSubscriber/DiscoveryRateLimitSubscriber.php",
+      "src/EventSubscriber/DiscoveryRequestCorrelationSubscriber.php",
+      "src/EventSubscriber/DiscoveryResponseSecurityHeadersSubscriber.php",
+      "src/Policy/Http/DiscoveryRequestSurfacePolicy.php",
+      "src/Service/Operations/DiscoveryOperationLogger.php",
+      "tests/MANIFEST.md",
+      "tools/discovering_canon_audit.php",
+      "tools/security_preflight.php",
+      "tools/behavioral_ui_coverage.php",
+      "tools/doctrine_schema_parity.php",
+      "tools/runtime_preflight.php",
+      "tools/qa_guard.php",
+      "test-results/.last-run.json"
+    ],
+    "suggested_score_overrides": {
+      "product": 8.5,
+      "architecture": 7.6,
+      "runtime": 8.1,
+      "qa": 8.1,
+      "ops": 8.0,
+      "market": 8.4,
+      "overall": 8.0
+    },
+    "metric_updates": {
+      "product": {
+        "summary": "Discovering has a well-defined resource-discovery product surface spanning human search, management workflows, APIs, relevance controls, feedback, and diagnostics.",
+        "risks": [
+          "Product breadth is evidenced primarily by repository implementation/documentation rather than fresh end-user behavioral verification in this read-only run."
+        ],
+        "improvements": [
+          "Refresh end-to-end evidence for the principal public and management workflows on the current HEAD."
+        ],
+        "evidence": [
+          "README.md",
+          "config/openapi/discovery_openapi.yaml",
+          "templates/discovery/",
+          "templates/management/"
+        ]
+      },
+      "architecture": {
+        "summary": "The repository has substantial Symfony-oriented separation across controllers, DTOs, entities, policies, factories, services, interfaces, repositories, resolvers, and value objects, but canonical audit rules and implemented topology are currently inconsistent.",
+        "risks": [
+          "tools/discovering_canon_audit.php expects several paths/namespaces that no longer match the actual App\\Discovering topology, weakening deterministic architecture-gate confidence."
+        ],
+        "improvements": [
+          "Make the canonical audit describe the actual intended current architecture, then rerun it against the same revision."
+        ],
+        "evidence": [
+          "src/MANIFEST.md",
+          "src/EventSubscriber/DiscoveryEndpointSecuritySubscriber.php",
+          "src/Policy/Http/DiscoveryRequestSurfacePolicy.php",
+          "src/Service/Operations/DiscoveryOperationLogger.php",
+          "tools/discovering_canon_audit.php"
+        ]
+      },
+      "runtime": {
+        "summary": "Runtime maturity is materially above the seeded baseline through explicit PHP 8.4/Symfony requirements, runtime preflight modes, console and HTTP entrypoints, Doctrine schema tooling, and historically recorded successful runtime acceptance.",
+        "risks": [
+          "No fresh runtime execution was performed because the assessment is READ_ONLY and declared runtime/test scripts can create repository-local cache, database, or evidence artifacts."
+        ],
+        "improvements": [
+          "On an execution-authorized pass, reuse the existing managed runtime and rerun runtime, console, schema, and behavioral checks without unnecessary restart."
+        ],
+        "evidence": [
+          "composer.json",
+          "tools/runtime_preflight.php",
+          "tools/doctrine_schema_parity.php",
+          "public/index.php",
+          "bin/console",
+          "CMCP_CHANGELOG.md"
+        ]
+      },
+      "qa": {
+        "summary": "QA posture is strong for a pre-RC component: four PHPUnit suites, Playwright browser tests, PHPStan, PHP-CS-Fixer, behavioral/UI coverage tooling, and prior recorded green acceptance materially exceed the previous seeded assessment.",
+        "risks": [
+          "Current test-results only establishes a prior passing Playwright run; fresh same-HEAD PHPUnit and Playwright execution was intentionally not claimed."
+        ],
+        "improvements": [
+          "Freshly execute Unit, Contract, Behavioral, Functional, static analysis, CS, behavioral coverage, and Playwright gates once artifact-producing verification is allowed."
+        ],
+        "evidence": [
+          "phpunit.xml.dist",
+          "tests/MANIFEST.md",
+          "package.json",
+          "playwright.config.ts",
+          "tools/behavioral_ui_coverage.php",
+          "test-results/.last-run.json",
+          "composer.json"
+        ]
+      },
+      "ops": {
+        "summary": "Operational and security posture is materially implemented through request correlation, operation logging, token guards, mutation hardening, rate limiting, response security headers, OpenAPI documentation, and Composer security auditing.",
+        "risks": [
+          "security_preflight.php validates legacy EventSubscriber paths and therefore requires reconciliation with the repository's intended canon before it can serve as a trustworthy canonical security gate."
+        ],
+        "improvements": [
+          "Align security/canon preflight expectations, then rerun security, observability, OpenAPI, and runtime evidence gates."
+        ],
+        "evidence": [
+          "src/EventSubscriber/DiscoveryEndpointSecuritySubscriber.php",
+          "src/EventSubscriber/DiscoveryRateLimitSubscriber.php",
+          "src/EventSubscriber/DiscoveryRequestCorrelationSubscriber.php",
+          "src/EventSubscriber/DiscoveryResponseSecurityHeadersSubscriber.php",
+          "src/Policy/Http/DiscoveryRequestSurfacePolicy.php",
+          "src/Service/Operations/DiscoveryOperationLogger.php",
+          "tools/security_preflight.php",
+          "config/packages/nelmio_api_doc.php"
+        ]
+      },
+      "market": {
+        "summary": "The component has coherent portfolio-facing positioning as a Symfony resource-discovery layer with explainable ranking, hybrid retrieval, management tooling, feedback learning, API exposure, and a deliberately bounded mission rather than generic search-engine scope.",
+        "risks": [
+          "Repository evidence supports product positioning but does not provide external adoption, usage, or comparative market validation metrics."
+        ],
+        "improvements": [
+          "Add measurable consumer/adoption evidence when available instead of inferring market strength solely from implementation breadth."
+        ],
+        "evidence": [
+          "README.md",
+          "docs/manifests/",
+          "docs/discovery/",
+          "config/openapi/discovery_openapi.yaml"
+        ]
+      },
+      "overall": {
+        "summary": "Discovering is materially closer to RC maturity than the seeded 7.7 snapshot suggests, with broad implementation and verification infrastructure, but a tooling/canon drift and absence of fresh artifact-producing runtime tests in this read-only window prevent a stronger current-HEAD verdict.",
+        "risks": [
+          "Deterministic architecture/security gate drift can create false confidence until expected topology and actual implementation are reconciled.",
+          "Pre-existing dirty working-tree changes must remain isolated from release integration."
+        ],
+        "improvements": [
+          "Reconcile deterministic gate definitions first, then perform one fresh same-HEAD full acceptance pass and visual verification before raising the RC score further."
+        ],
+        "evidence": [
+          "composer.json",
+          "CMCP_CHANGELOG.md",
+          "tools/discovering_canon_audit.php",
+          "tools/security_preflight.php",
+          "phpunit.xml.dist",
+          "playwright.config.ts",
+          "config/openapi/discovery_openapi.yaml"
+        ]
+      }
+    }
+  },
+  "lifecycle": {
+    "runner": "bin/cmcp.ps1",
+    "promptTransport": "FILE_ATTACHMENT",
+    "promptFile": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\chatgpt-cli\\discovering.prompt.txt",
+    "taskId": "engine-20261004100452-discovering-788637",
+    "chatId": "6ac224db-507c-83ea-b313-c98ea259940f",
+    "targetId": "",
+    "cmcpStatus": "ENGINE_CLI_GO_CYCLE_BLOCKED",
+    "blockedStage": "answer_capture",
+    "blockedReason": "max_steps",
+    "cleanup": {
+      "ok": false,
+      "status": "TECHNICAL_CHAT_CLEANUP_EXCEPTION",
+      "chatId": "6ac224db-507c-83ea-b313-c98ea259940f",
+      "error": "The property 'target_close' cannot be found on this object. Verify that the property exists."
+    }
+  }
+}
