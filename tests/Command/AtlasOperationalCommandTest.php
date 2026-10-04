@@ -92,6 +92,62 @@ final class AtlasOperationalCommandTest extends TestCase
         self::assertStringContainsString('component: invalid', $display);
     }
 
+    public function testStatusReportsRequestedComponentWithoutSnapshot(): void
+    {
+        $root = self::tempDirectory('missing-component-snapshot');
+        mkdir($root . '/component', 0777, true);
+
+        $tester = new CommandTester(new AtlasStatusCommand());
+        $exit = $tester->execute([
+            '--atlas-root' => $root,
+            '--component' => 'atlassing',
+        ]);
+
+        $display = $tester->getDisplay();
+        self::assertSame(Command::SUCCESS, $exit);
+        self::assertStringContainsString('component_id_valid: yes', $display);
+        self::assertStringContainsString('current_snapshot: no', $display);
+        self::assertStringContainsString('probe_snapshot: no', $display);
+    }
+
+    public function testStatusRejectsPathLikeComponentIdentifier(): void
+    {
+        $root = self::tempDirectory('invalid-component-id');
+        mkdir($root . '/component/escape', 0777, true);
+        file_put_contents($root . '/component/escape/current.yaml', "title: Escaped\nstatus: ready\n");
+
+        $tester = new CommandTester(new AtlasStatusCommand());
+        $exit = $tester->execute([
+            '--atlas-root' => $root,
+            '--component' => '../escape',
+        ]);
+
+        $display = $tester->getDisplay();
+        self::assertSame(Command::SUCCESS, $exit);
+        self::assertStringContainsString('component: ../escape', $display);
+        self::assertStringContainsString('component_id_valid: no', $display);
+        self::assertStringNotContainsString('title: Escaped', $display);
+    }
+
+    public function testStatusReportsMalformedComponentSnapshotWithoutCrashing(): void
+    {
+        $root = self::tempDirectory('malformed-component');
+        mkdir($root . '/component/atlassing', 0777, true);
+        file_put_contents($root . '/component/atlassing/current.yaml', "title: [unterminated\n");
+
+        $tester = new CommandTester(new AtlasStatusCommand());
+        $exit = $tester->execute([
+            '--atlas-root' => $root,
+            '--component' => 'atlassing',
+        ]);
+
+        $display = $tester->getDisplay();
+        self::assertSame(Command::SUCCESS, $exit);
+        self::assertStringContainsString('component_id_valid: yes', $display);
+        self::assertStringContainsString('current_snapshot: yes', $display);
+        self::assertStringContainsString('current_snapshot_valid: no', $display);
+    }
+
     public function testImportCommandValidatesSourceDirectory(): void
     {
         $missing = new CommandTester(new AtlasImportDocumentatingExportCommand());

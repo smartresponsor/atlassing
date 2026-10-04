@@ -9,6 +9,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 #[AsCommand(name: 'atlas:status')]
@@ -138,11 +139,19 @@ final class AtlasStatusCommand extends Command
 
     private function writeSingleComponentStatus(OutputInterface $output, string $componentRoot, string $component): void
     {
+        $output->writeln('');
+        $output->writeln(sprintf('component: %s', $component));
+
+        if (preg_match('/\\A[a-z0-9]+(?:[a-z0-9_-]*[a-z0-9])?\\z/', $component) !== 1) {
+            $output->writeln('component_id_valid: no');
+            return;
+        }
+
+        $output->writeln('component_id_valid: yes');
+
         $currentPath = $componentRoot . '/' . $component . '/current.yaml';
         $probePath = $componentRoot . '/' . $component . '/probes/current.yaml';
 
-        $output->writeln('');
-        $output->writeln(sprintf('component: %s', $component));
         $output->writeln(sprintf('current_snapshot: %s', is_file($currentPath) ? 'yes' : 'no'));
         $output->writeln(sprintf('probe_snapshot: %s', is_file($probePath) ? 'yes' : 'no'));
 
@@ -150,11 +159,19 @@ final class AtlasStatusCommand extends Command
             return;
         }
 
-        $payload = Yaml::parseFile($currentPath);
-        if (!is_array($payload)) {
+        try {
+            $payload = Yaml::parseFile($currentPath);
+        } catch (ParseException) {
+            $output->writeln('current_snapshot_valid: no');
             return;
         }
 
+        if (!is_array($payload)) {
+            $output->writeln('current_snapshot_valid: no');
+            return;
+        }
+
+        $output->writeln('current_snapshot_valid: yes');
         $output->writeln(sprintf('title: %s', $this->scalarText($payload['title'] ?? null, 'unknown')));
         $output->writeln(sprintf('status: %s', $this->scalarText($payload['status'] ?? null, 'unknown')));
     }
