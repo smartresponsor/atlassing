@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Atlassing\Service\Atlas;
+namespace App\Atlassing\Service;
 
-use App\Atlassing\ServiceInterface\Atlas\AtlasSurfacePayloadServiceInterface;
+use App\Atlassing\ServiceInterface\AtlasSurfacePayloadServiceInterface;
 use App\Atlassing\ServiceInterface\Snapshot\AtlasSnapshotServiceInterface;
 
 final class AtlasSurfacePayloadService implements AtlasSurfacePayloadServiceInterface

@@ -6,7 +6,7 @@ namespace App\Atlassing\Tests\Service;
 
 use App\Atlassing\DependencyInjection\AtlassingExtension;
 use App\Atlassing\Service\Assessment\AtlasPythonEngineService;
-use App\Atlassing\Service\Atlas\AtlasDocumentationCoverageService;
+use App\Atlassing\Service\AtlasDocumentationCoverageService;
 use App\Atlassing\Service\Registry\AtlasRepositoryRegistryService;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

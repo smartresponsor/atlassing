@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Atlassing\ServiceInterface\Atlas;
+namespace App\Atlassing\ServiceInterface;
 
 interface AtlasSurfacePayloadServiceInterface
 {

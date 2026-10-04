@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Atlassing\Service\Atlas;
+namespace App\Atlassing\Service;
 
-final class AtlassingAtlasService
+final class AtlassingAtlasComponentService
 {
     public function __construct(
         private readonly AtlasSurfacePayloadService $surfacePayloadService,
@@ -12,14 +12,14 @@ final class AtlassingAtlasService
     }
 
     /**
-     * Entry service resolved from `/atlassing/atlas` by CRUDing.
+     * Entry service resolved from `/atlassing/atlas/component` by CRUDing.
      *
      * @return array<string, mixed>
      */
     public function __invoke(): array
     {
-        return $this->surfacePayloadService->buildPayload('atlas/index', [
-            'mode' => 'atlas-dashboard',
+        return $this->surfacePayloadService->buildPayload('atlas/component', [
+            'mode' => 'component-list',
         ]);
     }
 }

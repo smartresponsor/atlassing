@@ -14,13 +14,13 @@ class AtlasDocumentationCoverageEntity
     #[ORM\Column(type: 'string', length: 160)]
     private string $id;
 
-    #[ORM\Column(type: 'string', length: 120)]
+    #[ORM\Column(name: 'component_slug', type: 'string', length: 120)]
     private string $componentSlug;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(name: 'article_count', type: 'integer')]
     private int $articleCount;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(name: 'missing_required_article_count', type: 'integer')]
     private int $missingRequiredArticleCount;
 
     public function __construct(string $id, string $componentSlug, int $articleCount, int $missingRequiredArticleCount)

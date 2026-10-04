@@ -50,6 +50,8 @@
   "require": {
     "collectioning/collection": "dev-master",
     "cruding/crud": "dev-master",
+    "doctrine/doctrine-bundle": "^3.2",
+    "doctrine/doctrine-migrations-bundle": "^3.4",
     "failing/failure": "dev-master",
     "doctrine/orm": "^3.4",
     "easycorp/easyadmin-bundle": "^5.0",

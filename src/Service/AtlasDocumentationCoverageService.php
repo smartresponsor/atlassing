@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Atlassing\Service\Atlas;
+namespace App\Atlassing\Service;
 
-use App\Atlassing\ServiceInterface\Atlas\AtlasDocumentationCoverageServiceInterface;
+use App\Atlassing\ServiceInterface\AtlasDocumentationCoverageServiceInterface;
 
 final class AtlasDocumentationCoverageService implements AtlasDocumentationCoverageServiceInterface
 {

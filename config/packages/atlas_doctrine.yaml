@@ -1,0 +1,20 @@
+doctrine:
+  dbal:
+    driver: pdo_pgsql
+  orm:
+    auto_mapping: false
+    mappings:
+      Atlassing:
+        is_bundle: false
+        type: attribute
+        dir: '%kernel.project_dir%/src/Entity'
+        prefix: 'App\Atlassing\Entity'
+        alias: Atlassing
+
+doctrine_migrations:
+  migrations_paths:
+    DoctrineMigrations: '%kernel.project_dir%/migrations'
+  storage:
+    table_storage:
+      table_name: atlas_doctrine_migration_versions
+

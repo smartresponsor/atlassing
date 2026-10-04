@@ -8,9 +8,22 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-$environment = $_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? 'dev';
+$environment = (string) ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? 'dev');
+$arguments = array_values($_SERVER['argv'] ?? []);
+foreach ($arguments as $index => $argument) {
+    if (str_starts_with($argument, '--env=')) {
+        $environment = substr($argument, strlen('--env='));
+        break;
+    }
+
+    if (in_array($argument, ['--env', '-e'], true) && isset($arguments[$index + 1])) {
+        $environment = $arguments[$index + 1];
+        break;
+    }
+}
+
 $debug = ($_SERVER['APP_DEBUG'] ?? $_ENV['APP_DEBUG'] ?? '1') !== '0';
 
-$kernel = new Kernel((string) $environment, $debug);
+$kernel = new Kernel($environment, $debug);
 $application = new Application($kernel);
 $application->run();

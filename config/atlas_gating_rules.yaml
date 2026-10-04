@@ -4,6 +4,8 @@ rule_set:
   rules:
     - canon.001.technical_role_first
     - canon.002.interface_tree_mirror
+    - canon.004.subject_folder_placement
+    - canon.018.composer_identity_mapping
     - canon.019.no_alternative_layer_taxonomy
     - canon.021.cruding_owns_generic_crud
     - canon.022.standalone_application_dependency_baseline
@@ -12,6 +14,7 @@ rule_set:
     - canon.025.component_dual_runtime_mode
     - canon.026.platform_version_baseline
     - canon.029.mandatory_php_quality_tooling
+    - canon.030.doctrine_schema_parity
     - canon.032.bundle_registration
     - canon.033.composer_manifest_identity_parity
     - canon.034.gitignore_baseline
@@ -26,3 +29,5 @@ rule_set:
     - canon.043.development_composer_dependency_version
     - canon.044.objecting_system_field_naming
     - canon.045.development_composer_repository_closure
+    - canon.052.gating_integration
+    - canon.054.doctrine_physical_identifier_naming

@@ -14,7 +14,7 @@ class AtlasAssessmentEntity
     #[ORM\Column(type: 'string', length: 120)]
     private string $id;
 
-    #[ORM\Column(type: 'string', length: 120)]
+    #[ORM\Column(name: 'component_slug', type: 'string', length: 120)]
     private string $componentSlug;
 
     #[ORM\Column(type: 'integer')]

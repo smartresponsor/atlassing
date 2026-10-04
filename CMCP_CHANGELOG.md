@@ -1,5 +1,31 @@
 # CMCP Execution Journal
 
+## engine-20261004080404-atlassing-2d1f96 — 2026-10-04
+
+- Baseline: `master` at `33b37be9805e12900bfdbcd126ffe3611762db81`, initially aligned with `origin/master`; pre-existing unfinished Canon030 work from another Atlassing engine task was preserved and verified rather than reset or overwritten.
+- Boundary/market baseline: Atlassing owns deterministic assessment/readiness/maturity/documentation-coverage state and neutral Atlas payloads. Mature scorecard/catalog systems expect reproducible evidence, actionable diagnostics, stable contracts, and observable failure. Richer rubric authoring, trends, waivers, remediation UX, and expanded API/DX remain non-blocking growth work.
+- Required dependency/canon contour consulted: Objecting, Cruding, Viewing, Interfacing, Gating, Canonization, plus the supplied CanonScanning RED report. Canonization rules read directly: Canon004, Canon018, Canon030, Canon052; Canon054 became applicable after Doctrine persistence wiring and was added to acceptance.
+- Historical RED reconciliation: Canon018, Canon052, and Canon054 are GREEN. Canon004 was reproduced as 10 premature `Atlas/` paths, then closed by non-destructive file moves from `Enum/Atlas`, `Service/Atlas`, and `ServiceInterface/Atlas` to their canonical technical-role roots with namespaces, DI aliases, and test imports updated. No legacy `Service\\Atlas\\` or `ServiceInterface\\Atlas\\` namespace references remain.
+- Canon030 remediation: added DoctrineBundle/DoctrineMigrationsBundle dev/prod wiring, standalone bundle registration, common Doctrine metadata/migration configuration, isolated test SQLite configuration, and an initial portable migration for the three Atlassing entities. `bin/console` now resolves `--env`/`-e` before Kernel construction, and Kernel loads existing environment-specific package config. Entity physical column names are explicit lower_snake_case.
+- Schema parity acceptance: migration chain applies successfully; Doctrine mapping is valid; schema is in sync; migration currentness reports up-to-date. The test database is isolated under ignored `var/atlas/` and no developer PostgreSQL database was mutated.
+- Verification GREEN: `composer validate --strict --check-lock`; `composer audit` with no advisories; `composer quality` (CS Fixer 0 fixable, PHPStan 0 errors, PHPUnit 25 tests / 113 assertions, default Gating 0 failures); Symfony YAML lint 11/11; Symfony container lint; profiled Gating 29 rules with 0 failures; Canon004/018/030/052/054 all pass.
+- Coverage evidence refreshed: lines 93.7%, methods 78.6%, branches 89.7%; method coverage remains a non-hard Canon040 warning below the 80% target. Canon042 behavioral evidence remains stale; this task changed no user-observable UI/navigation/form flow, and the standalone `test:functional` suite currently reports no tests executed.
+- Fresh Inspecting post-mutation evidence: GREEN. Report `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261004-092446.json`; PHPStan 0 errors, structural analysis 32 files / 70 methods, maximum complexity 8, and 0 findings. Two earlier attempts failed with transient Console MCP HTTP 502 before the successful bounded run; no stale pre-mutation report was used as acceptance.
+- Remaining acceptance tail: inspect final diff/status/upstream state and perform coherent Git commit/push only if the verified worktree can be integrated without disturbing unrelated work.
+
+## engine-20261004082944-atlassing-da06b7 — 2026-10-04
+
+- Baseline: clean `master`; Atlassing owns Atlas assessment/readiness/maturity/documentation-coverage state and neutral payloads, while generic CRUD/rendering/shell/static publication stay outside this repository.
+- Mandatory contour read: Objecting, Cruding, Viewing, Interfacing, Gating, and Canonization; historical CanonScanning RED evidence was consumed before fresh verification.
+- Market/enterprise baseline: deterministic scorecards/catalog state, actionable diagnostics, reproducible evidence, observable failure, and stable integration contracts. Growth remains richer rubrics, trends, waivers, remediation UX, and expanded Atlas API/DX.
+- Canon004: early `Atlas/` service/interface folders remain structural debt; path relocation/removal is not attempted because this run forbids destructive operations.
+- Canon018: current `atlassing/atlas` identity correctly maps to `App\\Atlassing\\ => src/`.
+- Canon030: current ORM ownership lacks migrations tooling plus an executable schema-parity contract; selected as the additive RC-critical remediation.
+- Canon052: Gating remains package/symlink driven and consumer `.gating/` remains artifact-only.
+- Material work: declare DoctrineBundle + DoctrineMigrationsBundle in dev/prod, register both bundles, expose `schema:parity`, and add Canon030 to the profiled Atlassing gate.
+- Risk: schema-parity execution may require a configured disposable database; no developer database will be mutated to manufacture evidence.
+- Gates: Composer validate/audit, quality/tests, profiled Gating, applicable Symfony checks, fresh Inspecting after mutation, then final Git diff/status/upstream inspection.
+
 ## engine-20260926091209-atlassing-fd143d — 2026-09-29
 
 ### Reconnaissance and RC baseline

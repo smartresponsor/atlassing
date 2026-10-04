@@ -37,6 +37,12 @@ final class Kernel extends BaseKernel
     {
         $container->addResource(new FileResource($this->getProjectDir() . '/config/bundles.php'));
         $loader->load($this->getProjectDir() . '/config/packages/*.yaml', 'glob');
+
+        $environmentPackagesDir = $this->getProjectDir() . '/config/packages/' . $this->environment;
+        if (is_dir($environmentPackagesDir)) {
+            $loader->load($environmentPackagesDir . '/*.yaml', 'glob');
+        }
+
         $loader->load($this->getProjectDir() . '/config/services.yaml');
     }
 
