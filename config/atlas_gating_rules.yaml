@@ -31,3 +31,4 @@ rule_set:
     - canon.045.development_composer_repository_closure
     - canon.052.gating_integration
     - canon.054.doctrine_physical_identifier_naming
+    - canon.067.repository_root_entity

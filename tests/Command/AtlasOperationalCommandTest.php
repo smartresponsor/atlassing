@@ -23,6 +23,21 @@ final class AtlasOperationalCommandTest extends TestCase
         self::assertStringContainsString('atlas_root_exists: no', $tester->getDisplay());
     }
 
+    public function testStatusReportsAbsentGeneratedAndComponentState(): void
+    {
+        $root = self::tempDirectory('empty-status');
+        $tester = new CommandTester(new AtlasStatusCommand());
+
+        $exit = $tester->execute(['--atlas-root' => $root]);
+
+        $display = $tester->getDisplay();
+        self::assertSame(Command::SUCCESS, $exit);
+        self::assertStringContainsString('latest_summary', $display);
+        self::assertStringContainsString('exists: no', $display);
+        self::assertStringContainsString('latest_run', $display);
+        self::assertStringContainsString('components', $display);
+    }
+
     public function testStatusReportsSummaryRunAndComponentSnapshots(): void
     {
         $root = self::tempDirectory('status');

@@ -6,10 +6,18 @@ namespace App\Atlassing\Tests\Entity\Atlas;
 
 use App\Atlassing\Entity\Atlas\AtlasAssessmentEntity;
 use App\Atlassing\Entity\Atlas\AtlasDocumentationCoverageEntity;
+use App\Atlassing\Entity\Atlas\AtlasEntity;
 use PHPUnit\Framework\TestCase;
 
 final class AtlasEntityTest extends TestCase
 {
+    public function testRootEntityExposesCanonicalIdentity(): void
+    {
+        $atlas = new AtlasEntity('atlas');
+
+        self::assertSame('atlas', $atlas->getId());
+    }
+
     public function testAssessmentExposesPersistedValues(): void
     {
         $assessment = new AtlasAssessmentEntity('assessment-1', 'atlassing', 92, 'ready');

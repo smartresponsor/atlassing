@@ -4,8 +4,8 @@
   "component": "atlassing",
   "businessPrefix": "Atlas",
   "databasePrefix": "atlas_",
-  "autoloadRoot": "App\\",
-  "purpose": "Quality Atlas standalone and bundle component skeleton",
+  "autoloadRoot": "App\\Atlassing\\",
+  "purpose": "Quality Atlas standalone and bundle component",
   "modes": [
     "standalone",
     "symfony-bundle",
