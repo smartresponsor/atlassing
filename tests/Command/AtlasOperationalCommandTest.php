@@ -74,6 +74,34 @@ final class AtlasOperationalCommandTest extends TestCase
         self::assertStringContainsString('title: Atlassing', $display);
     }
 
+    public function testStatusReportsMalformedSelectedComponentsWithoutWarning(): void
+    {
+        $root = self::tempDirectory('malformed-selected-components');
+        mkdir($root . '/generated', 0777, true);
+        file_put_contents(
+            $root . '/generated/latest-assessment-summary.json',
+            json_encode([
+                'status' => 'ready',
+                'selected_components' => ['atlassing', ['nested']],
+            ], JSON_THROW_ON_ERROR),
+        );
+
+        $tester = new CommandTester(new AtlasStatusCommand());
+
+        set_error_handler(static function (int $severity, string $message): never {
+            throw new \ErrorException($message, 0, $severity);
+        });
+
+        try {
+            $exit = $tester->execute(['--atlas-root' => $root]);
+        } finally {
+            restore_error_handler();
+        }
+
+        self::assertSame(Command::SUCCESS, $exit);
+        self::assertStringContainsString('selected_components: invalid', $tester->getDisplay());
+    }
+
     public function testStatusHandlesInvalidAndSparseState(): void
     {
         $root = self::tempDirectory('sparse');

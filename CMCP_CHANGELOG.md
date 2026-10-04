@@ -1,5 +1,18 @@
 # CMCP Execution Journal
 
+## engine-20261004093407-atlassing-2a9c4b — 2026-10-04
+
+- Baseline: clean `master` at `d729ec7f3aa3753b013023f5d7e64f452f3ab8f4`, aligned with `origin/master`. The supplied 2026-09-29 CanonScanning RED is historical on the current tree; current profiled `composer gating:check` is GREEN 30/30, including Canon004/018/030/052/054/067.
+- Mandatory contour consumed: Atlassing AGENTS/README/composer/current journal and RED report; Objecting, Cruding, Viewing, Interfacing, Gating contracts; Canonization AGENTS/README/composer/manifest/guard matrix plus normative Canon004, Canon018, Canon030, Canon052, Canon054, and Canon067 text. Canonization remains read-only.
+- Market/enterprise benchmark retained from the current Atlassing RC line: mature engineering-intelligence/catalog systems emphasize deterministic scorecards, component identity, readiness/health signals, actionable diagnostics, and reproducible evidence. Richer rubric authoring, trends, waivers, campaigns, and broader UI/API remain separate non-blocking growth work.
+- RC-critical work selected: harden `atlas:status` against malformed `selected_components` payloads. The diagnostic command previously cast every selected-component value with `strval`; nested malformed values could emit PHP array-to-string warnings while inspecting damaged Atlas state.
+- Material implementation: status output now validates the selected-component list as scalar-only and reports `selected_components: invalid` for malformed state; regression coverage converts PHP warnings to exceptions to prove the diagnostic remains warning-free.
+- Material risks: preserve Atlas state format, avoid broad state normalization, do not alter sibling repositories, and keep browser/UI behavior out of scope because the change is CLI diagnostics only.
+- Planned acceptance: changed PHP lint, Composer quality/coverage, npm behavioral evidence, profiled Gating, schema parity, fresh Inspecting after PHP mutation, then final Git diff/status/upstream reconciliation and signed publication if safe.
+- Acceptance: changed PHP lint GREEN; PHP-CS-Fixer GREEN with 0 fixable files; PHPStan GREEN with 0 errors; PHPUnit GREEN at 31 tests / 133 assertions; coverage GREEN at 95.4% lines / 82.2% methods / 92.3% branches; npm behavioral evidence GREEN at functional 5/5, behavioral 4/4, UI 0/0 with absence guard, critical 1/1; profiled Gating GREEN 30/30; schema parity GREEN with valid mapping, synchronized schema, and migrations current; Composer validate/lock GREEN; Composer audit reports no advisories.
+- Fresh Inspecting after PHP mutation: GREEN with 0 findings, PHPStan 0 errors, 33 source files / 25 classes / 7 interfaces / 73 methods, max complexity 8, and max constructor dependencies 2. Report: `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261004-195336.json`.
+- Runtime/UI applicability: this change affects CLI diagnostics only; no browser/mobile UI, navigation, form, template, or interaction surface changed. Existing managed runtimes were not restarted and screenshot evidence is not applicable.
+
 ## engine-20261004192959-atlassing-84133b — 2026-10-04
 
 - Baseline: clean `master`; supplied 2026-09-29 CanonScanning RED is historical on the current tree. Current profiled `composer gating:check` is GREEN 30/30, including Canon004/018/030/052/054/067; supplied Inspecting evidence had 0 PHP-structure findings and a Semgrep timeout.

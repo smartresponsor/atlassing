@@ -72,7 +72,13 @@ final class AtlasStatusCommand extends Command
 
         $selected = $payload['selected_components'] ?? null;
         if (is_array($selected)) {
-            $output->writeln(sprintf('selected_components: %s', implode(', ', array_map('strval', $selected))));
+            $selectedComponents = $this->scalarList($selected);
+
+            if ($selectedComponents === null) {
+                $output->writeln('selected_components: invalid');
+            } else {
+                $output->writeln(sprintf('selected_components: %s', implode(', ', $selectedComponents)));
+            }
         }
     }
 
@@ -218,5 +224,25 @@ final class AtlasStatusCommand extends Command
     private function arrayCount(mixed $value): int
     {
         return is_array($value) ? count($value) : 0;
+    }
+
+    /**
+     * @param array<array-key, mixed> $value
+     *
+     * @return list<string>|null
+     */
+    private function scalarList(array $value): ?array
+    {
+        $items = [];
+
+        foreach ($value as $item) {
+            if (!is_scalar($item)) {
+                return null;
+            }
+
+            $items[] = (string) $item;
+        }
+
+        return $items;
     }
 }
