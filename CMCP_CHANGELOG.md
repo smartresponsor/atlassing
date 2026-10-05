@@ -147,6 +147,11 @@
 - Material work: declare DoctrineBundle + DoctrineMigrationsBundle in dev/prod, register both bundles, expose `schema:parity`, and add Canon030 to the profiled Atlassing gate.
 - Risk: schema-parity execution may require a configured disposable database; no developer database will be mutated to manufacture evidence.
 - Gates: Composer validate/audit, quality/tests, profiled Gating, applicable Symfony checks, fresh Inspecting after mutation, then final Git diff/status/upstream inspection.
+- Closure: schema parity is executable against isolated test SQLite with a pinned platform version; migrations are current, Doctrine mapping is valid, and the database schema is synchronized with metadata.
+- Final profiled Gating: GREEN 30/30 with 0 failures and 0 warnings, including Canon004/018/030/052/054/067; coverage evidence is GREEN at 95.4% lines / 82.2% methods / 92.3% branches.
+- Final aggregate quality: GREEN; PHP-CS-Fixer clean, PHPStan 0 errors, PHPUnit 31 tests / 133 assertions.
+- Fresh Inspecting after the final Doctrine configuration mutation: GREEN with 0 findings and PHPStan 0 errors; report `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261005-205158.json`.
+- Runtime/UI applicability: no browser/mobile UI, navigation, forms, templates, or user-observable flows changed; screenshot and cohort evidence remain not applicable.
 
 ## engine-20260926091209-atlassing-fd143d — 2026-09-29
 

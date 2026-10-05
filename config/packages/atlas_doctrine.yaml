@@ -19,3 +19,9 @@ doctrine_migrations:
     table_storage:
       table_name: atlas_doctrine_migration_versions
 
+when@test:
+  doctrine:
+    dbal:
+      driver: pdo_sqlite
+      path: '%kernel.project_dir%/var/atlas/schema-parity.sqlite'
+      server_version: '3.45.0'
