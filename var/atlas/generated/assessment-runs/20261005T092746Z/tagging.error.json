@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "tagging",
+  "title": "Tagging",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:23\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  23 | \u001b[0m … pe Leaf)) { \u001b[36;1mthrow \"Console MCP bridge not found: $consoleMcpBridge\"\u001b[0m } …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConsole MCP bridge not found: D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-console-mcp-bridge.ps1\u001b[0m",
+  "registry_entry": {
+    "component_id": "tagging",
+    "component_title": "Tagging",
+    "github_repository": "smartresponsor/tagging",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/tagging/report/index.adoc",
+    "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Tagging",
+    "timestamp_utc": "2026-10-05T09:29:40.218003+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "fix/symfony-native-cutover-rc-master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "4e4493961ecfd205b68e817c5df41276a5833114"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: no tag exactly matches '4e4493961ecfd205b68e817c5df41276a5833114'"
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": false,
+    "has_phpstan_neon_dist": true,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": true,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": "M AGENTS.md"
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "4e44939 docs(tagging): align middleware identity documentation\nbb66c01 docs(tagging): record RC reconciliation checkpoint\n2ab24f3 chore(tagging): preserve migration tooling artifacts\n40950e7 docs(tagging): add product capability audit\ndd70874 chore(tagging): align Gating consumer governance"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".commanding/\n.commanding/.gitattributes\n.commanding/backup/\n.commanding/command.sh\n.commanding/commanding.cmd\n.commanding/commanding.sh\n.commanding/database/\n.commanding/dependencies/\n.commanding/deploy/\n.commanding/docker/\n.commanding/git/\n.commanding/health.sh\n.commanding/history.sh\n.commanding/local_ci.sh\n.commanding/misc/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/reorganize-tests.ps1\n.commanding/run.sh\n.commanding/sh/\n.commanding/test/\n.commanding/zipper.sh\n.console-mcp/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env.example\n.gating/\n.gitattributes\n.githooks/\n.githooks/pre-commit\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/copyright/\n.idea/inspectionProfiles/\n.idea/laravel-idea.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/sqldialects.xml\n.idea/Tagging.iml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.dist.php.bak\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nadmin/\nadmin/index.html\nadmin/tag-admin.css\nadmin/tag-admin.js\nAGENTS.md\nbin/\nbin/console\nbin/tag-gating-owner-check.ps1\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/component/\nconfig/gating/\nconfig/openapi/\nconfig/packages/\nconfig/routes.yaml\nconfig/services/\nconfig/services.yaml\nconfig/tag_assignment.yaml\nconfig/tag_cache.yaml\nconfig/tag_observability.yaml\nconfig/tag_policy.yaml\nconfig/tag_quota.yaml\nconfig/tag_rbac.yaml\nconfig/tag_runtime.php\nconfig/tag_search.yaml\nconfig/tag_security.yaml\nconfig/tag_security_signature.yaml\nconfig/tag_slug.yaml\nconfig/tag_tenant.yaml\nconfig/tag_webhooks.yaml\ncontracts/\ncontracts/tag-contract-draft-1.3.legacy.yaml\ndelivery/\ndelivery/canon/\ndelivery/rc/\ndeploy/\ndeploy/docker/\ndocs/\ndocs/acceptance/\ndocs/admin/\ndocs/antora.yml\ndocs/api/\ndocs/architecture/\ndocs/bulk/\ndocs/component/\ndocs/data/\ndocs/db/\ndocs/demo/\ndocs/deploy/\ndocs/fixtures/\ndocs/http/\ndocs/migration/\ndocs/modules/\ndocs/ops/\ndocs/policy/\ndocs/public/\ndocs/rbac.md\ndocs/rc5/\ndocs/README.md\ndocs/release/\ndocs/security/\ndocs/seed/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "774"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"tagging/tag\",\n  \"type\": \"library\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"description\": \"Tagging process app\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"symfony/console\": \"^8.1\",\n    \"symfony/options-resolver\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"php\": \"^8.4\",\n    \"ext-pdo\": \"*\",\n    \"ext-curl\": \"*\",\n    \"ext-mbstring\": \"*\",\n    \"ext-ctype\": \"*\",\n    \"ext-intl\": \"*\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"doctrine/doctrine-bundle\": \"^3.3\",\n    \"doctrine/orm\": \"^3.7\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"easycorp/easyadmin-bundle\": \"^5.6\",\n    \"objecting/object\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"failing/failure\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"administering/administration\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"phpmd/phpmd\": \"3.x-dev\",\n    \"pdepend/pdepend\": \"3.x-dev\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpunit/phpunit\": \"^10.5\",\n    \"symfony/panther\": \"^2.2\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Tagging\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"Tests\\\\\": \"tests/\",\n      \"Tests\\\\Integration\\\\\": \"tests/integration/\",\n      \"Tests\\\\E2E\\\\\": \"tests/e2e/\",\n      \"Tests\\\\Panther\\\\\": \"tests/panther/\"\n    }\n  },\n  \"scripts\": {\n    \"lint\": \"php tools/tag-lint.php\",\n    \"lint:admin\": \"node --check admin/tag-admin.js\",\n    \"phpstan\": \"vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=512M\",\n    \"cs:check\": \"vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff --using-cache=no\",\n    \"cs:fix\": \"vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --using-cache=no\",\n    \"fixture:validate\": \"php tools/seed/tag-fixture-validate.php\",\n    \"fixture:dry-run\": \"php tools/seed/tag-fixture-dry-run.php\",\n    \"docs:openapi:publish\": \"php tools/release/tag-openapi-publish.php\",\n    \"audit:surface\": \"php tools/audit/tag-surface-audit.php\",\n    \"audit:contract\": \"php tools/audit/tag-contract-audit.php\",\n    \"audit:route\": \"php tools/audit/tag-route-controller-audit.php\",\n    \"audit:bootstrap\": \"php tools/audit/tag-bootstrap-audit.php\",\n    \"audit:bootstrap-runtime\": \"php tools/audit/tag-bootstrap-runtime-audit.php\",\n    \"audit:config\": \"php tools/audit/tag-config-audit.php\",\n    \"audit:sdk\": \"php tools/audit/tag-sdk-audit.php\",\n    \"audit:version\": \"php tools/audit/tag-version-audit.php\",\n    \"audit:release-assets\": \"php tools/audit/tag-release-assets-audit.php\",\n    \"audit:openapi-semantics\": \"php tools/audit/tag-openapi-semantics-audit.php\",\n    \"audit:generated-openapi-surface\": \"php tools/audit/tag-generated-openapi-surface-audit.php\",\n    \"audit:antora-surface\": \"php tools/audit/tag-antora-surface-audit.php\",\n    \"release:preflight\": \"php tools/release/tag-preflight.php\",\n    \"db:migrate\": \"php tools/db/tag-migrate.php\",\n    \"schema:validate\": \"php bin/console doctrine:schema:validate\",\n    \"schema:parity\": [\"php bin/console doctrine:schema:validate\", \"php bin/console doctrine:migrations:up-to-date\"],\n    \"db:smoke\": \"bash tools/db/tag-tag-migration-tag-smoke.sh\",\n    \"db:test:start\": \"bash tools/tag-tag-test-db-start.sh\",\n    \"db:test:stop\": \"bash tools/tag-tag-test-db-stop.sh\",\n    \"db:smoke:self-contained\": \"bash tools/tag-tag-migration-tag-smoke.sh\",\n    \"demo:seed\": \"php tools/seed/tag-seed.php\",\n    \"demo:clear\": \"php tools/seed/tag-clear.php\",\n    \"smoke:runtime\": \"vendor/bin/phpunit tests/TagSymfonyNativeSurfaceTest.php tests/T",
+      "package.json": "{\n  \"name\": \"tagging\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"description\": \"Local E2E tooling for the Tagging runtime.\",\n  \"scripts\": {\n    \"e2e\": \"playwright test\",\n    \"e2e:install\": \"playwright install chromium\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.54.2\"\n  }\n}\n"
+    }
+  }
+}
