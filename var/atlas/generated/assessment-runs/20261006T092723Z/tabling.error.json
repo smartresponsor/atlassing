@@ -1,0 +1,71 @@
+{
+  "status": "error",
+  "component": "tabling",
+  "title": "Tabling",
+  "mode": "chatgpt-cli",
+  "error_type": "RuntimeError",
+  "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:23\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  23 | \u001b[0m … pe Leaf)) { \u001b[36;1mthrow \"Console MCP bridge not found: $consoleMcpBridge\"\u001b[0m } …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConsole MCP bridge not found: D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-console-mcp-bridge.ps1\u001b[0m",
+  "registry_entry": {
+    "component_id": "tabling",
+    "component_title": "Tabling",
+    "github_repository": "smartresponsor/tabling",
+    "default_branch": "master",
+    "enabled": true,
+    "report_path": ".antora-src/modules/ROOT/pages/component/tabling/report/index.adoc",
+    "notes": "Canonical backend tabular-data component; included explicitly in scheduled assessment coverage."
+  },
+  "facts": {
+    "repo_root": "D:\\PhpstormProjects\\www\\Tabling",
+    "timestamp_utc": "2026-10-06T09:28:40.130025+00:00",
+    "exists": true,
+    "git_branch": {
+      "exit_code": 0,
+      "output": "master"
+    },
+    "git_commit": {
+      "exit_code": 0,
+      "output": "646c32bd2f12fa5303e9382a4af83275c47d190c"
+    },
+    "git_exact_tag": {
+      "exit_code": 128,
+      "output": "fatal: No names found, cannot describe anything."
+    },
+    "has_composer_json": true,
+    "has_package_json": true,
+    "has_phpstan_neon": true,
+    "has_phpstan_neon_dist": false,
+    "has_phpunit_xml": false,
+    "has_phpunit_xml_dist": true,
+    "has__github_workflows": false,
+    "has__antora-src_modules_ROOT_nav_adoc": false,
+    "has__antora-src_modules_ROOT_pages_index_adoc": false,
+    "git_status": {
+      "exit_code": 0,
+      "output": ""
+    },
+    "git_recent_commits": {
+      "exit_code": 0,
+      "output": "646c32b Merge pull request #16 from smartresponsor/initial-platform-primitive\n83469a1 fix: satisfy standalone dependency baseline\n03d3ee7 refactor: align Tabling with canonical RC contracts\ne42a781 license: adopt PolyForm Noncommercial 1.0.0\n0110010 Retain Gating artifact surface"
+    },
+    "php_version": {
+      "exit_code": 0,
+      "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+    },
+    "python_version": {
+      "exit_code": 0,
+      "output": "Python 3.14.6"
+    },
+    "top_level_tree": {
+      "exit_code": 0,
+      "output": ".gating/\n.gating/README.md\n.gitattributes\n.gitignore\n.php-cs-fixer.dist.php\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/packages/\nconfig/services.yaml\nLICENSE\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage.json\nphpstan.neon\nphpunit.xml.dist\nplaywright.config.js\nREADME.md\nsrc/\nsrc/Builder/\nsrc/DependencyInjection/\nsrc/DTO/\nsrc/Kernel.php\nsrc/Normalizer/\nsrc/Provider/\nsrc/Resolver/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/TablingBundle.php\ntests/\ntests/Unit/\nvar/\nvar/.php-cs-fixer.cache\nvar/cache/\nvar/coverage/\nvar/phpstan/\nvar/phpunit/\nvar/preserved-gating-20260930/\nvar/preserved-reference-20260930.php\nvar/preserved-reference-canon022-20260930.php\nvendor/\nvendor/autoload.php\nvendor/bin/\nvendor/clue/\nvendor/collectioning/\nvendor/composer/\nvendor/cruding/\nvendor/doctrine/\nvendor/easycorp/\nvendor/ergebnis/\nvendor/evenement/\nvendor/failing/\nvendor/fidry/\nvendor/friendsofphp/\nvendor/gating/\nvendor/interfacing/\nvendor/myclabs/\nvendor/nelmio/\nvendor/nikic/\nvendor/objecting/\nvendor/phar-io/\nvendor/php-webdriver/\nvendor/phpdocumentor/\nvendor/phpstan/\nvendor/phpunit/\nvendor/psr/\nvendor/radebatz/\nvendor/react/\nvendor/sebastian/\nvendor/staabm/\nvendor/symfony/\nvendor/theseer/\nvendor/twig/\nvendor/viewing/\nvendor/webmozart/\nvendor/zircote/"
+    },
+    "repo_file_count": {
+      "exit_code": 0,
+      "output": "72"
+    },
+    "key_file_excerpts": {
+      "composer.json": "{\n  \"name\": \"tabling/table\",\n  \"description\": \"Symfony backend table-definition primitive for provider-neutral columns, filters, actions and security.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"failing/failure\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Failing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"failing/failure\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Tabling\\\\\": \"src/\"\n    }\n  },\n  \"extra\": {\n    \"symfony\": {\n      \"bundle\": \"App\\\\Tabling\\\\TablingBundle\"\n    }\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^13.3\",\n    \"gating/gate\": \"dev-master\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit tests\",\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --branch-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"phpstan\": \"phpstan analyse -c phpstan.neon\",\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff\",\n    \"cs:fix\": \"php-cs-fixer fix\",\n    \"quality\": [\n      \"@test\",\n      \"@test:coverage\",\n      \"@phpstan\",\n      \"@cs:check\",\n      \"@validate:prod\",\n      \"@gate\"\n    ],\n    \"gate\": \"@php vendor/bin/gating check --target=.\"\n  }\n}\n",
+      "package.json": "{\n  \"name\": \"tabling-verification\",\n  \"private\": true,\n  \"scripts\": {\n    \"test:ui\": \"playwright test\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.55.0\"\n  }\n}\n"
+    }
+  }
+}
