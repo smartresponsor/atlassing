@@ -1690,73 +1690,92 @@ Scoring model:
 Current snapshot metric context:
 {
   "product": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 8.4,
+    "summary": "Consuming has a well-defined product identity as a thin operational pack-consumption utility with documented entry surfaces, discovery policy, inputs, and artifacts.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "Documented environment inputs are not fully aligned with engine implementation.",
+      "Multiple divergent installation surfaces weaken the otherwise clear product contract."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Make README, workflow, policy, and engine contracts mechanically consistent.",
+      "Declare one canonical executable/install surface."
     ]
   },
   "architecture": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.8,
+    "summary": "The root engine contains useful path-containment, autodiscovery, checksum, reporting, and repository-root abstractions, but duplicated divergent root/.consuming implementations create substantial architectural drift.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "Root and .consuming engine/policy/workflow variants encode different discovery and invocation models.",
+      "The active workflow is coupled to a filename absent from the repository."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Collapse duplicated implementations into one canonical engine surface.",
+      "Add deterministic contract checks between workflow entrypoints and repository files."
     ]
   },
   "runtime": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 5.6,
+    "summary": "Runtime logic includes checksum verification, archive fallback, throttling, path guards, reporting, and dry-run support, but the active CI entrypoint is currently non-runnable because its referenced engine file is absent.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "Configured GitHub workflow fails at its explicit missing-engine check.",
+      "Source-token naming mismatch can silently force use of the broader GITHUB_TOKEN fallback.",
+      "Runtime behavior could not be executed under the read-only contract because the engine creates local operational state."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Repair the active workflow entrypoint first.",
+      "Normalize token input handling.",
+      "Provide a genuinely side-effect-free validation mode or dedicated read-only verifier."
     ]
   },
   "qa": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 4.6,
+    "summary": "No repository-local automated test harness was evidenced for the PowerShell engine, leaving important synchronization and safety behavior without deterministic regression coverage.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "No Pester tests were found.",
+      "Workflow/entrypoint drift was able to reach the tracked master branch without an evidenced gate detecting the missing file."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Add PowerShell unit/contract tests for discovery, filtering, checksums, path containment, throttling, and report generation.",
+      "Add a CI structural gate that validates every referenced local workflow script exists.",
+      "Test environment-variable contract compatibility explicitly."
     ]
   },
   "ops": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.1,
+    "summary": "Operational scaffolding is substantial—scheduled/manual dispatch, concurrency control, GitHub App credentials, reports, lock/backup paths, checksum verification, and artifact upload are present—but the active workflow defect prevents reliable execution.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "The production workflow entrypoint does not exist.",
+      "Unconditional git add -A can stage unrelated pre-existing workspace files.",
+      "Divergent workflow copies make operational ownership ambiguous."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Restore an executable active workflow and gate its local references.",
+      "Restrict staging to files intentionally changed by consumption.",
+      "Eliminate or generate duplicate workflow copies from one source."
     ]
   },
   "market": {
     "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "summary": "Repository evidence establishes the component's intended operational role but does not provide sufficient external adoption, user-demand, competitive, or portfolio-value evidence to replace the prior market score.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "No repository evidence supports a new market-alignment score."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Add portfolio/adoption evidence if market alignment is intended to be scored from this component repository."
     ]
   },
   "overall": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.2,
+    "summary": "Consuming has a coherent purpose and several strong safety primitives, but the missing active workflow entrypoint, token-contract mismatch, divergent duplicate surfaces, and absence of regression tests materially block RC confidence.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "Current automated delivery path is structurally broken.",
+      "Operational contract drift is not protected by deterministic tests.",
+      "Repository-wide staging behavior can include unrelated changes."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Repair the workflow/engine contract and token contract before treating the component as RC-ready.",
+      "Consolidate the implementation surface.",
+      "Add deterministic read-only verification and regression tests."
     ]
   }
 }
@@ -1764,7 +1783,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Consuming",
-  "timestamp_utc": "2026-10-04T09:50:53.160469+00:00",
+  "timestamp_utc": "2026-10-07T09:27:48.268038+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,

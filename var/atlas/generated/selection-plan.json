@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T09:27:22.019350+00:00",
+  "generated_at": "2026-10-07T09:27:19.609102+00:00",
   "event_name": "schedule",
   "manual_components": [],
   "normalized_manual_components": [],
@@ -16,8 +16,11 @@
     "canonization",
     "cataloging",
     "codexing",
+    "commanding",
     "complying",
+    "consuming",
     "containerizing",
+    "discovering",
     "documentating",
     "evaluating",
     "facting",
@@ -49,7 +52,7 @@
     "cruding",
     "delivering"
   ],
-  "selected_count": 43,
+  "selected_count": 46,
   "items": [
     {
       "component": "accessing",
@@ -59,7 +62,7 @@
       "selected": true,
       "reason": "meaningful_change",
       "event_name": "schedule",
-      "current_head_commit": "4a755171ce2b528ea4554824a16d6a10cbfaee86",
+      "current_head_commit": "23c63df582aad2a82147918541bfcc65bd9886f1",
       "current_head_tag": null,
       "last_assessed_commit": "6f8115316ea3a37c8cfd8bf2be43391ba022f2eb",
       "last_assessed_tag": null,
@@ -83,12 +86,12 @@
         "config/packages/twig.yaml",
         "config/platform/routes/api/access_api.yaml",
         "config/services.yaml",
-        "migrations/Version20261003193000.php",
-        "package.json"
+        "deploy/docker/bin/run-postgres-tests.php",
+        "migrations/Version20261003193000.php"
       ],
       "access_error": null,
       "cadence_group": "daily",
-      "hours_since_last_assessment": 71.82,
+      "hours_since_last_assessment": 95.82,
       "meaningful_changes": [
         "AGENTS.md",
         "CMCP_CHANGELOG.md",
@@ -108,8 +111,8 @@
         "config/packages/twig.yaml",
         "config/platform/routes/api/access_api.yaml",
         "config/services.yaml",
-        "migrations/Version20261003193000.php",
-        "package.json"
+        "deploy/docker/bin/run-postgres-tests.php",
+        "migrations/Version20261003193000.php"
       ],
       "noise_changes": []
     },
@@ -150,7 +153,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 71.64,
+      "hours_since_last_assessment": 95.64,
       "meaningful_changes": [
         ".automation/README.md",
         ".automation/tool/automater-pack-sync.ps1",
@@ -212,7 +215,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 71.46,
+      "hours_since_last_assessment": 95.46,
       "meaningful_changes": [
         ".gating/README.md",
         "AGENTS.md",
@@ -258,7 +261,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 71.28,
+      "hours_since_last_assessment": 95.28,
       "meaningful_changes": [
         "sdk/php/composer.json",
         "AGENTS.md",
@@ -273,9 +276,9 @@
       "repository": "D:\\PhpstormProjects\\www\\Applicating",
       "repository_source": "local",
       "selected": true,
-      "reason": "meaningful_local_worktree_change",
+      "reason": "meaningful_change",
       "event_name": "schedule",
-      "current_head_commit": "0c11e40a81c879056d2b1d53a123bf2bb3d288e1",
+      "current_head_commit": "380304e09c98c63b9327de7bd2de8b7a51252621",
       "current_head_tag": null,
       "last_assessed_commit": "77dfc4326992b84c8bac98d7f0307ebee5c23028",
       "last_assessed_tag": null,
@@ -304,7 +307,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 215.1,
+      "hours_since_last_assessment": 239.1,
       "meaningful_changes": [
         ".gating/README.md",
         ".gitignore",
@@ -352,7 +355,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 95.8,
+      "hours_since_last_assessment": 119.8,
       "meaningful_changes": [
         ".automation.zip",
         ".automation/tool/automater-pack-sync.ps1",
@@ -371,57 +374,57 @@
       "selected": true,
       "reason": "meaningful_local_worktree_change",
       "event_name": "schedule",
-      "current_head_commit": "02f56dee61b7add5bfeae3c09e6d210e6426785c",
+      "current_head_commit": "812d799a85a24c58d74801488fcc0f80e60f652c",
       "current_head_tag": null,
       "last_assessed_commit": "b169ec4538149551539b122e3ce58b216d675b3f",
       "last_assessed_tag": null,
       "last_assessed_date": "2026-10-02",
       "changed_files_sample": [
         "CMCP_CHANGELOG.md",
-        "src/Service/Config/BillingCredentialConfigService.php",
-        "src/Service/Config/BillingEnvironmentConfigService.php",
-        ".gating/README.md",
-        "AGENTS.md",
         "README.md",
         "composer.json",
         "composer.lock",
+        "composer.prod.json",
         "config/bundles.php",
         "config/component/security.yaml",
         "config/component/services.yaml",
+        "config/openapi/.gitkeep",
+        "config/openapi/billing_openapi.yaml",
         "docs/api-versioning.md",
         "docs/architecture/billing-platform-overview.md",
         "docs/architecture/pre-subscription-hardening.md",
         "docs/architecture/route-surface-policy.md",
-        "docs/modules/ROOT/attachments/api/openapi.yaml",
-        "docs/modules/ROOT/pages/api.adoc",
-        "docs/release-readiness.md",
-        "docs/testing-strategy.md",
-        "src/Command/BillingResetStateCommand.php"
+        "docs/documentation-guidelines.md",
+        "docs/generated/phpdoc/index.html",
+        "docs/generated/phpdoc/src/Command/BillingFixtureGenerateCommand.html",
+        "docs/generated/phpdoc/src/Command/BillingResetStateCommand.html",
+        "docs/generated/phpdoc/src/Endpoint/BillingInvoiceEndpoint.html",
+        "docs/generated/phpdoc/src/Fixture/Demo/BillingFixture.html"
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 95.62,
+      "hours_since_last_assessment": 119.62,
       "meaningful_changes": [
         "CMCP_CHANGELOG.md",
-        "src/Service/Config/BillingCredentialConfigService.php",
-        "src/Service/Config/BillingEnvironmentConfigService.php",
-        ".gating/README.md",
-        "AGENTS.md",
         "README.md",
         "composer.json",
         "composer.lock",
+        "composer.prod.json",
         "config/bundles.php",
         "config/component/security.yaml",
         "config/component/services.yaml",
+        "config/openapi/.gitkeep",
+        "config/openapi/billing_openapi.yaml",
         "docs/api-versioning.md",
         "docs/architecture/billing-platform-overview.md",
         "docs/architecture/pre-subscription-hardening.md",
         "docs/architecture/route-surface-policy.md",
-        "docs/modules/ROOT/attachments/api/openapi.yaml",
-        "docs/modules/ROOT/pages/api.adoc",
-        "docs/release-readiness.md",
-        "docs/testing-strategy.md",
-        "src/Command/BillingResetStateCommand.php"
+        "docs/documentation-guidelines.md",
+        "docs/generated/phpdoc/index.html",
+        "docs/generated/phpdoc/src/Command/BillingFixtureGenerateCommand.html",
+        "docs/generated/phpdoc/src/Command/BillingResetStateCommand.html",
+        "docs/generated/phpdoc/src/Endpoint/BillingInvoiceEndpoint.html",
+        "docs/generated/phpdoc/src/Fixture/Demo/BillingFixture.html"
       ],
       "noise_changes": []
     },
@@ -462,7 +465,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 71.1,
+      "hours_since_last_assessment": 95.1,
       "meaningful_changes": [
         "AGENTS.md",
         "README.md",
@@ -514,7 +517,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 191.08,
+      "hours_since_last_assessment": 215.08,
       "meaningful_changes": [
         ".canonization/Governance/Architecture/CANONICAL_RULES_JOURNAL.md",
         ".canonization/Governance/Architecture/GUARD_MATRIX.md",
@@ -566,7 +569,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 167.45,
+      "hours_since_last_assessment": 191.45,
       "meaningful_changes": [
         ".automation/README.md",
         ".commanding/docker/MANIFEST.md",
@@ -628,7 +631,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 167.28,
+      "hours_since_last_assessment": 191.28,
       "meaningful_changes": [
         ".github/workflows/security.yml",
         "AGENTS.md",
@@ -658,8 +661,8 @@
       "title": "Commanding",
       "repository": "D:\\PhpstormProjects\\www\\Commanding",
       "repository_source": "local",
-      "selected": false,
-      "reason": "cooldown_active",
+      "selected": true,
+      "reason": "meaningful_local_worktree_change",
       "event_name": "schedule",
       "current_head_commit": "ad7c89e38be824f4cf9b54d5ed2c56f8881b26a9",
       "current_head_tag": null,
@@ -690,7 +693,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 47.79,
+      "hours_since_last_assessment": 71.79,
       "meaningful_changes": [
         ".commanding/.gitattributes",
         ".commanding/.github/prompts/prompt-audit.yml",
@@ -770,7 +773,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.07,
+      "hours_since_last_assessment": 524.07,
       "meaningful_changes": [
         ".gating/.canonization/Federation/MANIFEST.md",
         ".gating/.canonization/Governance/MANIFEST.md",
@@ -800,8 +803,8 @@
       "title": "Consuming",
       "repository": "D:\\PhpstormProjects\\www\\Consuming",
       "repository_source": "local",
-      "selected": false,
-      "reason": "cooldown_active",
+      "selected": true,
+      "reason": "meaningful_local_worktree_change",
       "event_name": "schedule",
       "current_head_commit": "15c6d6f1cb65d06f3a0df8489532cd61e7392651",
       "current_head_tag": null,
@@ -813,7 +816,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 47.42,
+      "hours_since_last_assessment": 71.42,
       "meaningful_changes": [
         "AGENTS.md"
       ],
@@ -856,7 +859,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.07,
       "meaningful_changes": [
         "report/template/containerization-drift.md",
         "report/template/containerization-matrix.csv",
@@ -904,8 +907,8 @@
       "title": "Discovering",
       "repository": "D:\\PhpstormProjects\\www\\Discovering",
       "repository_source": "local",
-      "selected": false,
-      "reason": "cooldown_active",
+      "selected": true,
+      "reason": "meaningful_local_worktree_change",
       "event_name": "schedule",
       "current_head_commit": "0ff66ca86d6383f285ef11d2e73ecd6b602ae74d",
       "current_head_tag": null,
@@ -918,7 +921,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 47.19,
+      "hours_since_last_assessment": 71.19,
       "meaningful_changes": [
         ".gating/README.md",
         "AGENTS.md"
@@ -962,7 +965,7 @@
       ],
       "access_error": null,
       "cadence_group": "daily",
-      "hours_since_last_assessment": 47.01,
+      "hours_since_last_assessment": 71.01,
       "meaningful_changes": [
         ".sync/quality-atlas/components/accessing/current.yaml",
         ".sync/quality-atlas/components/accessing/probes/current.yaml",
@@ -1014,7 +1017,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.07,
       "meaningful_changes": [
         "AGENTS.md"
       ],
@@ -1075,7 +1078,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.07,
       "meaningful_changes": [
         ".gating/README.md",
         ".gitignore",
@@ -1209,7 +1212,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.07,
       "meaningful_changes": [
         ".gating/MANIFEST.json",
         ".gating/README.md",
@@ -1307,7 +1310,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 545.37,
+      "hours_since_last_assessment": 569.37,
       "meaningful_changes": [
         ".gating/README.md",
         ".phpunit.cache/test-results",
@@ -1387,7 +1390,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.08,
       "meaningful_changes": [
         ".gating/README.md",
         ".github/codex/prompts/review.md",
@@ -1449,7 +1452,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 545.29,
+      "hours_since_last_assessment": 569.29,
       "meaningful_changes": [
         ".gating/README.md",
         ".github/workflows/ci.yml",
@@ -1511,7 +1514,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 545.25,
+      "hours_since_last_assessment": 569.25,
       "meaningful_changes": [
         ".gating/README.md",
         ".github/workflows/security.yml",
@@ -1573,7 +1576,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.08,
       "meaningful_changes": [
         "AGENTS.md",
         "README.md",
@@ -1635,7 +1638,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.08,
       "meaningful_changes": [
         ".gating/.canonization/Federation/MANIFEST.md",
         ".gating/.canonization/Governance/MANIFEST.md",
@@ -1678,7 +1681,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 500.08,
+      "hours_since_last_assessment": 524.08,
       "meaningful_changes": [
         "AGENTS.md"
       ],
@@ -1793,7 +1796,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 545.17,
+      "hours_since_last_assessment": 569.17,
       "meaningful_changes": [
         ".gating/README.md",
         ".github/workflows/ab-ci.yml",
@@ -1855,7 +1858,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 545.01,
+      "hours_since_last_assessment": 569.01,
       "meaningful_changes": [
         ".gitignore",
         "CMCP_CHANGELOG.md",
@@ -1917,7 +1920,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 544.91,
+      "hours_since_last_assessment": 568.91,
       "meaningful_changes": [
         ".gating/.canonization/Federation/MANIFEST.md",
         ".gating/.canonization/Governance/MANIFEST.md",
@@ -1979,7 +1982,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 536.35,
+      "hours_since_last_assessment": 560.35,
       "meaningful_changes": [
         ".gitignore",
         "CMCP_CHANGELOG.md",
@@ -2022,7 +2025,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.03,
+      "hours_since_last_assessment": 3028.03,
       "meaningful_changes": [
         "AGENTS.md"
       ],
@@ -2044,7 +2047,7 @@
       "changed_files_sample": [],
       "access_error": "No local repository and no accessible GitHub repository target.",
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.03
+      "hours_since_last_assessment": 3028.03
     },
     {
       "component": "sandbox",
@@ -2102,7 +2105,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.03,
+      "hours_since_last_assessment": 3028.03,
       "meaningful_changes": [
         "AGENTS.md",
         "tests/Repository/ShippingRepositoryDoctrineTest.php",
@@ -2128,7 +2131,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.03,
+      "hours_since_last_assessment": 3028.03,
       "meaningful_changes": [
         "AGENTS.md"
       ],
@@ -2153,7 +2156,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.03,
+      "hours_since_last_assessment": 3028.03,
       "meaningful_changes": [
         "AGENTS.md",
         ".console-mcp/rc-job-config/ea6408df-142f-4ec6-99a0-ebe919c236dc.json"
@@ -2182,7 +2185,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.04,
+      "hours_since_last_assessment": 3028.03,
       "meaningful_changes": [
         ".php-cs-fixer.php",
         "AGENTS.md",
@@ -2229,7 +2232,7 @@
       ],
       "access_error": null,
       "cadence_group": "every_2_days",
-      "hours_since_last_assessment": 3004.04,
+      "hours_since_last_assessment": 3028.03,
       "meaningful_changes": [
         ".editorconfig",
         ".gating/README.md",
@@ -2262,7 +2265,7 @@
       "selected": true,
       "reason": "bootstrap_missing_snapshot",
       "event_name": "schedule",
-      "current_head_commit": "b5aa4d0c48e79de62e490469b5e6fa79f45afc54",
+      "current_head_commit": "4a0957ba89267e24558149fb37c925c6b5c47cc4",
       "current_head_tag": null,
       "last_assessed_commit": null,
       "last_assessed_tag": null,

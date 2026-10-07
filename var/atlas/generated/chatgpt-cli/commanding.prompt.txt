@@ -1690,73 +1690,93 @@ Scoring model:
 Current snapshot metric context:
 {
   "product": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 7.8,
+    "summary": "Commanding has a well-defined tool-centric producer identity and broad operator command surface, but documentation currently conflicts with the actual proving-application topology.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "Root documentation describes a root Symfony proving application while current repository facts expose the proving app under .sandbox.",
+      "The producer-versus-projection transition is unresolved while .commanding is deleted in the worktree."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Make the producer/projection and proving-app topology consistent across README.md, MANIFEST.md, policy, and current filesystem state.",
+      "Document the current supported runtime contract without stale root-app markers."
     ]
   },
   "architecture": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.6,
+    "summary": "The repository has explicit source-of-truth, projection, sandbox, App\\\\ namespace, and watchdog boundaries, but the current dirty migration exposes material consistency and canon drift.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "Symfony ^7.3 in .sandbox conflicts with the Symfony 8.x+ canon in AGENTS.md.",
+      "Tracked projection deletion, staged generated dependencies, and documentation/application-root mismatch weaken architectural consistency.",
+      "The sandbox entrypoint policy appears structurally inconsistent around the smoke entry."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Converge on one Symfony 8-oriented application contract and one producer/projection model.",
+      "Validate policy YAML and exclude generated dependency trees from the source boundary."
     ]
   },
   "runtime": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.2,
+    "summary": "Commanding provides extensive runtime, health, Docker, routing, cache, logging, and server tooling, but the probed existing port-8000 runtime did not expose the expected sandbox /health route.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "The existing listener returned HTTP 404 for /health and was not associated with Console MCP managed state.",
+      "Runtime verification is ambiguous until the authoritative sandbox runtime/port is identified.",
+      "Runtime dependency state is noisy because .sandbox/vendor is staged and simultaneously modified/deleted."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Establish the authoritative managed sandbox runtime and re-run health, console, and route probes without unnecessary restart.",
+      "Restore reproducible dependency installation from Composer metadata rather than tracked vendor contents."
     ]
   },
   "qa": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 5.8,
+    "summary": "There is an explicit PHPUnit and health-probe framework plus an available native Inspecting analyzer, but current direct test depth and clean deterministic evidence are insufficient for RC confidence.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "The deterministic capture verdict is RED because the repository is dirty.",
+      "Root PHPStan configuration is absent and Inspecting reports only its native analyzer available for this target.",
+      "The inspected sandbox test evidence is limited to a basic kernel-class smoke test despite declared unit, integration, and e2e suites."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "After repository state is reconciled, run the configured PHPUnit suites and Symfony validation gates.",
+      "Expand deterministic behavioral coverage for the command dispatch, health probes, policy parsing, and producer/projection contracts.",
+      "Run Inspecting once report persistence is allowed by execution authority."
     ]
   },
   "ops": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.5,
+    "summary": "Operational breadth is a core strength, with Docker, health, logging, support, diagnostics, repository, and runtime command surfaces, but the present worktree is too inconsistent for release-candidate operational confidence.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "A 506-entry dirty state obscures which operational configuration represents the intended release state.",
+      "Large generated vendor staging materially increases release and review noise.",
+      "The current runtime probe does not confirm the documented sandbox health contract."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Reduce the change set to intentional source/configuration artifacts and restore a deterministic clean gate baseline.",
+      "Validate health, runtime, Docker, and support commands against the resolved sandbox target after topology reconciliation."
     ]
   },
   "market": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 7.0,
+    "summary": "Commanding's internal platform purpose is clear as reusable operational tooling for Smartresponsor repositories, but external product/market evidence remains limited and the registry has no GitHub repository configured.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "The supplied registry has an empty github_repository field, limiting connected scheduled-assessment and external portfolio evidence.",
+      "Current evidence primarily establishes engineering utility rather than independent market validation."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "Connect the canonical repository in the component registry when ready for scheduled assessment.",
+      "Keep product-facing documentation focused on concrete reusable operator outcomes and supported consumer contracts."
     ]
   },
   "overall": {
-    "score": 8.0,
-    "summary": "Bootstrap snapshot metric pending first live assessment.",
+    "score": 6.6,
+    "summary": "Commanding shows meaningful engineering and operational maturity, but the current RC baseline is blocked by a deterministic RED dirty-state verdict, generated dependency staging, Symfony-version canon drift, topology/documentation inconsistency, and an unverified sandbox runtime contract.",
     "risks": [
-      "Bootstrap metric should be replaced by an assessment verdict."
+      "The repository cannot currently be treated as an RC-clean baseline.",
+      "Multiple simultaneous structural transitions make release intent difficult to distinguish from accidental state.",
+      "Runtime and QA evidence do not yet compensate for the breadth of the pending repository changes."
     ],
     "improvements": [
-      "Run assessment workflow and refresh narrative evidence."
+      "First reconcile repository boundaries and dependency tracking, then align Symfony/documentation/policy contracts, then execute the full deterministic and applicable runtime verification stack.",
+      "Do not publish or score the current dirty tree as strong/RC-ready until those blockers are resolved."
     ]
   }
 }
@@ -1764,7 +1784,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Commanding",
-  "timestamp_utc": "2026-10-04T09:28:04.633167+00:00",
+  "timestamp_utc": "2026-10-07T09:27:44.789635+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,

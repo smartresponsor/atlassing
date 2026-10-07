@@ -1690,73 +1690,74 @@ Scoring model:
 Current snapshot metric context:
 {
   "product": {
-    "score": 8.0,
-    "summary": "Component identity and market-facing shape are materially present.",
+    "score": 8.5,
+    "summary": "Discovering has a well-defined resource-discovery product surface spanning human search, management workflows, APIs, relevance controls, feedback, and diagnostics.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Product breadth is evidenced primarily by repository implementation/documentation rather than fresh end-user behavioral verification in this read-only run."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Refresh end-to-end evidence for the principal public and management workflows on the current HEAD."
     ]
   },
   "architecture": {
-    "score": 7.8,
-    "summary": "Symfony-oriented architecture shape is materially present.",
+    "score": 7.6,
+    "summary": "The repository has substantial Symfony-oriented separation across controllers, DTOs, entities, policies, factories, services, interfaces, repositories, resolvers, and value objects, but canonical audit rules and implemented topology are currently inconsistent.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "tools/discovering_canon_audit.php expects several paths/namespaces that no longer match the actual App\\Discovering topology, weakening deterministic architecture-gate confidence."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Make the canonical audit describe the actual intended current architecture, then rerun it against the same revision."
     ]
   },
   "runtime": {
-    "score": 7.7,
-    "summary": "Runtime and application surface are materially present.",
+    "score": 8.1,
+    "summary": "Runtime maturity is materially above the seeded baseline through explicit PHP 8.4/Symfony requirements, runtime preflight modes, console and HTTP entrypoints, Doctrine schema tooling, and historically recorded successful runtime acceptance.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "No fresh runtime execution was performed because the assessment is READ_ONLY and declared runtime/test scripts can create repository-local cache, database, or evidence artifacts."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "On an execution-authorized pass, reuse the existing managed runtime and rerun runtime, console, schema, and behavioral checks without unnecessary restart."
     ]
   },
   "qa": {
-    "score": 6.9,
-    "summary": "Testing and QA posture are materially present but remain pre-RC.",
+    "score": 8.1,
+    "summary": "QA posture is strong for a pre-RC component: four PHPUnit suites, Playwright browser tests, PHPStan, PHP-CS-Fixer, behavioral/UI coverage tooling, and prior recorded green acceptance materially exceed the previous seeded assessment.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Current test-results only establishes a prior passing Playwright run; fresh same-HEAD PHPUnit and Playwright execution was intentionally not claimed."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Freshly execute Unit, Contract, Behavioral, Functional, static analysis, CS, behavioral coverage, and Playwright gates once artifact-producing verification is allowed."
     ]
   },
   "ops": {
-    "score": 7.4,
-    "summary": "Operational, governance, and security posture are materially present but remain pre-RC.",
+    "score": 8.0,
+    "summary": "Operational and security posture is materially implemented through request correlation, operation logging, token guards, mutation hardening, rate limiting, response security headers, OpenAPI documentation, and Composer security auditing.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "security_preflight.php validates legacy EventSubscriber paths and therefore requires reconciliation with the repository's intended canon before it can serve as a trustworthy canonical security gate."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Align security/canon preflight expectations, then rerun security, observability, OpenAPI, and runtime evidence gates."
     ]
   },
   "market": {
-    "score": 8.0,
-    "summary": "Business-facing and portfolio-facing alignment is materially present.",
+    "score": 8.4,
+    "summary": "The component has coherent portfolio-facing positioning as a Symfony resource-discovery layer with explainable ranking, hybrid retrieval, management tooling, feedback learning, API exposure, and a deliberately bounded mission rather than generic search-engine scope.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Repository evidence supports product positioning but does not provide external adoption, usage, or comparative market validation metrics."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Add measurable consumer/adoption evidence when available instead of inferring market strength solely from implementation breadth."
     ]
   },
   "overall": {
-    "score": 7.7,
-    "summary": "Overall release-candidate direction is visible, but the component remains in pre-RC life.",
+    "score": 8.0,
+    "summary": "Discovering is materially closer to RC maturity than the seeded 7.7 snapshot suggests, with broad implementation and verification infrastructure, but a tooling/canon drift and absence of fresh artifact-producing runtime tests in this read-only window prevent a stronger current-HEAD verdict.",
     "risks": [
-      "Assessment seeded from current pre-RC atlas and should be enriched by regular repository scans."
+      "Deterministic architecture/security gate drift can create false confidence until expected topology and actual implementation are reconciled.",
+      "Pre-existing dirty working-tree changes must remain isolated from release integration."
     ],
     "improvements": [
-      "Refresh this metric from a scheduled repository assessment run."
+      "Reconcile deterministic gate definitions first, then perform one fresh same-HEAD full acceptance pass and visual verification before raising the RC score further."
     ]
   }
 }
@@ -1764,7 +1765,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Discovering",
-  "timestamp_utc": "2026-10-04T10:04:47.874397+00:00",
+  "timestamp_utc": "2026-10-07T09:27:50.453110+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,

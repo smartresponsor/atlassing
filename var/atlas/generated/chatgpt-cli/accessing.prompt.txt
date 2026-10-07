@@ -1772,7 +1772,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Accessing",
-  "timestamp_utc": "2026-10-06T09:27:23.307355+00:00",
+  "timestamp_utc": "2026-10-07T09:27:20.962584+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,
@@ -1780,11 +1780,11 @@ Deterministic repository facts:
   },
   "git_commit": {
     "exit_code": 0,
-    "output": "4a755171ce2b528ea4554824a16d6a10cbfaee86"
+    "output": "23c63df582aad2a82147918541bfcc65bd9886f1"
   },
   "git_exact_tag": {
     "exit_code": 128,
-    "output": "fatal: no tag exactly matches '4a755171ce2b528ea4554824a16d6a10cbfaee86'"
+    "output": "fatal: no tag exactly matches '23c63df582aad2a82147918541bfcc65bd9886f1'"
   },
   "has_composer_json": true,
   "has_package_json": true,
@@ -1801,7 +1801,7 @@ Deterministic repository facts:
   },
   "git_recent_commits": {
     "exit_code": 0,
-    "output": "4a75517 test(accessing): stabilize sign-in Playwright probe\nfcba2d6 docs(accessing): record Worktree Green verification\ndaedfbe fix(accessing): reconcile identity index migration parity\n5562171 refactor(accessing): decompose demo fixture setup\n7e5c3ad refactor(accessing): split API security continuation flow"
+    "output": "23c63df docs(accessing): close schema parity RC journal\n55492bf fix(accessing): keep schema parity temp on workspace drive\n4a75517 test(accessing): stabilize sign-in Playwright probe\nfcba2d6 docs(accessing): record Worktree Green verification\ndaedfbe fix(accessing): reconcile identity index migration parity"
   },
   "php_version": {
     "exit_code": 0,
@@ -1813,7 +1813,7 @@ Deterministic repository facts:
   },
   "top_level_tree": {
     "exit_code": 0,
-    "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8010.json\n.console-mcp/local-php-server-8011.json\n.console-mcp/local-php-server-8091.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.env.test\n.env.test.postgres\n.gating/\n.gating/README.md\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Accessing.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAccessing.md\nAGENTS.md\nARCHITECTURE_MANIFEST.md\nAUDIT.md\nbin/\nbin/.gitkeep\nbin/cmcp-coverage.ps1\nbin/console\nbin/lint-php.php\nbin/MANIFEST.md\nbin/merge-coverage.php\nbin/phpunit\nBOUNDING_MANIFEST.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/access_gating_profile.yaml\nconfig/access_gating_rules.yaml\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/platform/\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/services_test.yaml\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/component/\ndocs/deploy/\ndocs/market-analysis.md\ndocs/milestone/\ndocs/modules/\ndocs/passkeys-host-integration.md\nFULL_MANIFEST.md\nLICENSE\nMARKET_ANALYSIS.md\nmigrations/\nmigrations/Version20260912003630.php\nmigrations/Version20260923093000CanonicalAccessingIndexNames.php\nmigrations/Version20260923121000ObjectingIdentityConstraints.php\nmigrations/Version20261003193000.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\nPRODUCT_MANIFEST.md\npsalm.xml\npublic/\npublic/.gitkeep\npublic/index.php\npublic/MANIFEST.md\npublic/router.php\nqodana.yaml\nREADME.md\nrector.neon\nsrc/\nsrc/AccessingBundle.php\nsrc/Authenticator/\nsrc/Bridge/\nsrc/Catalog/\nsrc/Clock/\nsrc/Codec/\nsrc/Command/\nsrc/Context/"
+    "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8010.json\n.console-mcp/local-php-server-8011.json\n.console-mcp/local-php-server-8091.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.env.test\n.env.test.postgres\n.gating/\n.gating/README.md\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Accessing.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAccessing.md\nAGENTS.md\nARCHITECTURE_MANIFEST.md\nAUDIT.md\nbin/\nbin/.gitkeep\nbin/cmcp-coverage.ps1\nbin/console\nbin/lint-php.php\nbin/MANIFEST.md\nbin/merge-coverage.php\nbin/phpunit\nBOUNDING_MANIFEST.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/access_gating_profile.yaml\nconfig/access_gating_rules.yaml\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/platform/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/services_test.yaml\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/component/\ndocs/deploy/\ndocs/market-analysis.md\ndocs/milestone/\ndocs/modules/\ndocs/passkeys-host-integration.md\nFULL_MANIFEST.md\nLICENSE\nMARKET_ANALYSIS.md\nmigrations/\nmigrations/Version20260912003630.php\nmigrations/Version20260923093000CanonicalAccessingIndexNames.php\nmigrations/Version20260923121000ObjectingIdentityConstraints.php\nmigrations/Version20261003193000.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\nPRODUCT_MANIFEST.md\npsalm.xml\npublic/\npublic/.gitkeep\npublic/index.php\npublic/MANIFEST.md\npublic/router.php\nqodana.yaml\nREADME.md\nrector.neon\nsrc/\nsrc/AccessingBundle.php\nsrc/Authenticator/\nsrc/Bridge/\nsrc/Catalog/\nsrc/Clock/\nsrc/Codec/\nsrc/Command/"
   },
   "repo_file_count": {
     "exit_code": 0,

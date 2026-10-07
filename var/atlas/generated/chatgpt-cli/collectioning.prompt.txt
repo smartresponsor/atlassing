@@ -1764,7 +1764,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Collectioning",
-  "timestamp_utc": "2026-10-06T09:28:37.844498+00:00",
+  "timestamp_utc": "2026-10-07T09:28:57.465394+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,

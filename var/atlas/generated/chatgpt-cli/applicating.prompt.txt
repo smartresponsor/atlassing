@@ -1772,7 +1772,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Applicating",
-  "timestamp_utc": "2026-10-06T09:27:31.643743+00:00",
+  "timestamp_utc": "2026-10-07T09:27:29.821334+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,
@@ -1780,7 +1780,7 @@ Deterministic repository facts:
   },
   "git_commit": {
     "exit_code": 0,
-    "output": "0c11e40a81c879056d2b1d53a123bf2bb3d288e1"
+    "output": "380304e09c98c63b9327de7bd2de8b7a51252621"
   },
   "git_exact_tag": {
     "exit_code": 128,
@@ -1797,11 +1797,11 @@ Deterministic repository facts:
   "has__antora-src_modules_ROOT_pages_index_adoc": false,
   "git_status": {
     "exit_code": 0,
-    "output": "?? var/"
+    "output": ""
   },
   "git_recent_commits": {
     "exit_code": 0,
-    "output": "0c11e40 Cover runtime repositories\n2b44e4a Document Applicating form and kernel contracts\n316774a Cover admin lifecycle controller\nd614ada Document Applicating security event contracts\n22649c5 Cover publish eligibility service"
+    "output": "380304e fix: normalize framework checkbox config values\na2fc296 Record manifest command coverage pass\n94e62aa chore: refresh local dependency lock references\n8eff4ca test: cover manifest validation and import map audit\n903f409 Cover Applicating operational commands"
   },
   "php_version": {
     "exit_code": 0,
@@ -1817,7 +1817,7 @@ Deterministic repository facts:
   },
   "repo_file_count": {
     "exit_code": 0,
-    "output": "315"
+    "output": "312"
   },
   "key_file_excerpts": {
     "composer.json": "{\n  \"name\": \"applicating/application\",\n  \"description\": \"Applicating process component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko / Marketing America Corp\",\n      \"email\": \"17111337+taa0662621456@users.noreply.github.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5.1\",\n    \"interfacing/interface\": \"dev-master\",\n    \"nelmio/api-doc-bundle\": \"^5.8\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/doctrine-bridge\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/var-exporter\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpmd/phpmd\": \"3.x-dev@dev\",\n    \"pdepend/pdepend\": \"3.x-dev@dev\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/debug-bundle\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/web-profiler-bundle\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint\": \"@php tools/php/php84.php tools/qa/ApplicationPhpLint.php\",\n    \"lint:service-interface-parity\": \"@php tools/php/php84.php tools/linter/applicating_service_interface_parity_check.php\",\n    \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n    \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n    \"stan\": \"@stan:runtime-target\",\n    \"stan:conservative\": \"@php tools/php/php82.php vendor/bin/phpstan analyse\",\n    \"stan:runtime-target\": \"@php tools/php/php84.php vendor/bin/phpstan analyse\",\n    \"md\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze src --format=text --ruleset=phpmd.xml.dist\",\n    \"md:tests\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze tests --format=text --ruleset=phpmd.xml.dist\",\n    \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n    \"test:unit\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite unit\",\n    \"test:integration\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite integration\",\n    \"test:functional\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite functional\",\n    \"test:panther\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:e2e\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:playwright\": \"npm run test:playwright\",\n    \"test:coverage\":",

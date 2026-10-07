@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-06T09:28:49.679006+00:00",
-  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20261006T092723Z",
+  "generated_at": "2026-10-07T09:29:08.212645+00:00",
+  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20261007T092720Z",
   "mode": "chatgpt-cli",
   "components": [],
   "failures": [
@@ -22,7 +22,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Accessing",
-        "timestamp_utc": "2026-10-06T09:27:23.307355+00:00",
+        "timestamp_utc": "2026-10-07T09:27:20.962584+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -30,11 +30,11 @@
         },
         "git_commit": {
           "exit_code": 0,
-          "output": "4a755171ce2b528ea4554824a16d6a10cbfaee86"
+          "output": "23c63df582aad2a82147918541bfcc65bd9886f1"
         },
         "git_exact_tag": {
           "exit_code": 128,
-          "output": "fatal: no tag exactly matches '4a755171ce2b528ea4554824a16d6a10cbfaee86'"
+          "output": "fatal: no tag exactly matches '23c63df582aad2a82147918541bfcc65bd9886f1'"
         },
         "has_composer_json": true,
         "has_package_json": true,
@@ -51,7 +51,7 @@
         },
         "git_recent_commits": {
           "exit_code": 0,
-          "output": "4a75517 test(accessing): stabilize sign-in Playwright probe\nfcba2d6 docs(accessing): record Worktree Green verification\ndaedfbe fix(accessing): reconcile identity index migration parity\n5562171 refactor(accessing): decompose demo fixture setup\n7e5c3ad refactor(accessing): split API security continuation flow"
+          "output": "23c63df docs(accessing): close schema parity RC journal\n55492bf fix(accessing): keep schema parity temp on workspace drive\n4a75517 test(accessing): stabilize sign-in Playwright probe\nfcba2d6 docs(accessing): record Worktree Green verification\ndaedfbe fix(accessing): reconcile identity index migration parity"
         },
         "php_version": {
           "exit_code": 0,
@@ -63,7 +63,7 @@
         },
         "top_level_tree": {
           "exit_code": 0,
-          "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8010.json\n.console-mcp/local-php-server-8011.json\n.console-mcp/local-php-server-8091.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.env.test\n.env.test.postgres\n.gating/\n.gating/README.md\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Accessing.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAccessing.md\nAGENTS.md\nARCHITECTURE_MANIFEST.md\nAUDIT.md\nbin/\nbin/.gitkeep\nbin/cmcp-coverage.ps1\nbin/console\nbin/lint-php.php\nbin/MANIFEST.md\nbin/merge-coverage.php\nbin/phpunit\nBOUNDING_MANIFEST.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/access_gating_profile.yaml\nconfig/access_gating_rules.yaml\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/platform/\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/services_test.yaml\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/component/\ndocs/deploy/\ndocs/market-analysis.md\ndocs/milestone/\ndocs/modules/\ndocs/passkeys-host-integration.md\nFULL_MANIFEST.md\nLICENSE\nMARKET_ANALYSIS.md\nmigrations/\nmigrations/Version20260912003630.php\nmigrations/Version20260923093000CanonicalAccessingIndexNames.php\nmigrations/Version20260923121000ObjectingIdentityConstraints.php\nmigrations/Version20261003193000.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\nPRODUCT_MANIFEST.md\npsalm.xml\npublic/\npublic/.gitkeep\npublic/index.php\npublic/MANIFEST.md\npublic/router.php\nqodana.yaml\nREADME.md\nrector.neon\nsrc/\nsrc/AccessingBundle.php\nsrc/Authenticator/\nsrc/Bridge/\nsrc/Catalog/\nsrc/Clock/\nsrc/Codec/\nsrc/Command/\nsrc/Context/"
+          "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8010.json\n.console-mcp/local-php-server-8011.json\n.console-mcp/local-php-server-8091.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.editorconfig\n.env\n.env.test\n.env.test.postgres\n.gating/\n.gating/README.md\n.github/\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Accessing.iml\n.idea/inspectionProfiles/\n.idea/markdown.xml\n.idea/modules.xml\n.idea/php.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/code-coverage/\n.phpunit.cache/test-results\n.phpunit.result.cache\nAccessing.md\nAGENTS.md\nARCHITECTURE_MANIFEST.md\nAUDIT.md\nbin/\nbin/.gitkeep\nbin/cmcp-coverage.ps1\nbin/console\nbin/lint-php.php\nbin/MANIFEST.md\nbin/merge-coverage.php\nbin/phpunit\nBOUNDING_MANIFEST.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/access_gating_profile.yaml\nconfig/access_gating_rules.yaml\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/MANIFEST.md\nconfig/packages/\nconfig/platform/\nconfig/reference.php\nconfig/routes/\nconfig/routes.yaml\nconfig/services.yaml\nconfig/services_test.yaml\ndeploy/\ndeploy/docker/\ndocs/\ndocs/antora.yml\ndocs/architecture/\ndocs/component/\ndocs/deploy/\ndocs/market-analysis.md\ndocs/milestone/\ndocs/modules/\ndocs/passkeys-host-integration.md\nFULL_MANIFEST.md\nLICENSE\nMARKET_ANALYSIS.md\nmigrations/\nmigrations/Version20260912003630.php\nmigrations/Version20260923093000CanonicalAccessingIndexNames.php\nmigrations/Version20260923121000ObjectingIdentityConstraints.php\nmigrations/Version20261003193000.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml\nphpunit.xml.dist\nphpunit.xsd\nplaywright.config.ts\nPRODUCT_MANIFEST.md\npsalm.xml\npublic/\npublic/.gitkeep\npublic/index.php\npublic/MANIFEST.md\npublic/router.php\nqodana.yaml\nREADME.md\nrector.neon\nsrc/\nsrc/AccessingBundle.php\nsrc/Authenticator/\nsrc/Bridge/\nsrc/Catalog/\nsrc/Clock/\nsrc/Codec/\nsrc/Command/"
         },
         "repo_file_count": {
           "exit_code": 0,
@@ -93,11 +93,11 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Addressing",
-        "timestamp_utc": "2026-10-06T09:27:25.562752+00:00",
+        "timestamp_utc": "2026-10-07T09:27:23.609707+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
-          "output": "checkpoint/addressing-local-master-before-green"
+          "output": "master"
         },
         "git_commit": {
           "exit_code": 0,
@@ -134,11 +134,11 @@
         },
         "top_level_tree": {
           "exit_code": 0,
-          "output": ".automation/\n.automation/packs.json\n.automation/README.md\n.automation/tool/\n.canonization/\n.canonization/.idea/\n.codex/\n.codex/config.toml\n.commanding/\n.commanding/.gitignore\n.commanding/commanding.cmd\n.commanding/commanding.lnk\n.commanding/commanding.sh\n.commanding/docker/\n.commanding/git/\n.commanding/lib/\n.commanding/logs/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/run.sh\n.commanding/sh/\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.console-mcp/local-php-server-18080.json\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-log/\n.console-mcp/rc-job-config/\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.deptrac.cache\n.dist/\n.dist/evidence/\n.editorconfig\n.env\n.env.dist\n.env.test.dist\n.gate/\n.gate/check/\n.gate/env/\n.gate/install/\n.gate/report/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gitattributes\n.github/\n.github/codex/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitlab-ci.yml\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/Addressing.iml\n.idea/bin/\n.idea/dataSources.local.xml\n.idea/dataSources.xml\n.idea/inspectionProfiles/\n.idea/jsLibraryMappings.xml\n.idea/jsonCatalog.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php-test-framework.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/sqldialects.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.inspecting/\n.inspecting/raw/\n.inspecting/reports/\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/"
+          "output": ".automation/\n.automation/packs.json\n.automation/README.md\n.automation/tool/\n.canonization/\n.canonization/.idea/\n.codex/\n.codex/config.toml\n.commanding/\n.commanding/.gitignore\n.commanding/commanding.cmd\n.commanding/commanding.lnk\n.commanding/commanding.sh\n.commanding/docker/\n.commanding/git/\n.commanding/lib/\n.commanding/logs/\n.commanding/patch_zipper.sh\n.commanding/policy/\n.commanding/ps1/\n.commanding/README.md\n.commanding/run.sh\n.commanding/sh/\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.console-mcp/local-php-server-18080.json\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.console-mcp/rc-job-config/\n.consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.deptrac.cache\n.dist/\n.dist/evidence/\n.editorconfig\n.env\n.env.dist\n.env.test.dist\n.gate/\n.gate/check/\n.gate/env/\n.gate/install/\n.gate/report/\n.gating/\n.gating/.canonization/\n.gating/.commanding/\n.gating/.consuming/\n.gating/.gating/\n.gating/.github/\n.gating/.gitignore\n.gating/.intelligence/\n.gating/.php-cs-fixer.dist.php\n.gating/AGENTS.md\n.gating/composer.json\n.gating/composer.lock\n.gating/contract/\n.gating/docs/\n.gating/gate.ps1\n.gating/gate.sh\n.gating/linting/\n.gating/MANIFEST.json\n.gating/MIGRATION.gating.md\n.gating/phpunit.xml.dist\n.gating/policy/\n.gating/quality/\n.gating/README.md\n.gating/run.ps1\n.gating/run.sh\n.gating/src/\n.gating/tests/\n.gating/tool/\n.gitattributes\n.github/\n.github/codex/\n.github/prompts/\n.github/workflows/\n.gitignore\n.gitlab-ci.yml\n.idea/\n.idea/.gitignore\n.idea/.name\n.idea/Addressing.iml\n.idea/bin/\n.idea/dataSources.local.xml\n.idea/dataSources.xml\n.idea/inspectionProfiles/\n.idea/jsLibraryMappings.xml\n.idea/jsonCatalog.xml\n.idea/markdown.xml\n.idea/misc.xml\n.idea/modules.xml\n.idea/php-test-framework.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/shelf/\n.idea/sqldialects.xml\n.idea/symfony2.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.inspecting/\n.inspecting/raw/\n.inspecting/reports/\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.result.cache\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/"
         },
         "repo_file_count": {
           "exit_code": 0,
-          "output": "938"
+          "output": "945"
         },
         "key_file_excerpts": {
           "composer.json": "{\n    \"name\": \"addressing/address\",\n    \"description\": \"Addressing process app\",\n    \"type\": \"library\",\n    \"license\": \"MIT\",\n    \"require\": {\n        \"php\": \"^8.4\",\n        \"ext-curl\": \"*\",\n        \"ext-pdo\": \"*\",\n        \"collectioning/collection\": \"dev-master\",\n        \"cruding/crud\": \"dev-master\",\n        \"tabling/table\": \"dev-master\",\n        \"doctrine/doctrine-bundle\": \"^3.2\",\n        \"doctrine/orm\": \"^2.15 || ^3.0\",\n        \"easycorp/easyadmin-bundle\": \"^5.0\",\n        \"interfacing/interface\": \"dev-master\",\n        \"objecting/object\": \"dev-master\",\n        \"viewing/view\": \"dev-master\",\n        \"symfony/console\": \"^8.1\",\n        \"symfony/form\": \"^8.1\",\n        \"symfony/framework-bundle\": \"^8.1\",\n        \"symfony/intl\": \"^8.1\",\n        \"symfony/property-access\": \"^8.1\",\n        \"symfony/property-info\": \"^8.1\",\n        \"symfony/security-bundle\": \"^8.1\",\n        \"symfony/security-csrf\": \"^8.1\",\n        \"symfony/serializer\": \"^8.1\",\n        \"symfony/translation\": \"^8.1\",\n        \"symfony/twig-bundle\": \"^8.1\",\n        \"symfony/uid\": \"^8.1\",\n        \"symfony/validator\": \"^8.1\",\n        \"symfony/yaml\": \"^8.1\",\n        \"twig/twig\": \"^3.24\"\n    },\n    \"require-dev\": {\n        \"dbrekelmans/bdi\": \"^1.4\",\n        \"deptrac/deptrac\": \"^3.0\",\n        \"fakerphp/faker\": \"^1.23\",\n        \"friendsofphp/php-cs-fixer\": \"^3.94\",\n        \"phpstan/phpstan\": \"^2.2\",\n        \"phpstan/phpstan-doctrine\": \"^2.0\",\n        \"phpstan/phpstan-symfony\": \"^2.0\",\n        \"phpunit/phpunit\": \"^10.5\",\n        \"rector/rector\": \"^2.6\",\n        \"symfony/dotenv\": \"^8.1\",\n        \"symfony/panther\": \"^2.2\",\n        \"vimeo/psalm\": \"^7.0\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\Addressing\\\\\": \"src/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"lint\": \"@php tools/qa/AddressPhpLint.php\",\n        \"phpstan\": \"vendor/bin/phpstan analyse src --level=max\",\n        \"psalm\": \"vendor/bin/psalm\",\n        \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n        \"stan\": \"@stan:conservative\",\n        \"rector:dry\": \"vendor/bin/rector process --dry-run\",\n        \"rector:fix\": \"php vendor/bin/rector process\",\n        \"qodana\": \"pwsh -NoProfile -ExecutionPolicy Bypass -File bin/qodana-local.ps1\",\n        \"quality\": [\n            \"@stan\",\n            \"@rector:dry\"\n        ],\n        \"qa:phpstan\": \"php -d memory_limit=1G vendor/bin/phpstan analyse -c phpstan.neon.dist\",\n        \"phpstan:clear\": \"php vendor/bin/phpstan clear-result-cache -c phpstan.neon.dist\",\n        \"qa:rector\": \"php vendor/bin/rector process --dry-run\",\n        \"qa:deptrac\": \"php vendor/bin/deptrac analyse --config-file=config/addressing_deptrac.yaml\",\n        \"gating\": \"@php .gating/bin/gating check --target=. --profile=.gating/.gating/profile/component/_template.yaml --rule-set=tools/qa/addressing-platform-canon.yaml --policy-root=.gating/.gating --severity-config=.gating/.gating/config/severity.yaml\",\n        \"qa:trust-surface\": \"@php tools/php/php84.php tools/qa/AddressTrustSurfaceRunner.php\",\n        \"qa:cs\": \"php vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php\",\n        \"qa:qodana\": \"@qodana\",\n        \"qa\": [\n            \"@qa:phpstan\",\n            \"@qa:deptrac\",\n            \"@qa:trust-surface\",\n            \"@qa:rector\"\n        ],\n        \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n        \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n        \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n        \"stan:conservative\": \"tools/php/php82.php vendor/bin/phpstan analyse\",\n        \"stan:runtime-target\": \"@php tools/php/php84.php vendor/bin/phpstan analyse\",\n        \"test:unit\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite unit\",\n        \"test:object-ide",
@@ -164,7 +164,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Analysing",
-        "timestamp_utc": "2026-10-06T09:27:27.754814+00:00",
+        "timestamp_utc": "2026-10-07T09:27:25.607164+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -235,7 +235,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Anchoring",
-        "timestamp_utc": "2026-10-06T09:27:29.991146+00:00",
+        "timestamp_utc": "2026-10-07T09:27:27.905518+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -302,7 +302,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Applicating",
-        "timestamp_utc": "2026-10-06T09:27:31.643743+00:00",
+        "timestamp_utc": "2026-10-07T09:27:29.821334+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -310,7 +310,7 @@
         },
         "git_commit": {
           "exit_code": 0,
-          "output": "0c11e40a81c879056d2b1d53a123bf2bb3d288e1"
+          "output": "380304e09c98c63b9327de7bd2de8b7a51252621"
         },
         "git_exact_tag": {
           "exit_code": 128,
@@ -327,11 +327,11 @@
         "has__antora-src_modules_ROOT_pages_index_adoc": false,
         "git_status": {
           "exit_code": 0,
-          "output": "?? var/"
+          "output": ""
         },
         "git_recent_commits": {
           "exit_code": 0,
-          "output": "0c11e40 Cover runtime repositories\n2b44e4a Document Applicating form and kernel contracts\n316774a Cover admin lifecycle controller\nd614ada Document Applicating security event contracts\n22649c5 Cover publish eligibility service"
+          "output": "380304e fix: normalize framework checkbox config values\na2fc296 Record manifest command coverage pass\n94e62aa chore: refresh local dependency lock references\n8eff4ca test: cover manifest validation and import map audit\n903f409 Cover Applicating operational commands"
         },
         "php_version": {
           "exit_code": 0,
@@ -347,7 +347,7 @@
         },
         "repo_file_count": {
           "exit_code": 0,
-          "output": "315"
+          "output": "312"
         },
         "key_file_excerpts": {
           "composer.json": "{\n  \"name\": \"applicating/application\",\n  \"description\": \"Applicating process component\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"authors\": [\n    {\n      \"name\": \"Oleksandr Tishchenko / Marketing America Corp\",\n      \"email\": \"17111337+taa0662621456@users.noreply.github.com\"\n    }\n  ],\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"administering/administration\": \"dev-master\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"doctrine/orm\": \"^3.3\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5.1\",\n    \"interfacing/interface\": \"dev-master\",\n    \"nelmio/api-doc-bundle\": \"^5.8\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/doctrine-bridge\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-client\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/messenger\": \"^8.1\",\n    \"symfony/monolog-bundle\": \"^4.0\",\n    \"symfony/rate-limiter\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/runtime\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/serializer\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/validator\": \"^8.1\",\n    \"symfony/var-exporter\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\"\n  },\n  \"require-dev\": {\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.94\",\n    \"phpmd/phpmd\": \"3.x-dev@dev\",\n    \"pdepend/pdepend\": \"3.x-dev@dev\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/debug-bundle\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/web-profiler-bundle\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Applicating\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"lint\": \"@php tools/php/php84.php tools/qa/ApplicationPhpLint.php\",\n    \"lint:service-interface-parity\": \"@php tools/php/php84.php tools/linter/applicating_service_interface_parity_check.php\",\n    \"cs:fix\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php\",\n    \"cs:check\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff\",\n    \"cs:check-quiet\": \"@php tools/php/php84.php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run\",\n    \"stan\": \"@stan:runtime-target\",\n    \"stan:conservative\": \"@php tools/php/php82.php vendor/bin/phpstan analyse\",\n    \"stan:runtime-target\": \"@php tools/php/php84.php vendor/bin/phpstan analyse\",\n    \"md\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze src --format=text --ruleset=phpmd.xml.dist\",\n    \"md:tests\": \"@php -d error_reporting=6143 vendor/bin/phpmd analyze tests --format=text --ruleset=phpmd.xml.dist\",\n    \"test\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist\",\n    \"test:unit\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite unit\",\n    \"test:integration\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite integration\",\n    \"test:functional\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite functional\",\n    \"test:panther\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:e2e\": \"@php tools/php/php84.php vendor/bin/phpunit -c phpunit.xml.dist --testsuite panther\",\n    \"test:playwright\": \"npm run test:playwright\",\n    \"test:coverage\":",
@@ -373,7 +373,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Automating",
-        "timestamp_utc": "2026-10-06T09:27:33.578748+00:00",
+        "timestamp_utc": "2026-10-07T09:27:32.144296+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -440,7 +440,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Billing",
-        "timestamp_utc": "2026-10-06T09:27:34.790205+00:00",
+        "timestamp_utc": "2026-10-07T09:27:33.966598+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -448,11 +448,11 @@
         },
         "git_commit": {
           "exit_code": 0,
-          "output": "02f56dee61b7add5bfeae3c09e6d210e6426785c"
+          "output": "812d799a85a24c58d74801488fcc0f80e60f652c"
         },
         "git_exact_tag": {
           "exit_code": 128,
-          "output": "fatal: no tag exactly matches '02f56dee61b7add5bfeae3c09e6d210e6426785c'"
+          "output": "fatal: no tag exactly matches '812d799a85a24c58d74801488fcc0f80e60f652c'"
         },
         "has_composer_json": true,
         "has_package_json": true,
@@ -465,11 +465,11 @@
         "has__antora-src_modules_ROOT_pages_index_adoc": false,
         "git_status": {
           "exit_code": 0,
-          "output": "D .gating/README.md\n M AGENTS.md\n M CMCP_CHANGELOG.md\n M README.md\n M composer.json\n M composer.lock\n M config/bundles.php\n M config/component/security.yaml\n M config/component/services.yaml\n M docs/api-versioning.md\n M docs/architecture/billing-platform-overview.md\n M docs/architecture/pre-subscription-hardening.md\n M docs/architecture/route-surface-policy.md\n M docs/modules/ROOT/attachments/api/openapi.yaml\n M docs/modules/ROOT/pages/api.adoc\n M docs/release-readiness.md\n M docs/testing-strategy.md\n M src/Command/BillingResetStateCommand.php\n M src/Command/BillingSchemaSyncCommand.php\n M src/DataFixtures/BillingDemoFixtures.php\n M src/Endpoint/BillingInvoiceEndpoint.php\n M src/Entity/BillingIdempotencyEntity.php\n M src/Entity/BillingInvoiceEntity.php\n M src/Entity/BillingLedgerEntity.php\n M src/Entity/BillingRateLimitEntity.php\n M src/Fixture/Demo/BillingFixture.php\n M src/Http/Context/BillingContextResolver.php\n M src/Http/Payload/BillingRequestPayloadMapper.php\n D src/Security/BillingVoter.php\n M src/Service/Access/BillingAccessChecker.php\n M src/Service/Idempotency/FileIdempotencyStorage.php\n M src/Service/Idempotency/InMemoryIdempotencyStorage.php\n M src/Service/Idempotency/PostgreSqlIdempotencyStorage.php\n M src/Service/Invoice/BillingInputValidator.php\n M src/Service/Invoice/FileInvoiceStorage.php\n M src/Service/Invoice/InMemoryInvoiceStorage.php\n M src/Service/Invoice/InvoicePreviewInput.php\n M src/Service/Invoice/PostgreSqlInvoiceStorage.php\n M src/Service/Ledger/PostgreSqlLedgerStorage.php\n M src/Service/RateLimit/PostgreSqlBillingRateLimitStorage.php\n M src/Service/Readiness/DoctrineBillingReadinessProbe.php\n M src/Service/Schema/EntitySchemaSynchronizer.php\n M src/Service/Transaction/DoctrineBillingTransactionManager.php\n M src/ServiceInterface/Idempotency/IdempotencyStorageInterface.php\n M src/Value/Context/BillingContext.php\n M tests/Contract/Billing/BillingApiContractTest.php\n M tests/Contract/Billing/BillingPackageSmokeTest.php\n M tests/Integration/Billing/PostgreSqlBillingFlowTest.php\n M tests/Support/PostgreSqlHarness.php\n M tests/playwright/new-user/create-invoice.spec.js\n M tests/unit/Security/BillingVoterTest.php\n M tests/unit/Service/EntitySchemaSynchronizerTest.php\n?? PRODUCT_CAPABILITY_AUDIT.adoc\n?? composer.prod.json\n?? config/openapi/\n?? src/Repository/BillingPersistenceRepository.php\n?? src/RepositoryInterface/BillingPersistenceRepositoryInterface.php\n?? src/Voter/"
+          "output": "D .gating/README.md\n M AGENTS.md\n M CMCP_CHANGELOG.md\n?? .console-mcp/\n?? PRODUCT_CAPABILITY_AUDIT.adoc"
         },
         "git_recent_commits": {
           "exit_code": 0,
-          "output": "02f56dee fix: normalize billing config tool results\nb169ec45 fix: align billing config contracts\n3fd3c8dc license: adopt PolyForm Noncommercial 1.0.0\nac0bf4a6 Activate Objecting metadata in Billing\n50bff409 Activate Objecting metadata policy"
+          "output": "812d799a docs: refresh billing generated references\nf39ef9fc feat: align billing API and package contracts\n1664cffb refactor: canonicalize billing identity and persistence\nda3ff1e6 refactor: move billing voter to voter layer\n02f56dee fix: normalize billing config tool results"
         },
         "php_version": {
           "exit_code": 0,
@@ -481,11 +481,11 @@
         },
         "top_level_tree": {
           "exit_code": 0,
-          "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.deptrac.cache\n.editorconfig\n.env\n.env.example\n.env.local\n.env.test\n.env.test.local\n.gating/\n.gitattributes\n.github/\n.github/CODEOWNERS\n.github/docs-producer-registry.json\n.github/ISSUE_TEMPLATE/\n.github/pull_request_template.md\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Billing.iml\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbundles.php\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/openapi/\nconfig/packages/\nconfig/reference.php\nconfig/routes.yaml\nconfig/services_dev.yaml\nconfig/services_test.yaml\ndelivery/\ndelivery/rc/\ndeptrac.yaml\ndocs/\ndocs/antora.yml\ndocs/api-error-contract.md\ndocs/api-versioning.md\ndocs/architecture/\ndocs/billing-boundary.md\ndocs/component/\ndocs/documentation-guidelines.md\ndocs/documentation-surface-map.md\ndocs/generated/\ndocs/modules/\ndocs/operations/\ndocs/quality-gates.md\ndocs/release-readiness.md\ndocs/reports/\ndocs/security/\ndocs/testing-strategy.md\nLICENSE\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpdoc.xml.dist\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.js\nPRODUCT_CAPABILITY_AUDIT.adoc\npsalm.xml\npublic/\npublic/index.php\nqodana.yaml\nREADME.md\nrector.neon\nscripts/\nscripts/build-code-reference.php\nscripts/ensure-test-postgres.php\nscripts/ensure-test-postgres.ps1\nscripts/run-billing-test-suite.php\nscripts/start-billing-test-server.php\nscripts/start-billing-test-server.ps1\nsrc/\nsrc/BillingBundle.php\nsrc/Command/\nsrc/DataFixtures/\nsrc/DependencyInjection/\nsrc/Endpoint/\nsrc/Entity/\nsrc/EntityInterface/\nsrc/Fixture/\nsrc/FixtureInterface/\nsrc/Form/\nsrc/Http/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Security/\nsrc/Service/\nsrc/ServiceInterface/"
+          "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.console-mcp/\n.console-mcp/command-run/\n.console-mcp/command-run-lease/\n.deptrac.cache\n.editorconfig\n.env\n.env.example\n.env.local\n.env.test\n.env.test.local\n.gating/\n.gitattributes\n.github/\n.github/CODEOWNERS\n.github/docs-producer-registry.json\n.github/ISSUE_TEMPLATE/\n.github/pull_request_template.md\n.github/workflows/\n.gitignore\n.idea/\n.idea/.gitignore\n.idea/Billing.iml\n.idea/inspectionProfiles/\n.idea/modules.xml\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\n.phpunit.cache/\n.phpunit.cache/test-results\nAGENTS.md\nbin/\nbin/console\nbundles.php\nCHANGELOG.md\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bootstrap.php\nconfig/bundles.php\nconfig/component/\nconfig/openapi/\nconfig/packages/\nconfig/reference.php\nconfig/routes.yaml\nconfig/services_dev.yaml\nconfig/services_test.yaml\ndelivery/\ndelivery/rc/\ndeptrac.yaml\ndocs/\ndocs/antora.yml\ndocs/api-error-contract.md\ndocs/api-versioning.md\ndocs/architecture/\ndocs/billing-boundary.md\ndocs/component/\ndocs/documentation-guidelines.md\ndocs/documentation-surface-map.md\ndocs/generated/\ndocs/modules/\ndocs/operations/\ndocs/quality-gates.md\ndocs/release-readiness.md\ndocs/reports/\ndocs/security/\ndocs/testing-strategy.md\nLICENSE\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpdoc.xml.dist\nphpstan.neon\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.js\nPRODUCT_CAPABILITY_AUDIT.adoc\npsalm.xml\npublic/\npublic/index.php\nqodana.yaml\nREADME.md\nrector.neon\nscripts/\nscripts/build-code-reference.php\nscripts/ensure-test-postgres.php\nscripts/ensure-test-postgres.ps1\nscripts/run-billing-test-suite.php\nscripts/start-billing-test-server.php\nscripts/start-billing-test-server.ps1\nsrc/\nsrc/BillingBundle.php\nsrc/Command/\nsrc/DataFixtures/\nsrc/DependencyInjection/\nsrc/Endpoint/\nsrc/Entity/\nsrc/EntityInterface/\nsrc/Fixture/\nsrc/FixtureInterface/\nsrc/Form/\nsrc/Http/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/Repository/\nsrc/RepositoryInterface/"
         },
         "repo_file_count": {
           "exit_code": 0,
-          "output": "362"
+          "output": "431"
         },
         "key_file_excerpts": {
           "composer.json": "{\n  \"name\": \"billing/billing\",\n  \"type\": \"symfony-bundle\",\n  \"require\": {\n    \"php\": \"^8.4\",\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"administering/administration\": \"dev-master\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"failing/failure\": \"dev-master\",\n    \"interfacing/interface\": \"dev-master\",\n    \"nelmio/api-doc-bundle\": \"^5.0\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"doctrine/dbal\": \"^4.3\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/orm\": \"^3.3\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/http-foundation\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/routing\": \"^8.1\",\n    \"symfony/security-bundle\": \"^8.1\",\n    \"symfony/security-core\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"zircote/swagger-php\": \"^5.0\",\n    \"objecting/object\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"deptrac/deptrac\": \"^4.6\",\n    \"doctrine/doctrine-fixtures-bundle\": \"^4.3\",\n    \"fakerphp/faker\": \"^1.24\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"phpstan/extension-installer\": \"^1.4\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"phpstan/phpstan-doctrine\": \"^2.0\",\n    \"phpstan/phpstan-symfony\": \"^2.0\",\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/panther\": \"^2.2\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Billing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Billing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"config\": {\n    \"sort-packages\": true,\n    \"allow-plugins\": {\n      \"symfony/flex\": true,\n      \"symfony/runtime\": true,\n      \"phpstan/extension-installer\": true\n    }\n  },\n  \"extra\": {\n    \"symfony\": {\n      \"require\": \"8.*\"\n    }\n  },\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"scripts\": {\n    \"test\": \"@test:phpunit\",\n    \"test:phpunit\": \"vendor/bin/phpunit\",\n    \"cs:fix\": \"php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php\",\n    \"phpstan\": \"php vendor/bin/phpstan analyse src tests --no-progress --level=max\",\n    \"deptrac\": \"php vendor/bin/deptrac analyse --config-file=deptrac.yaml --no-progress --fail-on-uncovered\",\n    \"deptrac:unassigned\": \"php vendor/bin/deptrac debug:unassigned --config-file=deptrac.yaml\",\n    \"deptrac:unused\": \"php vendor/bin/deptrac debug:unused --config-file=deptrac.yaml\",\n    \"docs:openapi\": \"php vendor/bin/openapi src --format yaml --output config/openapi/billing_openapi.yaml && php -r \\\"if (!is_dir('docs/modules/ROOT/attachments/api')) { mkdir('docs/modules/ROOT/attachments/api', 0777, true); } if (!copy('config/openapi/billing_openapi.yaml', 'docs/modules/ROOT/attachments/api/openapi.yaml')) { exit(1); }\\\"\",\n    \"docs:phpdoc\": \"php scripts/build-code-reference.php\",\n    \"lint:container:test\": \"@php bin/console lint:container --env=test\",\n    \"lint:yaml\": \"@php bin/console lint:yaml config --parse-tags\",\n    \"docs:openapi:lint\": \"@php bin/console lint:yaml config/openapi/billing_openapi.yaml docs/modules/ROOT/attachments/api/openapi.yaml\",\n    \"qa:static\": [\n      \"@lint:container:test\",\n      \"@lint:yaml\",\n      \"@phpstan\",\n      \"@deptrac\",\n      \"@docs:openapi\",\n      \"@docs:openapi:lint\"\n    ],\n    \"qa\": [\n      \"@qa:static\"\n    ],\n    \"test:integration\": \"php scripts/run-billing-test-suite.php integration\",\n    \"test:e2e:ux\": \"php scripts/run-billing-test-suite.php e2e:ux\",\n    \"test:e2e\": \"php scripts/run-billing-test-suite.php e2e\",\n    \"test:package-smoke\": \"php vendor/bin/phpunit tests/Contract/Billing/BillingPackageSmokeTest.php\",\n    \"gate\": \"@php vendor/bin/gating check --target=.\",\n    \"quality\": [\n      \"@phpstan\",\n      \"@test\",\n      \"@gate\"\n    ]\n  },\n  \"description\": \"Billing foundation with Antora and OpenAPI producer surfaces for multi-domain",
@@ -511,7 +511,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Boundarying",
-        "timestamp_utc": "2026-10-06T09:27:36.451773+00:00",
+        "timestamp_utc": "2026-10-07T09:27:35.863098+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -578,7 +578,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Canonization",
-        "timestamp_utc": "2026-10-06T09:27:37.932462+00:00",
+        "timestamp_utc": "2026-10-07T09:27:37.695326+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -648,7 +648,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Cataloging",
-        "timestamp_utc": "2026-10-06T09:27:39.470201+00:00",
+        "timestamp_utc": "2026-10-07T09:27:39.236541+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -719,7 +719,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Codexing",
-        "timestamp_utc": "2026-10-06T09:27:43.014919+00:00",
+        "timestamp_utc": "2026-10-07T09:27:43.002469+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 128,
@@ -770,6 +770,73 @@
     },
     {
       "status": "error",
+      "component": "commanding",
+      "title": "Commanding",
+      "mode": "chatgpt-cli",
+      "error_type": "RuntimeError",
+      "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:23\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  23 | \u001b[0m … pe Leaf)) { \u001b[36;1mthrow \"Console MCP bridge not found: $consoleMcpBridge\"\u001b[0m } …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConsole MCP bridge not found: D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-console-mcp-bridge.ps1\u001b[0m",
+      "registry_entry": {
+        "component_id": "commanding",
+        "component_title": "Commanding",
+        "github_repository": "",
+        "default_branch": "master",
+        "enabled": true,
+        "report_path": ".antora-src/modules/ROOT/pages/component/commanding/report/index.adoc",
+        "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+      },
+      "facts": {
+        "repo_root": "D:\\PhpstormProjects\\www\\Commanding",
+        "timestamp_utc": "2026-10-07T09:27:44.789635+00:00",
+        "exists": true,
+        "git_branch": {
+          "exit_code": 0,
+          "output": "master"
+        },
+        "git_commit": {
+          "exit_code": 0,
+          "output": "ad7c89e38be824f4cf9b54d5ed2c56f8881b26a9"
+        },
+        "git_exact_tag": {
+          "exit_code": 128,
+          "output": "fatal: No names found, cannot describe anything."
+        },
+        "has_composer_json": false,
+        "has_package_json": false,
+        "has_phpstan_neon": false,
+        "has_phpstan_neon_dist": false,
+        "has_phpunit_xml": false,
+        "has_phpunit_xml_dist": false,
+        "has__github_workflows": true,
+        "has__antora-src_modules_ROOT_nav_adoc": false,
+        "has__antora-src_modules_ROOT_pages_index_adoc": false,
+        "git_status": {
+          "exit_code": 0,
+          "output": "D .commanding/.gitattributes\n D .commanding/.github/prompts/prompt-audit.yml\n D .commanding/.github/workflows/automate-kit-sync.yml\n D .commanding/.gitignore\n D .commanding/MANIFEST.md\n D .commanding/README.md\n D .commanding/backup/commanding.sh\n D .commanding/backup/composer.sh\n D .commanding/command.sh\n D .commanding/commanding.cmd\n D .commanding/commanding.lnk\n D .commanding/commanding.sh\n D .commanding/database/commanding.sh\n D .commanding/database/migration.sh\n D .commanding/dependencies/commanding.sh\n D .commanding/deploy/command.sh\n D .commanding/deploy/commanding.sh\n D .commanding/deploy/deploy.sh\n D .commanding/deploy/logs.sh\n D .commanding/deploy/notificationTest.sh\n D .commanding/deploy/server.sh\n D .commanding/deploy/service.sh\n D .commanding/docker/.env.example\n D .commanding/docker/MANIFEST.md\n D .commanding/docker/README.md\n D .commanding/docker/commanding.sh\n D .commanding/docker/compose.yml\n D .commanding/docker/compose/compose-cache.yml\n D .commanding/docker/compose/compose-db.yml\n D .commanding/docker/compose/compose-mq.yml\n D .commanding/docker/compose/compose-object.yml\n D .commanding/docker/compose/compose-obs.yml\n D .commanding/docker/docker.sh\n D .commanding/docker/health.sh\n D .commanding/docker/local_ci.sh\n D .commanding/docker/nginx/conf.d/default.conf\n D .commanding/docker/php/Dockerfile\n D .commanding/docker/php/php.ini\n D .commanding/docker/ps1/_lib.ps1\n D .commanding/docker/ps1/down.ps1\n D .commanding/docker/ps1/logs.ps1\n D .commanding/docker/ps1/ps.ps1\n D .commanding/docker/ps1/reset-db.ps1\n D .commanding/docker/ps1/up.ps1\n D .commanding/docker/service/prometheus/prometheus.yml\n D .commanding/docker/tool/_lib.sh\n D .commanding/docker/tool/down.sh\n D .commanding/docker/tool/logs.sh\n D .commanding/docker/tool/ps.sh\n D .commanding/docker/tool/reset-db.sh\n D .commanding/docker/tool/up.sh\n D .commanding/git/commanding.sh\n D .commanding/git/git_diff.sh\n D .commanding/git/git_status.sh\n D .commanding/git/git_sync.sh\n D .commanding/health.sh\n D .commanding/history.sh\n D .commanding/lib/ui.sh\n D .commanding/local_ci.sh\n D .commanding/log/dot-20260126-162808.log\n D .commanding/log/dot-20260126-163412.log\n D .commanding/log/dot-20260126-163528.log\n D .commanding/log/dot-20260126-163553.log\n D .commanding/log/dot-20260126-163611.log\n D .commanding/log/dot-20260126-164502.log\n D .commanding/log/dot-20260126-164542.log\n D .commanding/log/dot-20260126-164846.log\n D .commanding/log/dot-20260126-170547.log\n D .commanding/logs/actions.log\n D .commanding/misc/cache.sh\n D .commanding/misc/commanding.sh\n D .commanding/misc/fixture.sh\n D .commanding/misc/history.sh\n D .commanding/misc/patch_ziper.sh\n D .commanding/misc/route.sh\n D .commanding/misc/schema.sh\n D .commanding/misc/zipper.sh\n D .commanding/patch_zipper.sh\n D .commanding/policy/dot-accept.yaml\n D .commanding/policy/slice-exclude.json\n D .commanding/ps1/delta-slice-builder.ps1\n D .commanding/ps1/repo-map-builder.ps1\n D .commanding/reorganize-tests.ps1\n D .commanding/run.sh\n D .commanding/sh/cache.sh\n D .commanding/sh/composer.sh\n D .commanding/sh/deploy.sh\n D .commanding/sh/docker.sh\n D .commanding/sh/dot.sh\n D .commanding/sh/fixture.sh\n D .commanding/sh/inspection.sh\n D .commanding/sh/log.sh\n D .commanding/sh/migration.sh\n D .commanding/sh/route.sh\n D .commanding/sh/schema.sh\n D .commanding/sh/server.sh\n D .commanding/sh/service.sh\n D .commanding/sh/test.sh\n D .commanding/test/commanding.sh\n D .commanding/test/notificationTest.sh\n D .commanding/test/test.sh\n D .commanding/zipper.sh\nAM .sandbox/.env\nA  .sandbox/.env.test\nA  .sandbox/MANIFEST.md\nA  .sandbox/README.md\nA  .sandbox/bin/console\nAM .sandbox/composer.json\nAM .sandbox/config/bundles.php\nA  .sandbox/config/packages/doctrine.yaml\nA  .sandbox/config/packages/doctrine_migrations.yaml\nA  .sandbox/config/packages/framework.yaml\nA  .sandbox/config/packages/monolog.yaml\nA  .sandbox/config/packages/twig.yaml\nA  .sandbox/config/routes.yaml\nA  .sandbox/install-sandbox.cmd\nA  .sandbox/phpunit.xml\nA  .sandbox/policy/entrypoints.yaml\nA  .sandbox/policy/sandbox-contract.yaml\nA  .sandbox/policy/watchdog-integration.yaml\nA  .sandbox/public/index.php\nA  .sandbox/sandbox-console.cmd\nA  .sandbox/sandbox-health.cmd\nA  .sandbox/sandbox-smoke.cmd\nA  .sandbox/sandbox-tests.cmd\nAM .sandbox/src/Command/AppSandboxHealthCommand.php\nAM .sandbox/src/Command/AppSandboxLogEmitCommand.php\nAM .sandbox/src/Controller/HomeController.php\nAM .sandbox/src/Controller/ProbeController.php\nAM .sandbox/src/DataFixtures/AppFixtures.php\nAD .sandbox/src/Entity/SandboxNote.php\nA  .sandbox/src/Kernel.php\nA  .sandbox/src/Service/CacheProbeService.php\nA  .sandbox/start-sandbox-server.cmd\nA  .sandbox/stop-sandbox-server.cmd\nA  .sandbox/templates/home/index.html.twig\nA  .sandbox/tests/Smoke/KernelBootTest.php\nA  .sandbox/tests/bootstrap.php\nA  .sandbox/vendor/autoload.php\nA  .sandbox/vendor/autoload_runtime.php\nA  .sandbox/vendor/bin/doctrine-migrations\nA  .sandbox/vendor/bin/doctrine-migrations.bat\nA  .sandbox/vendor/bin/patch-type-declarations\nA  .sandbox/vendor/bin/patch-type-declarations.bat\nA  .sandbox/vendor/bin/php-parse\nA  .sandbox/vendor/bin/php-parse.bat\nA  .sandbox/vendor/bin/phpunit\nA  .sandbox/vendor/bin/phpunit.bat\nA  .sandbox/vendor/bin/simple-phpunit\nA  .sandbox/vendor/bin/simple-phpunit.bat\nA  .sandbox/vendor/bin/sql-formatter\nA  .sandbox/vendor/bin/sql-formatter.bat\nA  .sandbox/vendor/bin/var-dump-server\nA  .sandbox/vendor/bin/var-dump-server.bat\nA  .sandbox/vendor/bin/yaml-lint\nA  .sandbox/vendor/bin/yaml-lint.bat\nA  .sandbox/vendor/composer/ClassLoader.php\nA  .sandbox/vendor/composer/InstalledVersions.php\nA  .sandbox/vendor/composer/LICENSE\nA  .sandbox/vendor/composer/autoload_classmap.php\nA  .sandbox/vendor/composer/autoload_files.php\nA  .sandbox/vendor/composer/autoload_namespaces.php\nAM .sandbox/vendor/composer/autoload_psr4.php\nA  .sandbox/vendor/composer/autoload_real.php\nAM .sandbox/vendor/composer/autoload_static.php\nAM .sandbox/vendor/composer/installed.json\nAM .sandbox/vendor/compos"
+        },
+        "git_recent_commits": {
+          "exit_code": 0,
+          "output": "ad7c89e fix\nc791edc Merge remote-tracking branch 'origin/master'\nfd98397 inspection\na5ab7c4 Merge pull request #1 from smartresponsor/codex/review-codebase-for-issues-and-suggest-fixes\n933d06a Use return with fallback in menu exits"
+        },
+        "php_version": {
+          "exit_code": 0,
+          "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+        },
+        "python_version": {
+          "exit_code": 0,
+          "output": "Python 3.14.6"
+        },
+        "top_level_tree": {
+          "exit_code": 0,
+          "output": ".codebase-memory/\n.codebase-memory/.gitattributes\n.codebase-memory/artifact.json\n.codebase-memory/graph.db.zst\n.editorconfig\n.env.test\n.github/\n.github/prompts/\n.github/workflows/\n.gitignore\n.idea/\n.idea/inspectionProfiles/\n.idea/php.xml\n.idea/phpunit.xml\n.idea/vcs.xml\n.idea/workspace.xml\n.sandbox/\n.sandbox/.editorconfig\n.sandbox/.env\n.sandbox/.env.dev\n.sandbox/.env.test\n.sandbox/.gitignore\n.sandbox/.phpunit.cache/\n.sandbox/bin/\n.sandbox/compose.override.yaml\n.sandbox/compose.yaml\n.sandbox/composer.json\n.sandbox/composer.lock\n.sandbox/config/\n.sandbox/install-sandbox.cmd\n.sandbox/MANIFEST.md\n.sandbox/migrations/\n.sandbox/phpunit.dist.xml\n.sandbox/phpunit.xml\n.sandbox/policy/\n.sandbox/public/\n.sandbox/README.md\n.sandbox/sandbox-console.cmd\n.sandbox/sandbox-health.cmd\n.sandbox/sandbox-smoke.cmd\n.sandbox/sandbox-tests.cmd\n.sandbox/src/\n.sandbox/start-sandbox-server.cmd\n.sandbox/stop-sandbox-server.cmd\n.sandbox/symfony.lock\n.sandbox/templates/\n.sandbox/tests/\n.sandbox/var/\n.sandbox/vendor/\nAGENTS.md\ncommanding.cmd\ncommanding.lnk\ncommanding.ps1\ncommanding.sh\ndocker/\ndocker/.env.example\ndocker/commanding.sh\ndocker/compose/\ndocker/compose.yml\ndocker/docker.sh\ndocker/MANIFEST.md\ndocker/nginx/\ndocker/php/\ndocker/ps1/\ndocker/README.md\ndocker/service/\ndocker/tool/\ngit/\ngit/commanding.sh\ngit/git_diff.sh\ngit/git_status.sh\ngit/git_sync.sh\nlib/\nlib/ui.sh\nlogs/\nlogs/actions.log\nlogs/error.log\nMANIFEST.md\npatch_zipper.sh\nps1/\nps1/delta-slice-builder.ps1\nps1/repo-map-builder.ps1\nREADME.md\nrun.sh\nsh/\nsh/agent-prepare.sh\nsh/audit-category-rotate.sh\nsh/backup-category-canary-export.sh\nsh/backup-category-create.sh\nsh/backup-category-pack.sh\nsh/backup-category-restore.sh\nsh/cache.sh\nsh/canary-catalog-run.sh\nsh/chat-bind.sh\nsh/chat-clear.sh\nsh/chat-show.sh\nsh/composer.sh\nsh/deploy.sh\nsh/docker-wait-for-db.sh\nsh/docker.sh\nsh/docs-category-build.sh\nsh/docs-category-consolidate.sh\nsh/dot.sh\nsh/dx-category-load-fixtures.sh\nsh/dx-category-seed.sh\nsh/export-category-audit.sh\nsh/export-category-telemetry.sh\nsh/fixture.sh\nsh/harness-category-run.sh\nsh/health-lib.sh\nsh/health-list-probes.sh\nsh/health-open-failed-log.sh\nsh/health-probe-cache-clear.sh\nsh/health-probe-console.sh\nsh/health-probe-fixtures-load.sh\nsh/health-probe-migrations-status.sh\nsh/health-probe-phpunit.sh\nsh/health-probe-routes.sh\nsh/health-probe-sandbox-command.sh\nsh/health-probe-schema-validate.sh"
+        },
+        "repo_file_count": {
+          "exit_code": 0,
+          "output": "6076"
+        }
+      }
+    },
+    {
+      "status": "error",
       "component": "complying",
       "title": "Complying",
       "mode": "chatgpt-cli",
@@ -786,7 +853,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Complying",
-        "timestamp_utc": "2026-10-06T09:27:44.654648+00:00",
+        "timestamp_utc": "2026-10-07T09:27:46.206169+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -841,6 +908,73 @@
     },
     {
       "status": "error",
+      "component": "consuming",
+      "title": "Consuming",
+      "mode": "chatgpt-cli",
+      "error_type": "RuntimeError",
+      "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:23\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  23 | \u001b[0m … pe Leaf)) { \u001b[36;1mthrow \"Console MCP bridge not found: $consoleMcpBridge\"\u001b[0m } …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConsole MCP bridge not found: D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-console-mcp-bridge.ps1\u001b[0m",
+      "registry_entry": {
+        "component_id": "consuming",
+        "component_title": "Consuming",
+        "github_repository": "",
+        "default_branch": "master",
+        "enabled": true,
+        "report_path": ".antora-src/modules/ROOT/pages/component/consuming/report/index.adoc",
+        "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+      },
+      "facts": {
+        "repo_root": "D:\\PhpstormProjects\\www\\Consuming",
+        "timestamp_utc": "2026-10-07T09:27:48.268038+00:00",
+        "exists": true,
+        "git_branch": {
+          "exit_code": 0,
+          "output": "master"
+        },
+        "git_commit": {
+          "exit_code": 0,
+          "output": "15c6d6f1cb65d06f3a0df8489532cd61e7392651"
+        },
+        "git_exact_tag": {
+          "exit_code": 128,
+          "output": "fatal: No names found, cannot describe anything."
+        },
+        "has_composer_json": false,
+        "has_package_json": false,
+        "has_phpstan_neon": false,
+        "has_phpstan_neon_dist": false,
+        "has_phpunit_xml": false,
+        "has_phpunit_xml_dist": false,
+        "has__github_workflows": true,
+        "has__antora-src_modules_ROOT_nav_adoc": false,
+        "has__antora-src_modules_ROOT_pages_index_adoc": false,
+        "git_status": {
+          "exit_code": 0,
+          "output": "?? AGENTS.md"
+        },
+        "git_recent_commits": {
+          "exit_code": 0,
+          "output": "15c6d6f Repair consuming workflow for Consuming\n862f689 fix\n220e280 first"
+        },
+        "php_version": {
+          "exit_code": 0,
+          "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+        },
+        "python_version": {
+          "exit_code": 0,
+          "output": "Python 3.14.6"
+        },
+        "top_level_tree": {
+          "exit_code": 0,
+          "output": ".consuming/\n.consuming/consuming.json\n.consuming/consuming.ps1\n.consuming/consuming.yml\n.gate/\n.gate/check/\n.gate/env/\n.gate/install/\n.gate/quality/\n.gate/release/\n.gate/report/\n.gate/security/\n.github/\n.github/workflows/\n.intelligence/\n.intelligence/intelligence-engine.ps1\n.intelligence/intelligence-install.ps1\n.intelligence/intelligence-run.ps1\n.intelligence/intelligence.json\n.intelligence/workflows/\n.release/\n.release/publish/\n.release/sign/\n.release/tag/\n.smoke/\n.smoke/compose/\n.smoke/k6/\n.smoke/probe/\nAGENTS.md\nconsuming.json\nconsuming.ps1\nconsuming.yml\nREADME.md\nvar/"
+        },
+        "repo_file_count": {
+          "exit_code": 0,
+          "output": "45"
+        }
+      }
+    },
+    {
+      "status": "error",
       "component": "containerizing",
       "title": "Containerizing",
       "mode": "chatgpt-cli",
@@ -857,7 +991,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Containerizing",
-        "timestamp_utc": "2026-10-06T09:27:46.560868+00:00",
+        "timestamp_utc": "2026-10-07T09:27:49.338393+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -908,6 +1042,77 @@
     },
     {
       "status": "error",
+      "component": "discovering",
+      "title": "Discovering",
+      "mode": "chatgpt-cli",
+      "error_type": "RuntimeError",
+      "error": "Console MCP scoring CLI failed (1): \u001b[31;1mException: \u001b[0mD:\\PhpstormProjects\\www\\Atlassing\\tool\\atlas-console-mcp-score-cli.ps1:23\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m  23 | \u001b[0m … pe Leaf)) { \u001b[36;1mthrow \"Console MCP bridge not found: $consoleMcpBridge\"\u001b[0m } …\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mConsole MCP bridge not found: D:\\PhpstormProjects\\www\\mcp\\chatgpt-loop\\tool\\runner-console-mcp-bridge.ps1\u001b[0m",
+      "registry_entry": {
+        "component_id": "discovering",
+        "component_title": "Discovering",
+        "github_repository": "smartresponsor/discovering",
+        "default_branch": "master",
+        "enabled": true,
+        "report_path": ".antora-src/modules/ROOT/pages/component/discovering/report/index.adoc",
+        "notes": "Set enabled=true and github_repository once this component is connected to the scheduled assessment runner."
+      },
+      "facts": {
+        "repo_root": "D:\\PhpstormProjects\\www\\Discovering",
+        "timestamp_utc": "2026-10-07T09:27:50.453110+00:00",
+        "exists": true,
+        "git_branch": {
+          "exit_code": 0,
+          "output": "master"
+        },
+        "git_commit": {
+          "exit_code": 0,
+          "output": "0ff66ca86d6383f285ef11d2e73ecd6b602ae74d"
+        },
+        "git_exact_tag": {
+          "exit_code": 128,
+          "output": "fatal: No names found, cannot describe anything."
+        },
+        "has_composer_json": true,
+        "has_package_json": true,
+        "has_phpstan_neon": false,
+        "has_phpstan_neon_dist": true,
+        "has_phpunit_xml": false,
+        "has_phpunit_xml_dist": true,
+        "has__github_workflows": true,
+        "has__antora-src_modules_ROOT_nav_adoc": false,
+        "has__antora-src_modules_ROOT_pages_index_adoc": false,
+        "git_status": {
+          "exit_code": 0,
+          "output": "D .gating/README.md\n M AGENTS.md"
+        },
+        "git_recent_commits": {
+          "exit_code": 0,
+          "output": "0ff66ca chore: record Discovering Canon052 RC closure\nee428ed fix: align Doctrine migrations bundle with host\n8af7dde fix: close Discovering canon OpenAPI runtime\nf46d683 feat(failure): adopt mandatory Failing runtime\n0d02197 chore: record discovering rc checkpoint"
+        },
+        "php_version": {
+          "exit_code": 0,
+          "output": "PHP 8.4.13 (cli) (built: Sep 23 2025 14:36:17) (NTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nZend Engine v4.4.13, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.13, Copyright (c), by Zend Technologies\n    with Xdebug v3.5.1, Copyright (c) 2002-2026, by Derick Rethans"
+        },
+        "python_version": {
+          "exit_code": 0,
+          "output": "Python 3.14.6"
+        },
+        "top_level_tree": {
+          "exit_code": 0,
+          "output": ".console-mcp/\n.console-mcp/local-php-server-8000.json\n.console-mcp/local-php-server-8123.json\n.console-mcp/local-php-server-log/\n.console-mcp/powershell-script-run/\n.env\n.env.example\n.env.test\n.gating/\n.github/\n.github/workflows/\n.gitignore\n.php-cs-fixer.cache\n.php-cs-fixer.dist.php\n.php-cs-fixer.php\nAGENTS.md\nbin/\nbin/console\nCMCP_CHANGELOG.md\ncomposer.json\ncomposer.lock\ncomposer.prod.json\nconfig/\nconfig/bundles.php\nconfig/MANIFEST.md\nconfig/openapi/\nconfig/packages/\nconfig/reference.php\nconfig/reference.php.bak-name-entity-20260611-071541\nconfig/routes/\nconfig/services/\nconfig/services.yaml\nconfig/services_test.yaml\ndocs/\ndocs/antora.yml\ndocs/component/\ndocs/discovery/\ndocs/generated/\ndocs/MANIFEST.md\ndocs/manifests/\ndocs/modules/\nLICENSE\nmigrations/\nmigrations/.gitkeep\nmigrations/Version20260923192125.php\nnode_modules/\nnode_modules/.bin/\nnode_modules/.package-lock.json\nnode_modules/@playwright/\nnode_modules/playwright/\nnode_modules/playwright-core/\nNOTICE\npackage-lock.json\npackage.json\nphpstan.neon.dist\nphpunit.xml.dist\nplaywright.config.ts\npublic/\npublic/index.php\nREADME.md\nreport/\nreport/.gitkeep\nreport/discovering-installability-proof-2026-04-03.md\nreport/discovering-status-2026-04-03.md\nreport/legacy/\nresources/\nresources/discovery/\nsrc/\nsrc/Builder/\nsrc/Command/\nsrc/Controller/\nsrc/DependencyInjection/\nsrc/DiscoveringBundle.php\nsrc/DTO/\nsrc/Entity/\nsrc/EventSubscriber/\nsrc/Factory/\nsrc/Form/\nsrc/Kernel.php\nsrc/Lifecycle/\nsrc/MANIFEST.md\nsrc/Normalizer/\nsrc/Policy/\nsrc/Provider/\nsrc/Repository/\nsrc/RepositoryInterface/\nsrc/Resolver/\nsrc/Service/\nsrc/ServiceInterface/\nsrc/Subscriber/\nsrc/ValueObject/\ntemplates/\ntemplates/base.html.twig\ntemplates/bundles/\ntemplates/discovery/\ntemplates/index.html.twig\ntemplates/interfacing/\ntemplates/management/\ntemplates/MANIFEST.md\ntest-results/\ntest-results/.last-run.json\ntests/\ntests/Behavioral/\ntests/bootstrap.php\ntests/Contract/\ntests/Functional/\ntests/MANIFEST.md\ntests/Playwright/\ntests/Support/\ntests/Unit/\ntools/\ntools/behavioral_ui_coverage.php\ntools/console_container_evidence.php\ntools/discovering_canon_audit.php\ntools/discovering_canon_audit.php.bak-name-entity-20260611-071541\ntools/docblock_policy_check.php\ntools/doctrine_schema_parity.php\ntools/evidence_artifact_cleanup.php\ntools/evidence_bundle.php\ntools/evidence_index.php"
+        },
+        "repo_file_count": {
+          "exit_code": 0,
+          "output": "489"
+        },
+        "key_file_excerpts": {
+          "composer.json": "{\n  \"name\": \"discovering/discovery\",\n  \"description\": \"Discovering process app\",\n  \"type\": \"project\",\n  \"license\": \"PolyForm-Noncommercial-1.0.0\",\n  \"require\": {\n    \"ext-json\": \"*\",\n    \"ext-pdo\": \"*\",\n    \"ext-pdo_sqlite\": \"*\",\n    \"php\": \">=8.4\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/dotenv\": \"^8.1\",\n    \"symfony/error-handler\": \"^8.1\",\n    \"symfony/form\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/twig-bundle\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"twig/twig\": \"^3.0\",\n    \"doctrine/orm\": \"^3.6\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^4.0\",\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.5\",\n    \"interfacing/interface\": \"dev-master\",\n    \"nelmio/api-doc-bundle\": \"^5.6\",\n    \"objecting/object\": \"dev-master\",\n    \"tabling/table\": \"dev-master\",\n    \"viewing/view\": \"dev-master\",\n    \"symfony/security-bundle\": \"^8.1\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Discovering\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"require-dev\": {\n    \"phpunit/phpunit\": \"^11.5\",\n    \"symfony/browser-kit\": \"^8.1\",\n    \"symfony/css-selector\": \"^8.1\",\n    \"symfony/dom-crawler\": \"^8.1\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/test-pack\": \"^1.2\",\n    \"friendsofphp/php-cs-fixer\": \"^3.66\",\n    \"phpstan/phpstan\": \"^2.1\",\n    \"gating/gate\": \"dev-master\"\n  },\n  \"scripts\": {\n    \"test\": \"phpunit\",\n    \"lint:php\": \"php tools/lint_php.php\",\n    \"validate:composer\": \"composer validate --strict\",\n    \"validate:prod\": \"composer validate --strict --no-check-all composer.prod.json\",\n    \"verify:runtime-preflight\": \"php tools/runtime_preflight.php\",\n    \"verify:console\": \"php bin/console list --raw\",\n    \"verify:schema\": \"php tools/doctrine_schema_parity.php\",\n    \"verify:migrations\": \"@verify:schema\",\n    \"verify:schema:current\": \"php bin/console doctrine:schema:validate --em=infra\",\n    \"verify:migrations:current\": \"php bin/console doctrine:migrations:up-to-date --em=infra\",\n    \"test:unit\": \"phpunit --testsuite Unit\",\n    \"test:object-identity\": \"phpunit tests/Unit/Discovery/DiscoveringObjectIdentityContractTest.php\",\n    \"test:functional\": \"phpunit --testsuite Functional\",\n    \"test:contract\": \"phpunit --testsuite Contract\",\n    \"test:behavioral\": \"phpunit --testsuite Behavioral\",\n    \"test:behavioral-coverage\": \"php tools/behavioral_ui_coverage.php\",\n    \"test:all\": [\n      \"@test:unit\",\n      \"@test:contract\",\n      \"@test:behavioral\",\n      \"@test:functional\"\n    ],\n    \"test:coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"ci\": [\n      \"@ci:local\",\n      \"@ci:runtime\",\n      \"@ci:quality\"\n    ],\n    \"analyse\": \"php tools/qa_guard.php analyse\",\n    \"phpstan\": \"phpstan analyse --configuration=phpstan.neon.dist --memory-limit=1G\",\n    \"lint:cs\": \"php tools/qa_guard.php lint:cs\",\n    \"lint:cs:fix\": \"php tools/qa_guard.php lint:cs:fix\",\n    \"php-cs-fixer\": \"php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php\",\n    \"php-cs-fixer:fix\": \"php-cs-fixer fix --config=.php-cs-fixer.dist.php\",\n    \"verify:docblocks\": \"php tools/docblock_policy_check.php\",\n    \"verify:security\": \"php tools/security_preflight.php\",\n    \"docs:openapi:dump:public\": \"php tools/qa_guard.php docs:openapi:dump:public\",\n    \"docs:openapi:dump:management\": \"php tools/qa_guard.php docs:openapi:dump:management\",\n    \"verify:runtime-extensions\": \"php tools/runtime_preflight.php --check-runtime-extensions\",\n    \"verify:composer-runtime\": \"php tools/runtime_preflight.php --require-composer\",\n    \"verify:vendor-runtime\": \"php tools/runtime_preflight.php --require-vendor\",\n    \"verify:test-runtime\": \"php tools/runtime_preflight.php --test-runtime\",\n    \"ci:local",
+          "package.json": "{\n  \"name\": \"@discovering/browser-tests\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"test\": \"playwright test\",\n    \"test:ui\": \"playwright test\",\n    \"test:ui:headed\": \"playwright test --headed\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.53.0\"\n  }\n}\n"
+        }
+      }
+    },
+    {
+      "status": "error",
       "component": "documentating",
       "title": "Documentating",
       "mode": "chatgpt-cli",
@@ -925,7 +1130,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Documentating",
-        "timestamp_utc": "2026-10-06T09:27:47.880136+00:00",
+        "timestamp_utc": "2026-10-07T09:27:52.650518+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -997,7 +1202,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Evaluating",
-        "timestamp_utc": "2026-10-06T09:27:50.191431+00:00",
+        "timestamp_utc": "2026-10-07T09:27:54.587561+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1064,7 +1269,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Facting",
-        "timestamp_utc": "2026-10-06T09:27:51.212205+00:00",
+        "timestamp_utc": "2026-10-07T09:27:55.812456+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1135,7 +1340,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Gating",
-        "timestamp_utc": "2026-10-06T09:27:52.624440+00:00",
+        "timestamp_utc": "2026-10-07T09:27:57.476508+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1205,7 +1410,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Indexing",
-        "timestamp_utc": "2026-10-06T09:27:53.954601+00:00",
+        "timestamp_utc": "2026-10-07T09:27:59.047688+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1275,7 +1480,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Interfacing",
-        "timestamp_utc": "2026-10-06T09:27:55.862564+00:00",
+        "timestamp_utc": "2026-10-07T09:28:01.791233+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1346,7 +1551,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Locating",
-        "timestamp_utc": "2026-10-06T09:27:57.653562+00:00",
+        "timestamp_utc": "2026-10-07T09:28:04.257222+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1417,7 +1622,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Messaging",
-        "timestamp_utc": "2026-10-06T09:28:00.303000+00:00",
+        "timestamp_utc": "2026-10-07T09:28:07.286958+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1488,7 +1693,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Mobiling",
-        "timestamp_utc": "2026-10-06T09:28:04.174132+00:00",
+        "timestamp_utc": "2026-10-07T09:28:11.743830+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1555,7 +1760,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Objecting",
-        "timestamp_utc": "2026-10-06T09:28:09.625091+00:00",
+        "timestamp_utc": "2026-10-07T09:28:16.593829+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1625,7 +1830,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Observabiliting",
-        "timestamp_utc": "2026-10-06T09:28:11.474025+00:00",
+        "timestamp_utc": "2026-10-07T09:28:18.463394+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1696,7 +1901,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Ordering",
-        "timestamp_utc": "2026-10-06T09:28:12.894141+00:00",
+        "timestamp_utc": "2026-10-07T09:28:20.227589+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1767,7 +1972,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Paying",
-        "timestamp_utc": "2026-10-06T09:28:16.269727+00:00",
+        "timestamp_utc": "2026-10-07T09:28:23.287644+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1838,7 +2043,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Projecting",
-        "timestamp_utc": "2026-10-06T09:28:18.921593+00:00",
+        "timestamp_utc": "2026-10-07T09:28:25.987328+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1909,7 +2114,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Retailing",
-        "timestamp_utc": "2026-10-06T09:28:21.074590+00:00",
+        "timestamp_utc": "2026-10-07T09:28:28.159518+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1980,7 +2185,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Rolling",
-        "timestamp_utc": "2026-10-06T09:28:22.313607+00:00",
+        "timestamp_utc": "2026-10-07T09:28:29.662705+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2051,7 +2256,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Shipping",
-        "timestamp_utc": "2026-10-06T09:28:24.169430+00:00",
+        "timestamp_utc": "2026-10-07T09:28:41.378890+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2122,7 +2327,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Tagging",
-        "timestamp_utc": "2026-10-06T09:28:25.871461+00:00",
+        "timestamp_utc": "2026-10-07T09:28:43.751513+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2193,7 +2398,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Taxating",
-        "timestamp_utc": "2026-10-06T09:28:27.465010+00:00",
+        "timestamp_utc": "2026-10-07T09:28:45.772677+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2264,7 +2469,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Vendoring",
-        "timestamp_utc": "2026-10-06T09:28:29.672899+00:00",
+        "timestamp_utc": "2026-10-07T09:28:48.418456+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2335,7 +2540,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Attaching",
-        "timestamp_utc": "2026-10-06T09:28:31.740105+00:00",
+        "timestamp_utc": "2026-10-07T09:28:50.534088+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2406,7 +2611,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Atlassing",
-        "timestamp_utc": "2026-10-06T09:28:33.014763+00:00",
+        "timestamp_utc": "2026-10-07T09:28:52.276387+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2414,7 +2619,7 @@
         },
         "git_commit": {
           "exit_code": 0,
-          "output": "b5aa4d0c48e79de62e490469b5e6fa79f45afc54"
+          "output": "4a0957ba89267e24558149fb37c925c6b5c47cc4"
         },
         "git_exact_tag": {
           "exit_code": 128,
@@ -2431,11 +2636,11 @@
         "has__antora-src_modules_ROOT_pages_index_adoc": false,
         "git_status": {
           "exit_code": 0,
-          "output": "M var/atlas/generated/chatgpt-cli/accessing.prompt.txt\n M var/atlas/generated/chatgpt-cli/addressing.prompt.txt\n M var/atlas/generated/chatgpt-cli/analysing.prompt.txt\n M var/atlas/generated/chatgpt-cli/anchoring.prompt.txt\n M var/atlas/generated/chatgpt-cli/applicating.prompt.txt\n M var/atlas/generated/chatgpt-cli/attaching.prompt.txt\n M var/atlas/generated/chatgpt-cli/automating.prompt.txt\n M var/atlas/generated/chatgpt-cli/billing.prompt.txt\n M var/atlas/generated/chatgpt-cli/boundarying.prompt.txt\n M var/atlas/generated/chatgpt-cli/canonization.prompt.txt\n M var/atlas/generated/chatgpt-cli/cataloging.prompt.txt\n M var/atlas/generated/chatgpt-cli/codexing.prompt.txt\n M var/atlas/generated/chatgpt-cli/complying.prompt.txt\n M var/atlas/generated/chatgpt-cli/containerizing.prompt.txt\n M var/atlas/generated/chatgpt-cli/documentating.prompt.txt\n M var/atlas/generated/chatgpt-cli/evaluating.prompt.txt\n M var/atlas/generated/chatgpt-cli/facting.prompt.txt\n M var/atlas/generated/chatgpt-cli/gating.prompt.txt\n M var/atlas/generated/chatgpt-cli/indexing.prompt.txt\n M var/atlas/generated/chatgpt-cli/interfacing.prompt.txt\n M var/atlas/generated/chatgpt-cli/locating.prompt.txt\n M var/atlas/generated/chatgpt-cli/messaging.prompt.txt\n M var/atlas/generated/chatgpt-cli/mobiling.prompt.txt\n M var/atlas/generated/chatgpt-cli/objecting.prompt.txt\n M var/atlas/generated/chatgpt-cli/observabiliting.prompt.txt\n M var/atlas/generated/chatgpt-cli/ordering.prompt.txt\n M var/atlas/generated/chatgpt-cli/paying.prompt.txt\n M var/atlas/generated/chatgpt-cli/projecting.prompt.txt\n M var/atlas/generated/chatgpt-cli/retailing.prompt.txt\n M var/atlas/generated/chatgpt-cli/rolling.prompt.txt\n M var/atlas/generated/chatgpt-cli/shipping.prompt.txt\n M var/atlas/generated/chatgpt-cli/tagging.prompt.txt\n M var/atlas/generated/chatgpt-cli/taxating.prompt.txt\n M var/atlas/generated/chatgpt-cli/vendoring.prompt.txt\n M var/atlas/generated/selection-plan.json"
+          "output": "M var/atlas/generated/chatgpt-cli/accessing.prompt.txt\n M var/atlas/generated/chatgpt-cli/addressing.prompt.txt\n M var/atlas/generated/chatgpt-cli/analysing.prompt.txt\n M var/atlas/generated/chatgpt-cli/anchoring.prompt.txt\n M var/atlas/generated/chatgpt-cli/applicating.prompt.txt\n M var/atlas/generated/chatgpt-cli/attaching.prompt.txt\n M var/atlas/generated/chatgpt-cli/automating.prompt.txt\n M var/atlas/generated/chatgpt-cli/billing.prompt.txt\n M var/atlas/generated/chatgpt-cli/boundarying.prompt.txt\n M var/atlas/generated/chatgpt-cli/canonization.prompt.txt\n M var/atlas/generated/chatgpt-cli/cataloging.prompt.txt\n M var/atlas/generated/chatgpt-cli/codexing.prompt.txt\n M var/atlas/generated/chatgpt-cli/commanding.prompt.txt\n M var/atlas/generated/chatgpt-cli/complying.prompt.txt\n M var/atlas/generated/chatgpt-cli/consuming.prompt.txt\n M var/atlas/generated/chatgpt-cli/containerizing.prompt.txt\n M var/atlas/generated/chatgpt-cli/discovering.prompt.txt\n M var/atlas/generated/chatgpt-cli/documentating.prompt.txt\n M var/atlas/generated/chatgpt-cli/evaluating.prompt.txt\n M var/atlas/generated/chatgpt-cli/facting.prompt.txt\n M var/atlas/generated/chatgpt-cli/gating.prompt.txt\n M var/atlas/generated/chatgpt-cli/indexing.prompt.txt\n M var/atlas/generated/chatgpt-cli/interfacing.prompt.txt\n M var/atlas/generated/chatgpt-cli/locating.prompt.txt\n M var/atlas/generated/chatgpt-cli/messaging.prompt.txt\n M var/atlas/generated/chatgpt-cli/mobiling.prompt.txt\n M var/atlas/generated/chatgpt-cli/objecting.prompt.txt\n M var/atlas/generated/chatgpt-cli/observabiliting.prompt.txt\n M var/atlas/generated/chatgpt-cli/ordering.prompt.txt\n M var/atlas/generated/chatgpt-cli/paying.prompt.txt\n M var/atlas/generated/chatgpt-cli/projecting.prompt.txt\n M var/atlas/generated/chatgpt-cli/retailing.prompt.txt\n M var/atlas/generated/chatgpt-cli/rolling.prompt.txt\n M var/atlas/generated/chatgpt-cli/shipping.prompt.txt\n M var/atlas/generated/chatgpt-cli/tagging.prompt.txt\n M var/atlas/generated/chatgpt-cli/taxating.prompt.txt\n M var/atlas/generated/chatgpt-cli/vendoring.prompt.txt\n M var/atlas/generated/selection-plan.json"
         },
         "git_recent_commits": {
           "exit_code": 0,
-          "output": "b5aa4d0 fix: finalize Atlassing schema parity verification\nab21315 chore(atlas): refresh local assessment snapshots 2026-10-05 04:30\nd03b353 chore: record Atlassing RC task checkpoint\n89cc0d2 chore: record Atlassing RC verification checkpoint\nf7f1d45 Harden Atlas status diagnostics"
+          "output": "4a0957b chore: record Atlassing follow-up verification\nfe5d8f3 chore(atlas): refresh local assessment snapshots 2026-10-06 04:28\nb5aa4d0 fix: finalize Atlassing schema parity verification\nab21315 chore(atlas): refresh local assessment snapshots 2026-10-05 04:30\nd03b353 chore: record Atlassing RC task checkpoint"
         },
         "php_version": {
           "exit_code": 0,
@@ -2451,7 +2656,7 @@
         },
         "repo_file_count": {
           "exit_code": 0,
-          "output": "2192"
+          "output": "2279"
         },
         "key_file_excerpts": {
           "composer.json": "{\n  \"name\": \"atlassing/atlas\",\n  \"description\": \"Atlas component for platform quality, maturity, readiness, and documentation coverage surfaces.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Failing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"failing/failure\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^3.4\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/orm\": \"^3.4\",\n    \"symfony/process\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Atlassing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Atlassing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"test:functional\": \"phpunit --testsuite functional\",\n    \"test:browser\": \"phpunit --testsuite browser\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"gating:check\": \"php vendor/bin/gating check --target=. --profile=config/atlas_gating_profile.yaml --rule-set=config/atlas_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml\",\n    \"phpstan\": \"phpstan analyse --memory-limit=1G\",\n    \"test\": \"phpunit\",\n    \"schema:parity\": [\n      \"@php bin/console doctrine:migrations:migrate --no-interaction --env=test\",\n      \"@php bin/console doctrine:schema:validate --env=test\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"quality\": [\n      \"@cs:check\",\n      ",
@@ -2477,7 +2682,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Relating",
-        "timestamp_utc": "2026-10-06T09:28:34.214422+00:00",
+        "timestamp_utc": "2026-10-07T09:28:53.585729+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2548,7 +2753,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Managing",
-        "timestamp_utc": "2026-10-06T09:28:36.078002+00:00",
+        "timestamp_utc": "2026-10-07T09:28:55.708430+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2619,7 +2824,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Collectioning",
-        "timestamp_utc": "2026-10-06T09:28:37.844498+00:00",
+        "timestamp_utc": "2026-10-07T09:28:57.465394+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2690,7 +2895,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Tabling",
-        "timestamp_utc": "2026-10-06T09:28:40.130025+00:00",
+        "timestamp_utc": "2026-10-07T09:28:58.578488+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2761,7 +2966,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\temporaring",
-        "timestamp_utc": "2026-10-06T09:28:41.301934+00:00",
+        "timestamp_utc": "2026-10-07T09:29:00.029738+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2832,7 +3037,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Notifying",
-        "timestamp_utc": "2026-10-06T09:28:44.800187+00:00",
+        "timestamp_utc": "2026-10-07T09:29:04.005341+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2903,7 +3108,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Cruding",
-        "timestamp_utc": "2026-10-06T09:28:46.205743+00:00",
+        "timestamp_utc": "2026-10-07T09:29:05.317964+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2973,7 +3178,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Delivering",
-        "timestamp_utc": "2026-10-06T09:28:48.094318+00:00",
+        "timestamp_utc": "2026-10-07T09:29:07.031915+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -3042,10 +3247,13 @@
     "cataloging",
     "codexing",
     "collectioning",
+    "commanding",
     "complying",
+    "consuming",
     "containerizing",
     "cruding",
     "delivering",
+    "discovering",
     "documentating",
     "evaluating",
     "facting",
