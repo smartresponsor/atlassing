@@ -1764,7 +1764,7 @@ Current snapshot metric context:
 Deterministic repository facts:
 {
   "repo_root": "D:\\PhpstormProjects\\www\\Atlassing",
-  "timestamp_utc": "2026-10-07T09:28:52.276387+00:00",
+  "timestamp_utc": "2026-10-08T09:28:28.816242+00:00",
   "exists": true,
   "git_branch": {
     "exit_code": 0,
@@ -1772,7 +1772,7 @@ Deterministic repository facts:
   },
   "git_commit": {
     "exit_code": 0,
-    "output": "4a0957ba89267e24558149fb37c925c6b5c47cc4"
+    "output": "7ea79dd8fcbfbc076953d13b334d4dde73dbf645"
   },
   "git_exact_tag": {
     "exit_code": 128,
@@ -1793,7 +1793,7 @@ Deterministic repository facts:
   },
   "git_recent_commits": {
     "exit_code": 0,
-    "output": "4a0957b chore: record Atlassing follow-up verification\nfe5d8f3 chore(atlas): refresh local assessment snapshots 2026-10-06 04:28\nb5aa4d0 fix: finalize Atlassing schema parity verification\nab21315 chore(atlas): refresh local assessment snapshots 2026-10-05 04:30\nd03b353 chore: record Atlassing RC task checkpoint"
+    "output": "7ea79dd chore(atlas): refresh local assessment snapshots 2026-10-07 04:29\n4a0957b chore: record Atlassing follow-up verification\nfe5d8f3 chore(atlas): refresh local assessment snapshots 2026-10-06 04:28\nb5aa4d0 fix: finalize Atlassing schema parity verification\nab21315 chore(atlas): refresh local assessment snapshots 2026-10-05 04:30"
   },
   "php_version": {
     "exit_code": 0,
@@ -1809,7 +1809,7 @@ Deterministic repository facts:
   },
   "repo_file_count": {
     "exit_code": 0,
-    "output": "2279"
+    "output": "2372"
   },
   "key_file_excerpts": {
     "composer.json": "{\n  \"name\": \"atlassing/atlas\",\n  \"description\": \"Atlas component for platform quality, maturity, readiness, and documentation coverage surfaces.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Failing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"failing/failure\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^3.4\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/orm\": \"^3.4\",\n    \"symfony/process\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Atlassing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Atlassing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"test:functional\": \"phpunit --testsuite functional\",\n    \"test:browser\": \"phpunit --testsuite browser\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"gating:check\": \"php vendor/bin/gating check --target=. --profile=config/atlas_gating_profile.yaml --rule-set=config/atlas_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml\",\n    \"phpstan\": \"phpstan analyse --memory-limit=1G\",\n    \"test\": \"phpunit\",\n    \"schema:parity\": [\n      \"@php bin/console doctrine:migrations:migrate --no-interaction --env=test\",\n      \"@php bin/console doctrine:schema:validate --env=test\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"quality\": [\n      \"@cs:check\",\n      ",

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-07T09:29:08.212645+00:00",
-  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20261007T092720Z",
+  "generated_at": "2026-10-08T09:28:43.564641+00:00",
+  "run_dir": "D:\\PhpstormProjects\\www\\Atlassing\\var\\atlas\\generated\\assessment-runs\\20261008T092716Z",
   "mode": "chatgpt-cli",
   "components": [],
   "failures": [
@@ -22,7 +22,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Accessing",
-        "timestamp_utc": "2026-10-07T09:27:20.962584+00:00",
+        "timestamp_utc": "2026-10-08T09:27:16.141125+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -93,7 +93,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Addressing",
-        "timestamp_utc": "2026-10-07T09:27:23.609707+00:00",
+        "timestamp_utc": "2026-10-08T09:27:18.459232+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -164,7 +164,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Analysing",
-        "timestamp_utc": "2026-10-07T09:27:25.607164+00:00",
+        "timestamp_utc": "2026-10-08T09:27:20.331672+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -235,7 +235,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Anchoring",
-        "timestamp_utc": "2026-10-07T09:27:27.905518+00:00",
+        "timestamp_utc": "2026-10-08T09:27:22.619423+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -302,7 +302,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Applicating",
-        "timestamp_utc": "2026-10-07T09:27:29.821334+00:00",
+        "timestamp_utc": "2026-10-08T09:27:23.970683+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -373,7 +373,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Automating",
-        "timestamp_utc": "2026-10-07T09:27:32.144296+00:00",
+        "timestamp_utc": "2026-10-08T09:27:25.827796+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -440,7 +440,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Billing",
-        "timestamp_utc": "2026-10-07T09:27:33.966598+00:00",
+        "timestamp_utc": "2026-10-08T09:27:27.195819+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -511,7 +511,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Boundarying",
-        "timestamp_utc": "2026-10-07T09:27:35.863098+00:00",
+        "timestamp_utc": "2026-10-08T09:27:29.161790+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -578,7 +578,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Canonization",
-        "timestamp_utc": "2026-10-07T09:27:37.695326+00:00",
+        "timestamp_utc": "2026-10-08T09:27:30.654753+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -648,7 +648,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Cataloging",
-        "timestamp_utc": "2026-10-07T09:27:39.236541+00:00",
+        "timestamp_utc": "2026-10-08T09:27:32.292263+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -719,7 +719,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Codexing",
-        "timestamp_utc": "2026-10-07T09:27:43.002469+00:00",
+        "timestamp_utc": "2026-10-08T09:27:35.171706+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 128,
@@ -786,7 +786,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Commanding",
-        "timestamp_utc": "2026-10-07T09:27:44.789635+00:00",
+        "timestamp_utc": "2026-10-08T09:27:36.703732+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -853,7 +853,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Complying",
-        "timestamp_utc": "2026-10-07T09:27:46.206169+00:00",
+        "timestamp_utc": "2026-10-08T09:27:37.929332+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -924,7 +924,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Consuming",
-        "timestamp_utc": "2026-10-07T09:27:48.268038+00:00",
+        "timestamp_utc": "2026-10-08T09:27:39.483610+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -991,7 +991,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Containerizing",
-        "timestamp_utc": "2026-10-07T09:27:49.338393+00:00",
+        "timestamp_utc": "2026-10-08T09:27:40.531405+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1058,7 +1058,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Discovering",
-        "timestamp_utc": "2026-10-07T09:27:50.453110+00:00",
+        "timestamp_utc": "2026-10-08T09:27:41.838566+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1130,7 +1130,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Documentating",
-        "timestamp_utc": "2026-10-07T09:27:52.650518+00:00",
+        "timestamp_utc": "2026-10-08T09:27:43.749464+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1202,7 +1202,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Evaluating",
-        "timestamp_utc": "2026-10-07T09:27:54.587561+00:00",
+        "timestamp_utc": "2026-10-08T09:27:45.808149+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1269,7 +1269,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Facting",
-        "timestamp_utc": "2026-10-07T09:27:55.812456+00:00",
+        "timestamp_utc": "2026-10-08T09:27:46.886811+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1340,7 +1340,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Gating",
-        "timestamp_utc": "2026-10-07T09:27:57.476508+00:00",
+        "timestamp_utc": "2026-10-08T09:27:48.397654+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1410,7 +1410,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Indexing",
-        "timestamp_utc": "2026-10-07T09:27:59.047688+00:00",
+        "timestamp_utc": "2026-10-08T09:27:49.927620+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1480,7 +1480,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Interfacing",
-        "timestamp_utc": "2026-10-07T09:28:01.791233+00:00",
+        "timestamp_utc": "2026-10-08T09:27:51.950824+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1551,7 +1551,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Locating",
-        "timestamp_utc": "2026-10-07T09:28:04.257222+00:00",
+        "timestamp_utc": "2026-10-08T09:27:53.968972+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1622,7 +1622,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Messaging",
-        "timestamp_utc": "2026-10-07T09:28:07.286958+00:00",
+        "timestamp_utc": "2026-10-08T09:27:56.679181+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1693,7 +1693,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Mobiling",
-        "timestamp_utc": "2026-10-07T09:28:11.743830+00:00",
+        "timestamp_utc": "2026-10-08T09:27:59.848790+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1760,7 +1760,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Objecting",
-        "timestamp_utc": "2026-10-07T09:28:16.593829+00:00",
+        "timestamp_utc": "2026-10-08T09:28:04.713396+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1830,7 +1830,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Observabiliting",
-        "timestamp_utc": "2026-10-07T09:28:18.463394+00:00",
+        "timestamp_utc": "2026-10-08T09:28:06.620707+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1901,7 +1901,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Ordering",
-        "timestamp_utc": "2026-10-07T09:28:20.227589+00:00",
+        "timestamp_utc": "2026-10-08T09:28:08.032677+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -1972,7 +1972,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Paying",
-        "timestamp_utc": "2026-10-07T09:28:23.287644+00:00",
+        "timestamp_utc": "2026-10-08T09:28:11.053565+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2043,7 +2043,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Projecting",
-        "timestamp_utc": "2026-10-07T09:28:25.987328+00:00",
+        "timestamp_utc": "2026-10-08T09:28:13.618405+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2114,7 +2114,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Retailing",
-        "timestamp_utc": "2026-10-07T09:28:28.159518+00:00",
+        "timestamp_utc": "2026-10-08T09:28:15.619802+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2185,7 +2185,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Rolling",
-        "timestamp_utc": "2026-10-07T09:28:29.662705+00:00",
+        "timestamp_utc": "2026-10-08T09:28:17.086976+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2256,7 +2256,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Shipping",
-        "timestamp_utc": "2026-10-07T09:28:41.378890+00:00",
+        "timestamp_utc": "2026-10-08T09:28:19.044034+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2327,7 +2327,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Tagging",
-        "timestamp_utc": "2026-10-07T09:28:43.751513+00:00",
+        "timestamp_utc": "2026-10-08T09:28:21.159023+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2398,7 +2398,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Taxating",
-        "timestamp_utc": "2026-10-07T09:28:45.772677+00:00",
+        "timestamp_utc": "2026-10-08T09:28:22.982533+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2469,7 +2469,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Vendoring",
-        "timestamp_utc": "2026-10-07T09:28:48.418456+00:00",
+        "timestamp_utc": "2026-10-08T09:28:25.146163+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2540,7 +2540,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Attaching",
-        "timestamp_utc": "2026-10-07T09:28:50.534088+00:00",
+        "timestamp_utc": "2026-10-08T09:28:27.424650+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2611,7 +2611,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Atlassing",
-        "timestamp_utc": "2026-10-07T09:28:52.276387+00:00",
+        "timestamp_utc": "2026-10-08T09:28:28.816242+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2619,7 +2619,7 @@
         },
         "git_commit": {
           "exit_code": 0,
-          "output": "4a0957ba89267e24558149fb37c925c6b5c47cc4"
+          "output": "7ea79dd8fcbfbc076953d13b334d4dde73dbf645"
         },
         "git_exact_tag": {
           "exit_code": 128,
@@ -2640,7 +2640,7 @@
         },
         "git_recent_commits": {
           "exit_code": 0,
-          "output": "4a0957b chore: record Atlassing follow-up verification\nfe5d8f3 chore(atlas): refresh local assessment snapshots 2026-10-06 04:28\nb5aa4d0 fix: finalize Atlassing schema parity verification\nab21315 chore(atlas): refresh local assessment snapshots 2026-10-05 04:30\nd03b353 chore: record Atlassing RC task checkpoint"
+          "output": "7ea79dd chore(atlas): refresh local assessment snapshots 2026-10-07 04:29\n4a0957b chore: record Atlassing follow-up verification\nfe5d8f3 chore(atlas): refresh local assessment snapshots 2026-10-06 04:28\nb5aa4d0 fix: finalize Atlassing schema parity verification\nab21315 chore(atlas): refresh local assessment snapshots 2026-10-05 04:30"
         },
         "php_version": {
           "exit_code": 0,
@@ -2656,7 +2656,7 @@
         },
         "repo_file_count": {
           "exit_code": 0,
-          "output": "2279"
+          "output": "2372"
         },
         "key_file_excerpts": {
           "composer.json": "{\n  \"name\": \"atlassing/atlas\",\n  \"description\": \"Atlas component for platform quality, maturity, readiness, and documentation coverage surfaces.\",\n  \"type\": \"symfony-bundle\",\n  \"license\": \"proprietary\",\n  \"minimum-stability\": \"dev\",\n  \"prefer-stable\": true,\n  \"repositories\": [\n    {\n      \"type\": \"path\",\n      \"url\": \"../Collectioning\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"collectioning/collection\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Tabling\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"tabling/table\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Cruding\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"cruding/crud\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Failing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"failing/failure\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Gating\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"gating/gate\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Interfacing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"interfacing/interface\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Objecting\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"objecting/object\": \"dev-master\"\n        }\n      }\n    },\n    {\n      \"type\": \"path\",\n      \"url\": \"../Viewing\",\n      \"options\": {\n        \"symlink\": true,\n        \"versions\": {\n          \"viewing/view\": \"dev-master\"\n        }\n      }\n    }\n  ],\n  \"require\": {\n    \"collectioning/collection\": \"dev-master\",\n    \"cruding/crud\": \"dev-master\",\n    \"doctrine/doctrine-bundle\": \"^3.2\",\n    \"doctrine/doctrine-migrations-bundle\": \"^3.4\",\n    \"failing/failure\": \"dev-master\",\n    \"easycorp/easyadmin-bundle\": \"^5.0\",\n    \"interfacing/interface\": \"dev-master\",\n    \"objecting/object\": \"dev-master\",\n    \"php\": \"^8.4\",\n    \"symfony/config\": \"^8.1\",\n    \"symfony/dependency-injection\": \"^8.1\",\n    \"symfony/framework-bundle\": \"^8.1\",\n    \"symfony/http-kernel\": \"^8.1\",\n    \"symfony/console\": \"^8.1\",\n    \"symfony/yaml\": \"^8.1\",\n    \"tabling/table\": \"dev-master\",\n    \"doctrine/orm\": \"^3.4\",\n    \"symfony/process\": \"^8.1\",\n    \"viewing/view\": \"dev-master\"\n  },\n  \"require-dev\": {\n    \"friendsofphp/php-cs-fixer\": \"^3.95\",\n    \"gating/gate\": \"dev-master\",\n    \"phpstan/phpstan\": \"^2.2\",\n    \"phpunit/phpunit\": \"^12.0\",\n    \"symfony/panther\": \"^2.4\",\n    \"symfony/phpunit-bridge\": \"^8.1\",\n    \"symfony/test-pack\": \"^1.2\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"App\\\\Atlassing\\\\\": \"src/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"App\\\\Atlassing\\\\Tests\\\\\": \"tests/\"\n    }\n  },\n  \"scripts\": {\n    \"cs:check\": \"php-cs-fixer fix --dry-run --diff --verbose\",\n    \"coverage\": [\n      \"@php -r \\\"if (!is_dir('var/coverage')) { mkdir('var/coverage', 0777, true); }\\\"\",\n      \"@php -d xdebug.mode=coverage vendor/bin/phpunit --path-coverage --coverage-text=var/coverage/summary.txt\"\n    ],\n    \"test:functional\": \"phpunit --testsuite functional\",\n    \"test:browser\": \"phpunit --testsuite browser\",\n    \"cs:fix\": \"php-cs-fixer fix --verbose\",\n    \"gating:check\": \"php vendor/bin/gating check --target=. --profile=config/atlas_gating_profile.yaml --rule-set=config/atlas_gating_rules.yaml --policy-root=vendor/gating/gate/.gating --severity-config=vendor/gating/gate/.gating/config/severity.yaml\",\n    \"phpstan\": \"phpstan analyse --memory-limit=1G\",\n    \"test\": \"phpunit\",\n    \"schema:parity\": [\n      \"@php bin/console doctrine:migrations:migrate --no-interaction --env=test\",\n      \"@php bin/console doctrine:schema:validate --env=test\",\n      \"@php bin/console doctrine:migrations:up-to-date --env=test\"\n    ],\n    \"quality\": [\n      \"@cs:check\",\n      ",
@@ -2682,7 +2682,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Relating",
-        "timestamp_utc": "2026-10-07T09:28:53.585729+00:00",
+        "timestamp_utc": "2026-10-08T09:28:30.147522+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2753,7 +2753,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Managing",
-        "timestamp_utc": "2026-10-07T09:28:55.708430+00:00",
+        "timestamp_utc": "2026-10-08T09:28:32.140382+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2824,7 +2824,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Collectioning",
-        "timestamp_utc": "2026-10-07T09:28:57.465394+00:00",
+        "timestamp_utc": "2026-10-08T09:28:33.775452+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2895,7 +2895,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Tabling",
-        "timestamp_utc": "2026-10-07T09:28:58.578488+00:00",
+        "timestamp_utc": "2026-10-08T09:28:34.866874+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -2966,7 +2966,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\temporaring",
-        "timestamp_utc": "2026-10-07T09:29:00.029738+00:00",
+        "timestamp_utc": "2026-10-08T09:28:36.146522+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -3037,7 +3037,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Notifying",
-        "timestamp_utc": "2026-10-07T09:29:04.005341+00:00",
+        "timestamp_utc": "2026-10-08T09:28:39.113773+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -3108,7 +3108,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Cruding",
-        "timestamp_utc": "2026-10-07T09:29:05.317964+00:00",
+        "timestamp_utc": "2026-10-08T09:28:40.329137+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
@@ -3178,7 +3178,7 @@
       },
       "facts": {
         "repo_root": "D:\\PhpstormProjects\\www\\Delivering",
-        "timestamp_utc": "2026-10-07T09:29:07.031915+00:00",
+        "timestamp_utc": "2026-10-08T09:28:42.015605+00:00",
         "exists": true,
         "git_branch": {
           "exit_code": 0,
