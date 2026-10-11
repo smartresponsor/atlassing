@@ -1,5 +1,18 @@
 # CMCP Execution Journal
 
+## engine-20261004095551-atlassing-64f078 — 2026-10-11
+
+- Baseline: clean master at 043976c5974fc7910bc63792811753784ac2cd40, 2 commits ahead of origin/master; preserve existing commits.
+- Read Atlassing AGENTS.md, README.md, Composer/package manifests, Gating profile and rules, prior CMCP journal, and historical CanonScanning/Inspecting evidence. Composer declares Objecting, Cruding, Viewing, Interfacing, Collectioning and Tabling as path-symlinked dependencies.
+- Historical RED (2026-09-29): Canon004 directory depth; Canon018 composer identity; Canon030 Doctrine parity; Canon052 Gating integration. Later journal records GREEN verification on a newer state; current gates must settle applicability. Historical Inspecting PHP structure: 0 findings; Semgrep timed out.
+- Canon mapping to verify against normative rule files: Canon004 typed paths, Canon018 App\\Atlassing namespace, Canon030 migration/schema parity, Canon052 Gating integration. No generic CRUD duplication or sibling-repository modification.
+- RC-critical: confirm current deterministic verification and remediate genuine in-scope failures only. Growth: historical score trends, richer rubrics, waivers and dashboard UX are non-blocking.
+- Risks: canonical var/atlas state is persistent, not disposable; healthy runtimes must not restart. Planned gates: profiled Gating, Composer, PHPStan, PHPUnit, schema parity and behavioral coverage as applicable.
+- Normative texts directly read: Canon004SubjectFolderPlacementRule.md (subject directories no earlier than level four), Canon018ComposerIdentityMappingRule.md (Composer name atlassing/atlas => App\\Atlassing\\ and Atlas*), Canon030DoctrineSchemaParityRule.md (Entity metadata and complete migration chain must converge), Canon052GatingIntegrationRule.md (development Gating dependency, path symlink, Composer gate/quality scripts; packaged production dependency). Mapped against current manifest, source layout and executed profiled checks.
+- Fresh acceptance on this task: profiled gating:check PASS 30/30 including historical RED rules; quality PASS with PHP-CS-Fixer 0/33 changes, PHPStan 0 errors, PHPUnit 31/31 and 133 assertions, generic Gating 0 failures; separate PHPUnit test PASS; schema:parity PASS: migration Version20261004112300 current, Doctrine metadata valid and database schema synchronized in test environment. Behavioral/UI coverage declared GREEN by profiled gate (functional 5/5, behavioral 4/4, critical 1/1, UI absence 0/0); no UI files changed. Dedicated test:behavioral-coverage gate is not allowlisted in Console MCP, not a test failure.
+- RC conclusion: no presently demonstrated source defect warrants speculative production edits. No runtime restart, UI mutation or screenshots. Git integration requires preservation of existing two ahead commits and the task journal commit.
+
+
 ## engine-20261004091844-atlassing-c4ccd5 — follow-up verification 2026-10-06
 
 - Follow-up baseline: clean `master` at `fe5d8f397715422acdec899b1c3b4fac473dff88`, aligned with `origin/master`; the repository advanced since the prior checkpoint, so verification was repeated on the new HEAD rather than reusing stale acceptance blindly.
