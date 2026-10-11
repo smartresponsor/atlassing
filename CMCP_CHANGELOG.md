@@ -494,4 +494,26 @@ Date: 2026-09-13
 - Native scorer migration is retained as product value: `atlas-console-mcp-score-cli.ps1` now uses the CMCP native engine/file-attachment lifecycle instead of the legacy task-bank loop. Its guarded `-Preflight` returns `SYSTEM_READY` with exit 0.
 - Final acceptance: Composer strict validation green; npm behavioral evidence green at functional 5/5, behavioral 4/4, UI 0/0 with absence guard, critical 1/1; profiled Gating 24/24 green; aggregate Composer quality green with PHP-CS-Fixer, PHPStan, PHPUnit 25/25 / 113 assertions, and Canon055 green.
 
+## engine-20261004100845-atlassing-551392 — 2026-10-11
+
+### Baseline, canonical ownership, and selected work
+
+- Console MCP resolved the Windows Atlassing workspace; master was clean at 3aa48233e94e59f6150ca5d11af71336d34888c3 and aligned with origin/master. Repository README, AGENTS, Composer/manifest, architecture AsciiDoc, snapshot source/interfaces/tests, dependency contour and upstream CanonScanning reports were inspected.
+- The 2026-09-29 CanonScanning RED report is stale for the current tree: current `composer gating:check` passes all 30 rules with zero warnings. The historical Inspecting php-structure report had zero findings, while its Semgrep analyzer timed out; avoid treating partial analyzer evidence as a full green Inspecting result.
+- Canonization textual rules actually read: `.canonization/Governance/Architecture/Rule/Canon004SubjectFolderPlacementRule.md`, `Canon018ComposerIdentityMappingRule.md`, and `Canon030DoctrineSchemaParityRule.md`; mapped respectively to current typed service structure, `atlassing/atlas` + `App\\Atlassing\\` Composer identity, and the executable Doctrine schema-parity contract. Gating is the executable mirror; Objecting, Cruding, Viewing and Interfacing remain dependencies, not repository mutation targets.
+- RC-critical workstream: extend regression coverage for rejected snapshot component path segments while retaining valid component slug support. Growth workstream, post-RC: richer Atlas trends, assessment maturity views, and diagnostics; static publishing belongs to Documentating, generic CRUD to Cruding, presentation to Viewing, interface shell to Interfacing, and common fields to Objecting.
+- Risks/gates: protect snapshot filesystem boundary and existing state; run relevant PHP tests, Composer/Gating/quality verification and final Git diff/status, without restarting healthy application services. No browser-visible behavior changed; UI screenshots not applicable.
+
+### Implementation
+
+- Expanded `AtlasStateEdgeCaseTest` to assert rejection of empty, hidden/dotted and Windows path-separator component identifiers, plus preservation of a valid mixed hyphen/underscore slug. Production behavior unchanged.
+
+### Verification and integration
+
+- Post-change PHP lint: green. `composer quality`: green; PHP-CS-Fixer 0 fixable, PHPStan no errors, PHPUnit 31 tests / 137 assertions, general Gating zero failures.
+- Profiled `composer gating:check`: 30/30 passed; 0 failed/warning/skipped. `composer validate --no-interaction`: valid.
+- No UI surface changed, so no screenshot required. Historical Inspecting result had Semgrep timeout; full Inspecting verification remains separate from these green deterministic gates.
+
+
+
 

@@ -61,6 +61,10 @@ final class AtlasStateEdgeCaseTest extends TestCase
             'invalid-component',
             $snapshot->loadCurrentComponentSnapshot('atlassing/../../generated')['status'],
         );
+        self::assertSame('invalid-component', $snapshot->loadCurrentComponentSnapshot('')['status']);
+        self::assertSame('invalid-component', $snapshot->loadCurrentComponentSnapshot('.hidden')['status']);
+        self::assertSame('invalid-component', $snapshot->loadCurrentComponentSnapshot('atlas\\component')['status']);
+        self::assertSame('missing', $snapshot->loadCurrentComponentSnapshot('atlas-valid_2')['status']);
     }
 
     private static function tempDirectory(string $suffix): string
