@@ -512,7 +512,8 @@ Date: 2026-09-13
 
 - Post-change PHP lint: green. `composer quality`: green; PHP-CS-Fixer 0 fixable, PHPStan no errors, PHPUnit 31 tests / 137 assertions, general Gating zero failures.
 - Profiled `composer gating:check`: 30/30 passed; 0 failed/warning/skipped. `composer validate --no-interaction`: valid.
-- No UI surface changed, so no screenshot required. Historical Inspecting result had Semgrep timeout; full Inspecting verification remains separate from these green deterministic gates.
+- No UI surface changed, so no screenshot required. Fresh Inspecting run on 2026-10-11 completed with phpstan and php-structure analyzers: zero findings, zero PHPStan errors, max complexity 8; report `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261011-230844.json`. Semgrep was not part of this execution; do not extrapolate its status.
+- First signed integration commit `c86f386` was pushed to `origin/master`; tree and upstream were clean after that publication.
 
 
 
