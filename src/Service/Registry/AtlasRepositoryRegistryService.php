@@ -42,7 +42,11 @@ final class AtlasRepositoryRegistryService implements AtlasRepositoryRegistrySer
             ];
         }
 
-        return is_array($payload) ? $payload : ['repositories' => []];
+        return is_array($payload) && array_is_list($payload) === false ? $payload : [
+            'repositories' => [],
+            'invalid' => true,
+            'path' => $path,
+        ];
     }
 
     /**

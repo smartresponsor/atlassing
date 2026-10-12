@@ -14,6 +14,9 @@ final class AtlasStateEdgeCaseTest extends TestCase
     {
         $root = self::tempDirectory('registry-edge');
         mkdir($root . '/repository', 0777, true);
+        file_put_contents($root . '/repository/ecosystem-repositories.yaml', "scalar\n");
+        self::assertTrue((new AtlasRepositoryRegistryService($root))->loadRegistry()['invalid']);
+
         file_put_contents($root . '/repository/ecosystem-repositories.yaml', "repositories: invalid\n");
 
         $registry = new AtlasRepositoryRegistryService($root);

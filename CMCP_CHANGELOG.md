@@ -1,5 +1,17 @@
 # CMCP Execution Journal
 
+## engine-20261004092929-atlassing-35282c — 2026-10-12
+
+- Baseline: clean master at 901e4505cd7df80b8a3b39c5d5d9f13c15f506c4, origin/master aligned; read authoritative execution specification, historical CanonScanning RED, current Composer, manifest, AGENTS, service/test source, and related component README/Composer contracts.
+- Normative Canonization consulted directly: Canon004 (no early subject folders), Canon018 (atlassing/atlas => App\\Atlassing\\), Canon030 (Doctrine metadata/migration schema parity), Canon052 (Composer-managed Gating and generated-only .gating). Existing current layout and manifests satisfy these rules; historical RED is stale.
+- Boundary: Atlassing owns assessment registry, scoring and var/atlas state; Objecting system fields, Cruding generic CRUD, Viewing rendering, Interfacing shell and Documentating publication remain external. No managed-runtime restart and no user-visible UI change.
+- RC-critical change: malformed scalar/list YAML at the registry root now yields an explicit invalid/path diagnostic instead of silently masquerading as an empty registry; extend scalar regression coverage and align existing test contract.
+- Risk: preserve persistent var/atlas state and existing user work. Growth workstream (non-RC): explainable scoring, assessment provenance, audit history, and quality dashboards.
+- Gates: initial PHPUnit detected old scalar expectation and was repaired. Final PHPUnit GREEN (32 tests, 155 assertions); PHPStan GREEN (0 errors); CS-Fixer GREEN (0/33); schema:parity GREEN (test database synchronized, migration current); Xdebug PHPUnit coverage GREEN (32/155); npm test GREEN (Playwright no declared UI tests; 16 command tests, 71 assertions; functional 5/5, behavioral 4/4, critical 1/1); regenerated behavioral evidence; final Gating GREEN (30 rules, 0 failed, 0 warnings). No UI-facing files changed; no visual screenshots required.
+- Что имеем? Registry diagnostic contract and regression coverage verified. Что осталось? Git commit/push and post-integration worktree inspection; future growth remains outside RC.
+
+
+
 ## engine-20261004192055-atlassing-a7fe26 — 2026-10-12
 
 - Baseline: clean master. Read task specification, Atlassing AGENTS/README/manifests, historical CanonScanning RED, live registry and snapshot implementation, tests, related Gating/Canonization/Objecting/Cruding/Viewing/Interfacing contracts.

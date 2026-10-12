@@ -19,10 +19,10 @@ final class AtlasCoverageClosureTest extends TestCase
         mkdir($root . '/repository', 0777, true);
         file_put_contents($root . '/repository/ecosystem-repositories.yaml', "scalar\n");
 
-        self::assertSame(
-            ['repositories' => []],
-            (new AtlasRepositoryRegistryService($root))->loadRegistry(),
-        );
+        $registry = (new AtlasRepositoryRegistryService($root))->loadRegistry();
+        self::assertSame([], $registry['repositories']);
+        self::assertTrue($registry['invalid']);
+        self::assertSame($root . '/repository/ecosystem-repositories.yaml', $registry['path']);
 
         $index = $root . '/index.json';
         file_put_contents($index, json_encode(['articles' => ['scalar']], JSON_THROW_ON_ERROR));
