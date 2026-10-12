@@ -1,5 +1,17 @@
 # CMCP Execution Journal
 
+## engine-20261004101419-atlassing-26cbfa — 2026-10-11
+
+- Baseline: `master` clean, HEAD `90203d13d21a9d7294f1d81124e5bcce06c8b568`, aligned with `origin/master` (0 ahead, 0 behind) at inspection. Authoritative task specification and Atlassing root contracts read; Objecting, Cruding, Viewing, Interfacing, Gating and Canonization root contracts consulted.
+- Canonization normative rules read verbatim: `.canonization/Governance/Architecture/Rule/Canon004SubjectFolderPlacementRule.md`, `Canon018ComposerIdentityMappingRule.md`, `Canon030DoctrineSchemaParityRule.md`, and `Canon052GatingIntegrationRule.md`. Target mapping: role-first technical paths and no premature `Atlas` directory (004); `atlassing/atlas` corresponds to `App\\Atlassing\\` and `Atlas*` PHP identity (018); current Entity metadata and complete migration chain must match (030); Gating via Composer with artifact-only `.gating/` (052).
+- Historical CanonScanning report 2026-09-29 marked 004/018/030/052 RED, but is superseded by fresh current-tree Gating acceptance: 30 passed, zero failed/warned. The old RED paths and absent migration tooling are not current facts.
+- Deterministic RC verification: `composer run-script gating:check` GREEN 30/30; `composer run-script test` GREEN 31 tests, 137 assertions; `composer run-script cs:check` GREEN 0/33 fixable; `composer run-script phpstan` GREEN 0 errors; `composer run-script schema:parity` GREEN (mapping and test database synchronized, migration Version20261004112300 current).
+- RC-critical workstream: preserve existing passing engine and identity, avoid speculative refactors, keep `var/atlas/` canonical state. Growth workstream (nonblocking): richer assessment evidence/provenance, rubric design and diagnostics. Benchmark themes: scorecard reproducibility, lifecycle auditability, clear ownership and evidence links.
+- Ownership and risk: Atlassing owns Atlas scoring/state; Objecting owns systemic fields, Cruding generic CRUD, Viewing rendering, Interfacing shell, Documentating publication. No production/UI source changes justified by current acceptance; no runtime restart or visual screenshot required for journal-only change. Historical Inspecting evidence was read via upstream specification and prior journal; no unverified fresh Inspecting claim.
+- Gate/integration tail: journal-only mutation to be committed if final diff and Git check remain safe.
+
+
+
 ## engine-20261004100024-atlassing-3a0e50 — 2026-10-11
 
 - Baseline: clean `master` via Console MCP; historical 2026-09-29 CanonScanning RED does not match current code. Sibling Objecting, Cruding, Viewing, Interfacing, Gating and Canonization README/AGENTS/Composer contracts reviewed.
