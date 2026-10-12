@@ -35,7 +35,7 @@ final class AtlasSnapshotService implements AtlasSnapshotServiceInterface
 
         $payload = json_decode((string) file_get_contents($path), true);
 
-        return is_array($payload) ? $payload : [
+        return is_array($payload) && !array_is_list($payload) ? $payload : [
             'status' => 'invalid',
             'path' => $path,
             'components' => [],
@@ -75,7 +75,7 @@ final class AtlasSnapshotService implements AtlasSnapshotServiceInterface
             ];
         }
 
-        return is_array($payload) ? $payload : [
+        return is_array($payload) && !array_is_list($payload) ? $payload : [
             'status' => 'invalid',
             'component' => $componentId,
             'path' => $path,

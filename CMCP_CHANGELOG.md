@@ -1,5 +1,20 @@
 # CMCP Execution Journal
 
+## engine-20261004194005-atlassing-b7f394 — 2026-10-12
+
+- Baseline: clean master ae75be211331d69ecf2b7b75502ebc0a01bf917d synchronized with origin/master via Console MCP; prior September CanonScanning RED/Inspecting reports inspected.
+- Read Atlassing AGENTS, README, MANIFEST, Composer development/production, Gating profile, source tree via Git grep; inspected sibling Console MCP contexts and related contracts for Canonization, Gating, Objecting, Cruding, Viewing, Interfacing.
+- Normative Canonization documents consulted: Canon004SubjectFolderPlacementRule.md, Canon018ComposerIdentityMappingRule.md, Canon030DoctrineSchemaParityRule.md. Target mapping: Atlas belongs to class subject prefix and Entity/Atlas domain; service and Enum folders are currently flattened; atlassing/atlas maps to App\\Atlassing\\; Doctrine parity has Composer migrations dependency and script.
+- Initial historical RED is stale relative to current tree; Inspecting structural findings zero but Semgrep timed out. Current gates still required to establish current acceptance; no runtime or UI mutation planned before evidence.
+- RC-critical focus: evidence-led hardening and deterministic gates, avoiding redundant edits or forbidden database operations. Growth remains separate: provenance, transparent maturity scoring, richer diagnostics and Atlas UX. Generic CRUD belongs to Cruding; rendering Viewing; shell Interfacing; documentation publication Documentating.
+- Risks: persistent var/atlas state, isolated Doctrine test DB, pre-existing orchestration journal from other tasks; preserve all. Planned gates: Gating, PHPStan, PHPUnit, code style, isolated schema parity; UI screenshots only if user-visible files change.
+- Что имеем? Current layout/Composer appear corrected relative to old report. Что осталось? Reproduce and address live gate failures, verify and integrate any justified patch.
+- RC patch: SnapshotService now rejects list-root JSON and YAML snapshots instead of treating arrays as valid object payloads; two dedicated regression tests added in AtlasSnapshotShapeTest.php.
+- Post-change verification: PHPUnit GREEN 36 tests/174 assertions; PHPStan GREEN 0 errors; CS-Fixer GREEN 0/33 fixable; Doctrine migration/schema parity GREEN on test environment, Version20261004112300 current; npm test GREEN 16 command tests/71 assertions, functional 5/5, behavioral 4/4, critical 1/1; Gating 30 rules, 0 failures, 1 coverage warning (methods 58/73=79.45% vs 80% threshold; lines 94.37%, branches 91.67%).
+- Fresh Inspecting on current source: phpstan and php-structure analyzers, 0 findings; no claim of Semgrep pass. No user-facing UI changes; Playwright 0/0 configured tests; no screenshot produced, managed runtime untouched.
+- Что имеем? Verified hardened snapshot object shape and fresh Inspecting. Что осталось до RC? Resolve 0.55 percentage-point method-coverage warning and inspect final Git integration.
+
+
 ## engine-20261004092929-atlassing-35282c — 2026-10-12
 
 - Baseline: clean master at 901e4505cd7df80b8a3b39c5d5d9f13c15f506c4, origin/master aligned; read authoritative execution specification, historical CanonScanning RED, current Composer, manifest, AGENTS, service/test source, and related component README/Composer contracts.
