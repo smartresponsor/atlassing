@@ -1,5 +1,17 @@
 # CMCP Execution Journal
 
+## engine-20261004080847-atlassing-9e6feb — 2026-10-12
+
+- Baseline: clean `master` via Console MCP; task specification fully read. Read current README, AGENTS, development/production Composer manifests, MANIFEST, profile/rule configuration and historical CanonScanning RED/Inspecting evidence.
+- Canonization normative references read directly: Canon004 (subject folder placement), Canon018 (`atlassing/atlas` maps to `App\\Atlassing\\`), Canon030 (Doctrine schema/migration parity), Canon052 (Composer-managed Gating and artifact-only consumer `.gating`). Current Gating passed all four former RED rules.
+- Dependency contour: Objecting, Cruding, Viewing, Interfacing declared in dev path-symlink and production VCS Composer contracts; Inspecting is an external quality tool. Preserve Atlassing ownership of Atlas scores, evidence and state; generic CRUD, publishing and shell remain separate.
+- RC-critical current verification: `gate` 0 failures, profiled `gating:check` 30 passed/0 failed, PHPUnit 32 tests/152 assertions, PHPStan 0 errors, PHP-CS-Fixer 0 fixable/33 files, `schema:parity` Doctrine metadata and isolated test DB synchronized with Version20261004112300 current.
+- Historical 2026-09-29 RED has been superseded by current gates. Historical Inspecting structural findings zero; Semgrep timeout is not a passing result. Runtime untouched; no user-observable UI change made, screenshots not applicable.
+- Growth (non-RC): assessment provenance, explainable scoring, history comparisons, diagnostics and scorecard UX; preserve Interfacing/Viewing/Documentating boundaries.
+- Risk: persistent `var/atlas` state, test database isolation, overlapping repository work. Avoid speculative production churn; inspect final Git/branch state before publication.
+
+
+
 ## engine-20261004191349-atlassing-1f3eb2 — 2026-10-12
 
 - Baseline: clean master at 5106148fe7c72bbbfbc1452a96d8c7d421e4d5bd. Read task specification, Atlassing README, AGENTS, composer, manifest, source, tests, historic CanonScanning Gating/Inspecting evidence, and Canonization/Gating contracts.
