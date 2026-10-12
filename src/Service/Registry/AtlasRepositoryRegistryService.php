@@ -67,6 +67,11 @@ final class AtlasRepositoryRegistryService implements AtlasRepositoryRegistrySer
                 continue;
             }
 
+            $componentId = $repository['component_id'] ?? null;
+            if (!is_string($componentId) || preg_match('/\A[a-z0-9]+(?:[a-z0-9_-]*[a-z0-9])?\z/', $componentId) !== 1) {
+                continue;
+            }
+
             $enabled[] = $repository;
         }
 

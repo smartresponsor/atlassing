@@ -1,5 +1,16 @@
 # CMCP Execution Journal
 
+## engine-20261004192055-atlassing-a7fe26 — 2026-10-12
+
+- Baseline: clean master. Read task specification, Atlassing AGENTS/README/manifests, historical CanonScanning RED, live registry and snapshot implementation, tests, related Gating/Canonization/Objecting/Cruding/Viewing/Interfacing contracts.
+- Normative Canonization mapping: Canon004 subject folders (Service/Assessment and Service/Registry compliant), Canon018 Composer name atlassing/atlas -> App\\Atlassing\\, Canon030 Doctrine metadata/migrations parity script, Canon052 Gating dependency and artifact-only .gating.
+- Historical September 29 RED is stale relative to the current Composer manifest and current Gating. Preserve Atlas state in var/atlas and isolation from generic CRUD, rendering and shell.
+- RC-critical implementation: exclude malformed or missing component_id entries from enabled repository selection, blocking accidental invalid assessment targets. Regression input adds traversal-shaped, empty, non-string and missing IDs.
+- Post-change gates: PHPUnit 32 tests / 152 assertions GREEN; PHPStan GREEN with 0 errors; PHP-CS-Fixer 0 fixable files; Composer gate 0 failures. No UI paths changed, therefore no screenshot needed; managed runtime untouched.
+- Growth (not RC): stronger registry schema reporting, assessment provenance, historical comparison and score explainability.
+- What we have: verified registry hardening with no architecture expansion. What remains: Git integration and final branch/worktree inspection.
+
+
 ## engine-20261004080847-atlassing-9e6feb — 2026-10-12
 
 - Baseline: clean `master` via Console MCP; task specification fully read. Read current README, AGENTS, development/production Composer manifests, MANIFEST, profile/rule configuration and historical CanonScanning RED/Inspecting evidence.

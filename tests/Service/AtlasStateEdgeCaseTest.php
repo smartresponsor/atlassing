@@ -21,7 +21,7 @@ final class AtlasStateEdgeCaseTest extends TestCase
 
         file_put_contents(
             $root . '/repository/ecosystem-repositories.yaml',
-            "repositories:\n  - string-entry\n  - component_id: enabled\n",
+            "repositories:\n  - string-entry\n  - component_id: enabled\n  - component_id: ../outside\n  - component_id: ''\n  - component_id: 42\n  - enabled: true\n",
         );
 
         self::assertSame(
