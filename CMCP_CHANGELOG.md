@@ -1,5 +1,15 @@
 # CMCP Execution Journal
 
+## engine-20261004184617-atlassing-fc5817 — 2026-10-12
+
+- Baseline: clean synchronized `master`, HEAD `0563432d31f035dc563a2b2211fda0e7dfed6147`; read current README, AGENTS, Composer dev/prod, MANIFEST, Atlas architecture/route contract, prior Gating and Inspecting reports; reviewed Objecting, Cruding, Viewing, Interfacing, Gating and Canonization source contracts.
+- Canon textual mapping: Canon004 keeps `Atlas` out of premature subject folders; Canon018 maps `atlassing/atlas` to `App\\Atlassing\\` with `Atlas*` types; Canon030 requires current ORM metadata and full migrations to agree. Current Gating passes each.
+- Existing CanonScanning 2026-09-29 RED is stale. Today's `composer run-script gating:check`: 30/30 passed; `test`: 31 tests, 137 assertions passed; `phpstan`: zero errors; `cs:check`: 33 files clean.
+- RC-critical verified: `composer run-script schema:parity` passed in test environment (mapping correct, database synchronized, latest migration `DoctrineMigrations\\Version20261004112300`); preserve persistent `var/atlas/` data and existing runtime; avoid speculative refactors or cross-component changes.
+- Growth (non-RC): maturity history/provenance, reproducible score explanations, diagnostic APIs and cross-repository scorecard comparisons. Static documentation belongs to Documentating, CRUD to Cruding, rendering to Viewing, shell to Interfacing.
+- Risk: old Inspecting Semgrep analyzer timed out; no claim of fresh Inspecting green. No user-observable UI files changed.
+
+
 ## engine-20261004184230-atlassing-10afbd — 2026-10-12
 
 - Baseline: clean `master` at `5bd9cc35fa4bde1d4fe38c16ca2fd71512531134`, `origin/master` synchronized. Historical 2026-09-29 RED report is stale against this checkout.
