@@ -26,6 +26,16 @@ final class AtlasPythonEngineService implements AtlasPythonEngineServiceInterfac
      */
     public function runScript(string $scriptName, array $arguments = [], array $environment = []): array
     {
+        if (preg_match('/\\A[a-zA-Z0-9][a-zA-Z0-9_-]*\\.py\\z/', $scriptName) !== 1) {
+            return [
+                'exitCode' => 126,
+                'successful' => false,
+                'output' => '',
+                'errorOutput' => 'Atlas Python engine script name is invalid.',
+                'command' => [],
+            ];
+        }
+
         $scriptPath = $this->pythonEngineDir . '/' . $scriptName;
         $pythonCommand = PHP_OS_FAMILY === 'Windows' ? ['py', '-3'] : ['python3'];
 

@@ -1,5 +1,14 @@
 # CMCP Execution Journal
 
+## engine-20261004191349-atlassing-1f3eb2 — 2026-10-12
+
+- Baseline: clean master at 5106148fe7c72bbbfbc1452a96d8c7d421e4d5bd. Read task specification, Atlassing README, AGENTS, composer, manifest, source, tests, historic CanonScanning Gating/Inspecting evidence, and Canonization/Gating contracts.
+- Normative canon read: Canon004SubjectFolderPlacementRule.md (flat Service/Enum subject placement), Canon018ComposerIdentityMappingRule.md (atlassing/atlas maps App\\Atlassing\\ and Atlas prefix), Canon030DoctrineSchemaParityRule.md (Entity metadata and migration parity). Existing source and Composer satisfy the mapped contracts.
+- Dependencies: Composer includes Objecting, Cruding, Viewing, Interfacing, Collectioning, Tabling via local path/symlinks; Inspecting is external evidence, not Composer runtime dependency.
+- Initial Gating 30 passed, 0 failed. Sept 29 RED is historical, not current. Historical Inspecting found no php-structure findings; Semgrep analyzer timed out.
+- RC-critical improvement: restrict delegated Python engine executable name to an unqualified .py basename; add path traversal regression test. Risks: persistent var/atlas state and transitional Python runner; preserve both. Growth (nonblocking): assessment evidence provenance, score explainability and diagnostics.
+- Verified after change: cs:check 0/33 fixable, phpstan 0 errors, PHPUnit 32 tests/152 assertions, schema:parity synchronized/current, composer coverage regenerated, npm test 16 behavioral tests/71 assertions (Playwright declares no UI tests), Gating 30 passed/0 failed/0 warning. No user-observable UI change, so no screenshots. Managed runtime not restarted.
+
 ## engine-20261004092439-atlassing-4f5d08 — 2026-10-12
 
 - Baseline: `master` HEAD `6aa7f7be05b1b3fd50a78bac682ef94986067493`, initially clean and synchronized `origin/master`.

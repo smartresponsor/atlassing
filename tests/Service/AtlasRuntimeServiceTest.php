@@ -63,6 +63,18 @@ final class AtlasRuntimeServiceTest extends TestCase
         self::assertStringContainsString('missing.py', $result['errorOutput']);
     }
 
+    public function testPythonEngineRejectsScriptPathTraversal(): void
+    {
+        $engine = new AtlasPythonEngineService(__DIR__, __DIR__);
+
+        foreach (['../outside.py', 'nested/script.py', '..\\outside.py', 'script.php', ''] as $scriptName) {
+            $result = $engine->runScript($scriptName);
+            self::assertFalse($result['successful']);
+            self::assertSame(126, $result['exitCode']);
+            self::assertSame([], $result['command']);
+        }
+    }
+
     public function testDocumentationCoverageHandlesMissingAndValidIndexes(): void
     {
         $service = new AtlasDocumentationCoverageService();
