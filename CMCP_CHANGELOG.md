@@ -1,5 +1,15 @@
 # CMCP Execution Journal
 
+## engine-20261004184230-atlassing-10afbd — 2026-10-12
+
+- Baseline: clean `master` at `5bd9cc35fa4bde1d4fe38c16ca2fd71512531134`, `origin/master` synchronized. Historical 2026-09-29 RED report is stale against this checkout.
+- Canonization normative rules consulted: `Canon004SubjectFolderPlacementRule.md`, `Canon018ComposerIdentityMappingRule.md`, `Canon030DoctrineSchemaParityRule.md`, `Canon052GatingIntegrationRule.md`. Current mapping: role-first paths and flat `Atlas*` classes (004), `atlassing/atlas` to `App\\Atlassing\\` (018), ORM metadata/migration test DB parity (030), Composer-managed Gating and generated-only `.gating/` (052).
+- Read Atlassing, Canonization, Gating, Objecting, Cruding, Viewing, Interfacing README and Composer contracts; Atlassing AGENTS. Responsibilities remain separated: Atlas scores/state here, system fields Objecting, generic CRUD Cruding, rendering Viewing, shell Interfacing.
+- Executed current checks: `composer run-script gate` GREEN (0 failures), `composer run-script gating:check` GREEN (30 rules, 0 failed/warned/skipped), `composer run-script test` GREEN (31 tests, 137 assertions), `composer run-script phpstan` GREEN (0 errors), `composer run-script cs:check` GREEN (0/33 files fixable), `composer run-script schema:parity` GREEN (test DB schema synchronized, migration `Version20261004112300` current).
+- Historical RED Canon004/018/030/052 each passed current Gating. No speculative source churn or production database mutation justified. RC critical: preserve tested acceptance and review Git integration. Growth (not blocking): assessment provenance, score explainability, lifecycle diagnostics and enterprise comparison of governance scorecards.
+- No user-observable UI change; visual verification does not apply to journal-only delta. Existing source-specific behavioral coverage evaluated by Canon041/042, no runtime restart.
+
+
 ## engine-20261004101419-atlassing-26cbfa — 2026-10-11
 
 - Baseline: `master` clean, HEAD `90203d13d21a9d7294f1d81124e5bcce06c8b568`, aligned with `origin/master` (0 ahead, 0 behind) at inspection. Authoritative task specification and Atlassing root contracts read; Objecting, Cruding, Viewing, Interfacing, Gating and Canonization root contracts consulted.
