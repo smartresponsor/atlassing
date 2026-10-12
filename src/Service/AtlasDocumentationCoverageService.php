@@ -47,8 +47,8 @@ final class AtlasDocumentationCoverageService implements AtlasDocumentationCover
         $components = [];
 
         foreach ($articles as $article) {
-            if (is_array($article) && isset($article['component'])) {
-                $components[(string) $article['component']] = true;
+            if (is_array($article) && is_string($article['component'] ?? null) && '' !== trim($article['component'])) {
+                $components[$article['component']] = true;
             }
         }
 

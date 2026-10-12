@@ -615,6 +615,15 @@ Date: 2026-09-13
 - Fresh Inspecting report: `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261012-193454.json`, phpstan and php-structure analyzers, zero findings; Semgrep was not run and is not claimed green.
 - Post-RC debt: method coverage shortfall and richer scoring/UX remain separate from this validated documentation-index correctness fix.
 
+## engine-20261004193501-atlassing-3e6df9 — 2026-10-12
+
+- Baseline: clean master, Atlassing README/AGENTS/manifest/Composer, CanonScanning 2026-09-29 RED report and partial Inspecting report read; previous RED paths are stale relative to current role-first tree.
+- Canonization normative files consulted: Canon004SubjectFolderPlacementRule.md (early subject directories forbidden; current flat service roles accepted), Canon018ComposerIdentityMappingRule.md (atlassing/atlas => App\\Atlassing\\, src/), Canon030DoctrineSchemaParityRule.md (schema parity via current composer schema:parity), Canon052GatingIntegrationRule.md (dev Gating dependency and standard gate/quality scripts, artifact-only .gating/). Gating, Objecting, Cruding, Viewing and Interfacing README/Composer contracts inspected as sibling read-only references.
+- RC-critical hardening: AtlasDocumentationCoverageService now counts component IDs only when nonempty strings; malformed input no longer emits array-to-string warnings or inflates component coverage. New AtlasDocumentationCoverageEdgeTest case verifies duplicates, invalid types, empty identifiers and articleCount preservation.
+- Growth track, nonblocking: scoring provenance, dashboard/API experience and diagnostics. Do not move static documentation or shared CRUD/UI responsibilities into Atlassing.
+- Gates: PHP lint 2/2 green; composer validate --strict green; composer quality green (PHP-CS-Fixer 0 changes, PHPStan 0 errors, PHPUnit 34 tests / 170 assertions, Gating 0 failures). No user-observable UI changes; screenshots not applicable.
+
+
 
 
 
