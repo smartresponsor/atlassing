@@ -24,7 +24,25 @@ final class AtlasDocumentationCoverageService implements AtlasDocumentationCover
             ];
         }
 
-        $decoded = json_decode((string) file_get_contents($indexPath), true);
+        $contents = file_get_contents($indexPath);
+        if ($contents === false) {
+            return [
+                'available' => false,
+                'articleCount' => 0,
+                'componentCount' => 0,
+                'source' => $indexPath,
+            ];
+        }
+
+        $decoded = json_decode($contents, true);
+        if (json_last_error() !== JSON_ERROR_NONE || !is_array($decoded)) {
+            return [
+                'available' => false,
+                'articleCount' => 0,
+                'componentCount' => 0,
+                'source' => $indexPath,
+            ];
+        }
         $articles = is_array($decoded['articles'] ?? null) ? $decoded['articles'] : [];
         $components = [];
 

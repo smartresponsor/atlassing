@@ -9,6 +9,25 @@ use PHPUnit\Framework\TestCase;
 
 final class AtlasDocumentationCoverageEdgeTest extends TestCase
 {
+    public function testMalformedAndScalarJsonAreNotReportedAsAvailable(): void
+    {
+        $path = sys_get_temp_dir() . '/atlassing-doc-invalid-' . bin2hex(random_bytes(6)) . '.json';
+
+        try {
+            foreach (['{invalid', 'null', '42'] as $payload) {
+                file_put_contents($path, $payload);
+                $summary = (new AtlasDocumentationCoverageService())->summarizeFromDocumentatingIndex($path);
+
+                self::assertFalse($summary['available']);
+                self::assertSame(0, $summary['articleCount']);
+                self::assertSame(0, $summary['componentCount']);
+                self::assertSame($path, $summary['source']);
+            }
+        } finally {
+            @unlink($path);
+        }
+    }
+
     public function testInvalidArticlesShapeProducesEmptyCoverage(): void
     {
         $path = sys_get_temp_dir() . '/atlassing-doc-index-' . bin2hex(random_bytes(6)) . '.json';

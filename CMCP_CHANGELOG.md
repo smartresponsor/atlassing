@@ -603,6 +603,19 @@ Date: 2026-09-13
 - No UI surface changed, so no screenshot required. Fresh Inspecting run on 2026-10-11 completed with phpstan and php-structure analyzers: zero findings, zero PHPStan errors, max complexity 8; report `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261011-230844.json`. Semgrep was not part of this execution; do not extrapolate its status.
 - First signed integration commit `c86f386` was pushed to `origin/master`; tree and upstream were clean after that publication.
 
+## engine-20261004192940-atlassing-9abab0 — 2026-10-12
+
+- Baseline: Console MCP resolved `D:\\PhpstormProjects\\www\\Atlassing`, clean `master` at `6ab8c24223bd6565917601eebb0110af402b8d7c`, aligned with `origin/master`; historical 2026-09-29 CanonScanning RED is stale after earlier canonical tree, Composer, and migration remediation.
+- Read Atlassing README, AGENTS, Composer, manifest, Gating profile/rules, Atlas documentation coverage service and tests, and historical Inspecting/Gating reports; verified Objecting, Cruding, Viewing, Interfacing manifests/README/agent contracts as external read-only boundary references.
+- Canonization textual mapping: `Canon004SubjectFolderPlacementRule.md` maps Atlas service types to role-first paths without premature `Atlas` directories; `Canon018ComposerIdentityMappingRule.md` maps `atlassing/atlas` to `App\\Atlassing\\` and `Atlas*`; `Canon030DoctrineSchemaParityRule.md` requires migration/metadata parity and executable schema validation. Gating is the executable mirror, not the normative source.
+- RC-critical fix selected: malformed/unreadable Documentating JSON indexes must not falsely report available Atlas documentation coverage. Growth stream remains separately scoped to richer scoring/UX and component trends; generic CRUD, shell, views, and static publication belong to Cruding, Interfacing, Viewing, and Documentating respectively.
+- Risks: preserve existing valid index semantics, external dependency boundaries and managed runtime; deterministic test, PHP quality/Gating and final Git integration are required. No user-visible UI changed, so no screenshot required.
+- Implementation: `AtlasDocumentationCoverageService` now reports unreadable/malformed/non-object JSON indexes as unavailable, retaining explicit valid-document handling; `AtlasDocumentationCoverageEdgeTest` covers malformed, null and scalar JSON inputs.
+- Verification: PHPUnit 33/33 tests and 167 assertions; Composer PHPStan 0 errors; PHP-CS-Fixer 0 fixable files; Composer quality PASS; npm behavioral evidence PASS (functional 5/5, behavioral 4/4, critical 1/1, UI 0/0 absence verified). Profiled Gating 30 rules, 0 failures, one Canon040 warning: methods 58/73 (79.5% versus 80% target) despite lines 94.4% and branches 91.8%. No coverage threshold was weakened.
+- Fresh Inspecting report: `D:\\PhpstormProjects\\www\\Inspecting\\.inspecting\\reports\\D--PhpstormProjects-www-Atlassing-20261012-193454.json`, phpstan and php-structure analyzers, zero findings; Semgrep was not run and is not claimed green.
+- Post-RC debt: method coverage shortfall and richer scoring/UX remain separate from this validated documentation-index correctness fix.
+
+
 
 
 
